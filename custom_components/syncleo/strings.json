@@ -36,6 +36,9 @@
   },
   "entity": {
     "binary_sensor": {
+      "uv_installed": {
+        "name": "UV lamp installed"
+      },
       "breezer_damper": {
         "name": "Recirculation"
       },
@@ -66,6 +69,7 @@
         "state_attributes": {
           "fan_mode": {
             "state": {
+              "off": "Off",
               "max": "Max",
               "mid_high": "Mid-High",
               "mid_low": "Mid-Low",
