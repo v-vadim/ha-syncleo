@@ -174,7 +174,6 @@ PROFILES = [
         },
         binary_sensors=[
             FEATURE_ERROR,
-            PD_BREEZER_DAMPER,
             PD_CO2_INSTALLED,
             PD_HEATER_INSTALLED,
         ],
@@ -289,6 +288,8 @@ PROFILES = [
             HVACMode.FAN_ONLY: 5,
         },
         default_hvac_mode=HVACMode.FAN_ONLY,
+        preset_mode_requirements={PRESET_AUTO: PD_CO2_INSTALLED},
+        target_temperature_requirement=PD_HEATER_INSTALLED,
         preset_modes_map={
             PRESET_MANUAL: 1,
             PRESET_AUTO: 2,
@@ -317,7 +318,6 @@ PROFILES = [
         },
         binary_sensors=[
             FEATURE_ERROR,
-            PD_BREEZER_DAMPER,
             PD_CO2_INSTALLED,
             PD_HEATER_INSTALLED,
         ],
@@ -341,6 +341,7 @@ PROFILES = [
                 unit_of_measurement=UnitOfTemperature.CELSIUS,
             ),
             FEATURE_CURRENT_CO2: SensorConfig(
+                required_program_data_field=PD_CO2_INSTALLED,
                 device_class=SensorDeviceClass.CO2,
                 state_class=SensorStateClass.MEASUREMENT,
                 unit_of_measurement=CONCENTRATION_PARTS_PER_MILLION,

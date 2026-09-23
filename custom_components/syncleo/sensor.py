@@ -5,6 +5,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import EntityCategory
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from pysyncleo.enums import UdpCommandType
 
 from .devices import SensorConfig, SensorMixin
 from .entity import FEATURE_TO_COMMAND_MAP, SyncleoBaseEntity
@@ -26,8 +27,45 @@ async def async_setup_entry(
         entities = [
             SyncleoSensor(conn, profile, entry, feature_key, config)
             for feature_key, config in profile.sensors.items()
+            if config.required_program_data_field is None
         ]
         async_add_entities(entities)
+
+        pending = {
+            key: config
+            for key, config in profile.sensors.items()
+            if config.required_program_data_field is not None
+        }
+        if not pending:
+            return
+
+        @callback
+        def async_discover_sensors(cmd):
+            if cmd.command_type != UdpCommandType.PROGRAM_DATA or not cmd.data:
+                return
+
+            discovered = []
+            for key, config in list(pending.items()):
+                required_field = config.required_program_data_field
+                assert required_field is not None
+                field = profile.program_data_fields.get(required_field)
+                if (
+                    field is None
+                    or cmd.mode != field.mode
+                    or len(cmd.data) < field.offset + field.size
+                ):
+                    continue
+
+                data = cmd.data[field.offset : field.offset + field.size]
+                if int.from_bytes(data, byteorder="little") != 0:
+                    discovered.append(SyncleoSensor(conn, profile, entry, key, config))
+                    del pending[key]
+
+            if discovered:
+                async_add_entities(discovered)
+
+        conn.register_callback(async_discover_sensors)
+        entry.async_on_unload(lambda: conn.unregister_callback(async_discover_sensors))
 
 
 class SyncleoSensor(SyncleoBaseEntity, SensorEntity):
