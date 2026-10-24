@@ -46,6 +46,18 @@ class ProgramDataField(NumberBounds):
     offset: int = 0
     size: int = 1
     default_value: int = 0
+    bitmask: int | None = None
+
+    def read_value(self, data: bytes | bytearray) -> bytes | None:
+        """Read a complete field and optionally select its status bits."""
+        if len(data) < self.offset + self.size:
+            return None
+        value = bytes(data[self.offset : self.offset + self.size])
+        if self.bitmask is not None:
+            value = (int.from_bytes(value, byteorder="little") & self.bitmask).to_bytes(
+                self.size, byteorder="little"
+            )
+        return value
 
 
 @dataclass

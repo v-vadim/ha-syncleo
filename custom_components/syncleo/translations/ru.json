@@ -41,6 +41,9 @@
       },
       "reset_prefilter": {
         "name": "Сброс ресурса префильтра"
+      },
+      "activate_options": {
+        "name": "Активация опций"
       }
     },
     "binary_sensor": {

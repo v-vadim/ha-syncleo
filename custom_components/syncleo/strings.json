@@ -41,6 +41,9 @@
       },
       "reset_prefilter": {
         "name": "Reset prefilter life"
+      },
+      "activate_options": {
+        "name": "Activate options"
       }
     },
     "binary_sensor": {
