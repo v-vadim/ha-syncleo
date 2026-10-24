@@ -26,6 +26,7 @@ from ..const import (
     FEATURE_IONIZATION,
     FEATURE_REMAINING_TIME,
     FEATURE_RESET_FILTER,
+    FEATURE_RESET_PREFILTER,
     FEATURE_ULTRAVIOLET,
     FEATURE_VOLUME,
     PD_BREEZER_AUTO_INTENSITY,
@@ -532,6 +533,11 @@ PROFILES = [
                 entity_category=EntityCategory.CONFIG,
                 entity_registry_enabled_default=False,
             ),
+            FEATURE_RESET_PREFILTER: ButtonConfig(
+                command_factory=lambda: CmdExpendables(0, 100),
+                entity_category=EntityCategory.CONFIG,
+                entity_registry_enabled_default=False,
+            ),
         },
         sensors={
             FEATURE_REMAINING_TIME: SensorConfig(
@@ -545,6 +551,11 @@ PROFILES = [
                 value_fn=lambda val: (
                     val[1] if isinstance(val, list) and len(val) > 1 else None
                 ),
+            ),
+            FEATURE_EXPENDABLES_PREFILTER: SensorConfig(
+                state_class=SensorStateClass.MEASUREMENT,
+                unit_of_measurement=PERCENTAGE,
+                value_fn=lambda val: val[0] if isinstance(val, list) and val else None,
             ),
         },
     ),
@@ -602,6 +613,11 @@ PROFILES = [
                 entity_category=EntityCategory.CONFIG,
                 entity_registry_enabled_default=False,
             ),
+            FEATURE_RESET_PREFILTER: ButtonConfig(
+                command_factory=lambda: CmdExpendables(0, 100),
+                entity_category=EntityCategory.CONFIG,
+                entity_registry_enabled_default=False,
+            ),
         },
         sensors={
             FEATURE_CURRENT_CO2: SensorConfig(
@@ -620,6 +636,11 @@ PROFILES = [
                 value_fn=lambda val: (
                     val[1] if isinstance(val, list) and len(val) > 1 else None
                 ),
+            ),
+            FEATURE_EXPENDABLES_PREFILTER: SensorConfig(
+                state_class=SensorStateClass.MEASUREMENT,
+                unit_of_measurement=PERCENTAGE,
+                value_fn=lambda val: val[0] if isinstance(val, list) and val else None,
             ),
         },
     ),
@@ -676,6 +697,11 @@ PROFILES = [
                 entity_category=EntityCategory.CONFIG,
                 entity_registry_enabled_default=False,
             ),
+            FEATURE_RESET_PREFILTER: ButtonConfig(
+                command_factory=lambda: CmdExpendables(0, 100),
+                entity_category=EntityCategory.CONFIG,
+                entity_registry_enabled_default=False,
+            ),
         },
         sensors={
             FEATURE_REMAINING_TIME: SensorConfig(
@@ -689,6 +715,11 @@ PROFILES = [
                 value_fn=lambda val: (
                     val[1] if isinstance(val, list) and len(val) > 1 else None
                 ),
+            ),
+            FEATURE_EXPENDABLES_PREFILTER: SensorConfig(
+                state_class=SensorStateClass.MEASUREMENT,
+                unit_of_measurement=PERCENTAGE,
+                value_fn=lambda val: val[0] if isinstance(val, list) and val else None,
             ),
         },
     ),
@@ -745,6 +776,11 @@ PROFILES = [
                 entity_category=EntityCategory.CONFIG,
                 entity_registry_enabled_default=False,
             ),
+            FEATURE_RESET_PREFILTER: ButtonConfig(
+                command_factory=lambda: CmdExpendables(0, 100),
+                entity_category=EntityCategory.CONFIG,
+                entity_registry_enabled_default=False,
+            ),
         },
         sensors={
             FEATURE_CURRENT_CO2: SensorConfig(
@@ -763,6 +799,11 @@ PROFILES = [
                 value_fn=lambda val: (
                     val[1] if isinstance(val, list) and len(val) > 1 else None
                 ),
+            ),
+            FEATURE_EXPENDABLES_PREFILTER: SensorConfig(
+                state_class=SensorStateClass.MEASUREMENT,
+                unit_of_measurement=PERCENTAGE,
+                value_fn=lambda val: val[0] if isinstance(val, list) and val else None,
             ),
         },
     ),
