@@ -153,6 +153,18 @@
       }
     },
     "sensor": {
+      "gateway_latency": {
+        "name": "Gateway latency"
+      },
+      "gateway_packet_loss": {
+        "name": "Gateway packet loss"
+      },
+      "mqtt_latency": {
+        "name": "MQTT latency"
+      },
+      "remaining_time": {
+        "name": "Turbo timer"
+      },
       "current_co2": {
         "name": "CO2 - ppm"
       },
@@ -170,18 +182,6 @@
       },
       "expendables_prefilter": {
         "name": "Prefilter resource"
-      },
-      "gateway_latency": {
-        "name": "Gateway latency"
-      },
-      "gateway_packet_loss": {
-        "name": "Gateway packet loss"
-      },
-      "mqtt_latency": {
-        "name": "MQTT latency"
-      },
-      "remaining_time": {
-        "name": "Turbo timer"
       },
       "tank": {
         "name": "Water Tank"

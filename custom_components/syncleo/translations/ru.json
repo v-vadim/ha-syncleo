@@ -223,6 +223,18 @@
       }
     },
     "sensor": {
+      "gateway_latency": {
+        "name": "Задержка до шлюза"
+      },
+      "gateway_packet_loss": {
+        "name": "Потери пакетов до шлюза"
+      },
+      "mqtt_latency": {
+        "name": "Задержка MQTT"
+      },
+      "remaining_time": {
+        "name": "Счетчик времени турбо"
+      },
       "current_co2": {
         "name": "CO2 - ppm"
       },
@@ -240,18 +252,6 @@
       },
       "expendables_prefilter": {
         "name": "Ресурс префильтра"
-      },
-      "gateway_latency": {
-        "name": "Задержка до шлюза"
-      },
-      "gateway_packet_loss": {
-        "name": "Потери пакетов до шлюза"
-      },
-      "mqtt_latency": {
-        "name": "Задержка MQTT"
-      },
-      "remaining_time": {
-        "name": "Счетчик времени турбо"
       },
       "tank": {
         "name": "Бак"
