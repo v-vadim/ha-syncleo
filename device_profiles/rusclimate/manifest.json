@@ -1,0 +1,721 @@
+{
+  "sources": {
+    "com.hommyn.app 1.20.2": {
+      "kind": "apk",
+      "application": "Hommyn",
+      "package": "com.hommyn.app",
+      "version": "1.20.2",
+      "apk_sha256": "dc071995f8c32a6d0e87e161d6e3c3f9d128fd0280e7a05837e17baed8f45506"
+    }
+  },
+  "profiles": {
+    "devices-F3B4A44F-24D7-4F51-9010-EB52BCE63DD0.json": {
+      "type": 1,
+      "name": "Electrolux EAP-1040D/1055D",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-F3B4A44F-24D7-4F51-9010-EB52BCE63DD0.json"
+    },
+    "devices-2136EDEE-E074-4CEB-A17B-6A40F4290564.json": {
+      "type": 2,
+      "name": "SmartInverter",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-2136EDEE-E074-4CEB-A17B-6A40F4290564.json"
+    },
+    "devices-1015EBFE-1874-489C-85D8-FC656A3F6E17.json": {
+      "type": 3,
+      "name": "Ballu ONEAIR ASP-200",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-1015EBFE-1874-489C-85D8-FC656A3F6E17.json"
+    },
+    "devices-01BB4F28-5B39-4695-9764-6CF5F6E6ACA5.json": {
+      "type": 4,
+      "name": "Electrolux EHU-3910D/EHU-3915D",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-01BB4F28-5B39-4695-9764-6CF5F6E6ACA5.json"
+    },
+    "devices-CEB510AB-3D47-4E11-81A1-EA4699992E27.json": {
+      "type": 5,
+      "name": "WFN-02",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-CEB510AB-3D47-4E11-81A1-EA4699992E27.json"
+    },
+    "devices-E4ADC2FB-11C0-4FFD-8035-8870847BA10F.json": {
+      "type": 6,
+      "name": "Transformer DI 3.0",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-E4ADC2FB-11C0-4FFD-8035-8870847BA10F.json"
+    },
+    "devices-EC3B1C07-6D1F-4464-AE79-EBC7C12D2923.json": {
+      "type": 7,
+      "name": "Zanussi Artendo WiFi/ Azurro PRO WiFi",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-EC3B1C07-6D1F-4464-AE79-EBC7C12D2923.json"
+    },
+    "devices-C9D5C949-E1DF-4EB9-B8C5-72C610CB6A51.json": {
+      "type": 8,
+      "name": "Electrolux Atrium DC / Zanussi Siena DC / Ballu Lagoon",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-C9D5C949-E1DF-4EB9-B8C5-72C610CB6A51.json"
+    },
+    "devices-97AD9CF1-B969-4BE5-91CE-4FD97C39166B.json": {
+      "type": 9,
+      "name": "Transformer DI 3.0 S",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-97AD9CF1-B969-4BE5-91CE-4FD97C39166B.json"
+    },
+    "devices-51CD2C58-0318-4FCF-80F9-18BD527F3C4C.json": {
+      "type": 10,
+      "name": "Zanussi Massimo Solar",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-51CD2C58-0318-4FCF-80F9-18BD527F3C4C.json"
+    },
+    "devices-8F7F25B1-F8B4-4D59-9C4C-51E4EAE05272.json": {
+      "type": 11,
+      "name": "Ballu Rapid",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-8F7F25B1-F8B4-4D59-9C4C-51E4EAE05272.json"
+    },
+    "devices-BB4B5BD9-B2B7-4814-B495-8500C9020539.json": {
+      "type": 12,
+      "name": "Electrolux Centurio IQ 2.0/ Maximus WiFi",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-BB4B5BD9-B2B7-4814-B495-8500C9020539.json"
+    },
+    "devices-6DFD280E-BC0F-4931-9B91-1F995A5769FC.json": {
+      "type": 13,
+      "name": "Electrolux Smartline/ Ballu Eco Smart/ Ice Peak",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-6DFD280E-BC0F-4931-9B91-1F995A5769FC.json"
+    },
+    "devices-14DCF1CF-4372-477F-A4E8-95369EE33159.json": {
+      "type": 14,
+      "name": "Transformer DI",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-14DCF1CF-4372-477F-A4E8-95369EE33159.json"
+    },
+    "devices-E0302AC0-FD80-4BEF-94F6-7B711DB1A974.json": {
+      "type": 15,
+      "name": "Electrolux Viking DC / Zanussi Perfecto DC / Ballu Greenland DC",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-E0302AC0-FD80-4BEF-94F6-7B711DB1A974.json"
+    },
+    "devices-CF335432-ABCE-49E2-A07F-B1D81188B5F5.json": {
+      "type": 16,
+      "name": "Ballu Smart WiFi",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-CF335432-ABCE-49E2-A07F-B1D81188B5F5.json"
+    },
+    "devices-28BDDE08-44A1-4305-8595-E833D96F6875.json": {
+      "type": 17,
+      "name": "Wi-Fi Convection Heater",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-28BDDE08-44A1-4305-8595-E833D96F6875.json"
+    },
+    "devices-627421FA-5F9D-4934-A0CD-A07E8791EBDE.json": {
+      "type": 18,
+      "name": "Electrolux Maximus/ Megapolis WiFi/ Zanussi Splendore XP 2.0/ Artendo PRO-C WiFi",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-627421FA-5F9D-4934-A0CD-A07E8791EBDE.json"
+    },
+    "devices-EF1F6363-770D-47C3-8ABF-5C1A300F446A.json": {
+      "type": 19,
+      "name": "Electrolux Regency",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-EF1F6363-770D-47C3-8ABF-5C1A300F446A.json"
+    },
+    "devices-9CBC2A24-BA76-4BE8-8263-CBC1FB6308D5.json": {
+      "type": 20,
+      "name": "Ballu Platinum Evol. DC/Olympio Legend",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-9CBC2A24-BA76-4BE8-8263-CBC1FB6308D5.json"
+    },
+    "devices-D9BE72C5-91DB-499B-B1A2-0A0CA501D61B.json": {
+      "type": 21,
+      "name": "Zanussi Moderno DC/Electrolux Loft DC",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-D9BE72C5-91DB-499B-B1A2-0A0CA501D61B.json"
+    },
+    "devices-66552E3E-4551-4488-9966-656890116B26.json": {
+      "type": 22,
+      "name": "Hommyn Hub HH-01",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-66552E3E-4551-4488-9966-656890116B26.json"
+    },
+    "devices-71C91C59-DA09-4FC8-9A41-84768C777932.json": {
+      "type": 23,
+      "name": "TZE200",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-71C91C59-DA09-4FC8-9A41-84768C777932.json"
+    },
+    "devices-6227BBB8-6C1A-4F91-9818-EB1E260BFB8B.json": {
+      "type": 24,
+      "name": "Royal Thermo Smart Heat",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-6227BBB8-6C1A-4F91-9818-EB1E260BFB8B.json"
+    },
+    "devices-0DBF63FA-5B8D-4E75-9B69-3D5B12F15C47.json": {
+      "type": 25,
+      "name": "WFN-02 D4",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-0DBF63FA-5B8D-4E75-9B69-3D5B12F15C47.json"
+    },
+    "devices-A03D6F52-2167-4990-A165-2362034D6DC6.json": {
+      "type": 26,
+      "name": "Electrolux EAP-2050D/2075D",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-A03D6F52-2167-4990-A165-2362034D6DC6.json"
+    },
+    "devices-6AD000FC-957B-4D4B-A5F6-73B5922703ED.json": {
+      "type": 27,
+      "name": "Ballu RDU ANTICOVIDgenerator WiFi",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-6AD000FC-957B-4D4B-A5F6-73B5922703ED.json"
+    },
+    "devices-55DADB6C-C697-45F2-8247-A0C8A57BBFEF.json": {
+      "type": 28,
+      "name": "Transformer DI 4.0",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-55DADB6C-C697-45F2-8247-A0C8A57BBFEF.json"
+    },
+    "devices-3A3E6492-8A07-4F4F-9FAC-0A4E9356B048.json": {
+      "type": 29,
+      "name": "Electrolux/Royal Thermo",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-3A3E6492-8A07-4F4F-9FAC-0A4E9356B048.json"
+    },
+    "devices-F4E8067D-E63C-4928-B952-DC4CE3FA255D.json": {
+      "type": 30,
+      "name": "Ballu ONEAIR ASP-200S",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-F4E8067D-E63C-4928-B952-DC4CE3FA255D.json"
+    },
+    "devices-2C1E9CFE-EB85-4EEA-8418-30EF06F4FF7A.json": {
+      "type": 31,
+      "name": "Transformer 4.0",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-2C1E9CFE-EB85-4EEA-8418-30EF06F4FF7A.json"
+    },
+    "devices-5C85D4DE-4B5A-4ECA-9E93-C32B3219E6F8.json": {
+      "type": 32,
+      "name": "Ballu ASP-100 / Electrolux EASP-100",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-5C85D4DE-4B5A-4ECA-9E93-C32B3219E6F8.json"
+    },
+    "devices-24EE337F-6297-4614-8238-8C0258927D49.json": {
+      "type": 33,
+      "name": "Electrolux Centurio IQ 3.0",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-24EE337F-6297-4614-8238-8C0258927D49.json"
+    },
+    "devices-B6E45378-2A5B-4AD0-980B-E086D7A65897.json": {
+      "type": 34,
+      "name": "Electrolux EPVS / ERVX inv",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-B6E45378-2A5B-4AD0-980B-E086D7A65897.json"
+    },
+    "devices-4A37317A-0AA5-44C8-ABEE-E892CE7EE379.json": {
+      "type": 35,
+      "name": "Electrolux YOGAhealthline 2.0.",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-4A37317A-0AA5-44C8-ABEE-E892CE7EE379.json"
+    },
+    "devices-681252FB-3AD7-4C69-8BC3-185C0C3A7B40.json": {
+      "type": 36,
+      "name": "Electrolux EPVS / ERVX inv",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-681252FB-3AD7-4C69-8BC3-185C0C3A7B40.json"
+    },
+    "devices-8961A378-A06F-49AC-AF7C-BFAD5CA12CC3.json": {
+      "type": 37,
+      "name": "Water leak sensor WS-20-Z",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-8961A378-A06F-49AC-AF7C-BFAD5CA12CC3.json"
+    },
+    "devices-D320CDA6-4258-4DD3-A58C-70530A559AFF.json": {
+      "type": 38,
+      "name": "Toshiba Shorai EE",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-D320CDA6-4258-4DD3-A58C-70530A559AFF.json"
+    },
+    "devices-A06D66ED-2296-45F3-9FA0-617B87A5AE55.json": {
+      "type": 39,
+      "name": "Temperature sensor TS-20-Z",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-A06D66ED-2296-45F3-9FA0-617B87A5AE55.json"
+    },
+    "devices-C3412C8B-EA80-43D3-AD36-F89D6647C322.json": {
+      "type": 40,
+      "name": "Motion and Light sensor MS-21-Z",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-C3412C8B-EA80-43D3-AD36-F89D6647C322.json"
+    },
+    "devices-323DFAE6-C5E5-499F-A2C8-FEB80D3367C1.json": {
+      "type": 41,
+      "name": "Electrolux Monaco DC",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-323DFAE6-C5E5-499F-A2C8-FEB80D3367C1.json"
+    },
+    "devices-92252FF5-DD8D-4D85-9B3A-F4FBF8A6431C.json": {
+      "type": 42,
+      "name": "Transformer DI 3.0 XS",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-92252FF5-DD8D-4D85-9B3A-F4FBF8A6431C.json"
+    },
+    "devices-5155B7E0-E721-4F9F-9649-E51ED50CAA83.json": {
+      "type": 43,
+      "name": "WFN-02-01/02",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-5155B7E0-E721-4F9F-9649-E51ED50CAA83.json"
+    },
+    "devices-E87E33CE-BEF9-44DB-8BF5-FE8EF1B1C173.json": {
+      "type": 44,
+      "name": "Royal Thermo Aqua Inverter/ Royal Thermo Aqua Inox Inverter",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-E87E33CE-BEF9-44DB-8BF5-FE8EF1B1C173.json"
+    },
+    "devices-1CC7F89D-C49D-44AD-BF8F-C27F6A956482.json": {
+      "type": 46,
+      "name": "Transformer DI 4.0",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-1CC7F89D-C49D-44AD-BF8F-C27F6A956482.json"
+    },
+    "devices-5EA2DBAA-DA69-466E-9D7E-D5906129121E.json": {
+      "type": 47,
+      "name": "Wi-Fi Convection Heater",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-5EA2DBAA-DA69-466E-9D7E-D5906129121E.json"
+    },
+    "devices-47328177-56E1-4665-9EC1-30E90A9126E7.json": {
+      "type": 49,
+      "name": "Transformer 4.0",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-47328177-56E1-4665-9EC1-30E90A9126E7.json"
+    },
+    "devices-A1EC3D09-AD5F-42C3-8B64-074CC893A71B.json": {
+      "type": 50,
+      "name": "Electrolux 3D Fireplace",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-A1EC3D09-AD5F-42C3-8B64-074CC893A71B.json"
+    },
+    "devices-D5AFD2C0-3BF9-4888-AF6D-B3B511303BD8.json": {
+      "type": 51,
+      "name": "Zanussi Massimo Solar 2023",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-D5AFD2C0-3BF9-4888-AF6D-B3B511303BD8.json"
+    },
+    "devices-0F48034B-5DE8-4AC5-84CE-E3688C9D26EF.json": {
+      "type": 52,
+      "name": "Water leak sensor WS-30-Z",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-0F48034B-5DE8-4AC5-84CE-E3688C9D26EF.json"
+    },
+    "devices-EB35CEF0-B1AF-45CD-88BE-A3C67592258D.json": {
+      "type": 53,
+      "name": "Temperature sensor HTSZ-01",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-EB35CEF0-B1AF-45CD-88BE-A3C67592258D.json"
+    },
+    "devices-A957585B-5E72-4E98-B7FC-6AD76CCA8C42.json": {
+      "type": 54,
+      "name": "Opening sensor DS-20-Z",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-A957585B-5E72-4E98-B7FC-6AD76CCA8C42.json"
+    },
+    "devices-0A33A984-A7DE-4500-93FE-CB66AD02E514.json": {
+      "type": 55,
+      "name": "Zanussi Barocco DC/ Royal Thermo Barocco DC",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-0A33A984-A7DE-4500-93FE-CB66AD02E514.json"
+    },
+    "devices-E8A304AA-ACC5-4032-9AAA-3ABCBD4DAC0E.json": {
+      "type": 56,
+      "name": "Toshiba",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-E8A304AA-ACC5-4032-9AAA-3ABCBD4DAC0E.json"
+    },
+    "devices-272351CB-0EC6-43A4-9769-9C70FD13CAE8.json": {
+      "type": 57,
+      "name": "Shuft Berg/ MBO M-1",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-272351CB-0EC6-43A4-9769-9C70FD13CAE8.json"
+    },
+    "devices-637ABE4E-B4B5-42D7-A559-306019FB0C86.json": {
+      "type": 58,
+      "name": "Smart socket RKNZ01",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-637ABE4E-B4B5-42D7-A559-306019FB0C86.json"
+    },
+    "devices-805C2346-9936-4102-8182-05396D57B3EF.json": {
+      "type": 59,
+      "name": "Ballu ONEAIR ASP-200S",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-805C2346-9936-4102-8182-05396D57B3EF.json"
+    },
+    "devices-19AE8C30-3304-4736-A521-73493BFA6887.json": {
+      "type": 60,
+      "name": "Ballu Discovery DC",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-19AE8C30-3304-4736-A521-73493BFA6887.json"
+    },
+    "devices-FD21659D-FD3B-4EBB-862B-58B92E3CFA49.json": {
+      "type": 61,
+      "name": "One-channel relay",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-FD21659D-FD3B-4EBB-862B-58B92E3CFA49.json"
+    },
+    "devices-79609318-195B-4CB2-B54E-4178E047790A.json": {
+      "type": 62,
+      "name": "Two-channel relay",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-79609318-195B-4CB2-B54E-4178E047790A.json"
+    },
+    "devices-4DD01C36-00D3-450D-96F9-846A00528D90.json": {
+      "type": 63,
+      "name": "One-key switch SWZBNN01W",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-4DD01C36-00D3-450D-96F9-846A00528D90.json"
+    },
+    "devices-EBFDBA74-5C36-481B-B297-4029E9D1F9E7.json": {
+      "type": 64,
+      "name": "Two-key switch SWZBNN02W",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-EBFDBA74-5C36-481B-B297-4029E9D1F9E7.json"
+    },
+    "devices-96C3777F-81BC-4EFA-904D-68A951856D07.json": {
+      "type": 65,
+      "name": "SmartControl",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-96C3777F-81BC-4EFA-904D-68A951856D07.json"
+    },
+    "devices-80878F3C-A6E5-45BD-8551-1D7B8C766CE3.json": {
+      "type": 66,
+      "name": "Smart valve manipulator WZB400W",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-80878F3C-A6E5-45BD-8551-1D7B8C766CE3.json"
+    },
+    "devices-B58622DF-7428-4EE9-B6D9-18D7C26B25E7.json": {
+      "type": 67,
+      "name": "Electrolux/Royal Thermo",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-B58622DF-7428-4EE9-B6D9-18D7C26B25E7.json"
+    },
+    "devices-8383CFD7-C684-482A-8B2C-9CDDC3093DCE.json": {
+      "type": 68,
+      "name": "Electrolux Loft DC/Ballu Platinum Black DC",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-8383CFD7-C684-482A-8B2C-9CDDC3093DCE.json"
+    },
+    "devices-76EC0B8A-9625-4630-AAF1-3221D25E387E.json": {
+      "type": 69,
+      "name": "Ballu ASP-100 / Electrolux EASP-100 with music",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-76EC0B8A-9625-4630-AAF1-3221D25E387E.json"
+    },
+    "devices-29BBC6EA-0B4E-47B5-85DC-D03DF20557A1.json": {
+      "type": 70,
+      "name": "Ballu Universal 3, DC, Free Match",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-29BBC6EA-0B4E-47B5-85DC-D03DF20557A1.json"
+    },
+    "devices-7967749A-DEF6-40E7-8DFD-034CAD05F53D.json": {
+      "type": 71,
+      "name": "Transformer DI 4.0",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-7967749A-DEF6-40E7-8DFD-034CAD05F53D.json"
+    },
+    "devices-A54EC109-5DA7-41BA-AE4C-BEA8906F495B.json": {
+      "type": 72,
+      "name": "Zanussi Barocco/ Royal Thermo Barocco",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-A54EC109-5DA7-41BA-AE4C-BEA8906F495B.json"
+    },
+    "devices-DCA6FE8D-ED16-45DF-A0F5-129F2ED5778F.json": {
+      "type": 73,
+      "name": "SmartControl Pro",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-DCA6FE8D-ED16-45DF-A0F5-129F2ED5778F.json"
+    },
+    "devices-DA3EB8E6-DA4E-435A-86E5-C9E68D90D483.json": {
+      "type": 74,
+      "name": "Aurus S",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-DA3EB8E6-DA4E-435A-86E5-C9E68D90D483.json"
+    },
+    "devices-7568AE28-D511-4EF6-AD88-953D0649821C.json": {
+      "type": 75,
+      "name": "Aurus Infrared",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-7568AE28-D511-4EF6-AD88-953D0649821C.json"
+    },
+    "devices-61AD04A0-EBC4-4448-8868-A8304E437AC3.json": {
+      "type": 76,
+      "name": "Electrolux Royal Flash/ Centurio IQ Inverter",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-61AD04A0-EBC4-4448-8868-A8304E437AC3.json"
+    },
+    "devices-7F0195DB-C81A-4EA4-A596-799C0B1A98B7.json": {
+      "type": 77,
+      "name": "Royal Thermo Major Inverter/ Smalto Inverter",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-7F0195DB-C81A-4EA4-A596-799C0B1A98B7.json"
+    },
+    "devices-6F3DBAE8-F53C-4337-9208-BD9739D0620C.json": {
+      "type": 78,
+      "name": "Electrolux/Royal Thermo",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-6F3DBAE8-F53C-4337-9208-BD9739D0620C.json"
+    },
+    "devices-2C41B02F-AFB7-43AE-A4FD-BEFC2D082918.json": {
+      "type": 79,
+      "name": "Opening sensor OS30ZB",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-2C41B02F-AFB7-43AE-A4FD-BEFC2D082918.json"
+    },
+    "devices-EB87E8C5-5A98-4E96-92DD-608ACFDB1B08.json": {
+      "type": 80,
+      "name": "Aurus F",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-EB87E8C5-5A98-4E96-92DD-608ACFDB1B08.json"
+    },
+    "devices-45056542-D42A-4331-82D6-E0E92B34ECF0.json": {
+      "type": 81,
+      "name": "UHB-960 ET",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-45056542-D42A-4331-82D6-E0E92B34ECF0.json"
+    },
+    "devices-EEBD423B-CE57-44CF-A236-0108B75853D2.json": {
+      "type": 82,
+      "name": "Goldstar GSAC/GSACI",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-EEBD423B-CE57-44CF-A236-0108B75853D2.json"
+    },
+    "devices-F73332E1-D7D0-45AB-89E5-31AE84CCD64A.json": {
+      "type": 83,
+      "name": "Ballu Aura",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-F73332E1-D7D0-45AB-89E5-31AE84CCD64A.json"
+    },
+    "devices-D055972B-FDB2-4A82-A686-E7FE6B16BC22.json": {
+      "type": 84,
+      "name": "Ballu Aura",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-D055972B-FDB2-4A82-A686-E7FE6B16BC22.json"
+    },
+    "devices-F85778FE-3D56-4C44-8800-D143B3D257D3.json": {
+      "type": 85,
+      "name": "Aurus D",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-F85778FE-3D56-4C44-8800-D143B3D257D3.json"
+    },
+    "devices-BDD6260A-E1F9-43B8-A7EA-2AB1DE4E297C.json": {
+      "type": 86,
+      "name": "Motion and Light sensor MBS30ZB",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-BDD6260A-E1F9-43B8-A7EA-2AB1DE4E297C.json"
+    },
+    "devices-489FD421-7530-443D-A950-445376700A0E.json": {
+      "type": 87,
+      "name": "Water leak sensor WLS30ZB",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-489FD421-7530-443D-A950-445376700A0E.json"
+    },
+    "devices-4B4FF99F-655F-4AAE-A3AF-8D63B14A4F6D.json": {
+      "type": 88,
+      "name": "1-channel AC/DC relay DCRLZBN01",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-4B4FF99F-655F-4AAE-A3AF-8D63B14A4F6D.json"
+    },
+    "devices-54D8F1CF-88CB-4B49-98A9-13DAE3C12146.json": {
+      "type": 89,
+      "name": "Aurus PF",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-54D8F1CF-88CB-4B49-98A9-13DAE3C12146.json"
+    },
+    "devices-23CE6C67-62FF-488B-B0EB-3C8BE6CCAEBA.json": {
+      "type": 90,
+      "name": "Ballu Cetrion Inverter/ Ballu Cetrion Inox Inverter",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-23CE6C67-62FF-488B-B0EB-3C8BE6CCAEBA.json"
+    },
+    "devices-C2D8118A-D9AB-440D-89CB-F23E892B5C27.json": {
+      "type": 91,
+      "name": "Royal Thermo Regency",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-C2D8118A-D9AB-440D-89CB-F23E892B5C27.json"
+    },
+    "devices-3ECBF920-2292-4DFC-A485-1DB6A12D1699.json": {
+      "type": 92,
+      "name": "Temperature and Humidity sensor THS30ZB",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-3ECBF920-2292-4DFC-A485-1DB6A12D1699.json"
+    },
+    "devices-AFDC18EF-84A2-435A-B3C7-CAEBD34B3F75.json": {
+      "type": 93,
+      "name": "SmartInverter",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-AFDC18EF-84A2-435A-B3C7-CAEBD34B3F75.json"
+    },
+    "devices-5FC4FBB6-822D-470E-848D-1CD01FF2B8F1.json": {
+      "type": 94,
+      "name": "Smart socket RKNZ02",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-5FC4FBB6-822D-470E-848D-1CD01FF2B8F1.json"
+    },
+    "devices-5A9707EB-42E8-483A-8683-1220FC8EFE20.json": {
+      "type": 95,
+      "name": "Climer Dresden",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-5A9707EB-42E8-483A-8683-1220FC8EFE20.json"
+    },
+    "devices-049E0865-7E7C-47EF-8AE6-BCF2917BD2DC.json": {
+      "type": 98,
+      "name": "Shuft Allston-VH/ERV Комплектный пульт",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-049E0865-7E7C-47EF-8AE6-BCF2917BD2DC.json"
+    },
+    "devices-050381C2-5D78-4478-8270-D51616682123.json": {
+      "type": 99,
+      "name": "AURUS A",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-050381C2-5D78-4478-8270-D51616682123.json"
+    },
+    "devices-62F3B8B2-1C66-4945-9962-97BE01368B68.json": {
+      "type": 100,
+      "name": "Shuft Allston-VH/ERV Пульт AirPad 7",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-62F3B8B2-1C66-4945-9962-97BE01368B68.json"
+    },
+    "devices-E9AEBB39-1318-428C-8D3B-BA5CCB463417.json": {
+      "type": 101,
+      "name": "Royal Thermo Smart Heat schedule modes ",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-E9AEBB39-1318-428C-8D3B-BA5CCB463417.json"
+    },
+    "devices-0776A423-1C95-41AF-8937-7C9F1123F2F4.json": {
+      "type": 102,
+      "name": "Ballu ONEAIR ASP-90",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-0776A423-1C95-41AF-8937-7C9F1123F2F4.json"
+    },
+    "devices-4A057450-8C54-4122-80FD-6B10A46F95D9.json": {
+      "type": 103,
+      "name": "Inwall outlet RKNWOZ01W",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-4A057450-8C54-4122-80FD-6B10A46F95D9.json"
+    },
+    "devices-483B7AE2-22C0-45B6-A18A-EDB583BA27BB.json": {
+      "type": 104,
+      "name": "Dimmer switch rotary DSWZBN01W",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-483B7AE2-22C0-45B6-A18A-EDB583BA27BB.json"
+    },
+    "devices-876397B2-602C-4E81-BE1E-914AF7826C67.json": {
+      "type": 105,
+      "name": "Ballu ONEAIR ASP-90",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-876397B2-602C-4E81-BE1E-914AF7826C67.json"
+    },
+    "devices-819CAB1A-3FCA-467D-AD83-28979E208D7F.json": {
+      "type": 106,
+      "name": "Ballu ONEAIR ASP-90",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-819CAB1A-3FCA-467D-AD83-28979E208D7F.json"
+    },
+    "devices-21A6D3DE-0880-4FBF-89BD-3D190A21C19B.json": {
+      "type": 107,
+      "name": "Ballu ONEAIR ASP-90",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-21A6D3DE-0880-4FBF-89BD-3D190A21C19B.json"
+    },
+    "devices-C60347EB-1D16-4D71-B7CA-E480AFD8E4C6.json": {
+      "type": 108,
+      "name": "Royal Thermo Diamond DC",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-C60347EB-1D16-4D71-B7CA-E480AFD8E4C6.json"
+    },
+    "devices-9CC5175E-2E7A-4AC0-BC4A-0BAB0DACB34B.json": {
+      "type": 109,
+      "name": "Aurus S",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-9CC5175E-2E7A-4AC0-BC4A-0BAB0DACB34B.json"
+    },
+    "devices-30F7E8EB-48B2-4358-86B3-2869B45CCF6C.json": {
+      "type": 110,
+      "name": "GoldStar GSTI",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-30F7E8EB-48B2-4358-86B3-2869B45CCF6C.json"
+    },
+    "devices-19CFC08F-52E9-4B7A-94B0-2B727E88C2AB.json": {
+      "type": 111,
+      "name": "Shuft SFMS/-09",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-19CFC08F-52E9-4B7A-94B0-2B727E88C2AB.json"
+    },
+    "devices-44443C7E-3BF1-48D8-8D82-ADB35B79C6F0.json": {
+      "type": 112,
+      "name": "Royal Thermo 5D DaVinci",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-44443C7E-3BF1-48D8-8D82-ADB35B79C6F0.json"
+    },
+    "devices-E9B30428-6C36-43F4-A92B-F612120B811E.json": {
+      "type": 114,
+      "name": "Shuft SFMS/-07",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-E9B30428-6C36-43F4-A92B-F612120B811E.json"
+    },
+    "devices-107C43A9-8611-4FB1-902E-0F32994C84DA.json": {
+      "type": 117,
+      "name": "Ballu AP-135",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-107C43A9-8611-4FB1-902E-0F32994C84DA.json"
+    },
+    "devices-4F1ECB4A-8B7C-40F6-800D-EF1E55C2A054.json": {
+      "type": 119,
+      "name": "SmartInverter FW",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-4F1ECB4A-8B7C-40F6-800D-EF1E55C2A054.json"
+    },
+    "devices-B320BF2A-CE2B-4EED-9B56-9D79BDD5CD8B.json": {
+      "type": 120,
+      "name": "Aurus VRF",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-B320BF2A-CE2B-4EED-9B56-9D79BDD5CD8B.json"
+    },
+    "devices-142FDAB9-BA80-4CE7-9DD6-79D43D8CC4C3.json": {
+      "type": 122,
+      "name": "Electrolux EAP-1040D Basalt",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-142FDAB9-BA80-4CE7-9DD6-79D43D8CC4C3.json"
+    },
+    "devices-6A779D44-7B54-4E82-BFBE-DE2BA19C1431.json": {
+      "type": 123,
+      "name": "Ballu Voyager",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-6A779D44-7B54-4E82-BFBE-DE2BA19C1431.json"
+    },
+    "devices-57171D62-70A6-4188-8F6A-0D7E1E63C3A2.json": {
+      "type": 124,
+      "name": "Ballu ONEAIR ASV-60",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-57171D62-70A6-4188-8F6A-0D7E1E63C3A2.json"
+    },
+    "devices-97670404-6601-426D-828A-24D76B7C5CD6.json": {
+      "type": 125,
+      "name": "Electrolux Grace DC",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-97670404-6601-426D-828A-24D76B7C5CD6.json"
+    },
+    "devices-E463D8DF-ABCE-4BE9-84B7-7103266E4959.json": {
+      "type": 126,
+      "name": "Ballu ONEAIR ASP-220",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-E463D8DF-ABCE-4BE9-84B7-7103266E4959.json"
+    },
+    "devices-4DC169BF-6393-4B9D-BB0B-1490832AB1A4.json": {
+      "type": 127,
+      "name": "Hommyn Hub HH-02",
+      "source": "com.hommyn.app 1.20.2",
+      "apk_path": "assets/prepopulate/devices-4DC169BF-6393-4B9D-BB0B-1490832AB1A4.json"
+    }
+  }
+}

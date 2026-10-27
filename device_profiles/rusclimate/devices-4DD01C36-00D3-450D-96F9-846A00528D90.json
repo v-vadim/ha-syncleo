@@ -1,0 +1,363 @@
+{
+  "id": "4dd01c36-00d3-450d-96f9-846a00528d90",
+  "name": "One-key switch SWZBNN01W",
+  "type": 63,
+  "class": "socket",
+  "image": {
+    "60": "https://images.cdn.rusklimat.ru/5/f5/de1ce-f185-4961-aaa8-8e3bf6fa871c/60.webp",
+    "120": "https://images.cdn.rusklimat.ru/5/f5/de1ce-f185-4961-aaa8-8e3bf6fa871c/120.webp",
+    "240": "https://images.cdn.rusklimat.ru/5/f5/de1ce-f185-4961-aaa8-8e3bf6fa871c/240.webp",
+    "480": "https://images.cdn.rusklimat.ru/5/f5/de1ce-f185-4961-aaa8-8e3bf6fa871c/480.webp",
+    "600": "https://images.cdn.rusklimat.ru/5/f5/de1ce-f185-4961-aaa8-8e3bf6fa871c/600.webp",
+    "900": "https://images.cdn.rusklimat.ru/5/f5/de1ce-f185-4961-aaa8-8e3bf6fa871c/900.webp",
+    "1200": "https://images.cdn.rusklimat.ru/5/f5/de1ce-f185-4961-aaa8-8e3bf6fa871c/1200.webp",
+    "1800": "https://images.cdn.rusklimat.ru/5/f5/de1ce-f185-4961-aaa8-8e3bf6fa871c/1800.webp",
+    "2400": "https://images.cdn.rusklimat.ru/5/f5/de1ce-f185-4961-aaa8-8e3bf6fa871c/2400.webp",
+    "id": "5f5de1ce-f185-4961-aaa8-8e3bf6fa871c",
+    "original": "https://images.cdn.rusklimat.ru/5/f5/de1ce-f185-4961-aaa8-8e3bf6fa871c/original.webp"
+  },
+  "layout": {
+    "bottom": [
+      {
+        "type": "button",
+        "index": 0,
+        "shape": "roundrect",
+        "feature": "schedule",
+        "position": 0
+      }
+    ],
+    "middle": [
+      {
+        "type": "button_power",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "schedule": [
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            0
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "dropdown",
+        "title": {
+          "en-US": "The state of the switch when turned on",
+          "ru-RU": "Состояние выключателя при включении"
+        },
+        "position": 0,
+        "formatRules": [
+          {
+            "max": 0,
+            "min": 0,
+            "string": "start_off"
+          },
+          {
+            "max": 1,
+            "min": 1,
+            "string": "start_on"
+          },
+          {
+            "max": 2,
+            "min": 2,
+            "string": "start_remember"
+          }
+        ],
+        "program_data": {
+          "field": "initial_state",
+          "program": [
+            1
+          ]
+        }
+      },
+      {
+        "type": "dropdown",
+        "title": {
+          "en-US": "Indicator status",
+          "ru-RU": "Индикация"
+        },
+        "position": 1,
+        "formatRules": [
+          {
+            "max": 0,
+            "min": 0,
+            "string": "title.indication.no"
+          },
+          {
+            "max": 1,
+            "min": 1,
+            "string": "title.indication.yes"
+          },
+          {
+            "max": 2,
+            "min": 2,
+            "string": "title.indication.switch"
+          }
+        ],
+        "program_data": {
+          "field": "indication",
+          "program": [
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "limits": {},
+  "params": {
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "One-key switch",
+          "manufacturer": "rusclimate"
+        },
+        "type": "devices.types.switch",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                1
+              ]
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "hidden": false,
+    "server": "Hommyn",
+    "realtime": true,
+    "fastSwitch": {
+      "on": {
+        "program": [
+          1
+        ]
+      },
+      "off": {
+        "program": [
+          0
+        ]
+      }
+    },
+    "program_data": {
+      "0": [
+        {
+          "max": 2,
+          "min": 0,
+          "name": "indication",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "1": [
+        {
+          "max": 2,
+          "min": 0,
+          "name": "initial_state",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 2,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "defaultProgram": [
+      1
+    ],
+    "excludeScheduleFeatures": [
+      "backlight"
+    ]
+  },
+  "vendor": "rusclimate",
+  "features": [
+    "program",
+    "demo",
+    "schedule"
+  ],
+  "messages": {
+    "pair": {
+      "en-US": "Hold down button until the indicator starts flashing on it",
+      "ru-RU": "Удерживайте кнопку до тех пор, пока на ней не начнет мигать индикатор."
+    },
+    "enable": {
+      "en-US": "Please make sure that the Zigbee hub is connected to the app.\nPlease confirm that device has been properly installed to the power supply according to the wiring diagram.",
+      "ru-RU": "Пожалуйста, убедитесь, что Zigbee хаб подключен к приложению.\nУбедитесь, что устройство правильно подключено к источнику питания в соответствии со схемой подключения."
+    },
+    "start_on": {
+      "en-US": "On",
+      "ru-RU": "Вкл"
+    },
+    "pair.help": {
+      "en-US": "Please confirm that device has been properly installed to the power supply according to the wiring diagram\nHold down button until the indicator starts flashing on it",
+      "ru-RU": "Убедитесь, что устройство правильно подключено к источнику питания в соответствии со схемой подключения.\nУдерживайте кнопку до тех пор, пока на ней не начнет мигать индикатор"
+    },
+    "start_off": {
+      "en-US": "Off",
+      "ru-RU": "Выкл"
+    },
+    "url.manual": {
+      "en-US": "https://d5dk3cfdscakk9dd10pv.apigw.yandexcloud.net/pdf/rusclimate/63/375456_HOMMYN_Manual_SWZBNN01W_80x80x9-print.pdf",
+      "ru-RU": "https://d5dk3cfdscakk9dd10pv.apigw.yandexcloud.net/pdf/rusclimate/63/375456_HOMMYN_Manual_SWZBNN01W_80x80x9-print.pdf"
+    },
+    "pair.help.link": {
+      "en-US": "Is indicator not flashing?",
+      "ru-RU": "Индикатор не мигает?"
+    },
+    "start_remember": {
+      "en-US": "Remember last status",
+      "ru-RU": "Запомнить последний статус"
+    },
+    "title.indication.no": {
+      "en-US": "Off",
+      "ru-RU": "Выключить индикацию"
+    },
+    "title.indication.yes": {
+      "en-US": "On",
+      "ru-RU": "Включить индикацию"
+    },
+    "title.indication.switch": {
+      "en-US": "Switch position",
+      "ru-RU": "Инверсия индикации"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off",
+        "ru-RU": "Выключить"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "On",
+        "ru-RU": "Включить"
+      },
+      "hidden": false
+    }
+  ],
+  "alt_images": {
+    "pair": {
+      "60": "https://images.cdn.rusklimat.ru/d/5f/5be56-b8bd-46cf-9ac8-86c267382720/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/d/5f/5be56-b8bd-46cf-9ac8-86c267382720/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/d/5f/5be56-b8bd-46cf-9ac8-86c267382720/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/d/5f/5be56-b8bd-46cf-9ac8-86c267382720/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/d/5f/5be56-b8bd-46cf-9ac8-86c267382720/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/d/5f/5be56-b8bd-46cf-9ac8-86c267382720/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/d/5f/5be56-b8bd-46cf-9ac8-86c267382720/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/d/5f/5be56-b8bd-46cf-9ac8-86c267382720/1800.webp",
+      "2400": "https://images.cdn.rusklimat.ru/d/5f/5be56-b8bd-46cf-9ac8-86c267382720/2400.webp",
+      "id": "d5f5be56-b8bd-46cf-9ac8-86c267382720",
+      "original": "https://images.cdn.rusklimat.ru/d/5f/5be56-b8bd-46cf-9ac8-86c267382720/original.webp"
+    },
+    "enable": {
+      "60": "https://images.cdn.rusklimat.ru/7/ec/11ce2-3379-488b-9da9-5af4160081ae/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/7/ec/11ce2-3379-488b-9da9-5af4160081ae/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/7/ec/11ce2-3379-488b-9da9-5af4160081ae/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/7/ec/11ce2-3379-488b-9da9-5af4160081ae/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/7/ec/11ce2-3379-488b-9da9-5af4160081ae/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/7/ec/11ce2-3379-488b-9da9-5af4160081ae/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/7/ec/11ce2-3379-488b-9da9-5af4160081ae/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/7/ec/11ce2-3379-488b-9da9-5af4160081ae/1800.webp",
+      "2400": "https://images.cdn.rusklimat.ru/7/ec/11ce2-3379-488b-9da9-5af4160081ae/2400.webp",
+      "id": "7ec11ce2-3379-488b-9da9-5af4160081ae",
+      "original": "https://images.cdn.rusklimat.ru/7/ec/11ce2-3379-488b-9da9-5af4160081ae/original.webp"
+    },
+    "pair.help": {
+      "60": "https://images.cdn.rusklimat.ru/7/da/745bb-1015-4f88-8c19-d4fd22ac022f/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/7/da/745bb-1015-4f88-8c19-d4fd22ac022f/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/7/da/745bb-1015-4f88-8c19-d4fd22ac022f/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/7/da/745bb-1015-4f88-8c19-d4fd22ac022f/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/7/da/745bb-1015-4f88-8c19-d4fd22ac022f/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/7/da/745bb-1015-4f88-8c19-d4fd22ac022f/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/7/da/745bb-1015-4f88-8c19-d4fd22ac022f/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/7/da/745bb-1015-4f88-8c19-d4fd22ac022f/1800.webp",
+      "2400": "https://images.cdn.rusklimat.ru/7/da/745bb-1015-4f88-8c19-d4fd22ac022f/2400.webp",
+      "id": "7da745bb-1015-4f88-8c19-d4fd22ac022f",
+      "original": "https://images.cdn.rusklimat.ru/7/da/745bb-1015-4f88-8c19-d4fd22ac022f/original.webp"
+    },
+    "pair.help.link": {
+      "60": "https://images.cdn.rusklimat.ru/1/a2/f89c4-90dc-42ee-82dd-0b3a20f444a9/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/1/a2/f89c4-90dc-42ee-82dd-0b3a20f444a9/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/1/a2/f89c4-90dc-42ee-82dd-0b3a20f444a9/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/1/a2/f89c4-90dc-42ee-82dd-0b3a20f444a9/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/1/a2/f89c4-90dc-42ee-82dd-0b3a20f444a9/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/1/a2/f89c4-90dc-42ee-82dd-0b3a20f444a9/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/1/a2/f89c4-90dc-42ee-82dd-0b3a20f444a9/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/1/a2/f89c4-90dc-42ee-82dd-0b3a20f444a9/1800.webp",
+      "2400": "https://images.cdn.rusklimat.ru/1/a2/f89c4-90dc-42ee-82dd-0b3a20f444a9/2400.webp",
+      "id": "1a2f89c4-90dc-42ee-82dd-0b3a20f444a9",
+      "original": "https://images.cdn.rusklimat.ru/1/a2/f89c4-90dc-42ee-82dd-0b3a20f444a9/original.webp"
+    }
+  },
+  "connectivity": [
+    "zigbee"
+  ],
+  "last_modified": 1761232434,
+  "temperature_units": "celsius"
+}

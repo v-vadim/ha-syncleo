@@ -1,0 +1,849 @@
+{
+  "id": "ebfdba74-5c36-481b-b297-4029e9d1f9e7",
+  "name": "Two-key switch SWZBNN02W",
+  "type": 64,
+  "class": "socket",
+  "image": {
+    "60": "https://images.cdn.rusklimat.ru/f/b6/0dd4b-8317-468a-b9a9-13fc945d416e/60.webp",
+    "120": "https://images.cdn.rusklimat.ru/f/b6/0dd4b-8317-468a-b9a9-13fc945d416e/120.webp",
+    "240": "https://images.cdn.rusklimat.ru/f/b6/0dd4b-8317-468a-b9a9-13fc945d416e/240.webp",
+    "480": "https://images.cdn.rusklimat.ru/f/b6/0dd4b-8317-468a-b9a9-13fc945d416e/480.webp",
+    "600": "https://images.cdn.rusklimat.ru/f/b6/0dd4b-8317-468a-b9a9-13fc945d416e/600.webp",
+    "900": "https://images.cdn.rusklimat.ru/f/b6/0dd4b-8317-468a-b9a9-13fc945d416e/900.webp",
+    "1200": "https://images.cdn.rusklimat.ru/f/b6/0dd4b-8317-468a-b9a9-13fc945d416e/1200.webp",
+    "1800": "https://images.cdn.rusklimat.ru/f/b6/0dd4b-8317-468a-b9a9-13fc945d416e/1800.webp",
+    "2400": "https://images.cdn.rusklimat.ru/f/b6/0dd4b-8317-468a-b9a9-13fc945d416e/2400.webp",
+    "id": "fb60dd4b-8317-468a-b9a9-13fc945d416e",
+    "original": "https://images.cdn.rusklimat.ru/f/b6/0dd4b-8317-468a-b9a9-13fc945d416e/original.webp"
+  },
+  "layout": {
+    "bottom": [
+      {
+        "icon": "M0,0h48v48V0M20.4,37.4h15.5c0.6,0,1,0.4,1,1V43c0,0.6-0.4,1-1,1H12.1c-0.6,0-1-0.4-1-1V5c0-0.6,0.4-1,1-1h6.2c0.6,0,1,0.4,1,1v31.4 C19.4,36.9,19.8,37.4,20.4,37.4z",
+        "type": "button",
+        "index": 0,
+        "shape": "circle",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "or": [
+              {
+                "program": [
+                  1
+                ]
+              },
+              {
+                "program": [
+                  3
+                ]
+              }
+            ]
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        },
+        "visibility": [
+          {
+            "or": [
+              {
+                "program": [
+                  0
+                ]
+              },
+              {
+                "program": [
+                  1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h48v48V0M20.4,37.4h15.5c0.6,0,1,0.4,1,1V43c0,0.6-0.4,1-1,1H12.1c-0.6,0-1-0.4-1-1V5c0-0.6,0.4-1,1-1h6.2c0.6,0,1,0.4,1,1v31.4 C19.4,36.9,19.8,37.4,20.4,37.4z",
+        "type": "button",
+        "index": 0,
+        "shape": "circle",
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "or": [
+              {
+                "program": [
+                  1
+                ]
+              },
+              {
+                "program": [
+                  3
+                ]
+              }
+            ]
+          }
+        ],
+        "action_off": {
+          "program": [
+            2
+          ]
+        },
+        "visibility": [
+          {
+            "or": [
+              {
+                "program": [
+                  2
+                ]
+              },
+              {
+                "program": [
+                  3
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h48v48V0M22.7,29.4h-5.1c-0.5,0-0.9,0.4-0.9,0.9v12.8c0,0.5-0.4,0.9-0.9,0.9H9.4c-0.5,0-0.9-0.4-0.9-0.9V4.9C8.4,4.4,8.8,4,9.4,4 h13.9c4.7,0,8.4,1.1,10.9,3.2c2.6,2.1,3.8,5.1,3.8,8.9c0,2.7-0.6,5-1.8,6.8c-1,1.6-2.5,2.9-4.5,3.9c-0.5,0.2-0.7,0.8-0.4,1.3 l8.2,15.5V44h-8.3c-0.4,0-0.7-0.2-0.8-0.5l-7-13.6C23.3,29.6,23,29.4,22.7,29.4z M16.7,21.7c0,0.5,0.4,0.9,0.9,0.9h5.7 c2.1,0,3.7-0.5,4.8-1.6c1.1-1.1,1.7-2.5,1.7-4.4c0-1.9-0.5-3.4-1.6-4.5c-1.1-1.1-2.7-1.6-4.9-1.6h-5.7c-0.5,0-0.9,0.4-0.9,0.9V21.7 z",
+        "type": "button",
+        "index": 1,
+        "shape": "circle",
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "or": [
+              {
+                "program": [
+                  2
+                ]
+              },
+              {
+                "program": [
+                  3
+                ]
+              }
+            ]
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        },
+        "visibility": [
+          {
+            "or": [
+              {
+                "program": [
+                  0
+                ]
+              },
+              {
+                "program": [
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h48v48V0M22.7,29.4h-5.1c-0.5,0-0.9,0.4-0.9,0.9v12.8c0,0.5-0.4,0.9-0.9,0.9H9.4c-0.5,0-0.9-0.4-0.9-0.9V4.9C8.4,4.4,8.8,4,9.4,4 h13.9c4.7,0,8.4,1.1,10.9,3.2c2.6,2.1,3.8,5.1,3.8,8.9c0,2.7-0.6,5-1.8,6.8c-1,1.6-2.5,2.9-4.5,3.9c-0.5,0.2-0.7,0.8-0.4,1.3 l8.2,15.5V44h-8.3c-0.4,0-0.7-0.2-0.8-0.5l-7-13.6C23.3,29.6,23,29.4,22.7,29.4z M16.7,21.7c0,0.5,0.4,0.9,0.9,0.9h5.7 c2.1,0,3.7-0.5,4.8-1.6c1.1-1.1,1.7-2.5,1.7-4.4c0-1.9-0.5-3.4-1.6-4.5c-1.1-1.1-2.7-1.6-4.9-1.6h-5.7c-0.5,0-0.9,0.4-0.9,0.9V21.7 z",
+        "type": "button",
+        "index": 1,
+        "shape": "circle",
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "or": [
+              {
+                "program": [
+                  2
+                ]
+              },
+              {
+                "program": [
+                  3
+                ]
+              }
+            ]
+          }
+        ],
+        "action_off": {
+          "program": [
+            1
+          ]
+        },
+        "visibility": [
+          {
+            "or": [
+              {
+                "program": [
+                  1
+                ]
+              },
+              {
+                "program": [
+                  3
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "index": 0,
+        "shape": "roundrect",
+        "feature": "schedule",
+        "position": 1
+      }
+    ],
+    "middle": [
+      {
+        "type": "button_power",
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "or": [
+              {
+                "program": [
+                  1
+                ]
+              },
+              {
+                "program": [
+                  2
+                ]
+              },
+              {
+                "program": [
+                  3
+                ]
+              }
+            ]
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "schedule": [
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            0
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            4
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            6
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            5
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            7
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              7
+            ]
+          }
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "dropdown",
+        "title": {
+          "en-US": "The state of the switch when turned on",
+          "ru-RU": "Состояние выключателя при включении"
+        },
+        "position": 0,
+        "formatRules": [
+          {
+            "max": 0,
+            "min": 0,
+            "string": "start_off"
+          },
+          {
+            "max": 1,
+            "min": 1,
+            "string": "start_on"
+          },
+          {
+            "max": 2,
+            "min": 2,
+            "string": "start_remember"
+          }
+        ],
+        "program_data": {
+          "field": "initial_state",
+          "program": [
+            1
+          ]
+        }
+      },
+      {
+        "type": "dropdown",
+        "title": {
+          "en-US": "Indicator status",
+          "ru-RU": "Индикация"
+        },
+        "position": 1,
+        "formatRules": [
+          {
+            "max": 0,
+            "min": 0,
+            "string": "title.indication.no"
+          },
+          {
+            "max": 1,
+            "min": 1,
+            "string": "title.indication.yes"
+          },
+          {
+            "max": 2,
+            "min": 2,
+            "string": "title.indication.switch"
+          }
+        ],
+        "program_data": {
+          "field": "indication",
+          "program": [
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "limits": {},
+  "params": {
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "Two-key switch",
+          "manufacturer": "Hommyn"
+        },
+        "type": "devices.types.switch",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                1
+              ]
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          }
+        ],
+        "subdevices": [
+          {
+            "info": {
+              "model": "Two-key switch (left)",
+              "manufacturer": "Hommyn"
+            },
+            "type": "devices.types.switch",
+            "errors": [],
+            "features": [
+              {
+                "type": "button_power",
+                "items": [
+                  {
+                    "action": {
+                      "program": [
+                        1
+                      ]
+                    },
+                    "actionOff": {
+                      "program": [
+                        0
+                      ]
+                    },
+                    "visibility": {
+                      "or": [
+                        {
+                          "program": [
+                            0
+                          ]
+                        },
+                        {
+                          "program": [
+                            1
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "action": {
+                      "program": [
+                        3
+                      ]
+                    },
+                    "actionOff": {
+                      "program": [
+                        2
+                      ]
+                    },
+                    "visibility": {
+                      "or": [
+                        {
+                          "program": [
+                            2
+                          ]
+                        },
+                        {
+                          "program": [
+                            3
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "condition": {
+                  "or": [
+                    {
+                      "program": [
+                        1
+                      ]
+                    },
+                    {
+                      "program": [
+                        3
+                      ]
+                    }
+                  ]
+                },
+                "retrievable": true
+              }
+            ]
+          },
+          {
+            "info": {
+              "model": "Two-key switch (right)",
+              "manufacturer": "Hommyn"
+            },
+            "type": "devices.types.switch",
+            "errors": [],
+            "features": [
+              {
+                "type": "button_power",
+                "items": [
+                  {
+                    "action": {
+                      "program": [
+                        3
+                      ]
+                    },
+                    "actionOff": {
+                      "program": [
+                        1
+                      ]
+                    },
+                    "visibility": {
+                      "or": [
+                        {
+                          "program": [
+                            1
+                          ]
+                        },
+                        {
+                          "program": [
+                            3
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "action": {
+                      "program": [
+                        2
+                      ]
+                    },
+                    "actionOff": {
+                      "program": [
+                        0
+                      ]
+                    },
+                    "visibility": {
+                      "or": [
+                        {
+                          "program": [
+                            0
+                          ]
+                        },
+                        {
+                          "program": [
+                            2
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "condition": {
+                  "or": [
+                    {
+                      "program": [
+                        2
+                      ]
+                    },
+                    {
+                      "program": [
+                        3
+                      ]
+                    }
+                  ]
+                },
+                "retrievable": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "hidden": false,
+    "server": "Hommyn",
+    "realtime": true,
+    "fastSwitch": {
+      "on": {
+        "program": [
+          3
+        ]
+      },
+      "off": {
+        "program": [
+          0
+        ]
+      }
+    },
+    "program_data": {
+      "0": [
+        {
+          "max": 2,
+          "min": 0,
+          "name": "indication",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "1": [
+        {
+          "max": 2,
+          "min": 0,
+          "name": "initial_state",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 2,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "defaultProgram": [
+      3
+    ],
+    "excludeScheduleFeatures": [
+      "backlight"
+    ]
+  },
+  "vendor": "rusclimate",
+  "features": [
+    "program",
+    "demo",
+    "schedule"
+  ],
+  "messages": {
+    "pair": {
+      "en-US": "Hold down any key until the indicator starts flashing on it",
+      "ru-RU": "Удерживайте любую клавишу до тех пор, пока на ней не начнет мигать индикатор."
+    },
+    "enable": {
+      "en-US": "Please make sure that the Zigbee hub is connected to the app.\nPlease confirm that device has been properly installed to the power supply according to the wiring diagram.",
+      "ru-RU": "Пожалуйста, убедитесь, что Zigbee хаб подключен к приложению.\nУбедитесь, что устройство правильно подключено к источнику питания в соответствии со схемой подключения."
+    },
+    "start_on": {
+      "en-US": "On",
+      "ru-RU": "Вкл"
+    },
+    "pair.help": {
+      "en-US": "Please confirm that device has been properly installed to the power supply according to the wiring diagram\nHold down button until the indicator starts flashing on it",
+      "ru-RU": "Убедитесь, что устройство правильно подключено к источнику питания в соответствии со схемой подключения.\nУдерживайте кнопку до тех пор, пока на ней не начнет мигать индикатор"
+    },
+    "start_off": {
+      "en-US": "Off",
+      "ru-RU": "Выкл"
+    },
+    "url.manual": {
+      "en-US": "https://d5dk3cfdscakk9dd10pv.apigw.yandexcloud.net/pdf/rusclimate/63/375456_HOMMYN_Manual_SWZBNN01W_80x80x9-print.pdf",
+      "ru-RU": "https://d5dk3cfdscakk9dd10pv.apigw.yandexcloud.net/pdf/rusclimate/63/375456_HOMMYN_Manual_SWZBNN01W_80x80x9-print.pdf"
+    },
+    "pair.help.link": {
+      "en-US": "Is indicator not flashing?",
+      "ru-RU": "Индикатор не мигает?"
+    },
+    "start_remember": {
+      "en-US": "Remember last status",
+      "ru-RU": "Запомнить последний статус"
+    },
+    "title.indication.no": {
+      "en-US": "Off",
+      "ru-RU": "Выключить индикацию"
+    },
+    "title.indication.yes": {
+      "en-US": "On",
+      "ru-RU": "Включить индикацию"
+    },
+    "title.indication.switch": {
+      "en-US": "Switch position",
+      "ru-RU": "Инверсия индикации"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Both Off",
+        "ru-RU": "Выключить все"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Left On",
+        "ru-RU": "Включена левая "
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Right On",
+        "ru-RU": "Включена правая"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Both On",
+        "ru-RU": "Включить все"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Switch left on",
+        "ru-RU": "Включить левую"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Switch right on",
+        "ru-RU": "Включить правую"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Switch left off",
+        "ru-RU": "Выключить левую"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Switch right off",
+        "ru-RU": "Выключить правую"
+      },
+      "hidden": false
+    }
+  ],
+  "alt_images": {
+    "pair": {
+      "60": "https://images.cdn.rusklimat.ru/2/25/93ad3-13a7-491e-90f7-c098de2d397b/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/2/25/93ad3-13a7-491e-90f7-c098de2d397b/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/2/25/93ad3-13a7-491e-90f7-c098de2d397b/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/2/25/93ad3-13a7-491e-90f7-c098de2d397b/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/2/25/93ad3-13a7-491e-90f7-c098de2d397b/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/2/25/93ad3-13a7-491e-90f7-c098de2d397b/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/2/25/93ad3-13a7-491e-90f7-c098de2d397b/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/2/25/93ad3-13a7-491e-90f7-c098de2d397b/1800.webp",
+      "2400": "https://images.cdn.rusklimat.ru/2/25/93ad3-13a7-491e-90f7-c098de2d397b/2400.webp",
+      "id": "22593ad3-13a7-491e-90f7-c098de2d397b",
+      "original": "https://images.cdn.rusklimat.ru/2/25/93ad3-13a7-491e-90f7-c098de2d397b/original.webp"
+    },
+    "enable": {
+      "60": "https://images.cdn.rusklimat.ru/7/11/7e679-b8fa-4a56-acf8-0137e4d19c96/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/7/11/7e679-b8fa-4a56-acf8-0137e4d19c96/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/7/11/7e679-b8fa-4a56-acf8-0137e4d19c96/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/7/11/7e679-b8fa-4a56-acf8-0137e4d19c96/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/7/11/7e679-b8fa-4a56-acf8-0137e4d19c96/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/7/11/7e679-b8fa-4a56-acf8-0137e4d19c96/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/7/11/7e679-b8fa-4a56-acf8-0137e4d19c96/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/7/11/7e679-b8fa-4a56-acf8-0137e4d19c96/1800.webp",
+      "2400": "https://images.cdn.rusklimat.ru/7/11/7e679-b8fa-4a56-acf8-0137e4d19c96/2400.webp",
+      "id": "7117e679-b8fa-4a56-acf8-0137e4d19c96",
+      "original": "https://images.cdn.rusklimat.ru/7/11/7e679-b8fa-4a56-acf8-0137e4d19c96/original.webp"
+    },
+    "pair.help": {
+      "60": "https://images.cdn.rusklimat.ru/2/20/89c4d-eae5-4b94-b663-8107456c45a2/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/2/20/89c4d-eae5-4b94-b663-8107456c45a2/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/2/20/89c4d-eae5-4b94-b663-8107456c45a2/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/2/20/89c4d-eae5-4b94-b663-8107456c45a2/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/2/20/89c4d-eae5-4b94-b663-8107456c45a2/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/2/20/89c4d-eae5-4b94-b663-8107456c45a2/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/2/20/89c4d-eae5-4b94-b663-8107456c45a2/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/2/20/89c4d-eae5-4b94-b663-8107456c45a2/1800.webp",
+      "2400": "https://images.cdn.rusklimat.ru/2/20/89c4d-eae5-4b94-b663-8107456c45a2/2400.webp",
+      "id": "22089c4d-eae5-4b94-b663-8107456c45a2",
+      "original": "https://images.cdn.rusklimat.ru/2/20/89c4d-eae5-4b94-b663-8107456c45a2/original.webp"
+    },
+    "pair.help.link": {
+      "60": "https://images.cdn.rusklimat.ru/1/df/1ada0-19a0-421c-9f35-7dc45b477df1/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/1/df/1ada0-19a0-421c-9f35-7dc45b477df1/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/1/df/1ada0-19a0-421c-9f35-7dc45b477df1/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/1/df/1ada0-19a0-421c-9f35-7dc45b477df1/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/1/df/1ada0-19a0-421c-9f35-7dc45b477df1/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/1/df/1ada0-19a0-421c-9f35-7dc45b477df1/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/1/df/1ada0-19a0-421c-9f35-7dc45b477df1/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/1/df/1ada0-19a0-421c-9f35-7dc45b477df1/1800.webp",
+      "2400": "https://images.cdn.rusklimat.ru/1/df/1ada0-19a0-421c-9f35-7dc45b477df1/2400.webp",
+      "id": "1df1ada0-19a0-421c-9f35-7dc45b477df1",
+      "original": "https://images.cdn.rusklimat.ru/1/df/1ada0-19a0-421c-9f35-7dc45b477df1/original.webp"
+    }
+  },
+  "connectivity": [
+    "zigbee"
+  ],
+  "last_modified": 1761240792,
+  "temperature_units": "celsius"
+}

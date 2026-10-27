@@ -1,0 +1,73 @@
+{
+  "id": "4dc169bf-6393-4b9d-bb0b-1490832ab1a4",
+  "name": "Hommyn Hub HH-02",
+  "type": 127,
+  "class": "other",
+  "image": {
+    "60": "https://images.cdn.rusklimat.ru/5/61/29639-3761-4a68-9356-3541a1909ae4/60.webp",
+    "120": "https://images.cdn.rusklimat.ru/5/61/29639-3761-4a68-9356-3541a1909ae4/120.webp",
+    "240": "https://images.cdn.rusklimat.ru/5/61/29639-3761-4a68-9356-3541a1909ae4/240.webp",
+    "480": "https://images.cdn.rusklimat.ru/5/61/29639-3761-4a68-9356-3541a1909ae4/480.webp",
+    "600": "https://images.cdn.rusklimat.ru/5/61/29639-3761-4a68-9356-3541a1909ae4/600.webp",
+    "900": "https://images.cdn.rusklimat.ru/5/61/29639-3761-4a68-9356-3541a1909ae4/900.webp",
+    "1200": "https://images.cdn.rusklimat.ru/5/61/29639-3761-4a68-9356-3541a1909ae4/1200.webp",
+    "1800": "https://images.cdn.rusklimat.ru/5/61/29639-3761-4a68-9356-3541a1909ae4/1800.webp",
+    "id": "56129639-3761-4a68-9356-3541a1909ae4",
+    "original": "https://images.cdn.rusklimat.ru/5/61/29639-3761-4a68-9356-3541a1909ae4/original.webp"
+  },
+  "layout": {
+    "top": [
+      {
+        "type": "fill",
+        "position": 0
+      }
+    ],
+    "bottom": [
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M15 17H17V15H19V13H17V11H15V13H13V15H15V17ZM7 15H10V13H7V15ZM7 12H14V10H7V12ZM7 9H14V7H7V9ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z",
+        "type": "button",
+        "title": {
+          "en-US": "Add",
+          "ru-RU": "Добавить"
+        },
+        "layout": "add_zigbee",
+        "position": 0
+      }
+    ],
+    "middle": [
+      {
+        "type": "fill",
+        "position": 0
+      }
+    ]
+  },
+  "limits": {},
+  "params": {
+    "hidden": true,
+    "realtime": true,
+    "cloneOfType": 22
+  },
+  "vendor": "rusclimate",
+  "features": [],
+  "messages": {
+    "diag": {
+      "en-US": "Please hold the button on the control module for 10 sec. The LED of the button should start flashing red and green.",
+      "ru-RU": "Зажмите кнопку на управляющем модуле на 10 секунд (светодиод в кнопке начнет мигать красным и зеленым цветом)."
+    },
+    "pair": {
+      "en-US": "To enable Pairing mode on the control module please hold the button for 5 sec.\nThe LED of the button should start flashing light green.\nAfter connection to the network is successfully established, Wi-Fi indicator of the device will be constantly on.",
+      "ru-RU": "Для включения режима «Сопряжение» на Управляющем модуле необходимо зажать кнопку и удерживать ее 5 секунд.\nСветодиод в кнопке начнет мигать светло-зеленым цветом.\nПосле успешной установки соединения с сетью индикатор Wi-Fi прибора будет постоянно гореть."
+    },
+    "reset": {
+      "en-US": "Please hold the button on the control module for 10 sec. The LED of the button should start flashing red and green.",
+      "ru-RU": "Зажмите кнопку на управляющем модуле на 10 секунд (светодиод в кнопке начнет мигать красным и зеленым цветом)."
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "zigbee-host",
+    "ble_config"
+  ],
+  "last_modified": 1785948007,
+  "temperature_units": "celsius"
+}

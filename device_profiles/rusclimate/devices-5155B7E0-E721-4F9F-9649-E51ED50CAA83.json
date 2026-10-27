@@ -1,0 +1,291 @@
+{
+  "id": "5155b7e0-e721-4f9f-9649-e51ed50caa83",
+  "name": "WFN-02-01/02",
+  "type": 43,
+  "class": "other",
+  "image": {
+    "60": "https://images.cdn.rusklimat.ru/b/db/3ec7d-b5c0-4a51-ba4f-e7508b5eacfc/60.webp",
+    "120": "https://images.cdn.rusklimat.ru/b/db/3ec7d-b5c0-4a51-ba4f-e7508b5eacfc/120.webp",
+    "240": "https://images.cdn.rusklimat.ru/b/db/3ec7d-b5c0-4a51-ba4f-e7508b5eacfc/240.webp",
+    "480": "https://images.cdn.rusklimat.ru/b/db/3ec7d-b5c0-4a51-ba4f-e7508b5eacfc/480.webp",
+    "600": "https://images.cdn.rusklimat.ru/b/db/3ec7d-b5c0-4a51-ba4f-e7508b5eacfc/600.webp",
+    "900": "https://images.cdn.rusklimat.ru/b/db/3ec7d-b5c0-4a51-ba4f-e7508b5eacfc/900.webp",
+    "1200": "https://images.cdn.rusklimat.ru/b/db/3ec7d-b5c0-4a51-ba4f-e7508b5eacfc/1200.webp",
+    "1800": "https://images.cdn.rusklimat.ru/b/db/3ec7d-b5c0-4a51-ba4f-e7508b5eacfc/1800.webp",
+    "2400": "https://images.cdn.rusklimat.ru/b/db/3ec7d-b5c0-4a51-ba4f-e7508b5eacfc/2400.webp",
+    "id": "bdb3ec7d-b5c0-4a51-ba4f-e7508b5eacfc",
+    "original": "https://images.cdn.rusklimat.ru/b/db/3ec7d-b5c0-4a51-ba4f-e7508b5eacfc/original.webp"
+  },
+  "layout": {
+    "middle": [
+      {
+        "row": "uuid",
+        "type": "info",
+        "title": {
+          "en-US": "Device type ID",
+          "ru-RU": "Идентификатор устройства"
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Please update the firmware to the last version to operate the device",
+          "ru-RU": "Пожалуйста, обновите прошивку до последней версии для поддержки этого устройства"
+        }
+      }
+    ]
+  },
+  "limits": {},
+  "params": {
+    "hidden": true,
+    "altTypes": [
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      21,
+      38,
+      41,
+      42,
+      55,
+      56,
+      57,
+      60,
+      68,
+      70,
+      72,
+      82,
+      85,
+      91,
+      95,
+      99,
+      108,
+      110,
+      111,
+      114,
+      123
+    ],
+    "realtime": true,
+    "cloneOfType": 25,
+    "hotspot_ssid": "WFN-02",
+    "wifi_auth_map": {},
+    "deviceAttributes": [
+      {
+        "name": "midea999",
+        "title": "title.model",
+        "values": [
+          {
+            "name": "fusion_evo_dc",
+            "deviceType": 8
+          },
+          {
+            "name": "eco_smart",
+            "deviceType": 13
+          }
+        ],
+        "condition": [
+          {
+            "uuid": 999
+          }
+        ]
+      },
+      {
+        "name": "gree998",
+        "title": "title.model",
+        "values": [
+          {
+            "name": "monaco_dc",
+            "deviceType": 41
+          },
+          {
+            "name": "viking_dc",
+            "deviceType": 15
+          }
+        ],
+        "condition": [
+          {
+            "uuid": 998
+          }
+        ]
+      },
+      {
+        "name": "hisense996",
+        "title": "attr.title.hisense996",
+        "values": [
+          {
+            "name": "moderno_dc",
+            "deviceType": 21
+          },
+          {
+            "name": "loft_dc",
+            "deviceType": 68
+          }
+        ],
+        "condition": [
+          {
+            "uuid": 996
+          }
+        ]
+      },
+      {
+        "name": "platinum997",
+        "title": "attr.title.platinum997",
+        "values": [
+          {
+            "name": "platunim_dc",
+            "deviceType": 20
+          },
+          {
+            "name": "ballu_universal_dc",
+            "deviceType": 70
+          }
+        ],
+        "condition": [
+          {
+            "uuid": 997
+          }
+        ]
+      },
+      {
+        "name": "regency23",
+        "title": "attr.title.regency23",
+        "values": [
+          {
+            "name": "regency",
+            "deviceType": 19
+          },
+          {
+            "name": "royal_thermo_regency",
+            "deviceType": 91
+          }
+        ],
+        "condition": [
+          {
+            "uuid": 23
+          }
+        ]
+      },
+      {
+        "name": "discovery991",
+        "title": "attr.title.discovery991",
+        "values": [
+          {
+            "name": "ballu_discovery_dc",
+            "deviceType": 60
+          },
+          {
+            "name": "royal_thermo_diamond_dc",
+            "deviceType": 108
+          },
+          {
+            "name": "shuft_sfms_07",
+            "deviceType": 114
+          }
+        ],
+        "condition": [
+          {
+            "uuid": 991
+          }
+        ]
+      },
+      {
+        "name": "barocco993",
+        "title": "attr.title.barocco993",
+        "values": [
+          {
+            "name": "barocco_dc",
+            "deviceType": 55
+          },
+          {
+            "name": "shuft_sfms_09",
+            "deviceType": 111
+          }
+        ],
+        "condition": [
+          {
+            "uuid": 993
+          }
+        ]
+      },
+      {
+        "name": "voyager989",
+        "title": "attr.title.voyager989",
+        "values": [
+          {
+            "name": "barocco",
+            "deviceType": 55
+          },
+          {
+            "name": "voyager",
+            "deviceType": 123
+          }
+        ],
+        "condition": [
+          {
+            "uuid": 989
+          }
+        ]
+      }
+    ]
+  },
+  "vendor": "rusclimate",
+  "features": [
+    "uuid"
+  ],
+  "messages": {
+    "diag": {
+      "en-US": "Please hold the button on the control module for 10 sec. The LED of the button should start flashing red and green.",
+      "ru-RU": "Зажмите кнопку на управляющем модуле на 10 секунд (светодиод в кнопке начнет мигать красным и зеленым цветом)."
+    },
+    "pair": {
+      "en-US": "To enable Pairing mode on the control module please hold the button for 5 sec.\nThe LED of the button should start flashing light green.\nAfter connection to the network is successfully established, Wi-Fi indicator of the device will be constantly on.",
+      "ru-RU": "Для включения режима «Сопряжение» на Управляющем модуле необходимо зажать кнопку и удерживать ее 5 секунд.\nСветодиод в кнопке начнет мигать светло-зеленым цветом.\nПосле успешной установки соединения с сетью индикатор Wi-Fi прибора будет постоянно гореть."
+    },
+    "reset": {
+      "en-US": "Please hold the button on the control module for 10 sec. The LED of the button should start flashing red and green.",
+      "ru-RU": "Зажмите кнопку на управляющем модуле на 10 секунд (светодиод в кнопке начнет мигать красным и зеленым цветом)."
+    },
+    "title.model": {
+      "en-US": "Model",
+      "ru-RU": "Модель"
+    },
+    "attr.title.regency23": {
+      "en-US": "Model",
+      "ru-RU": "Модель"
+    },
+    "attr.title.barocco993": {
+      "en-US": "Model",
+      "ru-RU": "Модель"
+    },
+    "attr.title.hisense996": {
+      "en-US": "Model",
+      "ru-RU": "Модель"
+    },
+    "attr.title.voyager989": {
+      "en-US": "Model",
+      "ru-RU": "Модель"
+    },
+    "attr.title.platinum997": {
+      "en-US": "Model",
+      "ru-RU": "Модель"
+    },
+    "attr.title.discovery991": {
+      "en-US": "Model",
+      "ru-RU": "Модель"
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1782304580,
+  "temperature_units": "celsius"
+}

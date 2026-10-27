@@ -1,0 +1,695 @@
+{
+  "id": "483b7ae2-22c0-45b6-a18a-edb583ba27bb",
+  "name": "Dimmer switch rotary DSWZBN01W",
+  "type": 104,
+  "class": "socket",
+  "image": {
+    "60": "https://images.cdn.rusklimat.ru/2/23/47be5-0065-42cd-ae64-bdb5ecffed97/60.webp",
+    "120": "https://images.cdn.rusklimat.ru/2/23/47be5-0065-42cd-ae64-bdb5ecffed97/120.webp",
+    "240": "https://images.cdn.rusklimat.ru/2/23/47be5-0065-42cd-ae64-bdb5ecffed97/240.webp",
+    "480": "https://images.cdn.rusklimat.ru/2/23/47be5-0065-42cd-ae64-bdb5ecffed97/480.webp",
+    "600": "https://images.cdn.rusklimat.ru/2/23/47be5-0065-42cd-ae64-bdb5ecffed97/600.webp",
+    "900": "https://images.cdn.rusklimat.ru/2/23/47be5-0065-42cd-ae64-bdb5ecffed97/900.webp",
+    "id": "22347be5-0065-42cd-ae64-bdb5ecffed97",
+    "original": "https://images.cdn.rusklimat.ru/2/23/47be5-0065-42cd-ae64-bdb5ecffed97/original.webp"
+  },
+  "layout": {
+    "bottom": [
+      {
+        "type": "button",
+        "index": 0,
+        "feature": "schedule",
+        "position": 0
+      },
+      {
+        "icon": "M0,0h24v24V0M21.451,12.523C21.451,17.749,17.211,22,12,22c-5.211,0-9.451-4.251-9.451-9.477c0-3.817,2.266-7.245,5.772-8.732c0.101-0.043,0.207-0.065,0.316-0.065c0.327,0,0.621,0.195,0.748,0.497c0.084,0.2,0.086,0.421,0.005,0.623C9.308,5.048,9.153,5.206,8.953,5.291c-2.904,1.232-4.781,4.071-4.781,7.232c0,4.328,3.511,7.849,7.827,7.849c4.316,0,7.827-3.521,7.827-7.849c0-3.18-1.891-6.025-4.818-7.248c-0.2-0.084-0.356-0.24-0.438-0.441c-0.083-0.201-0.082-0.422,0.001-0.623c0.127-0.304,0.421-0.501,0.75-0.501c0.107,0,0.212,0.021,0.312,0.063C19.167,5.25,21.451,8.684,21.451,12.523zM12,13.746c0.588,0,1.065-0.479,1.065-1.068v-9.61C13.065,2.479,12.587,2,12,2c-0.587,0-1.065,0.479-1.065,1.068v9.61C10.935,13.267,11.412,13.746,12,13.746z",
+        "type": "button",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "middle": [
+      {
+        "info": [
+          {
+            "type": "info",
+            "feature": "amount"
+          },
+          {
+            "type": "info",
+            "suffix": "suffix.empty",
+            "feature": "temperature",
+            "text_suffix": false
+          },
+          {
+            "type": "info",
+            "suffix": "suffix.empty",
+            "feature": "current_temperature",
+            "text_suffix": false
+          }
+        ],
+        "type": "slider",
+        "title": {
+          "en-US": "Brightness",
+          "ru-RU": "Яркость"
+        },
+        "colors": [],
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "10": {
+            "label": " "
+          },
+          "20": {
+            "label": "20"
+          },
+          "30": {
+            "label": " "
+          },
+          "40": {
+            "label": "40"
+          },
+          "50": {
+            "label": " "
+          },
+          "60": {
+            "label": "60"
+          },
+          "70": {
+            "label": " "
+          },
+          "80": {
+            "label": "80"
+          },
+          "90": {
+            "label": " "
+          },
+          "100": {
+            "label": "100"
+          }
+        },
+        "feature": "amount",
+        "position": 0,
+        "segments": []
+      }
+    ],
+    "schedule": [
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            0
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 100,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 50,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Brightness",
+          "ru-RU": "Яркость"
+        },
+        "feature": "amount",
+        "position": 0,
+        "visibility": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Minimum brightness",
+          "ru-RU": "Минимальная яркость"
+        },
+        "position": 0,
+        "formatRules": [
+          {
+            "formatValue": [
+              {
+                "op": "add",
+                "value": 0
+              }
+            ]
+          }
+        ],
+        "mutableLimit": {
+          "max": {
+            "program_data": {
+              "field": "max_brightness",
+              "program": [
+                0
+              ]
+            }
+          },
+          "min": 0,
+          "step": 1,
+          "default": 5
+        },
+        "program_data": {
+          "field": "min_brightness",
+          "program": [
+            0
+          ]
+        }
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Maximum brightness",
+          "ru-RU": "Максимальная яркость"
+        },
+        "position": 1,
+        "formatRules": [
+          {
+            "formatValue": [
+              {
+                "op": "add",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "mutableLimit": {
+          "max": 90,
+          "min": {
+            "program_data": {
+              "field": "min_brightness",
+              "program": [
+                0
+              ]
+            }
+          },
+          "step": 1,
+          "default": 5
+        },
+        "program_data": {
+          "field": "max_brightness",
+          "program": [
+            0
+          ]
+        }
+      },
+      {
+        "type": "dropdown",
+        "title": {
+          "en-US": "Light Type",
+          "ru-RU": "Тип лампы"
+        },
+        "position": 2,
+        "formatRules": [
+          {
+            "max": 0,
+            "min": 0,
+            "string": "led_lamp"
+          },
+          {
+            "max": 1,
+            "min": 1,
+            "string": "hal_lamp"
+          },
+          {
+            "max": 2,
+            "min": 2,
+            "string": "inc_lamp"
+          }
+        ],
+        "program_data": {
+          "field": "lamp_type",
+          "program": [
+            0
+          ]
+        }
+      },
+      {
+        "type": "dropdown",
+        "title": {
+          "en-US": "The state of the switch when turned on",
+          "ru-RU": "Состояние выключателя при включении"
+        },
+        "position": 3,
+        "formatRules": [
+          {
+            "max": 0,
+            "min": 0,
+            "string": "start_off"
+          },
+          {
+            "max": 1,
+            "min": 1,
+            "string": "start_on"
+          },
+          {
+            "max": 2,
+            "min": 2,
+            "string": "start_remember"
+          }
+        ],
+        "program_data": {
+          "field": "initial_state",
+          "program": [
+            1
+          ]
+        }
+      },
+      {
+        "type": "dropdown",
+        "title": {
+          "en-US": "Indicator status",
+          "ru-RU": "Индикация"
+        },
+        "position": 4,
+        "formatRules": [
+          {
+            "max": 0,
+            "min": 0,
+            "string": "title.indication.no"
+          },
+          {
+            "max": 1,
+            "min": 1,
+            "string": "title.indication.light.on"
+          },
+          {
+            "max": 2,
+            "min": 2,
+            "string": "title.indication.light.off"
+          }
+        ],
+        "program_data": {
+          "field": "indication",
+          "program": [
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "limits": {
+    "amount": {
+      "max": 100,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "temperature": {
+      "max": 100,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "voice": {
+      "sber": {
+        "info": {
+          "model": "Dimmer switch rotary DSWZBN01W",
+          "manufacturer": "rusclimate"
+        },
+        "type": "light",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                1
+              ]
+            },
+            "instance": "on_off",
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "source": "state",
+              "program": [
+                1
+              ]
+            },
+            "retrievable": true
+          },
+          {
+            "type": "slider",
+            "limit": {
+              "max": 100,
+              "min": 5,
+              "step": 1,
+              "round": 1,
+              "default": 5,
+              "roundAlt": 1
+            },
+            "feature": "amount",
+            "instance": "light_brightness",
+            "retrievable": true
+          }
+        ]
+      },
+      "alice": {
+        "info": {
+          "model": "Dimmer switch rotary DSWZBN01W",
+          "manufacturer": "rusclimate"
+        },
+        "type": "devices.types.switch",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                1
+              ]
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "slider",
+            "limit": {
+              "max": 100,
+              "min": 0,
+              "step": 1,
+              "round": 1,
+              "default": 0,
+              "roundAlt": 1
+            },
+            "feature": "amount",
+            "instance": "brightness",
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "hidden": false,
+    "server": "Hommyn",
+    "realtime": true,
+    "fastSwitch": {
+      "on": {
+        "program": [
+          1
+        ]
+      },
+      "off": {
+        "program": [
+          0
+        ]
+      }
+    },
+    "program_data": {
+      "0": [
+        {
+          "max": 2,
+          "min": 0,
+          "name": "indication",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 90,
+          "min": 0,
+          "name": "min_brightness",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 90,
+          "min": 0,
+          "name": "max_brightness",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 90,
+          "roundAlt": 1
+        },
+        {
+          "max": 2,
+          "min": 0,
+          "name": "lamp_type",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "1": [
+        {
+          "max": 2,
+          "min": 0,
+          "name": "initial_state",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 2,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "defaultProgram": [
+      1
+    ]
+  },
+  "vendor": "rusclimate",
+  "features": [
+    "program",
+    "demo",
+    "schedule",
+    "amount",
+    "temperature",
+    "current_temperature"
+  ],
+  "messages": {
+    "pair": {
+      "en-US": "Connect the device to a power source.\nPress and hold the encoder button until the indicator light on the device starts flashing.",
+      "ru-RU": "Подключите устройство к источнику питания.\nНажмите и удерживайте кнопку энкодера до тех пор, пока на устройстве не начнет мигать индикатор."
+    },
+    "enable": {
+      "en-US": "Please make sure that the Zigbee hub is connected to the app.",
+      "ru-RU": "Пожалуйста, убедитесь, что Zigbee хаб подключен к приложению."
+    },
+    "error.1": {
+      "en-US": "The set value is below the minimum",
+      "ru-RU": "Устанавливаемое значение ниже минимального"
+    },
+    "error.2": {
+      "en-US": "The set value is higher than the maximum",
+      "ru-RU": "Устанавливаемое значение выше максимального"
+    },
+    "hal_lamp": {
+      "en-US": "Halogen",
+      "ru-RU": "Галогеновая"
+    },
+    "inc_lamp": {
+      "en-US": "Incandescent",
+      "ru-RU": "Накаливания"
+    },
+    "led_lamp": {
+      "en-US": "LED",
+      "ru-RU": "LED"
+    },
+    "start_on": {
+      "en-US": "On",
+      "ru-RU": "Вкл"
+    },
+    "pair.help": {
+      "en-US": "Connect the device to a power source.\nPress and hold the encoder button until the indicator light on the device starts flashing",
+      "ru-RU": "Подключите устройство к источнику питания.\nНажмите и удерживайте кнопку энкодера до тех пор, пока на устройстве не начнет мигать индикатор."
+    },
+    "start_off": {
+      "en-US": "Off",
+      "ru-RU": "Выкл"
+    },
+    "url.manual": {
+      "en-US": "https://d5dk3cfdscakk9dd10pv.apigw.yandexcloud.net/pdf/rusclimate/63/375456_HOMMYN_Manual_SWZBNN01W_80x80x9-print.pdf",
+      "ru-RU": "https://d5dk3cfdscakk9dd10pv.apigw.yandexcloud.net/pdf/rusclimate/63/375456_HOMMYN_Manual_SWZBNN01W_80x80x9-print.pdf"
+    },
+    "attr.amount": {
+      "ru-RU": "Яркость"
+    },
+    "suffix.empty": {
+      "ru-RU": " "
+    },
+    "pair.help.link": {
+      "en-US": "Is indicator not flashing?",
+      "ru-RU": "Индикатор не мигает?"
+    },
+    "start_remember": {
+      "en-US": "Remember last status",
+      "ru-RU": "Запомнить последний статус"
+    },
+    "attr.temperature": {
+      "en-US": "Maximum brightness",
+      "ru-RU": "Максимальная яркость"
+    },
+    "title.indication.no": {
+      "en-US": "Off",
+      "ru-RU": "Выключить индикацию"
+    },
+    "attr.current_temperature": {
+      "en-US": "Minimum brightness",
+      "ru-RU": "Минимальная яркость"
+    },
+    "title.indication.light.on": {
+      "en-US": "Light when on",
+      "ru-RU": "Свет при вкл"
+    },
+    "title.indication.light.off": {
+      "en-US": "Light when off",
+      "ru-RU": "Свет при выкл"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off",
+        "ru-RU": "Выключить"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "On",
+        "ru-RU": "Включить"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Schedule"
+      },
+      "hidden": false
+    }
+  ],
+  "alt_images": {
+    "pair": {
+      "60": "https://images.cdn.rusklimat.ru/6/61/97348-7548-47f6-aceb-d9013471ad70/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/6/61/97348-7548-47f6-aceb-d9013471ad70/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/6/61/97348-7548-47f6-aceb-d9013471ad70/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/6/61/97348-7548-47f6-aceb-d9013471ad70/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/6/61/97348-7548-47f6-aceb-d9013471ad70/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/6/61/97348-7548-47f6-aceb-d9013471ad70/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/6/61/97348-7548-47f6-aceb-d9013471ad70/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/6/61/97348-7548-47f6-aceb-d9013471ad70/1800.webp",
+      "id": "66197348-7548-47f6-aceb-d9013471ad70",
+      "original": "https://images.cdn.rusklimat.ru/6/61/97348-7548-47f6-aceb-d9013471ad70/original.webp"
+    },
+    "enable": {
+      "60": "https://images.cdn.rusklimat.ru/d/b8/96de1-3292-4a43-8cc7-63f3afb2ca7f/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/d/b8/96de1-3292-4a43-8cc7-63f3afb2ca7f/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/d/b8/96de1-3292-4a43-8cc7-63f3afb2ca7f/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/d/b8/96de1-3292-4a43-8cc7-63f3afb2ca7f/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/d/b8/96de1-3292-4a43-8cc7-63f3afb2ca7f/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/d/b8/96de1-3292-4a43-8cc7-63f3afb2ca7f/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/d/b8/96de1-3292-4a43-8cc7-63f3afb2ca7f/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/d/b8/96de1-3292-4a43-8cc7-63f3afb2ca7f/1800.webp",
+      "id": "db896de1-3292-4a43-8cc7-63f3afb2ca7f",
+      "original": "https://images.cdn.rusklimat.ru/d/b8/96de1-3292-4a43-8cc7-63f3afb2ca7f/original.webp"
+    },
+    "pair.help": {
+      "60": "https://images.cdn.rusklimat.ru/d/d7/b655d-078f-44b3-a8ac-bdba12157fe4/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/d/d7/b655d-078f-44b3-a8ac-bdba12157fe4/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/d/d7/b655d-078f-44b3-a8ac-bdba12157fe4/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/d/d7/b655d-078f-44b3-a8ac-bdba12157fe4/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/d/d7/b655d-078f-44b3-a8ac-bdba12157fe4/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/d/d7/b655d-078f-44b3-a8ac-bdba12157fe4/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/d/d7/b655d-078f-44b3-a8ac-bdba12157fe4/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/d/d7/b655d-078f-44b3-a8ac-bdba12157fe4/1800.webp",
+      "id": "dd7b655d-078f-44b3-a8ac-bdba12157fe4",
+      "original": "https://images.cdn.rusklimat.ru/d/d7/b655d-078f-44b3-a8ac-bdba12157fe4/original.webp"
+    },
+    "pair.help.link": {
+      "60": "https://images.cdn.rusklimat.ru/6/d0/81584-c729-446b-bdc1-ca4b24bdab2a/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/6/d0/81584-c729-446b-bdc1-ca4b24bdab2a/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/6/d0/81584-c729-446b-bdc1-ca4b24bdab2a/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/6/d0/81584-c729-446b-bdc1-ca4b24bdab2a/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/6/d0/81584-c729-446b-bdc1-ca4b24bdab2a/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/6/d0/81584-c729-446b-bdc1-ca4b24bdab2a/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/6/d0/81584-c729-446b-bdc1-ca4b24bdab2a/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/6/d0/81584-c729-446b-bdc1-ca4b24bdab2a/1800.webp",
+      "id": "6d081584-c729-446b-bdc1-ca4b24bdab2a",
+      "original": "https://images.cdn.rusklimat.ru/6/d0/81584-c729-446b-bdc1-ca4b24bdab2a/original.webp"
+    }
+  },
+  "connectivity": [
+    "zigbee"
+  ],
+  "last_modified": 1762518872,
+  "temperature_units": "celsius"
+}

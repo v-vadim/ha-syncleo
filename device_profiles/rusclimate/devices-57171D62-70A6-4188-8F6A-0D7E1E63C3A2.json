@@ -1,0 +1,1337 @@
+{
+  "id": "57171d62-70a6-4188-8f6a-0d7e1e63c3a2",
+  "name": "Ballu ONEAIR ASV-60",
+  "type": 124,
+  "class": "ventilation",
+  "image": {
+    "60": "https://images.cdn.rusklimat.ru/6/55/14649-e93c-4ceb-a2e5-51a1979c024f/60.webp",
+    "120": "https://images.cdn.rusklimat.ru/6/55/14649-e93c-4ceb-a2e5-51a1979c024f/120.webp",
+    "240": "https://images.cdn.rusklimat.ru/6/55/14649-e93c-4ceb-a2e5-51a1979c024f/240.webp",
+    "480": "https://images.cdn.rusklimat.ru/6/55/14649-e93c-4ceb-a2e5-51a1979c024f/480.webp",
+    "600": "https://images.cdn.rusklimat.ru/6/55/14649-e93c-4ceb-a2e5-51a1979c024f/600.webp",
+    "900": "https://images.cdn.rusklimat.ru/6/55/14649-e93c-4ceb-a2e5-51a1979c024f/900.webp",
+    "1200": "https://images.cdn.rusklimat.ru/6/55/14649-e93c-4ceb-a2e5-51a1979c024f/1200.webp",
+    "1800": "https://images.cdn.rusklimat.ru/6/55/14649-e93c-4ceb-a2e5-51a1979c024f/1800.webp",
+    "id": "65514649-e93c-4ceb-a2e5-51a1979c024f",
+    "original": "https://images.cdn.rusklimat.ru/6/55/14649-e93c-4ceb-a2e5-51a1979c024f/original.webp"
+  },
+  "layout": {
+    "top": [
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Inlet temperature",
+          "ru-RU": "Температура притока"
+        },
+        "suffix": "degree",
+        "position": 0,
+        "text_suffix": true,
+        "program_data": {
+          "field": "oa",
+          "program": [
+            1
+          ]
+        }
+      },
+      {
+        "type": "info",
+        "index": 1,
+        "title": {
+          "en-US": "Filter resource",
+          "ru-RU": "Ресурс фильтра"
+        },
+        "feature": "expendables",
+        "position": 0
+      }
+    ],
+    "bottom": [
+      {
+        "icon": "M0,0h24v24V0M15.883,17.281c-1.619,1.765-4.017,2.804-6.655,2.557c-3.802-0.356-6.876-3.461-7.198-7.266c-0.34-4.03,2.31-7.493,5.974-8.434c0.318-0.081,0.566,0.269,0.401,0.553c-0.679,1.173-1.07,2.532-1.07,3.985c0,4.418,3.581,7.998,7.998,7.998c0.087,0,0.174-0.002,0.26-0.006C15.915,16.655,16.101,17.042,15.883,17.281zM11.067,6.657l-0.352,1.167c-0.044,0.148,0.122,0.269,0.249,0.181l1.001-0.695l1.002,0.695c0.126,0.087,0.294-0.033,0.248-0.181l-0.352-1.167l0.971-0.738c0.122-0.093,0.06-0.289-0.095-0.293L12.521,5.6L12.12,4.449c-0.051-0.146-0.257-0.146-0.308,0L11.411,5.6l-1.219,0.027c-0.154,0.003-0.218,0.199-0.095,0.293L11.067,6.657zM21.16,14.692l-1.171-0.025l-0.385-1.106c-0.056-0.16-0.283-0.16-0.339,0l-0.386,1.106l-1.171,0.025c-0.169,0.004-0.24,0.22-0.104,0.322l0.933,0.709l-0.337,1.121c-0.049,0.162,0.135,0.296,0.274,0.199l0.962-0.668l0.962,0.668c0.139,0.097,0.323-0.036,0.274-0.199l-0.338-1.121l0.933-0.709C21.401,14.912,21.331,14.696,21.16,14.692zM21.795,7.24l-1.758-0.038l-0.579-1.661c-0.066-0.186-0.329-0.186-0.396,0l-0.579,1.661L16.724,7.24c-0.197,0.004-0.279,0.256-0.122,0.375l1.401,1.064l-0.508,1.685c-0.057,0.189,0.156,0.344,0.319,0.231l1.445-1.003l1.445,1.003c0.163,0.113,0.376-0.042,0.319-0.231l-0.508-1.685l1.401-1.064C22.075,7.495,21.993,7.244,21.795,7.24z",
+        "type": "button",
+        "title": {
+          "en-US": "Sleep",
+          "ru-RU": "Ночной"
+        },
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h24v24V0M4.058,9.236L2,14.764h1.211l0.38-1.139h1.997l0.384,1.139h1.211l-2.07-5.529H4.058zM3.899,12.702l0.687-2.07l0.695,2.07H3.899zM10.673,9.236h1.143v3.642c0,0.605-0.19,1.083-0.57,1.435c-0.377,0.352-0.894,0.528-1.549,0.528c-0.646,0-1.158-0.171-1.538-0.513c-0.38-0.342-0.573-0.811-0.581-1.409V9.236h1.139v3.649c0,0.362,0.086,0.627,0.258,0.794c0.175,0.164,0.415,0.247,0.721,0.247c0.64,0,0.966-0.337,0.976-1.01V9.236zM12.408,9.236h4.503v0.923h-1.693v4.606h-1.139v-4.606h-1.671V9.236zM21.704,10.447c-0.195-0.415-0.472-0.733-0.832-0.953c-0.357-0.223-0.766-0.334-1.227-0.334s-0.871,0.111-1.23,0.334c-0.357,0.22-0.634,0.538-0.832,0.953c-0.195,0.413-0.292,0.891-0.292,1.435v0.273c0.003,0.532,0.103,1.003,0.3,1.413c0.197,0.408,0.476,0.721,0.835,0.942s0.768,0.33,1.227,0.33c0.463,0,0.873-0.111,1.23-0.334c0.359-0.223,0.635-0.539,0.828-0.949C21.904,13.147,22,12.67,22,12.125v-0.247C22,11.337,21.901,10.86,21.704,10.447zM20.846,12.144c-0.003,0.575-0.106,1.013-0.311,1.314c-0.205,0.299-0.499,0.448-0.881,0.448c-0.39,0-0.689-0.156-0.896-0.467c-0.208-0.311-0.311-0.749-0.311-1.314v-0.27c0.003-0.575,0.108-1.01,0.315-1.306c0.208-0.299,0.503-0.448,0.885-0.448c0.385,0,0.681,0.151,0.889,0.452c0.208,0.301,0.311,0.742,0.311,1.321V12.144z",
+        "type": "button",
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h24v24V0M9.97 4.37l0 0.3 3.46 0 0 6.42 0.32 0 0 -6.44c0,-0.14 -0.1,-0.28 -0.26,-0.28l-3.52 0zM9.97 19.33l0 0.31 3.56 -0.01c0.15,0 0.25,-0.14 0.25,-0.28l0 -6.44 -0.32 -0.01 0 6.43 -3.49 0zM14.78 10.65c0.05,0.19 -0.25,0.27 -0.3,0.08 -0.06,-0.25 -0.02,-0.51 0.1,-0.72 0.26,-0.45 0.83,-0.6 1.28,-0.34 0.21,0.12 0.37,0.32 0.43,0.57 0.14,0.51 -0.21,1.02 -0.7,1.15 -0.01,0 -0.03,0 -0.04,0l-4.17 0c-0.2,0 -0.2,-0.3 0,-0.3l4.15 0c0.32,-0.1 0.56,-0.43 0.47,-0.77 -0.15,-0.55 -0.88,-0.64 -1.16,-0.16 -0.08,0.15 -0.11,0.32 -0.06,0.49zM17.13 12.5c0.05,-0.19 0.35,-0.11 0.3,0.08 -0.05,0.17 -0.02,0.34 0.06,0.48 0.08,0.14 0.21,0.25 0.38,0.3 0.34,0.08 0.69,-0.11 0.78,-0.45l0 0c0.09,-0.34 -0.15,-0.68 -0.47,-0.77l-6.81 0c-0.2,0 -0.2,-0.31 0,-0.31l6.83 0c0.01,0 0.03,0.01 0.04,0.01 0.49,0.13 0.83,0.63 0.71,1.13l0 0.02c-0.14,0.49 -0.64,0.79 -1.13,0.66 -0.25,-0.05 -0.47,-0.22 -0.59,-0.44 -0.12,-0.2 -0.16,-0.46 -0.1,-0.71zM14.48 13.27c0.05,-0.19 0.34,-0.11 0.29,0.08 -0.09,0.34 0.11,0.69 0.45,0.78 0.34,0.09 0.69,-0.11 0.78,-0.45 0.09,-0.34 -0.15,-0.67 -0.47,-0.77l-4.16 0c-0.2,0 -0.2,-0.3 0,-0.3l4.18 0c0.01,0 0.02,0 0.04,0 0.49,0.13 0.84,0.64 0.7,1.15 -0.13,0.5 -0.65,0.8 -1.15,0.66 -0.5,-0.13 -0.8,-0.65 -0.66,-1.15zM9.77 21.98l-5.18 -3.08c-0.07,-0.05 -0.13,-0.16 -0.13,-0.25l0 -13.3c0,-0.09 0.06,-0.2 0.13,-0.24l5.18 -3.09c0.1,-0.06 0.2,0.01 0.2,0.13l0 19.7c0,0.12 -0.09,0.19 -0.2,0.13zM17.02 3.02c-1.38,0 -2.51,1.13 -2.51,2.52 0,1.39 1.13,2.52 2.51,2.52 1.39,0 2.52,-1.13 2.52,-2.52 0,-1.39 -1.13,-2.52 -2.52,-2.52zm1.81 3.5l-0.05 0.1c-0.17,0.27 -0.4,0.5 -0.68,0.67l-0.1 0.06c-0.27,0.15 -0.58,0.24 -0.92,0.25l-0.11 0c-0.34,-0.01 -0.65,-0.1 -0.92,-0.25l-0.1 -0.06c-0.28,-0.17 -0.51,-0.4 -0.68,-0.67l-0.05 -0.1c-0.15,-0.28 -0.25,-0.59 -0.26,-0.93l0 -0.11c0.01,-0.39 0.13,-0.68 0.31,-1.02 0.17,-0.28 0.4,-0.51 0.68,-0.68l0.1 -0.05c0.27,-0.15 0.58,-0.24 0.92,-0.25l0.11 0c0.34,0.01 0.65,0.1 0.92,0.25l0.1 0.05c0.28,0.17 0.51,0.4 0.68,0.68l0.05 0.1c0.15,0.27 0.25,0.59 0.26,0.92l0 0.11c-0.01,0.34 -0.11,0.65 -0.26,0.93zm-1.66 -1.2l0 -1.38 -0.29 0 0 1.38c-0.03,0.02 -0.05,0.05 -0.07,0.07l-0.87 0 0 0.29 0.87 0c0.05,0.07 0.13,0.12 0.22,0.12 0.14,0 0.26,-0.12 0.26,-0.26 0,-0.09 -0.05,-0.17 -0.12,-0.22z",
+        "type": "button",
+        "action": {
+          "program": [
+            4
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "schedule",
+        "position": 1
+      },
+      {
+        "icon": "M0,0h24v24V0M21.451,12.523C21.451,17.749,17.211,22,12,22c-5.211,0-9.451-4.251-9.451-9.477c0-3.817,2.266-7.245,5.772-8.732c0.101-0.043,0.207-0.065,0.316-0.065c0.327,0,0.621,0.195,0.748,0.497c0.084,0.2,0.086,0.421,0.005,0.623C9.308,5.048,9.153,5.206,8.953,5.291c-2.904,1.232-4.781,4.071-4.781,7.232c0,4.328,3.511,7.849,7.827,7.849c4.316,0,7.827-3.521,7.827-7.849c0-3.18-1.891-6.025-4.818-7.248c-0.2-0.084-0.356-0.24-0.438-0.441c-0.083-0.201-0.082-0.422,0.001-0.623c0.127-0.304,0.421-0.501,0.75-0.501c0.107,0,0.212,0.021,0.312,0.063C19.167,5.25,21.451,8.684,21.451,12.523zM12,13.746c0.588,0,1.065-0.479,1.065-1.068v-9.61C13.065,2.479,12.587,2,12,2c-0.587,0-1.065,0.479-1.065,1.068v9.61C10.935,13.267,11.412,13.746,12,13.746z",
+        "type": "button",
+        "action": {
+          "program": {
+            "program_data": {
+              "field": "last_program",
+              "program": [
+                0
+              ]
+            }
+          }
+        },
+        "position": 1,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "middle": [
+      {
+        "type": "slider",
+        "limit": {
+          "max": 4,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 4,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Speed",
+          "ru-RU": "Скорость"
+        },
+        "colors": [
+          {
+            "max": 4,
+            "min": 0,
+            "color": "condition/good"
+          }
+        ],
+        "layout": "middle_slider_info",
+        "points": {
+          "0": {
+            "label": "Auto"
+          },
+          "1": {
+            "label": "25%"
+          },
+          "2": {
+            "label": "50%"
+          },
+          "3": {
+            "label": "75%"
+          },
+          "4": {
+            "label": "100%"
+          }
+        },
+        "feature": "speed",
+        "position": 0
+      }
+    ],
+    "schedule": [
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            0
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            4
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Valve position",
+          "ru-RU": "Положение клапана"
+        },
+        "feature": "speed",
+        "position": 1,
+        "visibility": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ],
+        "value_strings": {
+          "0": "Auto",
+          "1": "25%",
+          "2": "50%",
+          "3": "75%",
+          "4": "100%"
+        }
+      }
+    ],
+    "settings": [
+      {
+        "type": "button",
+        "title": {
+          "en-US": "Auto mode setup",
+          "ru-RU": "Настройка AUTO режима"
+        },
+        "layout": "setup_dialog.auto_mode",
+        "position": 1
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "Interval mode setup",
+          "ru-RU": "Настройка интервального режима"
+        },
+        "layout": "setup_dialog.interval_mode",
+        "position": 2
+      },
+      {
+        "type": "switch",
+        "title": {
+          "en-US": "Sound",
+          "ru-RU": "Звук"
+        },
+        "feature": "volume",
+        "position": 3
+      },
+      {
+        "type": "switch",
+        "title": {
+          "en-US": "Auto off LED indication",
+          "ru-RU": "Автоотключение LED индикации"
+        },
+        "feature": "backlight",
+        "position": 4
+      },
+      {
+        "type": "switch",
+        "title": {
+          "en-US": "HEPA filter installed",
+          "ru-RU": "HEPA-фильтр установлен"
+        },
+        "position": 5,
+        "program_data": {
+          "field": "filter_tracking",
+          "program": [
+            2
+          ]
+        }
+      },
+      {
+        "type": "info",
+        "index": 1,
+        "title": {
+          "en-US": "Filter resource",
+          "ru-RU": "Ресурс фильтра"
+        },
+        "feature": "expendables",
+        "position": 6,
+        "precondition": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "filter_tracking",
+              "value": 1,
+              "program": [
+                2
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "index": 0,
+        "title": {
+          "en-US": "Prefilter resource",
+          "ru-RU": "Ресурс префильтра"
+        },
+        "feature": "expendables",
+        "position": 7
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Valve closing temperature",
+          "ru-RU": "Температура закрытия клапана"
+        },
+        "suffix": "degree",
+        "position": 7,
+        "formatRules": [
+          {
+            "max": 90,
+            "min": 0,
+            "formatValue": [
+              {
+                "op": "sub",
+                "value": 40
+              }
+            ]
+          }
+        ],
+        "text_suffix": true,
+        "program_data": {
+          "field": "valve_closing_temp",
+          "program": [
+            3
+          ]
+        }
+      }
+    ],
+    "middle_info": [
+      {
+        "type": "timer",
+        "color": "condition/good",
+        "title": {
+          "en-US": "Time until valve closes",
+          "ru-RU": "Время до закрытия клапана"
+        },
+        "feature": "timer",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "timer": 0
+            }
+          },
+          {
+            "program_data": {
+              "field": "valve_is_closing",
+              "value": 1,
+              "program": [
+                6
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "timer",
+        "color": "condition/good",
+        "title": {
+          "en-US": "Time until valve opens",
+          "ru-RU": "Время до открытия клапана"
+        },
+        "feature": "timer",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "timer": 0
+            }
+          },
+          {
+            "program_data": {
+              "field": "valve_is_closing",
+              "value": 0,
+              "program": [
+                6
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "row": "expendable_buy_warning",
+        "type": "info",
+        "index": 1,
+        "title": {
+          "en-US": "Remaining filter life: ",
+          "ru-RU": "Оставшийся ресурс фильтра: "
+        },
+        "colors": [
+          {
+            "max": 10.999,
+            "min": 0,
+            "color": "condition/danger"
+          },
+          {
+            "max": 20,
+            "min": 11,
+            "color": "condition/bad"
+          }
+        ],
+        "measure": "link.buy.filter",
+        "position": 1,
+        "visibility": [
+          {
+            "error": 0
+          }
+        ]
+      },
+      {
+        "type": "error",
+        "position": 2
+      }
+    ],
+    "middle_slider_info": [
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Valve position",
+          "ru-RU": "Положение клапана"
+        },
+        "feature": "speed",
+        "position": 0,
+        "value_strings": {
+          "0": "Auto",
+          "1": "25%",
+          "2": "50%",
+          "3": "75%",
+          "4": "100%"
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Indoor temperature",
+          "ru-RU": "Температура в помещении"
+        },
+        "feature": "current_temperature",
+        "position": 0
+      },
+      {
+        "type": "info",
+        "feature": "program",
+        "position": 0
+      }
+    ],
+    "setup_dialog.auto_mode": [
+      {
+        "type": "dropdown",
+        "title": {
+          "en-US": "Valve position",
+          "ru-RU": "Положение клапана"
+        },
+        "position": 0,
+        "program_data": {
+          "field": "auto_valve_position",
+          "program": [
+            4
+          ]
+        },
+        "value_strings": {
+          "0": "25%",
+          "1": "50%",
+          "2": "75%",
+          "3": "100%"
+        }
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Temperature",
+          "ru-RU": "Температура"
+        },
+        "position": 0,
+        "program_data": {
+          "field": "auto_temp",
+          "program": [
+            4
+          ]
+        }
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Hysteresis",
+          "ru-RU": "Гистерезис"
+        },
+        "position": 0,
+        "program_data": {
+          "field": "hysteresis",
+          "program": [
+            4
+          ]
+        }
+      }
+    ],
+    "setup_dialog.interval_mode": [
+      {
+        "type": "dropdown",
+        "title": {
+          "en-US": "Valve position",
+          "ru-RU": "Положение клапана"
+        },
+        "position": 0,
+        "program_data": {
+          "field": "interval_valve_position",
+          "program": [
+            5
+          ]
+        },
+        "value_strings": {
+          "0": "25%",
+          "1": "50%",
+          "2": "75%",
+          "3": "100%"
+        }
+      },
+      {
+        "type": "button",
+        "limit": {
+          "max": 10800,
+          "min": 900,
+          "step": 60,
+          "round": 1,
+          "default": 2700,
+          "roundAlt": 1
+        },
+        "style": "time_picker",
+        "title": {
+          "en-US": "Ventilation duration",
+          "ru-RU": "Продолжительность проветривания"
+        },
+        "position": 0,
+        "program_data": {
+          "field": "time_duration",
+          "program": [
+            5
+          ]
+        }
+      },
+      {
+        "type": "button",
+        "limit": {
+          "max": 86400,
+          "min": 900,
+          "step": 60,
+          "round": 1,
+          "default": 10800,
+          "roundAlt": 1
+        },
+        "style": "time_picker",
+        "title": {
+          "en-US": "Interval between ventilation",
+          "ru-RU": "Интервал между проветриванием"
+        },
+        "position": 0,
+        "program_data": {
+          "field": "time_interval",
+          "program": [
+            5
+          ]
+        }
+      }
+    ]
+  },
+  "limits": {
+    "speed": {
+      "max": 4,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "timer": {
+      "max": 86400,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "volume": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "backlight": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "icons": {},
+    "voice": {
+      "sber": {
+        "info": {
+          "model": "Ballu ONEAIR ASP-90",
+          "manufacturer": "rusclimate"
+        },
+        "type": "hvac_air_purifier",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program_data": {
+                "field": "turn_on",
+                "value": 1,
+                "program": [
+                  1
+                ]
+              }
+            },
+            "instance": "on_off",
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "source": "state",
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "quiet",
+                "action": {
+                  "speed": 1
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "program": [
+                        1
+                      ]
+                    },
+                    {
+                      "speed": 1
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "auto",
+                "action": {
+                  "program": [
+                    2
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    2
+                  ]
+                }
+              },
+              {
+                "value": "low",
+                "action": {
+                  "speed": 2
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "speed": 2
+                    },
+                    {
+                      "program": [
+                        1
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "medium",
+                "action": {
+                  "speed": 3
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "program": [
+                        1
+                      ]
+                    },
+                    {
+                      "speed": 3
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "high",
+                "action": {
+                  "speed": 4
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "program": [
+                        1
+                      ]
+                    },
+                    {
+                      "speed": 4
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "turbo",
+                "action": {
+                  "speed": 5
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "program": [
+                        1
+                      ]
+                    },
+                    {
+                      "speed": 5
+                    }
+                  ]
+                }
+              }
+            ],
+            "instance": "hvac_air_flow_power",
+            "retrievable": false
+          },
+          {
+            "type": "switch",
+            "action": {
+              "program": [
+                3
+              ]
+            },
+            "instance": "hvac_night_mode",
+            "actionOff": {
+              "program": [
+                2
+              ]
+            },
+            "condition": {
+              "program": [
+                3
+              ]
+            },
+            "retrievable": false
+          }
+        ]
+      },
+      "alice": {
+        "info": {
+          "model": "Ballu ONEAIR ASV-60",
+          "manufacturer": "rusclimate"
+        },
+        "type": "devices.types.purifier",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program": {
+                "program_data": {
+                  "field": "last_program",
+                  "program": [
+                    0
+                  ]
+                }
+              }
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "source": "state",
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "action": {
+              "backlight": 0
+            },
+            "instance": "backlight",
+            "actionOff": {
+              "backlight": 1
+            },
+            "condition": {
+              "backlight": 0
+            },
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "feature": "current_temperature",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "action": {
+              "volume": 0
+            },
+            "instance": "mute",
+            "actionOff": {
+              "volume": 1
+            },
+            "condition": {
+              "volume": 0
+            },
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "turbo",
+                "action": {
+                  "program": [
+                    4
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    4
+                  ]
+                }
+              },
+              {
+                "value": "quiet",
+                "action": {
+                  "program": [
+                    3
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    3
+                  ]
+                }
+              },
+              {
+                "value": "auto",
+                "action": {
+                  "program": [
+                    2
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    2
+                  ]
+                }
+              }
+            ],
+            "instance": "program",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "auto",
+                "action": {
+                  "program": [
+                    2
+                  ]
+                },
+                "condition": {
+                  "source": "state",
+                  "program": [
+                    2
+                  ]
+                }
+              },
+              {
+                "value": "min",
+                "action": {
+                  "speed": 1
+                },
+                "condition": {
+                  "speed": 1
+                }
+              },
+              {
+                "value": "low",
+                "action": {
+                  "speed": 2
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "speed": 2
+                    },
+                    {
+                      "program": [
+                        1
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "high",
+                "action": {
+                  "speed": 4
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "speed": 4
+                    },
+                    {
+                      "program": [
+                        1
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "medium",
+                "action": {
+                  "speed": 3
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "speed": 3
+                    },
+                    {
+                      "program": [
+                        1
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "instance": "fan_speed",
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "hidden": true,
+    "realtime": true,
+    "fastSwitch": {
+      "on": {
+        "program": [
+          2
+        ]
+      },
+      "off": {
+        "program": [
+          0
+        ]
+      }
+    },
+    "support_5g": true,
+    "expendables": [
+      {
+        "icon": "expendable.0",
+        "name": "expendable.0",
+        "title": "expendable.0",
+        "maxValue": 100
+      },
+      {
+        "name": "expendable.1",
+        "title": "expendable.1",
+        "maxValue": 100
+      }
+    ],
+    "adminPresets": true,
+    "hotspot_ssid": "ONEAIR ASV-60",
+    "program_data": {
+      "0": [
+        {
+          "max": 4,
+          "min": 0,
+          "name": "last_program",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        }
+      ],
+      "1": [
+        {
+          "max": 255,
+          "min": 0,
+          "name": "oa",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "2": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "filter_tracking",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "3": [
+        {
+          "max": 90,
+          "min": 0,
+          "name": "valve_closing_temp",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 40,
+          "roundAlt": 1
+        }
+      ],
+      "4": [
+        {
+          "max": 3,
+          "min": 0,
+          "name": "auto_valve_position",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        },
+        {
+          "max": 28,
+          "min": 18,
+          "name": "auto_temp",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 21,
+          "roundAlt": 1
+        },
+        {
+          "max": 5,
+          "min": 1,
+          "name": "hysteresis",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        }
+      ],
+      "5": [
+        {
+          "max": 3,
+          "min": 0,
+          "name": "interval_valve_position",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        },
+        {
+          "max": 86400,
+          "min": 900,
+          "name": "time_interval",
+          "size": 4,
+          "step": 60,
+          "round": 1,
+          "default": 10800,
+          "roundAlt": 1
+        },
+        {
+          "max": 10800,
+          "min": 900,
+          "name": "time_duration",
+          "size": 4,
+          "step": 60,
+          "round": 1,
+          "default": 2700,
+          "roundAlt": 1
+        }
+      ],
+      "6": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "valve_is_closing",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "wifi_auth_map": {},
+    "defaultProgram": [
+      1
+    ],
+    "expendable_max": [
+      100,
+      100
+    ],
+    "excludeScheduleFeatures": [
+      "damper",
+      "volume",
+      "backlight",
+      "timer"
+    ]
+  },
+  "vendor": "rusclimate",
+  "features": [
+    "program",
+    "volume",
+    "speed",
+    "current_temperature",
+    "expendables",
+    "schedule",
+    "backlight",
+    "timer"
+  ],
+  "messages": {
+    "diag": {
+      "en-US": "Turn on the devices. Press and hold the \"On/Off\" button on the device for 20 seconds. The LEDs on the device will begin flashing red.",
+      "ru-RU": "Включите устройства. Нажмите и удерживайте кнопку «Включить/Выключить» на устройстве в течение 20 секунд. Светодиоды на устройстве начнут мигать красным цветом."
+    },
+    "pair": {
+      "en-US": "Turn on the device. Press and hold the \"On/Off\" button on the device for 10 seconds. The LEDs on the device will begin flashing blue.",
+      "ru-RU": "Включите устройство. Нажмите и удерживайте кнопку «Включить/Выключить» на устройстве в течение 10 секунд. Светодиоды на устройстве начнут мигать голубым цветом. "
+    },
+    "reset": {
+      "en-US": "Turn on the devices. Press and hold the \"On/Off\" button on the device for 20 seconds. The LEDs on the device will begin flashing red.",
+      "ru-RU": "Включите устройства. Нажмите и удерживайте кнопку «Включить/Выключить» на устройстве в течение 20 секунд. Светодиоды на устройстве начнут мигать красным цветом."
+    },
+    "degree": {
+      "en-US": "°С",
+      "ru-RU": "°С"
+    },
+    "error.1": {
+      "en-US": "Temperature sensor overheating (>50°C)",
+      "ru-RU": "Перегрев датчика температуры (>50°C) "
+    },
+    "error.2": {
+      "en-US": "Flap error",
+      "ru-RU": "Ошибка заслонки"
+    },
+    "error.3": {
+      "en-US": "Temperature sensor connection error",
+      "ru-RU": "Ошибка подключения датчиков температуры"
+    },
+    "error.5": {
+      "en-US": "Anti-fire function activated",
+      "ru-RU": "Активирована функция Антипожар"
+    },
+    "error.6": {
+      "en-US": "Anti-frost function activated",
+      "ru-RU": "Активирована функция Антифрост"
+    },
+    "percent": {
+      "en-US": "%",
+      "ru-RU": "%"
+    },
+    "attr.speed": {
+      "en-US": "Valve position",
+      "ru-RU": "Положение клапана"
+    },
+    "attr.timer": {
+      "en-US": "Time until valve closes",
+      "ru-RU": "Время до закрытия клапана"
+    },
+    "expendable.0": {
+      "en-US": "Prefilter resource",
+      "ru-RU": "Ресурс префильтра"
+    },
+    "expendable.1": {
+      "en-US": "Filter",
+      "ru-RU": "Фильтр"
+    },
+    "link.buy.filter": {
+      "en-US": "https://q.hommyn.ru/cs/124/",
+      "ru-RU": "https://q.hommyn.ru/cs/124/"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off",
+        "ru-RU": "Выкл"
+      },
+      "hidden": false
+    },
+    {
+      "icon": "M5.57143 6.35714V6.28571V2.71429C5.57143 2.28571 5.28571 2 4.85714 2C4.42857 2 4.14286 2.28571 4.14286 2.71429V6.28571V6.35714C2.92857 6.64286 2 7.78571 2 9.14286C2 10.5 2.92857 11.5714 4.14286 11.9286V21.2857C4.14286 21.7143 4.42857 22 4.85714 22C5.28571 22 5.57143 21.7143 5.57143 21.2857V11.9286C6.78571 11.6429 7.71429 10.5 7.71429 9.14286C7.71429 7.78571 6.78571 6.71429 5.57143 6.35714ZM4.85714 10.5714C4.07143 10.5714 3.42857 9.92857 3.42857 9.14286C3.42857 8.35714 4.07143 7.71429 4.85714 7.71429C5.64286 7.71429 6.28571 8.35714 6.28571 9.14286C6.28571 9.92857 5.64286 10.5714 4.85714 10.5714ZM21.9998 9.14286C21.9998 7.78571 21.0712 6.71429 19.8569 6.35714V6.28571V2.71429C19.8569 2.28571 19.5712 2 19.1426 2C18.7141 2 18.4283 2.28571 18.4283 2.71429V6.28571V6.35714C17.2141 6.64286 16.2855 7.78571 16.2855 9.14286C16.2855 10.5 17.2141 11.5714 18.4283 11.9286V21.2857C18.4283 21.7143 18.7141 22 19.1426 22C19.5712 22 19.8569 21.7143 19.8569 21.2857V11.9286C21.0712 11.5714 21.9998 10.5 21.9998 9.14286ZM19.1426 10.5714C18.3569 10.5714 17.7141 9.92857 17.7141 9.14286C17.7141 8.35714 18.3569 7.71429 19.1426 7.71429C19.9283 7.71429 20.5712 8.35714 20.5712 9.14286C20.5712 9.92857 19.9283 10.5714 19.1426 10.5714ZM12.7142 12.0714V2.71429C12.7142 2.28571 12.4285 2 11.9999 2C11.5713 2 11.2856 2.28571 11.2856 2.71429V12.0714C10.0713 12.3571 9.14274 13.5 9.14274 14.8571C9.14274 16.2143 10.0713 17.2857 11.2856 17.6429V17.7143V21.2857C11.2856 21.7143 11.5713 22 11.9999 22C12.4285 22 12.7142 21.7143 12.7142 21.2857V17.7143V17.6429C13.9285 17.3571 14.857 16.2143 14.857 14.8571C14.857 13.5 13.9285 12.4286 12.7142 12.0714ZM11.9999 16.2857C11.2142 16.2857 10.5713 15.6429 10.5713 14.8571C10.5713 14.0714 11.2142 13.4286 11.9999 13.4286C12.7856 13.4286 13.4285 14.0714 13.4285 14.8571C13.4285 15.6429 12.7856 16.2857 11.9999 16.2857Z",
+      "name": {
+        "en-US": "Manual",
+        "ru-RU": "Ручной"
+      },
+      "hidden": false
+    },
+    {
+      "icon": "M5.58838 13.4655H3.59104L3.21132 14.6047H2L4.0581 9.07594H5.11373L7.18322 14.6047H5.9719L5.58838 13.4655ZM3.89861 12.5428H5.2808L4.58591 10.4733L3.89861 12.5428ZM11.8158 9.07594V12.7175C11.8158 13.3225 11.626 13.801 11.2463 14.1528C10.8691 14.5047 10.3526 14.6807 9.69698 14.6807C9.05145 14.6807 8.53883 14.5098 8.1591 14.168C7.77938 13.8263 7.58572 13.3567 7.57813 12.7593V9.07594H8.7173V12.7251C8.7173 13.0871 8.80337 13.3516 8.97551 13.5187C9.15018 13.6832 9.39067 13.7655 9.69698 13.7655C10.3374 13.7655 10.6627 13.4288 10.6729 12.7555V9.07594H11.8158ZM16.9117 9.99867H15.2182V14.6047H14.079V9.99867H12.4082V9.07594H16.9117V9.99867ZM22 11.9656C22 12.5099 21.9038 12.9871 21.7114 13.3972C21.519 13.8073 21.2431 14.1237 20.8836 14.3465C20.5267 14.5693 20.1166 14.6807 19.6533 14.6807C19.1951 14.6807 18.7863 14.5705 18.4268 14.3503C18.0673 14.1301 17.7889 13.8162 17.5914 13.4086C17.394 12.9985 17.294 12.5276 17.2914 11.996V11.7226C17.2914 11.1783 17.3889 10.6999 17.5838 10.2873C17.7813 9.8721 18.0585 9.5544 18.4154 9.33416C18.7749 9.11139 19.185 9 19.6457 9C20.1064 9 20.5153 9.11139 20.8722 9.33416C21.2317 9.5544 21.5089 9.8721 21.7038 10.2873C21.9013 10.6999 22 11.1771 22 11.7188V11.9656ZM20.8456 11.715C20.8456 11.1353 20.7419 10.6948 20.5343 10.3936C20.3267 10.0923 20.0305 9.94171 19.6457 9.94171C19.2635 9.94171 18.9685 10.0911 18.761 10.3898C18.5534 10.686 18.4483 11.1214 18.4458 11.696V11.9656C18.4458 12.5302 18.5496 12.9681 18.7572 13.2795C18.9647 13.5908 19.2635 13.7465 19.6533 13.7465C20.0356 13.7465 20.3292 13.5972 20.5343 13.2985C20.7393 12.9972 20.8431 12.5593 20.8456 11.9846V11.715Z",
+      "name": {
+        "en-US": "Auto",
+        "ru-RU": "Авто"
+      },
+      "hidden": false
+    },
+    {
+      "icon": "M7.33444 8.54962C7.33444 7.09711 7.7262 5.73816 8.4048 4.56505C8.5692 4.28128 8.32129 3.93061 8.00341 4.01194C4.33934 4.95288 1.68922 8.41582 2.0294 12.4463C2.35121 16.2507 5.42588 19.356 9.22769 19.7119C11.8656 19.959 14.2634 18.9201 15.8829 17.1549C16.1015 16.9162 15.9148 16.5288 15.5917 16.5424C15.506 16.5463 15.419 16.5481 15.332 16.5481C10.915 16.5481 7.33444 12.9675 7.33444 8.54962ZM12.1199 4.32295L12.5208 5.4742L13.7399 5.50087C13.8947 5.50437 13.9576 5.70025 13.8352 5.79339L12.8641 6.53101L13.2161 7.69801C13.2615 7.84579 13.0941 7.96647 12.9677 7.87902L11.9655 7.18381L10.9643 7.87902C10.8375 7.96691 10.6718 7.84579 10.7155 7.69801L11.0675 6.53101L10.0963 5.79339C9.97392 5.70025 10.0378 5.50437 10.1917 5.50087L11.4107 5.4742L11.8121 4.32295C11.8628 4.17734 12.0687 4.17734 12.1199 4.32295ZM19.6039 13.4351L19.9891 14.5413L21.1605 14.5662C21.3306 14.5702 21.4006 14.7857 21.2655 14.8885L20.3324 15.5972L20.6699 16.7183C20.7185 16.8805 20.5348 17.0143 20.3958 16.9168L19.4334 16.2492L18.4715 16.9168C18.3324 17.0143 18.1484 16.8805 18.1978 16.7183L18.5353 15.5972L17.6027 14.8885C17.4671 14.7862 17.5375 14.5697 17.7068 14.5662L18.8781 14.5413L19.2646 13.4351C19.3206 13.2751 19.5475 13.2751 19.6039 13.4351ZM19.4579 5.41533L20.0372 7.07641L21.7954 7.11401C21.993 7.11838 22.0748 7.36936 21.9169 7.48916L20.516 8.55341L21.0241 10.2381C21.0813 10.4274 20.8684 10.5826 20.7053 10.4694L19.2598 9.46637L17.8147 10.4694C17.6521 10.5826 17.4387 10.427 17.496 10.2381L18.0036 8.55341L16.6023 7.48916C16.4457 7.3698 16.527 7.11795 16.7242 7.11401L18.4828 7.07641L19.0617 5.41533C19.1286 5.22907 19.3923 5.22907 19.4579 5.41533Z",
+      "name": {
+        "en-US": "Night",
+        "ru-RU": "Ночной"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Interval ventilation",
+        "ru-RU": "Интервальное проветривание"
+      },
+      "hidden": false
+    }
+  ],
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1786315746,
+  "temperature_units": "celsius"
+}
