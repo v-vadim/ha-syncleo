@@ -1,8 +1,68 @@
 ## Supported models (by device type)
 | Vendor | Device Type | Supported Models |
 | :--- | :--- | :--- |
-| Polaris | 2 | PWK1775CGLD |
-| Polaris | 98 | PWK1775CGLD |
+| Polaris | 2 | PWK 1775CGLD |
+| Polaris | 6 | PWK 1725CGLD |
+| Polaris | 8 | PWK 1755CAD |
+| Polaris | 29 | PWK-1712CGLD |
+| Polaris | 36 | PWK 17107CGLD WIFI (old) |
+| Polaris | 37 | PWK 17111CGLD WIFI (old) |
+| Polaris | 38 | PWK-1712CGLD |
+| Polaris | 51 | PWK 1775CGLD |
+| Polaris | 52 | PWK 1725CGLD |
+| Polaris | 53 | PWK 1755CAD |
+| Polaris | 54 | PWK-1712CGLD |
+| Polaris | 56 | PWK 1775CGLD |
+| Polaris | 57 | PWK 1725CGLD |
+| Polaris | 58 | PWK 1755CAD |
+| Polaris | 59 | PWK-1712CGLD |
+| Polaris | 60 | PWK 1775CGLD |
+| Polaris | 61 | PWK 1725CGLD |
+| Polaris | 62 | PWK 1755CAD |
+| Polaris | 63 | PWK-1712CGLD |
+| Polaris | 67 | PWK-1720CGLD |
+| Polaris | 82 | PWK 1725CGLD |
+| Polaris | 83 | PWK-1712CGLD RGB |
+| Polaris | 84 | PWK-1720CGLD RGB |
+| Polaris | 85 | PWK 1775CGLD SMART |
+| Polaris | 86 | PWK 1725CGLD |
+| Polaris | 97 | PWK-1712CGLD |
+| Polaris | 98 | PWK 1775CGLD |
+| Polaris | 105 | PWK 1725CGLD |
+| Polaris | 106 | PWK 1725CGLD |
+| Polaris | 117 | PWK-1712CGLD |
+| Polaris | 121 | PWK 1774CAD |
+| Polaris | 139 | PWK 1775CGLD VOICE |
+| Polaris | 164 | PWK 1728CGLDA |
+| Polaris | 165 | PWK 1755CAD VOICE |
+| Polaris | 175 | PWK 1823CGLD |
+| Polaris | 176 | PWK 1841CGLD |
+| Polaris | 177 | PWK 1725CGLD |
+| Polaris | 185 | PWK 1755CAD |
+| Polaris | 188 | PWK 1775CGLD |
+| Polaris | 189 | PWK 1746CA |
+| Polaris | 194 | PWK 1725CGLD |
+| Polaris | 196 | PWK 1725CGLD |
+| Polaris | 205 | PWK 1538CC |
+| Polaris | 208 | PWK 1712CGLD |
+| Polaris | 209 | PWK 1729CAD |
+| Polaris | 223 | PWK 1775CGLD |
+| Polaris | 244 | PWK 1716CGLD |
+| Polaris | 245 | PWK 0105 |
+| Polaris | 253 | PWK 1715 |
+| Polaris | 254 | PWK 1823CGLD |
+| Polaris | 255 | PWK 1841CGLD |
+| Polaris | 260 | PWK 1746CA |
+| Polaris | 262 | PWK 1775CGLD |
+| Polaris | 263 | PWK 1775CGLD |
+| Polaris | 271 | PWK 1701CGLD |
+| Polaris | 275 | PWK 1775CGLD |
+| Polaris | 294 | PWK 1775CGLD |
+| Polaris | 308 | PWK 1746CA |
+| Polaris | 332 | PWK 0726DDW |
+| Polaris | 337 | PWK 1746CA |
+| Polaris | 338 | PWK 1823CGLD |
+| Polaris | 339 | PWK 1841CGLD |
 |&nbsp;|||
 | Rusclimate | 2 | Electrolux SI (SE/BE) EEC, Electrolux Smartinverter, Electrolux Smartinverter PRO, Electrolux Smartinverter PRO 2.0, Electrolux Smartinverter Enamel |
 | Rusclimate | 3 | Ballu ONEAIR ASP-200 |

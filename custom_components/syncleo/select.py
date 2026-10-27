@@ -7,9 +7,16 @@ from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from pysyncleo.commands import CmdDataSource, DataSource
 
-from .const import CONF_IS_VIRTUAL, DATASOURCE_PRESET_NONE, DOMAIN, VIRTUAL_DEVICE_TYPE
-from .devices import SelectConfig, SelectMixin
+from .const import (
+    CONF_IS_VIRTUAL,
+    DATASOURCE_PRESET_NONE,
+    DOMAIN,
+    FEATURE_KETTLE_TEMPERATURE_PRESET,
+    VIRTUAL_DEVICE_TYPE,
+)
+from .devices import KettleProfile, SelectConfig, SelectMixin
 from .entity import FEATURE_TO_COMMAND_MAP, SyncleoBaseEntity
+from .kettle import KettleState, SyncleoKettlePreset
 from .utils import get_device_profile_by_device
 
 _LOGGER = logging.getLogger(__name__)
@@ -25,10 +32,22 @@ async def async_setup_entry(
     profile = get_device_profile_by_device(conn.device)
 
     if isinstance(profile, SelectMixin) and profile.selects:
-        entities = [
-            SyncleoSelect(conn, profile, entry, feature_key, config)
-            for feature_key, config in profile.selects.items()
-        ]
+        entities: list[SyncleoBaseEntity] = []
+        for feature_key, config in profile.selects.items():
+            if (
+                isinstance(profile, KettleProfile)
+                and feature_key == FEATURE_KETTLE_TEMPERATURE_PRESET
+            ):
+                state = hass.data[DOMAIN].kettle_states.setdefault(
+                    entry.entry_id, KettleState()
+                )
+                entities.append(
+                    SyncleoKettlePreset(conn, profile, entry, state, config)
+                )
+            else:
+                entities.append(
+                    SyncleoSelect(conn, profile, entry, feature_key, config)
+                )
         async_add_entities(entities)
 
 

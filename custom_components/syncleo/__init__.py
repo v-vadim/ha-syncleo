@@ -131,6 +131,7 @@ async def async_unload_entry(
 
     if unload_ok:
         domain_data: SyncleoDomainData = hass.data[DOMAIN]
+        domain_data.kettle_states.pop(entry.entry_id, None)
         domain_data.manager.unregister_device(connection.device)
 
         if not domain_data.manager.connections:

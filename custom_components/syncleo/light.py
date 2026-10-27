@@ -66,6 +66,7 @@ class SyncleoLight(SyncleoBaseEntity, LightEntity):
         self._blue_key = config.blue_key
         self._brightness_key = config.brightness_key
         self._brightness_max_level = config.brightness_levels
+        self._rgb_brightness = config.rgb_brightness
 
         self._brightness_levels = (1, self._brightness_max_level)
         self._current_level = 0
@@ -78,6 +79,8 @@ class SyncleoLight(SyncleoBaseEntity, LightEntity):
 
     @property
     def brightness(self) -> int | None:
+        if self._rgb_brightness:
+            return self._current_level if self._is_on else 0
         return value_to_brightness(self._brightness_levels, self._current_level)
 
     @property
@@ -90,10 +93,37 @@ class SyncleoLight(SyncleoBaseEntity, LightEntity):
         g = g_bytes[0] if g_bytes else 0
         b = b_bytes[0] if b_bytes else 0
 
+        if self._rgb_brightness and (maximum := max(r, g, b)):
+            return (
+                round(r * 255 / maximum),
+                round(g * 255 / maximum),
+                round(b * 255 / maximum),
+            )
         return (r, g, b)
 
     async def async_turn_on(self, **kwargs: Any) -> None:
         updates = {}
+
+        if self._rgb_brightness:
+            color = kwargs.get(ATTR_RGB_COLOR, self.rgb_color)
+            if ATTR_RGB_COLOR not in kwargs and (not color or not max(color)):
+                color = (255, 255, 255)
+            level = kwargs.get(ATTR_BRIGHTNESS, self._last_level)
+            maximum = max(color) or 255
+            updates = {
+                key: bytes([round(channel * level / maximum)])
+                for key, channel in zip(
+                    (self._red_key, self._green_key, self._blue_key), color, strict=True
+                )
+            }
+            await self.async_set_program_data_fields(updates)
+            await self.async_send_command(self._cmd_class(True))
+            self._current_level = max(value[0] for value in updates.values())
+            if self._current_level:
+                self._last_level = self._current_level
+            self._is_on = True
+            self.async_write_ha_state()
+            return
 
         if ATTR_RGB_COLOR in kwargs:
             r, g, b = kwargs[ATTR_RGB_COLOR]
@@ -118,7 +148,7 @@ class SyncleoLight(SyncleoBaseEntity, LightEntity):
         ):
             updates[self._brightness_key] = bytes([target_level])
         elif self._cmd_class:
-            await self.async_send_command(self._cmd_class(value=True))
+            await self.async_send_command(self._cmd_class(True))
         else:
             _LOGGER.error(
                 "No command class or program data field defined for feature: %s",
@@ -141,7 +171,7 @@ class SyncleoLight(SyncleoBaseEntity, LightEntity):
         ):
             await self.async_set_program_data(self._brightness_key, bytes([0]))
         elif self._cmd_class:
-            await self.async_send_command(self._cmd_class(value=False))
+            await self.async_send_command(self._cmd_class(False))
         else:
             _LOGGER.error(
                 "No command class or program data field defined for feature: %s",
@@ -159,6 +189,21 @@ class SyncleoLight(SyncleoBaseEntity, LightEntity):
         super()._handle_device_update(cmd)
 
         need_update = False
+
+        if self._rgb_brightness:
+            channels = [
+                self.get_known_program_data(key)
+                for key in (self._red_key, self._green_key, self._blue_key)
+            ]
+            if all(channel is not None for channel in channels):
+                level = max(channel[0] for channel in channels if channel is not None)
+                self._current_level = level
+                if level:
+                    self._last_level = level
+            if self._cmd_class and cmd.command_type == self._cmd_class.command_type:
+                self._is_on = bool(cmd.value)
+            self.async_write_ha_state()
+            return
 
         if (
             self._brightness_key

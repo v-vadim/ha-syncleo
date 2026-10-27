@@ -59,6 +59,7 @@ class LightConfig:
     blue_key: str
     brightness_key: str | None = None
     brightness_levels: int = 255
+    rgb_brightness: bool = False
 
 
 @dataclass(kw_only=True)
@@ -304,7 +305,7 @@ class WaterHeaterProfile(
     SwitchMixin,
     SelectMixin,
 ):
-    """Profile for Water Heaters (Boilers) and Kettles."""
+    """Profile for Water Heaters (Boilers)."""
 
     min_temp: int
     max_temp: int
@@ -357,16 +358,34 @@ class HeaterProfile(ClimateProfile):
 
 
 @dataclass(kw_only=True)
-class KettleProfile(WaterHeaterProfile):
+class KettleProfile(
+    DeviceBaseProfile,
+    BinarySensorMixin,
+    LightMixin,
+    NumberMixin,
+    SensorMixin,
+    SwitchMixin,
+    SelectMixin,
+):
+    """Kettle capabilities, independent of boiler profiles."""
+
     profile_type: str = PROFILE_TYPE_KETTLE
     min_temp: int = 30
     max_temp: int = 100
     target_temp_step: float = 5.0
+    default_target_temp: float = 40
+    operation_modes_map: dict[str, int]
+    default_operation_mode: str
+    temperature_modes_map: dict[str, tuple[int, int]] = field(default_factory=dict)
     supported_features: WaterHeaterEntityFeature = (
         WaterHeaterEntityFeature.TARGET_TEMPERATURE
         | WaterHeaterEntityFeature.OPERATION_MODE
         | WaterHeaterEntityFeature.ON_OFF
     )
+
+    @property
+    def supported_platforms(self) -> list[Platform]:
+        return super().supported_platforms + [Platform.WATER_HEATER]
 
 
 # ==========================================

@@ -9,8 +9,9 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from pysyncleo.commands import CmdMode, CmdTargetTemperature, UdpCommandType
 
 from .const import DOMAIN
-from .devices import WaterHeaterProfile
+from .devices import KettleProfile, WaterHeaterProfile
 from .entity import SyncleoBaseEntity
+from .kettle import KettleState, SyncleoKettle
 from .utils import get_device_profile_by_device
 
 _LOGGER = logging.getLogger(__name__)
@@ -25,7 +26,12 @@ async def async_setup_entry(
     conn = entry.runtime_data
     profile = get_device_profile_by_device(conn.device)
 
-    if isinstance(profile, WaterHeaterProfile):
+    if isinstance(profile, KettleProfile):
+        state = hass.data[DOMAIN].kettle_states.setdefault(
+            entry.entry_id, KettleState()
+        )
+        async_add_entities([SyncleoKettle(conn, profile, entry, state)])
+    elif isinstance(profile, WaterHeaterProfile):
         async_add_entities([SyncleoWaterHeater(conn, profile, entry)])
 
 

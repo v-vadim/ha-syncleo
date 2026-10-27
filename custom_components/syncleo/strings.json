@@ -114,6 +114,14 @@
         }
       }
     },
+    "light": {
+      "backlight": {
+        "name": "Backlight"
+      },
+      "night": {
+        "name": "Night light"
+      }
+    },
     "number": {
       "angle_horizontal": {
         "name": "Horizontal blinds position"

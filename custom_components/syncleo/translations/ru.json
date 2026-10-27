@@ -114,6 +114,14 @@
         }
       }
     },
+    "light": {
+      "backlight": {
+        "name": "Подсветка"
+      },
+      "night": {
+        "name": "Ночник"
+      }
+    },
     "number": {
       "angle_horizontal": {
         "name": "Положение горизонтальных жалюзей"
