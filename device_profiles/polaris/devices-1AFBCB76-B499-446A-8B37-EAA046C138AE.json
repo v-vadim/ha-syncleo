@@ -1,0 +1,1470 @@
+{
+  "id": "1afbcb76-b499-446a-8b37-eaa046c138ae",
+  "name": "PSF 4025",
+  "type": 248,
+  "class": "fan",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/a/00/d21fb-2149-43cb-8426-2f99cfb3580d/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/a/00/d21fb-2149-43cb-8426-2f99cfb3580d/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/a/00/d21fb-2149-43cb-8426-2f99cfb3580d/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/a/00/d21fb-2149-43cb-8426-2f99cfb3580d/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/a/00/d21fb-2149-43cb-8426-2f99cfb3580d/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/a/00/d21fb-2149-43cb-8426-2f99cfb3580d/900.webp",
+    "1200": "https://images.cdn.polaris-iot.com/a/00/d21fb-2149-43cb-8426-2f99cfb3580d/1200.webp",
+    "1800": "https://images.cdn.polaris-iot.com/a/00/d21fb-2149-43cb-8426-2f99cfb3580d/1800.webp",
+    "id": "a00d21fb-2149-43cb-8426-2f99cfb3580d",
+    "original": "https://images.cdn.polaris-iot.com/a/00/d21fb-2149-43cb-8426-2f99cfb3580d/original.webp"
+  },
+  "layout": {
+    "home.top": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "switch",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        },
+        "precondition": [
+          {
+            "or": [
+              {
+                "not": {
+                  "source": "state",
+                  "program": [
+                    0
+                  ]
+                }
+              },
+              {
+                "not": {
+                  "error": 2,
+                  "source": "state"
+                }
+              }
+            ]
+          }
+        ],
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "إعادة تعيين تكوين نفك",
+          "de-DE": "Zurücksetzen der NFC-konfiguration",
+          "en-US": "NFC configuration reset",
+          "kk-KZ": "NFC конфигурациясын қалпына келтіру",
+          "ru-RU": "Сброс конфигурации по NFC",
+          "uk-UA": "Скидання конфігурації по NFC"
+        },
+        "measure": "nfcReset",
+        "position": 0
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "battery",
+        "position": 0
+      }
+    ],
+    "manual.bottom": [
+      {
+        "type": "button_power",
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        },
+        "precondition": [
+          {
+            "or": [
+              {
+                "not": {
+                  "source": "state",
+                  "program": [
+                    0
+                  ]
+                }
+              },
+              {
+                "not": {
+                  "error": 2,
+                  "source": "state"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "type": "info",
+        "feature": "battery",
+        "position": 2
+      },
+      {
+        "type": "info",
+        "feature": "current_temperature",
+        "position": 2
+      },
+      {
+        "type": "container_tail",
+        "position": 3
+      },
+      {
+        "type": "slider",
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 5
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 12,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        "points": {
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          },
+          "4": {
+            "label": "4"
+          },
+          "5": {
+            "label": "5"
+          },
+          "6": {
+            "label": "6"
+          },
+          "7": {
+            "label": "7"
+          },
+          "8": {
+            "label": "8"
+          },
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          },
+          "11": {
+            "label": "11"
+          },
+          "12": {
+            "label": "12"
+          }
+        },
+        "feature": "speed",
+        "position": 6,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                1
+              ]
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 10
+      },
+      {
+        "type": "container_head",
+        "position": 11
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "وسائط",
+          "de-DE": "Modi",
+          "en-US": "Modes",
+          "kk-KZ": "Режимдер",
+          "ru-RU": "Режимы",
+          "uk-UA": "Режими"
+        },
+        "position": 12
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 13,
+        "condition": [
+          {
+            "source": "state",
+            "program": [
+              3
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "or": [
+              {
+                "not": {
+                  "source": "state",
+                  "program": [
+                    0
+                  ]
+                }
+              },
+              {
+                "not": {
+                  "error": 2,
+                  "source": "state"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 13,
+        "condition": [
+          {
+            "source": "state",
+            "program": [
+              1
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "or": [
+              {
+                "not": {
+                  "source": "state",
+                  "program": [
+                    0
+                  ]
+                }
+              },
+              {
+                "not": {
+                  "error": 2,
+                  "source": "state"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "position": 13,
+        "condition": [
+          {
+            "source": "state",
+            "program": [
+              2
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "or": [
+              {
+                "not": {
+                  "source": "state",
+                  "program": [
+                    0
+                  ]
+                }
+              },
+              {
+                "not": {
+                  "error": 2,
+                  "source": "state"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "fill",
+        "position": 13
+      },
+      {
+        "type": "container_tail",
+        "position": 14
+      },
+      {
+        "type": "container_head",
+        "position": 15
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "إعدادات",
+          "de-DE": "Einstellungen",
+          "en-US": "Function",
+          "kk-KZ": "Параметрлер",
+          "ru-RU": "Функции",
+          "uk-UA": "Налаштування"
+        },
+        "position": 16
+      },
+      {
+        "icon": "M0,0h28v28V0M27.035,17.7493c-.3711.4121-1.0029.4434-1.4121.0762l-.2606-.2342c-.103,3.8323-5.0522,6.8172-11.3624,6.8172s-11.2591-2.9848-11.3624-6.8169l-.2602.2339c-.4106.3682-1.0439.335-1.4121-.0762-.3691-.4102-.3354-1.043.0752-1.4121l2.0547-1.8467c.2007-.1797.4692-.2637.7358-.2539.2695.0186.52.1445.6948.3506l1.8984,2.2363c.3574.4209.3062,1.0527-.1152,1.4102-.188.1592-.418.2373-.6465.2373-.2837,0-.5649-.1201-.7627-.3525l-.2351-.2769c.3745,2.511,4.4921,4.5669,9.3352,4.5669s8.9602-2.0556,9.3351-4.5664l-.2346.2764c-.1982.2324-.4795.3525-.7627.3525-.2295,0-.459-.0781-.6475-.2373-.4209-.3574-.4727-.9893-.1152-1.4102l1.8984-2.2363c.1748-.2061.4258-.332.6953-.3506.2656-.0107.5352.0742.7354.2539l2.0557,1.8467c.4102.3691.4443,1.002.0752,1.4121ZM9.5946,11.552c.7461-.8633,1.1245-1.9805,1.1245-3.3203,0-1.3311-.3779-2.4458-1.124-3.3135-.7578-.8804-1.8335-1.3267-3.1982-1.3267s-2.4395.4463-3.1929,1.3276c-.7412.8672-1.1172,1.9814-1.1172,3.3125,0,1.3398.376,2.4565,1.1177,3.3193.7529.8765,1.8271,1.3208,3.1924,1.3208,1.3643,0,2.4404-.4438,3.1978-1.3198ZM7.9974,6.2302c.3857.5112.5815,1.1846.5815,2.0015,0,.8174-.1958,1.4907-.5815,2.002-.3711.4912-.895.7305-1.6006.7305-.6973,0-1.2173-.2393-1.5889-.7305-.3853-.5107-.5811-1.1841-.5811-2.002,0-.8174.1958-1.4907.5811-2.001.3716-.4917.8916-.731,1.5889-.731.7056,0,1.2295.2393,1.6006.7305ZM16.6743,12.0876c.5576-.5249.8398-1.2339.8398-2.1074,0-.521-.123-.9785-.3643-1.3584-.2383-.377-.542-.6631-.9033-.8516-.3223-.1675-.6738-.3267-1.0547-.478-.3794-.1494-.7285-.2744-1.0488-.374-.2725-.0845-.5015-.2065-.6816-.3623-.146-.126-.2139-.2651-.2139-.439,0-.1885,0-.5806.9106-.5806.4385,0,.9048.1035,1.3833.3052.2949.1289.5469.1919.7686.1919.3496,0,.627-.165.7812-.4658.1348-.2656.3506-.9365-.5459-1.4229-.6396-.3672-1.4053-.5532-2.2773-.5532-.9819,0-1.749.2295-2.2793.6831-.5444.4653-.8203,1.1016-.8203,1.8911,0,.6377.1699,1.1738.5054,1.5933.3252.4062.7271.7065,1.1929.8921.4272.1704.8521.3213,1.2744.4536.3843.1211.7129.2793.9775.4707.2168.1562.3174.3428.3174.5884,0,.25-.085.4233-.2676.5464-.2119.144-.519.2173-.9126.2173-.5239,0-1.0986-.1431-1.7202-.4302-.2593-.106-.4814-.1572-.6802-.1572-.3379,0-.605.1577-.749.439-.1587.2944-.1719.6025-.0391.8911.1211.2637.3525.4878.6919.668.6919.354,1.5195.5337,2.46.5337,1.0781,0,1.9043-.2637,2.4551-.7842ZM24.8075,12.0901c.2598-.1978.4229-.4326.4834-.6978.0645-.2808.0146-.54-.1377-.7397-.1689-.2437-.4053-.3726-.6826-.3726-.1973,0-.4072.0645-.6445.1992-.5459.3218-1.0791.4849-1.584.4849-.6221,0-1.1211-.2314-1.5264-.7075-.4102-.4839-.6191-1.1694-.6191-2.0371,0-.8398.1943-1.5166.5791-2.0103.3701-.4771.8711-.7095,1.5293-.7095.4336,0,.9365.1089,1.4971.3237.2119.0791.3975.1172.5645.1172.3438,0,.6074-.1675.7412-.4678.2275-.4878.0869-.938-.3945-1.2651-.5869-.4092-1.4053-.6162-2.4326-.6162-1.3145,0-2.3613.4312-3.1094,1.2817-.7402.8394-1.1152,1.9692-1.1152,3.3584,0,1.4028.3525,2.5352,1.0488,3.3657.709.8457,1.7607,1.2744,3.127,1.2744,1.0713,0,1.9707-.2622,2.6758-.7817Z",
+        "type": "button",
+        "title": {
+          "ar-AE": "التدوير التلقائي",
+          "de-DE": "Automatisch drehen",
+          "en-US": "Auto-rotate",
+          "kk-KZ": "Автоматты айналдыру",
+          "ru-RU": "Автоповорот",
+          "uk-UA": "Автоповорот"
+        },
+        "action": {
+          "program_data": {
+            "field": "horizontal_switch",
+            "value": 1,
+            "program": [
+              0
+            ]
+          }
+        },
+        "position": 17,
+        "condition": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "horizontal_switch",
+              "value": 1,
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "horizontal_switch",
+            "value": 0,
+            "program": [
+              0
+            ]
+          }
+        },
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "schedule",
+        "position": 17
+      },
+      {
+        "icon": "M0.0,0.0h29.0v30.0V0.0M4.62159 3.75354C4.23145 3.3634 3.60124 3.3634 3.21111 3.75354C2.82097 4.14367 2.82097 4.77389 3.21111 5.16402L8.04277 10.0057L8.00276 10.0457H1.01035C0.450157 10.0457 0 10.4959 0 11.0561V19.0388C0 19.599 0.450157 20.0492 1.01035 20.0492H8.00276L14.3449 25.6011C14.9952 26.1713 16.0055 25.7111 16.0055 24.8508V17.9684L18.1162 20.0792C17.5561 20.5293 17.1059 20.8194 16.9959 20.8894C16.5257 21.1795 16.3756 21.7898 16.6557 22.2599C16.8458 22.57 17.1759 22.7401 17.516 22.7401C17.6961 22.7401 17.8662 22.6901 18.0362 22.6C18.2663 22.46 18.8565 22.0799 19.5467 21.4997L22.4677 24.4207C20.9972 25.6811 19.2366 26.6214 17.266 27.1316C16.7258 27.2716 16.4057 27.8118 16.5457 28.352C16.6657 28.8022 17.0659 29.1023 17.516 29.1023C17.5961 29.1023 17.6861 29.0923 17.7661 29.0723C20.0869 28.4721 22.1676 27.3417 23.8782 25.8412L25.3888 27.3517C25.5888 27.5517 25.8389 27.6418 26.099 27.6418C26.3591 27.6418 26.6092 27.5417 26.8092 27.3517C27.1994 26.9615 27.1994 26.3313 26.8092 25.9412L4.62159 3.75354ZM16.0055 5.25428C16.0055 4.39398 14.9952 3.93382 14.3449 4.50402L11.1138 7.33499L16.0055 12.2267V5.25428ZM17.2559 1.97354C22.9979 3.45405 27.0093 8.62583 27.0093 14.5479C27.0093 17.1288 26.249 19.5696 24.9086 21.6203L26.3391 23.0508C28.0296 20.61 29 17.669 29 14.5479C29 7.71552 24.3684 1.74346 17.7461 0.0328684C17.2059 -0.10718 16.6657 0.21293 16.5257 0.753117C16.3956 1.2933 16.7157 1.83349 17.2559 1.97354ZM17.0659 8.25516C19.4967 9.44557 21.0073 11.8564 21.0073 14.5473C21.0073 15.2476 20.9072 15.9278 20.7072 16.588C20.6471 16.7881 20.5571 16.9782 20.4671 17.1682L21.9676 18.6687C22.2377 18.2086 22.4578 17.7084 22.6278 17.1782C22.8879 16.3279 23.018 15.4476 23.018 14.5473C23.018 11.0861 21.0773 7.98507 17.9562 6.46454C17.456 6.22446 16.8658 6.42453 16.6158 6.9247C16.3657 7.42487 16.5657 8.01508 17.0659 8.25516Z",
+        "type": "button",
+        "action": {
+          "volume": 0
+        },
+        "feature": "volume",
+        "position": 17,
+        "condition": [
+          {
+            "source": "state",
+            "volume": 0
+          }
+        ],
+        "action_off": {
+          "volume": 1
+        },
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 17
+      },
+      {
+        "type": "container_tail",
+        "position": 18
+      }
+    ],
+    "schedule.editor": [
+      {
+        "type": "button",
+        "measure": "input_name",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "measure": "input_date_time",
+        "position": 0
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "row": "repeat_days",
+        "type": "info",
+        "position": 2
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "وسائط",
+          "de-DE": "Modi",
+          "en-US": "Modes",
+          "kk-KZ": "Режимдер",
+          "ru-RU": "Режимы",
+          "uk-UA": "Режими"
+        },
+        "position": 3
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "type": "fill",
+        "position": 4
+      },
+      {
+        "type": "slider",
+        "points": {
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          },
+          "4": {
+            "label": "4"
+          },
+          "5": {
+            "label": "5"
+          },
+          "6": {
+            "label": "6"
+          },
+          "7": {
+            "label": "7"
+          },
+          "8": {
+            "label": "8"
+          },
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          },
+          "11": {
+            "label": "11"
+          },
+          "12": {
+            "label": "12"
+          }
+        },
+        "feature": "speed",
+        "position": 5,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "or": [
+              {
+                "program": [
+                  2
+                ]
+              },
+              {
+                "program": [
+                  3
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "style": "picker",
+        "feature": "timer",
+        "position": 6
+      },
+      {
+        "type": "button",
+        "action": {
+          "volume": 0
+        },
+        "feature": "volume",
+        "position": 9,
+        "condition": [
+          {
+            "volume": 0
+          }
+        ],
+        "action_off": {
+          "volume": 1
+        }
+      },
+      {
+        "type": "fill",
+        "position": 9
+      },
+      {
+        "type": "container_tail",
+        "position": 10
+      }
+    ],
+    "manual.shortcuts": [
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "source": "state",
+            "program": [
+              1
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "or": [
+              {
+                "not": {
+                  "source": "state",
+                  "program": [
+                    0
+                  ]
+                }
+              },
+              {
+                "not": {
+                  "error": 2,
+                  "source": "state"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "source": "state",
+            "program": [
+              2
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "or": [
+              {
+                "not": {
+                  "source": "state",
+                  "program": [
+                    0
+                  ]
+                }
+              },
+              {
+                "not": {
+                  "error": 2,
+                  "source": "state"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 0
+      },
+      {
+        "icon": "M0.0,0.0h29.0v30.0V0.0M4.62159 3.75354C4.23145 3.3634 3.60124 3.3634 3.21111 3.75354C2.82097 4.14367 2.82097 4.77389 3.21111 5.16402L8.04277 10.0057L8.00276 10.0457H1.01035C0.450157 10.0457 0 10.4959 0 11.0561V19.0388C0 19.599 0.450157 20.0492 1.01035 20.0492H8.00276L14.3449 25.6011C14.9952 26.1713 16.0055 25.7111 16.0055 24.8508V17.9684L18.1162 20.0792C17.5561 20.5293 17.1059 20.8194 16.9959 20.8894C16.5257 21.1795 16.3756 21.7898 16.6557 22.2599C16.8458 22.57 17.1759 22.7401 17.516 22.7401C17.6961 22.7401 17.8662 22.6901 18.0362 22.6C18.2663 22.46 18.8565 22.0799 19.5467 21.4997L22.4677 24.4207C20.9972 25.6811 19.2366 26.6214 17.266 27.1316C16.7258 27.2716 16.4057 27.8118 16.5457 28.352C16.6657 28.8022 17.0659 29.1023 17.516 29.1023C17.5961 29.1023 17.6861 29.0923 17.7661 29.0723C20.0869 28.4721 22.1676 27.3417 23.8782 25.8412L25.3888 27.3517C25.5888 27.5517 25.8389 27.6418 26.099 27.6418C26.3591 27.6418 26.6092 27.5417 26.8092 27.3517C27.1994 26.9615 27.1994 26.3313 26.8092 25.9412L4.62159 3.75354ZM16.0055 5.25428C16.0055 4.39398 14.9952 3.93382 14.3449 4.50402L11.1138 7.33499L16.0055 12.2267V5.25428ZM17.2559 1.97354C22.9979 3.45405 27.0093 8.62583 27.0093 14.5479C27.0093 17.1288 26.249 19.5696 24.9086 21.6203L26.3391 23.0508C28.0296 20.61 29 17.669 29 14.5479C29 7.71552 24.3684 1.74346 17.7461 0.0328684C17.2059 -0.10718 16.6657 0.21293 16.5257 0.753117C16.3956 1.2933 16.7157 1.83349 17.2559 1.97354ZM17.0659 8.25516C19.4967 9.44557 21.0073 11.8564 21.0073 14.5473C21.0073 15.2476 20.9072 15.9278 20.7072 16.588C20.6471 16.7881 20.5571 16.9782 20.4671 17.1682L21.9676 18.6687C22.2377 18.2086 22.4578 17.7084 22.6278 17.1782C22.8879 16.3279 23.018 15.4476 23.018 14.5473C23.018 11.0861 21.0773 7.98507 17.9562 6.46454C17.456 6.22446 16.8658 6.42453 16.6158 6.9247C16.3657 7.42487 16.5657 8.01508 17.0659 8.25516Z",
+        "type": "button",
+        "action": {
+          "volume": 0
+        },
+        "feature": "volume",
+        "position": 0,
+        "condition": [
+          {
+            "source": "state",
+            "volume": 0
+          }
+        ],
+        "action_off": {
+          "volume": 1
+        },
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      }
+    ]
+  },
+  "limits": {
+    "speed": {
+      "max": 12,
+      "min": 1,
+      "step": 1,
+      "round": 1,
+      "default": 1,
+      "round_alt": 1
+    },
+    "timer": {
+      "max": 43200,
+      "min": 0,
+      "step": 3600,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "volume": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "child_lock": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "icons": {
+      "turbo": "M0,0h28v28V0M6.9,22.3c-1.5,0-2.7-0.4-3.7-1.3c-0.4-0.3-0.5-1-0.1-1.4c0.3-0.4,1-0.5,1.4-0.1C5.1,20,6,20.3,6.9,20.3 c0.9,0,1.7-0.3,2.2-0.9C9.8,18.8,10,18,10,16.9c0-1.1-0.3-2-0.8-2.5c-0.6-0.6-1.4-0.9-2.4-0.9c-0.4,0-0.7-0.2-0.9-0.6 c-0.2-0.3-0.1-0.7,0.1-1l3.2-4.2l-4.5,0c-0.6,0-1-0.4-1-1s0.4-1,1-1H10c1,0,1.5,0.6,1.6,1.2c0.1,0.4,0.1,1-0.4,1.6l-2.5,3.2 c0.8,0.2,1.4,0.6,2,1.2c0.9,0.9,1.4,2.3,1.4,3.9c0,1.6-0.5,2.9-1.4,3.9C9.7,21.8,8.4,22.3,6.9,22.3z M10,7.7L10,7.7L10,7.7z M17.8,22.3c-1.4,0-2.5-0.1-3.3-0.2c-0.8-0.1-1.3-0.8-1.3-1.7V7.8c0-0.9,0.5-1.6,1.3-1.8c0.9-0.2,2-0.3,3.3-0.3 c3.4,0,7.4,1.4,7.4,8.2c0,2.6-0.6,4.6-1.9,6.1C22,21.5,20.2,22.3,17.8,22.3z M15.1,20.1c0.7,0.1,1.6,0.2,2.7,0.2 c1.8,0,3.1-0.5,4-1.6c0.9-1.1,1.4-2.7,1.4-4.8c0-4.3-1.7-6.2-5.4-6.2c-1,0-1.9,0.1-2.7,0.2V20.1z M14.8,20.1 C14.8,20.1,14.8,20.1,14.8,20.1C14.8,20.1,14.8,20.1,14.8,20.1z",
+      "volume": "M0.0,0.0h29.0v30.0V0.0M4.62159 3.75354C4.23145 3.3634 3.60124 3.3634 3.21111 3.75354C2.82097 4.14367 2.82097 4.77389 3.21111 5.16402L8.04277 10.0057L8.00276 10.0457H1.01035C0.450157 10.0457 0 10.4959 0 11.0561V19.0388C0 19.599 0.450157 20.0492 1.01035 20.0492H8.00276L14.3449 25.6011C14.9952 26.1713 16.0055 25.7111 16.0055 24.8508V17.9684L18.1162 20.0792C17.5561 20.5293 17.1059 20.8194 16.9959 20.8894C16.5257 21.1795 16.3756 21.7898 16.6557 22.2599C16.8458 22.57 17.1759 22.7401 17.516 22.7401C17.6961 22.7401 17.8662 22.6901 18.0362 22.6C18.2663 22.46 18.8565 22.0799 19.5467 21.4997L22.4677 24.4207C20.9972 25.6811 19.2366 26.6214 17.266 27.1316C16.7258 27.2716 16.4057 27.8118 16.5457 28.352C16.6657 28.8022 17.0659 29.1023 17.516 29.1023C17.5961 29.1023 17.6861 29.0923 17.7661 29.0723C20.0869 28.4721 22.1676 27.3417 23.8782 25.8412L25.3888 27.3517C25.5888 27.5517 25.8389 27.6418 26.099 27.6418C26.3591 27.6418 26.6092 27.5417 26.8092 27.3517C27.1994 26.9615 27.1994 26.3313 26.8092 25.9412L4.62159 3.75354ZM16.0055 5.25428C16.0055 4.39398 14.9952 3.93382 14.3449 4.50402L11.1138 7.33499L16.0055 12.2267V5.25428ZM17.2559 1.97354C22.9979 3.45405 27.0093 8.62583 27.0093 14.5479C27.0093 17.1288 26.249 19.5696 24.9086 21.6203L26.3391 23.0508C28.0296 20.61 29 17.669 29 14.5479C29 7.71552 24.3684 1.74346 17.7461 0.0328684C17.2059 -0.10718 16.6657 0.21293 16.5257 0.753117C16.3956 1.2933 16.7157 1.83349 17.2559 1.97354ZM17.0659 8.25516C19.4967 9.44557 21.0073 11.8564 21.0073 14.5473C21.0073 15.2476 20.9072 15.9278 20.7072 16.588C20.6471 16.7881 20.5571 16.9782 20.4671 17.1682L21.9676 18.6687C22.2377 18.2086 22.4578 17.7084 22.6278 17.1782C22.8879 16.3279 23.018 15.4476 23.018 14.5473C23.018 11.0861 21.0773 7.98507 17.9562 6.46454C17.456 6.22446 16.8658 6.42453 16.6158 6.9247C16.3657 7.42487 16.5657 8.01508 17.0659 8.25516Z"
+    },
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "PSF-4025",
+          "manufacturer": "polaris"
+        },
+        "type": "devices.types.ventilation.fan",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                3
+              ]
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "feature": "current_temperature",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "auto",
+                "action": {
+                  "program": [
+                    1
+                  ]
+                },
+                "condition": {
+                  "source": "state",
+                  "program": [
+                    1
+                  ]
+                }
+              },
+              {
+                "value": "normal",
+                "action": {
+                  "program": [
+                    3
+                  ]
+                },
+                "condition": {
+                  "source": "state",
+                  "program": [
+                    3
+                  ]
+                }
+              },
+              {
+                "value": "quiet",
+                "action": {
+                  "program": [
+                    2
+                  ]
+                },
+                "condition": {
+                  "source": "state",
+                  "program": [
+                    2
+                  ]
+                }
+              }
+            ],
+            "instance": "program",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "instance": "input_source",
+            "retrievable": false
+          },
+          {
+            "type": "info",
+            "feature": "battery",
+            "instance": "battery_level",
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "action": {
+              "volume": 0
+            },
+            "instance": "mute",
+            "actionOff": {
+              "volume": 1
+            },
+            "condition": {
+              "volume": 0
+            },
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "feature": "child_lock",
+            "instance": "controls_locked",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "one",
+                "action": {
+                  "speed": 1
+                },
+                "condition": {
+                  "speed": 1,
+                  "source": "state"
+                }
+              },
+              {
+                "value": "two",
+                "action": {
+                  "speed": 2
+                },
+                "condition": {
+                  "speed": 2,
+                  "source": "state"
+                }
+              },
+              {
+                "value": "three",
+                "action": {
+                  "speed": 3
+                },
+                "condition": {
+                  "speed": 3,
+                  "source": "state"
+                }
+              },
+              {
+                "value": "four",
+                "action": {
+                  "speed": 4
+                },
+                "condition": {
+                  "speed": 4,
+                  "source": "state"
+                }
+              },
+              {
+                "value": "five",
+                "action": {
+                  "speed": 5
+                },
+                "condition": {
+                  "speed": 5,
+                  "source": "state"
+                }
+              },
+              {
+                "value": "six",
+                "action": {
+                  "speed": 6
+                },
+                "condition": {
+                  "speed": 6,
+                  "source": "state"
+                }
+              },
+              {
+                "value": "seven",
+                "action": {
+                  "speed": 7
+                },
+                "condition": {
+                  "speed": 7,
+                  "source": "state"
+                }
+              },
+              {
+                "value": "eight",
+                "action": {
+                  "speed": 8
+                },
+                "condition": {
+                  "speed": 8,
+                  "source": "state"
+                }
+              },
+              {
+                "value": "nine",
+                "action": {
+                  "speed": 9
+                },
+                "condition": {
+                  "speed": 9,
+                  "source": "state"
+                }
+              },
+              {
+                "value": "ten",
+                "action": {
+                  "speed": 10
+                },
+                "condition": {
+                  "speed": 10,
+                  "source": "state"
+                }
+              },
+              {
+                "value": "max",
+                "action": {
+                  "speed": 11
+                },
+                "condition": {
+                  "speed": 11,
+                  "source": "state"
+                }
+              },
+              {
+                "value": "turbo",
+                "action": {
+                  "speed": 12
+                },
+                "condition": {
+                  "speed": 12,
+                  "source": "state"
+                }
+              }
+            ],
+            "instance": "fan_speed",
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "hidden": false,
+    "realtime": true,
+    "fastSwitch": {
+      "on": {
+        "program": [
+          1
+        ]
+      },
+      "off": {
+        "program": [
+          0
+        ]
+      }
+    },
+    "autoSetMode": true,
+    "invertSound": true,
+    "adminPresets": true,
+    "hotspot_ssid": "PSF-4025",
+    "program_data": {
+      "0": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "horizontal_switch",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "voiceControl": {
+      "intents": {
+        "status": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {}
+              }
+            },
+            "speed": {},
+            "program": {}
+          }
+        },
+        "program": {
+          "values": {
+            "program": {
+              "enum_values": {
+                "program_standard": {
+                  "action": {
+                    "program": [
+                      3
+                    ]
+                  }
+                },
+                "program_natural_breeze": {}
+              }
+            }
+          }
+        },
+        "night.on": {
+          "action": {
+            "program": [
+              2
+            ]
+          }
+        },
+        "rollcall": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {}
+              }
+            }
+          }
+        },
+        "device_on": {
+          "action": {
+            "program": [
+              3
+            ]
+          }
+        },
+        "greetings": {
+          "status": {
+            "ready": {
+              "items": {
+                "hello": {}
+              }
+            }
+          }
+        },
+        "intensity": {
+          "values": {
+            "speed": {
+              "enum_values": {
+                "param_low": {
+                  "action": {
+                    "speed": 3
+                  }
+                },
+                "param_max": {
+                  "action": {
+                    "speed": 12
+                  }
+                },
+                "param_mid": {
+                  "action": {
+                    "speed": 6
+                  }
+                },
+                "param_min": {
+                  "action": {
+                    "speed": 1
+                  }
+                },
+                "param_high": {
+                  "action": {
+                    "speed": 9
+                  }
+                }
+              }
+            }
+          }
+        },
+        "night.off": {
+          "action": {
+            "program": [
+              0
+            ]
+          }
+        },
+        "volume.on": {
+          "action": {
+            "volume": 1
+          }
+        },
+        "device_off": {
+          "action": {
+            "program": [
+              0
+            ]
+          }
+        },
+        "volume.off": {
+          "action": {
+            "volume": 0
+          }
+        },
+        "status.full": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {}
+              }
+            },
+            "speed": {
+              "values": {
+                "speed": {
+                  "type": "number_value"
+                }
+              }
+            },
+            "volume": {
+              "items": {
+                "on": {},
+                "off": {}
+              }
+            },
+            "program": {
+              "values": {
+                "program": {
+                  "type": "program_name"
+                }
+              }
+            },
+            "child_lock": {
+              "items": {
+                "on": {},
+                "off": {}
+              }
+            },
+            "current_temperature": {
+              "values": {
+                "current_temperature": {
+                  "type": "number_value"
+                }
+              }
+            }
+          }
+        },
+        "child_lock.on": {
+          "action": {
+            "child_lock": 1
+          }
+        },
+        "off_timer.set": {
+          "values": {
+            "timer": {}
+          }
+        },
+        "child_lock.off": {
+          "action": {
+            "child_lock": 0
+          }
+        }
+      }
+    },
+    "mqttFeatureNames": {
+      "volume": "sound"
+    },
+    "excludeScheduleFeatures": [
+      "child_lock",
+      "battery"
+    ]
+  },
+  "vendor": "polaris",
+  "features": [
+    "program",
+    "speed",
+    "battery",
+    "volume",
+    "child_lock",
+    "timer",
+    "schedule",
+    "current_temperature",
+    "demo"
+  ],
+  "messages": {
+    "diag": {
+      "ar-AE": "اضغط مع الاستمرار على زر الطاقة الموجود على شاشة المروحة لمدة 5 ثوانٍ حتى تسمع 3 أصوات تنبيه قصيرة. سوف يومض مؤشر Wi-Fi بسرعة للتأكيد.",
+      "de-DE": "Halten Sie die Einschalttaste auf dem Lüfterdisplay 5 Sekunden lang gedrückt, bis Sie 3 kurze Pieptöne hören. Zur Bestätigung blinkt die WLAN-Anzeige schnell.",
+      "en-US": "Press and hold the power button on the fan display for 5 seconds until you hear 3 short beeps. The Wi-Fi indicator will flash quickly to confirm.",
+      "kk-KZ": "Желдеткіш дисплейіндегі қуат түймесін 3 қысқа сигнал естілгенше 5 секунд басып тұрыңыз. Wi-Fi индикаторы растау үшін жылдам жыпылықтайды.",
+      "ru-RU": "Нажмите и удерживайте кнопку включения на дисплее вентилятора в течение 5 секунд до 3 коротких звуковых сигналов. В подтверждении индикатор  Wi-Fi будет быстро мигать.",
+      "uk-UA": "Натисніть та утримуйте кнопку увімкнення на дисплеї вентилятора протягом 5 секунд до 3 коротких звукових сигналів. У підтвердженні індикатор Wi-Fi швидко блиматиме."
+    },
+    "pair": {
+      "ar-AE": "اضغط مع الاستمرار على زر الطاقة الموجود على شاشة المروحة حتى تسمع صوت تنبيه قصير. سوف يومض مؤشر Wi-Fi بسرعة للتأكيد.",
+      "de-DE": "Halten Sie die Einschalttaste auf dem Lüfterdisplay gedrückt, bis Sie einen kurzen Piepton hören. Zur Bestätigung blinkt die WLAN-Anzeige schnell.",
+      "en-US": "Press and hold the power button on the fan display until you hear a short beep. The Wi-Fi indicator will flash quickly to confirm.",
+      "kk-KZ": "Желдеткіш дисплейіндегі қуат түймесін қысқа дыбыстық сигнал естілгенше басып тұрыңыз. Wi-Fi индикаторы растау үшін жылдам жыпылықтайды.",
+      "ru-RU": "Нажмите и удерживайте кнопку включения на дисплее вентилятора до короткого звукового сигнала. В подтверждении индикатор  Wi-Fi будет быстро мигать.",
+      "uk-UA": "Натисніть і утримуйте кнопку увімкнення на дисплеї вентилятора до короткого звукового сигналу. У підтвердженні індикатор Wi-Fi швидко блиматиме."
+    },
+    "reset": {
+      "ar-AE": "اضغط مع الاستمرار على زر الطاقة الموجود على شاشة المروحة لمدة 10 ثوانٍ. سيتم إيقاف تشغيل مؤشر Wi-Fi كتأكيد.",
+      "de-DE": "Halten Sie die Einschalttaste auf dem Lüfterdisplay 10 Sekunden lang gedrückt. Zur Bestätigung erlischt die WLAN-Anzeige.",
+      "en-US": "Press and hold the power button on the fan display for 10 seconds. The Wi-Fi indicator will turn off to confirm.",
+      "kk-KZ": "Желдеткіш дисплейіндегі қуат түймесін 10 секунд басып тұрыңыз. Wi-Fi индикаторы растау ретінде өшеді.",
+      "ru-RU": "Нажмите и удерживайте кнопку включения на дисплее вентилятора в течение 10 секунд. В подтверждении индикатор  Wi-Fi погаснет.",
+      "uk-UA": "Натисніть і утримуйте кнопку увімкнення на дисплеї вентилятора протягом 10 секунд. У підтвердженні індикатор Wi-Fi згасне."
+    },
+    "error.1": {
+      "ar-AE": "قفل الأطفال قيد العمل",
+      "de-DE": "Der Schutz gegen unbeabsichtigtes Drücken hat funktioniert",
+      "en-US": "Child lock operated",
+      "kk-KZ": "Кездейсоқ басудан қорғау атқарылды",
+      "ru-RU": "Сработала защита от случайного нажатия",
+      "uk-UA": "Функція захисту від дітей"
+    },
+    "error.2": {
+      "ar-AE": "البطارية منخفضة",
+      "de-DE": "Niedriger Batteriestatus",
+      "en-US": "Low batttery",
+      "kk-KZ": "Батареяның заряды төмен",
+      "ru-RU": "Низкий заряд батареи",
+      "uk-UA": "Низький заряд акумулятора"
+    },
+    "bright_0": {
+      "en-US": "0%"
+    },
+    "bright_50": {
+      "en-US": "50%"
+    },
+    "bright_100": {
+      "en-US": "100%"
+    },
+    "url.manual": {
+      "ar-AE": "https://images.cdn.polaris-iot.com/pdf/polaris/248/PSF4025 IQ_User Manual_v3_ru_kz.pdf",
+      "de-DE": "https://images.cdn.polaris-iot.com/pdf/polaris/248/PSF4025 IQ_User Manual_v3_ru_kz.pdf",
+      "en-US": "https://images.cdn.polaris-iot.com/pdf/polaris/248/PSF4025 IQ_User Manual_v3_ru_kz.pdf",
+      "kk-KZ": "https://images.cdn.polaris-iot.com/pdf/polaris/248/PSF4025 IQ_User Manual_v3_ru_kz.pdf",
+      "ru-RU": "https://images.cdn.polaris-iot.com/pdf/polaris/248/PSF4025 IQ_User Manual_v3_ru_kz.pdf",
+      "uk-UA": "https://images.cdn.polaris-iot.com/pdf/polaris/248/PSF4025 IQ_User Manual_v3_ru_kz.pdf"
+    },
+    "url.catalog": {
+      "ar-AE": "https://polaris.ru/catalog/fans/polaris-psf-4025-wifi-iq-home/",
+      "de-DE": "https://polaris.ru/catalog/fans/polaris-psf-4025-wifi-iq-home/",
+      "en-US": "https://polaris.ru/catalog/fans/polaris-psf-4025-wifi-iq-home/",
+      "kk-KZ": "https://polaris.ru/catalog/fans/polaris-psf-4025-wifi-iq-home/",
+      "ru-RU": "https://polaris.ru/catalog/fans/polaris-psf-4025-wifi-iq-home/",
+      "uk-UA": "https://polaris.ru/catalog/fans/polaris-psf-4025-wifi-iq-home/"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Standby"
+      },
+      "hidden": true,
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M14.3,8.3c0.3-0.5,0.9-0.7,1.3-0.4c1.6,0.8,3.6,1.2,5.6,1.1c2-0.1,3.9-0.7,5.3-1.6c0.5-0.3,1.1-0.2,1.4,0.3 C28.1,8.1,28,8.7,27.6,9c-1.7,1.1-3.9,1.8-6.3,1.9c-0.2,0-0.4,0-0.6,0c-2.1,0-4.2-0.5-5.9-1.4C14.2,9.4,14,8.8,14.3,8.3z M1.4,18.8 c-0.2,0-0.4-0.1-0.6-0.2c-0.5-0.3-0.6-0.9-0.3-1.4l1-1.4c-0.7-0.8-1.3-2-1.5-3.1c-0.2-1.4,0-2.7,0.8-3.7c1.4-2,3.9-3.6,8.4-5.4 C9.5,3.5,9.7,3.5,10,3.5c0.3,0,0.5,0.1,0.7,0.2c0.2,0.1,0.4,0.3,0.5,0.5c0.1,0.2,0.2,0.5,0.2,0.7c0.2,3.9-0.3,7.5-1.4,9.7l0,0.1 c-0.8,1.3-2,2.1-3.4,2.5c-0.4,0.1-0.9,0.2-1.3,0.2c-0.7,0-1.4-0.1-2.1-0.4l-0.9,1.4C2,18.7,1.7,18.8,1.4,18.8z M2.8,14.1l2-2.9 c0.3-0.5,0.9-0.6,1.4-0.3c0.5,0.3,0.6,0.9,0.3,1.4l-2.1,3c0.6,0.2,1.2,0.2,1.8,0c0.9-0.2,1.7-0.8,2.1-1.6C9,12.4,9.6,9.5,9.5,5.7 c-3.8,1.6-5.9,2.9-7,4.5c-0.5,0.7-0.5,1.6-0.4,2.2C2.2,13,2.4,13.6,2.8,14.1z M26.4,14.1c-1.4,0.9-3.3,1.5-5.3,1.6 c-2,0.1-4-0.3-5.6-1.1c-0.5-0.3-1.1-0.1-1.3,0.4c-0.3,0.5-0.1,1.1,0.4,1.3c1.7,0.9,3.8,1.4,5.9,1.4c0.2,0,0.4,0,0.6,0 c2.4-0.1,4.6-0.8,6.3-1.9c0.5-0.3,0.6-0.9,0.3-1.4S26.9,13.8,26.4,14.1z M26.4,20.9c-1.4,0.9-3.3,1.5-5.3,1.6c-2,0.1-4-0.3-5.6-1.2 c-2-1-4.4-1.4-6.8-1.3c-2.4,0.1-4.7,0.9-6.4,2.1c-0.5,0.3-0.6,0.9-0.2,1.4c0.3,0.5,0.9,0.6,1.4,0.2c1.4-1,3.3-1.6,5.4-1.7 c2.1-0.1,4.1,0.3,5.8,1.1c1.7,0.9,3.8,1.4,5.9,1.4c0.2,0,0.4,0,0.6,0c2.4-0.1,4.6-0.8,6.3-1.9c0.5-0.3,0.6-0.9,0.3-1.4 C27.5,20.7,26.9,20.6,26.4,20.9z",
+      "name": {
+        "ar-AE": "نسيم طبيعي",
+        "de-DE": "Natürliche Brise",
+        "en-US": "Natural breeze",
+        "kk-KZ": "Табиғи жел",
+        "ru-RU": "Природный бриз",
+        "uk-UA": "Природний бриз"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M17.6,26.9c-0.8,0-1.6-0.1-2.4-0.2c-3-0.5-5.8-1.7-8.1-3.6C4.8,21.3,3.1,18.8,2,16C1.3,13.9,1,11.6,1.1,9.4 c0.1-2.3,0.7-4.4,1.8-6.5l0,0C3,2.6,3.3,2.4,3.5,2.2C3.8,2.1,4.1,2,4.5,2c0.3,0,0.6,0.2,0.9,0.4C5.5,2.7,5.7,3,5.8,3.3l0.1,0.5 c0.6,3.3,1.6,8.4,5.4,12.4c4.2,4.3,10.5,5.5,13.6,6c0.3,0.1,0.6,0.2,0.8,0.4c0.2,0.2,0.4,0.5,0.4,0.8c0,0.3,0,0.6-0.2,0.9 c-0.1,0.3-0.4,0.5-0.7,0.7C22.9,26.3,20.3,26.9,17.6,26.9z M4.1,5.1C3.5,6.5,3.2,8,3.1,9.5c-0.1,2,0.1,4,0.8,5.8 c0.9,2.5,2.4,4.6,4.5,6.3c2,1.7,4.5,2.7,7.1,3.1c0.7,0.1,1.4,0.1,2.2,0.1c1.9,0,3.7-0.4,5.5-1.1c-3.5-0.7-9.2-2.2-13.2-6.3 C5.9,13.5,4.8,8.6,4.1,5.1z M24.3,23.2C24.3,23.2,24.3,23.2,24.3,23.2C24.3,23.2,24.3,23.2,24.3,23.2z M3.8,3.7 C3.8,3.7,3.8,3.7,3.8,3.7L3.8,3.7z M21.7,10.8L19.8,10c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.1-0.3-0.1-0.4l-0.1-2.1 c0-0.2-0.1-0.3-0.1-0.5c-0.1-0.1-0.2-0.2-0.4-0.3c-0.2-0.1-0.3-0.1-0.5,0c-0.2,0-0.3,0.1-0.4,0.3l-1.4,1.6c-0.1,0.1-0.2,0.2-0.4,0.2 c-0.1,0-0.3,0-0.4,0l-2-0.5c-0.2,0-0.3,0-0.5,0C13,7.9,12.9,8,12.8,8.2c-0.1,0.1-0.2,0.3-0.2,0.4c0,0.2,0,0.3,0.1,0.5l0.9,1.8 c0.1,0.1,0.1,0.3,0.1,0.4c0,0.2-0.1,0.3-0.1,0.4l-1.2,1.8c-0.1,0.1-0.1,0.3-0.1,0.5c0,0.2,0,0.3,0.1,0.5c0.1,0.1,0.2,0.2,0.4,0.3 c0.1,0.1,0.3,0.1,0.5,0l2.1-0.4c0.1,0,0.3,0,0.4,0c0.1,0.1,0.3,0.1,0.3,0.3l1.3,1.6c0.1,0.1,0.2,0.2,0.4,0.3c0.2,0,0.3,0,0.5,0 c0.2,0,0.3-0.1,0.4-0.3c0.1-0.1,0.2-0.3,0.2-0.4l0.3-2.1c0-0.1,0.1-0.3,0.2-0.4c0.1-0.1,0.2-0.2,0.4-0.3l1.9-0.8 c0.1,0,0.3-0.1,0.4-0.3c0.1-0.1,0.2-0.3,0.2-0.4c0-0.2,0-0.3-0.1-0.4C21.9,11,21.8,10.9,21.7,10.8z M25.6,16.3l-0.8-0.1 c-0.1,0-0.1,0-0.2-0.1c0,0-0.1-0.1-0.1-0.1l-0.3-0.8c0-0.1-0.1-0.1-0.1-0.1C24.1,15,24,15,23.9,15c-0.1,0-0.1,0-0.2,0.1 c-0.1,0-0.1,0.1-0.1,0.1L23.3,16c0,0.1-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.2,0.1l-0.8,0.1c-0.1,0-0.1,0-0.2,0.1c-0.1,0-0.1,0.1-0.1,0.2 c0,0.1,0,0.1,0,0.2c0,0.1,0.1,0.1,0.1,0.2l0.6,0.6c0,0,0.1,0.1,0.1,0.1c0,0.1,0,0.1,0,0.2l-0.2,0.8c0,0.1,0,0.1,0,0.2 c0,0.1,0.1,0.1,0.1,0.2c0.1,0,0.1,0.1,0.2,0.1c0.1,0,0.1,0,0.2,0l0.7-0.4c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0l0.7,0.4 c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2-0.1c0.1,0,0.1-0.1,0.1-0.2c0-0.1,0-0.1,0-0.2l-0.2-0.8c0-0.1,0-0.1,0-0.2c0-0.1,0.1-0.1,0.1-0.1 l0.6-0.6c0,0,0.1-0.1,0.1-0.2c0-0.1,0-0.1,0-0.2c0-0.1-0.1-0.1-0.1-0.2C25.8,16.3,25.7,16.3,25.6,16.3z M12.7,3.3l-0.8-0.1 c-0.1,0-0.1,0-0.2-0.1c0,0-0.1-0.1-0.1-0.1l-0.3-0.8c0-0.1-0.1-0.1-0.1-0.1c-0.1,0-0.1-0.1-0.2-0.1s-0.1,0-0.2,0.1 c-0.1,0-0.1,0.1-0.1,0.1l-0.3,0.8c0,0.1-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.2,0.1L9.3,3.3c-0.1,0-0.1,0-0.2,0.1C9.1,3.4,9.1,3.5,9,3.6 c0,0.1,0,0.1,0,0.2c0,0.1,0.1,0.1,0.1,0.2l0.6,0.6c0,0,0.1,0.1,0.1,0.1c0,0.1,0,0.1,0,0.2L9.7,5.6c0,0.1,0,0.1,0,0.2 c0,0.1,0.1,0.1,0.1,0.2C9.8,6,9.9,6,10,6c0.1,0,0.1,0,0.2,0l0.7-0.4c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0L11.9,6c0.1,0,0.1,0,0.2,0 c0.1,0,0.1,0,0.2-0.1c0.1,0,0.1-0.1,0.1-0.2c0-0.1,0-0.1,0-0.2l-0.2-0.8c0-0.1,0-0.1,0-0.2c0-0.1,0.1-0.1,0.1-0.1l0.6-0.6 c0,0,0.1-0.1,0.1-0.2c0-0.1,0-0.1,0-0.2c0-0.1-0.1-0.1-0.1-0.2C12.8,3.4,12.8,3.3,12.7,3.3z",
+      "name": {
+        "ar-AE": "الوضع الليلي",
+        "de-DE": "Nacht-Modus",
+        "en-US": "Night mode",
+        "kk-KZ": "Түнгі режим",
+        "ru-RU": "Ночной режим",
+        "uk-UA": "Нічний режим"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M27.4,15.8c-0.5,1.7-1.6,2.8-3.3,3.4c-0.8,0.3-1.8,0.4-2.7,0.4c-2.5,0-5.1-0.9-5.8-1.5c-0.4-0.3-0.5-1-0.2-1.4 c0.3-0.4,1-0.5,1.4-0.2c0.6,0.4,4.2,1.6,6.7,0.8c1.1-0.4,1.7-1,2-2.1c0.7-2.5-0.2-4.5-1.5-5.1c-0.6-0.3-1-0.2-1.4,0.2 c-0.3,0.5-0.6,1-1,1.4c-0.3,0.4-1,0.5-1.4,0.2c-0.4-0.3-0.5-1-0.2-1.4c0.3-0.4,0.6-0.8,0.9-1.3L21,9.1c1-1.2,2.5-1.5,3.9-0.7 C26.9,9.4,28.4,12.3,27.4,15.8z M20.3,24.1c-0.8,1.6-2.8,2.8-5.2,2.8c-0.7,0-1.4-0.1-2.2-0.3c-1.7-0.5-2.8-1.6-3.4-3.3 c-1.1-3.2,0.3-7.4,1.1-8.5c0.3-0.4,1-0.5,1.4-0.2c0.1,0,0.1,0.1,0.1,0.2c-0.1-0.3-0.2-0.6-0.2-1c0-0.8,0.3-1.5,0.9-2 c0.1-0.1,0.3-0.2,0.4-0.3c-0.2,0-0.3-0.1-0.5-0.2c-0.6-0.4-4.2-1.6-6.7-0.8c-1.1,0.4-1.7,1-2,2.1c-0.8,2.8,0.5,4.6,1.5,5.1 c0.6,0.3,1,0.2,1.4-0.2c0,0,0.1-0.1,0.1-0.2c0.1-0.1,0.2-0.3,0.3-0.5c0.3-0.5,0.9-0.6,1.4-0.3c0.5,0.3,0.6,0.9,0.3,1.4 c-0.1,0.2-0.2,0.3-0.3,0.4c-0.1,0.2-0.2,0.3-0.3,0.4c-0.6,0.8-1.4,1.1-2.3,1.1c-0.5,0-1-0.1-1.6-0.4c-2-1-3.5-3.9-2.5-7.5 c0.5-1.7,1.6-2.8,3.3-3.4c3.2-1.1,7.5,0.3,8.5,1.1c0.4,0.3,0.5,0.9,0.2,1.4c0.2-0.1,0.5-0.1,0.7-0.1c1,0,1.9,0.6,2.4,1.4 c0-0.2,0.1-0.3,0.2-0.5c0.4-0.6,1.6-4.2,0.8-6.7c-0.4-1.1-1-1.7-2.1-2c-2.8-0.8-4.6,0.5-5.1,1.5c-0.3,0.6-0.2,1,0.2,1.4 c0,0,0.1,0,0.1,0.1c0.2,0.1,0.4,0.2,0.6,0.4c0.4,0.3,0.6,0.9,0.2,1.4s-0.9,0.6-1.4,0.2c-0.2-0.1-0.3-0.2-0.5-0.3 C10.1,7.7,10,7.6,9.9,7.6c-1.2-1-1.5-2.5-0.7-3.9c1-2,3.9-3.5,7.5-2.5c1.7,0.5,2.8,1.6,3.4,3.3c1.1,3.2-0.3,7.4-1,8.5 c-0.2,0.3-0.5,0.4-0.8,0.4c-0.2,0-0.4-0.1-0.6-0.2c0,0,0,0,0,0c0,0.2,0.1,0.4,0.1,0.6v0c0,1.6-1.3,2.8-2.9,2.8c0,0,0,0,0,0 c-0.8,0-1.5-0.3-2-0.9c-0.2-0.2-0.3-0.4-0.4-0.6c0,0.2,0,0.5-0.2,0.7c-0.4,0.6-1.6,4.2-0.8,6.7c0.4,1.1,1,1.7,2.1,2 c2.8,0.8,4.6-0.5,5.1-1.5c0.3-0.6,0.2-1-0.2-1.4c0,0-0.1-0.1-0.2-0.1c-0.1-0.1-0.3-0.2-0.5-0.3c-0.5-0.3-0.6-0.9-0.3-1.4 c0.3-0.5,0.9-0.6,1.4-0.3c0.2,0.1,0.3,0.2,0.5,0.3c0.2,0.1,0.3,0.2,0.3,0.2C20.8,21.2,21,22.7,20.3,24.1z M14.1,13.2 c-0.2,0.2-0.3,0.4-0.3,0.6c0,0.2,0.1,0.5,0.2,0.6s0.4,0.3,0.6,0.3c0,0,0,0,0,0c0.5,0,0.9-0.4,0.9-0.9c0-0.5-0.4-0.9-0.9-0.9 c0,0,0,0,0,0C14.5,12.9,14.3,13,14.1,13.2z",
+      "name": {
+        "ar-AE": "الوضع القياسي",
+        "de-DE": "Standart Modus",
+        "en-US": "Standard mode",
+        "kk-KZ": "Стандартты режим",
+        "ru-RU": "Стандартный режим",
+        "uk-UA": "Стандартний режим"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "pair": {
+      "60": "https://images.cdn.polaris-iot.com/5/e3/70328-cb72-4b57-a7f3-0c13ca6bee1c/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/5/e3/70328-cb72-4b57-a7f3-0c13ca6bee1c/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/5/e3/70328-cb72-4b57-a7f3-0c13ca6bee1c/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/5/e3/70328-cb72-4b57-a7f3-0c13ca6bee1c/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/5/e3/70328-cb72-4b57-a7f3-0c13ca6bee1c/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/5/e3/70328-cb72-4b57-a7f3-0c13ca6bee1c/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/5/e3/70328-cb72-4b57-a7f3-0c13ca6bee1c/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/5/e3/70328-cb72-4b57-a7f3-0c13ca6bee1c/1800.webp",
+      "id": "5e370328-cb72-4b57-a7f3-0c13ca6bee1c",
+      "original": "https://images.cdn.polaris-iot.com/5/e3/70328-cb72-4b57-a7f3-0c13ca6bee1c/original.webp"
+    },
+    "manualbg": {
+      "60": "https://images.cdn.polaris-iot.com/5/41/84761-ca4e-40f6-aaf1-e8384f2af4d5/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/5/41/84761-ca4e-40f6-aaf1-e8384f2af4d5/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/5/41/84761-ca4e-40f6-aaf1-e8384f2af4d5/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/5/41/84761-ca4e-40f6-aaf1-e8384f2af4d5/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/5/41/84761-ca4e-40f6-aaf1-e8384f2af4d5/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/5/41/84761-ca4e-40f6-aaf1-e8384f2af4d5/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/5/41/84761-ca4e-40f6-aaf1-e8384f2af4d5/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/5/41/84761-ca4e-40f6-aaf1-e8384f2af4d5/1800.webp",
+      "2400": "https://images.cdn.polaris-iot.com/5/41/84761-ca4e-40f6-aaf1-e8384f2af4d5/2400.webp",
+      "id": "54184761-ca4e-40f6-aaf1-e8384f2af4d5",
+      "original": "https://images.cdn.polaris-iot.com/5/41/84761-ca4e-40f6-aaf1-e8384f2af4d5/original.webp"
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1756749187,
+  "temperature_units": "celsius"
+}

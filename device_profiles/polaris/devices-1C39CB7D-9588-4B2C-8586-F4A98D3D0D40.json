@@ -1,0 +1,2287 @@
+{
+  "id": "1c39cb7d-9588-4b2c-8586-f4a98d3d0d40",
+  "name": "PBHI-6431FB Wi-Fi",
+  "type": 315,
+  "class": "cooktop",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/900.webp",
+    "1200": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/1200.webp",
+    "1800": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/1800.webp",
+    "id": "25e2a7ec-5b93-40e8-bd41-78dc4ab50748",
+    "original": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/original.webp"
+  },
+  "layout": {
+    "home.top": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "switch",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "settings": [
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "إعادة تعيين تكوين نفك",
+          "de-DE": "Zurücksetzen der NFC-konfiguration",
+          "en-US": "NFC configuration reset",
+          "kk-KZ": "NFC конфигурациясын қалпына келтіру",
+          "ru-RU": "Сброс конфигурации по NFC",
+          "uk-UA": "Скидання конфігурації по NFC"
+        },
+        "measure": "nfcReset",
+        "position": 1
+      },
+      {
+        "type": "slider",
+        "title": {
+          "ru-RU": "Ограничение мощности"
+        },
+        "position": 1,
+        "formatRules": [
+          {
+            "max": 0,
+            "min": 0,
+            "string": "zero"
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "program": [
+              0
+            ]
+          }
+        ],
+        "program_data": {
+          "field": "power_limitation",
+          "program": [
+            7
+          ]
+        }
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "program",
+        "position": 0
+      }
+    ],
+    "manual.bottom": [
+      {
+        "type": "button_power",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "موقد الطهي",
+          "de-DE": "Kochfeld",
+          "en-US": "Cooktop",
+          "kk-KZ": "Ас пеші",
+          "ru-RU": "Варочная панель",
+          "uk-UA": "Варильна поверхня"
+        },
+        "position": 1
+      },
+      {
+        "type": "info",
+        "style": "large_circle",
+        "layout": "container.burner_top_left",
+        "position": 2,
+        "background": "gradient_no_top_accent_bot",
+        "visibility": [
+          {
+            "not": {
+              "program_data": {
+                "field": "flex_left",
+                "value": 0,
+                "program": [
+                  1
+                ]
+              }
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "style": "large_circle",
+        "layout": "container.burner_top_left",
+        "position": 2,
+        "visibility": [
+          {
+            "program_data": {
+              "field": "flex_left",
+              "value": 0,
+              "program": [
+                1
+              ]
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "style": "large_circle",
+        "layout": "container.burner_top_right",
+        "position": 2,
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "style": "large_circle",
+        "layout": "container.burner_bottom_left",
+        "position": 3,
+        "background": "gradient_accent_top_no_bot",
+        "visibility": [
+          {
+            "not": {
+              "program_data": {
+                "field": "flex_left",
+                "value": 0,
+                "program": [
+                  1
+                ]
+              }
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "style": "large_circle",
+        "layout": "container.burner_bottom_left",
+        "position": 3,
+        "visibility": [
+          {
+            "program_data": {
+              "field": "flex_left",
+              "value": 0,
+              "program": [
+                1
+              ]
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "style": "large_circle",
+        "layout": "container.burner_bottom_right",
+        "position": 3,
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 4
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5940,
+          "min": 0,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "title": {
+          "ar-AE": "تذكير",
+          "de-DE": "Erinnerung",
+          "en-US": "Reminder",
+          "kk-KZ": "Еске салғыш",
+          "ru-RU": "Напоминание",
+          "uk-UA": "Нагадування"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "600": {
+            "label": "10"
+          },
+          "1200": {
+            "label": "20"
+          },
+          "1800": {
+            "label": "30"
+          },
+          "2400": {
+            "label": "40"
+          },
+          "3000": {
+            "label": "50"
+          },
+          "3600": {
+            "label": "60"
+          },
+          "4200": {
+            "label": "70"
+          },
+          "4800": {
+            "label": "80"
+          },
+          "5400": {
+            "label": "90"
+          },
+          "5940": {
+            "label": "99"
+          }
+        },
+        "feature": "timer",
+        "position": 5,
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 6
+      },
+      {
+        "type": "container_head",
+        "position": 7
+      },
+      {
+        "icon": "M0,0h28v28V0M5.7681,14.4983c-.2305,0-.4629-.0552-.6758-.1665-.4883-.2554-.792-.7583-.792-1.3125v-7.04c0-.5542.3037-1.0571.792-1.3125.4834-.2515,1.0615-.2153,1.5088.0957l5.0645,3.52c.3975.2759.6348.731.6348,1.2168s-.2373.9409-.6348,1.2168l-5.0645,3.52c-.25.1738-.541.2622-.833.2622ZM5.772,5.4992c-.0967,0-.1758.0322-.2168.0542-.1592.0835-.2549.2427-.2549.4258v7.04c0,.1831.0957.3423.2549.4258.0742.04.2695.1143.4756-.0303l5.0645-3.52c.1299-.0903.2051-.2344.2051-.3955s-.0752-.3052-.2051-.3955l-5.0645-3.52c-.0918-.064-.1816-.0845-.2588-.0845ZM17.0005,23.4992c-.9375,0-1.7002-.7627-1.7002-1.7002v-6.6001c0-.937.7627-1.6997,1.7002-1.6997.9365,0,1.6992.7627,1.6992,1.6997v6.6001c0,.9375-.7627,1.7002-1.6992,1.7002ZM17.0005,14.4992c-.3857,0-.7002.314-.7002.6997v6.6001c0,.3862.3145.7002.7002.7002s.6992-.314.6992-.7002v-6.6001c0-.3857-.3135-.6997-.6992-.6997ZM22.0005,23.4992c-.9375,0-1.7002-.7627-1.7002-1.7002v-6.6001c0-.937.7627-1.6997,1.7002-1.6997.9365,0,1.6992.7627,1.6992,1.6997v6.6001c0,.9375-.7627,1.7002-1.6992,1.7002ZM22.0005,14.4992c-.3857,0-.7002.314-.7002.6997v6.6001c0,.3862.3145.7002.7002.7002s.6992-.314.6992-.7002v-6.6001c0-.3857-.3135-.6997-.6992-.6997ZM7.2007,22.2991L19.2007,6.2991c.165-.2207.1201-.5342-.1006-.6997-.2197-.165-.5332-.1211-.7002.1001L6.3999,21.6994c-.165.2207-.1201.5342.1006.6997.0898.0674.1953.1001.2998.1001.1514,0,.3018-.0688.4004-.2002Z",
+        "type": "button",
+        "title": {
+          "ar-AE": "Stop&Go",
+          "de-DE": "Stop&Go",
+          "en-US": "Stop&Go",
+          "kk-KZ": "Stop&Go",
+          "ru-RU": "Stop&Go",
+          "uk-UA": "Stop&Go"
+        },
+        "action": {
+          "program_data": {
+            "field": "pause",
+            "value": 1,
+            "program": [
+              0
+            ]
+          }
+        },
+        "position": 8,
+        "condition": [
+          {
+            "program_data": {
+              "field": "pause",
+              "value": 1,
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "pause",
+            "value": 0,
+            "program": [
+              0
+            ]
+          }
+        },
+        "precondition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          },
+          {
+            "source": "state",
+            "program_data": {
+              "field": "flag_pause",
+              "value": 3,
+              "program": [
+                2
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 9
+      },
+      {
+        "type": "container_head",
+        "position": 10
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "الميزات",
+          "de-DE": "Funktionen",
+          "en-US": "Features",
+          "kk-KZ": "Ерекше өзгешеліктері",
+          "ru-RU": "Функции",
+          "uk-UA": "Функції"
+        },
+        "position": 11
+      },
+      {
+        "icon": "M0,0h28v28V0M13.9996,4.7996c2.2091,0,4,1.7909,4,4s-1.7909,4-4,4-4-1.7909-4-4,1.7909-4,4-4ZM13.9996,15.1996c2.2091,0,4,1.7909,4,4s-1.7909,4-4,4-4-1.7909-4-4,1.7909-4,4-4ZM13.9999,24.901c-3.1338,0-5.6836-2.5498-5.6836-5.6836v-10.4346c0-3.1343,2.5498-5.6841,5.6836-5.6841s5.6836,2.5498,5.6836,5.6841v10.4346c0,3.1338-2.5498,5.6836-5.6836,5.6836ZM13.9999,4.0988c-2.583,0-4.6836,2.1011-4.6836,4.6841v10.4346c0,2.5825,2.1006,4.6836,4.6836,4.6836s4.6836-2.1011,4.6836-4.6836v-10.4346c0-2.583-2.1006-4.6841-4.6836-4.6841Z",
+        "type": "button",
+        "title": {
+          "ar-AE": "منطقة متعددة",
+          "de-DE": "Multizone",
+          "en-US": "Multizone",
+          "kk-KZ": "Көп аймақ",
+          "ru-RU": "Мультизона ",
+          "uk-UA": "Мультизона"
+        },
+        "action": {
+          "program_data": {
+            "field": "flex_left",
+            "value": 1,
+            "program": [
+              1
+            ]
+          }
+        },
+        "position": 12,
+        "condition": [
+          {
+            "program_data": {
+              "field": "flex_left",
+              "value": 1,
+              "program": [
+                1
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "flex_left",
+            "value": 0,
+            "program": [
+              1
+            ]
+          }
+        },
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 12
+      },
+      {
+        "type": "button",
+        "feature": "volume",
+        "position": 12
+      },
+      {
+        "type": "fill",
+        "position": 12
+      },
+      {
+        "type": "container_tail",
+        "position": 13
+      }
+    ],
+    "manual.shortcuts": [
+      {
+        "type": "button",
+        "feature": "volume",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 0
+      },
+      {
+        "icon": "M0,0h28v28V0M13.9996,4.7996c2.2091,0,4,1.7909,4,4s-1.7909,4-4,4-4-1.7909-4-4,1.7909-4,4-4ZM13.9996,15.1996c2.2091,0,4,1.7909,4,4s-1.7909,4-4,4-4-1.7909-4-4,1.7909-4,4-4ZM13.9999,24.901c-3.1338,0-5.6836-2.5498-5.6836-5.6836v-10.4346c0-3.1343,2.5498-5.6841,5.6836-5.6841s5.6836,2.5498,5.6836,5.6841v10.4346c0,3.1338-2.5498,5.6836-5.6836,5.6836ZM13.9999,4.0988c-2.583,0-4.6836,2.1011-4.6836,4.6841v10.4346c0,2.5825,2.1006,4.6836,4.6836,4.6836s4.6836-2.1011,4.6836-4.6836v-10.4346c0-2.583-2.1006-4.6841-4.6836-4.6841Z",
+        "type": "button",
+        "title": {
+          "ar-AE": "منطقة متعددة",
+          "de-DE": "Multizone",
+          "en-US": "Multizone",
+          "kk-KZ": "Көп аймақ",
+          "ru-RU": "Мультизона ",
+          "uk-UA": "Мультизона"
+        },
+        "action": {
+          "program_data": {
+            "field": "flex_left",
+            "value": 1,
+            "program": [
+              1
+            ]
+          }
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program_data": {
+              "field": "flex_left",
+              "value": 1,
+              "program": [
+                1
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "flex_left",
+            "value": 0,
+            "program": [
+              1
+            ]
+          }
+        },
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "Stop&Go",
+          "de-DE": "Stop&Go",
+          "en-US": "Stop&Go",
+          "kk-KZ": "Stop&Go",
+          "ru-RU": "Stop&Go",
+          "uk-UA": "Stop&Go"
+        },
+        "action": {
+          "program_data": {
+            "field": "pause",
+            "value": 1,
+            "program": [
+              0
+            ]
+          }
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program_data": {
+              "field": "pause",
+              "value": 1,
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "pause",
+            "value": 0,
+            "program": [
+              0
+            ]
+          }
+        },
+        "precondition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          },
+          {
+            "source": "state",
+            "program_data": {
+              "field": "flag_pause",
+              "value": 3,
+              "program": [
+                2
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "userPresets.list": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Custom modes",
+          "ru-RU": "Персональные режимы"
+        },
+        "position": 0
+      },
+      {
+        "row": "userPresets",
+        "type": "info",
+        "position": 1
+      },
+      {
+        "row": "savePreset",
+        "type": "button",
+        "title": {
+          "en-US": "Add",
+          "ru-RU": "Добавить"
+        },
+        "position": 2
+      }
+    ],
+    "container.burner_top_left": [
+      {
+        "row": "recipe",
+        "type": "header",
+        "title": {
+          "ru-RU": "Левая верхняя"
+        },
+        "layout": "manual",
+        "position": 0,
+        "subdevice": "burner_top_left"
+      },
+      {
+        "type": "slider",
+        "feature": "speed",
+        "position": 1,
+        "subdevice": "burner_top_left",
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "residual_temperature",
+                "value": 1,
+                "program": [
+                  4
+                ]
+              }
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "not": {
+              "or": []
+            }
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "feature": "speed",
+        "position": 1,
+        "subdevice": "burner_top_left",
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        "position": 1,
+        "subdevice": "burner_top_left",
+        "startAngle": 0,
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "residual_temperature",
+              "value": 1,
+              "program": [
+                4
+              ]
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "feature": "speed",
+        "position": 2,
+        "subdevice": "burner_top_left",
+        "visibility": [
+          {
+            "not": {
+              "and": [
+                {
+                  "source": "state",
+                  "program_data": {
+                    "field": "residual_temperature",
+                    "value": 1,
+                    "program": [
+                      4
+                    ]
+                  }
+                },
+                {
+                  "source": "state",
+                  "multi_step": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "feature": "speed",
+        "position": 2,
+        "subdevice": "burner_top_left",
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "residual_temperature",
+              "value": 1,
+              "program": [
+                4
+              ]
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ],
+        "value_strings": {
+          "0": "H"
+        }
+      }
+    ],
+    "container.burner_top_right": [
+      {
+        "row": "recipe",
+        "type": "header",
+        "title": {
+          "ru-RU": "Правая верхняя"
+        },
+        "layout": "manual",
+        "position": 0,
+        "subdevice": "burner_top_right"
+      },
+      {
+        "type": "slider",
+        "feature": "speed",
+        "position": 1,
+        "subdevice": "burner_top_right",
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "residual_temperature",
+                "value": 1,
+                "program": [
+                  4
+                ]
+              }
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "not": {
+              "or": []
+            }
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "feature": "speed",
+        "position": 1,
+        "subdevice": "burner_top_right",
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        "position": 1,
+        "subdevice": "burner_top_right",
+        "startAngle": 0,
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "residual_temperature",
+              "value": 1,
+              "program": [
+                4
+              ]
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "feature": "speed",
+        "position": 2,
+        "subdevice": "burner_top_right",
+        "visibility": [
+          {
+            "not": {
+              "and": [
+                {
+                  "source": "state",
+                  "program_data": {
+                    "field": "residual_temperature",
+                    "value": 1,
+                    "program": [
+                      4
+                    ]
+                  }
+                },
+                {
+                  "source": "state",
+                  "multi_step": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "feature": "speed",
+        "position": 2,
+        "subdevice": "burner_top_right",
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "residual_temperature",
+              "value": 1,
+              "program": [
+                4
+              ]
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ],
+        "value_strings": {
+          "0": "H"
+        }
+      }
+    ],
+    "container.burner_bottom_left": [
+      {
+        "row": "recipe",
+        "type": "header",
+        "title": {
+          "ru-RU": "Левая нижняя"
+        },
+        "layout": "manual",
+        "position": 0,
+        "subdevice": "burner_bottom_left"
+      },
+      {
+        "type": "slider",
+        "feature": "speed",
+        "position": 1,
+        "subdevice": "burner_bottom_left",
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "residual_temperature",
+                "value": 1,
+                "program": [
+                  4
+                ]
+              }
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "not": {
+              "or": []
+            }
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "feature": "speed",
+        "position": 1,
+        "subdevice": "burner_bottom_left",
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        "position": 1,
+        "subdevice": "burner_bottom_left",
+        "startAngle": 0,
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "residual_temperature",
+              "value": 1,
+              "program": [
+                4
+              ]
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "feature": "speed",
+        "position": 2,
+        "subdevice": "burner_bottom_left",
+        "visibility": [
+          {
+            "not": {
+              "and": [
+                {
+                  "source": "state",
+                  "program_data": {
+                    "field": "residual_temperature",
+                    "value": 1,
+                    "program": [
+                      4
+                    ]
+                  }
+                },
+                {
+                  "source": "state",
+                  "multi_step": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "feature": "speed",
+        "position": 2,
+        "subdevice": "burner_bottom_left",
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "residual_temperature",
+              "value": 1,
+              "program": [
+                4
+              ]
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ],
+        "value_strings": {
+          "0": "H"
+        }
+      }
+    ],
+    "container.burner_bottom_right": [
+      {
+        "row": "recipe",
+        "type": "header",
+        "title": {
+          "ru-RU": "Правая нижняя"
+        },
+        "layout": "manual",
+        "position": 0,
+        "subdevice": "burner_bottom_right"
+      },
+      {
+        "type": "slider",
+        "feature": "speed",
+        "position": 1,
+        "subdevice": "burner_bottom_right",
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "residual_temperature",
+                "value": 1,
+                "program": [
+                  4
+                ]
+              }
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "not": {
+              "or": []
+            }
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "feature": "speed",
+        "position": 1,
+        "subdevice": "burner_bottom_right",
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        "position": 1,
+        "subdevice": "burner_bottom_right",
+        "startAngle": 0,
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "residual_temperature",
+              "value": 1,
+              "program": [
+                4
+              ]
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "feature": "speed",
+        "position": 2,
+        "subdevice": "burner_bottom_right",
+        "visibility": [
+          {
+            "not": {
+              "and": [
+                {
+                  "source": "state",
+                  "program_data": {
+                    "field": "residual_temperature",
+                    "value": 1,
+                    "program": [
+                      4
+                    ]
+                  }
+                },
+                {
+                  "source": "state",
+                  "multi_step": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "feature": "speed",
+        "position": 2,
+        "subdevice": "burner_bottom_right",
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "residual_temperature",
+              "value": 1,
+              "program": [
+                4
+              ]
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ],
+        "value_strings": {
+          "0": "H"
+        }
+      }
+    ]
+  },
+  "limits": {
+    "timer": {
+      "max": 5940,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "volume": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "child_lock": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "icons": {
+      "volume": "M0.0,0.0h29.0v30.0V0.0M4.62159 3.75354C4.23145 3.3634 3.60124 3.3634 3.21111 3.75354C2.82097 4.14367 2.82097 4.77389 3.21111 5.16402L8.04277 10.0057L8.00276 10.0457H1.01035C0.450157 10.0457 0 10.4959 0 11.0561V19.0388C0 19.599 0.450157 20.0492 1.01035 20.0492H8.00276L14.3449 25.6011C14.9952 26.1713 16.0055 25.7111 16.0055 24.8508V17.9684L18.1162 20.0792C17.5561 20.5293 17.1059 20.8194 16.9959 20.8894C16.5257 21.1795 16.3756 21.7898 16.6557 22.2599C16.8458 22.57 17.1759 22.7401 17.516 22.7401C17.6961 22.7401 17.8662 22.6901 18.0362 22.6C18.2663 22.46 18.8565 22.0799 19.5467 21.4997L22.4677 24.4207C20.9972 25.6811 19.2366 26.6214 17.266 27.1316C16.7258 27.2716 16.4057 27.8118 16.5457 28.352C16.6657 28.8022 17.0659 29.1023 17.516 29.1023C17.5961 29.1023 17.6861 29.0923 17.7661 29.0723C20.0869 28.4721 22.1676 27.3417 23.8782 25.8412L25.3888 27.3517C25.5888 27.5517 25.8389 27.6418 26.099 27.6418C26.3591 27.6418 26.6092 27.5417 26.8092 27.3517C27.1994 26.9615 27.1994 26.3313 26.8092 25.9412L4.62159 3.75354ZM16.0055 5.25428C16.0055 4.39398 14.9952 3.93382 14.3449 4.50402L11.1138 7.33499L16.0055 12.2267V5.25428ZM17.2559 1.97354C22.9979 3.45405 27.0093 8.62583 27.0093 14.5479C27.0093 17.1288 26.249 19.5696 24.9086 21.6203L26.3391 23.0508C28.0296 20.61 29 17.669 29 14.5479C29 7.71552 24.3684 1.74346 17.7461 0.0328684C17.2059 -0.10718 16.6657 0.21293 16.5257 0.753117C16.3956 1.2933 16.7157 1.83349 17.2559 1.97354ZM17.0659 8.25516C19.4967 9.44557 21.0073 11.8564 21.0073 14.5473C21.0073 15.2476 20.9072 15.9278 20.7072 16.588C20.6471 16.7881 20.5571 16.9782 20.4671 17.1682L21.9676 18.6687C22.2377 18.2086 22.4578 17.7084 22.6278 17.1782C22.8879 16.3279 23.018 15.4476 23.018 14.5473C23.018 11.0861 21.0773 7.98507 17.9562 6.46454C17.456 6.22446 16.8658 6.42453 16.6158 6.9247C16.3657 7.42487 16.5657 8.01508 17.0659 8.25516Z"
+    },
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "PBHI-6431FB Wi-Fi",
+          "manufacturer": "polaris"
+        },
+        "type": "devices.types.other",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                1
+              ]
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "feature": "child_lock",
+            "instance": "controls_locked",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "instance": "input_source",
+            "retrievable": false
+          },
+          {
+            "type": "switch",
+            "action": {
+              "volume": 1
+            },
+            "instance": "mute",
+            "actionOff": {
+              "volume": 0
+            },
+            "condition": {
+              "volume": 1
+            },
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "hidden": true,
+    "realtime": true,
+    "subdevices": {
+      "proxyMacs": {
+        "burner_top_left": {
+          "type": 310,
+          "field": "burner_mac_bottom_right",
+          "program": [
+            4
+          ]
+        },
+        "burner_top_right": {
+          "type": 310,
+          "field": "burner_mac_top_right",
+          "program": [
+            5
+          ]
+        },
+        "burner_bottom_left": {
+          "type": 310,
+          "field": "burner_mac_bottom_left",
+          "program": [
+            3
+          ]
+        },
+        "burner_bottom_right": {
+          "type": 310,
+          "field": "burner_mac_top_left",
+          "program": [
+            6
+          ]
+        }
+      }
+    },
+    "invertSound": true,
+    "hotspot_ssid": "PBHI-6431FB",
+    "program_data": {
+      "0": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "pause",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "1": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "flex_left",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "2": [
+        {
+          "max": 3,
+          "min": 0,
+          "name": "flag_pause",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "3": [
+        {
+          "max": 281474976710656,
+          "min": 0,
+          "name": "burner_mac_bottom_left",
+          "size": 6,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "4": [
+        {
+          "max": 281474976710656,
+          "min": 0,
+          "name": "burner_mac_bottom_right",
+          "size": 6,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "5": [
+        {
+          "max": 281474976710656,
+          "min": 0,
+          "name": "burner_mac_top_right",
+          "size": 6,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "6": [
+        {
+          "max": 281474976710656,
+          "min": 0,
+          "name": "burner_mac_top_left",
+          "size": 6,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "7": [
+        {
+          "max": 35,
+          "min": 0,
+          "name": "power_limitation",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "voiceControl": {
+      "intents": {
+        "status": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                },
+                "off": {}
+              }
+            }
+          }
+        },
+        "program": {
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          },
+          "values": {
+            "timer": {},
+            "program": {
+              "enum_values": {
+                "program_fry": {
+                  "action": {
+                    "program": [
+                      7
+                    ]
+                  }
+                },
+                "program_jam": {
+                  "action": {
+                    "program": [
+                      14
+                    ]
+                  }
+                },
+                "program_bake": {
+                  "action": {
+                    "program": [
+                      8
+                    ]
+                  }
+                },
+                "program_cake": {
+                  "action": {
+                    "program": [
+                      3
+                    ]
+                  }
+                },
+                "program_soup": {
+                  "query": {
+                    "timer": {}
+                  },
+                  "action": {
+                    "program": [
+                      4
+                    ]
+                  }
+                },
+                "program_stew": {
+                  "action": {
+                    "program": [
+                      6
+                    ]
+                  }
+                },
+                "program_wine": {
+                  "action": {
+                    "program": [
+                      22
+                    ]
+                  }
+                },
+                "program_aspic": {
+                  "action": {
+                    "program": [
+                      10
+                    ]
+                  }
+                },
+                "program_bread": {
+                  "action": {
+                    "program": [
+                      19
+                    ]
+                  }
+                },
+                "program_pilaf": {
+                  "action": {
+                    "program": [
+                      9
+                    ]
+                  }
+                },
+                "program_steam": {
+                  "action": {
+                    "program": [
+                      15
+                    ]
+                  }
+                },
+                "program_reheat": {
+                  "action": {
+                    "program": [
+                      2
+                    ]
+                  }
+                },
+                "program_yogurt": {
+                  "action": {
+                    "program": [
+                      12
+                    ]
+                  }
+                },
+                "program_oatmeal": {
+                  "action": {
+                    "program": [
+                      13
+                    ]
+                  }
+                },
+                "program_oil_fry": {
+                  "action": {
+                    "program": [
+                      25
+                    ]
+                  }
+                },
+                "program_omelette": {
+                  "action": {
+                    "program": [
+                      20
+                    ]
+                  }
+                },
+                "program_slow_cook": {
+                  "action": {
+                    "program": [
+                      21
+                    ]
+                  }
+                },
+                "program_sous_vide": {
+                  "action": {
+                    "program": [
+                      24
+                    ]
+                  }
+                },
+                "program_soaked_rice": {
+                  "action": {
+                    "program": [
+                      18
+                    ]
+                  }
+                },
+                "program_milk_porridge": {
+                  "action": {
+                    "program": [
+                      17
+                    ]
+                  }
+                },
+                "program_my_recipe_plus": {
+                  "query": {
+                    "timer": {},
+                    "temperature": {}
+                  },
+                  "action": {
+                    "program": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            "temperature": {}
+          }
+        },
+        "rollcall": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "device_on": {
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          }
+        },
+        "greetings": {},
+        "device_off": {
+          "action": {
+            "steps": []
+          }
+        },
+        "status.full": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "timer": {
+              "items": {
+                "value": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                },
+                "off": {}
+              }
+            },
+            "child_lock": {}
+          }
+        },
+        "child_lock.on": {},
+        "child_lock.off": {}
+      }
+    },
+    "defaultProgram": [
+      1
+    ],
+    "groupControlConfig": {
+      "broadcastFeatures": [
+        "speed"
+      ]
+    },
+    "excludeScheduleFeatures": [
+      "keep_warm"
+    ]
+  },
+  "vendor": "polaris",
+  "features": [
+    "child_lock",
+    "volume",
+    "demo",
+    "program",
+    "timer"
+  ],
+  "messages": {
+    "hot": {
+      "ar-AE": "H",
+      "de-DE": "H",
+      "en-US": "H",
+      "kk-KZ": "H",
+      "ru-RU": "H",
+      "uk-UA": "H"
+    },
+    "diag": {
+      "ar-AE": "اضغط باستمرار على زر التشغيل على سطح الطهي حتى تسمع صوت إشارة صوتية واحدة. انتظر 10 ثوانٍ، سيومض مؤشر واي فاي بشكل بطيء.",
+      "de-DE": "Drücken und halten Sie die Ein/Aus-Taste am Kochfeld, bis ein Piepton ertönt. Warten Sie 10 Sekunden, die WLAN-Anzeige blinkt dann langsam.",
+      "en-US": "Press and hold the power button on the hob until one beep. Wait 10 seconds, the Wi-Fi indicator flashes slowly.",
+      "kk-KZ": "Плитадағы қуат түймесін бір дыбыстық сигнал шыққанша басып тұрыңыз. 10 секунд күтіңіз, Wi-Fi индикаторы баяу жыпылықтайды.",
+      "ru-RU": "Зажмите и удерживайте кнопку включения на поверхности варочной панели до одного звукового сигнала. Подождите 10 секунд, индикатор Wi-Fi начнет медленно мигать.",
+      "uk-UA": "Натисніть і утримуйте кнопку живлення на варильній поверхні, доки не пролунає один звуковий сигнал. Зачекайте 10 секунд, індикатор Wi-Fi повільно блиматиме."
+    },
+    "pair": {
+      "ar-AE": "اضغط باستمرار على زر التشغيل على سطح الطهي حتى تسمع صوت إشارة صوتية واحدة. سيومض مؤشر شبكة الواي فاي بسرعة.",
+      "de-DE": "Drücken Sie die Ein/Aus-Taste am Kochfeld und halten Sie diese gedrückt, bis ein Piepton ertönt. Die WLAN-Anzeige blinkt schnell.",
+      "en-US": "Press and hold the power button on the hob until one beep. The Wi-Fi indicator flashes quickly.",
+      "kk-KZ": "Плитадағы қуат түймесін бір дыбыстық сигнал шыққанша басып тұрыңыз. Wi-Fi индикаторы жылдам жыпылықтайды.",
+      "ru-RU": "Зажмите и удерживайте кнопку включения на поверхности варочной панели до одного звукового сигнала, после чего индикатор Wi-Fi начнет быстро мигать.",
+      "uk-UA": "Натисніть і утримуйте кнопку живлення на варильній поверхні, доки не пролунає один звуковий сигнал. Індикатор Wi-Fi швидко блиматиме."
+    },
+    "zero": {
+      "en-US": "Off",
+      "kk-KZ": "Өшіру",
+      "ru-RU": "Выкл",
+      "uk-UA": "Вимкнено"
+    },
+    "reset": {
+      "ar-AE": "اضغط باستمرار على زر شبكة الواي فاي على سطح الطهي حتى تسمع ثلاث إشارات صوتية. سيتم إيقاف تشغيل مؤشر شبكة الواي فاي.",
+      "de-DE": "Drücken Sie die WLAN-Taste am Kochfeld und halten Sie diese gedrückt, bis drei Pieptöne ertönen. Die WLAN-Anzeige erlischt.",
+      "en-US": "Press and hold the Wi-Fi button on the hob until three beeps.The Wi-Fi indicator turns off.",
+      "kk-KZ": "Үш сигнал естілгенше плитадағы Wi-Fi түймесін басып тұрыңыз. Wi-Fi индикаторы өшеді.",
+      "ru-RU": "Зажмите и удерживайте кнопку включения на поверхности варочной панели до трех звуковых сигналов, после чего индикатор Wi-Fi погаснет.",
+      "uk-UA": "Натисніть і утримуйте кнопку Wi-Fi на варильній поверхні, доки не пролунає три звукові сигнали. Індикатор Wi-Fi вимкнеться."
+    },
+    "Kw-Two": {
+      "en-US": "80°C"
+    },
+    "degree": {
+      "en-US": "°C"
+    },
+    "kw_one": {
+      "en-US": "60°C"
+    },
+    "error.1": {
+      "ar-AE": "قفل الأطفال قيد العمل",
+      "de-DE": "Der Schutz gegen unbeabsichtigtes Drücken hat funktioniert",
+      "en-US": "Child lock operated",
+      "kk-KZ": "Кездейсоқ басудан қорғау атқарылды",
+      "ru-RU": "Сработала защита от случайного нажатия",
+      "uk-UA": "Функція захисту від дітей"
+    },
+    "error.2": {
+      "ar-AE": "أسفل اليسار: جهد عالي. لا تستخدمه. راجع التعليمات للتشغيل الصحيح.",
+      "de-DE": "Unten links: Hohe Netzspannung. Nicht verwenden. Beachten Sie die Anweisungen zur Abhilfe.",
+      "en-US": "Bottom Left: Line voltage too high. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "Төменгі сол жақта: жоғары желі кернеуі. қолданбаңыз. Түзету әрекеттері үшін нұсқауларды қараңыз.",
+      "ru-RU": "Нижняя левая: Высокое напряжение сети. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Нижня ліва: Висока напруга мережі. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.3": {
+      "ar-AE": "أسفل اليسار: جهد كهربائي منخفض. لا تستخدمه. راجع التعليمات للاطلاع على التعليمات.",
+      "de-DE": "Unten links: Niedrige Netzspannung. Nicht verwenden. Beachten Sie die Anweisungen zur Abhilfe.",
+      "en-US": "Bottom Left: Line voltage too low. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "Төменгі сол жақта: желідегі төмен кернеу. қолданбаңыз. Түзету әрекеті үшін нұсқауларды қараңыз.",
+      "ru-RU": "Нижняя левая: Низкое напряжение сети. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Нижня ліва: Низька напруга мережі. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.4": {
+      "ar-AE": "أسفل اليسار: ارتفاع درجة حرارة السطح. لا تستخدمه. راجع التعليمات لمعرفة الإجراء التصحيحي.",
+      "de-DE": "Unten links: Oberfläche überhitzt. Nicht verwenden. Beachten Sie die Anweisungen zur Abhilfe.",
+      "en-US": "Bottom Left: Surface overheated. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "Төменгі сол жақта: беті қызып кеткен. қолданбаңыз. Түзету әрекеті үшін нұсқауларды қараңыз.",
+      "ru-RU": "Нижняя левая: Перегрев поверхности. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Нижня ліва: Перегрів поверхні. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.5": {
+      "ar-AE": "أسفل اليسار: إناء الطهي مُزال أو غير مناسب للاستخدام بالحث الحراري.",
+      "de-DE": "Unten links: Kochgeschirr entfernt oder nicht für Induktionskochen geeignet.",
+      "en-US": "Bottom left: Cookware has been removed or is not suitable for induction cooking.",
+      "kk-KZ": "Төменгі сол жақта: ыдыс алынып тасталды немесе индукциялық пісіруге жарамсыз.",
+      "ru-RU": "Нижняя левая: Посуда снята или не подходит для индукционной поверхности.",
+      "uk-UA": "Нижня ліва: Посуд знятий або не підходить для індукційної поверхні."
+    },
+    "error.6": {
+      "ar-AE": "أسفل اليسار: ارتفاع درجة حرارة مستشعر درجة حرارة وحدة IGBT. لا تشغلها. راجع تعليمات الاستخدام.",
+      "de-DE": "Unten links: Temperatursensor des IGBT-Moduls überhitzt. Nicht verwenden. Beachten Sie die Anweisungen zur Abhilfe.",
+      "en-US": "Bottom Left: IGBT module temperature sensor overheated. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "Төменгі сол жақта: IGBT модулінің температура сенсоры қызып кетті. қолданбаңыз. Түзету әрекеттері үшін нұсқауларды қараңыз.",
+      "ru-RU": "Нижняя левая: Перегрев датчика температуры IGBT-модуля. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Нижня ліва: Перегрівання датчика температури IGBT-модуля. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.7": {
+      "ar-AE": "أسفل اليسار: عطل في مستشعر سطح الطهي. لا تشغله. اتصل بمركز خدمة.",
+      "de-DE": "Unten links: Fehlfunktion des Kochfeldsensors. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Bottom left: Cooktop sensor malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Төменгі сол жақта: пештің сенсорының дұрыс жұмыс істемеуі. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Нижняя левая: Cбой работы датчика варочной панели. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Нижня ліва: Збій роботи датчика варильної панелі.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.8": {
+      "ar-AE": "أسفل اليسار: عطل في توصيل مستشعر سطح الطهي. لا تشغله. اتصل بمركز خدمة.",
+      "de-DE": "Unten links: Fehlfunktion des Kochfeldsensoranschlusses. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Bottom left: Cooktop sensor connection malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Төменгі сол жақта: плита сенсорының қосылымының дұрыс жұмыс істемеуі. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Нижняя левая: Cбой подключения датчика варочной панели. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Нижня ліва: Збій підключення датчика варильної панелі.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.9": {
+      "ar-AE": "أسفل اليسار: عطل في مستشعر وحدة IGBT. لا تشغله. اتصل بمركز خدمة.",
+      "de-DE": "Unten links: Fehlfunktion des IGBT-Modulsensors. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Bottom left: IGBT module sensor malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Төменгі сол жақта: IGBT модулінің сенсорының ақаулығы. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Нижняя левая: Cбой работы датчика IGBT-модуля. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Нижня ліва: Збій роботи датчика IGBT-модуля.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.10": {
+      "ar-AE": "أسفل اليسار: عطل في توصيل مستشعر وحدة IGBT. لا تشغله. اتصل بمركز خدمة.",
+      "de-DE": "Unten links: Fehlfunktion des IGBT-Modulsensoranschlusses. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Bottom left: IGBT module sensor connection malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Төменгі сол жақта: IGBT модулінің сенсоры қосылымының дұрыс жұмыс істемеуі. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Нижняя левая: Cбой подключения датчика IGBT-модуля. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Нижня ліва: Збій підключення датчика IGBT-модуля.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.31": {
+      "ar-AE": "أعلى اليسار: جهد كهربائي مرتفع. لا تستخدمه. راجع التعليمات لإجراء التصحيح.",
+      "de-DE": "Oben links: Hohe Netzspannung. Nicht in Betrieb nehmen. Hinweise zur ordnungsgemäßen Bedienung finden Sie in der Anleitung.",
+      "en-US": "Top left: High line voltage. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "Жоғарғы сол жақта: жоғары желі кернеуі. Операция жасамаңыз. Дұрыс жұмыс істеу үшін нұсқауларды қараңыз.",
+      "ru-RU": "Верхняя левая: Высокое напряжение сети. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Верхня ліва: Висока напруга мережі. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.32": {
+      "ar-AE": "أعلى اليسار: جهد كهربائي منخفض. لا تستخدمه. راجع التعليمات لإجراء التصحيح.",
+      "de-DE": "Oben links: Niedrige Netzspannung. Nicht verwenden. Hinweise zur ordnungsgemäßen Bedienung finden Sie in der Anleitung.",
+      "en-US": "Top left: Low line voltage. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "Жоғарғы сол жақта: төмен кернеу. қолданбаңыз. Дұрыс жұмыс істеу үшін нұсқауларды қараңыз.",
+      "ru-RU": "Верхняя левая: Низкое напряжение сети. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Верхня ліва: Низька напруга мережі. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.33": {
+      "ar-AE": "أعلى اليسار: ارتفاع درجة حرارة السطح. لا تستخدمه. راجع التعليمات لإجراء التصحيح.",
+      "de-DE": "Oben links: Oberfläche überhitzt. Nicht in Betrieb nehmen. Hinweise zur Behebung finden Sie in der Anleitung.",
+      "en-US": "Top left: Surface overheated. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "Жоғарғы сол жақта: беті қызып кеткен. Операция жасамаңыз. Түзету әрекеттері үшін нұсқауларды қараңыз.",
+      "ru-RU": "Верхняя левая: Перегрев поверхности. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Верхня ліва: Перегрів поверхні. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.34": {
+      "ar-AE": "أعلى اليسار: أواني الطهي غير مناسبة للطهي بالحث.",
+      "de-DE": "Oben links: Kochgeschirr entfernt oder nicht für Induktionskochen geeignet.",
+      "en-US": "Top left: Cookware removed or unsuitable for induction cooking.",
+      "kk-KZ": "Жоғарғы сол жақта: ыдыс алынып тасталды немесе индукциялық пісіруге жарамсыз.",
+      "ru-RU": "Верхняя левая: Посуда снята или не подходит для индукционной поверхности.",
+      "uk-UA": "Верхня ліва: Посуд знятий або не підходить для індукційної поверхні."
+    },
+    "error.35": {
+      "ar-AE": "أعلى اليسار: ارتفاع درجة حرارة مستشعر درجة حرارة وحدة IGBT. لا تستخدمه. راجع التعليمات لإجراء التصحيح.",
+      "de-DE": "Oben links: IGBT-Modultemperatursensor überhitzt. Nicht in Betrieb nehmen. Hinweise zur Behebung finden Sie in der Anleitung.",
+      "en-US": "Top left: IGBT module temperature sensor overheated. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "Жоғарғы сол жақта: IGBT модулінің температура сенсоры қызып кетті. Операция жасамаңыз. Түзету әрекеттері үшін нұсқауларды қараңыз.",
+      "ru-RU": "Верхняя левая: Перегрев датчика температуры IGBT-модуля. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Верхня ліва: Перегрівання датчика температури IGBT-модуля. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.36": {
+      "ar-AE": "أعلى اليسار: عطل في مستشعر سطح الطهي. لا تشغّل الجهاز. اتصل بمركز خدمة.",
+      "de-DE": "Oben links: Fehlfunktion des Kochfeldsensors. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Top left: Cooktop sensor malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Жоғарғы сол жақта: пештің сенсорының дұрыс жұмыс істемеуі. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Верхняя левая: Cбой работы датчика варочной панели. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Верхня ліва: Збій роботи датчика варильної панелі.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.37": {
+      "ar-AE": "أعلى اليسار: عطل في توصيل مستشعر سطح الطهي. لا تشغّل الجهاز. اتصل بمركز خدمة.",
+      "de-DE": "Oben links: Fehlfunktion des Kochfeldsensoranschlusses. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Top left: Cooktop sensor connection malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Жоғарғы сол жақта: пештің сенсорының қосылымының дұрыс жұмыс істемеуі. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Верхняя левая: Cбой подключения датчика варочной панели. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Верхня ліва: Збій підключення датчика варильної панелі.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.38": {
+      "ar-AE": "أعلى اليسار: عطل في مستشعر وحدة IGBT. لا تشغّل الجهاز. اتصل بمركز خدمة.",
+      "de-DE": "Oben links: Fehlfunktion des IGBT-Modulsensors. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Top left: IGBT module sensor malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Жоғарғы сол жақта: IGBT модулінің сенсорының ақаулығы. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Верхняя левая: Cбой работы датчика IGBT-модуля. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Верхня ліва: Збій роботи датчика IGBT-модуля.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.39": {
+      "ar-AE": "أعلى اليسار: عطل في توصيل مستشعر وحدة IGBT. لا تشغّل الجهاز. اتصل بمركز خدمة.",
+      "de-DE": "Oben links: Fehlfunktion des IGBT-Modulsensoranschlusses. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Top left: IGBT module sensor connection malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Жоғарғы сол жақта: IGBT модулінің сенсоры қосылымының дұрыс жұмыс істемеуі. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Верхняя левая: Cбой подключения датчика IGBT-модуля. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Верхня ліва: Збій підключення датчика IGBT-модуля.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.61": {
+      "ar-AE": "أعلى يمين: جهد كهربائي مرتفع. لا تستخدمه. راجع التعليمات لإجراء التصحيح.",
+      "de-DE": "Oben rechts: Hohe Netzspannung. Nicht verwenden. Beachten Sie die Anweisungen zur ordnungsgemäßen Bedienung.",
+      "en-US": "Top right: High line voltage. Do not operate. Refer to the instructions for proper operation.",
+      "kk-KZ": "Жоғарғы оң жақта: жоғары желі кернеуі. қолданбаңыз. Түзету әрекеттері үшін нұсқауларды қараңыз.",
+      "ru-RU": "Верхняя правая: Высокое напряжение сети. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Верхня права: Висока напруга мережі. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.62": {
+      "ar-AE": "أعلى يمين: جهد كهربائي منخفض. لا تستخدمه. راجع التعليمات لإجراء التصحيح.",
+      "de-DE": "Oben rechts: Niedrige Netzspannung. Nicht verwenden. Beachten Sie die Anweisungen zur ordnungsgemäßen Bedienung.",
+      "en-US": "Top right: Low voltage. Do not use. Refer to the instructions for instructions.",
+      "kk-KZ": "Жоғарғы оң жақта: төмен желі кернеуі. қолданбаңыз. Түзету әрекеттері үшін нұсқауларды қараңыз.",
+      "ru-RU": "Верхняя правая: Низкое напряжение сети. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Верхня права: Низька напруга мережі. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.63": {
+      "ar-AE": "أعلى يمين: السطح ساخن جدًا. لا تستخدمه. راجع التعليمات لإجراء التصحيح.",
+      "de-DE": "Oben rechts: Oberfläche überhitzt. Nicht verwenden. Hinweise zur ordnungsgemäßen Bedienung finden Sie in der Anleitung.",
+      "en-US": "Top right: Surface overheating. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "Жоғарғы оң жақ: беттің қызып кетуі. қолданбаңыз. Дұрыс жұмыс істеу үшін нұсқауларды қараңыз.",
+      "ru-RU": "Верхняя правая: Перегрев поверхности. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Верхня права: Перегрів поверхні. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.64": {
+      "ar-AE": "أعلى يمين: أواني الطهي غير مناسبة للطهي بالحث.",
+      "de-DE": "Oben rechts: Kochgeschirr entfernt oder ungeeignet für Induktionskochen.",
+      "en-US": "Top right: Cookware removed or unsuitable for induction cooking.",
+      "kk-KZ": "Жоғарғы оң жақта: ыдыс алынып тасталды немесе индукциялық пісіруге жарамсыз.",
+      "ru-RU": "Верхняя правая: Посуда снята или не подходит для индукционной поверхности.",
+      "uk-UA": "Верхня права: Посуд знятий або не підходить для індукційної поверхні."
+    },
+    "error.65": {
+      "ar-AE": "أعلى يمين: عطل في مستشعر درجة حرارة وحدة IGBT. لا تستخدمه. راجع التعليمات لإجراء التصحيح.",
+      "de-DE": "Oben rechts: IGBT-Modultemperatursensor überhitzt. Nicht verwenden. Bitte lesen Sie die Anweisungen für die einzelnen Schritte.",
+      "en-US": "Top right: IGBT module temperature sensor overheating. Do not operate. Refer to the instructions for proper operation.",
+      "kk-KZ": "Жоғарғы оң жақта: IGBT модулінің температура сенсоры қызып кетті. қолданбаңыз. Түзету әрекеттері үшін нұсқауларды қараңыз.",
+      "ru-RU": "Верхняя правая: Перегрев датчика температуры IGBT-модуля. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Верхня права: Перегрівання датчика температури IGBT-модуля. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.66": {
+      "ar-AE": "أعلى يمين: عطل في مستشعر سطح الطهي. لا تشغّل الجهاز. اتصل بمركز خدمة.",
+      "de-DE": "Oben rechts: Fehlfunktion des Kochfeldsensors. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Top right: Cooktop sensor malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Жоғарғы оң жақта: Пісіру тақтасының сенсорының дұрыс жұмыс істемеуі. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Верхняя правая: Cбой работы датчика варочной панели. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Верхня права: Збій роботи датчика варильної панелі.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.67": {
+      "ar-AE": "أعلى يمين: عطل في توصيل مستشعر سطح الطهي. لا تشغّل الجهاز. اتصل بمركز خدمة.",
+      "de-DE": "Oben rechts: Fehlfunktion des Kochfeldsensoranschlusses. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Top right: Cooktop sensor connection malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Жоғарғы оң жақта: Пісіру үстелінің сенсорының қосылымының дұрыс жұмыс істемеуі. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Верхняя правая: Cбой подключения датчика варочной панели. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Верхня права: Збій підключення датчика варильної панелі.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.68": {
+      "ar-AE": "أعلى يمين: عطل في مستشعر وحدة IGBT. لا تشغّل الجهاز. اتصل بمركز خدمة.",
+      "de-DE": "Oben rechts: Fehlfunktion des IGBT-Modulsensors. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Top right: IGBT module sensor malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Жоғарғы оң жақта: IGBT модулінің сенсорының дұрыс жұмыс істемеуі. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Верхняя правая: Cбой работы датчика IGBT-модуля. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Верхня права: Збій роботи датчика IGBT-модуля.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.69": {
+      "ar-AE": "أعلى يمين: عطل في توصيل مستشعر وحدة IGBT. لا تشغّل الجهاز. اتصل بمركز خدمة.",
+      "de-DE": "Oben rechts: Fehlfunktion des IGBT-Modulsensoranschlusses. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Top right: IGBT module sensor connection malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Жоғарғы оң жақта: IGBT модулінің сенсоры қосылымының дұрыс жұмыс істемеуі. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Верхняя правая: Cбой подключения датчика IGBT-модуля. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Верхня права: Збій підключення датчика IGBT-модуля.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.91": {
+      "ar-AE": "أسفل اليمين: جهد كهربائي مرتفع. لا تستخدمه. راجع التعليمات لإجراء التصحيح.",
+      "de-DE": "Unten rechts: Hohe Netzspannung. Nicht verwenden. Hinweise zur Abhilfe finden Sie in der Anleitung.",
+      "en-US": "Bottom right: High line voltage. Do not use. Refer to the instructions for proper operation.",
+      "kk-KZ": "Төменгі оң жақта: жоғары желі кернеуі. қолданбаңыз. Түзету әрекеттері үшін нұсқауларды қараңыз.",
+      "ru-RU": "Нижняя правая: Высокое напряжение сети. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Нижня права: Висока напруга мережі. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.92": {
+      "ar-AE": "أسفل اليمين: جهد كهربائي منخفض. لا تستخدمه. راجع التعليمات لإجراء التصحيح.",
+      "de-DE": "Unten rechts: Niedrige Netzspannung. Nicht verwenden. Hinweise zur Abhilfe finden Sie in der Anleitung.",
+      "en-US": "Bottom right: Low line voltage. Do not use. Refer to the instructions for proper operation.",
+      "kk-KZ": "Төменгі оң жақта: төмен желі кернеуі. қолданбаңыз. Түзету әрекеттері үшін нұсқауларды қараңыз.",
+      "ru-RU": "Нижняя правая: Низкое напряжение сети. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Нижня права: Низька напруга мережі. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.93": {
+      "ar-AE": "أسفل اليمين: ارتفاع درجة حرارة السطح. لا تستخدمه. راجع التعليمات لإجراء التصحيح.",
+      "de-DE": "Unten rechts: Oberfläche überhitzt. Nicht verwenden. Beachten Sie die Anweisungen zur ordnungsgemäßen Bedienung.",
+      "en-US": "Bottom right: Surface overheating. Do not use. Refer to the instructions for proper operation.",
+      "kk-KZ": "Төменгі оң жақ: беттің қызып кетуі. қолданбаңыз. Түзету әрекеттері үшін нұсқауларды қараңыз.",
+      "ru-RU": "Нижняя правая: Перегрев поверхности. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Нижня права: Перегрів поверхні. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.94": {
+      "ar-AE": "أسفل اليمين: أواني الطهي غير مناسبة للطهي بالحث.",
+      "de-DE": "Unten rechts: Kochgeschirr entfernt oder nicht für Induktionskochen geeignet.",
+      "en-US": "Bottom right: Cookware removed or not suitable for induction cooking.",
+      "kk-KZ": "Төменгі оң жақта: Ыдыс алынып тасталды немесе индукциялық пісіруге жарамсыз.",
+      "ru-RU": "Нижняя правая: Посуда снята или не подходит для индукционной поверхности.",
+      "uk-UA": "Нижня права: Посуд знятий або не підходить для індукційної поверхні."
+    },
+    "error.95": {
+      "ar-AE": "أسفل اليمين: ارتفاع درجة حرارة مستشعر درجة حرارة وحدة IGBT. لا تستخدمه. راجع التعليمات لإجراء التصحيح.",
+      "de-DE": "Unten rechts: Überhitzung des IGBT-Modultemperatursensors. Nicht verwenden. Beachten Sie die Anweisungen zur Abhilfe.",
+      "en-US": "Bottom right: IGBT module temperature sensor overheating. Do not use. Refer to the instructions for proper operation.",
+      "kk-KZ": "Төменгі оң жақ: IGBT модулінің температура сенсорының қызып кетуі. қолданбаңыз. Түзету әрекеттері үшін нұсқауларды қараңыз.",
+      "ru-RU": "Нижняя правая: Перегрев датчика температуры IGBT-модуля. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Нижня права: Перегрівання датчика температури IGBT-модуля. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.96": {
+      "ar-AE": "أسفل اليمين: عطل في مستشعر سطح الطهي. لا تشغّل الجهاز. اتصل بمركز خدمة.",
+      "de-DE": "Unten rechts: Fehlfunktion des Kochfeldsensors. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Bottom right: Cooktop sensor malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Төменгі оң жақта: пештің сенсорының дұрыс жұмыс істемеуі. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Нижняя правая: Cбой работы датчика варочной панели. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Нижня права: Збій роботи датчика варильної панелі.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.97": {
+      "ar-AE": "أسفل اليمين: عطل في توصيل مستشعر سطح الطهي. لا تشغّل الجهاز. اتصل بمركز خدمة.",
+      "de-DE": "Unten rechts: Fehlfunktion des Kochfeldsensoranschlusses. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Bottom right: Cooktop sensor connection malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Төменгі оң жақта: плита сенсорының қосылымының дұрыс жұмыс істемеуі. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Нижняя правая: Cбой подключения датчика варочной панели. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Нижня права: Збій підключення датчика варильної панелі.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.98": {
+      "ar-AE": "أسفل اليمين: عطل في مستشعر وحدة IGBT. لا تشغّل الجهاز. اتصل بمركز خدمة.",
+      "de-DE": "Unten rechts: Fehlfunktion des IGBT-Modulsensors. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Bottom right: IGBT module sensor malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Төменгі оң жақта: IGBT модулінің сенсорының ақаулығы. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Нижняя правая: Cбой работы датчика IGBT-модуля. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Нижня права: Збій роботи датчика IGBT-модуля.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.99": {
+      "ar-AE": "أسفل اليمين: عطل في توصيل مستشعر وحدة IGBT. لا تشغّل الجهاز. اتصل بمركز خدمة.",
+      "de-DE": "Unten rechts: Fehlfunktion des IGBT-Modulsensoranschlusses. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Bottom right: IGBT module sensor connection malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Төменгі оң жақта: IGBT модулінің сенсоры қосылымының дұрыс жұмыс істемеуі. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Нижняя правая: Cбой подключения датчика IGBT-модуля. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Нижня права: Збій підключення датчика IGBT-модуля.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "kw_three": {
+      "en-US": "100°C"
+    },
+    "error.100": {
+      "ar-AE": "لقد قمت بتعيين حد الطاقة: لا يتوفر مستوى تسخين أعلى للموقد.",
+      "de-DE": "Sie haben eine Leistungsbegrenzung eingestellt: Eine höhere Heizstufe des Kochfelds ist nicht verfügbar.",
+      "en-US": "You have set a power limit: a higher hob heating level is not available.",
+      "kk-KZ": "Remoĩma peteĩ límite de potencia: ndojeguerekói peteĩ nivel de calefacción placa yvatevéva.",
+      "ru-RU": "Вы установили ограничение мощности: более высокий уровень нагрева плиты не доступен.",
+      "uk-UA": "Ви встановили обмеження потужності: вищий рівень нагрівання плити не доступний."
+    },
+    "speed_off": {
+      "en-US": "Off",
+      "ru-RU": "Выкл."
+    },
+    "alert.step": {
+      "en-US": "Cooking step completed",
+      "kk-KZ": "Даярлау қадамы аяқталды",
+      "ru-RU": "Шаг приготовления завершён",
+      "uk-UA": "Крок приготування завершено"
+    },
+    "url.manual": {
+      "ar-AE": "https://images.cdn.polaris-iot.com/pdf/polaris/315/PBHI6431FB_WIFI_User Manual_v6_ru_kz.pdf",
+      "de-DE": "https://images.cdn.polaris-iot.com/pdf/polaris/315/PBHI6431FB_WIFI_User Manual_v6_ru_kz.pdf",
+      "en-US": "https://images.cdn.polaris-iot.com/pdf/polaris/315/PBHI6431FB_WIFI_User Manual_v6_ru_kz.pdf",
+      "kk-KZ": "https://images.cdn.polaris-iot.com/pdf/polaris/315/PBHI6431FB_WIFI_User Manual_v6_ru_kz.pdf",
+      "ru-RU": "https://images.cdn.polaris-iot.com/pdf/polaris/315/PBHI6431FB_WIFI_User Manual_v6_ru_kz.pdf",
+      "uk-UA": "https://images.cdn.polaris-iot.com/pdf/polaris/315/PBHI6431FB_WIFI_User Manual_v6_ru_kz.pdf"
+    },
+    "alert.ready": {
+      "en-US": "Cooking finished",
+      "kk-KZ": "Даярлау аяқталды",
+      "ru-RU": "Приготовление завершено",
+      "uk-UA": "Приготування їжі завершено"
+    },
+    "alert.start": {
+      "en-US": "Cooking started",
+      "kk-KZ": "Дайындық басталды",
+      "ru-RU": "Приготовление началось",
+      "uk-UA": "Розпочато приготування їжі"
+    },
+    "talking.no_wifi": {
+      "de-DE": "Wenn die Anzeige der verzögerten Startzeit 20 Minuten anzeigt, kann das Gerät das konfigurierte Netzwerk nicht finden",
+      "en-US": "If the delayed start time indicator shows 20 minutes, the device cannot detect the configured network",
+      "kk-KZ": "Егер кешіктірілген бастау уақытының индикаторы 20 минутты көрсетсе, құрылғы конфигурацияланған желіні таба алмайды.",
+      "ru-RU": "Если индикатор времени отложенного старта показывает 20 минут - устройство не может обнаружить настроенную сеть",
+      "uk-UA": "Якщо індикатор відкладеного часу затримки запуску показує 20 хвилин, пристрій не може виявити налаштовану мережу"
+    },
+    "talking.wifi_error": {
+      "de-DE": "Wenn die Anzeige für die verzögerte Startzeit 40 Minuten anzeigt, ist das Passwort bei der Verbinden mit dem konfigurierten Netzwerk nicht korrekt",
+      "en-US": "If the delayed start time indicator shows 40 minutes, the password did not match when connecting to the configured network",
+      "kk-KZ": "Егер кешіктірілген бастау уақыты индикаторы 40 минутты көрсетсе, конфигурацияланған желіге қосылу кезінде пароль сәйкес келмеді",
+      "ru-RU": "Если индикатор времени отложенного старта показывает 40 минут - при подключении к настроенной сети не подошел пароль",
+      "uk-UA": "Якщо індикатор часу затримки запуску показує 40 хвилин, пароль не збігався при підключенні до налаштованої мережі"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "off"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    },
+    {
+      "name": {
+        "en-US": "on"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "pair": {
+      "60": "https://images.cdn.polaris-iot.com/4/d4/06956-e280-406a-8616-5925058eda24/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/4/d4/06956-e280-406a-8616-5925058eda24/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/4/d4/06956-e280-406a-8616-5925058eda24/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/4/d4/06956-e280-406a-8616-5925058eda24/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/4/d4/06956-e280-406a-8616-5925058eda24/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/4/d4/06956-e280-406a-8616-5925058eda24/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/4/d4/06956-e280-406a-8616-5925058eda24/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/4/d4/06956-e280-406a-8616-5925058eda24/1800.webp",
+      "id": "4d406956-e280-406a-8616-5925058eda24",
+      "original": "https://images.cdn.polaris-iot.com/4/d4/06956-e280-406a-8616-5925058eda24/original.webp"
+    },
+    "enable": {
+      "60": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/1800.webp",
+      "id": "25e2a7ec-5b93-40e8-bd41-78dc4ab50748",
+      "original": "https://images.cdn.polaris-iot.com/2/5e/2a7ec-5b93-40e8-bd41-78dc4ab50748/original.webp"
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1783429593,
+  "temperature_units": "celsius"
+}

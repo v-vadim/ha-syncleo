@@ -1,0 +1,1294 @@
+{
+  "id": "6e875633-f526-4834-afce-aac6a7ecad32",
+  "name": "PVSG-02",
+  "type": 312,
+  "class": "ai_wearable",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/e/dd/01428-ebc3-46ae-9da1-c474919e41f7/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/e/dd/01428-ebc3-46ae-9da1-c474919e41f7/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/e/dd/01428-ebc3-46ae-9da1-c474919e41f7/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/e/dd/01428-ebc3-46ae-9da1-c474919e41f7/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/e/dd/01428-ebc3-46ae-9da1-c474919e41f7/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/e/dd/01428-ebc3-46ae-9da1-c474919e41f7/900.webp",
+    "1200": "https://images.cdn.polaris-iot.com/e/dd/01428-ebc3-46ae-9da1-c474919e41f7/1200.webp",
+    "1800": "https://images.cdn.polaris-iot.com/e/dd/01428-ebc3-46ae-9da1-c474919e41f7/1800.webp",
+    "id": "edd01428-ebc3-46ae-9da1-c474919e41f7",
+    "original": "https://images.cdn.polaris-iot.com/e/dd/01428-ebc3-46ae-9da1-c474919e41f7/original.webp"
+  },
+  "layout": {
+    "settings": [
+      {
+        "type": "slider",
+        "limit": {
+          "max": 600,
+          "min": 30,
+          "step": 5,
+          "round": 1,
+          "default": 60,
+          "roundAlt": 1
+        },
+        "title": {
+          "ar-AE": "مدة الفيديو",
+          "de-DE": "Videodauer",
+          "en-US": "Video duration",
+          "kk-KZ": "Бейне ұзақтығы",
+          "ru-RU": "Длительность видео",
+          "uk-UA": "Тривалість відео"
+        },
+        "suffix": "video_duration.suffix",
+        "position": 0,
+        "program_data": {
+          "field": "video_duration",
+          "program": [
+            2
+          ]
+        }
+      },
+      {
+        "type": "switch",
+        "title": {
+          "ar-AE": "كاشف يمكن ارتداؤه",
+          "de-DE": "Tragbarer Detektor",
+          "en-US": "Wear detector",
+          "kk-KZ": "Тағылатын детектор",
+          "ru-RU": "Датчик ношения"
+        },
+        "action": {
+          "program_data": {
+            "field": "wear_detect",
+            "value": 49,
+            "program": [
+              4
+            ]
+          }
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program_data": {
+              "field": "wear_detect",
+              "value": 49,
+              "program": [
+                4
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "wear_detect",
+            "value": 48,
+            "program": [
+              4
+            ]
+          }
+        }
+      },
+      {
+        "type": "text",
+        "title": {
+          "ar-AE": "لاستخدام النظارات في وضع الكشف عن التآكل ، قم بتشغيل النظارات قبل ارتدائها.",
+          "de-DE": "Um die Brille im Verschleißerkennungsmodus zu verwenden, schalten Sie die Brille vor dem Tragen ein.",
+          "en-US": "To use the glasses in the wear detection mode, turn on the glasses before wearing them.",
+          "kk-KZ": "Көзілдірікті тозуды анықтау режимінде пайдалану үшін көзілдірікті киер алдында оны қосыңыз.",
+          "ru-RU": "Для корректной работы очков в режиме обнаружения ношения включайте очки перед тем как их надеть."
+        },
+        "position": 0,
+        "text_suffix": false
+      },
+      {
+        "type": "switch",
+        "title": {
+          "ar-AE": "حوار مستمر",
+          "de-DE": "Kontinuierlicher Dialog",
+          "en-US": "Continuous dialog",
+          "kk-KZ": "Үздіксіз диалог",
+          "ru-RU": "Непрерывный диалог",
+          "uk-UA": "Безперервний діалог"
+        },
+        "measure": "continuous_dialog",
+        "position": 0
+      },
+      {
+        "type": "slider",
+        "title": {
+          "ar-AE": "حجم النظام",
+          "de-DE": "Systemvolume",
+          "en-US": "System volume",
+          "kk-KZ": "Гучність системи",
+          "ru-RU": "Громкость системы"
+        },
+        "action": {
+          "program_data": {
+            "field": "set_volume_type",
+            "value": 0,
+            "program": [
+              112
+            ]
+          }
+        },
+        "position": 0,
+        "program_data": {
+          "field": "system_volume",
+          "program": [
+            105
+          ]
+        }
+      },
+      {
+        "type": "slider",
+        "title": {
+          "ar-AE": "حجم الوسائط",
+          "de-DE": "Medienvolumen",
+          "en-US": "Media volume",
+          "kk-KZ": "Гучність мультимедіа",
+          "ru-RU": "Громкость мультимедиа"
+        },
+        "action": {
+          "program_data": {
+            "field": "set_volume_type",
+            "value": 1,
+            "program": [
+              112
+            ]
+          }
+        },
+        "position": 0,
+        "text_suffix": true,
+        "program_data": {
+          "field": "media_volume",
+          "program": [
+            105
+          ]
+        }
+      },
+      {
+        "type": "slider",
+        "title": {
+          "ar-AE": "حجم المكالمات",
+          "de-DE": "Anrufvolumen",
+          "en-US": "Call volume",
+          "kk-KZ": "Қоңырау көлемі",
+          "ru-RU": "Громкость вызова",
+          "uk-UA": "Гучність виклику"
+        },
+        "action": {
+          "program_data": {
+            "field": "set_volume_type",
+            "value": 2,
+            "program": [
+              112
+            ]
+          }
+        },
+        "position": 0,
+        "program_data": {
+          "field": "call_volume",
+          "program": [
+            105
+          ]
+        }
+      },
+      {
+        "type": "switch",
+        "title": {
+          "ar-AE": "تمكين الأوامر دون اتصال",
+          "de-DE": "Offline-Befehle aktivieren",
+          "en-US": "Enable offline commands",
+          "kk-KZ": "Офлайн пәрмендерді қосу",
+          "ru-RU": "Включить оффлайн команды",
+          "uk-UA": "Включення автономних команд"
+        },
+        "action": {
+          "program_data": {
+            "field": "voice_commands_setup",
+            "value": 0,
+            "program": [
+              114
+            ]
+          }
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program_data": {
+              "field": "voice_commands_status",
+              "value": 0,
+              "program": [
+                113
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "voice_commands_setup",
+            "value": 1,
+            "program": [
+              114
+            ]
+          }
+        },
+        "program_data": {
+          "field": "voice_commands_status",
+          "value": 0,
+          "program": [
+            113
+          ]
+        }
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "battery",
+        "position": 0
+      },
+      {
+        "type": "info",
+        "source": "state",
+        "feature": "amount",
+        "position": 0
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "pin": false,
+        "type": "info",
+        "source": "state",
+        "feature": "battery",
+        "position": 2
+      },
+      {
+        "type": "info",
+        "source": "state",
+        "feature": "amount",
+        "position": 2
+      },
+      {
+        "type": "container_tail",
+        "position": 3
+      },
+      {
+        "type": "container_head",
+        "position": 4
+      },
+      {
+        "type": "icon",
+        "image": "logo",
+        "aspect": 2.3,
+        "position": 5
+      },
+      {
+        "type": "container_tail",
+        "position": 6
+      },
+      {
+        "type": "container_head",
+        "position": 7
+      },
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Functions",
+          "ru-RU": "Функции"
+        },
+        "position": 8
+      },
+      {
+        "type": "button",
+        "image": "photo",
+        "title": {
+          "en-US": "Photo",
+          "ru-RU": "Фото"
+        },
+        "action": {
+          "program_data": {
+            "field": "photo_transfer",
+            "value": 48,
+            "program": [
+              34
+            ]
+          }
+        },
+        "aspect": 1,
+        "measure": "take_photo",
+        "position": 9,
+        "precondition": [
+          {
+            "battery": {
+              "min": 16
+            }
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "image": "video",
+        "title": {
+          "ar-AE": "فيديو",
+          "de-DE": "Video",
+          "en-US": "Video",
+          "kk-KZ": "Бейне",
+          "ru-RU": "Видео",
+          "uk-UA": "Відео"
+        },
+        "action": {
+          "program_data": {
+            "field": "video_rec",
+            "value": 0,
+            "program": [
+              35
+            ]
+          }
+        },
+        "aspect": 1,
+        "measure": "rec_video",
+        "position": 9,
+        "condition": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "video",
+              "value": 1,
+              "program": [
+                69
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "video_stop",
+            "value": 0,
+            "program": [
+              36
+            ]
+          }
+        },
+        "precondition": [
+          {
+            "battery": {
+              "min": 16
+            }
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "image": "audio",
+        "title": {
+          "ar-AE": "الصوت",
+          "de-DE": "Audiodateien",
+          "en-US": "Audio",
+          "kk-KZ": "Аудио",
+          "ru-RU": "Аудио",
+          "uk-UA": "Аудіо"
+        },
+        "action": {
+          "program_data": {
+            "field": "audio_rec",
+            "value": 1,
+            "program": [
+              52
+            ]
+          }
+        },
+        "aspect": 1,
+        "measure": "rec_audio",
+        "position": 10,
+        "condition": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "audio",
+              "value": 1,
+              "program": [
+                69
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "audio_rec",
+            "value": 0,
+            "program": [
+              52
+            ]
+          }
+        },
+        "precondition": [
+          {
+            "battery": {
+              "min": 16
+            }
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "image": "gallery",
+        "title": {
+          "ar-AE": "معرض الصور",
+          "de-DE": "Galerie",
+          "en-US": "Gallery",
+          "kk-KZ": "Галерея",
+          "ru-RU": "Галерея",
+          "uk-UA": "Галерея"
+        },
+        "aspect": 1,
+        "measure": "gallery",
+        "position": 10
+      },
+      {
+        "type": "button",
+        "image": "howto",
+        "title": {
+          "en-US": "How to",
+          "ru-RU": "Обучение"
+        },
+        "aspect": 2,
+        "feature": "recipe",
+        "position": 11
+      },
+      {
+        "type": "container_tail",
+        "position": 12
+      },
+      {
+        "type": "container_head",
+        "position": 13
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "وظائف الذكاء الاصطناعي",
+          "de-DE": "KI-Funktionen",
+          "en-US": "AI functions",
+          "kk-KZ": "AI функциялары",
+          "ru-RU": "Функции ИИ",
+          "uk-UA": "Функції штучного інтелекту"
+        },
+        "position": 14
+      },
+      {
+        "type": "button",
+        "image": "translate",
+        "title": {
+          "en-US": "Translation",
+          "ru-RU": "Переводчик"
+        },
+        "aspect": 1,
+        "measure": "translation",
+        "position": 15
+      },
+      {
+        "type": "button",
+        "image": "dialogs",
+        "title": {
+          "en-US": "Dialogs",
+          "ru-RU": "Запись встреч"
+        },
+        "aspect": 1,
+        "measure": "dialog",
+        "position": 15
+      },
+      {
+        "type": "button",
+        "image": "recognize",
+        "title": {
+          "en-US": "What's this?",
+          "ru-RU": "Что это?"
+        },
+        "action": {
+          "program_data": {
+            "field": "photo_transfer",
+            "value": 49,
+            "program": [
+              34
+            ]
+          }
+        },
+        "aspect": 1,
+        "measure": "recognize",
+        "position": 16,
+        "precondition": [
+          {
+            "battery": {
+              "min": 16
+            }
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "image": "assistant",
+        "title": {
+          "en-US": "Assistant",
+          "ru-RU": "Голосовой ассистент"
+        },
+        "aspect": 1,
+        "measure": "assistant",
+        "position": 16
+      },
+      {
+        "type": "container_tail",
+        "position": 17
+      }
+    ],
+    "manual.shortcuts": [
+      {
+        "type": "button",
+        "image": "photo",
+        "title": {
+          "en-US": "Photo",
+          "ru-RU": "Фото"
+        },
+        "action": {
+          "program_data": {
+            "field": "photo_transfer",
+            "value": 48,
+            "program": [
+              34
+            ]
+          }
+        },
+        "aspect": 1,
+        "measure": "take_photo",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "image": "video",
+        "title": {
+          "en-US": "Video",
+          "ru-RU": "Видео"
+        },
+        "action": {
+          "program_data": {
+            "field": "video_rec",
+            "value": 0,
+            "program": [
+              35
+            ]
+          }
+        },
+        "aspect": 1,
+        "measure": "rec_video",
+        "position": 0,
+        "condition": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "video",
+              "value": 1,
+              "program": [
+                69
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "video_stop",
+            "value": 0,
+            "program": [
+              36
+            ]
+          }
+        }
+      },
+      {
+        "type": "button",
+        "image": "audio",
+        "title": {
+          "en-US": "Audio",
+          "ru-RU": "Аудио"
+        },
+        "action": {
+          "program_data": {
+            "field": "audio_rec",
+            "value": 1,
+            "program": [
+              52
+            ]
+          }
+        },
+        "aspect": 1,
+        "measure": "rec_audio",
+        "position": 0,
+        "condition": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "audio",
+              "value": 1,
+              "program": [
+                69
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "audio_rec",
+            "value": 0,
+            "program": [
+              52
+            ]
+          }
+        }
+      },
+      {
+        "type": "button",
+        "image": "gallery",
+        "title": {
+          "en-US": "Gallery",
+          "ru-RU": "Галерея"
+        },
+        "aspect": 1,
+        "measure": "gallery",
+        "position": 0
+      }
+    ]
+  },
+  "limits": {},
+  "params": {
+    "hidden": false,
+    "realtime": true,
+    "syncable": false,
+    "bleBondable": true,
+    "bleProtocol": "sg02",
+    "program_data": {
+      "1": [
+        {
+          "max": 50,
+          "min": 48,
+          "name": "brightness",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 48,
+          "roundAlt": 1
+        }
+      ],
+      "2": [
+        {
+          "max": 600,
+          "min": 30,
+          "name": "video_duration",
+          "size": 2,
+          "step": 5,
+          "round": 1,
+          "default": 60,
+          "roundAlt": 1
+        }
+      ],
+      "4": [
+        {
+          "max": 49,
+          "min": 48,
+          "name": "wear_detect",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 49,
+          "roundAlt": 1
+        }
+      ],
+      "6": [
+        {
+          "max": 49,
+          "min": 48,
+          "name": "voice_response",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 49,
+          "roundAlt": 1
+        }
+      ],
+      "34": [
+        {
+          "max": 49,
+          "min": 48,
+          "name": "photo_transfer",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 48,
+          "roundAlt": 1
+        }
+      ],
+      "35": [
+        {
+          "max": 0,
+          "min": 0,
+          "name": "video_rec",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "36": [
+        {
+          "max": 0,
+          "min": 0,
+          "name": "video_stop",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "52": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "audio_rec",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "69": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "photo",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "audio",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "video",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "volume_up",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "volume_down",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "nodding",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "head_shake",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "music",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "worn",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "file_transfer",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "97": [
+        {
+          "max": 49,
+          "min": 48,
+          "name": "orientation",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 48,
+          "roundAlt": 1
+        }
+      ],
+      "98": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "language",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        }
+      ],
+      "105": [
+        {
+          "max": 15,
+          "min": 0,
+          "name": "system_volume",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 15,
+          "roundAlt": 1
+        },
+        {
+          "max": 16,
+          "min": 0,
+          "name": "media_volume",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 16,
+          "roundAlt": 1
+        },
+        {
+          "max": 15,
+          "min": 0,
+          "name": "call_volume",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 15,
+          "roundAlt": 1
+        }
+      ],
+      "112": [
+        {
+          "max": 2,
+          "min": 0,
+          "name": "set_volume_type",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 16,
+          "min": 0,
+          "name": "set_volume_value",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 15,
+          "roundAlt": 1
+        }
+      ],
+      "113": [
+        {
+          "max": 3,
+          "min": 0,
+          "name": "voice_commands_status",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        }
+      ],
+      "114": [
+        {
+          "max": 3,
+          "min": 0,
+          "name": "voice_commands_setup",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "regionGroups": [
+      "restWorld",
+      "arabic"
+    ],
+    "voiceControl": {
+      "intents": {
+        "status": {
+          "status": {
+            "battery": {}
+          }
+        },
+        "take_photo": {
+          "action": {
+            "program_data": {
+              "field": "photo_transfer",
+              "value": 49,
+              "program": [
+                34
+              ]
+            }
+          },
+          "errors": {
+            "deviceLowBattery": {
+              "condition": [
+                {
+                  "battery": {
+                    "max": 15
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          },
+          "postCondition": {
+            "and": []
+          }
+        }
+      }
+    },
+    "firmwareSlots": [
+      {
+        "type": "wifi"
+      },
+      {
+        "type": "mcu"
+      }
+    ],
+    "recipeAdvices": true,
+    "ai_description": "glasses with camera (cmd: `take_photo`)",
+    "bleVoiceService": true
+  },
+  "vendor": "polaris",
+  "features": [
+    "battery",
+    "amount",
+    "recipe",
+    "program",
+    "demo"
+  ],
+  "messages": {
+    "audio": {
+      "ar-AE": "الصوت",
+      "de-DE": "Audiodateien",
+      "en-US": "Audio",
+      "kk-KZ": "Аудио",
+      "ru-RU": "Аудио",
+      "uk-UA": "Аудіо"
+    },
+    "howto": {
+      "ar-AE": "نصائح",
+      "de-DE": "Beratung",
+      "en-US": "Advices",
+      "kk-KZ": "Кеңестер",
+      "ru-RU": "Обучение",
+      "uk-UA": "Рада"
+    },
+    "photo": {
+      "ar-AE": "صور",
+      "de-DE": "Foto",
+      "en-US": "Photo",
+      "kk-KZ": "Сурет",
+      "ru-RU": "Фото",
+      "uk-UA": "Фотографія"
+    },
+    "video": {
+      "ar-AE": "فيديو",
+      "de-DE": "Video",
+      "en-US": "Video",
+      "kk-KZ": "Бейне",
+      "ru-RU": "Видео",
+      "uk-UA": "Відео"
+    },
+    "enable": {
+      "ar-AE": "للاتصال ، اضغط مع الاستمرار على الزر المادي الموجود على المعبد الأيمن للنظارات حتى يبدأ المؤشر الموجود على الجانب الداخلي للمعبد في الوميض باللون الأزرق",
+      "de-DE": "Halten Sie zum Verbinden die physische Taste am rechten Bügel der Brille gedrückt, bis die Anzeige an der Innenseite des Bügels blau zu blinken beginnt",
+      "en-US": "For connection, press and hold the physical button on the right temple of the glasses until the indicator on the inner side of the temple starts flashing blue",
+      "kk-KZ": "Қосылу үшін көзілдіріктің оң жағындағы физикалық түймені ілмектің ішкі жағындағы индикатор көк түспен жыпылықтай бастағанша басып тұрыңыз",
+      "ru-RU": "Для подключения нажмите и удерживайте физическую кнопку на правой дужке очков, пока индикатор на внутренней стороне дужки не начнет мигать синим цветом",
+      "uk-UA": "For connection, press and hold the physical button on the right temple of the glasses until the indicator on the inner side of the temple starts flashing blue"
+    },
+    "dialogs": {
+      "ar-AE": "تسجيل الاجتماع",
+      "de-DE": "Protokoll der Sitzung",
+      "en-US": "Meeting recording",
+      "kk-KZ": "Жиналыс жазбасы",
+      "ru-RU": "Запись встреч",
+      "uk-UA": "Запис зборів"
+    },
+    "gallery": {
+      "ar-AE": "معرض الصور",
+      "de-DE": "Galerie",
+      "en-US": "Gallery",
+      "kk-KZ": "Галерея",
+      "ru-RU": "Галерея",
+      "uk-UA": "Галерея"
+    },
+    "assistant": {
+      "ar-AE": "مساعد صوت",
+      "de-DE": "Sprachassistent",
+      "en-US": "Voice Assistant",
+      "kk-KZ": "Дауыстық Көмекші",
+      "ru-RU": "Голосовой ассистент",
+      "uk-UA": "Голосовий асистент"
+    },
+    "recognize": {
+      "ar-AE": "ما هذا?",
+      "de-DE": "Was ist das?",
+      "en-US": "What is it?",
+      "kk-KZ": "Мынау не?",
+      "ru-RU": "Что это?",
+      "uk-UA": "Що це таке?"
+    },
+    "translate": {
+      "ar-AE": "مترجم",
+      "de-DE": "Übersetzer",
+      "en-US": "Translator",
+      "kk-KZ": "Аудармашы",
+      "ru-RU": "Переводчик",
+      "uk-UA": "Перекладач"
+    },
+    "unpair_ios": {
+      "ar-AE": "هل تريد فصل هذا الجهاز عن هاتفك?\nلا تنس إلغاء الاقتران في إعدادات البلوتوث بالهاتف",
+      "de-DE": "Möchten Sie dieses Gerät von Ihrem Telefon trennen?\nVergessen Sie nicht, die Kopplung in den Bluetooth-Einstellungen des Telefons abzubrechen",
+      "en-US": "Do you want to disconnect this device from your phone?\nDon’t forget to cancel the pairing in the phone’s Bluetooth settings",
+      "kk-KZ": "Бұл құрылғыны телефоннан ажыратқыңыз келе ме?\nТелефонның Bluetooth параметрлерінде жұптастырудан бас тартуды ұмытпаңыз",
+      "ru-RU": "Вы хотите отключить это устройство от своего телефона?\nНе забудьте отменить сопряжение в Bluetooth настройках телефона"
+    },
+    "url.manual": {
+      "ar-AE": "https://images.cdn.polaris-iot.com/pdf/polaris/312/SG-02 User manual_09.26.pdf",
+      "de-DE": "https://images.cdn.polaris-iot.com/pdf/polaris/312/SG-02 User manual_09.26.pdf",
+      "en-US": "https://images.cdn.polaris-iot.com/pdf/polaris/312/SG-02 User manual_09.26.pdf",
+      "kk-KZ": "https://images.cdn.polaris-iot.com/pdf/polaris/312/SG-02 User manual_09.26.pdf",
+      "ru-RU": "https://images.cdn.polaris-iot.com/pdf/polaris/312/SG-02 User manual_09.26.pdf",
+      "uk-UA": "https://images.cdn.polaris-iot.com/pdf/polaris/312/SG-02 User manual_09.26.pdf"
+    },
+    "attr.amount": {
+      "ar-AE": "ملفات جديدة",
+      "de-DE": "Neuakten",
+      "en-US": "New files",
+      "kk-KZ": "Жаңа Файлдар",
+      "ru-RU": "Новые файлы",
+      "uk-UA": "Нові файли"
+    },
+    "url.catalog": {
+      "ar-AE": "https://polaris.ru/catalog/smart_glasses/polaris-sg-02-iq-home/",
+      "de-DE": "https://polaris.ru/catalog/smart_glasses/polaris-sg-02-iq-home/",
+      "en-US": "https://polaris.ru/catalog/smart_glasses/polaris-sg-02-iq-home/",
+      "kk-KZ": "https://polaris.ru/catalog/smart_glasses/polaris-sg-02-iq-home/",
+      "ru-RU": "https://polaris.ru/catalog/smart_glasses/polaris-sg-02-iq-home/",
+      "uk-UA": "https://polaris.ru/catalog/smart_glasses/polaris-sg-02-iq-home/"
+    },
+    "brightness.low": {
+      "en-US": "Low",
+      "ru-RU": "Низкая"
+    },
+    "brightness.high": {
+      "en-US": "High",
+      "ru-RU": "Высокая"
+    },
+    "brightness.medium": {
+      "en-US": "Medium",
+      "ru-RU": "Средняя"
+    },
+    "gallery.low_battery": {
+      "en-US": "Battery level is low, syncing not available",
+      "ru-RU": "Низкий уровень заряда батареи, синхронизация недоступна"
+    },
+    "firmware.slot.2.title": {
+      "ar-AE": "إصدار الأجهزة",
+      "de-DE": "Hardwareversion",
+      "en-US": "Hardware version",
+      "kk-KZ": "Аппараттық нұсқа",
+      "ru-RU": "Версия оборудования",
+      "uk-UA": "Версія апаратного забезпечення"
+    },
+    "video_duration.suffix": {
+      "en-US": "s",
+      "ru-RU": "с"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "None"
+      },
+      "hidden": true,
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "logo": {
+      "60": "https://images.cdn.polaris-iot.com/f/3e/86d53-1f75-4144-81e3-14774b1616cc/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/f/3e/86d53-1f75-4144-81e3-14774b1616cc/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/f/3e/86d53-1f75-4144-81e3-14774b1616cc/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/f/3e/86d53-1f75-4144-81e3-14774b1616cc/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/f/3e/86d53-1f75-4144-81e3-14774b1616cc/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/f/3e/86d53-1f75-4144-81e3-14774b1616cc/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/f/3e/86d53-1f75-4144-81e3-14774b1616cc/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/f/3e/86d53-1f75-4144-81e3-14774b1616cc/1800.webp",
+      "id": "f3e86d53-1f75-4144-81e3-14774b1616cc",
+      "original": "https://images.cdn.polaris-iot.com/f/3e/86d53-1f75-4144-81e3-14774b1616cc/original.webp"
+    },
+    "audio": {
+      "60": "https://images.cdn.polaris-iot.com/3/96/0594b-8471-4b9c-b511-622624a6beba/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/3/96/0594b-8471-4b9c-b511-622624a6beba/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/3/96/0594b-8471-4b9c-b511-622624a6beba/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/3/96/0594b-8471-4b9c-b511-622624a6beba/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/3/96/0594b-8471-4b9c-b511-622624a6beba/600.webp",
+      "id": "3960594b-8471-4b9c-b511-622624a6beba",
+      "original": "https://images.cdn.polaris-iot.com/3/96/0594b-8471-4b9c-b511-622624a6beba/original.webp"
+    },
+    "howto": {
+      "60": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/1200.webp",
+      "id": "46ed1e22-8700-478e-9038-85d8bfe45e4c",
+      "original": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/original.webp"
+    },
+    "photo": {
+      "60": "https://images.cdn.polaris-iot.com/c/5c/97b22-40bf-4faf-a220-5513546d45e6/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/c/5c/97b22-40bf-4faf-a220-5513546d45e6/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/c/5c/97b22-40bf-4faf-a220-5513546d45e6/240.webp",
+      "id": "c5c97b22-40bf-4faf-a220-5513546d45e6",
+      "original": "https://images.cdn.polaris-iot.com/c/5c/97b22-40bf-4faf-a220-5513546d45e6/original.webp"
+    },
+    "video": {
+      "60": "https://images.cdn.polaris-iot.com/4/2c/dd7e8-494f-406e-9672-b061ce1dc2ed/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/4/2c/dd7e8-494f-406e-9672-b061ce1dc2ed/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/4/2c/dd7e8-494f-406e-9672-b061ce1dc2ed/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/4/2c/dd7e8-494f-406e-9672-b061ce1dc2ed/480.webp",
+      "id": "42cdd7e8-494f-406e-9672-b061ce1dc2ed",
+      "original": "https://images.cdn.polaris-iot.com/4/2c/dd7e8-494f-406e-9672-b061ce1dc2ed/original.webp"
+    },
+    "dialogs": {
+      "60": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/1200.webp",
+      "id": "73b07569-7c5c-4836-87e8-50f86b4d84a6",
+      "original": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/original.webp"
+    },
+    "gallery": {
+      "60": "https://images.cdn.polaris-iot.com/e/89/b51fa-43b2-45ca-9bd2-ea6e83d5ac28/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/e/89/b51fa-43b2-45ca-9bd2-ea6e83d5ac28/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/e/89/b51fa-43b2-45ca-9bd2-ea6e83d5ac28/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/e/89/b51fa-43b2-45ca-9bd2-ea6e83d5ac28/480.webp",
+      "id": "e89b51fa-43b2-45ca-9bd2-ea6e83d5ac28",
+      "original": "https://images.cdn.polaris-iot.com/e/89/b51fa-43b2-45ca-9bd2-ea6e83d5ac28/original.webp"
+    },
+    "assistant": {
+      "60": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/1200.webp",
+      "id": "d0076827-a6b5-4844-9efa-168ec552c944",
+      "original": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/original.webp"
+    },
+    "recognize": {
+      "60": "https://images.cdn.polaris-iot.com/4/5b/72713-ed37-4eaa-a8d7-592007769e4d/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/4/5b/72713-ed37-4eaa-a8d7-592007769e4d/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/4/5b/72713-ed37-4eaa-a8d7-592007769e4d/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/4/5b/72713-ed37-4eaa-a8d7-592007769e4d/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/4/5b/72713-ed37-4eaa-a8d7-592007769e4d/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/4/5b/72713-ed37-4eaa-a8d7-592007769e4d/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/4/5b/72713-ed37-4eaa-a8d7-592007769e4d/1200.webp",
+      "id": "45b72713-ed37-4eaa-a8d7-592007769e4d",
+      "original": "https://images.cdn.polaris-iot.com/4/5b/72713-ed37-4eaa-a8d7-592007769e4d/original.webp"
+    },
+    "translate": {
+      "60": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/900.webp",
+      "id": "7f3bac63-e4d3-4919-bc2d-8e01a7cb9cc6",
+      "original": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/original.webp"
+    }
+  },
+  "connectivity": [
+    "ble"
+  ],
+  "last_modified": 1790346397,
+  "temperature_units": "celsius"
+}

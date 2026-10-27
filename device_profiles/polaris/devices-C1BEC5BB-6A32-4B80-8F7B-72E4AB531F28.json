@@ -1,0 +1,843 @@
+{
+  "id": "c1bec5bb-6a32-4b80-8f7b-72e4ab531f28",
+  "name": "PVCSDC-3005",
+  "type": 233,
+  "class": "cordless_cleaner",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/8/5e/6e656-7813-4d03-b0c4-0bc96a3d38c4/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/8/5e/6e656-7813-4d03-b0c4-0bc96a3d38c4/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/8/5e/6e656-7813-4d03-b0c4-0bc96a3d38c4/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/8/5e/6e656-7813-4d03-b0c4-0bc96a3d38c4/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/8/5e/6e656-7813-4d03-b0c4-0bc96a3d38c4/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/8/5e/6e656-7813-4d03-b0c4-0bc96a3d38c4/900.webp",
+    "1200": "https://images.cdn.polaris-iot.com/8/5e/6e656-7813-4d03-b0c4-0bc96a3d38c4/1200.webp",
+    "1800": "https://images.cdn.polaris-iot.com/8/5e/6e656-7813-4d03-b0c4-0bc96a3d38c4/1800.webp",
+    "id": "85e6e656-7813-4d03-b0c4-0bc96a3d38c4",
+    "original": "https://images.cdn.polaris-iot.com/8/5e/6e656-7813-4d03-b0c4-0bc96a3d38c4/original.webp"
+  },
+  "layout": {
+    "top": [
+      {
+        "type": "slider",
+        "limit": {
+          "max": 3,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "points": {
+          "0": {
+            "label": "Auto"
+          },
+          "1": {
+            "label": "Eco"
+          },
+          "3": {
+            "label": "Max"
+          }
+        },
+        "feature": "speed",
+        "position": 0,
+        "visibility": [
+          {
+            "source": "state",
+            "battery": {
+              "min": 21
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "program": [
+              1
+            ]
+          }
+        ],
+        "value_strings": {
+          "0": "Auto",
+          "1": "Eco",
+          "2": "Turbo",
+          "3": "Max"
+        }
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 2,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "points": {
+          "0": {
+            "label": "Auto"
+          },
+          "1": {
+            "label": "Eco"
+          },
+          "2": {
+            "label": "Turbo"
+          }
+        },
+        "feature": "speed",
+        "position": 0,
+        "visibility": [
+          {
+            "source": "state",
+            "battery": {
+              "max": 20
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "program": [
+              1
+            ]
+          }
+        ],
+        "value_strings": {
+          "0": "Auto",
+          "1": "Eco",
+          "2": "Turbo"
+        }
+      },
+      {
+        "type": "error",
+        "position": 0
+      }
+    ],
+    "middle": [
+      {
+        "icon": "M0.0,0.0h28.0v24.0V0.0M16 4C15.45 4 15 4.45 15 5V12.57L20.49 15.86C20.65 15.95 20.82 16 21 16C21.34 16 21.67 15.83 21.86 15.51C22.14 15.04 21.99 14.42 21.52 14.14L17 11.43V5C17 4.45 16.55 4 16 4ZM16 0C15.59 0 15.18 0.02 14.78 0.06C14.63 0.08 14.48 0.11 14.34 0.13C14.09 0.16 13.84 0.19 13.6 0.24C13.4 0.28 13.21 0.34 13.02 0.39C12.83 0.44 12.64 0.48 12.46 0.53C12.24 0.6 12.02 0.69 11.8 0.77C11.65 0.82 11.5 0.87 11.36 0.93C11.11 1.03 10.88 1.16 10.64 1.28C10.53 1.33 10.42 1.38 10.32 1.43C10.05 1.58 9.8 1.74 9.54 1.9C9.48 1.94 9.4 1.98 9.34 2.03C9.06 2.21 8.8 2.41 8.54 2.62C8.5 2.65 8.46 2.68 8.42 2.71C8.14 2.94 7.88 3.18 7.62 3.43C7.6 3.44 7.59 3.46 7.57 3.47C5.4 5.61 4.05 8.57 4.01 11.84L1.71 9.54C1.32 9.15 0.69 9.15 0.3 9.54C0.1 9.74 0 9.99 0 10.25C0 10.51 0.1 10.76 0.29 10.96L4.49 15.16C4.68 15.35 4.93 15.45 5.2 15.45C5.47 15.45 5.72 15.34 5.91 15.16L10.11 10.96C10.5 10.57 10.5 9.94 10.11 9.55C9.72 9.16 9.09 9.16 8.7 9.55L6 12.24V12C6 6.49 10.49 2 16 2C21.51 2 26 6.49 26 12C26 17.51 21.51 22 16 22C14.05 22 12.17 21.44 10.55 20.38C10.09 20.08 9.47 20.21 9.17 20.67C8.87 21.13 9 21.75 9.46 22.05C11.4 23.33 13.67 24 16 24C22.62 24 28 18.62 28 12C28 5.38 22.62 0 16 0Z",
+        "type": "button",
+        "title": {
+          "de-DE": "Geschichte",
+          "en-US": "History",
+          "kk-KZ": "Тарих",
+          "ru-RU": "История",
+          "uk-UA": "Історія"
+        },
+        "layout": "history",
+        "position": 0
+      },
+      {
+        "icon": "M0.0,0.0h28.0v24.0V0.0M6,9c0-1.1,0.9-2,2-2s2,0.9,2,2c0,1.1-0.9,2-2,2S6,10.1,6,9z M14,11c1.1,0,2-0.9,2-2c0-1.1-0.9-2-2-2 s-2,0.9-2,2C12,10.1,12.9,11,14,11z M20,11c1.1,0,2-0.9,2-2c0-1.1-0.9-2-2-2s-2,0.9-2,2C18,10.1,18.9,11,20,11z M28,2v14 c0,1.1-0.9,2-2,2h-3v4.3c0,0.9-1.2,1.4-1.8,0.7L17,18H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h24C27.1,0,28,0.9,28,2z M26,2H2v14h15.9 l3.1,3.6V16h5V2z",
+        "type": "button",
+        "title": {
+          "en-US": "Advice",
+          "ru-RU": "Советы"
+        },
+        "feature": "recipe",
+        "position": 0
+      },
+      {
+        "axis": {
+          "y": {
+            "min": 0
+          },
+          "hoursSinceNow": 720,
+          "aggregationType": "sum",
+          "aggregationIntervalMinutes": 1440
+        },
+        "type": "graph",
+        "title": {
+          "de-DE": "Reinigungszeit / min",
+          "en-US": "Cleaning time / min",
+          "kk-KZ": "Тазалау уақыты/мин",
+          "ru-RU": "Время уборки / мин",
+          "uk-UA": "Час збирання/хв"
+        },
+        "measure": "history",
+        "position": 1
+      }
+    ],
+    "home.top": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      }
+    ],
+    "top_info": [
+      {
+        "type": "info",
+        "feature": "battery",
+        "position": 0
+      },
+      {
+        "type": "info",
+        "title": {
+          "ar-AE": "تركيز الغبار",
+          "de-DE": "Staubkonzentration",
+          "en-US": "Dust concentration",
+          "kk-KZ": "Шаң концентрациясы",
+          "ru-RU": "Концентрация пыли",
+          "uk-UA": "Концентрація пилу"
+        },
+        "position": 0,
+        "visibility": [
+          {
+            "speed": 0,
+            "source": "state"
+          }
+        ],
+        "program_data": {
+          "field": "dust_concentration",
+          "program": [
+            0
+          ]
+        },
+        "value_strings": {
+          "0": "0",
+          "1": "Low",
+          "2": "Mid",
+          "3": "High"
+        }
+      },
+      {
+        "type": "info",
+        "feature": "clean_time",
+        "position": 0
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "battery",
+        "position": 0
+      },
+      {
+        "type": "info",
+        "title": {
+          "ar-AE": "تركيز الغبار",
+          "de-DE": "Staubkonzentration",
+          "en-US": "Dust concentration",
+          "kk-KZ": "Шаң концентрациясы",
+          "ru-RU": "Концентрация пыли",
+          "uk-UA": "Концентрація пилу"
+        },
+        "position": 0,
+        "visibility": [
+          {
+            "speed": 0,
+            "source": "state"
+          }
+        ],
+        "program_data": {
+          "field": "dust_concentration",
+          "program": [
+            0
+          ]
+        },
+        "value_strings": {
+          "0": "0",
+          "1": "Low",
+          "2": "Mid",
+          "3": "High"
+        }
+      },
+      {
+        "type": "info",
+        "feature": "clean_time",
+        "position": 0
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "type": "info",
+        "feature": "battery",
+        "position": 2
+      },
+      {
+        "type": "info",
+        "title": {
+          "ar-AE": "تركيز الغبار",
+          "de-DE": "Staubkonzentration",
+          "en-US": "Dust concentration",
+          "kk-KZ": "Шаң концентрациясы",
+          "ru-RU": "Концентрация пыли",
+          "uk-UA": "Концентрація пилу"
+        },
+        "position": 2,
+        "visibility": [
+          {
+            "speed": 0,
+            "source": "state"
+          }
+        ],
+        "program_data": {
+          "field": "dust_concentration",
+          "program": [
+            0
+          ]
+        },
+        "value_strings": {
+          "0": "0",
+          "1": "Low",
+          "2": "Mid",
+          "3": "High"
+        }
+      },
+      {
+        "type": "info",
+        "feature": "clean_time",
+        "position": 2
+      },
+      {
+        "type": "container_tail",
+        "position": 3
+      },
+      {
+        "type": "container_head",
+        "position": 4
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 3,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "points": {
+          "0": {
+            "label": "Auto"
+          },
+          "1": {
+            "label": "Eco"
+          },
+          "2": {
+            "label": "Turbo"
+          },
+          "3": {
+            "label": "Max"
+          }
+        },
+        "feature": "speed",
+        "position": 5,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "state",
+            "battery": {
+              "min": 21
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "program": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 2,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "points": {
+          "0": {
+            "label": "Auto"
+          },
+          "1": {
+            "label": "Eco"
+          },
+          "2": {
+            "label": "Turbo"
+          }
+        },
+        "feature": "speed",
+        "position": 5,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "state",
+            "battery": {
+              "max": 20
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "program": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 6
+      },
+      {
+        "type": "container_head",
+        "position": 7
+      },
+      {
+        "icon": "M0.0,0.0h28.0v24.0V0.0M16 4C15.45 4 15 4.45 15 5V12.57L20.49 15.86C20.65 15.95 20.82 16 21 16C21.34 16 21.67 15.83 21.86 15.51C22.14 15.04 21.99 14.42 21.52 14.14L17 11.43V5C17 4.45 16.55 4 16 4ZM16 0C15.59 0 15.18 0.02 14.78 0.06C14.63 0.08 14.48 0.11 14.34 0.13C14.09 0.16 13.84 0.19 13.6 0.24C13.4 0.28 13.21 0.34 13.02 0.39C12.83 0.44 12.64 0.48 12.46 0.53C12.24 0.6 12.02 0.69 11.8 0.77C11.65 0.82 11.5 0.87 11.36 0.93C11.11 1.03 10.88 1.16 10.64 1.28C10.53 1.33 10.42 1.38 10.32 1.43C10.05 1.58 9.8 1.74 9.54 1.9C9.48 1.94 9.4 1.98 9.34 2.03C9.06 2.21 8.8 2.41 8.54 2.62C8.5 2.65 8.46 2.68 8.42 2.71C8.14 2.94 7.88 3.18 7.62 3.43C7.6 3.44 7.59 3.46 7.57 3.47C5.4 5.61 4.05 8.57 4.01 11.84L1.71 9.54C1.32 9.15 0.69 9.15 0.3 9.54C0.1 9.74 0 9.99 0 10.25C0 10.51 0.1 10.76 0.29 10.96L4.49 15.16C4.68 15.35 4.93 15.45 5.2 15.45C5.47 15.45 5.72 15.34 5.91 15.16L10.11 10.96C10.5 10.57 10.5 9.94 10.11 9.55C9.72 9.16 9.09 9.16 8.7 9.55L6 12.24V12C6 6.49 10.49 2 16 2C21.51 2 26 6.49 26 12C26 17.51 21.51 22 16 22C14.05 22 12.17 21.44 10.55 20.38C10.09 20.08 9.47 20.21 9.17 20.67C8.87 21.13 9 21.75 9.46 22.05C11.4 23.33 13.67 24 16 24C22.62 24 28 18.62 28 12C28 5.38 22.62 0 16 0Z",
+        "type": "button",
+        "title": {
+          "de-DE": "Geschichte",
+          "en-US": "History",
+          "kk-KZ": "Тарих",
+          "ru-RU": "История",
+          "uk-UA": "Історія"
+        },
+        "layout": "history",
+        "position": 8
+      },
+      {
+        "icon": "M0.0,0.0h28.0v24.0V0.0M6,9c0-1.1,0.9-2,2-2s2,0.9,2,2c0,1.1-0.9,2-2,2S6,10.1,6,9z M14,11c1.1,0,2-0.9,2-2c0-1.1-0.9-2-2-2 s-2,0.9-2,2C12,10.1,12.9,11,14,11z M20,11c1.1,0,2-0.9,2-2c0-1.1-0.9-2-2-2s-2,0.9-2,2C18,10.1,18.9,11,20,11z M28,2v14 c0,1.1-0.9,2-2,2h-3v4.3c0,0.9-1.2,1.4-1.8,0.7L17,18H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h24C27.1,0,28,0.9,28,2z M26,2H2v14h15.9 l3.1,3.6V16h5V2z",
+        "type": "button",
+        "title": {
+          "en-US": "Advice",
+          "ru-RU": "Советы"
+        },
+        "feature": "recipe",
+        "position": 8
+      },
+      {
+        "type": "container_tail",
+        "position": 9
+      },
+      {
+        "type": "container_head",
+        "position": 10
+      },
+      {
+        "axis": {
+          "y": {
+            "min": 0
+          },
+          "hoursSinceNow": 720,
+          "aggregationType": "sum",
+          "aggregationIntervalMinutes": 1440
+        },
+        "type": "graph",
+        "title": {
+          "de-DE": "Reinigungszeit / min",
+          "en-US": "Cleaning time / min",
+          "kk-KZ": "Тазалау уақыты/мин",
+          "ru-RU": "Время уборки / мин",
+          "uk-UA": "Час збирання/хв"
+        },
+        "measure": "history",
+        "position": 11
+      },
+      {
+        "type": "container_tail",
+        "position": 12
+      }
+    ]
+  },
+  "limits": {
+    "speed": {
+      "max": 3,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 1,
+      "round_alt": 1
+    },
+    "timer": {
+      "max": 7200,
+      "min": 0,
+      "step": 60,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "icons": {
+      "expendable.0": "M0,0h24v24V0M21.444,7.833H2.556C2.249,7.833 2,8.082 2,8.389v1.669v0.555v0.555v0.555v0.555v0.556v0.555v0.556V14.5v0.556v0.555c0,0.307 0.249,0.556 0.556,0.556h18.889C21.751,16.166 22,15.918 22,15.611V8.389C22,8.082 21.751,7.833 21.444,7.833zM21.444,8.944h-2.777V8.389h2.777V8.944zM10.333,13.39v-0.556h3.611v0.555L10.333,13.39L10.333,13.39zM13.944,13.945V14.5h-3.611v-0.555H13.944zM10.333,12.279v-0.556h3.611v0.555L10.333,12.279L10.333,12.279zM10.333,11.168v-0.555h3.611v0.555H10.333zM10.333,10.057V9.499h3.611v0.558H10.333zM10.333,8.944V8.389h3.611v0.555C13.944,8.944 10.333,8.944 10.333,8.944zM9.778,8.944H6.167V8.389h3.611V8.944zM9.778,9.499v0.558H6.167V9.499H9.778zM9.778,10.613v0.555H6.167v-0.555H9.778zM9.778,11.723v0.555H6.167v-0.555H9.778zM9.778,12.834v0.555H6.167v-0.555H9.778zM9.778,13.945V14.5H6.167v-0.555H9.778zM9.778,15.056v0.555H6.167v-0.555H9.778zM10.333,15.056h3.611v0.555h-3.611V15.056zM14.5,15.056h3.611v0.555H14.5V15.056zM14.5,14.5v-0.555h3.611V14.5H14.5zM14.5,13.39v-0.556h3.611v0.555L14.5,13.39L14.5,13.39zM14.5,12.279v-0.556h3.611v0.555L14.5,12.279L14.5,12.279zM14.5,11.168v-0.555h3.611v0.555H14.5zM14.5,10.057V9.499h3.611v0.558H14.5zM14.5,8.944V8.389h3.611v0.555C18.111,8.944 14.5,8.944 14.5,8.944zM5.611,8.389v0.555H2.556V8.389H5.611zM2.556,9.499h3.056v0.558H2.556V9.499zM2.556,10.613h3.056v0.555H2.556V10.613zM2.556,11.723h3.056v0.555H2.556V11.723zM2.556,12.834h3.056v0.555H2.556V12.834zM2.556,13.945h3.056V14.5H2.556V13.945zM2.556,15.056h3.056v0.555H2.556V15.056zM21.444,15.611h-2.777v-0.555h2.777V15.611zM21.444,14.5h-2.777v-0.555h2.777V14.5zM21.444,13.39h-2.777v-0.556h2.777V13.39zM21.444,12.279h-2.777v-0.556h2.777V12.279zM21.444,11.168h-2.777v-0.555h2.777V11.168zM18.667,10.057V9.499h2.777v0.558H18.667z",
+      "expendable.1": "M0,0h24v24V0M21.553,11.445l0.047,-0.034l-0.156,-0.149v-0.928c0,-0.307 -0.248,-0.556 -0.555,-0.556H3.111c-0.307,0 -0.555,0.249 -0.555,0.556v1.111H2v1.111h0.556v1.111c0,0.307 0.249,0.555 0.556,0.555H20.89c0.307,0 0.555,-0.249 0.555,-0.555v-1.111H22v-1.111H21.553zM20.889,10.334v0.481l-2.199,1.569c-1.087,0.775 -2.741,0.622 -3.594,-0.332c-1.39,-1.555 -4.202,-1.555 -5.592,0c-0.853,0.954 -2.507,1.107 -3.594,0.332l-2.25,-1.606l-0.549,0.526v-0.97H20.889zM16.524,13.667H8.076c0.862,-0.116 1.676,-0.488 2.24,-1.119c0.986,-1.103 2.981,-1.103 3.967,0C14.847,13.179 15.662,13.551 16.524,13.667zM3.111,11.49l2.139,1.527c0.511,0.364 1.112,0.57 1.729,0.65H3.111V11.49zM17.621,13.667c0.617,-0.08 1.218,-0.286 1.729,-0.65l1.539,-1.098v1.749h-3.268V13.667z",
+      "expendable.2": "M0,0h24v24V0M22,10.476v6.358c0,0.305 -0.247,0.553 -0.553,0.553H2.649c-0.305,0 -0.553,-0.247 -0.553,-0.553v-6.219L2,10.07l19.602,-3.456l0.096,0.544L2.649,10.517v6.317h18.798v-6.358H22zM7.072,13.517c-0.305,0 -0.553,0.247 -0.553,0.553c0,0.305 0.248,0.553 0.553,0.553s0.553,-0.248 0.553,-0.553C7.625,13.764 7.377,13.517 7.072,13.517zM12.324,12.687c0,-0.305 -0.247,-0.553 -0.553,-0.553c-0.305,0 -0.553,0.247 -0.553,0.553c0,0.305 0.247,0.553 0.553,0.553S12.324,12.993 12.324,12.687zM12.877,14.346c0,0.305 0.248,0.553 0.553,0.553s0.553,-0.248 0.553,-0.553c0,-0.305 -0.247,-0.553 -0.553,-0.553C13.125,13.793 12.877,14.041 12.877,14.346zM15.642,15.175c0,0.458 0.371,0.829 0.829,0.829s0.829,-0.371 0.829,-0.829s-0.371,-0.829 -0.829,-0.829C16.013,14.346 15.642,14.717 15.642,15.175zM11.495,15.175c0,0.611 -0.495,1.106 -1.106,1.106s-1.106,-0.495 -1.106,-1.106s0.495,-1.106 1.106,-1.106C11,14.069 11.495,14.565 11.495,15.175zM10.942,15.175c0,-0.305 -0.247,-0.553 -0.553,-0.553c-0.305,0 -0.553,0.247 -0.553,0.553c0,0.305 0.247,0.553 0.553,0.553C10.695,15.728 10.942,15.481 10.942,15.175zM17.966,13.24h0.578c-0.245,-0.954 -1.111,-1.659 -2.142,-1.659c-0.723,0 -1.365,0.347 -1.769,0.884c-0.335,-1.149 -1.397,-1.99 -2.654,-1.99c-1.258,0 -2.319,0.84 -2.654,1.99c-0.405,-0.536 -1.047,-0.883 -1.77,-0.883c-1.031,0 -1.896,0.705 -2.142,1.659h0.578c0.228,-0.644 0.842,-1.106 1.564,-1.106c0.722,0 1.337,0.461 1.564,1.106h0.647c0,-1.221 0.99,-2.212 2.211,-2.212s2.212,0.99 2.212,2.212h0.647c0.228,-0.644 0.842,-1.106 1.564,-1.106C17.124,12.135 17.738,12.596 17.966,13.24z"
+    },
+    "hidden": false,
+    "history": {
+      "graph": {
+        "value": "clean_time"
+      },
+      "values": [
+        {
+          "name": "clean_time",
+          "feature": "clean_time"
+        },
+        {
+          "name": "suction"
+        }
+      ]
+    },
+    "altTypes": [
+      306
+    ],
+    "realtime": true,
+    "cloneOfType": 229,
+    "expendables": [
+      {
+        "icon": "expendable.0",
+        "name": "expendable.0",
+        "title": "expendable.0",
+        "maxValue": 60
+      }
+    ],
+    "program_data": {
+      "0": [
+        {
+          "max": 3,
+          "min": 0,
+          "name": "dust_concentration",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "regionGroups": [
+      "arabic",
+      "restWorld"
+    ],
+    "recipeAdvices": true,
+    "expendable_max": [
+      60
+    ],
+    "deviceAttributes": [
+      {
+        "name": "appearance",
+        "title": "attr.title.appearance",
+        "values": [
+          {
+            "name": "white",
+            "image": "attr.appearance.white.image",
+            "title": "attr.appearance.white.title"
+          },
+          {
+            "name": "dark_gray",
+            "image": "attr.appearance.dark_gray.image",
+            "title": "attr.appearance.dark_gray.title"
+          }
+        ]
+      }
+    ],
+    "manualInfoFields": [
+      "program",
+      "battery",
+      "clean_time"
+    ],
+    "mqttFeatureNames": {
+      "speed": "suction"
+    }
+  },
+  "vendor": "polaris",
+  "features": [
+    "program",
+    "battery",
+    "timer",
+    "clean_time",
+    "speed",
+    "expendables",
+    "recipe",
+    "demo"
+  ],
+  "messages": {
+    "diag": {
+      "ar-AE": "اضغط على زر السرعة لمدة 10 ثواني. سيبدأ مؤشر Wi-Fi في الوميض بسرعة.",
+      "de-DE": "Drücken Sie die Geschwindigkeitstaste 10 Sekunden lang. Die Wi-Fi-Anzeige beginnt schnell zu blinken.",
+      "en-US": "Press the speed button for 10 seconds. The Wi-Fi indicator will start flashing quickly.",
+      "kk-KZ": "Жылдамдық түймесін 10 секунд басыңыз. Wi-Fi индикаторы жылдам жыпылықтай бастайды.",
+      "ru-RU": "Зажмите кнопку переключения скорости на 10 секунд. Индикатор Wi-Fi начнет быстро мигать. ",
+      "uk-UA": "Натисніть кнопку перемикання швидкості на 10 секунд. Індикатор Wi-Fi швидко блимає."
+    },
+    "pair": {
+      "ar-AE": "اضغط على زر السرعة لمدة ثانيتين. سيبدأ مؤشر Wi-Fi في الوميض.",
+      "de-DE": "Drücken Sie die Geschwindigkeitstaste 2 Sekunden lang. Die Wi-Fi-Anzeige beginnt zu blinken.",
+      "en-US": "Press the speed button for 2 seconds. The Wi-Fi indicator will start blinking.",
+      "kk-KZ": "Жылдамдық түймесін 2 секунд басыңыз. Wi-Fi индикаторы жыпылықтай бастайды.",
+      "ru-RU": "Зажмите кнопку переключения скорости на 2 секунды. Индикатор Wi-Fi начнет мигать.",
+      "uk-UA": "Натисніть кнопку перемикання швидкості на 2 секунди. Індикатор Wi-Fi почне блимати."
+    },
+    "reset": {
+      "ar-AE": "اضغط على زر التشغيل/الإيقاف لمدة 10 ثوانٍ. للتأكيد، سيومض مؤشر Wi-Fi ببطء 3 مرات ثم ينطفئ.",
+      "de-DE": "Drücken Sie die Ein-/Aus-Taste 10 Sekunden lang. Zur Bestätigung blinkt die WLAN-Anzeige dreimal langsam und erlischt dann.",
+      "en-US": "Press the on/off button for 10 seconds. To confirm, the Wi-Fi indicator will blink slowly 3 times and then turn off.",
+      "kk-KZ": "Қосу/өшіру түймесін 10 секунд басыңыз. Растау үшін Wi-Fi индикаторы 3 рет баяу жыпылықтайды, содан кейін өшеді.",
+      "ru-RU": "Зажмите кнопку вкл/выкл на 10 секунд. В подтверждение индикатор Wi-Fi медленно мигнет 3 раза, затем погаснет.",
+      "uk-UA": "Натисніть кнопку увімк/вимк на 10 секунд. На підтвердження індикатор Wi-Fi повільно блимає 3 рази, потім згасне."
+    },
+    "enable": {
+      "ar-AE": "لتكوين الجهاز أو تحديث البرنامج، يرجى وضع الجهاز على قاعدة الشحن، والتأكد من توصيله بمنفذ.",
+      "de-DE": "Um das Gerät zu konfigurieren oder die Software zu aktualisieren, stellen Sie das Gerät bitte auf die Ladestation und stellen Sie sicher, dass es an eine Steckdose angeschlossen ist.",
+      "en-US": "To configure the device or update the software, please place the device on the charging base, making sure it is connected to an outlet.",
+      "kk-KZ": "Құрылғыны конфигурациялау немесе бағдарламалық құралды жаңарту үшін оның розеткаға қосылғанына көз жеткізіп, оны зарядтау негізіне қойыңыз.",
+      "ru-RU": "Чтобы сконфигурировать устройство или обновить ПО, пожалуйста, установите устройство на базу подзарядки, убедитесь, что она подключена к розетке.",
+      "uk-UA": "Щоб конфігурувати пристрій або оновити програмне забезпечення, будь ласка, встановіть пристрій на базу підзарядки, переконайтеся, що вона підключена до розетки."
+    },
+    "error.1": {
+      "ar-AE": "الشاحن معيب",
+      "de-DE": "Das Ladegerät ist defekt",
+      "en-US": "Charger abnormal",
+      "kk-KZ": "Зарядтағыш ақаулы",
+      "ru-RU": "Зарядное устройство неисправно",
+      "uk-UA": "Зарядний пристрій несправний"
+    },
+    "error.2": {
+      "ar-AE": "تحقق من المحرك الرئيسي",
+      "de-DE": "Überprüfen Sie den Hauptmotor",
+      "en-US": "Check the main motor",
+      "kk-KZ": "Негізгі қозғалтқышты тексеріңіз",
+      "ru-RU": "Проверьте главный мотор",
+      "uk-UA": "Перевірте головний двигун"
+    },
+    "error.3": {
+      "ar-AE": "عملت حماية الزائد للمحرك الرئيسي",
+      "de-DE": "Überlastschutz des Hauptmotors hat funktioniert",
+      "en-US": "The main motor is overloaded",
+      "kk-KZ": "Негізгі қозғалтқыштың шамадан тыс жүктелуінен қорғау жұмыс істеді",
+      "ru-RU": "Сработала защита от перегрузки главного мотора",
+      "uk-UA": "Спрацював захист від перевантаження головного мотора"
+    },
+    "error.4": {
+      "ar-AE": "لا يوجد اتصال مع متحكم",
+      "de-DE": "Keine Verbindung zum Mikrocontroller",
+      "en-US": "No connection with the microcontroller",
+      "kk-KZ": "Микроконтроллермен байланыс жоқ",
+      "ru-RU": "Нет связи с микроконтроллером",
+      "uk-UA": "Немає зв'язку з мікроконтролером"
+    },
+    "error.5": {
+      "ar-AE": "مستشعر درجة الحرارة معيب",
+      "de-DE": "Temperatursensor defekt",
+      "en-US": "Temperature sensor abnormal",
+      "kk-KZ": "Температура сенсоры ақаулы",
+      "ru-RU": "Датчик температуры неисправен",
+      "uk-UA": "Датчик температури несправний"
+    },
+    "error.6": {
+      "ar-AE": "درجة حرارة البطارية عالية / منخفضة",
+      "de-DE": "Die Batterietemperatur ist hoch/niedrig",
+      "en-US": "Battery temperature is high/low",
+      "kk-KZ": "Батарея температурасы жоғары/төмен",
+      "ru-RU": "Температура батареи высокая/низкая",
+      "uk-UA": "Температура батареї Висока / Низька"
+    },
+    "error.7": {
+      "ar-AE": "يتم حظر فرشاة الكلمة",
+      "de-DE": "Die Bodenbürste ist blockiert",
+      "en-US": "Floor brush blocked",
+      "kk-KZ": "Еден щеткасы бұғатталған",
+      "ru-RU": "Щётка для пола заблокирована",
+      "uk-UA": "Щітка для підлоги заблокована"
+    },
+    "error.8": {
+      "ar-AE": "فلتر غير مثبت",
+      "de-DE": "Der Filter ist nicht installiert",
+      "en-US": "Filter not installed",
+      "kk-KZ": "Сүзгі орнатылмаған",
+      "ru-RU": "Фильтр не установлен",
+      "uk-UA": "Фільтр не встановлений"
+    },
+    "error.9": {
+      "ar-AE": "يرجى استبدال فلتر HEPA.",
+      "de-DE": "Bitte ersetzen Sie den HEPA-Filter.",
+      "en-US": "Please replace the HEPA filter.",
+      "kk-KZ": "HEPA сүзгісін ауыстырыңыз.",
+      "ru-RU": "Пожалуйста, замените HEPA фильтр.",
+      "uk-UA": "Будь ласка, замініть фільтр HEPA."
+    },
+    "error.20": {
+      "ar-AE": "حاوية الغبار ممتلئة",
+      "de-DE": "Der Staubbehälter ist voll. Bitte leeren Sie ihn",
+      "en-US": "The dustbin is full. Please empty it",
+      "kk-KZ": "Шаң жинау ыдысы толы. Оны тазалап беріңізші",
+      "ru-RU": "Контейнер для пыли переполнен. Пожалуйста, очистите его",
+      "uk-UA": "Контейнер для збирання пилу заповнений. Будь ласка, очистіть його"
+    },
+    "url.manual": {
+      "ar-AE": "https://images.cdn.polaris-iot.com/pdf/polaris/233/PVCSDC3005_User Manual_v3_ru_kz.pdf",
+      "de-DE": "https://images.cdn.polaris-iot.com/pdf/polaris/233/PVCSDC3005_User Manual_v3_ru_kz.pdf",
+      "en-US": "https://images.cdn.polaris-iot.com/pdf/polaris/233/PVCSDC3005_User Manual_v3_ru_kz.pdf",
+      "kk-KZ": "https://images.cdn.polaris-iot.com/pdf/polaris/233/PVCSDC3005_User Manual_v3_ru_kz.pdf",
+      "ru-RU": "https://images.cdn.polaris-iot.com/pdf/polaris/233/PVCSDC3005_User Manual_v3_ru_kz.pdf",
+      "uk-UA": "https://images.cdn.polaris-iot.com/pdf/polaris/233/PVCSDC3005_User Manual_v3_ru_kz.pdf"
+    },
+    "url.catalog": {
+      "ar-AE": "https://polaris.ru/catalog/portativnye-pylesosy/polaris-pvcsdc-3005-wifi-iq-home-white/",
+      "de-DE": "https://polaris.ru/catalog/portativnye-pylesosy/polaris-pvcsdc-3005-wifi-iq-home-white/",
+      "en-US": "https://polaris.ru/catalog/portativnye-pylesosy/polaris-pvcsdc-3005-wifi-iq-home-white/",
+      "kk-KZ": "https://polaris.ru/catalog/portativnye-pylesosy/polaris-pvcsdc-3005-wifi-iq-home-white/",
+      "ru-RU": "https://polaris.ru/catalog/portativnye-pylesosy/polaris-pvcsdc-3005-wifi-iq-home-white/",
+      "uk-UA": "https://polaris.ru/catalog/portativnye-pylesosy/polaris-pvcsdc-3005-wifi-iq-home-white/"
+    },
+    "expendable.0": {
+      "ar-AE": "منقي",
+      "de-DE": "Filter",
+      "en-US": "Filter",
+      "kk-KZ": "Сүзгі",
+      "ru-RU": "Фильтр",
+      "uk-UA": "Фільтр"
+    },
+    "attr.title.appearance": {
+      "de-DE": "Modell",
+      "en-US": "Model",
+      "kk-KZ": "Үлгі",
+      "ru-RU": "Модель",
+      "uk-UA": "Модель"
+    },
+    "history.clean_time.suffix": {
+      "en-US": "min",
+      "ru-RU": "мин"
+    },
+    "attr.appearance.white.title": {
+      "ar-AE": "أبيض",
+      "de-DE": "Weiß",
+      "en-US": "White",
+      "kk-KZ": "Ақ",
+      "ru-RU": "Белый",
+      "uk-UA": "білий"
+    },
+    "attr.appearance.dark_gray.title": {
+      "de-DE": "Dunkelgrau",
+      "en-US": "Dark gray",
+      "kk-KZ": "Қою сұр",
+      "ru-RU": "Темно-серый",
+      "uk-UA": "Темно-сірий"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off",
+        "kk-KZ": "Өшіру",
+        "ru-RU": "Выкл",
+        "uk-UA": "Вимкнено"
+      },
+      "hidden": true,
+      "limits": {
+        "pressure": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "name": {
+        "en-US": "On"
+      },
+      "hidden": false,
+      "limits": {
+        "pressure": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "pair": {
+      "60": "https://images.cdn.polaris-iot.com/4/73/c123a-65d9-4107-8ac5-645b7c4a8799/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/4/73/c123a-65d9-4107-8ac5-645b7c4a8799/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/4/73/c123a-65d9-4107-8ac5-645b7c4a8799/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/4/73/c123a-65d9-4107-8ac5-645b7c4a8799/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/4/73/c123a-65d9-4107-8ac5-645b7c4a8799/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/4/73/c123a-65d9-4107-8ac5-645b7c4a8799/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/4/73/c123a-65d9-4107-8ac5-645b7c4a8799/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/4/73/c123a-65d9-4107-8ac5-645b7c4a8799/1800.webp",
+      "id": "473c123a-65d9-4107-8ac5-645b7c4a8799",
+      "original": "https://images.cdn.polaris-iot.com/4/73/c123a-65d9-4107-8ac5-645b7c4a8799/original.webp"
+    },
+    "manualbg": {
+      "60": "https://images.cdn.polaris-iot.com/f/f4/0f1cf-6676-4f5b-b725-8f1f190e15f9/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/f/f4/0f1cf-6676-4f5b-b725-8f1f190e15f9/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/f/f4/0f1cf-6676-4f5b-b725-8f1f190e15f9/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/f/f4/0f1cf-6676-4f5b-b725-8f1f190e15f9/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/f/f4/0f1cf-6676-4f5b-b725-8f1f190e15f9/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/f/f4/0f1cf-6676-4f5b-b725-8f1f190e15f9/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/f/f4/0f1cf-6676-4f5b-b725-8f1f190e15f9/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/f/f4/0f1cf-6676-4f5b-b725-8f1f190e15f9/1800.webp",
+      "id": "ff40f1cf-6676-4f5b-b725-8f1f190e15f9",
+      "original": "https://images.cdn.polaris-iot.com/f/f4/0f1cf-6676-4f5b-b725-8f1f190e15f9/original.webp"
+    },
+    "attr.appearance.white.image": {
+      "60": "https://images.cdn.polaris-iot.com/a/f1/594d1-9987-4681-8aea-10ec46dc0e55/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/a/f1/594d1-9987-4681-8aea-10ec46dc0e55/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/a/f1/594d1-9987-4681-8aea-10ec46dc0e55/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/a/f1/594d1-9987-4681-8aea-10ec46dc0e55/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/a/f1/594d1-9987-4681-8aea-10ec46dc0e55/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/a/f1/594d1-9987-4681-8aea-10ec46dc0e55/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/a/f1/594d1-9987-4681-8aea-10ec46dc0e55/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/a/f1/594d1-9987-4681-8aea-10ec46dc0e55/1800.webp",
+      "id": "af1594d1-9987-4681-8aea-10ec46dc0e55",
+      "original": "https://images.cdn.polaris-iot.com/a/f1/594d1-9987-4681-8aea-10ec46dc0e55/original.webp"
+    },
+    "attr.appearance.dark_gray.image": {
+      "60": "https://images.cdn.polaris-iot.com/e/0c/2e90f-b89a-494b-ba3d-33c92c2f21b7/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/e/0c/2e90f-b89a-494b-ba3d-33c92c2f21b7/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/e/0c/2e90f-b89a-494b-ba3d-33c92c2f21b7/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/e/0c/2e90f-b89a-494b-ba3d-33c92c2f21b7/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/e/0c/2e90f-b89a-494b-ba3d-33c92c2f21b7/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/e/0c/2e90f-b89a-494b-ba3d-33c92c2f21b7/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/e/0c/2e90f-b89a-494b-ba3d-33c92c2f21b7/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/e/0c/2e90f-b89a-494b-ba3d-33c92c2f21b7/1800.webp",
+      "id": "e0c2e90f-b89a-494b-ba3d-33c92c2f21b7",
+      "original": "https://images.cdn.polaris-iot.com/e/0c/2e90f-b89a-494b-ba3d-33c92c2f21b7/original.webp"
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1753964379,
+  "temperature_units": "celsius"
+}

@@ -1,0 +1,2053 @@
+{
+  "id": "22a36709-e081-424f-bf13-64ed344a5b17",
+  "name": "PAF-4001WIFI",
+  "type": 273,
+  "class": "air_fryer",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/900.webp",
+    "1200": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/1200.webp",
+    "1800": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/1800.webp",
+    "id": "ce36185e-c768-4283-95d4-07fa5ffe7448",
+    "original": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/original.webp"
+  },
+  "layout": {
+    "home.top": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "timer",
+        "feature": "timer",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ]
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "program",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ]
+      }
+    ],
+    "manual.bottom": [
+      {
+        "type": "button_power",
+        "position": 0
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "type": "info",
+        "feature": "program",
+        "position": 2
+      },
+      {
+        "type": "info",
+        "feature": "temperature",
+        "position": 2
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M2,10h20v4h-20z",
+        "type": "info",
+        "title": {
+          "ar-AE": "الوعاء غير مثبت",
+          "de-DE": "Schüssel nicht installiert",
+          "en-US": "Inner pot not installed",
+          "kk-KZ": "Құмыра орнатылмаған",
+          "ru-RU": "Чаша не установлена",
+          "uk-UA": "Чаша не встановлена"
+        },
+        "feature": "temperature",
+        "position": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "work_staus",
+              "value": 2,
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 3
+      },
+      {
+        "type": "container_head",
+        "position": 4
+      },
+      {
+        "icon": "M0,0h28v28V0M25.5478,22.5c-1.1025,0-2-.897-2-2V7.5c0-1.103.8975-2,2-2s2,.897,2,2v13c0,1.103-.8975,2-2,2ZM25.5478,6.5c-.5518,0-1,.4487-1,1v13c0,.5513.4482,1,1,1s1-.4487,1-1V7.5c0-.5513-.4482-1-1-1ZM18.5478,22.5c-1.1025,0-2-.897-2-2V7.5c0-1.103.8975-2,2-2s2,.897,2,2v13c0,1.103-.8975,2-2,2ZM18.5478,6.5c-.5518,0-1,.4487-1,1v13c0,.5513.4482,1,1,1s1-.4487,1-1V7.5c0-.5513-.4482-1-1-1ZM2.0214,22.4932c-.248,0-.498-.0596-.7275-.1797-.5186-.271-.8408-.8037-.8408-1.3896V7.0732c0-.5859.3223-1.1187.8408-1.3896.5195-.2715,1.1416-.2319,1.6221.1016l9.9658,6.9253h0c.4219.2935.6729.7749.6729,1.2881s-.251.9946-.6729,1.2881l-9.9658,6.9253c-.2686.1865-.5811.2812-.8945.2812ZM2.0224,6.5034c-.0898,0-.1797.022-.2646.0659-.1904.1001-.3047.2881-.3047.5039v13.8506c0,.2158.1143.4038.3047.5039.1904.0986.4102.085.5879-.0371l9.9658-6.9253c.1543-.1079.2432-.2778.2432-.4668s-.0889-.3589-.2432-.4668L2.3456,6.6064c-.0986-.0684-.2109-.103-.3232-.103Z",
+        "type": "button",
+        "title": {
+          "ar-AE": "إيقاف مؤقت",
+          "de-DE": "Pause",
+          "en-US": "Pause",
+          "kk-KZ": "Уақытша тоқтату",
+          "ru-RU": "Пауза",
+          "uk-UA": "Пауза"
+        },
+        "action": {
+          "program_data": {
+            "field": "work_staus",
+            "value": 1,
+            "program": [
+              0
+            ]
+          }
+        },
+        "position": 5,
+        "condition": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "work_staus",
+              "value": 1,
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "work_staus",
+            "value": 0,
+            "program": [
+              0
+            ]
+          }
+        },
+        "precondition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          },
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "fill",
+        "position": 5
+      },
+      {
+        "type": "container_tail",
+        "position": 6
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5400,
+          "min": 60,
+          "step": 60,
+          "round": 1,
+          "default": 300,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              1
+            ]
+          },
+          {
+            "source": "selection",
+            "temperature": {
+              "max": 220,
+              "min": 105
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 18000,
+          "min": 60,
+          "step": 60,
+          "round": 1,
+          "default": 300,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              1
+            ]
+          },
+          {
+            "source": "selection",
+            "temperature": {
+              "max": 100,
+              "min": 35
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 2400,
+          "min": 600,
+          "step": 60,
+          "round": 1,
+          "default": 1500,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              2
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5400,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 1800,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              3
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 2400,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 600,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              4
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 2400,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 1200,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              5
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 3600,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 1500,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              6
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 8
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 100,
+          "min": 35,
+          "step": 5,
+          "round": 1,
+          "default": 100,
+          "roundAlt": 1
+        },
+        "points": {
+          "35": {
+            "label": "35°"
+          },
+          "40": {
+            "label": "40°"
+          },
+          "50": {
+            "label": "50°"
+          },
+          "60": {
+            "label": "60°"
+          },
+          "70": {
+            "label": "70°"
+          },
+          "80": {
+            "label": "80°"
+          },
+          "90": {
+            "label": "90°"
+          },
+          "100": {
+            "label": "100°"
+          }
+        },
+        "feature": "temperature",
+        "position": 9,
+        "step_ticks": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "and": [
+              {
+                "not": {
+                  "or": [
+                    {
+                      "source": "selection",
+                      "program": [
+                        2
+                      ]
+                    },
+                    {
+                      "source": "selection",
+                      "program": [
+                        3
+                      ]
+                    },
+                    {
+                      "source": "selection",
+                      "program": [
+                        4
+                      ]
+                    },
+                    {
+                      "source": "selection",
+                      "program": [
+                        5
+                      ]
+                    },
+                    {
+                      "source": "selection",
+                      "program": [
+                        6
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "timer": {
+                  "max": 18000,
+                  "min": 5401
+                },
+                "source": "selection"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 220,
+          "min": 35,
+          "step": 5,
+          "round": 1,
+          "default": 100,
+          "roundAlt": 1
+        },
+        "points": {
+          "35": {
+            "label": "35°"
+          },
+          "60": {
+            "label": "60°"
+          },
+          "80": {
+            "label": "80°"
+          },
+          "100": {
+            "label": "100°"
+          },
+          "120": {
+            "label": "120°"
+          },
+          "140": {
+            "label": "140°"
+          },
+          "160": {
+            "label": "160°"
+          },
+          "180": {
+            "label": "180°"
+          },
+          "200": {
+            "label": "200°"
+          },
+          "220": {
+            "label": "220°"
+          }
+        },
+        "feature": "temperature",
+        "position": 9,
+        "step_ticks": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "and": [
+              {
+                "not": {
+                  "or": [
+                    {
+                      "source": "selection",
+                      "program": [
+                        2
+                      ]
+                    },
+                    {
+                      "source": "selection",
+                      "program": [
+                        3
+                      ]
+                    },
+                    {
+                      "source": "selection",
+                      "program": [
+                        4
+                      ]
+                    },
+                    {
+                      "source": "selection",
+                      "program": [
+                        5
+                      ]
+                    },
+                    {
+                      "source": "selection",
+                      "program": [
+                        6
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "timer": {
+                  "max": 5400,
+                  "min": 60
+                },
+                "source": "selection"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 220,
+          "min": 35,
+          "step": 5,
+          "round": 1,
+          "default": 200,
+          "roundAlt": 1
+        },
+        "points": {
+          "35": {
+            "label": "35°"
+          },
+          "60": {
+            "label": "60°"
+          },
+          "80": {
+            "label": "80°"
+          },
+          "100": {
+            "label": "100°"
+          },
+          "120": {
+            "label": "120°"
+          },
+          "140": {
+            "label": "140°"
+          },
+          "160": {
+            "label": "160°"
+          },
+          "180": {
+            "label": "180°"
+          },
+          "200": {
+            "label": "200°"
+          },
+          "220": {
+            "label": "220°"
+          }
+        },
+        "feature": "temperature",
+        "position": 9,
+        "step_ticks": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "source": "selection",
+            "program": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 220,
+          "min": 35,
+          "step": 5,
+          "round": 1,
+          "default": 190,
+          "roundAlt": 1
+        },
+        "points": {
+          "35": {
+            "label": "35°"
+          },
+          "60": {
+            "label": "60°"
+          },
+          "80": {
+            "label": "80°"
+          },
+          "100": {
+            "label": "100°"
+          },
+          "120": {
+            "label": "120°"
+          },
+          "140": {
+            "label": "140°"
+          },
+          "160": {
+            "label": "160°"
+          },
+          "180": {
+            "label": "180°"
+          },
+          "200": {
+            "label": "200°"
+          },
+          "220": {
+            "label": "220°"
+          }
+        },
+        "feature": "temperature",
+        "position": 9,
+        "step_ticks": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "source": "selection",
+            "program": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 220,
+          "min": 35,
+          "step": 5,
+          "round": 1,
+          "default": 200,
+          "roundAlt": 1
+        },
+        "points": {
+          "35": {
+            "label": "35°"
+          },
+          "60": {
+            "label": "60°"
+          },
+          "80": {
+            "label": "80°"
+          },
+          "100": {
+            "label": "100°"
+          },
+          "120": {
+            "label": "120°"
+          },
+          "140": {
+            "label": "140°"
+          },
+          "160": {
+            "label": "160°"
+          },
+          "180": {
+            "label": "180°"
+          },
+          "200": {
+            "label": "200°"
+          },
+          "220": {
+            "label": "220°"
+          }
+        },
+        "feature": "temperature",
+        "position": 9,
+        "step_ticks": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "source": "selection",
+            "program": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 220,
+          "min": 35,
+          "step": 5,
+          "round": 1,
+          "default": 180,
+          "roundAlt": 1
+        },
+        "points": {
+          "35": {
+            "label": "35°"
+          },
+          "60": {
+            "label": "60°"
+          },
+          "80": {
+            "label": "80°"
+          },
+          "100": {
+            "label": "100°"
+          },
+          "120": {
+            "label": "120°"
+          },
+          "140": {
+            "label": "140°"
+          },
+          "160": {
+            "label": "160°"
+          },
+          "180": {
+            "label": "180°"
+          },
+          "200": {
+            "label": "200°"
+          },
+          "220": {
+            "label": "220°"
+          }
+        },
+        "feature": "temperature",
+        "position": 9,
+        "step_ticks": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "source": "selection",
+            "program": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 220,
+          "min": 35,
+          "step": 5,
+          "round": 1,
+          "default": 170,
+          "roundAlt": 1
+        },
+        "points": {
+          "35": {
+            "label": "35°"
+          },
+          "60": {
+            "label": "60°"
+          },
+          "80": {
+            "label": "80°"
+          },
+          "100": {
+            "label": "100°"
+          },
+          "120": {
+            "label": "120°"
+          },
+          "140": {
+            "label": "140°"
+          },
+          "160": {
+            "label": "160°"
+          },
+          "180": {
+            "label": "180°"
+          },
+          "200": {
+            "label": "200°"
+          },
+          "220": {
+            "label": "220°"
+          }
+        },
+        "feature": "temperature",
+        "position": 9,
+        "step_ticks": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "source": "selection",
+            "program": [
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 10
+      },
+      {
+        "type": "container_head",
+        "position": 11
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "إعدادات",
+          "de-DE": "Einstellungen",
+          "en-US": "Settings",
+          "kk-KZ": "Параметрлер",
+          "ru-RU": "Настройки",
+          "uk-UA": "Налаштування"
+        },
+        "position": 12
+      },
+      {
+        "type": "button",
+        "feature": "program",
+        "position": 13,
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "recipe",
+        "position": 13,
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "layout": "userPresets",
+        "position": 13,
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 13,
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 14
+      }
+    ],
+    "manual.shortcuts": [
+      {
+        "type": "button",
+        "feature": "recipe",
+        "position": 0,
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            6
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      }
+    ],
+    "userPresets.list": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Custom modes",
+          "ru-RU": "Персональные режимы"
+        },
+        "position": 0
+      },
+      {
+        "row": "userPresets",
+        "type": "info",
+        "position": 1
+      },
+      {
+        "row": "savePreset",
+        "type": "button",
+        "title": {
+          "en-US": "Add",
+          "ru-RU": "Добавить"
+        },
+        "position": 2
+      }
+    ]
+  },
+  "limits": {
+    "timer": {
+      "max": 43200,
+      "min": 60,
+      "step": 60,
+      "round": 1,
+      "default": 7200,
+      "round_alt": 1
+    },
+    "child_lock": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "multi_step": {
+      "max": 1,
+      "min": 1,
+      "step": 1,
+      "round": 1,
+      "default": 1,
+      "round_alt": 1
+    },
+    "temperature": {
+      "max": 220,
+      "min": 35,
+      "step": 5,
+      "round": 1,
+      "default": 100,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "PAF-4001WIFI",
+          "manufacturer": "polaris"
+        },
+        "type": "devices.types.cooking",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "steps": [
+                {
+                  "timer": 300,
+                  "program": [
+                    1
+                  ],
+                  "temperature": 100
+                }
+              ]
+            },
+            "actionOff": {
+              "steps": []
+            },
+            "condition": {
+              "not": {
+                "multi_step": 0
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "slider",
+            "limit": {
+              "max": 220,
+              "min": 35,
+              "step": 5,
+              "round": 1,
+              "default": 100,
+              "roundAlt": 1
+            },
+            "action": {
+              "steps": [
+                {
+                  "timer": 1200,
+                  "program": [
+                    1
+                  ],
+                  "temperature": 115
+                }
+              ]
+            },
+            "feature": "temperature",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "three",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 1800,
+                      "program": [
+                        3
+                      ],
+                      "temperature": 180
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "two",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 1320,
+                      "program": [
+                        2
+                      ],
+                      "temperature": 190
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "one",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 300,
+                      "program": [
+                        1
+                      ],
+                      "temperature": 100
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "four",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 600,
+                      "program": [
+                        4
+                      ],
+                      "temperature": 200
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "five",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 900,
+                      "program": [
+                        5
+                      ],
+                      "temperature": 200
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "six",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 1500,
+                      "program": [
+                        6
+                      ],
+                      "temperature": 160
+                    }
+                  ]
+                }
+              }
+            ],
+            "instance": "program",
+            "retrievable": false
+          },
+          {
+            "type": "switch",
+            "feature": "child_lock",
+            "instance": "controls_locked",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "instance": "input_source",
+            "retrievable": false
+          }
+        ]
+      }
+    },
+    "hidden": false,
+    "barcode": "5055539149626",
+    "shortcuts": [
+      {
+        "values": {
+          "recipe": 1
+        }
+      },
+      {
+        "program": [
+          1
+        ]
+      },
+      {
+        "program": [
+          2
+        ]
+      },
+      {
+        "program": [
+          3
+        ]
+      }
+    ],
+    "userPresets": true,
+    "adminPresets": true,
+    "hotspot_ssid": "PAF-4001",
+    "modeFunction": true,
+    "program_data": {
+      "0": [
+        {
+          "max": 2,
+          "min": 0,
+          "name": "work_staus",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "voiceControl": {
+      "intents": {
+        "status": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {}
+              }
+            },
+            "program": {
+              "values": {
+                "program": {
+                  "type": "program_name"
+                }
+              }
+            }
+          }
+        },
+        "program": {
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          },
+          "values": {
+            "timer": {},
+            "program": {
+              "enum_values": {
+                "program_pie": {
+                  "action": {
+                    "program": [
+                      6
+                    ]
+                  }
+                },
+                "program_steak": {
+                  "action": {
+                    "program": [
+                      4
+                    ]
+                  }
+                },
+                "program_chicken": {
+                  "action": {
+                    "program": [
+                      3
+                    ]
+                  }
+                },
+                "program_vegetables": {
+                  "action": {
+                    "program": [
+                      5
+                    ]
+                  }
+                },
+                "program_french_friers": {
+                  "action": {
+                    "program": [
+                      2
+                    ]
+                  }
+                },
+                "program_my_recipe_plus": {
+                  "query": {
+                    "timer": {},
+                    "temperature": {}
+                  },
+                  "action": {
+                    "program": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            "temperature": {}
+          }
+        },
+        "rollcall": {
+          "status": {
+            "ready": {}
+          }
+        },
+        "device_on": {
+          "action": {
+            "program": [
+              1
+            ]
+          },
+          "errors": {
+            "deviceBusy": {
+              "condition": [],
+              "allowControl": false
+            }
+          }
+        },
+        "greetings": {
+          "status": {
+            "ready": {}
+          }
+        },
+        "device_off": {
+          "action": {
+            "program": [
+              0
+            ]
+          }
+        },
+        "status.full": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {}
+              }
+            },
+            "program": {
+              "values": {
+                "program": {
+                  "type": "program_name"
+                }
+              }
+            },
+            "child_lock": {
+              "items": {
+                "on": {},
+                "off": {}
+              }
+            }
+          }
+        },
+        "child_lock.on": {
+          "action": {
+            "child_lock": 1
+          }
+        },
+        "child_lock.off": {
+          "action": {
+            "child_lock": 0
+          }
+        },
+        "temperature_set": {
+          "values": {
+            "temperature": {}
+          }
+        }
+      },
+      "betaIntents": {
+        "status": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {}
+              }
+            },
+            "program": {
+              "values": {
+                "program": {
+                  "type": "program_name"
+                }
+              }
+            }
+          }
+        },
+        "program": {
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          },
+          "values": {
+            "timer": {},
+            "program": {
+              "enum_values": {
+                "program_pie": {
+                  "action": {
+                    "program": [
+                      6
+                    ]
+                  }
+                },
+                "program_steak": {
+                  "action": {
+                    "program": [
+                      4
+                    ]
+                  }
+                },
+                "program_chicken": {
+                  "action": {
+                    "program": [
+                      3
+                    ]
+                  }
+                },
+                "program_vegetables": {
+                  "action": {
+                    "program": [
+                      5
+                    ]
+                  }
+                },
+                "program_french_friers": {
+                  "action": {
+                    "program": [
+                      2
+                    ]
+                  }
+                },
+                "program_my_recipe_plus": {
+                  "query": {
+                    "timer": {},
+                    "temperature": {}
+                  },
+                  "action": {
+                    "program": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            "temperature": {}
+          }
+        },
+        "rollcall": {
+          "status": {
+            "ready": {}
+          }
+        },
+        "device_on": {
+          "action": {
+            "program": [
+              1
+            ]
+          },
+          "errors": {
+            "deviceBusy": {
+              "condition": [],
+              "allowControl": false
+            }
+          }
+        },
+        "greetings": {
+          "status": {
+            "ready": {}
+          }
+        },
+        "device_off": {
+          "action": {
+            "program": [
+              0
+            ]
+          }
+        },
+        "status.full": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {}
+              }
+            },
+            "program": {
+              "values": {
+                "program": {
+                  "type": "program_name"
+                }
+              }
+            },
+            "child_lock": {
+              "items": {
+                "on": {},
+                "off": {}
+              }
+            }
+          }
+        },
+        "child_lock.on": {
+          "action": {
+            "child_lock": 1
+          }
+        },
+        "child_lock.off": {
+          "action": {
+            "child_lock": 0
+          }
+        },
+        "temperature_set": {
+          "values": {
+            "temperature": {}
+          }
+        }
+      }
+    },
+    "max_steps_time": 57600,
+    "multiStepFields": [
+      "temperature",
+      "timer"
+    ],
+    "openMqttSupport": true,
+    "shareblePresets": true,
+    "manualInfoFields": [
+      "program",
+      "temperature",
+      "timer"
+    ],
+    "open_mqtt_support": true,
+    "excludeScheduleFeatures": [
+      "keep_warm"
+    ]
+  },
+  "vendor": "polaris",
+  "features": [
+    "program",
+    "temperature",
+    "timer",
+    "multi_step",
+    "recipe",
+    "demo",
+    "child_lock",
+    "current_temperature"
+  ],
+  "messages": {
+    "diag": {
+      "ar-AE": "اضغط مع الاستمرار على الأزرار \"+\" و \"-\" في نفس الوقت حتى سماع صفير واحد. انتظر 10 ثوانٍ. سيبدأ مؤشر الواي فاي في الوميض.",
+      "de-DE": "Drücken Sie gleichzeitig die Tasten \"+\" und \"-\" bis zu einem Piepton. Warten Sie 10 Sekunden. Die Wi-Fi-Anzeige beginnt zu blinken.",
+      "en-US": "Press and hold the \"+\" and \"-\" buttons simultaneously until 1 beep. Wait for 10 seconds. The Wi-Fi indicator will start blinking.",
+      "kk-KZ": "\"+\" және \"-\" батырмаларын бір уақытта 1 дыбыстық сигналға дейін басып тұрыңыз. 10 секунд күтіңіз. Wi-Fi индикаторы мигауға бастайды.",
+      "ru-RU": "Зажмите и удерживайте одновременно кнопки \"+\" и \"-\" до 1 звукового сигнала. Подождите 10 секунд. Индикатор Wi-Fi начнет мигать.",
+      "uk-UA": "Одночасно утримуйте кнопки \"+\" та \"-\" до 1 звукового сигналу. Почекайте 10 секунд. Індикатор Wi-Fi почне блимати."
+    },
+    "pair": {
+      "ar-AE": "اضغط مع الاستمرار على الأزرار \"+\" و \"-\" في نفس الوقت حتى سماع صفير واحد. تأكيدًا، سيبدأ مؤشر الواي فاي في الوميض.",
+      "de-DE": "Drücken Sie gleichzeitig die Tasten \"+\" und \"-\" bis zu einem Piepton. Zur Bestätigung beginnt die Wi-Fi-Anzeige zu blinken.",
+      "en-US": "Press and hold the \"+\" and \"-\" buttons simultaneously until 1 beep. The Wi-Fi indicator will start blinking as confirmation.",
+      "kk-KZ": "\"+\" және \"-\" батырмаларын бір уақытта 1 дыбыстық сигналға дейін басып тұрыңыз. Растау үшін Wi-Fi индикаторы мигауға бастайды.",
+      "ru-RU": "Зажмите и удерживайте одновременно кнопки \"+\" и \"-\" до 1 звукового сигнала. В подтверждение индикатор Wi-Fi начнет мигать.",
+      "uk-UA": "Одночасно утримуйте кнопки \"+\" та \"-\" до 1 звукового сигналу. Для підтвердження індикатор Wi-Fi почне блимати."
+    },
+    "reset": {
+      "ar-AE": "اضغط مع الاستمرار على الأزرار \"+\" و \"-\" في نفس الوقت حتى سماع ثلاث صفير. سيطفأ مؤشر الواي فاي.",
+      "de-DE": "Drücken Sie gleichzeitig die Tasten \"+\" und \"-\" bis zu drei Pieptönen. Die Wi-Fi-Anzeige wird ausgeschaltet.",
+      "en-US": "Press and hold the \"+\" and \"-\" buttons simultaneously until 3 beeps. The Wi-Fi indicator will turn off.",
+      "kk-KZ": "\"+\" және \"-\" батырмаларын бір уақытта 3 дыбыстық сигналға дейін басып тұрыңыз. Wi-Fi индикаторы сөнеді.",
+      "ru-RU": "Зажмите и удерживайте одновременно кнопки \"+\" и \"-\" до 3 звуковых сигналов. Индикатор Wi-Fi погаснет.",
+      "uk-UA": "Одночасно утримуйте кнопки \"+\" та \"-\" до 3 звукових сигналів. Індикатор Wi-Fi вимкнеться."
+    },
+    "error.1": {
+      "en-US": "Temperature sensor failure",
+      "kk-KZ": "Жылу датчигінің қатесі",
+      "ru-RU": "Ошибка термодатчика",
+      "uk-UA": "Несправність датчика температури"
+    },
+    "error.2": {
+      "en-US": "Temperature sensor failure",
+      "kk-KZ": "Жылу датчигінің қатесі",
+      "ru-RU": "Ошибка термодатчика",
+      "uk-UA": "Несправність датчика температури"
+    },
+    "error.3": {
+      "en-US": "Child lock operated",
+      "kk-KZ": "Кездейсоқ басудан қорғау атқарылды",
+      "ru-RU": "Сработала защита от случайного нажатия",
+      "uk-UA": "Функція захисту від дітей"
+    },
+    "url.manual": {
+      "ar-AE": "https://images.cdn.polaris-iot.com/pdf/polaris/273/PAF 4001_User Manual_ru_kz.pdf",
+      "de-DE": "https://images.cdn.polaris-iot.com/pdf/polaris/273/PAF 4001_User Manual_ru_kz.pdf",
+      "en-US": "https://images.cdn.polaris-iot.com/pdf/polaris/273/PAF 4001_User Manual_ru_kz.pdf",
+      "kk-KZ": "https://images.cdn.polaris-iot.com/pdf/polaris/273/PAF 4001_User Manual_ru_kz.pdf",
+      "ru-RU": "https://images.cdn.polaris-iot.com/pdf/polaris/273/PAF 4001_User Manual_ru_kz.pdf",
+      "uk-UA": "https://images.cdn.polaris-iot.com/pdf/polaris/273/PAF 4001_User Manual_ru_kz.pdf"
+    },
+    "alert.ready": {
+      "en-US": "Cooking finished",
+      "kk-KZ": "Даярлау аяқталды",
+      "ru-RU": "Приготовление завершено",
+      "uk-UA": "Приготування їжі завершено"
+    },
+    "alert.start": {
+      "en-US": "Cooking started",
+      "kk-KZ": "Дайындық басталды",
+      "ru-RU": "Приготовление началось",
+      "uk-UA": "Розпочато приготування їжі"
+    },
+    "url.catalog": {
+      "ar-AE": "https://polaris.ru/catalog/air-fryers/polaris-paf-4001-wifi-iqhome/",
+      "de-DE": "https://polaris.ru/catalog/air-fryers/polaris-paf-4001-wifi-iqhome/",
+      "en-US": "https://polaris.ru/catalog/air-fryers/polaris-paf-4001-wifi-iqhome/",
+      "kk-KZ": "https://polaris.ru/catalog/air-fryers/polaris-paf-4001-wifi-iqhome/",
+      "ru-RU": "https://polaris.ru/catalog/air-fryers/polaris-paf-4001-wifi-iqhome/",
+      "uk-UA": "https://polaris.ru/catalog/air-fryers/polaris-paf-4001-wifi-iqhome/"
+    },
+    "talking.no_wifi": {
+      "de-DE": "Wenn die Anzeige der verzögerten Startzeit 20 Minuten anzeigt, kann das Gerät das konfigurierte Netzwerk nicht finden",
+      "en-US": "If the delayed start time indicator shows 20 minutes, the device cannot detect the configured network",
+      "kk-KZ": "Егер кешіктірілген бастау уақытының индикаторы 20 минутты көрсетсе, құрылғы конфигурацияланған желіні таба алмайды.",
+      "ru-RU": "Если индикатор времени отложенного старта показывает 20 минут - устройство не может обнаружить настроенную сеть",
+      "uk-UA": "Якщо індикатор відкладеного часу затримки запуску показує 20 хвилин, пристрій не може виявити налаштовану мережу"
+    },
+    "talking.wifi_error": {
+      "de-DE": "Wenn die Anzeige für die verzögerte Startzeit 40 Minuten anzeigt, ist das Passwort bei der Verbinden mit dem konfigurierten Netzwerk nicht korrekt",
+      "en-US": "If the delayed start time indicator shows 40 minutes, the password did not match when connecting to the configured network",
+      "kk-KZ": "Егер кешіктірілген бастау уақыты индикаторы 40 минутты көрсетсе, конфигурацияланған желіге қосылу кезінде пароль сәйкес келмеді",
+      "ru-RU": "Если индикатор времени отложенного старта показывает 40 минут - при подключении к настроенной сети не подошел пароль",
+      "uk-UA": "Якщо індикатор часу затримки запуску показує 40 хвилин, пароль не збігався при підключенні до налаштованої мережі"
+    }
+  },
+  "programs": [
+    null,
+    {
+      "icon": "M27,3C26,3 25.05,3.21 24.18,3.59C22.54,1.42 19.94,0 17,0C14.06,0 11.46,1.42 9.82,3.59C8.95,3.21 8,3 7,3C3.13,3 0,6.13 0,10C0,13.53 2.61,16.43 6,16.92V28H13C12.45,28 12,27.55 12,27V19C9.79,19 8,17.21 8,15V9C8,8.45 8.45,8 9,8C9.55,8 10,8.45 10,9V15H12V9C12,8.45 12.45,8 13,8C13.55,8 14,8.45 14,9V15H16V9C16,8.45 16.45,8 17,8C17.55,8 18,8.45 18,9V15C18,17.21 16.21,19 14,19V27C14,27.55 13.55,28 13,28H25C24.45,28 24,27.55 24,27V20H23C21.9,20 21,19.1 21,18V12C21,10.51 22.6,8.68 24.76,8.15C25.39,8 26,8.48 26,9.13V27C26,27.55 25.55,28 25,28H28V16.92C31.39,16.43 34,13.53 34,10C34,6.13 30.87,3 27,3Z",
+      "name": {
+        "ar-AE": "وصفتي بلس",
+        "de-DE": "Mein Rezept plus",
+        "en-US": "My recipe Plus",
+        "kk-KZ": "Менің рецептім плюс",
+        "ru-RU": "Мой рецепт плюс",
+        "uk-UA": "Мій рецепт Плюс"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 18000,
+          "min": 60,
+          "step": 60,
+          "round": 1,
+          "default": 300,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 220,
+          "min": 35,
+          "step": 5,
+          "round": 1,
+          "default": 100,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": [
+        {
+          "max": 5400,
+          "min": 60,
+          "limits": {
+            "temperature": {
+              "max": 100,
+              "min": 35,
+              "step": 5,
+              "round": 1,
+              "default": 100,
+              "round_alt": 1
+            }
+          },
+          "feature": "timer"
+        },
+        {
+          "max": 220,
+          "min": 105,
+          "limits": {
+            "timer": {
+              "max": 18000,
+              "min": 60,
+              "step": 60,
+              "round": 1,
+              "default": 300,
+              "round_alt": 1
+            }
+          },
+          "feature": "temperature"
+        }
+      ]
+    },
+    {
+      "icon": "M0,0h28v28V0M23.6678,11.576c-.0947-.1064-.2305-.1675-.373-.1675h-.6912l.7703-3.5127c.0293-.1343.002-.2749-.0752-.3887-.0771-.1133-.1982-.1904-.334-.2119l-3.1429-.5036.5296-3.7845c.0195-.1377-.0195-.2773-.1074-.3848-.0879-.1079-.2158-.1743-.3545-.1836l-4.124-.2715c-.1426-.0029-.2676.0376-.3672.127-.0996.0898-.1602.2163-.166.3506l-.1027,2.3896h-2.995l-.2427-2.2612c-.0288-.2695-.2729-.4663-.5376-.4453l-3.8076.3115c-.1348.0112-.2588.0757-.3447.1797s-.1265.2378-.1118.3721l.3409,3.1935-2.8824.9481c-.127.042-.2314.1323-.291.252-.0596.1191-.0688.2578-.0264.3838l1.1686,3.4399h-.5422c-.1426,0-.2783.061-.3735.1675-.0947.1064-.1396.2485-.123.3901l1.561,13.4243c.0293.252.2427.4424.4966.4424h15.3154c.2539,0,.4678-.1904.4971-.4424l1.5605-13.4243c.0156-.1416-.0283-.2837-.124-.3901ZM21.5802,11.4085h-1.5471c-.2383,0-.4424.1675-.4902.4004-.1458.718-.4389,1.3727-.8272,1.9564l.8008-6.0101,2.7676.4438-.7039,3.2095ZM19.287,3.4012l-.4713,3.3658c-.0081.0052-.018.0063-.0258.0121-.1074.0806-.1787.2017-.1973.3354l-1.0594,7.9454c-.4912.3891-1.0462.6953-1.6454.9028l.2062-10.0598.1157-2.704,3.0771.2021ZM15.0867,6.0345l-.0184.4297c-.0012.0268.0091.0504.0121.0763l-.1978,9.6627c-.2649.0391-.5321.0711-.806.0711-.5403,0-1.0596-.0965-1.5591-.2435l-.208-9.9962h2.7772ZM10.9496,3.3646l.3773,3.5124.1818,8.7521c-.2373-.1241-.4609-.2676-.6774-.4235l-2.2357-8.6432c-.0259-.1002-.0891-.1815-.1664-.2477l-.2901-2.72,2.8105-.23ZM5.3407,8.1253l2.4204-.7964,1.6593,6.4139c-.3803-.5781-.6666-1.2256-.8102-1.934-.0474-.2329-.2524-.4004-.4902-.4004h-1.6636l-1.1157-3.2832ZM21.2889,24.8328H6.8641l-1.4448-12.4243h2.3052c.3846,1.4284,1.2352,2.6483,2.3632,3.5101.011.009.022.0139.0338.0219.5104.3851,1.0787.6917,1.6843.9164.0276.0149.0539.0275.0832.0366.689.2448,1.4254.3807,2.1876.3807.439,0,.8656-.0565,1.2838-.1405.0013,0,.0024.0009.0038.0009h.0098c.0842,0,.16-.0264.2298-.0633.978-.2362,1.8776-.6829,2.6395-1.3093.066-.0372.1224-.0871.1659-.15.9501-.8362,1.6765-1.9298,2.0195-3.2035h2.3047l-1.4443,12.4243Z",
+      "name": {
+        "ar-AE": "البطاطس المقلية",
+        "de-DE": "Pommes frites",
+        "en-US": "French fries",
+        "kk-KZ": "Француз картобы",
+        "ru-RU": "Картофель фри",
+        "uk-UA": "Французька картопля"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 2400,
+          "min": 600,
+          "step": 60,
+          "round": 1,
+          "default": 1500,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 220,
+          "min": 35,
+          "step": 5,
+          "round": 1,
+          "default": 200,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M3.4717,11.6392c.3896.3096,1.0083.7983,1.2822.9995,1.1362.833,1.7026,1.9141,1.894,3.6143.1104.9814.7583,2.0898,1.6128,2.7598.978.7656,2.0503,1.1416,3.0864,1.1416,1.311,0,2.5635-.6035,3.4878-1.7832l.0112-.0146c.8472-1.082,1.1792-2.3018.9595-3.5288-.2031-1.1328-.8823-2.2012-1.9131-3.0078-.853-.6685-2.0869-1.0283-3.0649-.9038-1.6968.2192-2.8813-.0693-3.9634-.9727-.0027-.0023-.0079-.0063-.0107-.0087-.0002-.0002-.0003-.0004-.0005-.0005-.0002-.0001-.0004-.0002-.0005-.0003-.266-.2213-.8766-.6951-1.2656-.9958.1426-.3467.1768-.7305.0913-1.104-.1216-.5303-.4741-.9731-.9678-1.2153-.6118-.3003-1.3809-.2104-1.916.2197-.333.2686-.5581.6245-.6509,1.0293-.0332.144-.0967.2729-.2109.4102-.084.1157-.1938.2085-.3257.2754-.3716.1875-.6631.4917-.8433.8789-.2905.6226-.1919,1.3911.2461,1.9126.353.4209.8647.6562,1.4111.6479.3833-.0068.748-.1318,1.0508-.3535ZM10.9575,11.9072c.7178-.0928,1.6729.1938,2.3188.6997.8364.6553,1.3853,1.5063,1.5444,2.397.1685.9385-.0952,1.8848-.7651,2.7393l-.0093.0127c-1.5146,1.9326-3.6875,1.6299-5.1689.4697-.6465-.5068-1.1543-1.3633-1.2354-2.084-.2-1.7731-.7933-3.0222-1.8959-3.9836l.8897-1.136c1.1982.8399,2.5533,1.1175,4.3216.8852ZM1.7754,10.7021c-.1895-.2261-.2329-.5742-.105-.8477.0845-.1821.2183-.3237.3877-.4092.2754-.1392.5049-.334.6616-.5513.1953-.2324.3296-.5024.3984-.8027.0425-.1841.1475-.3481.3042-.4746.2344-.189.583-.229.8477-.1006.2246.1104.3784.3027.4331.541.0562.2456-.002.502-.1597.7036-.0825.105-.1191.2388-.1025.3711.0171.1323.0859.2524.1919.334.0007.0004.7095.5437,1.2141.9424l-.8859,1.131c-.5081-.3942-1.205-.9521-1.2057-.9529-.0894-.0713-.1997-.1094-.3125-.1094-.019,0-.0386.001-.0576.0034-.1328.0151-.2534.083-.3359.1885-.1582.2012-.3931.3193-.6455.3237-.2178.0137-.4673-.0991-.6284-.2905ZM11.3325,13.2046c.1265-.2451.4287-.3428.6729-.2168,1.417.7271,2.4492,2.2358,1.5601,3.9702l-.8921-.4531c.793-1.5454-.7974-2.46-1.124-2.6274-.2461-.126-.3428-.4272-.2168-.6729ZM26.8584,17.9814c-.7393,1.541-2.1953,2.5771-4.3271,3.0801-2.5576.6035-5.4258.7998-8.0679.7998-4.7002,0-8.6855-.6191-8.9424-.6592-.6226-.0801-3.8257-.5713-4.3491-2.1992-.2285-.7109.0752-1.4609.9019-2.2314.0078-.0098.8066-.8506,2.9697-1.6006.2598-.0889.5454.0488.6362.3086.0903.2607-.0479.5459-.3091.6367-1.894.6562-2.5864,1.3584-2.5933,1.3652-.3784.3535-.7769.8301-.6533,1.2148.2441.7607,2.2163,1.3447,3.5391,1.5156.1104.0186,9.7266,1.5059,16.6377-.123,1.8223-.4307,3.0518-1.2832,3.6543-2.5361,1.168-2.4268-.3213-5.6328-.3369-5.665-.0137-.0269-2.2949-4.3022-7-4.707-4.7837-.4121-8.8359,2.8579-8.8765,2.8911-.2134.1748-.5278.144-.7036-.0698-.1748-.2134-.144-.5283.0693-.7031.1772-.1455,4.4004-3.5615,9.5967-3.1143,5.2646.4526,7.709,5.063,7.8105,5.2588.0781.1636,1.7178,3.6768.3438,6.5381Z",
+      "name": {
+        "ar-AE": "دجاج",
+        "de-DE": "Hühnchen",
+        "en-US": "Chicken",
+        "kk-KZ": "Тауық",
+        "ru-RU": "Курица",
+        "uk-UA": "Курка"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 5400,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 1800,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 220,
+          "min": 35,
+          "step": 5,
+          "round": 1,
+          "default": 190,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M27.3428,16.5781l-.3535-3.5806c-.0005-.0056-.0041-.0099-.0048-.0154.0006-.5014-.0951-1.0328-.3253-1.593-1.5283-3.7183-7.7393-4.7363-7.9609-4.769-.0576-.0142-1.4824-.3569-7.2515-.8438-6.0659-.5107-8.4746,1.9746-8.7334,2.2661-1.7408,1.6826-2.4446,3.5885-2.1002,5.3885.0006.0069-.0023.0132-.0013.0201l.5938,4.4795c.1333,1.0078.498,1.877,1.0552,2.5137,2.0312,2.3213,5.7344,1.7939,10.021,1.1826,4.728-.6748,6.896.1963,6.9517.2178.9365.3145,1.7764.4453,2.5264.4453,2.4297,0,3.915-1.377,4.6641-2.3604.7139-.9375,1.0391-2.127.9189-3.3516ZM3.4229,8.7476c.0112-.0107.0244-.0249.0347-.0366.0186-.022,1.7827-2.0029,6.4116-2.0029.4678,0,.9658.02,1.4937.0645,5.6392.4761,7.0825.8154,7.1372.8271.0596.0093,5.917.9658,7.2334,4.1694,1.2383,3.0132-2.4531,4.7856-2.5566,4.8384-.0234.0068-2.332.7451-5.2715-.1377-3.2358-.9668-9.0537.3008-9.3174.3584-.0376.0098-3.6636.9111-5.7476-1.2881-1.9336-2.0415-1.7158-4.5806.5825-6.7925ZM25.6289,19.3242c-1,1.3105-2.8672,2.6465-6.04,1.5869-.0957-.04-2.4014-.9912-7.4482-.2744-4.1641.5938-7.4531,1.0625-9.127-.8506-.4272-.4883-.7095-1.1748-.8169-1.9863l-.2311-1.7441c.0507.057.0958.1155.1491.1718,1.3901,1.4678,3.2666,1.8008,4.6821,1.8008,1.1235,0,1.9565-.21,2.0244-.2275.0581-.0127,5.812-1.2617,8.7969-.373,3.2598.9775,5.7686.1631,5.9268.1074.8253-.3839,1.934-1.1505,2.6679-2.2148l.1339,1.3555c.0967.9727-.1592,1.9131-.7178,2.6484ZM4.9321,13.6108l1.8013-4.3813c.1055-.2559.3984-.3755.6523-.2725.2554.105.3774.397.2725.6523l-1.8013,4.3813c-.0796.1934-.2661.3101-.4624.3101-.0635,0-.1279-.0122-.1899-.0376-.2554-.105-.3774-.397-.2725-.6523ZM8.9302,12.8945l1.3882-3.6528c.0981-.2578.3877-.3892.645-.2896.2578.0981.3877.3867.2896.645l-1.3882,3.6528c-.0757.1997-.2656.3223-.4673.3223-.0591,0-.1191-.0103-.1777-.0327-.2578-.0981-.3877-.3867-.2896-.645ZM12.8481,12.5093l1.2417-3.2676c.0977-.2578.3872-.3892.645-.2896.2578.0981.3882.3867.2896.645l-1.2417,3.2676c-.0757.1997-.2656.3223-.4673.3223-.0591,0-.1191-.0103-.1777-.0327-.2578-.0981-.3877-.3867-.2896-.645ZM16.6074,12.5396l.8037-2.6016c.0811-.2646.3613-.4141.625-.3301.2637.0815.4121.3613.3301.625l-.8037,2.6016c-.0664.2148-.2637.3525-.4775.3525-.0488,0-.0986-.0073-.1475-.0225-.2637-.0815-.4121-.3613-.3301-.625ZM20.7451,12.936l.6045-1.8457c.0859-.2627.3682-.4067.6309-.3193.2627.0859.4062.3682.3203.6309l-.6045,1.8457c-.0693.2104-.2656.3442-.4756.3442-.0518,0-.1035-.0078-.1553-.0249-.2627-.0859-.4062-.3682-.3203-.6309Z",
+      "name": {
+        "ar-AE": "شريحة لحم",
+        "de-DE": "Steak",
+        "en-US": "Steak",
+        "kk-KZ": "Стейк",
+        "ru-RU": "Стейк",
+        "uk-UA": "Стейк"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 2400,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 600,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 220,
+          "min": 35,
+          "step": 5,
+          "round": 1,
+          "default": 200,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M8.937,8.7729c-.1011-.0938-.1592-.2251-.1602-.3628-.001-.1382.0552-.27.1548-.3657.3564-.3403.7832-.5884,1.2754-.7422-.3853-.6045-.3721-1.3154-.3638-1.7661.0039-.1929.1177-.3662.2935-.4458.1748-.0806.3813-.0518.5288.0728.3799.3203.9961.3896,1.5923.4565.2834.032.5677.0707.8409.1311-.1644-.6328-.4116-1.113-.7256-1.3542-.2192-.168-.2607-.4819-.0923-.7007s.4814-.2603.7007-.0923c1.166.894,1.3398,2.9419,1.3398,4.083,0,.2764-.2236.5-.5.5s-.5-.2236-.5-.5c0-.2854-.0157-.5555-.0386-.8171-.2601-.1494-.6824-.2046-1.1372-.2556-.4014-.0454-.8335-.0942-1.2437-.2217.0879.3931.2812.6084.6353.7744.2085.0977.3232.3252.2778.5513-.0454.2256-.2393.3911-.4692.4009-.4878.0205-.8999.1211-1.2466.3052.623.4048,1.2593.4434,2.3848.2075.1421-.0273.2905.0044.4058.0928.1157.0884.187.2227.1953.3677.0283.4814.4097.8701,1.2559,1.2627.1089-.3018.1328-.6064.1616-.9639l.0161-.1963c.0137-.1558.0991-.2959.231-.3794.1318-.083.2944-.1006.4419-.0454.6152.23,1.3516.1587,1.917-.0078-.4033-.1646-.7822-.3711-1.1328-.6191-.1562-.1104-.2363-.2998-.2051-.4883.0303-.1885.166-.3433.3486-.3984.5586-.1689.9443-.5605,1.1631-.9912l-1.8096.5078c-.2617.0752-.5415-.0801-.6162-.3462s.0806-.542.3467-.6167l2.6572-.7456c.1543-.043.3252-.0088.4502.0933.126.1025.1943.2598.1836.4219-.0586.8643-.5166,1.666-1.1943,2.1777.3584.1641.7432.2847,1.1602.3647.1689.0327.3096.1499.3711.3105.0625.1606.0381.3418-.0654.4795-.4971.6675-2.0098,1.1562-3.3027.9536-.0498.4443-.1494.9053-.4629,1.4014-.0938.1484-.2549.2329-.4224.2329-.062,0-.125-.0117-.1851-.0356-.8721-.3477-1.8599-.8545-2.1929-1.7632-1.2329.1938-2.2056.0518-3.2627-.9277ZM19.7715,7.085c-.2441-.1177-.5469-.0127-.666.2373-.1182.2495-.0117.5479.2383.666,2.8447,1.3491,4.543,4.0493,4.543,7.2236,0,4.5703-4.4355,8.2881-9.8867,8.2881s-9.8872-3.7178-9.8872-8.2881c0-1.8462.54-5.2222,4.1572-7.0859.2456-.1265.3418-.4277.2153-.6733-.126-.2461-.4292-.3433-.6733-.2153-2.9863,1.5386-4.6992,4.4453-4.6992,7.9746,0,5.1211,4.8838,9.2881,10.8872,9.2881s10.8867-4.167,10.8867-9.2881c0-3.5703-1.9121-6.6084-5.1152-8.127ZM7.5688,11.0063c-1.2646,1.5005-1.4268,3.333-1.4268,4.7622,0,.2764.2236.5.5.5s.5-.2236.5-.5c0-1.8955.3564-3.127,1.1914-4.1177.1777-.2109.1509-.5269-.0601-.7046-.2119-.1792-.5269-.1514-.7046.0601Z",
+      "name": {
+        "ar-AE": "الخضروات",
+        "de-DE": "Gemüse",
+        "en-US": "Vegetables",
+        "kk-KZ": "Көкөністер",
+        "ru-RU": "Овощи",
+        "uk-UA": "Овочі"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 2400,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 1200,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 220,
+          "min": 35,
+          "step": 5,
+          "round": 1,
+          "default": 180,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M27.4183,14.5747c0-.377-.084-.7437-.249-1.0908,0-.001,0-.002-.001-.0029-2.4346-5.0508-7.6025-8.3145-13.168-8.3145S3.2669,8.4302.8304,13.4839c-.165.3457-.248.7129-.248,1.0908,0,.9684.5473,1.8012,1.3381,2.22l.5984,3.6995c.2188,1.3555,1.3594,2.3389,2.7119,2.3389h17.5352c1.3516,0,2.4922-.9834,2.7109-2.3389l.599-3.697c.7932-.418,1.3424-1.2522,1.3424-2.2224ZM24.4906,20.334c-.1406.8682-.8662,1.499-1.7246,1.499H5.2308c-.8594,0-1.585-.6309-1.7256-1.499l-.5266-3.2552c.0237.0007.0458.0071.0696.0071.5068,0,.9951-.1582,1.4121-.4561l.7031-.499c.918-.6562,2.1514-.6553,3.0693-.001,1.2646.9053,2.9668.9053,4.2334.001.915-.6553,2.1494-.6562,3.0684-.001,1.2656.9062,2.9668.9053,4.2324.001.918-.6562,2.1523-.6562,3.0703,0l.7012.5c.418.2979.9072.4551,1.4141.4551.0224,0,.0432-.0061.0654-.0067l-.5273,3.2548ZM24.9525,16.0859c-.2979,0-.5869-.0928-.834-.2695l-.7002-.5c-.6328-.4517-1.375-.6777-2.1162-.6777-.7422,0-1.4834.2261-2.1172.6787-.918.6562-2.1504.6553-3.0684-.001-1.2695-.9043-2.9688-.9048-4.2324.001-.9189.6572-2.1523.6572-3.0693-.001-1.2676-.9043-2.9668-.9043-4.2324,0l-.7031.499c-.2471.1768-.5342.2705-.8311.2705-.8086,0-1.4658-.6777-1.4658-1.5112,0-.2285.0508-.4512.1494-.6592,2.2695-4.7075,7.085-7.749,12.2686-7.749s9.998,3.041,12.2666,7.7476c.1006.2119.1514.4341.1514.6606,0,.8335-.6572,1.5112-1.4658,1.5112ZM20.056,9.6406c-.0908.167-.2627.2617-.4395.2617-.0811,0-.1621-.0195-.2383-.0605-1.0166-.5508-2.1035-.9438-3.2285-1.1675-.2705-.0537-.4463-.3169-.3926-.5879.0537-.272.3203-.4492.5879-.3926,1.2236.2432,2.4043.6699,3.5098,1.269.2432.1313.333.4351.2012.6777ZM12.2435,8.0864c.0537.2705-.1221.5342-.3926.5879-1.124.2246-2.2109.6157-3.2314,1.1631-.0752.0405-.1562.0596-.2363.0596-.1777,0-.3506-.0952-.4404-.2637-.1309-.2432-.0391-.5464.2041-.6768,1.1074-.5942,2.2871-1.019,3.5088-1.2627.2656-.0571.5342.1206.5879.3926ZM14.4994,7.9658v2.2988c0,.2764-.2236.5-.5.5s-.5-.2236-.5-.5v-2.2988c0-.2764.2236-.5.5-.5s.5.2236.5.5Z",
+      "name": {
+        "ar-AE": "فطيرة",
+        "de-DE": "Kuchen",
+        "en-US": "Pie",
+        "kk-KZ": "Пирог",
+        "ru-RU": "Пирог",
+        "uk-UA": "Пиріг"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 3600,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 1500,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 220,
+          "min": 35,
+          "step": 5,
+          "round": 1,
+          "default": 170,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "diag": {
+      "60": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/1800.webp",
+      "id": "65e17cab-eaaa-47bf-841e-4c40154c3b43",
+      "original": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/original.webp"
+    },
+    "pair": {
+      "60": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/1800.webp",
+      "id": "65e17cab-eaaa-47bf-841e-4c40154c3b43",
+      "original": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/original.webp"
+    },
+    "reset": {
+      "60": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/1800.webp",
+      "id": "65e17cab-eaaa-47bf-841e-4c40154c3b43",
+      "original": "https://images.cdn.polaris-iot.com/6/5e/17cab-eaaa-47bf-841e-4c40154c3b43/original.webp"
+    },
+    "enable": {
+      "60": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/1800.webp",
+      "id": "ce36185e-c768-4283-95d4-07fa5ffe7448",
+      "original": "https://images.cdn.polaris-iot.com/c/e3/6185e-c768-4283-95d4-07fa5ffe7448/original.webp"
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1784215024,
+  "temperature_units": "celsius"
+}

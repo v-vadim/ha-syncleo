@@ -1,0 +1,807 @@
+{
+  "id": "3e53fbf4-ab39-496b-b96c-e655bc1d37a1",
+  "name": "PAF-1302W DUAL WIFI",
+  "type": 346,
+  "class": "air_fryer",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/2/e9/9ebb9-f78e-418c-86ec-2974940cb51f/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/2/e9/9ebb9-f78e-418c-86ec-2974940cb51f/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/2/e9/9ebb9-f78e-418c-86ec-2974940cb51f/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/2/e9/9ebb9-f78e-418c-86ec-2974940cb51f/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/2/e9/9ebb9-f78e-418c-86ec-2974940cb51f/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/2/e9/9ebb9-f78e-418c-86ec-2974940cb51f/900.webp",
+    "id": "2e99ebb9-f78e-418c-86ec-2974940cb51f",
+    "original": "https://images.cdn.polaris-iot.com/2/e9/9ebb9-f78e-418c-86ec-2974940cb51f/original.webp"
+  },
+  "layout": {
+    "home.top": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "switch",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "program",
+        "position": 0
+      }
+    ],
+    "manual.bottom": [
+      {
+        "type": "button_power",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        },
+        "visibility": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "position": 1
+      },
+      {
+        "type": "info",
+        "layout": "container.basket_top",
+        "position": 2
+      },
+      {
+        "type": "info",
+        "layout": "container.basket_bottom",
+        "position": 3
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "الميزات",
+          "de-DE": "Funktionen",
+          "en-US": "Features",
+          "kk-KZ": "Ерекше өзгешеліктері",
+          "ru-RU": "Функции",
+          "uk-UA": "Функції"
+        },
+        "position": 11
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 12
+      },
+      {
+        "type": "button",
+        "feature": "backlight",
+        "position": 12
+      },
+      {
+        "type": "container_tail",
+        "position": 14
+      }
+    ],
+    "userPresets.list": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Custom modes",
+          "ru-RU": "Персональные режимы"
+        },
+        "position": 0
+      },
+      {
+        "row": "userPresets",
+        "type": "info",
+        "position": 1
+      },
+      {
+        "row": "savePreset",
+        "type": "button",
+        "title": {
+          "en-US": "Add",
+          "ru-RU": "Добавить"
+        },
+        "position": 2
+      }
+    ],
+    "container.basket_top": [
+      {
+        "row": "recipe",
+        "type": "header",
+        "title": {
+          "ru-RU": "Верхний ковш"
+        },
+        "layout": "manual",
+        "position": 0,
+        "subdevice": "basket_top"
+      }
+    ],
+    "container.basket_bottom": [
+      {
+        "row": "recipe",
+        "type": "header",
+        "title": {
+          "ru-RU": "Нижний ковш"
+        },
+        "layout": "manual",
+        "position": 0,
+        "subdevice": "basket_bottom"
+      }
+    ]
+  },
+  "limits": {
+    "backlight": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 1,
+      "round_alt": 1
+    },
+    "child_lock": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "PAF-1302W DUAL WIFI",
+          "manufacturer": "polaris"
+        },
+        "type": "devices.types.other",
+        "errors": [],
+        "features": [
+          {
+            "type": "switch",
+            "feature": "child_lock",
+            "instance": "controls_locked",
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "feature": "backlight",
+            "instance": "backlight",
+            "retrievable": true
+          },
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                1
+              ]
+            },
+            "errors": {
+              "NOT_SUPPORTED_IN_CURRENT_MODE": {
+                "condition": {
+                  "program": [
+                    0
+                  ]
+                },
+                "allowControl": false
+              }
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "program": [
+                1
+              ]
+            },
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "hidden": true,
+    "realtime": true,
+    "subdevices": {
+      "proxyMacs": {
+        "basket_top": {
+          "type": 348,
+          "field": "basket_mac_1",
+          "program": [
+            0
+          ]
+        },
+        "basket_bottom": {
+          "type": 348,
+          "field": "basket_mac_2",
+          "program": [
+            1
+          ]
+        }
+      }
+    },
+    "hotspot_ssid": "PAF-1302W",
+    "program_data": {
+      "0": [
+        {
+          "max": 281474976710656,
+          "min": 0,
+          "name": "basket_mac_1",
+          "size": 6,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "1": [
+        {
+          "max": 281474976710656,
+          "min": 0,
+          "name": "basket_mac_2",
+          "size": 6,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "voiceControl": {
+      "intents": {
+        "status": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                },
+                "off": {}
+              }
+            }
+          }
+        },
+        "program": {
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          },
+          "values": {
+            "timer": {},
+            "program": {
+              "enum_values": {
+                "program_fry": {
+                  "action": {
+                    "program": [
+                      7
+                    ]
+                  }
+                },
+                "program_jam": {
+                  "action": {
+                    "program": [
+                      14
+                    ]
+                  }
+                },
+                "program_bake": {
+                  "action": {
+                    "program": [
+                      8
+                    ]
+                  }
+                },
+                "program_cake": {
+                  "action": {
+                    "program": [
+                      3
+                    ]
+                  }
+                },
+                "program_soup": {
+                  "query": {
+                    "timer": {}
+                  },
+                  "action": {
+                    "program": [
+                      4
+                    ]
+                  }
+                },
+                "program_stew": {
+                  "action": {
+                    "program": [
+                      6
+                    ]
+                  }
+                },
+                "program_wine": {
+                  "action": {
+                    "program": [
+                      22
+                    ]
+                  }
+                },
+                "program_aspic": {
+                  "action": {
+                    "program": [
+                      10
+                    ]
+                  }
+                },
+                "program_bread": {
+                  "action": {
+                    "program": [
+                      19
+                    ]
+                  }
+                },
+                "program_pilaf": {
+                  "action": {
+                    "program": [
+                      9
+                    ]
+                  }
+                },
+                "program_steam": {
+                  "action": {
+                    "program": [
+                      15
+                    ]
+                  }
+                },
+                "program_reheat": {
+                  "action": {
+                    "program": [
+                      2
+                    ]
+                  }
+                },
+                "program_yogurt": {
+                  "action": {
+                    "program": [
+                      12
+                    ]
+                  }
+                },
+                "program_oatmeal": {
+                  "action": {
+                    "program": [
+                      13
+                    ]
+                  }
+                },
+                "program_oil_fry": {
+                  "action": {
+                    "program": [
+                      25
+                    ]
+                  }
+                },
+                "program_omelette": {
+                  "action": {
+                    "program": [
+                      20
+                    ]
+                  }
+                },
+                "program_slow_cook": {
+                  "action": {
+                    "program": [
+                      21
+                    ]
+                  }
+                },
+                "program_sous_vide": {
+                  "action": {
+                    "program": [
+                      24
+                    ]
+                  }
+                },
+                "program_soaked_rice": {
+                  "action": {
+                    "program": [
+                      18
+                    ]
+                  }
+                },
+                "program_milk_porridge": {
+                  "action": {
+                    "program": [
+                      17
+                    ]
+                  }
+                },
+                "program_my_recipe_plus": {
+                  "query": {
+                    "timer": {},
+                    "temperature": {}
+                  },
+                  "action": {
+                    "program": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            "temperature": {}
+          }
+        },
+        "rollcall": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "device_on": {
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          }
+        },
+        "greetings": {},
+        "device_off": {
+          "action": {
+            "steps": []
+          }
+        },
+        "status.full": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "timer": {
+              "items": {
+                "value": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                },
+                "off": {}
+              }
+            },
+            "child_lock": {}
+          }
+        },
+        "child_lock.on": {},
+        "child_lock.off": {}
+      }
+    },
+    "defaultProgram": [
+      1
+    ],
+    "excludeScheduleFeatures": [
+      "keep_warm"
+    ]
+  },
+  "vendor": "polaris",
+  "features": [
+    "child_lock",
+    "program",
+    "backlight",
+    "demo"
+  ],
+  "messages": {
+    "hot": {
+      "ar-AE": "H",
+      "de-DE": "H",
+      "en-US": "H",
+      "kk-KZ": "H",
+      "ru-RU": "H",
+      "uk-UA": "H"
+    },
+    "diag": {
+      "ru-RU": "Удерживайте + и 0 до звукового сигнала и подождите 10 секунд"
+    },
+    "pair": {
+      "ru-RU": "Удерживайте + и - до звукового сигнала"
+    },
+    "zero": {
+      "en-US": "Off",
+      "kk-KZ": "Өшіру",
+      "ru-RU": "Выкл",
+      "uk-UA": "Вимкнено"
+    },
+    "reset": {
+      "ru-RU": "Удерживайте + и - до 3-х звуковых сигналов"
+    },
+    "Kw-Two": {
+      "en-US": "80°C"
+    },
+    "degree": {
+      "en-US": "°C"
+    },
+    "kw_one": {
+      "en-US": "60°C"
+    },
+    "error.1": {
+      "ru-RU": "верхний температурный датчик разомкнут"
+    },
+    "error.2": {
+      "ru-RU": "верхний температурный датчик закорочен"
+    },
+    "error.3": {
+      "ru-RU": "нижний температурный датчик разомкнут"
+    },
+    "error.4": {
+      "ru-RU": "верхний температурный датчик закорочен"
+    },
+    "error.5": {
+      "ru-RU": "ошибка чайлдлока"
+    },
+    "kw_three": {
+      "en-US": "100°C"
+    },
+    "speed_off": {
+      "en-US": "Off",
+      "ru-RU": "Выкл."
+    },
+    "alert.step": {
+      "en-US": "Cooking step completed",
+      "kk-KZ": "Даярлау қадамы аяқталды",
+      "ru-RU": "Шаг приготовления завершён",
+      "uk-UA": "Крок приготування завершено"
+    },
+    "url.manual": {
+      "ar-AE": "https://images.cdn.polaris-iot.com/pdf/polaris/317/PBHI3231FB_WIFI_User Manual_v7_ru_kz.pdf",
+      "de-DE": "https://images.cdn.polaris-iot.com/pdf/polaris/317/PBHI3231FB_WIFI_User Manual_v7_ru_kz.pdf",
+      "en-US": "https://images.cdn.polaris-iot.com/pdf/polaris/317/PBHI3231FB_WIFI_User Manual_v7_ru_kz.pdf",
+      "kk-KZ": "https://images.cdn.polaris-iot.com/pdf/polaris/317/PBHI3231FB_WIFI_User Manual_v7_ru_kz.pdf",
+      "ru-RU": "https://images.cdn.polaris-iot.com/pdf/polaris/317/PBHI3231FB_WIFI_User Manual_v7_ru_kz.pdf",
+      "uk-UA": "https://images.cdn.polaris-iot.com/pdf/polaris/317/PBHI3231FB_WIFI_User Manual_v7_ru_kz.pdf"
+    },
+    "alert.ready": {
+      "en-US": "Cooking finished",
+      "kk-KZ": "Даярлау аяқталды",
+      "ru-RU": "Приготовление завершено",
+      "uk-UA": "Приготування їжі завершено"
+    },
+    "alert.start": {
+      "en-US": "Cooking started",
+      "kk-KZ": "Дайындық басталды",
+      "ru-RU": "Приготовление началось",
+      "uk-UA": "Розпочато приготування їжі"
+    },
+    "attr.backlight": {
+      "en-US": "Light",
+      "ru-RU": "Подсветка"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "off"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    },
+    {
+      "name": {
+        "en-US": "on"
+      },
+      "hidden": true,
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "enable": {
+      "60": "https://images.cdn.polaris-iot.com/2/e9/9ebb9-f78e-418c-86ec-2974940cb51f/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/2/e9/9ebb9-f78e-418c-86ec-2974940cb51f/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/2/e9/9ebb9-f78e-418c-86ec-2974940cb51f/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/2/e9/9ebb9-f78e-418c-86ec-2974940cb51f/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/2/e9/9ebb9-f78e-418c-86ec-2974940cb51f/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/2/e9/9ebb9-f78e-418c-86ec-2974940cb51f/900.webp",
+      "id": "2e99ebb9-f78e-418c-86ec-2974940cb51f",
+      "original": "https://images.cdn.polaris-iot.com/2/e9/9ebb9-f78e-418c-86ec-2974940cb51f/original.webp"
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1790600005,
+  "temperature_units": "celsius"
+}

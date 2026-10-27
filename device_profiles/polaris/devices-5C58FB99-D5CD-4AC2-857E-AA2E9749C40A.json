@@ -1,0 +1,162 @@
+{
+  "id": "5c58fb99-d5cd-4ac2-857e-aa2e9749c40a",
+  "name": "Смарт джойстик",
+  "type": 182,
+  "class": "ai_wearable",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/6/9d/97696-c6c8-47b5-966a-04f171380648/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/6/9d/97696-c6c8-47b5-966a-04f171380648/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/6/9d/97696-c6c8-47b5-966a-04f171380648/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/6/9d/97696-c6c8-47b5-966a-04f171380648/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/6/9d/97696-c6c8-47b5-966a-04f171380648/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/6/9d/97696-c6c8-47b5-966a-04f171380648/900.webp",
+    "1200": "https://images.cdn.polaris-iot.com/6/9d/97696-c6c8-47b5-966a-04f171380648/1200.webp",
+    "1800": "https://images.cdn.polaris-iot.com/6/9d/97696-c6c8-47b5-966a-04f171380648/1800.webp",
+    "id": "69d97696-c6c8-47b5-966a-04f171380648",
+    "original": "https://images.cdn.polaris-iot.com/6/9d/97696-c6c8-47b5-966a-04f171380648/original.webp"
+  },
+  "layout": {
+    "top": [
+      {
+        "pin": false,
+        "type": "slider",
+        "source": "state",
+        "feature": "battery",
+        "position": 0
+      }
+    ],
+    "settings": [
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Auto shutdown",
+          "ru-RU": "Автоотключение"
+        },
+        "feature": "speed",
+        "position": 1,
+        "value_strings": {
+          "0": "NEVER",
+          "1": "1 min",
+          "2": "2 min",
+          "3": "3 min",
+          "4": "4 min",
+          "5": "5 min",
+          "6": "6 min",
+          "7": "7 min",
+          "8": "8 min",
+          "9": "9 min",
+          "10": "10 min"
+        }
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "battery",
+        "position": 0
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "pin": false,
+        "type": "info",
+        "source": "state",
+        "feature": "battery",
+        "position": 2
+      },
+      {
+        "type": "container_tail",
+        "position": 3
+      }
+    ]
+  },
+  "limits": {
+    "speed": {
+      "max": 10,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "battery": {
+      "max": 100,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "hidden": true,
+    "sounds": {
+      "configured": {
+        "ru-RU": "https://voice-ya.api.polaris-iot.com/ru-RU/app/ring/ring_intro.pcm"
+      }
+    },
+    "voiceId": true,
+    "realtime": true,
+    "syncable": false,
+    "bleBondable": true,
+    "userPresets": false,
+    "voiceControl": {
+      "intents": {
+        "status": {
+          "status": {
+            "battery": {}
+          }
+        },
+        "intensity": {
+          "values": {
+            "speed": {}
+          }
+        }
+      }
+    },
+    "ai_description": "smart ring",
+    "bleVoiceService": true
+  },
+  "vendor": "polaris",
+  "features": [
+    "battery",
+    "speed"
+  ],
+  "messages": {
+    "enable": {
+      "ru-RU": "Нажмите кнопку сбоку для активации bluetooth. В подтверждение загорится зеленый индикатор"
+    },
+    "attr.speed": {
+      "en-US": "Time-out",
+      "ru-RU": "Тайм-аут"
+    },
+    "url.manual": {
+      "ar-AE": "https://images.cdn.polaris-iot.com/pdf/polaris/182/Корр PSVJ-01_User Manual_ru.pdf",
+      "de-DE": "https://images.cdn.polaris-iot.com/pdf/polaris/182/Корр PSVJ-01_User Manual_ru.pdf",
+      "en-US": "https://images.cdn.polaris-iot.com/pdf/polaris/182/Корр PSVJ-01_User Manual_ru.pdf",
+      "kk-KZ": "https://images.cdn.polaris-iot.com/pdf/polaris/182/Корр PSVJ-01_User Manual_ru.pdf",
+      "ru-RU": "https://images.cdn.polaris-iot.com/pdf/polaris/182/Корр PSVJ-01_User Manual_ru.pdf",
+      "uk-UA": "https://images.cdn.polaris-iot.com/pdf/polaris/182/Корр PSVJ-01_User Manual_ru.pdf"
+    }
+  },
+  "connectivity": [
+    "ble"
+  ],
+  "last_modified": 1781697255,
+  "temperature_units": "celsius"
+}

@@ -1,0 +1,2476 @@
+{
+  "id": "f0f7f5a2-fa38-4bf3-8538-f173d21b9bb0",
+  "name": "XFC604I (test)",
+  "type": 304,
+  "class": "cooktop",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/0/09/d23d9-dd9c-42ce-9900-fd1e5a477d84/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/0/09/d23d9-dd9c-42ce-9900-fd1e5a477d84/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/0/09/d23d9-dd9c-42ce-9900-fd1e5a477d84/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/0/09/d23d9-dd9c-42ce-9900-fd1e5a477d84/480.webp",
+    "id": "009d23d9-dd9c-42ce-9900-fd1e5a477d84",
+    "original": "https://images.cdn.polaris-iot.com/0/09/d23d9-dd9c-42ce-9900-fd1e5a477d84/original.webp"
+  },
+  "layout": {
+    "home.top": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "switch",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "settings": [
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "إعادة تعيين تكوين نفك",
+          "de-DE": "Zurücksetzen der NFC-konfiguration",
+          "en-US": "NFC configuration reset",
+          "kk-KZ": "NFC конфигурациясын қалпына келтіру",
+          "ru-RU": "Сброс конфигурации по NFC",
+          "uk-UA": "Скидання конфігурації по NFC"
+        },
+        "measure": "nfcReset",
+        "position": 1
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "program",
+        "position": 0
+      }
+    ],
+    "manual.bottom": [
+      {
+        "type": "button_power",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "إيقاف مؤقت",
+          "de-DE": "Pause",
+          "en-US": "Pause",
+          "kk-KZ": "Уақытша тоқтату",
+          "ru-RU": "Пауза",
+          "uk-UA": "Пауза"
+        },
+        "action": {
+          "program_data": {
+            "field": "pause",
+            "value": 1,
+            "program": [
+              0
+            ]
+          }
+        },
+        "position": 2,
+        "condition": [
+          {
+            "program_data": {
+              "field": "pause",
+              "value": 1,
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "pause",
+            "value": 0,
+            "program": [
+              0
+            ]
+          }
+        },
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "fill",
+        "position": 2
+      },
+      {
+        "type": "container_tail",
+        "position": 3
+      },
+      {
+        "type": "info",
+        "layout": "container.burner_top_left",
+        "position": 4
+      },
+      {
+        "type": "info",
+        "layout": "container.burner_top_right",
+        "position": 4
+      },
+      {
+        "type": "info",
+        "layout": "container.burner_bottom_left",
+        "position": 5
+      },
+      {
+        "type": "info",
+        "layout": "container.burner_bottom_right",
+        "position": 5
+      },
+      {
+        "type": "container_head",
+        "position": 6
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5940,
+          "min": 0,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Alarm"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "600": {
+            "label": "10"
+          },
+          "1200": {
+            "label": "20"
+          },
+          "1800": {
+            "label": "30"
+          },
+          "2400": {
+            "label": "40"
+          },
+          "3000": {
+            "label": "50"
+          },
+          "3600": {
+            "label": "60"
+          },
+          "4200": {
+            "label": "70"
+          },
+          "4800": {
+            "label": "80"
+          },
+          "5400": {
+            "label": "90"
+          },
+          "5940": {
+            "label": "99"
+          }
+        },
+        "position": 7,
+        "custom_field": {
+          "name": "alarm",
+          "feature": "timer"
+        }
+      },
+      {
+        "type": "container_tail",
+        "position": 8
+      },
+      {
+        "type": "container_head",
+        "position": 9
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "إعدادات",
+          "de-DE": "Einstellungen",
+          "en-US": "Settings",
+          "kk-KZ": "Параметрлер",
+          "ru-RU": "Настройки",
+          "uk-UA": "Налаштування"
+        },
+        "position": 10
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 11
+      },
+      {
+        "type": "button",
+        "feature": "volume",
+        "position": 11
+      },
+      {
+        "type": "container_tail",
+        "position": 12
+      }
+    ],
+    "manual.shortcuts": [
+      {
+        "type": "button",
+        "feature": "volume",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "Boost 1"
+        },
+        "action": {
+          "program_data": {
+            "field": "boost_1",
+            "value": 1,
+            "program": [
+              2
+            ]
+          }
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program_data": {
+              "field": "boost_1",
+              "value": 1,
+              "program": [
+                2
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "boost_1",
+            "value": 0,
+            "program": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "Boost 2"
+        },
+        "action": {
+          "program_data": {
+            "field": "boost_2",
+            "value": 1,
+            "program": [
+              2
+            ]
+          }
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program_data": {
+              "field": "boost_2",
+              "value": 1,
+              "program": [
+                2
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "boost_2",
+            "value": 0,
+            "program": [
+              2
+            ]
+          }
+        }
+      }
+    ],
+    "userPresets.list": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Custom modes",
+          "ru-RU": "Персональные режимы"
+        },
+        "position": 0
+      },
+      {
+        "row": "userPresets",
+        "type": "info",
+        "position": 1
+      },
+      {
+        "row": "savePreset",
+        "type": "button",
+        "title": {
+          "en-US": "Add",
+          "ru-RU": "Добавить"
+        },
+        "position": 2
+      }
+    ],
+    "container.burner_top_left": [
+      {
+        "type": "header",
+        "title": {
+          "ru-RU": "Левая верхняя"
+        },
+        "layout": "screen.page.burner_top_left",
+        "position": 0
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Temperature"
+        },
+        "suffix": "degree",
+        "position": 1,
+        "text_suffix": true,
+        "program_data": {
+          "field": "curtemp_2",
+          "program": [
+            3
+          ]
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Power"
+        },
+        "position": 1,
+        "custom_field": {
+          "name": "burner_2",
+          "feature": "temperature"
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Timer"
+        },
+        "position": 2,
+        "custom_field": {
+          "name": "burner_2",
+          "feature": "timer"
+        }
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z",
+        "type": "info",
+        "title": {
+          "en-US": "Double circle 2"
+        },
+        "position": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "boost_2",
+              "value": 1,
+              "program": [
+                2
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z",
+        "type": "info",
+        "title": {
+          "en-US": "Double circle 2"
+        },
+        "position": 2,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "boost_2",
+                "value": 1,
+                "program": [
+                  2
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "container.burner_top_right": [
+      {
+        "type": "header",
+        "title": {
+          "ru-RU": "Правая верхняя"
+        },
+        "layout": "screen.page.burner_top_right",
+        "position": 0
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Temperature"
+        },
+        "suffix": "degree",
+        "position": 1,
+        "text_suffix": true,
+        "program_data": {
+          "field": "curtemp_3",
+          "program": [
+            3
+          ]
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Power"
+        },
+        "position": 1,
+        "custom_field": {
+          "name": "burner_3",
+          "feature": "temperature"
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Timer"
+        },
+        "position": 2,
+        "custom_field": {
+          "name": "burner_3",
+          "feature": "timer"
+        }
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z",
+        "type": "info",
+        "title": {
+          "en-US": "Boost"
+        },
+        "position": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "boost_3",
+              "value": 1,
+              "program": [
+                2
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z",
+        "type": "info",
+        "title": {
+          "en-US": "Boost"
+        },
+        "position": 2,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "boost_3",
+                "value": 1,
+                "program": [
+                  2
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "screen.page.burner_top_left": [
+      {
+        "type": "header",
+        "title": {
+          "ru-RU": "Левая верхняя конфорка"
+        },
+        "position": 0
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Power"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "3": {
+            "label": "3"
+          },
+          "6": {
+            "label": "6"
+          },
+          "9": {
+            "label": "9"
+          }
+        },
+        "position": 1,
+        "custom_field": {
+          "name": "burner_2",
+          "feature": "temperature"
+        }
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5940,
+          "min": 0,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Timer"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "600": {
+            "label": "10"
+          },
+          "1200": {
+            "label": "20"
+          },
+          "1800": {
+            "label": "30"
+          },
+          "2400": {
+            "label": "40"
+          },
+          "3000": {
+            "label": "50"
+          },
+          "3600": {
+            "label": "60"
+          },
+          "4200": {
+            "label": "70"
+          },
+          "4800": {
+            "label": "80"
+          },
+          "5400": {
+            "label": "90"
+          },
+          "5940": {
+            "label": "99"
+          }
+        },
+        "position": 2,
+        "custom_field": {
+          "name": "burner_2",
+          "feature": "timer"
+        }
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Keepwarm setting"
+        },
+        "position": 3,
+        "formatRules": [
+          {
+            "max": 0,
+            "min": 0,
+            "string": "zero"
+          },
+          {
+            "max": 1,
+            "min": 1,
+            "string": "kw_one"
+          },
+          {
+            "max": 2,
+            "min": 2,
+            "string": "Kw-Two"
+          }
+        ],
+        "program_data": {
+          "field": "keepwarm_2",
+          "program": [
+            1
+          ]
+        }
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "Double circle 2"
+        },
+        "action": {
+          "program_data": {
+            "field": "boost_2",
+            "value": 1,
+            "program": [
+              2
+            ]
+          }
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program_data": {
+              "field": "boost_2",
+              "value": 1,
+              "program": [
+                2
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "boost_2",
+            "value": 0,
+            "program": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "type": "fill",
+        "position": 4
+      }
+    ],
+    "container.burner_bottom_left": [
+      {
+        "type": "header",
+        "title": {
+          "ru-RU": "Левая нижняя"
+        },
+        "layout": "screen.page.burner_bottom_left",
+        "position": 0
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Temperature"
+        },
+        "suffix": "degree",
+        "position": 1,
+        "text_suffix": true,
+        "program_data": {
+          "field": "curtemp_1",
+          "program": [
+            3
+          ]
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Power"
+        },
+        "position": 1,
+        "custom_field": {
+          "name": "burner_1",
+          "feature": "temperature"
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Timer"
+        },
+        "position": 2,
+        "custom_field": {
+          "name": "burner_1",
+          "feature": "timer"
+        }
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z",
+        "type": "info",
+        "title": {
+          "en-US": "Boost"
+        },
+        "position": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "boost_1",
+              "value": 1,
+              "program": [
+                2
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z",
+        "type": "info",
+        "title": {
+          "en-US": "Boost"
+        },
+        "position": 2,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "boost_1",
+                "value": 1,
+                "program": [
+                  2
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "screen.page.burner_top_right": [
+      {
+        "type": "header",
+        "title": {
+          "ru-RU": "Правая верхняя конфорка"
+        },
+        "position": 0
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Power"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "3": {
+            "label": "3"
+          },
+          "6": {
+            "label": "6"
+          },
+          "9": {
+            "label": "9"
+          }
+        },
+        "position": 1,
+        "custom_field": {
+          "name": "burner_3",
+          "feature": "temperature"
+        }
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5940,
+          "min": 0,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Timer"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "600": {
+            "label": "10"
+          },
+          "1200": {
+            "label": "20"
+          },
+          "1800": {
+            "label": "30"
+          },
+          "2400": {
+            "label": "40"
+          },
+          "3000": {
+            "label": "50"
+          },
+          "3600": {
+            "label": "60"
+          },
+          "4200": {
+            "label": "70"
+          },
+          "4800": {
+            "label": "80"
+          },
+          "5400": {
+            "label": "90"
+          },
+          "5940": {
+            "label": "99"
+          }
+        },
+        "position": 2,
+        "custom_field": {
+          "name": "burner_3",
+          "feature": "timer"
+        }
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Keepwarm setting"
+        },
+        "position": 3,
+        "formatRules": [
+          {
+            "max": 0,
+            "min": 0,
+            "string": "zero"
+          },
+          {
+            "max": 1,
+            "min": 1,
+            "string": "kw_one"
+          },
+          {
+            "max": 2,
+            "min": 2,
+            "string": "Kw-Two"
+          }
+        ],
+        "program_data": {
+          "field": "keepwarm_3",
+          "program": [
+            1
+          ]
+        }
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "Boost"
+        },
+        "action": {
+          "program_data": {
+            "field": "boost_3",
+            "value": 1,
+            "program": [
+              2
+            ]
+          }
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program_data": {
+              "field": "boost_3",
+              "value": 1,
+              "program": [
+                2
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "boost_3",
+            "value": 0,
+            "program": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "type": "fill",
+        "position": 4
+      }
+    ],
+    "container.burner_bottom_right": [
+      {
+        "type": "header",
+        "title": {
+          "ru-RU": "Правая нижняя"
+        },
+        "layout": "screen.page.burner_bottom_right",
+        "position": 0
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Temperature"
+        },
+        "suffix": "degree",
+        "position": 1,
+        "text_suffix": true,
+        "program_data": {
+          "field": "curtemp_4",
+          "program": [
+            3
+          ]
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Power"
+        },
+        "position": 1,
+        "custom_field": {
+          "name": "burner_4",
+          "feature": "temperature"
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Timer"
+        },
+        "position": 2,
+        "custom_field": {
+          "name": "burner_4",
+          "feature": "timer"
+        }
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z",
+        "type": "info",
+        "title": {
+          "en-US": "Boost"
+        },
+        "position": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "boost_4",
+              "value": 1,
+              "program": [
+                2
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z",
+        "type": "info",
+        "title": {
+          "en-US": "Boost"
+        },
+        "position": 2,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "boost_4",
+                "value": 1,
+                "program": [
+                  2
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "screen.page.burner_bottom_left": [
+      {
+        "type": "header",
+        "title": {
+          "ru-RU": "Левая нижняя конфорка"
+        },
+        "position": 0
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Power"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "3": {
+            "label": "3"
+          },
+          "6": {
+            "label": "6"
+          },
+          "9": {
+            "label": "9"
+          }
+        },
+        "position": 1,
+        "custom_field": {
+          "name": "burner_1",
+          "feature": "temperature"
+        }
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5940,
+          "min": 0,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Timer"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "600": {
+            "label": "10"
+          },
+          "1200": {
+            "label": "20"
+          },
+          "1800": {
+            "label": "30"
+          },
+          "2400": {
+            "label": "40"
+          },
+          "3000": {
+            "label": "50"
+          },
+          "3600": {
+            "label": "60"
+          },
+          "4200": {
+            "label": "70"
+          },
+          "4800": {
+            "label": "80"
+          },
+          "5400": {
+            "label": "90"
+          },
+          "5940": {
+            "label": "99"
+          }
+        },
+        "position": 2,
+        "custom_field": {
+          "name": "burner_1",
+          "feature": "timer"
+        }
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Keepwarm setting"
+        },
+        "position": 3,
+        "formatRules": [
+          {
+            "max": 0,
+            "min": 0,
+            "string": "zero"
+          },
+          {
+            "max": 1,
+            "min": 1,
+            "string": "kw_one"
+          },
+          {
+            "max": 2,
+            "min": 2,
+            "string": "Kw-Two"
+          }
+        ],
+        "program_data": {
+          "field": "keepwarm_1",
+          "program": [
+            1
+          ]
+        }
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "Boost"
+        },
+        "action": {
+          "program_data": {
+            "field": "boost_1",
+            "value": 1,
+            "program": [
+              2
+            ]
+          }
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program_data": {
+              "field": "boost_1",
+              "value": 1,
+              "program": [
+                2
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "boost_1",
+            "value": 0,
+            "program": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "type": "fill",
+        "position": 4
+      }
+    ],
+    "screen.page.burner_bottom_right": [
+      {
+        "type": "header",
+        "title": {
+          "ru-RU": "Правая нижняя конфорка"
+        },
+        "position": 0
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Power"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "3": {
+            "label": "3"
+          },
+          "6": {
+            "label": "6"
+          },
+          "9": {
+            "label": "9"
+          }
+        },
+        "position": 1,
+        "custom_field": {
+          "name": "burner_4",
+          "feature": "temperature"
+        }
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5940,
+          "min": 0,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Timer"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "600": {
+            "label": "10"
+          },
+          "1200": {
+            "label": "20"
+          },
+          "1800": {
+            "label": "30"
+          },
+          "2400": {
+            "label": "40"
+          },
+          "3000": {
+            "label": "50"
+          },
+          "3600": {
+            "label": "60"
+          },
+          "4200": {
+            "label": "70"
+          },
+          "4800": {
+            "label": "80"
+          },
+          "5400": {
+            "label": "90"
+          },
+          "5940": {
+            "label": "99"
+          }
+        },
+        "position": 2,
+        "custom_field": {
+          "name": "burner_4",
+          "feature": "timer"
+        }
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Keepwarm setting"
+        },
+        "position": 3,
+        "formatRules": [
+          {
+            "max": 0,
+            "min": 0,
+            "string": "zero"
+          },
+          {
+            "max": 1,
+            "min": 1,
+            "string": "kw_one"
+          },
+          {
+            "max": 2,
+            "min": 2,
+            "string": "Kw-Two"
+          }
+        ],
+        "program_data": {
+          "field": "keepwarm_4",
+          "program": [
+            1
+          ]
+        }
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "Boost"
+        },
+        "action": {
+          "program_data": {
+            "field": "boost_4",
+            "value": 1,
+            "program": [
+              2
+            ]
+          }
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program_data": {
+              "field": "boost_4",
+              "value": 1,
+              "program": [
+                2
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "boost_4",
+            "value": 0,
+            "program": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "type": "fill",
+        "position": 4
+      }
+    ]
+  },
+  "limits": {
+    "timer": {
+      "max": 5940,
+      "min": 0,
+      "step": 60,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "volume": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "child_lock": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "temperature": {
+      "max": 9,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "PAF-4001WIFI",
+          "manufacturer": "polaris"
+        },
+        "type": "devices.types.other",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "steps": [
+                {
+                  "timer": 300,
+                  "program": [
+                    1
+                  ],
+                  "temperature": 100
+                }
+              ]
+            },
+            "actionOff": {
+              "steps": []
+            },
+            "condition": {
+              "not": {
+                "multi_step": 0
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "slider",
+            "limit": {
+              "max": 220,
+              "min": 35,
+              "step": 5,
+              "round": 1,
+              "default": 100,
+              "roundAlt": 1
+            },
+            "action": {
+              "steps": [
+                {
+                  "timer": 1200,
+                  "program": [
+                    1
+                  ],
+                  "temperature": 115
+                }
+              ]
+            },
+            "feature": "temperature",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "three",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 1800,
+                      "program": [
+                        3
+                      ],
+                      "temperature": 180
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "two",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 1320,
+                      "program": [
+                        2
+                      ],
+                      "temperature": 190
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "one",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 300,
+                      "program": [
+                        1
+                      ],
+                      "temperature": 100
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "four",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 600,
+                      "program": [
+                        4
+                      ],
+                      "temperature": 200
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "five",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 900,
+                      "program": [
+                        5
+                      ],
+                      "temperature": 200
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "six",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 1500,
+                      "program": [
+                        6
+                      ],
+                      "temperature": 160
+                    }
+                  ]
+                }
+              }
+            ],
+            "instance": "program",
+            "retrievable": false
+          },
+          {
+            "type": "switch",
+            "feature": "child_lock",
+            "instance": "controls_locked",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "instance": "input_source",
+            "retrievable": false
+          }
+        ]
+      }
+    },
+    "hidden": true,
+    "realtime": true,
+    "shortcuts": [
+      {
+        "values": {
+          "recipe": 1
+        }
+      },
+      {
+        "program": [
+          1
+        ]
+      },
+      {
+        "program": [
+          2
+        ]
+      },
+      {
+        "program": [
+          3
+        ]
+      }
+    ],
+    "fastSwitch": {
+      "on": {
+        "program": [
+          1
+        ]
+      },
+      "off": {
+        "program": [
+          0
+        ]
+      }
+    },
+    "cloneOfType": 285,
+    "invertSound": true,
+    "staticTimer": true,
+    "adminPresets": true,
+    "hotspot_ssid": "XFC604I",
+    "program_data": {
+      "0": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "pause",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "1": [
+        {
+          "max": 2,
+          "min": 0,
+          "name": "keepwarm_1",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 2,
+          "min": 0,
+          "name": "keepwarm_2",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 2,
+          "min": 0,
+          "name": "keepwarm_3",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 2,
+          "min": 0,
+          "name": "keepwarm_4",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "2": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "boost_1",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "boost_2",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "boost_3",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "boost_4",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        }
+      ],
+      "3": [
+        {
+          "max": 65535,
+          "min": 0,
+          "name": "curtemp_1",
+          "size": 2,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 65535,
+          "min": 0,
+          "name": "curtemp_2",
+          "size": 2,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 65535,
+          "min": 0,
+          "name": "curtemp_3",
+          "size": 2,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 65535,
+          "min": 0,
+          "name": "curtemp_4",
+          "size": 2,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "voiceControl": {
+      "intents": {
+        "status": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                },
+                "off": {}
+              }
+            }
+          }
+        },
+        "program": {
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          },
+          "values": {
+            "timer": {},
+            "program": {
+              "enum_values": {
+                "program_fry": {
+                  "action": {
+                    "program": [
+                      7
+                    ]
+                  }
+                },
+                "program_jam": {
+                  "action": {
+                    "program": [
+                      14
+                    ]
+                  }
+                },
+                "program_bake": {
+                  "action": {
+                    "program": [
+                      8
+                    ]
+                  }
+                },
+                "program_cake": {
+                  "action": {
+                    "program": [
+                      3
+                    ]
+                  }
+                },
+                "program_soup": {
+                  "query": {
+                    "timer": {}
+                  },
+                  "action": {
+                    "program": [
+                      4
+                    ]
+                  }
+                },
+                "program_stew": {
+                  "action": {
+                    "program": [
+                      6
+                    ]
+                  }
+                },
+                "program_wine": {
+                  "action": {
+                    "program": [
+                      22
+                    ]
+                  }
+                },
+                "program_aspic": {
+                  "action": {
+                    "program": [
+                      10
+                    ]
+                  }
+                },
+                "program_bread": {
+                  "action": {
+                    "program": [
+                      19
+                    ]
+                  }
+                },
+                "program_pilaf": {
+                  "action": {
+                    "program": [
+                      9
+                    ]
+                  }
+                },
+                "program_steam": {
+                  "action": {
+                    "program": [
+                      15
+                    ]
+                  }
+                },
+                "program_reheat": {
+                  "action": {
+                    "program": [
+                      2
+                    ]
+                  }
+                },
+                "program_yogurt": {
+                  "action": {
+                    "program": [
+                      12
+                    ]
+                  }
+                },
+                "program_oatmeal": {
+                  "action": {
+                    "program": [
+                      13
+                    ]
+                  }
+                },
+                "program_oil_fry": {
+                  "action": {
+                    "program": [
+                      25
+                    ]
+                  }
+                },
+                "program_omelette": {
+                  "action": {
+                    "program": [
+                      20
+                    ]
+                  }
+                },
+                "program_slow_cook": {
+                  "action": {
+                    "program": [
+                      21
+                    ]
+                  }
+                },
+                "program_sous_vide": {
+                  "action": {
+                    "program": [
+                      24
+                    ]
+                  }
+                },
+                "program_soaked_rice": {
+                  "action": {
+                    "program": [
+                      18
+                    ]
+                  }
+                },
+                "program_milk_porridge": {
+                  "action": {
+                    "program": [
+                      17
+                    ]
+                  }
+                },
+                "program_my_recipe_plus": {
+                  "query": {
+                    "timer": {},
+                    "temperature": {}
+                  },
+                  "action": {
+                    "program": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            "temperature": {}
+          }
+        },
+        "rollcall": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "device_on": {
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          }
+        },
+        "greetings": {},
+        "device_off": {
+          "action": {
+            "steps": []
+          }
+        },
+        "status.full": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "timer": {
+              "items": {
+                "value": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                },
+                "off": {}
+              }
+            },
+            "child_lock": {}
+          }
+        },
+        "child_lock.on": {},
+        "child_lock.off": {}
+      }
+    },
+    "bastardOfType": 284,
+    "custom_command": {
+      "timer": [
+        {
+          "max": 5940,
+          "min": 0,
+          "name": "burner_1",
+          "size": 2,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 5940,
+          "min": 0,
+          "name": "burner_2",
+          "size": 2,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 5940,
+          "min": 0,
+          "name": "burner_3",
+          "size": 2,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 5940,
+          "min": 0,
+          "name": "burner_4",
+          "size": 2,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 5940,
+          "min": 0,
+          "name": "alarm",
+          "size": 2,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "temperature": [
+        {
+          "max": 9,
+          "min": 0,
+          "name": "burner_1",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 9,
+          "min": 0,
+          "name": "burner_2",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 9,
+          "min": 0,
+          "name": "burner_3",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 9,
+          "min": 0,
+          "name": "burner_4",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "openMqttSupport": true,
+    "manualInfoFields": [
+      "program",
+      "temperature",
+      "timer"
+    ],
+    "open_mqtt_support": true,
+    "excludeScheduleFeatures": [
+      "keep_warm"
+    ]
+  },
+  "vendor": "polaris",
+  "features": [
+    "program",
+    "temperature",
+    "timer",
+    "child_lock",
+    "volume",
+    "demo",
+    "semi_recipe"
+  ],
+  "messages": {
+    "diag": {
+      "ar-AE": "اضغط مع الاستمرار على الأزرار \"+\" و \"-\" في نفس الوقت حتى سماع صفير واحد. انتظر 10 ثوانٍ. سيبدأ مؤشر الواي فاي في الوميض.",
+      "de-DE": "Drücken Sie gleichzeitig die Tasten \"+\" und \"-\" bis zu einem Piepton. Warten Sie 10 Sekunden. Die Wi-Fi-Anzeige beginnt zu blinken.",
+      "en-US": "Press and hold the \"+\" and \"-\" buttons simultaneously until 1 beep. Wait for 10 seconds. The Wi-Fi indicator will start blinking.",
+      "kk-KZ": "\"+\" және \"-\" батырмаларын бір уақытта 1 дыбыстық сигналға дейін басып тұрыңыз. 10 секунд күтіңіз. Wi-Fi индикаторы мигауға бастайды.",
+      "ru-RU": "Зажмите и удерживайте одновременно кнопки \"+\" и \"-\" до 1 звукового сигнала. Подождите 10 секунд. Индикатор Wi-Fi начнет мигать.",
+      "uk-UA": "Одночасно утримуйте кнопки \"+\" та \"-\" до 1 звукового сигналу. Почекайте 10 секунд. Індикатор Wi-Fi почне блимати."
+    },
+    "pair": {
+      "ar-AE": "اضغط مع الاستمرار على الأزرار \"+\" و \"-\" في نفس الوقت حتى سماع صفير واحد. تأكيدًا، سيبدأ مؤشر الواي فاي في الوميض.",
+      "de-DE": "Drücken Sie gleichzeitig die Tasten \"+\" und \"-\" bis zu einem Piepton. Zur Bestätigung beginnt die Wi-Fi-Anzeige zu blinken.",
+      "en-US": "Press and hold the \"+\" and \"-\" buttons simultaneously until 1 beep. The Wi-Fi indicator will start blinking as confirmation.",
+      "kk-KZ": "\"+\" және \"-\" батырмаларын бір уақытта 1 дыбыстық сигналға дейін басып тұрыңыз. Растау үшін Wi-Fi индикаторы мигауға бастайды.",
+      "ru-RU": "Зажмите и удерживайте одновременно кнопки \"+\" и \"-\" до 1 звукового сигнала. В подтверждение индикатор Wi-Fi начнет мигать.",
+      "uk-UA": "Одночасно утримуйте кнопки \"+\" та \"-\" до 1 звукового сигналу. Для підтвердження індикатор Wi-Fi почне блимати."
+    },
+    "zero": {
+      "en-US": "Off"
+    },
+    "reset": {
+      "ar-AE": "اضغط مع الاستمرار على الأزرار \"+\" و \"-\" في نفس الوقت حتى سماع ثلاث صفير. سيطفأ مؤشر الواي فاي.",
+      "de-DE": "Drücken Sie gleichzeitig die Tasten \"+\" und \"-\" bis zu drei Pieptönen. Die Wi-Fi-Anzeige wird ausgeschaltet.",
+      "en-US": "Press and hold the \"+\" and \"-\" buttons simultaneously until 3 beeps. The Wi-Fi indicator will turn off.",
+      "kk-KZ": "\"+\" және \"-\" батырмаларын бір уақытта 3 дыбыстық сигналға дейін басып тұрыңыз. Wi-Fi индикаторы сөнеді.",
+      "ru-RU": "Зажмите и удерживайте одновременно кнопки \"+\" и \"-\" до 3 звуковых сигналов. Индикатор Wi-Fi погаснет.",
+      "uk-UA": "Одночасно утримуйте кнопки \"+\" та \"-\" до 3 звукових сигналів. Індикатор Wi-Fi вимкнеться."
+    },
+    "Kw-Two": {
+      "en-US": "70°C"
+    },
+    "degree": {
+      "en-US": "°C"
+    },
+    "kw_one": {
+      "en-US": "40°C"
+    },
+    "error.1": {
+      "en-US": "Child lock operated",
+      "kk-KZ": "Кездейсоқ басудан қорғау атқарылды",
+      "ru-RU": "Сработала защита от случайного нажатия",
+      "uk-UA": "Функція захисту від дітей"
+    },
+    "error.2": {
+      "en-US": "1 high voltage alarm"
+    },
+    "error.3": {
+      "en-US": "1 low voltage alarm"
+    },
+    "error.4": {
+      "en-US": "1 stove top high temperature alarm"
+    },
+    "error.5": {
+      "en-US": "1 no pot alarm"
+    },
+    "error.6": {
+      "en-US": "1 IGBT high temperature alarm"
+    },
+    "error.7": {
+      "en-US": "1 thermistor is not plugged in properly"
+    },
+    "error.8": {
+      "en-US": "1 thermistor short circuit "
+    },
+    "error.9": {
+      "en-US": "1 IGBT thermistor sensor is not plugged in properly "
+    },
+    "error.10": {
+      "en-US": "1 circuit board IGBT sensor detection part fault"
+    },
+    "error.31": {
+      "en-US": "2 high voltage alarm"
+    },
+    "error.32": {
+      "en-US": "2 low voltage alarm"
+    },
+    "error.33": {
+      "en-US": "2 stove top high temperature alarm"
+    },
+    "error.34": {
+      "en-US": "2 no pot alarm"
+    },
+    "error.35": {
+      "en-US": "2 IGBT high temperature alarm"
+    },
+    "error.36": {
+      "en-US": "2 thermistor is not plugged in properly"
+    },
+    "error.37": {
+      "en-US": "2 thermistor short circuit "
+    },
+    "error.38": {
+      "en-US": "2 IGBT thermistor sensor is not plugged in properly "
+    },
+    "error.39": {
+      "en-US": "2 circuit board IGBT sensor detection part fault"
+    },
+    "error.61": {
+      "en-US": "3 high voltage alarm"
+    },
+    "error.62": {
+      "en-US": "3 low voltage alarm"
+    },
+    "error.63": {
+      "en-US": "3 stove top high temperature alarm"
+    },
+    "error.64": {
+      "en-US": "3 no pot alarm"
+    },
+    "error.65": {
+      "en-US": "3 IGBT high temperature alarm"
+    },
+    "error.66": {
+      "en-US": "3 thermistor is not plugged in properly"
+    },
+    "error.67": {
+      "en-US": "3 thermistor short circuit "
+    },
+    "error.68": {
+      "en-US": "3 IGBT thermistor sensor is not plugged in properly "
+    },
+    "error.69": {
+      "en-US": "3 circuit board IGBT sensor detection part fault"
+    },
+    "error.91": {
+      "en-US": "4 high voltage alarm"
+    },
+    "error.92": {
+      "en-US": "4 low voltage alarm"
+    },
+    "error.93": {
+      "en-US": "4 stove top high temperature alarm"
+    },
+    "error.94": {
+      "en-US": "4 no pot alarm"
+    },
+    "error.95": {
+      "en-US": "4 IGBT high temperature alarm"
+    },
+    "error.96": {
+      "en-US": "4 thermistor is not plugged in properly"
+    },
+    "error.97": {
+      "en-US": "4 thermistor short circuit "
+    },
+    "error.98": {
+      "en-US": "4 IGBT thermistor sensor is not plugged in properly "
+    },
+    "error.99": {
+      "en-US": "4 circuit board IGBT sensor detection part fault"
+    },
+    "kw_three": {
+      "en-US": "100°C"
+    },
+    "alert.step": {
+      "en-US": "Cooking step completed",
+      "kk-KZ": "Даярлау қадамы аяқталды",
+      "ru-RU": "Шаг приготовления завершён",
+      "uk-UA": "Крок приготування завершено"
+    },
+    "url.manual": {
+      "en-US": "https://images.cdn.polaris-iot.com/pdf/polaris/9/PMC%200526.pdf"
+    },
+    "alert.ready": {
+      "en-US": "Cooking finished",
+      "kk-KZ": "Даярлау аяқталды",
+      "ru-RU": "Приготовление завершено",
+      "uk-UA": "Приготування їжі завершено"
+    },
+    "alert.start": {
+      "en-US": "Cooking started",
+      "kk-KZ": "Дайындық басталды",
+      "ru-RU": "Приготовление началось",
+      "uk-UA": "Розпочато приготування їжі"
+    },
+    "url.catalog": {
+      "de-DE": "https://www.polar.ru/catalog/multivarki/multivarka-polaris-pmc-0526-iq-home/",
+      "en-US": "https://www.polar.ru/catalog/multivarki/multivarka-polaris-pmc-0526-iq-home/",
+      "kk-KZ": "https://www.polar.ru/catalog/multivarki/multivarka-polaris-pmc-0526-iq-home/",
+      "ru-RU": "https://www.polar.ru/catalog/multivarki/multivarka-polaris-pmc-0526-iq-home/",
+      "uk-UA": "https://polaris.company/ua/catalog/multicookers/multivarka-polaris-pmc-0526-iq-home/"
+    },
+    "talking.no_wifi": {
+      "de-DE": "Wenn die Anzeige der verzögerten Startzeit 20 Minuten anzeigt, kann das Gerät das konfigurierte Netzwerk nicht finden",
+      "en-US": "If the delayed start time indicator shows 20 minutes, the device cannot detect the configured network",
+      "kk-KZ": "Егер кешіктірілген бастау уақытының индикаторы 20 минутты көрсетсе, құрылғы конфигурацияланған желіні таба алмайды.",
+      "ru-RU": "Если индикатор времени отложенного старта показывает 20 минут - устройство не может обнаружить настроенную сеть",
+      "uk-UA": "Якщо індикатор відкладеного часу затримки запуску показує 20 хвилин, пристрій не може виявити налаштовану мережу"
+    },
+    "talking.wifi_error": {
+      "de-DE": "Wenn die Anzeige für die verzögerte Startzeit 40 Minuten anzeigt, ist das Passwort bei der Verbinden mit dem konfigurierten Netzwerk nicht korrekt",
+      "en-US": "If the delayed start time indicator shows 40 minutes, the password did not match when connecting to the configured network",
+      "kk-KZ": "Егер кешіктірілген бастау уақыты индикаторы 40 минутты көрсетсе, конфигурацияланған желіге қосылу кезінде пароль сәйкес келмеді",
+      "ru-RU": "Если индикатор времени отложенного старта показывает 40 минут - при подключении к настроенной сети не подошел пароль",
+      "uk-UA": "Якщо індикатор часу затримки запуску показує 40 хвилин, пароль не збігався при підключенні до налаштованої мережі"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    },
+    {
+      "name": {
+        "en-US": "On"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "pair": {
+      "60": "https://images.cdn.polaris-iot.com/6/64/cc250-dc8e-48e5-8d69-84a7bec362e7/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/6/64/cc250-dc8e-48e5-8d69-84a7bec362e7/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/6/64/cc250-dc8e-48e5-8d69-84a7bec362e7/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/6/64/cc250-dc8e-48e5-8d69-84a7bec362e7/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/6/64/cc250-dc8e-48e5-8d69-84a7bec362e7/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/6/64/cc250-dc8e-48e5-8d69-84a7bec362e7/900.webp",
+      "id": "664cc250-dc8e-48e5-8d69-84a7bec362e7",
+      "original": "https://images.cdn.polaris-iot.com/6/64/cc250-dc8e-48e5-8d69-84a7bec362e7/original.webp"
+    },
+    "manualbg": {
+      "60": "https://images.cdn.polaris-iot.com/e/bf/27365-6762-4a64-82d6-1024629eaff1/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/e/bf/27365-6762-4a64-82d6-1024629eaff1/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/e/bf/27365-6762-4a64-82d6-1024629eaff1/240.webp",
+      "id": "ebf27365-6762-4a64-82d6-1024629eaff1",
+      "original": "https://images.cdn.polaris-iot.com/e/bf/27365-6762-4a64-82d6-1024629eaff1/original.webp"
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "hotspot",
+    "subdevice"
+  ],
+  "last_modified": 1783429549,
+  "temperature_units": "celsius"
+}

@@ -1,0 +1,1530 @@
+{
+  "id": "b537f8c6-bb05-4edf-b30b-523196eb87a7",
+  "name": "PBFI-6038IB Wi-Fi",
+  "type": 295,
+  "class": "hood",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/2/98/506f1-15c5-40d7-9fe0-6e296f83fc98/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/2/98/506f1-15c5-40d7-9fe0-6e296f83fc98/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/2/98/506f1-15c5-40d7-9fe0-6e296f83fc98/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/2/98/506f1-15c5-40d7-9fe0-6e296f83fc98/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/2/98/506f1-15c5-40d7-9fe0-6e296f83fc98/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/2/98/506f1-15c5-40d7-9fe0-6e296f83fc98/900.webp",
+    "1200": "https://images.cdn.polaris-iot.com/2/98/506f1-15c5-40d7-9fe0-6e296f83fc98/1200.webp",
+    "1800": "https://images.cdn.polaris-iot.com/2/98/506f1-15c5-40d7-9fe0-6e296f83fc98/1800.webp",
+    "id": "298506f1-15c5-40d7-9fe0-6e296f83fc98",
+    "original": "https://images.cdn.polaris-iot.com/2/98/506f1-15c5-40d7-9fe0-6e296f83fc98/original.webp"
+  },
+  "layout": {
+    "home.top": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "switch",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "settings": [
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "IQ Connect\t",
+          "de-DE": "IQ Connect\t",
+          "en-US": "IQ Connect\t",
+          "kk-KZ": "IQ Connect\t",
+          "ru-RU": "IQ Connect\t",
+          "uk-UA": "IQ Connect\t"
+        },
+        "feature": "speed",
+        "measure": "dataSource",
+        "position": 1
+      },
+      {
+        "type": "text",
+        "title": {
+          "ar-AE": "خطأ في الاتصال. تأكد من أن موقد الطهي متصل بنفس شبكة Wi-Fi الخاصة بشفاط المطبخ.",
+          "de-DE": "Verbindungsfehler. Stellen Sie sicher, dass das Kochfeld mit demselben WLAN wie die Dunstabzugshaube verbunden ist.",
+          "en-US": "Connection error. Make sure the cooktop is connected to the same Wi-Fi network as the hood.",
+          "kk-KZ": "Қосылу қатесі. Пісіру панелінің сорғышпен бір Wi-Fi желісіне қосылғанын тексеріңіз.",
+          "ru-RU": "Ошибка подключения. Убедитесь, что варочная панель находится в одной Wi-Fi сети с вытяжкой."
+        },
+        "position": 2,
+        "visibility": [
+          {
+            "program_data": {
+              "field": "conection_cooktop_status",
+              "value": 1,
+              "program": [
+                3
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": {
+          "ru-RU": "Запущено ручное управление вытяжкой. Синхронизация будет восстановлена после следующего запуска варочной панели"
+        },
+        "position": 3,
+        "visibility": [
+          {
+            "program_data": {
+              "field": "conection_cooktop_status",
+              "value": 4,
+              "program": [
+                3
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "switch",
+        "title": {
+          "ar-AE": "التشغيل التلقائي لشفاط المطبخ عند تشغيل موقد الطهي",
+          "de-DE": "Automatischer Start der Dunstabzugshaube beim Einschalten des Kochfelds",
+          "en-US": "Automatic hood activation when the cooktop is turned on",
+          "kk-KZ": "Пісіру панелі қосылғанда сорғышты автоматты іске қосу",
+          "ru-RU": "Автозапуск вытяжки при включении варочной панели"
+        },
+        "action": {
+          "program_data": {
+            "field": "conection_cooktop_status",
+            "value": 3,
+            "program": [
+              3
+            ]
+          }
+        },
+        "position": 4,
+        "condition": [
+          {
+            "or": [
+              {
+                "program_data": {
+                  "field": "conection_cooktop_status",
+                  "value": 3,
+                  "program": [
+                    3
+                  ]
+                }
+              },
+              {
+                "program_data": {
+                  "field": "conection_cooktop_status",
+                  "value": 4,
+                  "program": [
+                    3
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "conection_cooktop_status",
+            "value": 2,
+            "program": [
+              3
+            ]
+          }
+        },
+        "visibility": [
+          {
+            "or": [
+              {
+                "program_data": {
+                  "field": "conection_cooktop_status",
+                  "value": 2,
+                  "program": [
+                    3
+                  ]
+                }
+              },
+              {
+                "program_data": {
+                  "field": "conection_cooktop_status",
+                  "value": 3,
+                  "program": [
+                    3
+                  ]
+                }
+              },
+              {
+                "program_data": {
+                  "field": "conection_cooktop_status",
+                  "value": 4,
+                  "program": [
+                    3
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "إعادة تعيين تكوين نفك",
+          "de-DE": "Zurücksetzen der NFC-konfiguration",
+          "en-US": "NFC configuration reset",
+          "kk-KZ": "NFC конфигурациясын қалпына келтіру",
+          "ru-RU": "Сброс конфигурации по NFC",
+          "uk-UA": "Скидання конфігурації по NFC"
+        },
+        "measure": "nfcReset",
+        "position": 5
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "speed",
+        "position": 0,
+        "text_suffix": false
+      },
+      {
+        "type": "info",
+        "feature": "timer",
+        "position": 0,
+        "text_suffix": false
+      }
+    ],
+    "manual.bottom": [
+      {
+        "type": "button_power",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "شفاط المطبخ",
+          "de-DE": "Dunstabzugshaube ",
+          "en-US": "Hood",
+          "kk-KZ": "Сорғыш",
+          "ru-RU": "Вытяжка",
+          "uk-UA": "Витяжка"
+        },
+        "position": 1
+      },
+      {
+        "type": "container_head",
+        "position": 2
+      },
+      {
+        "type": "info",
+        "feature": "speed",
+        "position": 3,
+        "text_suffix": false
+      },
+      {
+        "type": "info",
+        "feature": "timer",
+        "position": 3,
+        "text_suffix": false
+      },
+      {
+        "type": "container_tail",
+        "position": 4
+      },
+      {
+        "type": "container_head",
+        "position": 5
+      },
+      {
+        "type": "icon",
+        "image": "program.image.no_speed_backlight_on",
+        "position": 6,
+        "visibility": [
+          {
+            "speed": 0,
+            "source": "state"
+          },
+          {
+            "source": "state",
+            "backlight": 1
+          }
+        ]
+      },
+      {
+        "type": "icon",
+        "image": "program.image.speed_1_backlight_on",
+        "position": 6,
+        "visibility": [
+          {
+            "speed": 1,
+            "source": "state"
+          },
+          {
+            "source": "state",
+            "backlight": 1
+          }
+        ]
+      },
+      {
+        "type": "icon",
+        "image": "program.image.speed_2_backlight_on",
+        "position": 6,
+        "visibility": [
+          {
+            "speed": 2,
+            "source": "state"
+          },
+          {
+            "source": "state",
+            "backlight": 1
+          }
+        ]
+      },
+      {
+        "type": "icon",
+        "image": "program.image.speed_3_backlight_on",
+        "position": 6,
+        "visibility": [
+          {
+            "speed": 3,
+            "source": "state"
+          },
+          {
+            "source": "state",
+            "backlight": 1
+          }
+        ]
+      },
+      {
+        "type": "icon",
+        "image": "program.image.speed_4_backlight_on",
+        "position": 6,
+        "visibility": [
+          {
+            "speed": 4,
+            "source": "state"
+          },
+          {
+            "source": "state",
+            "backlight": 1
+          }
+        ]
+      },
+      {
+        "type": "icon",
+        "image": "program.image.no_speed",
+        "position": 6,
+        "visibility": [
+          {
+            "speed": 0,
+            "source": "state"
+          },
+          {
+            "source": "state",
+            "backlight": 0
+          }
+        ]
+      },
+      {
+        "type": "icon",
+        "image": "program.image.speed_1",
+        "position": 6,
+        "visibility": [
+          {
+            "speed": 1,
+            "source": "state"
+          },
+          {
+            "source": "state",
+            "backlight": 0
+          }
+        ]
+      },
+      {
+        "type": "icon",
+        "image": "program.image.speed_2",
+        "position": 6,
+        "visibility": [
+          {
+            "speed": 2,
+            "source": "state"
+          },
+          {
+            "source": "state",
+            "backlight": 0
+          }
+        ]
+      },
+      {
+        "type": "icon",
+        "image": "program.image.speed_3",
+        "position": 6,
+        "visibility": [
+          {
+            "speed": 3,
+            "source": "state"
+          },
+          {
+            "source": "state",
+            "backlight": 0
+          }
+        ]
+      },
+      {
+        "type": "icon",
+        "image": "program.image.speed_4",
+        "position": 6,
+        "visibility": [
+          {
+            "speed": 4,
+            "source": "state"
+          },
+          {
+            "source": "state",
+            "backlight": 0
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 7
+      },
+      {
+        "type": "slider",
+        "style": "picker",
+        "feature": "timer",
+        "position": 8,
+        "precondition": [
+          {
+            "not": {
+              "speed": 0,
+              "source": "state"
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 9
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 4,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          },
+          "4": {
+            "label": "4"
+          }
+        },
+        "feature": "speed",
+        "position": 10
+      },
+      {
+        "type": "container_tail",
+        "position": 11
+      },
+      {
+        "type": "container_head",
+        "position": 12
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "إعدادات",
+          "de-DE": "Einstellungen",
+          "en-US": "Settings",
+          "kk-KZ": "Параметрлер",
+          "ru-RU": "Настройки",
+          "uk-UA": "Налаштування"
+        },
+        "position": 13
+      },
+      {
+        "type": "button",
+        "layout": "userPresets",
+        "position": 14
+      },
+      {
+        "icon": "M0,0h28v28V0M23.6295,4.4135c-.8887-.8877-2.2705-1.1396-3.8984-.71-3.9388,1.0442-7.1494,3.1887-9.4379,6.1715-.8463-.4814-2.2792-.2971-4.2819.5629-.6182.2656-1.0625.8184-1.1885,1.4785-.127.6592.082,1.3359.5566,1.8105l1.5576,1.5557c.0977.0972.2256.146.3535.146.0852,0,.1667-.0297.2429-.073-.0032.3956.1328.7734.4114,1.051l3.6914,3.6919c.2754.2749.6475.4204,1.0391.4204.0034,0,.0071-.0018.0106-.0018-.1063.1904-.0865.4319.0753.5941l1.5557,1.5576c.3828.3833.8975.5928,1.4287.5928.127,0,.2549-.0117.3828-.0366.6592-.1265,1.2119-.5713,1.4766-1.189.8616-2.0035,1.0463-3.4388.5613-4.2842,2.9844-2.2885,5.1296-5.4995,6.1741-9.4395.4307-1.6255.1777-3.0103-.7109-3.8989ZM7.6918,14.6463c-.0166-.0237-.0264-.0505-.0476-.0717l-1.5576-1.5557c-.2441-.2432-.3467-.5762-.2822-.9141.0654-.3394.2842-.6118.6016-.748,1.5234-.655,2.7122-.8939,3.2864-.6713-.8123,1.2025-1.4861,2.5237-2.0005,3.9608ZM16.6872,21.6416c-.1367.3174-.4092.5366-.748.6016-.3389.064-.6719-.0376-.915-.2812l-1.5557-1.5576c-.0226-.0226-.051-.0334-.0764-.0508,1.4387-.5143,2.7612-1.1886,3.9648-2.0014.2244.5713-.0134,1.7627-.6697,3.2895ZM23.3737,8.0566c-1.4893,5.6162-5.1152,9.5669-10.4863,11.4253-.207.0708-.416.0366-.5439-.0908l-3.6914-3.6919c-.1279-.1274-.1631-.335-.0908-.542,1.8584-5.3716,5.8096-8.998,11.4258-10.4868.4336-.1147.8408-.1719,1.2139-.1719.7178,0,1.3096.2104,1.7217.6221.627.6265.7871,1.6689.4512,2.936ZM16.8649,8.2753c-1.6016,0-2.9053,1.3032-2.9053,2.9053s1.3037,2.9048,2.9053,2.9048,2.9053-1.3032,2.9053-2.9048-1.3037-2.9053-2.9053-2.9053ZM16.8649,13.0854c-1.0508,0-1.9053-.8545-1.9053-1.9048s.8545-1.9053,1.9053-1.9053,1.9053.8545,1.9053,1.9053-.8545,1.9048-1.9053,1.9048ZM7.2995,17.8193h-.001c-.7578,0-1.4697.2949-2.0049.8306-.3672.3677-.626.8252-.748,1.3247l-1.0391,3.6147c-.0156.0391-.0381.1167-.0439.1582-.0283.2021.0391.4097.1855.5601.1133.1133.2646.1807.4639.1807.0625,0,.1289-.0068.2002-.02l3.6582-1.0547c.5059-.1221.9668-.3818,1.3359-.7505.5361-.5356.8311-1.248.8311-2.0063-.001-.7573-.2959-1.4697-.832-2.0059s-1.248-.8315-2.0059-.8315ZM8.5993,21.956c-.2393.2388-.5371.4067-.8848.4912l-3.0996.8965.8945-3.1025.0059-.022c.0781-.3242.2451-.6226.4854-.8623.3467-.3467.8076-.5376,1.2979-.5376.4912,0,.9521.1914,1.2998.5386s.5391.8086.5391,1.2993-.1914.9517-.5381,1.2988Z",
+        "type": "button",
+        "title": {
+          "ar-AE": "توربو",
+          "de-DE": "Turbo",
+          "en-US": "Turbo",
+          "kk-KZ": "Турбо",
+          "ru-RU": "Турбо ",
+          "uk-UA": "Турбо"
+        },
+        "action": {
+          "speed": 4
+        },
+        "position": 14,
+        "condition": [
+          {
+            "speed": 4,
+            "source": "state"
+          }
+        ],
+        "action_off": {
+          "speed": 3
+        }
+      },
+      {
+        "icon": "M0,0h28v28V0M13.8724,7.5327c-.4199-.7544-1.3779-1.0244-2.1309-.606-.1772.0988-.3276.2303-.4514.3829l-.3279-.5884c-.4336-.7793-1.4189-1.0591-2.1963-.6255-.2009.1119-.3672.2617-.498.4343-.2094-.2715-.4944-.472-.8311-.5676-.415-.1167-.8516-.0674-1.2275.1426-.7047.3926-.9951,1.2366-.723,1.9703-.2172.022-.4292.0863-.6246.1952-.7783.4336-1.0586,1.4194-.625,2.1973l3.4639,6.2192-1.7588-.7837c-.8516-.2534-1.6191-.0303-2.166.624-.2314.2769-.3281.6387-.2676.9937.0615.3535.2744.6606.584.8433l5.7246,3.3638c.0205.0122,1.2354.7534,2.8857.7534,1.0518,0,2.2812-.3018,3.4902-1.2866,1.0664-.8701,1.7295-1.9722,1.9697-3.2754.2412-1.3003.0068-2.6733-.6582-3.8662l-3.6318-6.5205ZM17.18,17.7377c-.1973,1.0635-.7422,1.9658-1.6201,2.6816-2.5352,2.0688-5.1045.5269-5.2246.4536l-5.7363-3.3706c-.0762-.0449-.0986-.1143-.1045-.1519-.0068-.0381-.0098-.1123.0488-.1816.291-.3491.6455-.4468,1.0518-.3296l2.2803,1.0205c.3096.1392.6719.063.9014-.187.2305-.251.2734-.6191.1074-.9155l-3.7744-6.7759c-.165-.2964-.0576-.6719.2393-.8374.1436-.0796.3096-.0986.4668-.0542.1582.0449.2891.1484.3691.292l2.7393,4.916c.1338.2422.4395.3252.6797.1938.2412-.1348.3281-.439.1934-.6802l-2.7373-4.9125c-.0005-.001-.0005-.002-.001-.003l-.6016-1.0801c-.165-.2964-.0576-.6719.2383-.8369.1445-.0806.3086-.0981.4688-.0547.1572.0449.2891.1489.3691.2925l3.3398,5.9956c.0908.1646.2617.2568.4365.2568.083,0,.166-.0205.2432-.063.2412-.1348.3281-.439.1934-.6802l-2.7217-4.8859c-.0051-.0109-.0048-.0228-.0107-.0335-.165-.2964-.0576-.6719.2383-.8369.2998-.166.6729-.0571.8369.2378l2.5117,4.5083c.0908.1646.2617.2568.4365.2568.083,0,.166-.0205.2432-.063.2412-.1348.3281-.439.1934-.6802l-1.4421-2.5885c-.0088-.0234-.0101-.0482-.0227-.0707-.0732-.1318-.0918-.2847-.0498-.4302.041-.145.1367-.2661.2686-.3394.2715-.1509.6191-.0542.7715.2188l3.6318,6.5205c.5518.9897.7471,2.1255.5488,3.1978ZM15.8929,8.0454c-.0488-.2715.1309-.5317.4033-.5815.6143-.1113,1.2432-.1938,1.8691-.2446,1.9736-.1582,3.9541-.0156,5.8809.4297.2695.0625.4375.3306.375.6001-.0537.231-.2598.3872-.4873.3872-.0371,0-.0742-.0039-.1123-.0127-1.8271-.4219-3.7041-.5581-5.5762-.4072-.5928.0479-1.1885.126-1.7715.2319-.2617.0469-.5322-.1299-.5811-.4028ZM24.3851,10.5913c-.0586.2246-.2617.373-.4834.373-.042,0-.084-.0054-.127-.0166-1.7461-.458-3.5439-.6182-5.3457-.4707-.2861.0229-.5762.0547-.8633.0938-.2852.0352-.5264-.1548-.5625-.4287-.0371-.2734.1543-.5254.4277-.5625.3047-.041.6143-.0747.918-.0996,1.9141-.1548,3.8252.0137,5.6797.501.2676.0698.4268.3433.3564.6104ZM24.4671,13c-.0664.2134-.2637.3501-.4766.3501-.0498,0-.0996-.0073-.1494-.0229-1.7012-.5342-3.459-.731-5.2275-.5884-.2715.0264-.5156-.1826-.5381-.458s.1826-.5166.458-.5391c1.8945-.1533,3.7832.0586,5.6064.6313.2637.0825.4102.3633.3271.627Z",
+        "type": "button",
+        "title": {
+          "ar-AE": "الإيماءات",
+          "de-DE": "Gestik",
+          "en-US": "Gestures",
+          "kk-KZ": "Қимылдар",
+          "ru-RU": "Жесты",
+          "uk-UA": "Жести"
+        },
+        "action": {
+          "program_data": {
+            "field": "gesture_switch",
+            "value": 1,
+            "program": [
+              1
+            ]
+          }
+        },
+        "position": 14,
+        "condition": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "gesture_switch",
+              "value": 1,
+              "program": [
+                1
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "gesture_switch",
+            "value": 0,
+            "program": [
+              1
+            ]
+          }
+        }
+      },
+      {
+        "type": "button",
+        "feature": "backlight",
+        "position": 14
+      },
+      {
+        "type": "button",
+        "feature": "volume",
+        "position": 14
+      },
+      {
+        "type": "fill",
+        "position": 14
+      },
+      {
+        "type": "container_tail",
+        "position": 15
+      }
+    ],
+    "userPresets.list": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Custom modes",
+          "ru-RU": "Персональные режимы"
+        },
+        "position": 0
+      },
+      {
+        "row": "userPresets",
+        "type": "info",
+        "position": 1
+      },
+      {
+        "row": "addPreset",
+        "type": "button",
+        "title": {
+          "en-US": "Add",
+          "ru-RU": "Добавить"
+        },
+        "position": 2
+      }
+    ],
+    "userPresets.editor": [
+      {
+        "type": "button",
+        "measure": "input_name",
+        "position": 0
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "type": "slider",
+        "style": "picker",
+        "feature": "timer",
+        "position": 2,
+        "visibility": [
+          {
+            "not": {
+              "speed": 0,
+              "source": "selection"
+            }
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 4,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          },
+          "4": {
+            "label": "4"
+          }
+        },
+        "feature": "speed",
+        "position": 3
+      },
+      {
+        "type": "button",
+        "feature": "backlight",
+        "position": 4
+      },
+      {
+        "type": "button",
+        "feature": "volume",
+        "position": 4
+      },
+      {
+        "type": "container_tail",
+        "position": 7
+      }
+    ]
+  },
+  "limits": {
+    "speed": {
+      "max": 4,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "timer": {
+      "max": 3600,
+      "min": 0,
+      "step": 60,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "volume": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "backlight": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "icons": {
+      "volume": "M0.0,0.0h29.0v30.0V0.0M4.62159 3.75354C4.23145 3.3634 3.60124 3.3634 3.21111 3.75354C2.82097 4.14367 2.82097 4.77389 3.21111 5.16402L8.04277 10.0057L8.00276 10.0457H1.01035C0.450157 10.0457 0 10.4959 0 11.0561V19.0388C0 19.599 0.450157 20.0492 1.01035 20.0492H8.00276L14.3449 25.6011C14.9952 26.1713 16.0055 25.7111 16.0055 24.8508V17.9684L18.1162 20.0792C17.5561 20.5293 17.1059 20.8194 16.9959 20.8894C16.5257 21.1795 16.3756 21.7898 16.6557 22.2599C16.8458 22.57 17.1759 22.7401 17.516 22.7401C17.6961 22.7401 17.8662 22.6901 18.0362 22.6C18.2663 22.46 18.8565 22.0799 19.5467 21.4997L22.4677 24.4207C20.9972 25.6811 19.2366 26.6214 17.266 27.1316C16.7258 27.2716 16.4057 27.8118 16.5457 28.352C16.6657 28.8022 17.0659 29.1023 17.516 29.1023C17.5961 29.1023 17.6861 29.0923 17.7661 29.0723C20.0869 28.4721 22.1676 27.3417 23.8782 25.8412L25.3888 27.3517C25.5888 27.5517 25.8389 27.6418 26.099 27.6418C26.3591 27.6418 26.6092 27.5417 26.8092 27.3517C27.1994 26.9615 27.1994 26.3313 26.8092 25.9412L4.62159 3.75354ZM16.0055 5.25428C16.0055 4.39398 14.9952 3.93382 14.3449 4.50402L11.1138 7.33499L16.0055 12.2267V5.25428ZM17.2559 1.97354C22.9979 3.45405 27.0093 8.62583 27.0093 14.5479C27.0093 17.1288 26.249 19.5696 24.9086 21.6203L26.3391 23.0508C28.0296 20.61 29 17.669 29 14.5479C29 7.71552 24.3684 1.74346 17.7461 0.0328684C17.2059 -0.10718 16.6657 0.21293 16.5257 0.753117C16.3956 1.2933 16.7157 1.83349 17.2559 1.97354ZM17.0659 8.25516C19.4967 9.44557 21.0073 11.8564 21.0073 14.5473C21.0073 15.2476 20.9072 15.9278 20.7072 16.588C20.6471 16.7881 20.5571 16.9782 20.4671 17.1682L21.9676 18.6687C22.2377 18.2086 22.4578 17.7084 22.6278 17.1782C22.8879 16.3279 23.018 15.4476 23.018 14.5473C23.018 11.0861 21.0773 7.98507 17.9562 6.46454C17.456 6.22446 16.8658 6.42453 16.6158 6.9247C16.3657 7.42487 16.5657 8.01508 17.0659 8.25516Z"
+    },
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "PBFI-6038IB Wi-Fi",
+          "manufacturer": "polaris"
+        },
+        "type": "devices.types.ventilation.fan",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                1
+              ]
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "low",
+                "action": {
+                  "speed": 1
+                },
+                "condition": {
+                  "speed": 1
+                }
+              },
+              {
+                "value": "medium",
+                "action": {
+                  "speed": 2
+                },
+                "condition": {
+                  "speed": 2
+                }
+              },
+              {
+                "value": "fast",
+                "action": {
+                  "speed": 3
+                },
+                "condition": {
+                  "speed": 3
+                }
+              },
+              {
+                "value": "max",
+                "action": {
+                  "speed": 4
+                },
+                "condition": {
+                  "speed": 4
+                }
+              }
+            ],
+            "instance": "fan_speed",
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "action": {
+              "volume": 1
+            },
+            "feature": "volume",
+            "instance": "mute",
+            "actionOff": {
+              "volume": 0
+            },
+            "condition": {
+              "volume": 1
+            },
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "feature": "backlight",
+            "instance": "backlight",
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "hidden": true,
+    "realtime": true,
+    "fastSwitch": {
+      "on": {
+        "program": [
+          1
+        ]
+      },
+      "off": {
+        "program": [
+          0
+        ]
+      }
+    },
+    "invertSound": true,
+    "userPresets": true,
+    "hotspot_ssid": "PBFI-6038IB",
+    "program_data": {
+      "0": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "status",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "1": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "gesture_switch",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "3": [
+        {
+          "max": 4,
+          "min": 0,
+          "name": "conection_cooktop_status",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "voiceControl": {
+      "intents": {
+        "status": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_critical_failure": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        },
+                        {
+                          "error": 5
+                        },
+                        {
+                          "error": 6
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "speed": {
+              "values": {
+                "speed": {
+                  "type": "number_value"
+                }
+              }
+            }
+          }
+        },
+        "rollcall": {
+          "status": {
+            "ready": {}
+          }
+        },
+        "device_on": {
+          "action": {
+            "program": [
+              1
+            ]
+          }
+        },
+        "greetings": {
+          "status": {
+            "ready": {
+              "items": {
+                "hello": {}
+              }
+            }
+          }
+        },
+        "intensity": {
+          "values": {
+            "speed": {
+              "enum_values": {
+                "param_low": {
+                  "action": {
+                    "speed": 1
+                  }
+                },
+                "param_max": {
+                  "action": {
+                    "speed": 4
+                  }
+                },
+                "param_mid": {
+                  "action": {
+                    "speed": 2
+                  }
+                },
+                "param_high": {
+                  "action": {
+                    "speed": 3
+                  }
+                },
+                "param_turbo": {
+                  "action": {
+                    "speed": 4
+                  }
+                }
+              }
+            }
+          }
+        },
+        "volume.on": {
+          "action": {
+            "volume": 1
+          }
+        },
+        "device_off": {
+          "action": {
+            "program": [
+              0
+            ]
+          }
+        },
+        "volume.off": {
+          "action": {
+            "volume": 0
+          }
+        },
+        "status.full": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {}
+              }
+            },
+            "speed": {
+              "values": {
+                "speed": {
+                  "type": "number_value"
+                }
+              }
+            },
+            "backlight": {
+              "items": {
+                "on": {},
+                "off": {}
+              }
+            },
+            "child_lock": {
+              "items": {
+                "on": {},
+                "off": {}
+              }
+            }
+          }
+        },
+        "backlight.on": {
+          "action": {
+            "backlight": 1
+          }
+        },
+        "backlight.off": {
+          "action": {
+            "backlight": 0
+          }
+        },
+        "off_timer.set": {
+          "values": {
+            "timer": {}
+          }
+        }
+      },
+      "betaIntents": {
+        "status": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_critical_failure": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        },
+                        {
+                          "error": 5
+                        },
+                        {
+                          "error": 6
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "speed": {
+              "values": {
+                "speed": {
+                  "type": "number_value"
+                }
+              }
+            }
+          }
+        },
+        "rollcall": {
+          "status": {
+            "ready": {}
+          }
+        },
+        "device_on": {
+          "action": {
+            "program": [
+              1
+            ]
+          }
+        },
+        "greetings": {
+          "status": {
+            "ready": {
+              "items": {
+                "hello": {}
+              }
+            }
+          }
+        },
+        "intensity": {
+          "values": {
+            "speed": {
+              "enum_values": {
+                "param_low": {
+                  "action": {
+                    "speed": 1
+                  }
+                },
+                "param_max": {
+                  "action": {
+                    "speed": 4
+                  }
+                },
+                "param_mid": {
+                  "action": {
+                    "speed": 2
+                  }
+                },
+                "param_high": {
+                  "action": {
+                    "speed": 3
+                  }
+                },
+                "param_turbo": {
+                  "action": {
+                    "speed": 4
+                  }
+                }
+              }
+            }
+          }
+        },
+        "volume.on": {
+          "action": {
+            "volume": 1
+          }
+        },
+        "device_off": {
+          "action": {
+            "program": [
+              0
+            ]
+          }
+        },
+        "volume.off": {
+          "action": {
+            "volume": 0
+          }
+        },
+        "status.full": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {}
+              }
+            },
+            "speed": {
+              "values": {
+                "speed": {
+                  "type": "number_value"
+                }
+              }
+            },
+            "backlight": {
+              "items": {
+                "on": {},
+                "off": {}
+              }
+            },
+            "child_lock": {
+              "items": {
+                "on": {},
+                "off": {}
+              }
+            }
+          }
+        },
+        "backlight.on": {
+          "action": {
+            "backlight": 1
+          }
+        },
+        "backlight.off": {
+          "action": {
+            "backlight": 0
+          }
+        },
+        "off_timer.set": {
+          "values": {
+            "timer": {}
+          }
+        }
+      }
+    },
+    "openMqttSupport": true,
+    "open_mqtt_support": true,
+    "groupControlConfig": {
+      "subscribeFeatures": [
+        "speed"
+      ]
+    },
+    "excludeScheduleFeatures": [
+      "keep_warm"
+    ]
+  },
+  "vendor": "polaris",
+  "features": [
+    "program",
+    "timer",
+    "volume",
+    "demo",
+    "speed",
+    "backlight"
+  ],
+  "messages": {
+    "diag": {
+      "ar-AE": "اضغط مع الاستمرار على الزرين \" + \" و \" - \" على اللوحة حتى يصدر صوت صفير واحد. انتظر 10 ثانية ، وسوف مؤشر واي فاي تبدأ وامض ببطء.",
+      "de-DE": "Halten Sie die Tasten \"+\" und \"-\" auf dem Bedienfeld gedrückt, bis ein Piepton ertönt. Warten Sie 10 Sekunden, und die WLAN-Anzeige beginnt langsam zu blinken.",
+      "en-US": "Hold down the \"+\" and \"-\" buttons on the panel until one beep sounds. Wait 10 seconds, and the Wi-Fi indicator will start blinking slowly.",
+      "kk-KZ": "Панельдегі \"+\" және \"-\" түймелерін бір дыбыстық сигнал шыққанша басып тұрыңыз. 10 секунд күтіңіз, Сонда Wi-Fi индикаторы баяу жыпылықтай бастайды.",
+      "ru-RU": "Зажмите и удерживайте кнопки \"+\" и \"-\" на панели до одного звукового сигнала. Подождите 10 секунд, индикатор Wi-Fi начнет медленно мигать."
+    },
+    "pair": {
+      "ar-AE": "اضغط باستمرار على الزرين \" + \" و \" - \" على اللوحة حتى يصدر صوت صفير واحد ، وبعد ذلك سيبدأ مؤشر واي فاي في الوميض بسرعة.",
+      "de-DE": "Halten Sie die Tasten \"+\" und \"-\" auf dem Bedienfeld gedrückt, bis ein Piepton ertönt.Danach beginnt die WLAN-Anzeige schnell zu blinken.",
+      "en-US": "Hold down the \"+\" and \"-\" buttons on the panel until one beep sounds, after which the Wi-Fi indicator will start flashing rapidly.",
+      "kk-KZ": "Панельдегі \"+\" және \"-\" түймелерін бір дыбыстық сигнал шыққанша басып тұрыңыз, Содан кейін Wi-Fi индикаторы жылдам жыпылықтай бастайды.",
+      "ru-RU": "Зажмите и удерживайте кнопки \"+\" и \"-\" на панели до одного звукового сигнала, после чего индикатор Wi-Fi начнет быстро мигать."
+    },
+    "zero": {
+      "en-US": "Off"
+    },
+    "reset": {
+      "ar-AE": "اضغط باستمرار على زري \" + \" و \" - \" على اللوحة لمدة تصل إلى ثلاثة أصوات تنبيه ، وبعد ذلك سيخرج مؤشر واي فاي.",
+      "de-DE": "Halten Sie die Tasten \"+\" und \"-\" auf dem Bedienfeld für bis zu drei Pieptöne gedrückt.",
+      "en-US": "Hold down the \"+\" and \"-\" buttons on the panel for up to three beeps, after which the Wi-Fi indicator will go out.",
+      "kk-KZ": "Панельдегі \"+\" және \"-\" түймелерін үш дыбыстық сигналға дейін басып тұрыңыз, Содан кейін Wi-Fi индикаторы сөнеді.",
+      "ru-RU": "Зажмите и удерживайте кнопки \"+\" и \"-\" на панели до трех звуковых сигналов, после чего индикатор Wi-Fi погаснет."
+    },
+    "error.1": {
+      "ar-AE": "هـ 3: التيار الزائد لأجهزة المحرك. توقف الجهاز عن العمل. يرجى الرجوع إلى التعليمات للحصول على المساعدة.",
+      "de-DE": "E3: Überstrom der Motorhardware. Das Gerät funktioniert nicht mehr. Bitte beachten Sie die Anweisungen für die Hilfe.",
+      "en-US": "E3: Motor hardware overcurrent. The device has stopped working. Please refer to the instructions for help.",
+      "kk-KZ": "E3: Қозғалтқыш жабдығының шамадан тыс тогы. Құрылғы жұмысын тоқтатты. Анықтама алу үшін нұсқаулықты қараңыз.",
+      "ru-RU": "Е3: Превышение тока двигателя. Работа остановлена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "E3: Перевантаження по струму обладнання двигуна. Пристрій перестав працювати. Будь ласка, зверніться за допомогою до інструкції."
+    },
+    "error.2": {
+      "ar-AE": "ه 4: ارتفاع درجة حرارة المحرك. توقف الجهاز عن العمل. يرجى الرجوع إلى التعليمات للحصول على المساعدة.",
+      "de-DE": "E4: Überhitzung des Motors. Das Gerät funktioniert nicht mehr. Bitte beachten Sie die Anweisungen für die Hilfe.",
+      "en-US": "E4: Engine overheating. The device has stopped working. Please refer to the instructions for help.",
+      "kk-KZ": "E4: Қозғалтқыштың қызып кетуі. Құрылғы жұмысын тоқтатты. Анықтама алу үшін нұсқаулықты қараңыз.",
+      "ru-RU": "Е4: Перегрев двигателя. Работа остановлена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "E4: Перегрів двигуна. Пристрій перестав працювати. Будь ласка, зверніться за довідкою до інструкції."
+    },
+    "error.3": {
+      "ar-AE": "ه 5: الجهد العالي. توقف الجهاز عن العمل. يرجى الرجوع إلى التعليمات للحصول على المساعدة.",
+      "de-DE": "E5: Hochspannung. Das Gerät funktioniert nicht mehr. Bitte beachten Sie die Anweisungen für die Hilfe.",
+      "en-US": "E5: High voltage. The device has stopped working. Please refer to the instructions for help.",
+      "kk-KZ": "E5: жоғары кернеу. Құрылғы жұмысын тоқтатты. Анықтама алу үшін нұсқаулықты қараңыз.",
+      "ru-RU": "E5: Высокое напряжение сети. Работа остановлена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "E5: Висока напруга. Пристрій перестав працювати. Будь ласка, зверніться за довідкою до інструкції."
+    },
+    "error.4": {
+      "ar-AE": "ه 7: الجهد المنخفض. توقف الجهاز عن العمل. يرجى الرجوع إلى التعليمات للحصول على المساعدة.",
+      "de-DE": "E7: Niedrige Spannung. Das Gerät funktioniert nicht mehr. Bitte beachten Sie die Anweisungen für die Hilfe.",
+      "en-US": "E7: Low voltage. The device has stopped working. Please refer to the instructions for help.",
+      "kk-KZ": "E7: Төмен кернеу. Құрылғы жұмысын тоқтатты. Анықтама алу үшін нұсқаулықты қараңыз.",
+      "ru-RU": "E7: Низкое напряжение сети. Работа остановлена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "E7: Низька напруга. Пристрій перестав працювати. Будь ласка, зверніться за довідкою до інструкції."
+    },
+    "error.5": {
+      "ar-AE": "هـ 6: خطأ البدء. توقف الجهاز عن العمل. يرجى الرجوع إلى التعليمات للحصول على المساعدة.",
+      "de-DE": "E6: Fehler beim Starten. Das Gerät funktioniert nicht mehr. Bitte beachten Sie die Anweisungen für die Hilfe.",
+      "en-US": "E6: Start error. The device has stopped working. Please refer to the instructions for help.",
+      "kk-KZ": "E6: Бастау қатесі. Құрылғы жұмысын тоқтатты. Анықтама алу үшін нұсқаулықты қараңыз.",
+      "ru-RU": "E6: Ошибка запуска двигателя. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "E6: Помилка запуску. Пристрій перестав працювати. Будь ласка, зверніться за допомогою до інструкцій."
+    },
+    "error.6": {
+      "ar-AE": "ه 2: الحماية من فقدان الطور. توقف الجهاز عن العمل. يرجى الرجوع إلى التعليمات للحصول على المساعدة.",
+      "de-DE": "E2: Motorsoftware Überstrom. Das Gerät funktioniert nicht mehr. Bitte beachten Sie die Anweisungen für die Hilfe.",
+      "en-US": "E2: Phase loss protection. The device has stopped working. Please refer to the instructions for help.",
+      "kk-KZ": "Е2: Фазаның үзілуінен қорғау. Құрылғы жұмысын тоқтатты. Анықтама алу үшін нұсқаулықты қараңыз.",
+      "ru-RU": "E2: Защита от обрыва фазы. Работа остановлена. Ознакомьтесь с действиями в инструкции."
+    },
+    "status_sleep": {
+      "en-US": "Sleep"
+    },
+    "status_standby": {
+      "en-US": "Standby"
+    },
+    "status_working": {
+      "en-US": "Working"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 4,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "name": {
+        "en-US": "On"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 4,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "pair": {
+      "60": "https://images.cdn.polaris-iot.com/7/28/2f9b0-fa5d-49dc-a246-6f0d1fd68b45/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/7/28/2f9b0-fa5d-49dc-a246-6f0d1fd68b45/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/7/28/2f9b0-fa5d-49dc-a246-6f0d1fd68b45/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/7/28/2f9b0-fa5d-49dc-a246-6f0d1fd68b45/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/7/28/2f9b0-fa5d-49dc-a246-6f0d1fd68b45/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/7/28/2f9b0-fa5d-49dc-a246-6f0d1fd68b45/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/7/28/2f9b0-fa5d-49dc-a246-6f0d1fd68b45/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/7/28/2f9b0-fa5d-49dc-a246-6f0d1fd68b45/1800.webp",
+      "id": "7282f9b0-fa5d-49dc-a246-6f0d1fd68b45",
+      "original": "https://images.cdn.polaris-iot.com/7/28/2f9b0-fa5d-49dc-a246-6f0d1fd68b45/original.webp"
+    },
+    "reset": {
+      "60": "https://images.cdn.polaris-iot.com/2/18/8bf63-9c8a-4b39-96b1-cca8482d7230/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/2/18/8bf63-9c8a-4b39-96b1-cca8482d7230/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/2/18/8bf63-9c8a-4b39-96b1-cca8482d7230/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/2/18/8bf63-9c8a-4b39-96b1-cca8482d7230/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/2/18/8bf63-9c8a-4b39-96b1-cca8482d7230/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/2/18/8bf63-9c8a-4b39-96b1-cca8482d7230/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/2/18/8bf63-9c8a-4b39-96b1-cca8482d7230/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/2/18/8bf63-9c8a-4b39-96b1-cca8482d7230/1800.webp",
+      "id": "2188bf63-9c8a-4b39-96b1-cca8482d7230",
+      "original": "https://images.cdn.polaris-iot.com/2/18/8bf63-9c8a-4b39-96b1-cca8482d7230/original.webp"
+    },
+    "enable": {
+      "60": "https://images.cdn.polaris-iot.com/3/e2/a23af-9a12-47aa-aa79-0137ba002892/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/3/e2/a23af-9a12-47aa-aa79-0137ba002892/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/3/e2/a23af-9a12-47aa-aa79-0137ba002892/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/3/e2/a23af-9a12-47aa-aa79-0137ba002892/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/3/e2/a23af-9a12-47aa-aa79-0137ba002892/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/3/e2/a23af-9a12-47aa-aa79-0137ba002892/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/3/e2/a23af-9a12-47aa-aa79-0137ba002892/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/3/e2/a23af-9a12-47aa-aa79-0137ba002892/1800.webp",
+      "id": "3e2a23af-9a12-47aa-aa79-0137ba002892",
+      "original": "https://images.cdn.polaris-iot.com/3/e2/a23af-9a12-47aa-aa79-0137ba002892/original.webp"
+    },
+    "manualbg": {
+      "60": "https://images.cdn.polaris-iot.com/e/bf/27365-6762-4a64-82d6-1024629eaff1/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/e/bf/27365-6762-4a64-82d6-1024629eaff1/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/e/bf/27365-6762-4a64-82d6-1024629eaff1/240.webp",
+      "id": "ebf27365-6762-4a64-82d6-1024629eaff1",
+      "original": "https://images.cdn.polaris-iot.com/e/bf/27365-6762-4a64-82d6-1024629eaff1/original.webp"
+    },
+    "program.image.speed_1": {
+      "60": "https://images.cdn.polaris-iot.com/0/ef/9a558-82f0-449e-a2c1-49ef03feb29a/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/0/ef/9a558-82f0-449e-a2c1-49ef03feb29a/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/0/ef/9a558-82f0-449e-a2c1-49ef03feb29a/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/0/ef/9a558-82f0-449e-a2c1-49ef03feb29a/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/0/ef/9a558-82f0-449e-a2c1-49ef03feb29a/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/0/ef/9a558-82f0-449e-a2c1-49ef03feb29a/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/0/ef/9a558-82f0-449e-a2c1-49ef03feb29a/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/0/ef/9a558-82f0-449e-a2c1-49ef03feb29a/1800.webp",
+      "id": "0ef9a558-82f0-449e-a2c1-49ef03feb29a",
+      "original": "https://images.cdn.polaris-iot.com/0/ef/9a558-82f0-449e-a2c1-49ef03feb29a/original.svg"
+    },
+    "program.image.speed_2": {
+      "60": "https://images.cdn.polaris-iot.com/3/2c/94249-04c2-425d-9eba-fdcaaf9ddd3a/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/3/2c/94249-04c2-425d-9eba-fdcaaf9ddd3a/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/3/2c/94249-04c2-425d-9eba-fdcaaf9ddd3a/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/3/2c/94249-04c2-425d-9eba-fdcaaf9ddd3a/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/3/2c/94249-04c2-425d-9eba-fdcaaf9ddd3a/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/3/2c/94249-04c2-425d-9eba-fdcaaf9ddd3a/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/3/2c/94249-04c2-425d-9eba-fdcaaf9ddd3a/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/3/2c/94249-04c2-425d-9eba-fdcaaf9ddd3a/1800.webp",
+      "id": "32c94249-04c2-425d-9eba-fdcaaf9ddd3a",
+      "original": "https://images.cdn.polaris-iot.com/3/2c/94249-04c2-425d-9eba-fdcaaf9ddd3a/original.svg"
+    },
+    "program.image.speed_3": {
+      "60": "https://images.cdn.polaris-iot.com/b/5f/b6812-e481-4a4e-ad68-d6176bc91587/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/b/5f/b6812-e481-4a4e-ad68-d6176bc91587/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/b/5f/b6812-e481-4a4e-ad68-d6176bc91587/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/b/5f/b6812-e481-4a4e-ad68-d6176bc91587/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/b/5f/b6812-e481-4a4e-ad68-d6176bc91587/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/b/5f/b6812-e481-4a4e-ad68-d6176bc91587/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/b/5f/b6812-e481-4a4e-ad68-d6176bc91587/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/b/5f/b6812-e481-4a4e-ad68-d6176bc91587/1800.webp",
+      "id": "b5fb6812-e481-4a4e-ad68-d6176bc91587",
+      "original": "https://images.cdn.polaris-iot.com/b/5f/b6812-e481-4a4e-ad68-d6176bc91587/original.svg"
+    },
+    "program.image.speed_4": {
+      "60": "https://images.cdn.polaris-iot.com/7/5d/6effb-c31c-40b3-b84b-66ca0ae4ad9e/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/7/5d/6effb-c31c-40b3-b84b-66ca0ae4ad9e/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/7/5d/6effb-c31c-40b3-b84b-66ca0ae4ad9e/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/7/5d/6effb-c31c-40b3-b84b-66ca0ae4ad9e/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/7/5d/6effb-c31c-40b3-b84b-66ca0ae4ad9e/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/7/5d/6effb-c31c-40b3-b84b-66ca0ae4ad9e/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/7/5d/6effb-c31c-40b3-b84b-66ca0ae4ad9e/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/7/5d/6effb-c31c-40b3-b84b-66ca0ae4ad9e/1800.webp",
+      "id": "75d6effb-c31c-40b3-b84b-66ca0ae4ad9e",
+      "original": "https://images.cdn.polaris-iot.com/7/5d/6effb-c31c-40b3-b84b-66ca0ae4ad9e/original.svg"
+    },
+    "program.image.no_speed": {
+      "60": "https://images.cdn.polaris-iot.com/5/ed/8b719-6ee7-45e7-ab77-c53556a08128/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/5/ed/8b719-6ee7-45e7-ab77-c53556a08128/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/5/ed/8b719-6ee7-45e7-ab77-c53556a08128/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/5/ed/8b719-6ee7-45e7-ab77-c53556a08128/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/5/ed/8b719-6ee7-45e7-ab77-c53556a08128/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/5/ed/8b719-6ee7-45e7-ab77-c53556a08128/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/5/ed/8b719-6ee7-45e7-ab77-c53556a08128/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/5/ed/8b719-6ee7-45e7-ab77-c53556a08128/1800.webp",
+      "id": "5ed8b719-6ee7-45e7-ab77-c53556a08128",
+      "original": "https://images.cdn.polaris-iot.com/5/ed/8b719-6ee7-45e7-ab77-c53556a08128/original.svg"
+    },
+    "program.image.speed_1_backlight_on": {
+      "60": "https://images.cdn.polaris-iot.com/5/b9/0c85f-d8bd-435a-a51e-f5ba26bb1461/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/5/b9/0c85f-d8bd-435a-a51e-f5ba26bb1461/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/5/b9/0c85f-d8bd-435a-a51e-f5ba26bb1461/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/5/b9/0c85f-d8bd-435a-a51e-f5ba26bb1461/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/5/b9/0c85f-d8bd-435a-a51e-f5ba26bb1461/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/5/b9/0c85f-d8bd-435a-a51e-f5ba26bb1461/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/5/b9/0c85f-d8bd-435a-a51e-f5ba26bb1461/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/5/b9/0c85f-d8bd-435a-a51e-f5ba26bb1461/1800.webp",
+      "id": "5b90c85f-d8bd-435a-a51e-f5ba26bb1461",
+      "original": "https://images.cdn.polaris-iot.com/5/b9/0c85f-d8bd-435a-a51e-f5ba26bb1461/original.svg"
+    },
+    "program.image.speed_2_backlight_on": {
+      "60": "https://images.cdn.polaris-iot.com/9/3d/d25a6-b1cf-40e3-8be3-6effbb86b77b/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/9/3d/d25a6-b1cf-40e3-8be3-6effbb86b77b/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/9/3d/d25a6-b1cf-40e3-8be3-6effbb86b77b/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/9/3d/d25a6-b1cf-40e3-8be3-6effbb86b77b/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/9/3d/d25a6-b1cf-40e3-8be3-6effbb86b77b/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/9/3d/d25a6-b1cf-40e3-8be3-6effbb86b77b/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/9/3d/d25a6-b1cf-40e3-8be3-6effbb86b77b/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/9/3d/d25a6-b1cf-40e3-8be3-6effbb86b77b/1800.webp",
+      "id": "93dd25a6-b1cf-40e3-8be3-6effbb86b77b",
+      "original": "https://images.cdn.polaris-iot.com/9/3d/d25a6-b1cf-40e3-8be3-6effbb86b77b/original.svg"
+    },
+    "program.image.speed_3_backlight_on": {
+      "60": "https://images.cdn.polaris-iot.com/5/38/f8c46-212c-481b-a7ba-f7e4823086cc/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/5/38/f8c46-212c-481b-a7ba-f7e4823086cc/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/5/38/f8c46-212c-481b-a7ba-f7e4823086cc/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/5/38/f8c46-212c-481b-a7ba-f7e4823086cc/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/5/38/f8c46-212c-481b-a7ba-f7e4823086cc/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/5/38/f8c46-212c-481b-a7ba-f7e4823086cc/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/5/38/f8c46-212c-481b-a7ba-f7e4823086cc/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/5/38/f8c46-212c-481b-a7ba-f7e4823086cc/1800.webp",
+      "id": "538f8c46-212c-481b-a7ba-f7e4823086cc",
+      "original": "https://images.cdn.polaris-iot.com/5/38/f8c46-212c-481b-a7ba-f7e4823086cc/original.svg"
+    },
+    "program.image.speed_4_backlight_on": {
+      "60": "https://images.cdn.polaris-iot.com/a/a0/6502d-489a-4b76-8735-c8cf07da39d0/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/a/a0/6502d-489a-4b76-8735-c8cf07da39d0/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/a/a0/6502d-489a-4b76-8735-c8cf07da39d0/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/a/a0/6502d-489a-4b76-8735-c8cf07da39d0/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/a/a0/6502d-489a-4b76-8735-c8cf07da39d0/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/a/a0/6502d-489a-4b76-8735-c8cf07da39d0/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/a/a0/6502d-489a-4b76-8735-c8cf07da39d0/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/a/a0/6502d-489a-4b76-8735-c8cf07da39d0/1800.webp",
+      "id": "aa06502d-489a-4b76-8735-c8cf07da39d0",
+      "original": "https://images.cdn.polaris-iot.com/a/a0/6502d-489a-4b76-8735-c8cf07da39d0/original.svg"
+    },
+    "program.image.no_speed_backlight_on": {
+      "60": "https://images.cdn.polaris-iot.com/5/b8/8cd83-e2f0-420d-b12b-822aba2a2718/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/5/b8/8cd83-e2f0-420d-b12b-822aba2a2718/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/5/b8/8cd83-e2f0-420d-b12b-822aba2a2718/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/5/b8/8cd83-e2f0-420d-b12b-822aba2a2718/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/5/b8/8cd83-e2f0-420d-b12b-822aba2a2718/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/5/b8/8cd83-e2f0-420d-b12b-822aba2a2718/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/5/b8/8cd83-e2f0-420d-b12b-822aba2a2718/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/5/b8/8cd83-e2f0-420d-b12b-822aba2a2718/1800.webp",
+      "id": "5b88cd83-e2f0-420d-b12b-822aba2a2718",
+      "original": "https://images.cdn.polaris-iot.com/5/b8/8cd83-e2f0-420d-b12b-822aba2a2718/original.svg"
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1783964552,
+  "temperature_units": "celsius"
+}

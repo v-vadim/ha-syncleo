@@ -1,0 +1,3261 @@
+{
+  "id": "d1dec3ae-8b75-4e9d-aee1-aad6abfc8a80",
+  "name": "PKM-2640 WIFI",
+  "type": 237,
+  "class": "kitchen_machine",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/900.webp",
+    "1200": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/1200.webp",
+    "1800": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/1800.webp",
+    "id": "4692258d-96e1-42e2-a7b0-455d90ba87f3",
+    "original": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/original.webp"
+  },
+  "layout": {
+    "top": [
+      {
+        "type": "slider",
+        "feature": "speed",
+        "position": 0
+      },
+      {
+        "type": "button_power",
+        "position": 0
+      },
+      {
+        "type": "error",
+        "position": 0
+      },
+      {
+        "type": "slider",
+        "feature": "timer",
+        "position": 1
+      },
+      {
+        "type": "button_power",
+        "position": 1
+      },
+      {
+        "type": "error",
+        "position": 1
+      }
+    ],
+    "middle": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Setting",
+          "ru-RU": "Настройки"
+        },
+        "position": 1
+      },
+      {
+        "type": "button",
+        "feature": "program",
+        "position": 2
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "Head up",
+          "ru-RU": "Крышка открыта"
+        },
+        "position": 2,
+        "precondition": [
+          {
+            "or": []
+          }
+        ],
+        "program_data": {
+          "field": "head_up",
+          "program": [
+            0
+          ]
+        }
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "Weighing function"
+        },
+        "action": {
+          "program_data": {
+            "field": "weighting_work",
+            "value": 1,
+            "program": [
+              3
+            ]
+          }
+        },
+        "position": 2,
+        "condition": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "weighting_work",
+              "value": 1,
+              "program": [
+                3
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "weighting_work",
+            "value": 0,
+            "program": [
+              3
+            ]
+          }
+        }
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "Weighing clean"
+        },
+        "action": {
+          "program_data": {
+            "field": "weighting_work",
+            "value": 1,
+            "program": [
+              3
+            ]
+          }
+        },
+        "position": 2
+      },
+      {
+        "type": "header",
+        "title": {
+          "ru-RU": "Предустановки"
+        },
+        "position": 3
+      }
+    ],
+    "home.top": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "timer",
+        "feature": "timer",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "slider",
+        "title": {
+          "de-DE": "Automatische anzeige aus",
+          "en-US": "Auto display off",
+          "kk-KZ": "Автоматты түрде көрсету өшірулі",
+          "ru-RU": "Автоотключение дисплея",
+          "uk-UA": "Автовідключення дисплея"
+        },
+        "source": "state",
+        "position": 0,
+        "program_data": {
+          "field": "shutdown_time",
+          "program": [
+            4
+          ]
+        },
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ],
+        "value_strings": {
+          "0": "5",
+          "1": "10",
+          "2": "20"
+        }
+      }
+    ],
+    "top_info": [
+      {
+        "type": "info",
+        "feature": "program",
+        "position": 0
+      },
+      {
+        "type": "info",
+        "feature": "timer",
+        "position": 0
+      },
+      {
+        "type": "info",
+        "position": 0,
+        "program_data": {
+          "field": "work_status",
+          "program": [
+            0
+          ]
+        },
+        "value_strings": {
+          "0": "Standby",
+          "1": "Stop",
+          "2": "Pause",
+          "3": "Workin",
+          "4": "work is finished",
+          "5": "Weighing",
+          "6": "Error"
+        }
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "program",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "feature": "speed",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ]
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8zM16.59,7.58L10,14.17l-2.59,-2.58L6,13l4,4 8,-8z",
+        "type": "info",
+        "title": {
+          "en-US": "Pause"
+        },
+        "position": 0,
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "work_status",
+              "value": 2,
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "userPresets": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Custom modes",
+          "ru-RU": "Персональные режимы"
+        },
+        "position": 0
+      },
+      {
+        "row": "savePreset",
+        "type": "button",
+        "title": {
+          "en-US": "Add",
+          "ru-RU": "Добавить"
+        },
+        "position": 1
+      }
+    ],
+    "manual.bottom": [
+      {
+        "type": "button_power",
+        "position": 0,
+        "precondition": [
+          {
+            "or": [
+              {
+                "not": {
+                  "source": "state",
+                  "program_data": {
+                    "field": "weighting_work",
+                    "value": 1,
+                    "program": [
+                      3
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "type": "info",
+        "feature": "program",
+        "position": 2,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h28v28V0M25.3368,15.7756c-.5457-1.2735-2.2888-1.6924-3.4846-1.8304-.0076-.0659-.0278-.1314-.0632-.1926-.1377-.2393-.4443-.3208-.6826-.1831l-.8711.5028-.6937-1.2012,1.6371-.9452c.9053-.5225,1.5527-1.3657,1.8232-2.3755.2705-1.0093.1318-2.0635-.3916-2.9683-.5225-.9053-1.3662-1.5527-2.375-1.8228-1.0098-.271-2.0645-.1318-2.9688.3906l-13.1514,7.5918c-.7471.4316-1.2812,1.1279-1.5049,1.9614-.2236.833-.1084,1.7036.3232,2.4507l.9961,1.7241c.7168,1.2427,2.3115,1.6694,3.5918.9624l1.6992,2.9429c.2188.3784.6162.5903,1.0254.5903.2012,0,.4043-.0508.5898-.1577l3.4854-2.0122c.5635-.3257.7578-1.0498.4326-1.6152l-1.6211-2.8071c-.0322-.0571-.0254-.1113-.0176-.1387.0068-.0269.0273-.0776.085-.1104l5.4761-3.1616.6936,1.2011-.8572.4947c-.2393.1382-.3213.4438-.1826.6831.0336.0585.0856.0965.1361.1353-.4851,1.107-1.009,2.8449-.1742,3.9629.4697.6279,1.25.9404,2.3623.9404.6982,0,1.5273-.123,2.4912-.3687.0127-.0032.0219-.0123.0342-.0164.0179-.006.0359-.01.053-.0179.0098-.004.0173-.0125.0269-.0171.0154-.0073.0286-.0152.0431-.024.0153-.0105.0287-.0217.0426-.0338.0094-.008.0217-.012.0305-.0206.0082-.0074.0188-.0101.0266-.0181,1.8047-1.8511,2.4385-3.3218,1.9346-4.4961ZM12.7001,15.6662c-.2734.1577-.4697.4126-.5508.7178-.082.3052-.04.624.1182.8975l1.6201,2.8062c.0508.0874.0205.1997-.0664.25l-3.4854,2.0122c-.0869.0518-.1992.0195-.25-.0664l-1.6992-2.9434c-.2822-.4888-.9102-.6562-1.4014-.375-.7666.4409-1.748.1792-2.1904-.5869l-.9961-1.7241c-.2979-.5156-.377-1.1167-.2227-1.6919s.5234-1.0562,1.0391-1.354l13.1514-7.5918c.6738-.3892,1.459-.4927,2.21-.291.751.2012,1.3789.6831,1.7686,1.3569.3887.6738.4922,1.4585.291,2.2095-.2012.7515-.6836,1.3794-1.3574,1.7681l-2.0663,1.193c-.0013.0007-.0028.0006-.004.0013s-.002.0021-.0032.0028l-5.905,3.4093ZM22.9967,18.8886l-2.0157-3.4909c.7218.3345,1.7207.9436,2.0756,1.871.1871.4887.1587,1.0331-.0598,1.6199ZM20.233,16.1009l1.8395,3.1854c-.4656-.1378-.8494-.3688-1.1381-.7227-.572-.7012-.6995-1.696-.7014-2.4627ZM24.4178,16.1696c.1648.3858.0757.8923-.2471,1.4969-.0272-.2585-.0867-.512-.1816-.7592-.3125-.8128-.9492-1.4205-1.5974-1.8597.8722.177,1.7654.5121,2.0261,1.1219ZM19.0936,19.2497c-.4474-.598-.1943-1.7092.1567-2.6229.064.8377.2892,1.8076.9058,2.5657.1887.2318.4099.422.6486.5893-.8411.0231-1.4259-.1513-1.7111-.5322Z",
+        "type": "info",
+        "title": {
+          "ar-AE": "المنصب",
+          "de-DE": "Position",
+          "en-US": "Position",
+          "kk-KZ": "Ереже",
+          "ru-RU": "Положение"
+        },
+        "position": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "head_up",
+              "value": 1,
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "program_data": {
+          "field": "head_up",
+          "value": 1,
+          "program": [
+            0
+          ]
+        }
+      },
+      {
+        "icon": "M0,0h28v28V0M21.523,13.7043h.001c1.0781,0,2.0928-.4199,2.8555-1.1831.7627-.7627,1.1826-1.7773,1.1826-2.8564,0-2.2271-1.8125-4.0396-4.04-4.04l-15.7529-.0005c-.8896,0-1.7266.3467-2.3555.9756-.6299.6294-.9766,1.4663-.9756,2.356v2.0654c0,1.479,1.2031,2.6826,2.7275,2.728v3.5254c0,.666.542,1.208,1.208,1.208h4.1758c.666,0,1.208-.542,1.208-1.208l-.001-3.3628c0-.1147.0938-.208.208-.208l6.5771.0004v1.4772h-1.043c-.2764,0-.5.2236-.5.5,0,.0735.0177.1421.0461.205-1.0071.7398-2.3765,2.0247-2.2073,3.4547.1553,1.3057,1.4795,2.292,4.0498,3.0156.0459.0127.0908.0186.1357.0186.0002,0,.0004-.0002.0005-.0002.001,0,.0016.0007.0024.0007.0045,0,.0085-.0032.0129-.0034.0034.0001.0063.0026.0098.0026.0002,0,.0005.0002.0007.0002h.0001c.0006,0,.0011.0005.0018.0005.0022,0,.0044-.0016.0066-.0016.0421-.0007.0842-.0055.1272-.0174,2.5742-.7241,3.9014-1.7119,4.0576-3.02.1702-1.4255-1.1855-2.7062-2.1868-3.4461.0299-.0641.0491-.1338.0491-.2092,0-.2764-.2236-.5-.5-.5h-1.0635v-1.4772h1.9814ZM18.5271,16.9122l.0006,3.9364c-.3701-.3768-.6082-.7984-.6874-1.2855-.1553-.9603.2778-1.9551.6868-2.6509ZM20.4566,19.5007c-.0881.5516-.4058,1.0396-.9288,1.4622l-.0006-4.2791c.4819.6746,1.0955,1.7708.9294,2.8168ZM15.8306,19.2238c-.0952-.7991.7633-1.6977,1.5779-2.3444-.3936.7951-.7212,1.809-.5554,2.8395.0525.3265.1658.6284.3079.9183-.8135-.4277-1.2695-.9045-1.3303-1.4135ZM22.2496,19.2179c-.0535.4504-.4216.8749-1.0651,1.2633.1232-.2621.2136-.5367.2594-.8278.1467-.9277-.1426-1.8302-.52-2.5765.7273.623,1.4119,1.4205,1.3257,2.1409ZM10.7564,13.9118l.001,3.3628c0,.1147-.0938.208-.208.208h-4.1758c-.1143,0-.208-.0933-.208-.208v-3.5254c0-.5767-.4688-1.0454-1.0459-1.0454-.9277,0-1.6816-.7549-1.6816-1.6826v-2.0659c0-.6226.2422-1.208.6826-1.6484.4404-.4399,1.0254-.6826,1.6484-.6826l15.7529.0005c1.6758.0005,3.04,1.3643,3.04,3.04,0,.812-.3164,1.5757-.8896,2.1494-.5742.5742-1.3369.8901-2.1484.8901h-2.4783c-.0015-.0001-.0027-.001-.0042-.001s-.0027.0009-.0042.0009l-7.073-.0004c-.666,0-1.208.542-1.208,1.208Z",
+        "type": "info",
+        "title": {
+          "ar-AE": "المنصب",
+          "de-DE": "Position",
+          "en-US": "Position",
+          "kk-KZ": "Ереже",
+          "ru-RU": "Положение"
+        },
+        "position": 2,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "head_up",
+                "value": 1,
+                "program": [
+                  0
+                ]
+              }
+            }
+          }
+        ],
+        "program_data": {
+          "field": "head_up",
+          "value": 0,
+          "program": [
+            0
+          ]
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "ru-RU": "вес"
+        },
+        "position": 2,
+        "visibility": [
+          {
+            "and": [
+              {
+                "not": {
+                  "source": "state",
+                  "program_data": {
+                    "field": "over_weight",
+                    "value": 1,
+                    "program": [
+                      6
+                    ]
+                  }
+                }
+              },
+              {
+                "not": {
+                  "error": 5,
+                  "source": "state"
+                }
+              }
+            ]
+          },
+          {
+            "or": [
+              {
+                "source": "state",
+                "program": [
+                  10
+                ]
+              },
+              {
+                "source": "state",
+                "program_data": {
+                  "field": "work_status",
+                  "value": 5,
+                  "program": [
+                    0
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "program_data": {
+          "field": "weight",
+          "program": [
+            3
+          ]
+        }
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z",
+        "type": "info",
+        "title": {
+          "ru-RU": "вес"
+        },
+        "position": 2,
+        "visibility": [
+          {
+            "or": [
+              {
+                "source": "state",
+                "program": [
+                  10
+                ]
+              },
+              {
+                "source": "state",
+                "program_data": {
+                  "field": "work_status",
+                  "value": 5,
+                  "program": [
+                    0
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "or": [
+              {
+                "error": 5,
+                "source": "state"
+              },
+              {
+                "source": "state",
+                "program_data": {
+                  "field": "over_weight",
+                  "value": 1,
+                  "program": [
+                    6
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 3
+      },
+      {
+        "type": "container_head",
+        "position": 4
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "Pause"
+        },
+        "action": {
+          "program_data": {
+            "field": "work_status",
+            "value": 2,
+            "program": [
+              0
+            ]
+          }
+        },
+        "position": 5,
+        "condition": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "work_status",
+              "value": 2,
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "visibility": [
+          {
+            "or": [
+              {
+                "and": [
+                  {
+                    "source": "state",
+                    "program_data": {
+                      "field": "work_status",
+                      "value": 1,
+                      "program": [
+                        0
+                      ]
+                    }
+                  },
+                  {
+                    "not": {
+                      "source": "state",
+                      "program": [
+                        9
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "and": [
+                  {
+                    "source": "state",
+                    "program_data": {
+                      "field": "work_status",
+                      "value": 2,
+                      "program": [
+                        0
+                      ]
+                    }
+                  },
+                  {
+                    "not": {
+                      "source": "state",
+                      "program": [
+                        9
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "work_status",
+              "value": 1,
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h28v28V0M25.371,19.9142l-1.9033-8c-.4775-2.0103-2.1953-3.4141-4.1777-3.4141h-4.79v-1h5.2363c.9443,0,1.7988-.5229,2.2275-1.3652l1.4814-2.9077c.126-.2461.0273-.5474-.2188-.6724-.2432-.1235-.5469-.0288-.6719.2183l-1.4814,2.9077c-.2578.5054-.7705.8193-1.3369.8193h-11.4775c-.5674,0-1.0801-.3145-1.3379-.8213l-1.4756-2.9053c-.124-.2456-.4268-.3423-.6719-.2192-.2461.125-.3447.4258-.2188.6724l1.4746,2.9053c.4287.8438,1.2832,1.3682,2.2295,1.3682h5.2412v1h-4.79c-1.9814,0-3.6992,1.4038-4.1777,3.4141l-1.9033,8c-.333,1.3994-.0195,2.8403.8604,3.9526.8193,1.0376,2.0293,1.6328,3.3184,1.6328l14.3848.0005c1.2891,0,2.499-.5957,3.3193-1.6338.8789-1.1128,1.1924-2.5532.8594-3.9521ZM23.7274,23.2463c-.6299.7969-1.5537,1.2539-2.5352,1.2539l-14.3848-.0005c-.9814,0-1.9053-.4565-2.5342-1.2529-.6885-.8711-.9326-2.0015-.6719-3.1011l1.9033-8c.3711-1.5576,1.6885-2.6455,3.2051-2.6455h10.5801c1.5176,0,2.835,1.0879,3.2051,2.6455l1.9033,8c.2617,1.0996.0166,2.2295-.6709,3.1006ZM13.9999,12.5002c-2.4814,0-4.5,2.0186-4.5,4.5s2.0186,4.5,4.5,4.5,4.5-2.0186,4.5-4.5-2.0186-4.5-4.5-4.5ZM13.9999,20.5002c-1.9297,0-3.5-1.5703-3.5-3.5s1.5703-3.5,3.5-3.5,3.5,1.5703,3.5,3.5-1.5703,3.5-3.5,3.5ZM14.4999,15.0002v4c0,.2764-.2236.5-.5.5s-.5-.2236-.5-.5v-4c0-.2764.2236-.5.5-.5s.5.2236.5.5Z",
+        "type": "button",
+        "title": {
+          "ar-AE": "الوزن",
+          "de-DE": "Gewicht",
+          "en-US": "Weight",
+          "kk-KZ": "Таразы",
+          "ru-RU": "Весы"
+        },
+        "action": {
+          "program_data": {
+            "field": "weighting_work",
+            "value": 1,
+            "program": [
+              3
+            ]
+          }
+        },
+        "position": 5,
+        "condition": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "weighting_work",
+              "value": 1,
+              "program": [
+                3
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "weighting_work",
+            "value": 0,
+            "program": [
+              3
+            ]
+          }
+        },
+        "visibility": [
+          {
+            "not": {
+              "or": [
+                {
+                  "source": "selection",
+                  "program": [
+                    9
+                  ]
+                },
+                {
+                  "source": "state",
+                  "program_data": {
+                    "field": "work_status",
+                    "value": 1,
+                    "program": [
+                      0
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "not": {
+              "program_data": {
+                "field": "work_status",
+                "value": 1,
+                "program": [
+                  0
+                ]
+              }
+            }
+          }
+        ],
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "Clean weigh"
+        },
+        "action": {
+          "program_data": {
+            "field": "clearing_weight",
+            "value": 1,
+            "program": [
+              3
+            ]
+          }
+        },
+        "position": 5,
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "weighting_work",
+              "value": 1,
+              "program": [
+                3
+              ]
+            }
+          }
+        ],
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "fill",
+        "position": 5,
+        "visibility": [
+          {
+            "or": [
+              {
+                "source": "state",
+                "program_data": {
+                  "field": "work_status",
+                  "value": 1,
+                  "program": [
+                    0
+                  ]
+                }
+              },
+              {
+                "and": [
+                  {
+                    "source": "state",
+                    "multi_step": 0
+                  },
+                  {
+                    "program_data": {
+                      "field": "weighting_work",
+                      "value": 0,
+                      "program": [
+                        3
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 6
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 1800,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              1
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 1200,
+          "min": 360,
+          "step": 1,
+          "round": 1,
+          "default": 360,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              2
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 1200,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 180,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              3
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 300,
+          "min": 60,
+          "step": 1,
+          "round": 1,
+          "default": 90,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              4
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 300,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 120,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              5
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 300,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 60,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              6
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 180,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 120,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              7
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 600,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 300,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              8
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 1800,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              9
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 8
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 12,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          },
+          "4": {
+            "label": "4"
+          },
+          "5": {
+            "label": "5"
+          },
+          "6": {
+            "label": "6"
+          },
+          "7": {
+            "label": "7"
+          },
+          "8": {
+            "label": "8"
+          },
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          },
+          "11": {
+            "label": "11"
+          },
+          "12": {
+            "label": "12"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              1
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 12,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          },
+          "4": {
+            "label": "4"
+          },
+          "5": {
+            "label": "5"
+          },
+          "6": {
+            "label": "6"
+          },
+          "7": {
+            "label": "7"
+          },
+          "8": {
+            "label": "8"
+          },
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          },
+          "11": {
+            "label": "11"
+          },
+          "12": {
+            "label": "12"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              1
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ],
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        },
+        "points": {
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          },
+          "4": {
+            "label": "4"
+          },
+          "5": {
+            "label": "5"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              2
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ],
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "work_status",
+                "value": 1,
+                "program": [
+                  0
+                ]
+              }
+            }
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "work_status",
+                "value": 2,
+                "program": [
+                  0
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        },
+        "points": {
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          },
+          "4": {
+            "label": "4"
+          },
+          "5": {
+            "label": "5"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              2
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "work_status",
+                "value": 1,
+                "program": [
+                  0
+                ]
+              }
+            }
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "work_status",
+                "value": 2,
+                "program": [
+                  0
+                ]
+              }
+            }
+          }
+        ],
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 12,
+          "min": 9,
+          "step": 1,
+          "round": 1,
+          "default": 12,
+          "roundAlt": 1
+        },
+        "points": {
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          },
+          "11": {
+            "label": "11"
+          },
+          "12": {
+            "label": "12"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              3
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 12,
+          "min": 9,
+          "step": 1,
+          "round": 1,
+          "default": 12,
+          "roundAlt": 1
+        },
+        "points": {
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          },
+          "11": {
+            "label": "11"
+          },
+          "12": {
+            "label": "12"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              3
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ],
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 12,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 12,
+          "roundAlt": 1
+        },
+        "points": {
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          },
+          "4": {
+            "label": "4"
+          },
+          "5": {
+            "label": "5"
+          },
+          "6": {
+            "label": "6"
+          },
+          "7": {
+            "label": "7"
+          },
+          "8": {
+            "label": "8"
+          },
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          },
+          "11": {
+            "label": "11"
+          },
+          "12": {
+            "label": "12"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              4
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ],
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "work_status",
+                "value": 1,
+                "program": [
+                  0
+                ]
+              }
+            }
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "work_status",
+                "value": 2,
+                "program": [
+                  0
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 12,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 12,
+          "roundAlt": 1
+        },
+        "points": {
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          },
+          "4": {
+            "label": "4"
+          },
+          "5": {
+            "label": "5"
+          },
+          "6": {
+            "label": "6"
+          },
+          "7": {
+            "label": "7"
+          },
+          "8": {
+            "label": "8"
+          },
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          },
+          "11": {
+            "label": "11"
+          },
+          "12": {
+            "label": "12"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              4
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "work_status",
+                "value": 1,
+                "program": [
+                  0
+                ]
+              }
+            }
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "work_status",
+                "value": 2,
+                "program": [
+                  0
+                ]
+              }
+            }
+          }
+        ],
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 10,
+          "min": 6,
+          "step": 1,
+          "round": 1,
+          "default": 8,
+          "roundAlt": 1
+        },
+        "points": {
+          "6": {
+            "label": "6"
+          },
+          "7": {
+            "label": "7"
+          },
+          "8": {
+            "label": "8"
+          },
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              5
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 10,
+          "min": 6,
+          "step": 1,
+          "round": 1,
+          "default": 8,
+          "roundAlt": 1
+        },
+        "points": {
+          "6": {
+            "label": "6"
+          },
+          "7": {
+            "label": "7"
+          },
+          "8": {
+            "label": "8"
+          },
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              5
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ],
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 12,
+          "min": 9,
+          "step": 1,
+          "round": 1,
+          "default": 12,
+          "roundAlt": 1
+        },
+        "points": {
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          },
+          "11": {
+            "label": "11"
+          },
+          "12": {
+            "label": "12"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              6
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 12,
+          "min": 9,
+          "step": 1,
+          "round": 1,
+          "default": 12,
+          "roundAlt": 1
+        },
+        "points": {
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          },
+          "11": {
+            "label": "11"
+          },
+          "12": {
+            "label": "12"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              6
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ],
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 12,
+          "min": 9,
+          "step": 1,
+          "round": 1,
+          "default": 12,
+          "roundAlt": 1
+        },
+        "points": {
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          },
+          "11": {
+            "label": "11"
+          },
+          "12": {
+            "label": "12"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              7
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 12,
+          "min": 9,
+          "step": 1,
+          "round": 1,
+          "default": 12,
+          "roundAlt": 1
+        },
+        "points": {
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          },
+          "11": {
+            "label": "11"
+          },
+          "12": {
+            "label": "12"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              7
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ],
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 10,
+          "min": 6,
+          "step": 1,
+          "round": 1,
+          "default": 8,
+          "roundAlt": 1
+        },
+        "points": {
+          "6": {
+            "label": "6"
+          },
+          "7": {
+            "label": "7"
+          },
+          "8": {
+            "label": "8"
+          },
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              8
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 10,
+          "min": 6,
+          "step": 1,
+          "round": 1,
+          "default": 8,
+          "roundAlt": 1
+        },
+        "points": {
+          "6": {
+            "label": "6"
+          },
+          "7": {
+            "label": "7"
+          },
+          "8": {
+            "label": "8"
+          },
+          "9": {
+            "label": "9"
+          },
+          "10": {
+            "label": "10"
+          }
+        },
+        "feature": "speed",
+        "position": 9,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "source": "selection",
+            "program": [
+              8
+            ]
+          },
+          {
+            "not": {
+              "source": "state",
+              "program_data": {
+                "field": "weighting_work",
+                "value": 1,
+                "program": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ],
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 10
+      },
+      {
+        "type": "container_head",
+        "position": 11
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "إعدادات",
+          "de-DE": "Einstellungen",
+          "en-US": "Function",
+          "kk-KZ": "Параметрлер",
+          "ru-RU": "Функции",
+          "uk-UA": "Налаштування"
+        },
+        "position": 12
+      },
+      {
+        "type": "button",
+        "feature": "program",
+        "position": 13,
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "source": "state",
+            "program_data": {
+              "field": "weighting_work",
+              "value": 0,
+              "program": [
+                3
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "recipe",
+        "position": 13,
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "source": "state",
+            "program_data": {
+              "field": "weighting_work",
+              "value": 0,
+              "program": [
+                3
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h24v24V0M14.2816 19.4774V20.0617C14.2816 20.5267 13.94 20.9136 13.4956 20.9794L13.3515 21.5103C13.2733 21.7984 13.0141 22 12.7137 22H11.2857C10.9853 22 10.726 21.7984 10.6478 21.5103L10.5079 20.9794C10.0594 20.9095 9.71779 20.5267 9.71779 20.0576V19.4733C9.71779 19.1605 9.96882 18.9095 10.2816 18.9095H13.7178C14.0305 18.9136 14.2816 19.1646 14.2816 19.4774ZM16.9277 11.6008C16.9277 12.93 16.4009 14.1358 15.5449 15.0206C14.8947 15.6955 14.475 16.5556 14.3351 17.4733C14.2733 17.8683 13.9318 18.1605 13.5285 18.1605H10.4709C10.0717 18.1605 9.72602 17.8724 9.6684 17.4774C9.52437 16.5597 9.1005 15.6872 8.4503 15.0165C7.61079 14.144 7.08816 12.9588 7.07581 11.6543C7.04701 8.91358 9.22808 6.69547 11.9688 6.6749C14.7054 6.65432 16.9277 8.86831 16.9277 11.6008ZM12.5573 8.61728C12.5573 8.31276 12.3104 8.06173 12.0017 8.06173C10.0429 8.06173 8.44618 9.65432 8.44618 11.6173C8.44618 11.9218 8.6931 12.1728 9.00174 12.1728C9.30626 12.1728 9.55729 11.9259 9.55729 11.6173C9.55729 10.2675 10.6561 9.17284 12.0017 9.17284C12.3104 9.17284 12.5573 8.92593 12.5573 8.61728ZM12.0017 5.05761C12.3063 5.05761 12.5573 4.8107 12.5573 4.50206V2.55556C12.5573 2.25103 12.3104 2 12.0017 2C11.6931 2 11.4462 2.24691 11.4462 2.55556V4.50206C11.4462 4.8107 11.6972 5.05761 12.0017 5.05761ZM5.46264 11.5967C5.46264 11.2922 5.21573 11.0412 4.90709 11.0412H2.96058C2.65606 11.0412 2.40503 11.2881 2.40503 11.5967C2.40503 11.9012 2.65194 12.1523 2.96058 12.1523H4.90709C5.21573 12.1523 5.46264 11.9054 5.46264 11.5967ZM21.0429 11.0412H19.0964C18.7919 11.0412 18.5408 11.2881 18.5408 11.5967C18.5408 11.9012 18.7877 12.1523 19.0964 12.1523H21.0429C21.3474 12.1523 21.5984 11.9054 21.5984 11.5967C21.5984 11.2922 21.3515 11.0412 21.0429 11.0412ZM6.59433 16.2222L5.21573 17.6008C4.99762 17.8189 4.99762 18.1687 5.21573 18.3868C5.32272 18.4938 5.46676 18.5473 5.60668 18.5473C5.74659 18.5473 5.89063 18.4938 5.99762 18.3868L7.37622 17.0082C7.59433 16.7901 7.59433 16.4403 7.37622 16.2222C7.16223 16.0041 6.80832 16.0041 6.59433 16.2222ZM17.0182 7.1358C17.1581 7.1358 17.3022 7.0823 17.4091 6.97531L18.7877 5.59671C19.0059 5.3786 19.0059 5.02881 18.7877 4.8107C18.5696 4.59259 18.2198 4.59259 18.0017 4.8107L16.6231 6.1893C16.405 6.40741 16.405 6.7572 16.6231 6.97531C16.7342 7.0823 16.8742 7.1358 17.0182 7.1358ZM6.59433 6.97119C6.70133 7.07819 6.84536 7.13169 6.98528 7.13169C7.12519 7.13169 7.26923 7.07819 7.37622 6.97119C7.59433 6.75309 7.59433 6.40329 7.37622 6.18519L5.99762 4.80658C5.77952 4.58848 5.42972 4.58848 5.21161 4.80658C4.99351 5.02469 4.99351 5.37449 5.21161 5.59259L6.59433 6.97119ZM17.4091 16.2222C17.191 16.0041 16.8412 16.0041 16.6231 16.2222C16.405 16.4403 16.405 16.7901 16.6231 17.0082L18.0017 18.3868C18.1087 18.4938 18.2528 18.5473 18.3927 18.5473C18.5326 18.5473 18.6766 18.4938 18.7836 18.3868C19.0017 18.1687 19.0017 17.8189 18.7836 17.6008L17.4091 16.2222Z",
+        "type": "button",
+        "title": {
+          "ar-AE": "خفيف",
+          "de-DE": "Hintergrundbeleuchtung",
+          "en-US": "Light",
+          "kk-KZ": "Артқы жарық",
+          "ru-RU": "Подсветка",
+          "uk-UA": "Підсвічування"
+        },
+        "action": {
+          "program_data": {
+            "field": "backlight",
+            "value": 1,
+            "program": [
+              5
+            ]
+          }
+        },
+        "position": 13,
+        "condition": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "backlight",
+              "value": 1,
+              "program": [
+                5
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "backlight",
+            "value": 0,
+            "program": [
+              5
+            ]
+          }
+        },
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 13,
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 13
+      }
+    ],
+    "manual.shortcuts": [
+      {
+        "type": "button",
+        "title": {
+          "en-US": "DIY"
+        },
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "knead"
+        },
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "WHISK"
+        },
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 0,
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      }
+    ],
+    "userPresets.list": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Custom modes",
+          "ru-RU": "Персональные режимы"
+        },
+        "position": 0
+      },
+      {
+        "row": "userPresets",
+        "type": "info",
+        "position": 1
+      },
+      {
+        "row": "savePreset",
+        "type": "button",
+        "title": {
+          "en-US": "Add",
+          "ru-RU": "Добавить"
+        },
+        "position": 2
+      }
+    ]
+  },
+  "limits": {
+    "speed": {
+      "max": 12,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 1,
+      "round_alt": 1
+    },
+    "timer": {
+      "max": 1800,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "child_lock": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "multi_step": {
+      "max": 1,
+      "min": 1,
+      "step": 1,
+      "round": 1,
+      "default": 1,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "hidden": true,
+    "barcode": "5055539149626",
+    "realtime": false,
+    "shortcuts": [
+      {
+        "program": [
+          1
+        ]
+      },
+      {
+        "program": [
+          2
+        ]
+      },
+      {
+        "program": [
+          3
+        ]
+      },
+      {
+        "program": [
+          4
+        ]
+      }
+    ],
+    "staticTimer": true,
+    "userPresets": true,
+    "adminPresets": true,
+    "hotspot_ssid": "PKM-2640",
+    "modeFunction": true,
+    "program_data": {
+      "0": [
+        {
+          "max": 6,
+          "min": 0,
+          "name": "work_status",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "machine_ready",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "head_up",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "1": [
+        {
+          "max": 8640,
+          "min": 0,
+          "name": "timer_max",
+          "size": 4,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 8640,
+          "min": 0,
+          "name": "timer_min",
+          "size": 4,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "2": [
+        {
+          "max": 100,
+          "min": 0,
+          "name": "speed_max",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 100,
+          "min": 0,
+          "name": "speed_min",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "3": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "weighting_work",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "clearing_weight",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 65535,
+          "min": 0,
+          "name": "weight",
+          "size": 2,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "4": [
+        {
+          "max": 2,
+          "min": 0,
+          "name": "shutdown_time",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "5": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "backlight",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "6": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "over_weight",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "7": [
+        {
+          "max": 12,
+          "min": 0,
+          "name": "workaround_speed",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "firmwareSlots": [
+      null,
+      {
+        "type": "sota"
+      }
+    ],
+    "max_steps_time": 18000,
+    "multiStepFields": [
+      "speed",
+      "timer"
+    ],
+    "openMqttSupport": true,
+    "shareblePresets": true,
+    "manualInfoFields": [
+      "program",
+      "temperature",
+      "timer",
+      "pressure"
+    ],
+    "open_mqtt_support": true,
+    "excludeScheduleFeatures": [
+      "keep_warm"
+    ]
+  },
+  "vendor": "polaris",
+  "features": [
+    "program",
+    "timer",
+    "recipe",
+    "demo",
+    "speed",
+    "child_lock",
+    "multi_step"
+  ],
+  "messages": {
+    "1p": {
+      "en-US": "1",
+      "ru-RU": "1"
+    },
+    "diag": {
+      "ar-AE": "على الشاشة الرئيسية لآلة المطبخ ، اضغط على أي زر وانتقل إلى قسم \"الإعدادات\".\nثم حدد \"اتصال التطبيق\".\nفي النافذة التي تفتح ، انقر فوق الزر\" إعادة تعيين\".\nانتظر 2-3 دقائق ، ثم ابدأ إجراء الاقتران مرة أخرى.",
+      "de-DE": "1. Drücken Sie auf dem Hauptbildschirm der Küchenmaschine eine beliebige Taste und gehen Sie zum Abschnitt \"Einstellungen\".\n2. Wählen Sie dann \"App-Verbindung\".\n3. \"Klicken Sie im folgenden Fenster auf die Schaltfläche \"Zurücksetzen\".\n4. Warten Sie 2-3 Minuten und starten Sie dann den Kopplungsvorgang erneut.",
+      "en-US": "1. On the main screen of the kitchen machine, press any button and go to the \"Settings\" section.\n2. Then select \"App connection\".\n3. In the window that opens, click the \"Reset\" button.\n4. Wait 2-3 minutes, then start the pairing procedure again.",
+      "kk-KZ": "1. Ас үй машинасының негізгі экранында кез келген түймені басып, \"Параметрлер\"бөліміне өтіңіз.\n2. Содан кейін \"қолданбаға қосылу\"тармағын таңдаңыз.\n3. Ашылған терезеде \"қалпына келтіру\"түймесін басыңыз.\n4. 2-3 минут күтіңіз, жұптастыру процедурасын қайтадан бастаңыз.",
+      "ru-RU": "1. На главном экране кухонной машины нажмите любую кнопку и перейдите в раздел «Настройки».\n2. Затем выберите «Подключение к приложению».\n3. В открывшемся окне нажмите кнопку «Сброс».\n4. Подождите 2-3 минуты, начните процедуру сопряжения заново."
+    },
+    "pair": {
+      "ar-AE": "على الشاشة الرئيسية لآلة المطبخ ، اضغط على أي زر وانتقل إلى قسم \"الإعدادات\".\nثم حدد \"اتصال التطبيق\".\nفي النافذة التي تفتح ، انقر فوق الزر\" الاقتران\".\nاضغط على \"متابعة\" لإنهاء الاقتران.",
+      "de-DE": "1. Drücken Sie auf dem Hauptbildschirm der Küchenmaschine eine beliebige Taste und gehen Sie zum Abschnitt \"Einstellungen\".\n2. Wählen Sie dann \"App-Verbindung\".\n3. Klicken Sie im folgenden Fenster auf die Schaltfläche \"Koppeln\".\n4. Drücken Sie \"Weiter\", um die Kopplung zu beenden.",
+      "en-US": "1. On the main screen of the kitchen machine, press any button and go to the \"Settings\" section.\n2. Then select \"App connection\".\n3. In the window that opens, click the \"Pairing\" button.\n4. Press \"Continue\" to end the pairing.",
+      "kk-KZ": "1. Ас үй машинасының негізгі экранында кез келген түймені басып, \"Параметрлер\"бөліміне өтіңіз.\n2. Содан кейін \"қолданбаға қосылу\"тармағын таңдаңыз.\n3. Ашылған терезеде \"жұптау\" түймесін басыңыз.\n4. Жұптауды аяқтау үшін \"Жалғастыру\" түймесін басыңыз.",
+      "ru-RU": "1. На главном экране кухонной машины нажмите любую кнопку и перейдите в раздел «Настройки».\n2. Затем выберите «Подключение к приложению».\n3. В открывшемся окне нажмите кнопку «Сопряжение».\n4. Нажмите «Продолжить», чтобы завершить сопряжение."
+    },
+    "reset": {
+      "ar-AE": "على الشاشة الرئيسية لآلة المطبخ ، اضغط على أي زر وانتقل إلى قسم \"الإعدادات\".\nثم حدد \"اتصال التطبيق\".\nفي النافذة التي تفتح ، انقر فوق الزر\" إعادة تعيين\".\nانتظر 2-3 دقائق ، ثم ابدأ إجراء الاقتران مرة أخرى.",
+      "de-DE": "1. Drücken Sie auf dem Hauptbildschirm der Küchenmaschine eine beliebige Taste und gehen Sie zum Abschnitt \"Einstellungen\".\n2. Wählen Sie dann \"App-Verbindung\".\n3. \"Klicken Sie im folgenden Fenster auf die Schaltfläche \"Zurücksetzen\".\n4. Warten Sie 2-3 Minuten und starten Sie dann den Kopplungsvorgang erneut.",
+      "en-US": "1. On the main screen of the kitchen machine, press any button and go to the \"Settings\" section.\n2. Then select \"App connection\".\n3. In the window that opens, click the \"Reset\" button.\n4. Wait 2-3 minutes, then start the pairing procedure again.",
+      "kk-KZ": "1. Ас үй машинасының негізгі экранында кез келген түймені басып, \"Параметрлер\"бөліміне өтіңіз.\n2. Содан кейін \"қолданбаға қосылу\"тармағын таңдаңыз.\n3. Ашылған терезеде \"қалпына келтіру\"түймесін басыңыз.\n4. 2-3 минут күтіңіз, жұптастыру процедурасын қайтадан бастаңыз.",
+      "ru-RU": "1. На главном экране кухонной машины нажмите любую кнопку и перейдите в раздел «Настройки».\n2. Затем выберите «Подключение к приложению».\n3. В открывшемся окне нажмите кнопку «Сброс».\n4. Подождите 2-3 минуты, начните процедуру сопряжения заново."
+    },
+    "error.1": {
+      "ar-AE": "المحرك مثقل. فمن المستحسن للحد من الحمل والسماح للجهاز لتبرد",
+      "de-DE": "Der Motor ist überlastet. Es wird empfohlen, die Belastung zu reduzieren und das Gerät abkühlen zu lassen",
+      "en-US": "The engine is overloaded. It is recommended to reduce the load and allow the device to cool down",
+      "kk-KZ": "Қозғалтқыш шамадан тыс жүктелген. Жүктемені азайту және құрылғыны салқындату ұсынылады",
+      "ru-RU": "Мотор перегружен. Рекомендуется снизить нагрузку и дать устройству остыть"
+    },
+    "error.2": {
+      "ar-AE": "خطأ في وحدة الوزن. تأكد من تثبيت الوعاء بشكل صحيح",
+      "de-DE": "Fehler des Gewichtsmoduls. Überprüfen Sie, ob die Schüssel richtig installiert ist",
+      "en-US": "Error of the weight module. Check that the bowl is installed correctly",
+      "kk-KZ": "Таразы Модулінің қателігі. Тостағанның дұрыс орнатылғанын тексеріңіз",
+      "ru-RU": "Ошибка модуля весов. Убедитесь, что чаша установлена правильно"
+    },
+    "error.4": {
+      "ar-AE": "خطأ في الاتصال. يرجى الاتصال بدعم العملاء",
+      "de-DE": "Kommunikationsfehler. Bitte kontaktieren Sie den Kundensupport",
+      "en-US": "Communication error. Please contact customer support",
+      "kk-KZ": "Байланыс қатесі. Қолдау қызметіне хабарласыңыз",
+      "ru-RU": "Ошибка связи. Пожалуйста обратитесь в службу поддержки"
+    },
+    "error.10": {
+      "ar-AE": "جزء العمل أو الفوهات غير ثابتة ، يرجى التحقق",
+      "de-DE": "Das Arbeitsteil oder die Düsen sind nicht fixiert, bitte überprüfen",
+      "en-US": "The working part or the nozzles are not fixed, please check",
+      "kk-KZ": "Жұмыс бөлігі немесе саптамалар бекітілмеген, тексеріңіз",
+      "ru-RU": "Рабочая часть или насадки не закреплены, пожалуйста проверьте"
+    },
+    "error.17": {
+      "ar-AE": "تجاوز الوزن المسموح به",
+      "de-DE": "Überschreitung des zulässigen Gewichts",
+      "en-US": "Exceeding the permissible weight",
+      "kk-KZ": "Рұқсат етілген салмақтан асып кету",
+      "ru-RU": "Превышение допустимого веса"
+    },
+    "error.20": {
+      "en-US": "Child lock operated",
+      "kk-KZ": "Кездейсоқ басудан қорғау атқарылды",
+      "ru-RU": "Сработала защита от случайного нажатия",
+      "uk-UA": "Функція захисту від дітей"
+    },
+    "alert.step": {
+      "en-US": "Cooking step completed",
+      "kk-KZ": "Даярлау қадамы аяқталды",
+      "ru-RU": "Шаг приготовления завершён",
+      "uk-UA": "Крок приготування завершено"
+    },
+    "url.manual": {
+      "en-US": "https://images.cdn.polaris-iot.com/pdf/polaris/9/PMC%200526.pdf"
+    },
+    "alert.ready": {
+      "en-US": "Cooking finished",
+      "kk-KZ": "Даярлау аяқталды",
+      "ru-RU": "Приготовление завершено",
+      "uk-UA": "Приготування їжі завершено"
+    },
+    "alert.start": {
+      "en-US": "Cooking started",
+      "kk-KZ": "Дайындық басталды",
+      "ru-RU": "Приготовление началось",
+      "uk-UA": "Розпочато приготування їжі"
+    },
+    "url.catalog": {
+      "de-DE": "https://www.polar.ru/catalog/multivarki/multivarka-polaris-pmc-0526-iq-home/",
+      "en-US": "https://www.polar.ru/catalog/multivarki/multivarka-polaris-pmc-0526-iq-home/",
+      "kk-KZ": "https://www.polar.ru/catalog/multivarki/multivarka-polaris-pmc-0526-iq-home/",
+      "ru-RU": "https://www.polar.ru/catalog/multivarki/multivarka-polaris-pmc-0526-iq-home/",
+      "uk-UA": "https://polaris.company/ua/catalog/multicookers/multivarka-polaris-pmc-0526-iq-home/"
+    },
+    "firmware.slot.1.title": {
+      "ar-AE": "إصدار MCU",
+      "de-DE": "MCU-Version",
+      "en-US": "MCU version",
+      "kk-KZ": "MCU нұсқасы",
+      "ru-RU": "Версия MCU",
+      "uk-UA": "Версія MCU"
+    },
+    "firmware.slot.1.prepare": {
+      "ar-AE": "لتثبيت التحديث على آلة المطبخ ، تحتاج إلى توصيل الجهاز إلى واي فاي. للقيام بذلك ، انتقل إلى قائمة الإعدادات والاتصال بشبكة واي فاي منزلك.\nتعليمات لتثبيت التحديث:\nعلى الشاشة الرئيسية لآلة المطبخ ، اضغط على أي زر وانتقل إلى قسم \"الإعدادات\".\nانتقل إلى القسم\"حول\"\nفي سطر مكو ، انقر فوق الزر تحميل التحديث من السحابة ، انتظر حتى يتم تثبيت التحديث.",
+      "de-DE": "Um das Update auf der Küchenmaschine zu installieren, müssen Sie das Gerät mit WLAN verbinden. Gehen Sie dazu in das Einstellungsmenü und stellen Sie eine Verbindung zu Ihrem WLAN-Heimnetzwerk her.\nAnleitung zur Installation des Updates:\n1. Drücken Sie auf dem Hauptbildschirm der Küchenmaschine eine beliebige Taste und gehen Sie zum Abschnitt \"Einstellungen\".\n2. Gehen Sie zum Abschnitt \"Über\"\n3. Klicken Sie in der MCU-Zeile auf die Schaltfläche Update aus der Cloud herunterladen und warten Sie, bis das Update installiert ist.",
+      "en-US": "To install the update on the kitchen machine, need to connect the device to Wi-Fi. To do this, go to the settings menu and connect to your home Wi-Fi network.\nInstructions for installing the update:\n1. On the main screen of the kitchen machine, press any button and go to the \"Settings\" section.\n2. Go to the section \"About\"\n3. In the mcu line, click the download update button from the cloud, wait for the update to be installed.",
+      "kk-KZ": "Ас үй машинасында жаңартуды орнату үшін құрылғыны Wi-Fi желісіне қосу керек. Ол үшін мәзірге өтіңіз Параметрлер және үйдегі Wi-Fi желісіне қосылыңыз.\nЖаңартуды орнатуға арналған нұсқаулық:\n1. Ас үй машинасының негізгі экранында кез келген түймені басып, \"Параметрлер\"бөліміне өтіңіз.\n2. \"Жүйе туралы\" бөліміне өтіңіз\n3. Чип жолында бұлттан жаңартуды жүктеу түймесін басыңыз, жаңартуды орнатуды күтіңіз.",
+      "ru-RU": "Для установки обновления на кухонной машине, необходимо подключить устройство к Wi-Fi. Для этого зайдите в меню в настройки и подключитесь к домашней сети Wi-Fi.\nИнструкция для установки обновления:\n1. На главном экране кухонной машины нажмите любую кнопку и перейдите в раздел «Настройки».\n2. Зайдите в раздел «О системе».\n3. В строке чип нажмите кнопку загрузки обновления с облака, дождитесь установки обновления."
+    }
+  },
+  "programs": [
+    null,
+    {
+      "icon": "M0,0h28v28V0M6.132,10.7352c.001-.0128.0073-.0237.0073-.0367V2.9909c0-.2764-.2236-.5-.5-.5s-.5.2236-.5.5v7.7075c0,.0016.001.0028.001.0044-1.0879.2028-1.915,1.1554-1.915,2.3008s.8271,2.098,1.915,2.3008c0,.0016-.001.0028-.001.0044v9.6821c0,.2764.2236.5.5.5s.5-.2236.5-.5v-9.6821c0-.0131-.0063-.0239-.0073-.0367,1.0201-.2535,1.7817-1.1707,1.7817-2.2684s-.7616-2.0149-1.7817-2.2684ZM5.5699,14.3478c-.7412,0-1.3447-.603-1.3447-1.3442s.6035-1.3442,1.3447-1.3442,1.3438.603,1.3438,1.3442-.6025,1.3442-1.3438,1.3442ZM14.5602,13.0423V2.9909c0-.2764-.2236-.5-.5-.5s-.5.2236-.5.5v10.0173c-1.0869.2036-1.9131,1.1559-1.9131,2.3006s.8262,2.097,1.9131,2.3006v7.3815c0,.2764.2236.5.5.5s.5-.2236.5-.5v-7.4157c1.0168-.2559,1.7754-1.171,1.7754-2.2664s-.7585-2.0106-1.7754-2.2664ZM13.9918,16.653c-.7412,0-1.3447-.603-1.3447-1.3442s.6035-1.3442,1.3447-1.3442,1.3438.603,1.3438,1.3442-.6025,1.3442-1.3438,1.3442ZM24.7555,9.7765c0-1.0978-.7616-2.0149-1.7817-2.2684.001-.0128.0073-.0237.0073-.0367V2.9909c0-.2764-.2236-.5-.5-.5s-.5.2236-.5.5v4.4805c0,.0016.001.0028.001.0044-1.0879.2028-1.915,1.1554-1.915,2.3008s.8267,2.0975,1.9141,2.3007v12.9137c0,.2764.2236.5.5.5s.5-.2236.5-.5v-12.9482c1.0164-.2563,1.7744-1.1711,1.7744-2.2661ZM22.4117,11.1208c-.7412,0-1.3447-.603-1.3447-1.3442s.6035-1.3442,1.3447-1.3442,1.3438.603,1.3438,1.3442-.6025,1.3442-1.3438,1.3442Z",
+      "name": {
+        "ar-AE": "DIY",
+        "de-DE": "DIY",
+        "en-US": "DIY",
+        "kk-KZ": "Қол режимі",
+        "ru-RU": "Ручной режим"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 12,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "timer": {
+          "max": 1800,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 360,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": [
+        {
+          "max": 160,
+          "min": 140,
+          "limits": {
+            "timer": {
+              "max": 7200,
+              "min": 300,
+              "step": 300,
+              "round": 1,
+              "default": 1200,
+              "round_alt": 1
+            }
+          },
+          "feature": "temperature"
+        },
+        {
+          "max": 35700,
+          "min": 7201,
+          "limits": {
+            "temperature": {
+              "max": 135,
+              "min": 35,
+              "step": 5,
+              "round": 1,
+              "default": 60,
+              "round_alt": 1
+            }
+          },
+          "feature": "timer"
+        }
+      ]
+    },
+    {
+      "icon": "M0,0h28v28V0M23.4811,13.0104c-.4473-1.4653-1.7383-2.4521-3.3096-2.5137h-3.9121c-.2285,0-.3916-.0386-.499-.1172-.3818-.2808-.6104-.7324-.6104-1.2085v-1.2222h3.7236c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5h-1.5889v-1.8335c0-.8271-.6729-1.5-1.5-1.5h-2.1787c-.8271,0-1.5.6729-1.5,1.5v1.8335h-1.5908c-.2764,0-.5.2236-.5.5s.2236.5.5.5h3.6348v1.2222c0,.793.3809,1.5459,1.0186,2.0146.2852.209.6426.311,1.0908.311l3.8926-.0005c1.1201.0444,2.0518.7534,2.373,1.8062.4316,1.415-.2803,2.9702-1.9248,4.1753l-5.2432,4.2471c-1.3438,1.0767-3.8564,2.6133-5.5625.8096-.1982-.2104-.3496-.4878-.4717-.731l-1.7051-3.4116c-.124-.2476-.4229-.3467-.6709-.2236-.2471.1235-.3467.4238-.2236.6709l1.7051,3.4121c.1553.3086.3516.665.6396.9702.7217.7632,1.6113,1.1421,2.6133,1.1421,1.2861,0,2.7588-.624,4.3027-1.8594l5.2266-4.2344c2.3359-1.7109,2.7041-3.8384,2.2705-5.2593ZM13.1061,5.1154c0-.2759.2246-.5.5-.5h2.1787c.2754,0,.5.2241.5.5v1.8335h-3.1787v-1.8335Z",
+      "name": {
+        "ar-AE": "دلك",
+        "de-DE": "Kneten",
+        "en-US": "Knead",
+        "kk-KZ": "Қамыр илеміне арналған ілмек",
+        "ru-RU": "Крюк для замеса теста"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 5,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "round_alt": 1
+        },
+        "timer": {
+          "max": 1200,
+          "min": 360,
+          "step": 1,
+          "round": 1,
+          "default": 360,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M17.853,7.8512h.3497c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5h-1.5889v-1.833c0-.8271-.6729-1.5-1.5-1.5h-2.1787c-.8271,0-1.5.6729-1.5,1.5v1.833h-1.5898c-.2764,0-.5.2236-.5.5s.2236.5.5.5h.3457c-2.4866,1.6682-7.1227,5.3373-6.6582,9.2495.3662,3.0918,3.8271,5.5811,10.2861,7.3989.0459.0127.0908.0186.1357.0186.0001,0,.0002-.0001.0002-.0001.0002,0,.0005.0001.0007.0001s.0002-.0001.0005-.0001.0002.0001.0005.0001c.001,0,.0017-.0008.0027-.0008.0105-.0001.0204-.0059.031-.0067.0118.0009.0228.0075.0347.0075.0005,0,.001-.0002.0013-.0002.0002,0,.0004.0002.0006.0002.0013,0,.0027-.0008.0039-.0008.043-.0005.0859-.0056.1299-.0178,6.4688-1.8203,9.9365-4.3145,10.3066-7.4121.4666-3.9073-4.1409-7.5699-6.6144-9.2363ZM13.4547,22.8327c-3.8838-4.2761-1.4895-10.5943,0-13.5579v13.5579ZM14.4547,9.1342c1.4907,2.9172,4.0496,9.4318,0,13.7774v-13.7774ZM12.9991,7.9972c-1.3464,2.4462-4.5144,9.2881-1.1576,14.3925-2.2858-1.3785-3.5885-3.0229-3.8605-4.9134-.5974-4.1487,3.8198-8.4089,5.0181-9.4791ZM16.1373,22.3924c3.4116-5.1833.0894-12.1651-1.2188-14.5101.9299.8143,5.7297,5.2506,5.1006,9.5792-.2754,1.8978-1.5857,3.5482-3.8818,4.9308ZM12.4352,5.0182c0-.2759.2246-.5.5-.5h2.1787c.2754,0,.5.2241.5.5v1.833h-3.1787v-1.833ZM4.525,16.9836c-.416-3.502,4.2926-7.0299,6.519-8.4903-1.8577,1.9442-4.5759,5.4813-4.0532,9.1231.2297,1.5997,1.0797,3.0266,2.4954,4.2821-3.0707-1.403-4.739-3.0475-4.9612-4.9149ZM23.4742,16.9694c-.2241,1.8709-1.8948,3.5186-4.9683,4.9239,1.4187-1.258,2.2715-2.6877,2.5034-4.2906.5271-3.6407-2.1747-7.1753-4.0189-9.1156,2.2106,1.4544,6.9026,4.9797,6.4838,8.4823Z",
+      "name": {
+        "ar-AE": "خفقت",
+        "de-DE": "Schneebesen",
+        "en-US": "Whisk",
+        "kk-KZ": "Бұлғауыш",
+        "ru-RU": "Венчик"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 12,
+          "min": 9,
+          "step": 1,
+          "round": 1,
+          "default": 12,
+          "round_alt": 1
+        },
+        "timer": {
+          "max": 1200,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 180,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M23.2176,8.3791c-.7949-1.0723-2.1406-1.5752-3.1348-1.688l-.0205-.002c-.8634-.0632-2.2217-.1082-3.75-.1323v-1.5621c0-.8271-.6729-1.5-1.5-1.5h-2.1787c-.8271,0-1.5.6729-1.5,1.5v1.5645c-1.3243.0233-2.5264.0651-3.3945.1288-1.2031.0435-2.1357.4609-2.7695,1.2397-.8203,1.0068-.9365,2.4048-.7744,3.3618.8906,6.564,5.4102,11.02,7.6748,12.4595.8945.5679,1.7402.7891,2.4873.7891.9639,0,1.7617-.3691,2.2793-.8394,5.4248-4.8843,6.4551-8.499,7.168-12.3862.209-1.1401.0117-2.127-.5869-2.9336ZM12.1336,4.9948c0-.2759.2246-.5.5-.5h2.1787c.2754,0,.5.2241.5.5v1.5496c-1.0449-.0096-2.1317-.0098-3.1787.0009v-1.5505ZM5.1835,11.1388c-.1221-.7222-.0488-1.8311.5605-2.5791.4453-.5459,1.1289-.8394,2.0498-.8735,1.2788-.0934,3.269-.14,5.3188-.1482.6478,2.0335,1.3026,6.376.5161,9.1306-.5142,1.7999-2.8826,3.4297-3.9269,3.8797-1.9314-2.1069-3.9629-5.317-4.5184-9.4095ZM15.9657,22.9572c-.2402.2168-1.5322,1.2354-3.5586-.0518-.5488-.3488-1.239-.8896-1.9749-1.6019,1.3303-.6865,3.5756-2.3218,4.1575-4.3605.1836-.6401.2959-1.3452.3525-2.0786,3.1125-.3011,4.8809,1.0864,5.847,2.3909-.9838,1.7362-2.4634,3.5767-4.8236,5.7018ZM22.8202,11.132c-.324,1.7695-.7065,3.4273-1.5293,5.1585-1.5132-1.7881-3.7064-2.6465-6.3027-2.4339.0339-2.3552-.4036-4.8215-.8351-6.3193,2.3236.0052,4.5836.058,5.8263.1484.749.0874,1.833.4766,2.4355,1.2891.4258.5752.5625,1.3008.4053,2.1572Z",
+      "name": {
+        "ar-AE": "الخافق",
+        "de-DE": "Beater",
+        "en-US": "Beater",
+        "kk-KZ": "Араластыруға арналған саптамалар",
+        "ru-RU": "Насадки для смешивания"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 12,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 12,
+          "round_alt": 1
+        },
+        "timer": {
+          "max": 300,
+          "min": 60,
+          "step": 1,
+          "round": 1,
+          "default": 90,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M19.6983,16.7829c.0566.2705-.1172.5347-.3877.5908l-1.958.4048c-.0342.0068-.0684.0103-.1025.0103-.2314,0-.4395-.1626-.4883-.3989-.0566-.2705.1172-.5347.3877-.5908l1.958-.4048c.2646-.0547.5352.1172.5908.3887ZM11.2735,18.0143l-1.959.4053c-.2705.0562-.4443.3208-.3877.5908.0488.2363.2568.3989.4883.3989.0342,0,.0684-.0034.1025-.0103l1.959-.4053c.2705-.0562.4443-.3208.3877-.5908-.0557-.2715-.3242-.4429-.5908-.3887ZM15.1905,17.2043l-1.959.4053c-.2705.0562-.4443.3208-.3877.5908.0488.2363.2568.3989.4883.3989.0342,0,.0684-.0034.1025-.0103l1.959-.4053c.2705-.0562.4443-.3208.3877-.5908-.0566-.271-.3252-.4414-.5908-.3887ZM21.4015,15.9196l-.335.0693c-.2705.0562-.4443.3208-.3877.5913.0488.2358.2568.3984.4883.3984.0342,0,.0684-.0034.1025-.0103l.335-.0693c.2705-.0562.4443-.3208.3877-.5913-.0566-.271-.3242-.4424-.5908-.3882ZM9.3146,9.3986l1.959.4053c.0342.0068.0684.0103.1025.0103.2314,0,.4395-.1626.4883-.3989.0566-.27-.1172-.5347-.3877-.5908l-1.959-.4053c-.2656-.0518-.5342.1177-.5908.3887-.0566.27.1172.5347.3877.5908ZM13.2316,10.2087l1.959.4053c.0342.0068.0684.0103.1025.0103.2314,0,.4395-.1626.4883-.3989.0566-.27-.1172-.5347-.3877-.5908l-1.959-.4053c-.2666-.0537-.5342.1172-.5908.3887-.0566.27.1172.5347.3877.5908ZM17.1495,11.0192l1.958.4048c.0342.0068.0684.0103.1025.0103.2314,0,.4395-.1626.4883-.3989.0566-.2705-.1172-.5347-.3877-.5908l-1.958-.4048c-.2646-.0522-.5352.1177-.5908.3887-.0566.2705.1172.5347.3877.5908ZM21.6046,10.9191l-.335-.0693c-.2656-.0542-.5342.1177-.5908.3882s.1172.5352.3877.5913l.335.0693c.0342.0068.0684.0103.1025.0103.2314,0,.4395-.1626.4883-.3984.0566-.2705-.1172-.5352-.3877-.5913ZM19.8351,13.4089h-2c-.2764,0-.5.2236-.5.5s.2236.5.5.5h2c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5ZM15.8341,13.4089h-2c-.2764,0-.5.2236-.5.5s.2236.5.5.5h2c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5ZM11.8341,13.4089h-2c-.2764,0-.5.2236-.5.5s.2236.5.5.5h2c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5ZM23.5301,19.3727c-.0662.0723-.147.132-.2498.1558l-1.2908.2987c.0427.2566-.1145.5068-.3713.5685l-.832.1997c-.0391.0093-.0781.0137-.1162.0137-.2202,0-.4175-.1469-.4788-.3657l-.9799.2267c.0573.2648-.1056.5285-.3705.592l-1.9453.4668c-.0391.0093-.0781.0137-.1162.0137-.2266,0-.4316-.1538-.4863-.3833-.0011-.0046.0005-.0091-.0005-.0137l-.9806.2269c.0021.0074.0076.0127.0094.0202.0645.2686-.1016.5386-.3701.603l-1.9453.4663c-.0391.0093-.0781.0137-.1162.0137-.2266,0-.4316-.1543-.4863-.3833-.0038-.0157.0005-.0308-.0017-.0464l-.9932.2299c.0063.0176.0188.0314.0232.05.0645.2686-.1016.5386-.3701.603l-1.9453.4668c-.0391.0093-.0781.0137-.1162.0137-.2266,0-.4316-.1538-.4863-.3833-.0065-.0269-.001-.0529-.0029-.0796l-2.7324.6323c-.0371.0088-.0752.0127-.1123.0127-.1692,0-.326-.0869-.4177-.2263-1.6934-1.0566-1.7483-8.4625-1.7483-9.3655,0-.9039.0548-8.324,1.7531-9.369.1113-.1671.3151-.2596.5243-.2096l2.7517.629c-.0251-.0822-.0369-.1688-.0154-.2584.0635-.2681.3301-.4341.6025-.3696l1.9453.4668c.2686.0645.4346.3345.3701.603-.0183.0768-.0579.1407-.105.1976l1.0737.2454c-.0129-.0677-.0142-.1383.0029-.2097.0635-.2681.3291-.4346.6025-.3696l1.9453.4668c.2686.0645.4346.3345.3701.603-.0142.0593-.0391.113-.071.1609l1.0369.2369c-.0054-.0539-.0076-.1088.0059-.1644.0635-.2681.3311-.4351.6025-.3696l1.9453.4668c.2686.0645.4346.3345.3701.603-.0105.0442-.031.0827-.0518.1207l1.019.233c-.0002-.04-.0054-.0796.0044-.1203.0635-.2681.3301-.4355.6025-.3696l.833.1997c.2686.0645.4346.3345.3701.603-.0081.0336-.0254.0617-.0394.0919l1.3304.3041c.1602.0366.2764.1495.3381.2886.7151.7139.8826,3.1699.8826,5.2895,0,2.205-.1792,4.7803-.97,5.373ZM22.9176,18.5859c.0225-.0136.0356-.0386.0601-.0486.1982-.3501.5225-1.9102.5225-4.5376s-.3242-4.187-.5225-4.5371c-.0593-.0243-.1002-.074-.1455-.1177L6.8231,5.6855c.9714,2.3733,1.011,7.567,1.011,8.3141,0,.7467-.0396,5.9349-1.0093,8.3104l16.0928-3.7242ZM5.6671,22.4509c.4336-.5146,1.167-3.3438,1.167-8.4512s-.7334-7.936-1.167-8.4507c-.4336.5142-1.167,3.3423-1.167,8.4507s.7334,7.937,1.167,8.4512Z",
+      "name": {
+        "ar-AE": "التقطيع",
+        "de-DE": "Shredder",
+        "en-US": "Shredder",
+        "kk-KZ": "Көкөніс кескіш",
+        "ru-RU": "Овощерезка "
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 10,
+          "min": 6,
+          "step": 1,
+          "round": 1,
+          "default": 8,
+          "round_alt": 1
+        },
+        "timer": {
+          "max": 300,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 120,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M26.1576,3.4909H4.1576c-.2764,0-.5.2236-.5.5s.2236.5.5.5h.5552l.4946,2.4644c.2422,1.1904.4941,2.4214,2.2588,3.0098l1.3389.4468c.0649.0222.1364.0206.2041.0335v5.8786c0,.1712.0229.3361.0479.5h-1.8284c-.0842-.7477-.7131-1.333-1.4832-1.333h-.5879c-.8271,0-1.5.6729-1.5,1.5v6c0,.8271.6729,1.5,1.5,1.5h.5879c.77,0,1.3989-.5853,1.4832-1.333h17.2805c.8271,0,1.5-.6729,1.5-1.5v-3.334c0-.8271-.6729-1.5-1.5-1.5h-9.5479c.0249-.1639.0479-.3288.0479-.5v-5.8586c.0398-.0038.0806-.0034.1191-.0106l7.4355-1.3179c1.46-.1577,2.5605-1.4526,2.5605-3.0112v-1.6348h1.0332c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5ZM14.0091,16.3239c0,1.1948-.8975,2.167-2,2.167s-2-.9722-2-2.167v-5.8347l4-.0095v5.8442ZM5.7455,23.4909h-.5879c-.2754,0-.5-.2241-.5-.5v-6c0-.2759.2246-.5.5-.5h.5879c.2754,0,.5.2241.5.5v.3233c0,.0034-.002.0063-.002.0097s.002.0063.002.0097v5.3146c0,.0034-.002.0063-.002.0097s.002.0063.002.0097v.3233c0,.2759-.2246.5-.5.5ZM24.5091,17.8239c.2754,0,.5.2241.5.5v3.334c0,.2759-.2246.5-.5.5H7.2455v-4.334h2.0859c.0167,0,.0309-.0079.0471-.0095.5071.9926,1.4895,1.6765,2.6306,1.6765,1.1375,0,2.1172-.6796,2.6257-1.667h9.8743ZM24.1244,6.1257c0,1.0469-.7168,1.9141-1.7012,2.022l-7.5547,1.3301-5.583.0132c-.0537,0-.1084-.0088-.1602-.0264l-1.3428-.4478c-1.2168-.4058-1.3682-1.144-1.5996-2.2803l-.4504-2.2456h18.3918v1.6348Z",
+      "name": {
+        "ar-AE": "مفرمة اللحم",
+        "de-DE": "Fleischwolf",
+        "en-US": "Meat grinder",
+        "kk-KZ": "Ер турағыш",
+        "ru-RU": "Мясорубка"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 12,
+          "min": 9,
+          "step": 1,
+          "round": 1,
+          "default": 12,
+          "round_alt": 1
+        },
+        "timer": {
+          "max": 300,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 60,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M21.4986,8.6188h-.9087l.0522-.457c.0488-.4243-.0869-.8506-.3711-1.1694-.2561-.2883-.6157-.4573-.9973-.4886-.0276-.8171-.697-1.4748-1.5212-1.4748h-.1504c-.2244-.8816-1.0182-1.5381-1.9688-1.5381h-5.666c-.9506,0-1.7444.6565-1.9688,1.5381h-.4346c-.8188,0-1.4846.6508-1.5189,1.4619h-.61c-.5508,0-1.0566.3013-1.3193.7861-.2627.4854-.2383,1.0732.0645,1.5356l.8223,1.2563c.042.0635.0693.1387.0791.2139l1.2275,10.0132c.0876.715.4796,1.322,1.0298,1.7174-.7454.1926-1.3003.8646-1.3003,1.6693,0,.4458.3623.8081.8076.8081h11.624c.4463,0,.8086-.3623.8086-.8081,0-.7409-.4705-1.3693-1.127-1.6153.5942-.3956,1.0164-1.0354,1.1035-1.7919l.0571-.4996,3.6636-2.4652c.6943-.4668,1.1084-1.2334,1.1084-2.0518v-4.1401c0-1.3784-1.1602-2.5-2.5859-2.5ZM20.2726,11.3908h.8628c.0684,0,.126.0459.126.1006l.0049,3.4604c0,.165-.0879.3188-.2363.4121l-1.3066.8257.5493-4.7989ZM9.9674,4.4909h5.666c.3875,0,.7129.2226.8914.5381h-7.4487c.1785-.3155.5039-.5381.8914-.5381ZM7.5641,6.029h10.1885c.2673,0,.4805.2034.5134.4619H7.0516c.0328-.2585.2451-.4619.5125-.4619ZM5.0172,8.2653c-.1475-.2256-.0645-.4336-.0215-.5122.043-.0791.1709-.2622.4395-.2622h13.7178c.1445,0,.2764.0591.3721.167.0957.1074.1396.2461.123.3901l-.3606,3.1495c-.0248-.0038-.0471-.0147-.073-.0147H6.3922c-.0668,0-.1299.0142-.1881.0379l-.1302-1.0628c-.0293-.2271-.1104-.4468-.2344-.6362l-.8223-1.2563ZM7.0641,23.4909c.085-.3096.3691-.5381.7051-.5381h9.7783c.3369,0,.6211.2285.7061.5381H7.0641ZM16.7711,21.4909h-1.3695l.5267-6.9497c.0205-.2754-.1855-.5151-.4609-.5361-.2676-.0225-.5156.1855-.5371.4609l-.5325,7.0249h-3.1851l-.5325-7.0249c-.0215-.2754-.2617-.4819-.5371-.4609s-.4814.2607-.4609.5361l.5267,6.9497h-1.4183c-.7568,0-1.3965-.5659-1.4893-1.3169l-.9812-8.0057c.0247.0037.0465.0145.072.0145h12.7825l-.8037,7.0208-.0198.0134.0156.0233-.1055.9216c-.0869.7578-.7275,1.3291-1.4902,1.3291ZM23.0846,15.259c0,.4844-.249.9414-.667,1.2217l-2.9553,1.9887.1149-1.0035,1.9869-1.2562c.4395-.2778.7021-.748.7021-1.2583l-.0049-3.4604c0-.6064-.5049-1.1001-1.126-1.1001h-.7483l.0884-.772h1.0232c.874,0,1.5859.6729,1.5859,1.5v4.1401Z",
+      "name": {
+        "ar-AE": "خلاط",
+        "de-DE": "Blender",
+        "en-US": "Blender",
+        "kk-KZ": "Блендер",
+        "ru-RU": "Блендер"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 12,
+          "min": 9,
+          "step": 1,
+          "round": 1,
+          "default": 12,
+          "round_alt": 1
+        },
+        "timer": {
+          "max": 180,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 120,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M24.1456,9.2469c.0892-1.1217-.2847-2.254-1.0471-3.0607-1.1221-1.1875-2.9443-1.6973-5.4326-1.5244-.2012.0239-.4209.0605-.6553.1001-1.2764.2139-2.8623.4814-4.7178-.8311-.9482-.6699-4.2686-2.6479-7.3125.064-1.8347,1.9353-1.4512,4.5004-1.2646,5.3275-.7312.4837-1.2158,1.3113-1.2158,2.2516v2.9331c0,.8912.4392,1.6766,1.1069,2.1687-.0007.011-.0063.0203-.0063.0315v5.5c0,.2764.2236.5.5.5s.5-.2236.5-.5v-5.0724c.1936.0442.3928.0724.5996.0724h1.7002v7.8813c0,.2764.2236.5.5.5s.5-.2236.5-.5v-7.8813h2.2998v5c0,.2764.2236.5.5.5s.5-.2236.5-.5v-5h2.2998v7.8813c0,.2764.2236.5.5.5s.5-.2236.5-.5v-7.8813h2.2998v5c0,.2764.2236.5.5.5s.5-.2236.5-.5v-5h2.3008v7.8813c0,.2764.2236.5.5.5s.5-.2236.5-.5v-7.8813h1.6992c.207,0,.4067-.0284.6006-.0727v5.0727c0,.2764.2236.5.5.5s.5-.2236.5-.5v-5.5c0-.0114-.0057-.021-.0065-.0322.6672-.4921,1.1061-1.2772,1.1061-2.168v-2.9331c0-.9966-.5488-1.8591-1.3542-2.327ZM5.6766,4.7121c2.3936-2.1328,5.0195-.6855,6.0381.0352,2.1943,1.5513,4.1621,1.2207,5.4609,1.0005.2178-.0366.4209-.0708.584-.0908,2.1279-.1489,3.7197.2705,4.6123,1.2158.6648.704.7944,1.527.7998,2.0386-.1228-.0172-.2446-.0376-.3721-.0376H5.2001c-.1855,0-.3665.019-.5415.0547-.1466-.7787-.3511-2.7703,1.0181-4.2164ZM24.4999,14.507c0,.9375-.7627,1.7002-1.7002,1.7002H5.2001c-.9375,0-1.7002-.7627-1.7002-1.7002v-2.9331c0-.9375.7627-1.7002,1.7002-1.7002h17.5996c.9375,0,1.7002.7627,1.7002,1.7002v2.9331Z",
+      "name": {
+        "ar-AE": "صانع المعكرونة",
+        "de-DE": "Nudelmaschine",
+        "en-US": "Pasta maker",
+        "kk-KZ": "Пастаға арналған саптамалар",
+        "ru-RU": "Насадки для пасты"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 10,
+          "min": 6,
+          "step": 1,
+          "round": 1,
+          "default": 8,
+          "round_alt": 1
+        },
+        "timer": {
+          "max": 600,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 300,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "name": {
+        "en-US": "PULSE"
+      },
+      "hidden": true,
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M25.371,19.9142l-1.9033-8c-.4775-2.0103-2.1953-3.4141-4.1777-3.4141h-4.79v-1h5.2363c.9443,0,1.7988-.5229,2.2275-1.3652l1.4814-2.9077c.126-.2461.0273-.5474-.2188-.6724-.2432-.1235-.5469-.0288-.6719.2183l-1.4814,2.9077c-.2578.5054-.7705.8193-1.3369.8193h-11.4775c-.5674,0-1.0801-.3145-1.3379-.8213l-1.4756-2.9053c-.124-.2456-.4268-.3423-.6719-.2192-.2461.125-.3447.4258-.2188.6724l1.4746,2.9053c.4287.8438,1.2832,1.3682,2.2295,1.3682h5.2412v1h-4.79c-1.9814,0-3.6992,1.4038-4.1777,3.4141l-1.9033,8c-.333,1.3994-.0195,2.8403.8604,3.9526.8193,1.0376,2.0293,1.6328,3.3184,1.6328l14.3848.0005c1.2891,0,2.499-.5957,3.3193-1.6338.8789-1.1128,1.1924-2.5532.8594-3.9521ZM23.7274,23.2463c-.6299.7969-1.5537,1.2539-2.5352,1.2539l-14.3848-.0005c-.9814,0-1.9053-.4565-2.5342-1.2529-.6885-.8711-.9326-2.0015-.6719-3.1011l1.9033-8c.3711-1.5576,1.6885-2.6455,3.2051-2.6455h10.5801c1.5176,0,2.835,1.0879,3.2051,2.6455l1.9033,8c.2617,1.0996.0166,2.2295-.6709,3.1006ZM13.9999,12.5002c-2.4814,0-4.5,2.0186-4.5,4.5s2.0186,4.5,4.5,4.5,4.5-2.0186,4.5-4.5-2.0186-4.5-4.5-4.5ZM13.9999,20.5002c-1.9297,0-3.5-1.5703-3.5-3.5s1.5703-3.5,3.5-3.5,3.5,1.5703,3.5,3.5-1.5703,3.5-3.5,3.5ZM14.4999,15.0002v4c0,.2764-.2236.5-.5.5s-.5-.2236-.5-.5v-4c0-.2764.2236-.5.5-.5s.5.2236.5.5Z",
+      "name": {
+        "ar-AE": "الوزن",
+        "de-DE": "Gewicht",
+        "en-US": "Weight",
+        "kk-KZ": "Таразы",
+        "ru-RU": "Весы"
+      },
+      "hidden": true,
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "pair": {
+      "60": "https://images.cdn.polaris-iot.com/5/cb/4ba7a-4956-45b6-94da-354284802152/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/5/cb/4ba7a-4956-45b6-94da-354284802152/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/5/cb/4ba7a-4956-45b6-94da-354284802152/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/5/cb/4ba7a-4956-45b6-94da-354284802152/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/5/cb/4ba7a-4956-45b6-94da-354284802152/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/5/cb/4ba7a-4956-45b6-94da-354284802152/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/5/cb/4ba7a-4956-45b6-94da-354284802152/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/5/cb/4ba7a-4956-45b6-94da-354284802152/1800.webp",
+      "id": "5cb4ba7a-4956-45b6-94da-354284802152",
+      "original": "https://images.cdn.polaris-iot.com/5/cb/4ba7a-4956-45b6-94da-354284802152/original.webp"
+    },
+    "enable": {
+      "60": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/1800.webp",
+      "id": "4692258d-96e1-42e2-a7b0-455d90ba87f3",
+      "original": "https://images.cdn.polaris-iot.com/4/69/2258d-96e1-42e2-a7b0-455d90ba87f3/original.webp"
+    },
+    "manualbg": {
+      "60": "https://images.cdn.polaris-iot.com/d/3f/3a5cb-cb02-4ccf-8e7e-02557b694187/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/d/3f/3a5cb-cb02-4ccf-8e7e-02557b694187/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/d/3f/3a5cb-cb02-4ccf-8e7e-02557b694187/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/d/3f/3a5cb-cb02-4ccf-8e7e-02557b694187/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/d/3f/3a5cb-cb02-4ccf-8e7e-02557b694187/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/d/3f/3a5cb-cb02-4ccf-8e7e-02557b694187/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/d/3f/3a5cb-cb02-4ccf-8e7e-02557b694187/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/d/3f/3a5cb-cb02-4ccf-8e7e-02557b694187/1800.webp",
+      "id": "d3f3a5cb-cb02-4ccf-8e7e-02557b694187",
+      "original": "https://images.cdn.polaris-iot.com/d/3f/3a5cb-cb02-4ccf-8e7e-02557b694187/original.webp"
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1790347196,
+  "temperature_units": "celsius"
+}

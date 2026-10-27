@@ -1,0 +1,923 @@
+{
+  "id": "79f68f01-7674-46d9-980f-9babf36a01c1",
+  "name": "PCH-0320WIFI",
+  "type": 46,
+  "class": "heater",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/2/ef/6cb11-25b4-4c82-adcf-33f0e01302b8/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/2/ef/6cb11-25b4-4c82-adcf-33f0e01302b8/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/2/ef/6cb11-25b4-4c82-adcf-33f0e01302b8/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/2/ef/6cb11-25b4-4c82-adcf-33f0e01302b8/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/2/ef/6cb11-25b4-4c82-adcf-33f0e01302b8/600.webp",
+    "id": "2ef6cb11-25b4-4c82-adcf-33f0e01302b8",
+    "original": "https://images.cdn.polaris-iot.com/2/ef/6cb11-25b4-4c82-adcf-33f0e01302b8/original.webp"
+  },
+  "layout": {
+    "home.top": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "switch",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "current_temperature",
+        "position": 0
+      },
+      {
+        "type": "info",
+        "feature": "temperature",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "manual.bottom": [
+      {
+        "type": "button_power",
+        "position": 0
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "type": "info",
+        "feature": "current_temperature",
+        "position": 0
+      },
+      {
+        "type": "info",
+        "feature": "temperature",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 3
+      },
+      {
+        "type": "slider",
+        "style": "picker",
+        "feature": "timer",
+        "position": 4
+      },
+      {
+        "type": "container_head",
+        "position": 5
+      },
+      {
+        "type": "slider",
+        "points": {
+          "1": {
+            "label": "1°"
+          },
+          "12": {
+            "label": "12°"
+          },
+          "23": {
+            "label": "23°"
+          },
+          "35": {
+            "label": "35°"
+          }
+        },
+        "feature": "temperature",
+        "position": 6,
+        "step_ticks": 1
+      },
+      {
+        "type": "container_tail",
+        "position": 7
+      },
+      {
+        "type": "container_head",
+        "position": 8
+      },
+      {
+        "type": "header",
+        "title": {
+          "de-DE": "Modi",
+          "en-US": "Modes",
+          "kk-KZ": "Режимдер",
+          "ru-RU": "Режимы",
+          "uk-UA": "Режими"
+        },
+        "position": 9
+      },
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "مريح",
+          "de-DE": "COMFORT",
+          "en-US": "COMFORT",
+          "kk-KZ": "COMFORT",
+          "ru-RU": "COMFORT",
+          "uk-UA": "COMFORT"
+        },
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 10,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "اقتصادي",
+          "de-DE": "ECO",
+          "en-US": "ECO",
+          "kk-KZ": "ECO",
+          "ru-RU": "ECO",
+          "uk-UA": "ECO"
+        },
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "position": 10,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "منخفض",
+          "de-DE": "LOW",
+          "en-US": "LOW",
+          "kk-KZ": "LOW",
+          "ru-RU": "LOW",
+          "uk-UA": "LOW"
+        },
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 10,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "متوسط",
+          "de-DE": "MID",
+          "en-US": "MID",
+          "kk-KZ": "MID",
+          "ru-RU": "MID",
+          "uk-UA": "MID"
+        },
+        "action": {
+          "program": [
+            4
+          ]
+        },
+        "position": 10,
+        "condition": [
+          {
+            "program": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "الحد الأقصى",
+          "de-DE": "MAX",
+          "en-US": "MAX",
+          "kk-KZ": "MAX",
+          "ru-RU": "MAX",
+          "uk-UA": "MAX"
+        },
+        "action": {
+          "program": [
+            5
+          ]
+        },
+        "position": 10,
+        "condition": [
+          {
+            "program": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "بدون فروست",
+          "de-DE": "NO FROST",
+          "en-US": "NO FROST",
+          "kk-KZ": "NO FROST",
+          "ru-RU": "NO FROST",
+          "uk-UA": "NO FROST"
+        },
+        "action": {
+          "program": [
+            6
+          ]
+        },
+        "position": 10,
+        "condition": [
+          {
+            "program": [
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 11
+      },
+      {
+        "type": "container_head",
+        "position": 12
+      },
+      {
+        "type": "header",
+        "title": {
+          "de-DE": "Einstellungen",
+          "en-US": "Settings",
+          "kk-KZ": "Параметрлер",
+          "ru-RU": "Настройки",
+          "uk-UA": "Налаштування"
+        },
+        "position": 13
+      },
+      {
+        "type": "button",
+        "feature": "schedule",
+        "position": 14
+      },
+      {
+        "type": "fill",
+        "position": 14
+      },
+      {
+        "type": "container_tail",
+        "position": 15
+      }
+    ],
+    "schedule.editor": [
+      {
+        "type": "button",
+        "measure": "input_name",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "measure": "input_date_time",
+        "position": 0
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "row": "repeat_days",
+        "type": "info",
+        "position": 2
+      },
+      {
+        "type": "header",
+        "title": {
+          "de-DE": "Modi",
+          "en-US": "Modes",
+          "kk-KZ": "Режимдер",
+          "ru-RU": "Режимы",
+          "uk-UA": "Режими"
+        },
+        "position": 3
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            4
+          ]
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            5
+          ]
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            6
+          ]
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program": [
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 35,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 25,
+          "roundAlt": 1
+        },
+        "points": {
+          "1": {
+            "label": "1°C"
+          },
+          "12": {
+            "label": "12°C"
+          },
+          "23": {
+            "label": "23°C"
+          },
+          "35": {
+            "label": "35°C"
+          }
+        },
+        "feature": "temperature",
+        "position": 5,
+        "step_ticks": 1
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 86400,
+          "min": 0,
+          "step": 3600,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 6
+      },
+      {
+        "type": "container_tail",
+        "position": 7
+      }
+    ]
+  },
+  "limits": {
+    "timer": {
+      "max": 86400,
+      "min": 0,
+      "step": 3600,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "temperature": {
+      "max": 35,
+      "min": 1,
+      "step": 1,
+      "round": 1,
+      "default": 25,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "PCH-0320WIFI",
+          "manufacturer": "polaris"
+        },
+        "type": "devices.types.thermostat",
+        "errors": [
+          {
+            "code": 1,
+            "errorType": "HUMAN_INVOLVEMENT_NEEDED",
+            "allowControl": false
+          }
+        ],
+        "features": [
+          {
+            "type": "info",
+            "feature": "current_temperature",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "slider",
+            "limit": {
+              "max": 35,
+              "min": 18,
+              "step": 1,
+              "round": 1,
+              "default": 25,
+              "roundAlt": 1
+            },
+            "feature": "temperature",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "min",
+                "action": {
+                  "program": [
+                    3
+                  ]
+                },
+                "condition": {
+                  "or": [
+                    {
+                      "program": [
+                        0
+                      ]
+                    },
+                    {
+                      "program": [
+                        3
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "max",
+                "action": {
+                  "program": [
+                    5
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    5
+                  ]
+                }
+              },
+              {
+                "value": "medium",
+                "action": {
+                  "program": [
+                    4
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    4
+                  ]
+                }
+              }
+            ],
+            "instance": "heat",
+            "retrievable": true
+          },
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                1
+              ]
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "hidden": true,
+    "realtime": true,
+    "shortcuts": [
+      {
+        "program": [
+          1
+        ]
+      },
+      {
+        "program": [
+          2
+        ]
+      },
+      {
+        "program": [
+          3
+        ]
+      },
+      {
+        "program": [
+          4
+        ]
+      }
+    ],
+    "voiceControl": {
+      "intents": {
+        "status": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {}
+              }
+            }
+          }
+        },
+        "rollcall": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {}
+              }
+            }
+          }
+        },
+        "device_on": {
+          "action": {
+            "program": [
+              1
+            ]
+          }
+        },
+        "greetings": {
+          "status": {
+            "ready": {
+              "items": {
+                "hello": {}
+              }
+            }
+          }
+        },
+        "device_off": {
+          "action": {
+            "program": [
+              0
+            ]
+          }
+        },
+        "status.full": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {}
+              }
+            },
+            "timer": {
+              "values": {
+                "timer": {
+                  "type": "time_value"
+                }
+              }
+            },
+            "backlight": {},
+            "child_lock": {},
+            "current_temperature": {
+              "values": {
+                "current_temperature": {
+                  "type": "number_value"
+                }
+              }
+            }
+          }
+        },
+        "backlight.on": {
+          "action": {
+            "backlight": 1
+          }
+        },
+        "backlight.off": {
+          "action": {
+            "backlight": 0
+          }
+        },
+        "child_lock.on": {
+          "action": {
+            "child_lock": 1
+          }
+        },
+        "child_lock.off": {
+          "action": {
+            "child_lock": 0
+          }
+        },
+        "temperature_set": {
+          "values": {
+            "temperature": {}
+          }
+        },
+        "status.current_temperature": {
+          "status": {
+            "current_temperature": {}
+          }
+        }
+      }
+    },
+    "manualInfoFields": [
+      "temperature"
+    ]
+  },
+  "vendor": "polaris",
+  "features": [
+    "program",
+    "temperature",
+    "timer",
+    "current_temperature",
+    "schedule",
+    "demo"
+  ],
+  "programs": [
+    {
+      "name": {
+        "ar-AE": "إيقاف التشغيل",
+        "de-DE": "Aus",
+        "en-US": "Off",
+        "kk-KZ": "Өшіру",
+        "ru-RU": "Выкл",
+        "uk-UA": "Вимкнено"
+      },
+      "hidden": true,
+      "limits": {
+        "timer": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "name": {
+        "ar-AE": "مريح",
+        "de-DE": "COMFORT",
+        "en-US": "COMFORT",
+        "kk-KZ": "COMFORT",
+        "ru-RU": "COMFORT",
+        "uk-UA": "COMFORT"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    },
+    {
+      "name": {
+        "ar-AE": "اقتصادي",
+        "de-DE": "ECO",
+        "en-US": "ECO",
+        "kk-KZ": "ECO",
+        "ru-RU": "ECO",
+        "uk-UA": "ECO"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    },
+    {
+      "name": {
+        "ar-AE": "منخفض",
+        "de-DE": "LOW",
+        "en-US": "LOW",
+        "kk-KZ": "LOW",
+        "ru-RU": "LOW",
+        "uk-UA": "LOW"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    },
+    {
+      "name": {
+        "ar-AE": "متوسط",
+        "de-DE": "MID",
+        "en-US": "MID",
+        "kk-KZ": "MID",
+        "ru-RU": "MID",
+        "uk-UA": "MID"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    },
+    {
+      "name": {
+        "ar-AE": "الحد الأقصى",
+        "de-DE": "MAX",
+        "en-US": "MAX",
+        "kk-KZ": "MAX",
+        "ru-RU": "MAX",
+        "uk-UA": "MAX"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    },
+    {
+      "name": {
+        "ar-AE": "بدون فروست",
+        "de-DE": "NO FROST",
+        "en-US": "NO FROST",
+        "kk-KZ": "NO FROST",
+        "ru-RU": "NO FROST",
+        "uk-UA": "NO FROST"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "manualbg": {
+      "60": "https://images.cdn.polaris-iot.com/6/54/883ab-1e73-48a1-afe4-461a27c8a06a/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/6/54/883ab-1e73-48a1-afe4-461a27c8a06a/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/6/54/883ab-1e73-48a1-afe4-461a27c8a06a/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/6/54/883ab-1e73-48a1-afe4-461a27c8a06a/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/6/54/883ab-1e73-48a1-afe4-461a27c8a06a/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/6/54/883ab-1e73-48a1-afe4-461a27c8a06a/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/6/54/883ab-1e73-48a1-afe4-461a27c8a06a/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/6/54/883ab-1e73-48a1-afe4-461a27c8a06a/1800.webp",
+      "2400": "https://images.cdn.polaris-iot.com/6/54/883ab-1e73-48a1-afe4-461a27c8a06a/2400.webp",
+      "id": "654883ab-1e73-48a1-afe4-461a27c8a06a",
+      "original": "https://images.cdn.polaris-iot.com/6/54/883ab-1e73-48a1-afe4-461a27c8a06a/original.webp"
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1754255394,
+  "temperature_units": "celsius"
+}

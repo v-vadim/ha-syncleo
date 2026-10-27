@@ -1,0 +1,4397 @@
+{
+  "id": "6c5b5adb-07bd-4662-aef5-9aaeac4aded5",
+  "name": "PMC-0597 WIFI",
+  "type": 302,
+  "class": "cooker",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/900.webp",
+    "1200": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/1200.webp",
+    "1800": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/1800.webp",
+    "id": "21746afc-97f0-4dca-9aa9-fcc7a729fa16",
+    "original": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/original.webp"
+  },
+  "layout": {
+    "home.top": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "timer",
+        "feature": "timer",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "إعادة تعيين تكوين نفك",
+          "de-DE": "Zurücksetzen der NFC-konfiguration",
+          "en-US": "NFC configuration reset",
+          "kk-KZ": "NFC конфигурациясын қалпына келтіру",
+          "ru-RU": "Сброс конфигурации по NFC",
+          "uk-UA": "Скидання конфігурації по NFC"
+        },
+        "measure": "nfcReset",
+        "position": 0
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "program",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ]
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8zM16.59,7.58L10,14.17l-2.59,-2.58L6,13l4,4 8,-8z",
+        "type": "info",
+        "feature": "keep_warm",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          },
+          {
+            "keep_warm": 1
+          }
+        ]
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M2,10h20v4h-20z",
+        "type": "info",
+        "feature": "keep_warm",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          },
+          {
+            "keep_warm": 0
+          }
+        ]
+      }
+    ],
+    "manual.bottom": [
+      {
+        "type": "button_power",
+        "position": 0
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "type": "info",
+        "feature": "program",
+        "position": 2
+      },
+      {
+        "type": "info",
+        "feature": "delay_start",
+        "position": 2,
+        "visibility": [
+          {
+            "not": {
+              "or": [
+                {
+                  "source": "state",
+                  "delay_start": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "measure": "step_index",
+        "position": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "delay_start": 0
+          },
+          {
+            "source": "state",
+            "multi_step": {
+              "min": 2
+            }
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "feature": "temperature",
+        "position": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "delay_start": 0
+          },
+          {
+            "source": "state",
+            "multi_step": {
+              "max": 1.999
+            }
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "title": {
+          "de-DE": "Zeit",
+          "en-US": "Time",
+          "kk-KZ": "Уақыт",
+          "ru-RU": "Время",
+          "uk-UA": "Час"
+        },
+        "measure": "total_time",
+        "position": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8zM16.59,7.58L10,14.17l-2.59,-2.58L6,13l4,4 8,-8z",
+        "type": "info",
+        "feature": "keep_warm",
+        "position": 2,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          },
+          {
+            "keep_warm": 1
+          }
+        ]
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M2,10h20v4h-20z",
+        "type": "info",
+        "feature": "keep_warm",
+        "position": 2,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          },
+          {
+            "keep_warm": 0
+          }
+        ]
+      },
+      {
+        "icon": "M0.0,0.0h24.0v24.0V0.0M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8zM16.59,7.58L10,14.17l-2.59,-2.58L6,13l4,4 8,-8z",
+        "type": "info",
+        "title": {
+          "ar-AE": "التسخين",
+          "de-DE": "Vorheizen",
+          "en-US": "Preheating",
+          "kk-KZ": "Алдын ала қыздыру",
+          "ru-RU": "Предварительный нагрев",
+          "uk-UA": "Попередній нагрів"
+        },
+        "position": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "program_data": {
+              "field": "preheat_state",
+              "value": 1,
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 3
+      },
+      {
+        "type": "slider",
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 3600,
+          "min": 600,
+          "step": 300,
+          "round": 1,
+          "default": 1200,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 12600,
+          "min": 1800,
+          "step": 600,
+          "round": 1,
+          "default": 3600,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  3
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 14400,
+          "min": 3600,
+          "step": 600,
+          "round": 1,
+          "default": 3600,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  4
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 28800,
+          "min": 3600,
+          "step": 3600,
+          "round": 1,
+          "default": 21600,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  5
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 28800,
+          "min": 1800,
+          "step": 1800,
+          "round": 1,
+          "default": 7200,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  6
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 3600,
+          "min": 600,
+          "step": 300,
+          "round": 1,
+          "default": 1800,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  7
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 57600,
+          "min": 7200,
+          "step": 300,
+          "round": 1,
+          "default": 28800,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  8
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 7200,
+          "min": 1200,
+          "step": 300,
+          "round": 1,
+          "default": 3600,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  9
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 1200,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 480,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  10
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 900,
+          "min": 180,
+          "step": 60,
+          "round": 1,
+          "default": 300,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  11
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 43200,
+          "min": 14400,
+          "step": 1800,
+          "round": 1,
+          "default": 28800,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  12
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 14400,
+          "min": 3600,
+          "step": 600,
+          "round": 1,
+          "default": 3600,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  13
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 14400,
+          "min": 1800,
+          "step": 300,
+          "round": 1,
+          "default": 3600,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  14
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 3600,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 300,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  15
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5400,
+          "min": 2400,
+          "step": 600,
+          "round": 1,
+          "default": 3600,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  16
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5400,
+          "min": 600,
+          "step": 300,
+          "round": 1,
+          "default": 3600,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  17
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 7200,
+          "min": 1200,
+          "step": 300,
+          "round": 1,
+          "default": 2400,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  18
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 9000,
+          "min": 1800,
+          "step": 300,
+          "round": 1,
+          "default": 7200,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  19
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 3600,
+          "min": 600,
+          "step": 300,
+          "round": 1,
+          "default": 1800,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  20
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 28800,
+          "min": 1800,
+          "step": 1800,
+          "round": 1,
+          "default": 18000,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  21
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 7200,
+          "min": 1800,
+          "step": 300,
+          "round": 1,
+          "default": 3600,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  255
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 35700,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 1200,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "and": [
+              {
+                "source": "selection",
+                "program": [
+                  1
+                ]
+              },
+              {
+                "not": {
+                  "source": "selection",
+                  "temperature": {
+                    "max": 160,
+                    "min": 140
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "dynamicLimitStep": [
+          {
+            "max": 2700,
+            "step": 60
+          },
+          {
+            "max": 5400,
+            "min": 2700,
+            "step": 300
+          },
+          {
+            "max": 10800,
+            "min": 5400,
+            "step": 600
+          },
+          {
+            "max": 34800,
+            "min": 10800,
+            "step": 1200
+          },
+          {
+            "min": 34800,
+            "step": 900
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 7200,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 1200,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "and": [
+              {
+                "source": "selection",
+                "program": [
+                  1
+                ]
+              },
+              {
+                "source": "selection",
+                "temperature": {
+                  "max": 160,
+                  "min": 140
+                }
+              }
+            ]
+          }
+        ],
+        "dynamicLimitStep": [
+          {
+            "max": 2700,
+            "step": 60
+          },
+          {
+            "max": 5400,
+            "min": 2700,
+            "step": 300
+          },
+          {
+            "max": 7200,
+            "min": 5400,
+            "step": 600
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "style": "picker",
+        "feature": "delay_start",
+        "position": 4,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 5
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 160,
+          "min": 100,
+          "step": 10,
+          "round": 1,
+          "default": 160,
+          "roundAlt": 1
+        },
+        "points": {
+          "100": {
+            "label": "100°"
+          },
+          "110": {
+            "label": "110°"
+          },
+          "120": {
+            "label": "120°"
+          },
+          "130": {
+            "label": "130°"
+          },
+          "140": {
+            "label": "140°"
+          },
+          "150": {
+            "label": "150°"
+          },
+          "160": {
+            "label": "160°"
+          }
+        },
+        "feature": "temperature",
+        "position": 6,
+        "step_ticks": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  7
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 85,
+          "min": 48,
+          "step": 1,
+          "round": 1,
+          "default": 75,
+          "roundAlt": 1
+        },
+        "points": {
+          "48": {
+            "label": "48°"
+          },
+          "67": {
+            "label": "67°"
+          },
+          "85": {
+            "label": "85°"
+          }
+        },
+        "feature": "temperature",
+        "position": 6,
+        "step_ticks": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  8
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 170,
+          "min": 150,
+          "step": 10,
+          "round": 1,
+          "default": 160,
+          "roundAlt": 1
+        },
+        "points": {
+          "150": {
+            "label": "150°"
+          },
+          "160": {
+            "label": "160°"
+          },
+          "170": {
+            "label": "170°"
+          }
+        },
+        "feature": "temperature",
+        "position": 6,
+        "step_ticks": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  11
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 106,
+          "min": 102,
+          "step": 1,
+          "round": 1,
+          "default": 102,
+          "roundAlt": 1
+        },
+        "points": {
+          "102": {
+            "label": "102°"
+          },
+          "104": {
+            "label": "104°"
+          },
+          "106": {
+            "label": "106°"
+          }
+        },
+        "feature": "temperature",
+        "position": 6,
+        "step_ticks": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "or": [
+              {
+                "source": "selection",
+                "program": [
+                  14
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 130,
+          "min": 35,
+          "step": 5,
+          "round": 1,
+          "default": 60,
+          "roundAlt": 1
+        },
+        "points": {
+          "35": {
+            "label": "35°"
+          },
+          "70": {
+            "label": "70°"
+          },
+          "100": {
+            "label": "100°"
+          },
+          "130": {
+            "label": "130°"
+          }
+        },
+        "feature": "temperature",
+        "position": 6,
+        "step_ticks": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "and": [
+              {
+                "source": "selection",
+                "program": [
+                  1
+                ]
+              },
+              {
+                "timer": {
+                  "max": 35700,
+                  "min": 7201
+                },
+                "source": "selection"
+              }
+            ]
+          }
+        ],
+        "dynamicLimitStep": [
+          {
+            "max": 110,
+            "step": 5
+          },
+          {
+            "max": 130,
+            "min": 110,
+            "step": 10
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 160,
+          "min": 35,
+          "step": 5,
+          "round": 1,
+          "default": 115,
+          "roundAlt": 1
+        },
+        "points": {
+          "35": {
+            "label": "35°"
+          },
+          "100": {
+            "label": "100°"
+          },
+          "160": {
+            "label": "160°"
+          }
+        },
+        "feature": "temperature",
+        "position": 6,
+        "step_ticks": 2,
+        "visibility": [
+          {
+            "source": "state",
+            "multi_step": 0
+          },
+          {
+            "and": [
+              {
+                "source": "selection",
+                "program": [
+                  1
+                ]
+              },
+              {
+                "not": {
+                  "timer": {
+                    "max": 35700,
+                    "min": 7201
+                  },
+                  "source": "selection"
+                }
+              }
+            ]
+          }
+        ],
+        "dynamicLimitStep": [
+          {
+            "max": 110,
+            "step": 5
+          },
+          {
+            "max": 160,
+            "min": 110,
+            "step": 10
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 7
+      },
+      {
+        "type": "container_head",
+        "position": 8
+      },
+      {
+        "row": "steps",
+        "type": "info",
+        "position": 9
+      },
+      {
+        "type": "container_tail",
+        "position": 10
+      },
+      {
+        "type": "container_head",
+        "position": 11
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "إعدادات",
+          "de-DE": "Einstellungen",
+          "en-US": "Settings",
+          "kk-KZ": "Параметрлер",
+          "ru-RU": "Настройки",
+          "uk-UA": "Налаштування"
+        },
+        "position": 12
+      },
+      {
+        "type": "button",
+        "feature": "program",
+        "position": 13,
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h28v28V0M20.7071,15.507l.2227-1.7227c.8877-.0801,1.585-.8286,1.585-1.7373,0-.9614-.7822-1.7437-1.7412-1.7437-.1338.0034-.2471.0127-.3682.0381-.1191-.21-.2764-.3975-.4629-.5498-.335-.2739-.7549-.4243-1.1836-.4243h-.0039c-.4258,0-.8447.1494-1.1807.4214-.1865.1519-.3447.3398-.4648.5508-.1172-.0249-.2451-.04-.3564-.0361-.9609,0-1.7432.7822-1.7432,1.7437,0,.9048.6914,1.6509,1.5742,1.7363l.2217,1.7236c.0322.2495.2451.436.4961.436h2.9092c.251,0,.4639-.1865.4961-.436ZM19.9972,13.1965l-.2256,1.7466h-2.0303l-.2246-1.7446c-.0186-.1392-.0938-.2646-.209-.3452s-.2578-.1084-.3955-.0791c-.4424.103-.9014-.2622-.9023-.7271,0-.4102.333-.7437.7451-.7437.1748.0059.2627.0361.3779.1045.1357.0801.3037.0938.4492.0312.1465-.0615.2549-.189.293-.3428.0508-.2114.168-.3999.3301-.5312.1572-.1274.3525-.1978.5498-.1978h.0039c.1982,0,.3936.0703.5518.1992.1621.1323.2793.3213.3291.5312.0361.1553.1455.2842.292.3462.1494.0615.3164.0508.4521-.0327.1172-.0708.25-.1079.3848-.1079h.0029c.4102,0,.7432.3335.7432.7437,0,.4688-.4824.8267-.9092.7261-.1338-.0303-.2812-.0039-.3975.0767s-.1924.2065-.2109.3467ZM12.4229,10.194c0,.2764-.2236.5-.5.5h-5.5361c-.2764,0-.5-.2236-.5-.5s.2236-.5.5-.5h5.5361c.2764,0,.5.2236.5.5ZM12.4229,12.2697c0,.2764-.2236.5-.5.5h-5.5361c-.2764,0-.5-.2236-.5-.5s.2236-.5.5-.5h5.5361c.2764,0,.5.2236.5.5ZM12.4229,14.3459c0,.2764-.2236.5-.5.5h-5.5361c-.2764,0-.5-.2236-.5-.5s.2236-.5.5-.5h5.5361c.2764,0,.5.2236.5.5ZM12.4229,16.422c0,.2764-.2236.5-.5.5h-5.5361c-.2764,0-.5-.2236-.5-.5s.2236-.5.5-.5h5.5361c.2764,0,.5.2236.5.5ZM10.7062,20.9206c0,.2764-.2236.5-.5.5H2.5001c-.2764,0-.5-.2236-.5-.5v-11.7988c0-.2764.2236-.5.5-.5s.5.2236.5.5v11.2988h7.2061c.2764,0,.5.2236.5.5ZM23.0353,19.7448c.1895.0283.333-.0312.4902-.0962s.2969-.1582.415-.2759c.1191-.1182.2119-.2578.2754-.4116.0664-.1548.0996-.3208.0996-.4932V7.8561c0-.1719-.0332-.3379-.0977-.4888-.0654-.1567-.1582-.2964-.2764-.4146-.1201-.1201-.2607-.2134-.416-.2769-.1572-.0649-.293-.0845-.4883-.0962h-4.6113c-1.2227,0-2.4141.2393-3.543.7114l-.5986.2515c-.105.0439-.2.105-.2886.1736-.0879-.0682-.1816-.1293-.2856-.1736l-.6016-.252c-1.1289-.4717-2.3203-.7109-3.543-.7109h-4.6113c-.3398,0-.6602.1323-.9043.374-.2402.2412-.3721.5615-.3721.9023v10.6118c0,.3418.1328.6621.374.9038.2422.2407.5625.373.9023.373h4.6182c1.0889,0,2.1514.2134,3.1553.6338l.0059.002c.1523.062.3164.0938.4834.0938.043,0,.0859-.0024.1289-.0068.207-.0215.4082-.0942.5801-.21.0251-.0168.0444-.0403.0681-.0588.0256.02.0466.0453.0735.0632.1748.1167.377.189.585.209.042.0039.083.0063.125.0063.168,0,.3359-.0337.4922-.0986,1.0049-.4204,2.0674-.6338,3.1562-.6338h4.6094ZM13.4923,19.1955c0,.0474-.0117.0918-.0342.1338-.0205.0386-.0518.0728-.0889.0981-.0381.0249-.082.041-.125.0454-.0498.0039-.0928-.002-.1338-.0186-1.127-.4707-2.3164-.7095-3.5381-.7095h-4.6182c-.0742,0-.1436-.0293-.1963-.0811-.0518-.0518-.0801-.1211-.0801-.1958V7.8561c0-.0742.0283-.144.0791-.1948.0527-.0527.123-.0815.1973-.0815h4.6113c1.0889,0,2.1514.2134,3.1562.6338l.5996.251c.0508.0215.0938.0571.123.1011.0312.0474.0479.1006.0479.1548v10.4751ZM14.8839,19.4557c-.043.0176-.0889.0234-.1338.02-.0449-.0044-.0889-.02-.127-.0459-.0391-.0254-.0703-.0601-.0898-.0967-.0225-.042-.0342-.0884-.0342-.1338h-.0068v-10.479h.0068c0-.0547.0156-.1079.0459-.1528.0303-.0454.0732-.0806.125-.1025l.5996-.2515c1.0049-.4204,2.0674-.6338,3.1562-.6338h4.6133c.0264-.0068.0703.0063.1074.0215.0332.0137.0625.0332.0879.0586s.0449.0557.0615.0942c.0127.0312.0195.0654.0195.1021v10.6118c0,.0371-.0068.0713-.0215.1064-.0146.0347-.0342.0645-.0596.0898s-.0557.0459-.0898.0596c-.0342.0142-.0684.021-.1064.021h-4.6123c-1.2227,0-2.4141.2393-3.542.7109ZM26.0001,9.1218v11.7988c0,.2764-.2236.5-.5.5h-7.707c-.2764,0-.5-.2236-.5-.5s.2236-.5.5-.5h7.207v-11.2988c0-.2764.2236-.5.5-.5s.5.2236.5.5Z",
+        "type": "button",
+        "feature": "recipe",
+        "position": 13,
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h28v28V0M23.0049,18.924c0,.2764-.2236.5-.5.5h-2.1855v2.1855c0,.2764-.2236.5-.5.5s-.5-.2236-.5-.5v-2.1855h-2.1865c-.2764,0-.5-.2236-.5-.5s.2236-.5.5-.5h2.1865v-2.186c0-.2764.2236-.5.5-.5s.5.2236.5.5v2.186h2.1855c.2764,0,.5.2236.5.5ZM13.5527,18.424H5.4951c-.2764,0-.5.2236-.5.5s.2236.5.5.5h8.0576c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5ZM22.5049,12.1569H5.4951c-.2764,0-.5.2236-.5.5s.2236.5.5.5h17.0098c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5ZM5.4951,6.8903h17.0098c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5H5.4951c-.2764,0-.5.2236-.5.5s.2236.5.5.5Z",
+        "type": "button",
+        "layout": "userPresets",
+        "position": 13,
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "keep_warm",
+        "position": 13,
+        "precondition": [
+          {
+            "not": {
+              "or": [
+                {
+                  "program": [
+                    12
+                  ]
+                },
+                {
+                  "program": [
+                    19
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "pendingAction": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 13,
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "volume": 0
+        },
+        "feature": "volume",
+        "position": 13,
+        "condition": [
+          {
+            "source": "state",
+            "volume": 0
+          }
+        ],
+        "action_off": {
+          "volume": 1
+        },
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 14
+      }
+    ],
+    "manual.shortcuts": [
+      {
+        "type": "button",
+        "feature": "recipe",
+        "position": 0,
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "وصفتي بلس",
+          "de-DE": "Mein Rezept plus",
+          "en-US": "My recipe Plus",
+          "kk-KZ": "Менің рецептім плюс",
+          "ru-RU": "Мой рецепт плюс",
+          "uk-UA": "Мій рецепт Плюс"
+        },
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "الإحماء",
+          "de-DE": "sich warm laufen",
+          "en-US": "Reheat",
+          "kk-KZ": "Ысыту",
+          "ru-RU": "Разогрев",
+          "uk-UA": "Розігрів"
+        },
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "منتجات المخبز",
+          "de-DE": "Bäckereiprodukte",
+          "en-US": "Cake",
+          "kk-KZ": "Нан-тоқаш өнімдері",
+          "ru-RU": "Выпечка",
+          "uk-UA": "Торт"
+        },
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "multi_step": 0
+          }
+        ]
+      }
+    ],
+    "userPresets.list": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Custom modes",
+          "ru-RU": "Персональные режимы"
+        },
+        "position": 0
+      },
+      {
+        "row": "userPresets",
+        "type": "info",
+        "position": 1
+      },
+      {
+        "row": "savePreset",
+        "type": "button",
+        "title": {
+          "en-US": "Add",
+          "ru-RU": "Добавить"
+        },
+        "position": 2
+      }
+    ]
+  },
+  "limits": {
+    "timer": {
+      "max": 43200,
+      "min": 180,
+      "step": 60,
+      "round": 1,
+      "default": 7200,
+      "round_alt": 1
+    },
+    "volume": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "keep_warm": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 1,
+      "round_alt": 1
+    },
+    "child_lock": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "multi_step": {
+      "max": 9,
+      "min": 1,
+      "step": 1,
+      "round": 1,
+      "default": 1,
+      "round_alt": 1
+    },
+    "delay_start": {
+      "max": 64800,
+      "min": 0,
+      "step": 60,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "temperature": {
+      "max": 170,
+      "min": 35,
+      "step": 1,
+      "round": 1,
+      "default": 100,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "icons": {
+      "volume": "M0.0,0.0h29.0v30.0V0.0M4.62159 3.75354C4.23145 3.3634 3.60124 3.3634 3.21111 3.75354C2.82097 4.14367 2.82097 4.77389 3.21111 5.16402L8.04277 10.0057L8.00276 10.0457H1.01035C0.450157 10.0457 0 10.4959 0 11.0561V19.0388C0 19.599 0.450157 20.0492 1.01035 20.0492H8.00276L14.3449 25.6011C14.9952 26.1713 16.0055 25.7111 16.0055 24.8508V17.9684L18.1162 20.0792C17.5561 20.5293 17.1059 20.8194 16.9959 20.8894C16.5257 21.1795 16.3756 21.7898 16.6557 22.2599C16.8458 22.57 17.1759 22.7401 17.516 22.7401C17.6961 22.7401 17.8662 22.6901 18.0362 22.6C18.2663 22.46 18.8565 22.0799 19.5467 21.4997L22.4677 24.4207C20.9972 25.6811 19.2366 26.6214 17.266 27.1316C16.7258 27.2716 16.4057 27.8118 16.5457 28.352C16.6657 28.8022 17.0659 29.1023 17.516 29.1023C17.5961 29.1023 17.6861 29.0923 17.7661 29.0723C20.0869 28.4721 22.1676 27.3417 23.8782 25.8412L25.3888 27.3517C25.5888 27.5517 25.8389 27.6418 26.099 27.6418C26.3591 27.6418 26.6092 27.5417 26.8092 27.3517C27.1994 26.9615 27.1994 26.3313 26.8092 25.9412L4.62159 3.75354ZM16.0055 5.25428C16.0055 4.39398 14.9952 3.93382 14.3449 4.50402L11.1138 7.33499L16.0055 12.2267V5.25428ZM17.2559 1.97354C22.9979 3.45405 27.0093 8.62583 27.0093 14.5479C27.0093 17.1288 26.249 19.5696 24.9086 21.6203L26.3391 23.0508C28.0296 20.61 29 17.669 29 14.5479C29 7.71552 24.3684 1.74346 17.7461 0.0328684C17.2059 -0.10718 16.6657 0.21293 16.5257 0.753117C16.3956 1.2933 16.7157 1.83349 17.2559 1.97354ZM17.0659 8.25516C19.4967 9.44557 21.0073 11.8564 21.0073 14.5473C21.0073 15.2476 20.9072 15.9278 20.7072 16.588C20.6471 16.7881 20.5571 16.9782 20.4671 17.1682L21.9676 18.6687C22.2377 18.2086 22.4578 17.7084 22.6278 17.1782C22.8879 16.3279 23.018 15.4476 23.018 14.5473C23.018 11.0861 21.0773 7.98507 17.9562 6.46454C17.456 6.22446 16.8658 6.42453 16.6158 6.9247C16.3657 7.42487 16.5657 8.01508 17.0659 8.25516Z",
+      "keep_warm": "M0,0h28v28V0M6.866,10.9567c0,.2764-.2236.5-.5.5h-1.7393c-.2764,0-.5-.2236-.5-.5s.2236-.5.5-.5h1.7393c.2764,0,.5.2236.5.5ZM4.6267,6.2389h1.7393c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5h-1.7393c-.2764,0-.5.2236-.5.5s.2236.5.5.5ZM6.866,13.5651c0-.2764-.2236-.5-.5-.5H2.0193c-.2764,0-.5.2236-.5.5s.2236.5.5.5h4.3467c.2764,0,.5-.2236.5-.5ZM6.366,15.674h-1.7393c-.2764,0-.5.2236-.5.5s.2236.5.5.5h1.7393c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5ZM2.0193,8.8478h4.3467c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5H2.0193c-.2764,0-.5.2236-.5.5s.2236.5.5.5ZM14.4597,19.2033c.2852.7949.3066,1.6777.0605,2.4863-.2451.8062-.7559,1.5278-1.4375,2.0317-.6807.5024-1.5225.7788-2.3691.7788-.8594,0-1.6787-.2695-2.3682-.7788-.6895-.5078-1.1875-1.2104-1.4395-2.0312-.2461-.8105-.2236-1.6934.0625-2.4868.2549-.708.7158-1.3379,1.3125-1.7988V5.923c0-.647.2529-1.2559.7139-1.7144.918-.9141,2.5195-.9141,3.4375,0,.4609.4585.7139,1.0674.7139,1.7144v11.4814c.5967.4604,1.0576,1.0903,1.3135,1.7988ZM13.5183,19.5417c-.2139-.5938-.6221-1.1138-1.1494-1.4644-.1387-.0928-.2227-.249-.2227-.4165V5.923c0-.3794-.1484-.7363-.4189-1.0054s-.6309-.4175-1.0137-.4175-.7432.1484-1.0137.4175-.4189.626-.4189,1.0054v11.7378c0,.1675-.084.3237-.2227.4165-.5273.3506-.9355.8706-1.1484,1.4644-.2139.5928-.2305,1.252-.0469,1.8569.1875.6123.5596,1.1377,1.0762,1.5181,1.0254.7578,2.5225.7588,3.5498,0,.5098-.3765.8916-.916,1.0742-1.5186.1846-.604.168-1.2632-.0449-1.8564ZM22.8611,13.6496c-.2393.0117-.4277.1431-.4902.3599-.042.1426-.166.4731-.4199.4731h-.0029c-.167-.0015-.4238-.2529-.5107-.6001-.1279-.5132-.2871-1.1519-1.0498-1.626-.1699-.1055-.3857-.0996-.5508.0151-.1641.1147-.2432.3164-.2021.5122.0762.3618-.0088.6738-.1074,1.0356-.1719.6304-.3857,1.415.3672,2.436.0977.1333.249.2036.4023.2036.1035,0,.207-.0317.2969-.0972.2217-.1641.2695-.4771.1055-.6992-.4463-.6069-.3701-.979-.2256-1.5132v.001c.1885.7529.8184,1.3257,1.4648,1.332.0361-.0034.1084-.0024.1611-.0083-.04.0459-.082.0913-.126.1367-.1924.1978-.1885.5146.0098.707.1982.1919.5146.1875.707-.0107.4766-.4902.9258-1.1445.6455-2.2778-.0537-.2192-.249-.375-.4746-.3799ZM24.3093,9.2936c-.1992-.0986-.4414-.0527-.5898.1118-.1504.1646-.1738.4082-.0576.5981.0957.1558.1328.3389.1035.5171-.0283.1792-.1221.3462-.2754.4814-.0957.0874-.5586.2139-.9072.0757-.1611-.063-.2314-.1572-.2422-.3228-.0176-.2661.0566-.3633.2559-.6235.2598-.3389.6152-.8032.7949-1.792.3398-1.8794-1.2363-3.6733-2.9561-4.3218-.2305-.0864-.4834.0054-.6074.2139-.124.21-.0781.4775.1074.6353.2891.2456.4355.541.4473.9023.0254.7827-.5801,1.8101-1.7031,2.8926-1.3281,1.2827-2.3779,2.2959-2.3779,4.0957,0,1.2617,1.0986,3.0674,2.2178,3.646.0732.0376.1514.0557.2295.0557.1807,0,.3555-.0986.4443-.2705.127-.2451.0303-.5469-.2148-.6738-.7168-.3701-1.6768-1.8013-1.6768-2.7573,0-1.314.7109-2.061,2.0723-3.376,1.332-1.2837,2.0254-2.5283,2.0098-3.603.6797.627,1.1846,1.4912,1.0234,2.3828-.1357.7505-.3848,1.0757-.6045,1.3623-.2354.3076-.5029.6562-.46,1.2988.0381.5493.3555.9819.873,1.1855.6328.252,1.5293.124,1.9443-.2642.2686-.2349.46-.5415.5527-.877.4424.5229.7686,1.2637.7686,2.1572,0,.8335-.4902,1.6709-1.499,2.5601-.208.1826-.2275.4985-.0449.7056.1816.207.498.2275.7051.0444,1.2373-1.0898,1.8389-2.1724,1.8389-3.3101,0-1.6172-.8525-3.0815-2.1719-3.7305Z",
+      "child_lock": "M0,0h28v28V0M18.915,9.7067c.1528-.6528.1829-1.3345.0708-1.9956-.1328-.7783-.4502-1.5234-.917-2.1562-.4688-.6353-1.0879-1.1577-1.79-1.5117-1.4062-.71-3.1533-.71-4.5576,0-.7031.354-1.3223.8765-1.791,1.5117-.4668.6328-.7842,1.3779-.917,2.1567-.1113.6595-.0811,1.3411.0718,1.9949-2.0017,1.5007-3.3052,3.8847-3.3052,6.5735,0,4.5327,3.6875,8.2202,8.2197,8.2202s8.2207-3.6875,8.2207-8.2202c0-2.6887-1.3032-5.0725-3.3052-6.5732ZM9.9994,7.8791c.1064-.6245.3604-1.2231.7354-1.7305.376-.5093.873-.9287,1.4365-1.2129,1.127-.5703,2.5283-.5703,3.6572,0,.5625.2842,1.0596.7036,1.4355,1.2129.375.5073.6289,1.106.7354,1.73.0686.4048.0515.8167-.0039,1.2238-1.1841-.6619-2.5457-1.0427-3.9961-1.0427s-2.8115.3809-3.9956,1.0428c-.0559-.4075-.073-.8193-.0044-1.2234ZM13.9994,23.5002c-3.9814,0-7.2197-3.2388-7.2197-7.2202s3.2383-7.2202,7.2197-7.2202,7.2207,3.2388,7.2207,7.2202-3.2393,7.2202-7.2207,7.2202ZM18.8432,17.8493c-.333,1.021-.9678,1.894-1.8369,2.5244-.8701.6304-1.8965.9639-2.9697.9639-1.0742,0-2.1006-.3335-2.9697-.9639-.8691-.6309-1.5049-1.5039-1.8379-2.5244-.085-.2622.0586-.5444.3203-.6304.2676-.085.5449.0586.6309.3208.2666.8184.7764,1.5186,1.4746,2.0244,1.3916,1.0107,3.3691,1.0127,4.7637,0,.6973-.5054,1.207-1.2056,1.4736-2.0244.0859-.2622.3652-.4058.6309-.3208.2617.0859.4053.3682.3203.6304ZM15.5165,14.0088c0-.8375.679-1.5165,1.5161-1.5165.8379,0,1.5168.679,1.5168,1.5165s-.679,1.5164-1.5168,1.5164c-.8372,0-1.5161-.6789-1.5161-1.5164ZM9.4506,14.0088c0-.8375.679-1.5165,1.5168-1.5165.8372,0,1.5161.679,1.5161,1.5165s-.679,1.5164-1.5161,1.5164c-.8379,0-1.5168-.6789-1.5168-1.5164Z"
+    },
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "PMC-0597 WIFI",
+          "manufacturer": "polaris"
+        },
+        "type": "devices.types.cooking.multicooker",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "steps": [
+                {
+                  "timer": 300,
+                  "program": [
+                    1
+                  ],
+                  "temperature": 100
+                }
+              ]
+            },
+            "actionOff": {
+              "steps": []
+            },
+            "condition": {
+              "not": {
+                "multi_step": 0
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "feature": "keep_warm",
+            "instance": "keep_warm",
+            "retrievable": true
+          },
+          {
+            "type": "slider",
+            "limit": {
+              "max": 160,
+              "min": 35,
+              "step": 5,
+              "round": 1,
+              "default": 100,
+              "roundAlt": 1
+            },
+            "action": {
+              "steps": [
+                {
+                  "timer": 300,
+                  "program": [
+                    1
+                  ],
+                  "temperature": 100
+                }
+              ]
+            },
+            "feature": "temperature",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "aspic",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 21600,
+                      "program": [
+                        5
+                      ],
+                      "temperature": 93
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "baking",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 3600,
+                      "program": [
+                        3
+                      ],
+                      "temperature": 130
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "cereals",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 2400,
+                      "program": [
+                        18
+                      ],
+                      "temperature": 115
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "frying",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 300,
+                      "program": [
+                        7
+                      ],
+                      "temperature": 160
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "milk_porridge",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 3600,
+                      "program": [
+                        17
+                      ],
+                      "temperature": 95
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "multicooker",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 300,
+                      "program": [
+                        1
+                      ],
+                      "temperature": 100
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "slow_cook",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 18000,
+                      "program": [
+                        21
+                      ],
+                      "temperature": 45
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "soup",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 3600,
+                      "program": [
+                        4
+                      ],
+                      "temperature": 97
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "stewing",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 7200,
+                      "program": [
+                        6
+                      ],
+                      "temperature": 93
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "pilaf",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 3600,
+                      "program": [
+                        9
+                      ],
+                      "temperature": 120
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "bread",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 7200,
+                      "program": [
+                        19
+                      ],
+                      "temperature": 35
+                    },
+                    {
+                      "timer": 3600,
+                      "program": [
+                        255
+                      ],
+                      "temperature": 160
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "cheesecake",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 3600,
+                      "program": [
+                        16
+                      ],
+                      "temperature": 120
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "sauce",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 1800,
+                      "program": [
+                        20
+                      ],
+                      "temperature": 98
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "deep_fryer",
+                "action": {
+                  "steps": [
+                    {
+                      "timer": 300,
+                      "program": [
+                        11
+                      ],
+                      "temperature": 150
+                    }
+                  ]
+                }
+              }
+            ],
+            "instance": "program",
+            "retrievable": false
+          },
+          {
+            "type": "switch",
+            "feature": "child_lock",
+            "instance": "controls_locked",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "instance": "input_source",
+            "retrievable": false
+          },
+          {
+            "type": "switch",
+            "action": {
+              "volume": 0
+            },
+            "instance": "mute",
+            "actionOff": {
+              "volume": 1
+            },
+            "condition": {
+              "volume": 0
+            },
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "hidden": false,
+    "barcode": "5055539149626",
+    "shortcuts": [
+      {
+        "values": {
+          "recipe": 1
+        }
+      },
+      {
+        "program": [
+          18
+        ]
+      },
+      {
+        "program": [
+          13
+        ]
+      },
+      {
+        "program": [
+          4
+        ]
+      }
+    ],
+    "invertSound": true,
+    "userPresets": true,
+    "adminPresets": true,
+    "hotspot_ssid": "PMC-0597",
+    "modeFunction": true,
+    "program_data": {
+      "0": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "preheat_state",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "voiceControl": {
+      "intents": {
+        "status": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                },
+                "off": {}
+              }
+            }
+          }
+        },
+        "program": {
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          },
+          "values": {
+            "timer": {},
+            "program": {
+              "enum_values": {
+                "program_fry": {
+                  "action": {
+                    "program": [
+                      7
+                    ]
+                  }
+                },
+                "program_jam": {
+                  "action": {
+                    "program": [
+                      14
+                    ]
+                  }
+                },
+                "program_cake": {
+                  "action": {
+                    "program": [
+                      3
+                    ]
+                  }
+                },
+                "program_soup": {
+                  "query": {
+                    "timer": {}
+                  },
+                  "action": {
+                    "program": [
+                      4
+                    ]
+                  }
+                },
+                "program_stew": {
+                  "action": {
+                    "program": [
+                      6
+                    ]
+                  }
+                },
+                "program_aspic": {
+                  "action": {
+                    "program": [
+                      5
+                    ]
+                  }
+                },
+                "program_beans": {
+                  "action": {
+                    "program": [
+                      13
+                    ]
+                  }
+                },
+                "program_bread": {
+                  "action": {
+                    "program": [
+                      19
+                    ]
+                  }
+                },
+                "program_pasta": {
+                  "action": {
+                    "program": [
+                      10
+                    ]
+                  }
+                },
+                "program_pilaf": {
+                  "action": {
+                    "program": [
+                      9
+                    ]
+                  }
+                },
+                "program_saoce": {
+                  "action": {
+                    "program": [
+                      20
+                    ]
+                  }
+                },
+                "program_steam": {
+                  "action": {
+                    "program": [
+                      15
+                    ]
+                  }
+                },
+                "program_reheat": {
+                  "action": {
+                    "program": [
+                      2
+                    ]
+                  }
+                },
+                "program_yogurt": {
+                  "action": {
+                    "program": [
+                      12
+                    ]
+                  }
+                },
+                "program_slow_cook": {
+                  "action": {
+                    "program": [
+                      21
+                    ]
+                  }
+                },
+                "program_sous_vide": {
+                  "action": {
+                    "program": [
+                      8
+                    ]
+                  }
+                },
+                "program_cheesecake": {
+                  "action": {
+                    "program": [
+                      16
+                    ]
+                  }
+                },
+                "program_deep_drying": {
+                  "action": {
+                    "program": [
+                      11
+                    ]
+                  }
+                },
+                "program_soaked_rice": {
+                  "action": {
+                    "program": [
+                      18
+                    ]
+                  }
+                },
+                "program_milk_porridge": {
+                  "action": {
+                    "program": [
+                      17
+                    ]
+                  }
+                },
+                "program_my_recipe_plus": {
+                  "query": {
+                    "timer": {},
+                    "temperature": {}
+                  },
+                  "action": {
+                    "program": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            "temperature": {}
+          }
+        },
+        "rollcall": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "device_on": {
+          "action": {
+            "program": [
+              1
+            ]
+          },
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          }
+        },
+        "greetings": {},
+        "volume.on": {
+          "action": {
+            "volume": 1
+          }
+        },
+        "device_off": {
+          "action": {
+            "program": [
+              0
+            ]
+          }
+        },
+        "volume.off": {
+          "action": {
+            "volume": 0
+          }
+        },
+        "status.full": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "timer": {
+              "items": {
+                "value": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                },
+                "off": {}
+              }
+            },
+            "child_lock": {}
+          }
+        },
+        "keep_warm.on": {
+          "action": {
+            "keep_warm": 1
+          }
+        },
+        "child_lock.on": {
+          "action": {
+            "child_lock": 1
+          }
+        },
+        "keep_warm.off": {
+          "action": {
+            "keep_warm": 0
+          }
+        },
+        "child_lock.off": {
+          "action": {
+            "child_lock": 0
+          }
+        }
+      },
+      "betaIntents": {
+        "status": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                },
+                "off": {}
+              }
+            }
+          }
+        },
+        "program": {
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          },
+          "values": {
+            "timer": {},
+            "program": {
+              "enum_values": {
+                "program_fry": {
+                  "action": {
+                    "program": [
+                      7
+                    ]
+                  }
+                },
+                "program_jam": {
+                  "action": {
+                    "program": [
+                      14
+                    ]
+                  }
+                },
+                "program_cake": {
+                  "action": {
+                    "program": [
+                      3
+                    ]
+                  }
+                },
+                "program_soup": {
+                  "query": {
+                    "timer": {}
+                  },
+                  "action": {
+                    "program": [
+                      4
+                    ]
+                  }
+                },
+                "program_stew": {
+                  "action": {
+                    "program": [
+                      6
+                    ]
+                  }
+                },
+                "program_aspic": {
+                  "action": {
+                    "program": [
+                      5
+                    ]
+                  }
+                },
+                "program_beans": {
+                  "action": {
+                    "program": [
+                      13
+                    ]
+                  }
+                },
+                "program_bread": {
+                  "action": {
+                    "program": [
+                      19
+                    ]
+                  }
+                },
+                "program_pasta": {
+                  "action": {
+                    "program": [
+                      10
+                    ]
+                  }
+                },
+                "program_pilaf": {
+                  "action": {
+                    "program": [
+                      9
+                    ]
+                  }
+                },
+                "program_saoce": {
+                  "action": {
+                    "program": [
+                      20
+                    ]
+                  }
+                },
+                "program_steam": {
+                  "action": {
+                    "program": [
+                      15
+                    ]
+                  }
+                },
+                "program_reheat": {
+                  "action": {
+                    "program": [
+                      2
+                    ]
+                  }
+                },
+                "program_yogurt": {
+                  "action": {
+                    "program": [
+                      12
+                    ]
+                  }
+                },
+                "program_slow_cook": {
+                  "action": {
+                    "program": [
+                      21
+                    ]
+                  }
+                },
+                "program_sous_vide": {
+                  "action": {
+                    "program": [
+                      8
+                    ]
+                  }
+                },
+                "program_cheesecake": {
+                  "action": {
+                    "program": [
+                      16
+                    ]
+                  }
+                },
+                "program_deep_drying": {
+                  "action": {
+                    "program": [
+                      11
+                    ]
+                  }
+                },
+                "program_soaked_rice": {
+                  "action": {
+                    "program": [
+                      18
+                    ]
+                  }
+                },
+                "program_milk_porridge": {
+                  "action": {
+                    "program": [
+                      17
+                    ]
+                  }
+                },
+                "program_my_recipe_plus": {
+                  "query": {
+                    "timer": {},
+                    "temperature": {}
+                  },
+                  "action": {
+                    "program": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            "temperature": {}
+          }
+        },
+        "rollcall": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "device_on": {
+          "action": {
+            "program": [
+              1
+            ]
+          },
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          }
+        },
+        "greetings": {},
+        "volume.on": {
+          "action": {
+            "volume": 1
+          }
+        },
+        "device_off": {
+          "action": {
+            "program": [
+              0
+            ]
+          }
+        },
+        "volume.off": {
+          "action": {
+            "volume": 0
+          }
+        },
+        "status.full": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "timer": {
+              "items": {
+                "value": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                },
+                "off": {}
+              }
+            },
+            "child_lock": {}
+          }
+        },
+        "keep_warm.on": {
+          "action": {
+            "keep_warm": 1
+          }
+        },
+        "child_lock.on": {
+          "action": {
+            "child_lock": 1
+          }
+        },
+        "keep_warm.off": {
+          "action": {
+            "keep_warm": 0
+          }
+        },
+        "child_lock.off": {
+          "action": {
+            "child_lock": 0
+          }
+        }
+      }
+    },
+    "defaultProgram": [
+      1
+    ],
+    "max_steps_time": 57600,
+    "multiStepFields": [
+      "temperature",
+      "timer"
+    ],
+    "openMqttSupport": true,
+    "shareblePresets": true,
+    "manualInfoFields": [
+      "program",
+      "temperature",
+      "timer"
+    ],
+    "mqttFeatureNames": {
+      "volume": "sound"
+    },
+    "open_mqtt_support": true,
+    "excludeScheduleFeatures": [
+      "keep_warm"
+    ],
+    "keepWarmMinimalTemperature": 75
+  },
+  "vendor": "polaris",
+  "presets": [
+    {
+      "icon": "M0,0h20v20V0M19.4,7.5h-1.9V5.6c0-0.3-0.3-0.6-0.6-0.6H3.1C2.8,5,2.5,5.3,2.5,5.6v1.9H0.6C0.3,7.5,0,7.8,0,8.1 s0.3,0.6,0.6,0.6h1.9v7.5c0,1.4,1.1,2.5,2.5,2.5h10c1.4,0,2.5-1.1,2.5-2.5V8.8h1.9c0.3,0,0.6-0.3,0.6-0.6S19.7,7.5,19.4,7.5z M16.2,16.2c0,0.7-0.6,1.2-1.2,1.2H5c-0.7,0-1.2-0.6-1.2-1.2v-10h12.5V16.2z M3.8,3.1c0-0.3,0.3-0.6,0.6-0.6h5V1.9 c0-0.3,0.3-0.6,0.6-0.6s0.6,0.3,0.6,0.6v0.6h5c0.3,0,0.6,0.3,0.6,0.6S16,3.8,15.6,3.8H4.4C4,3.8,3.8,3.5,3.8,3.1z M12.7,11.2 c0.8-1.1,0.8-2.6,0-3.6c0,0,0,0,0-0.1h1.4c0.7,1.4,0.5,3.1-0.4,4.4c-0.8,1.1-0.8,2.6,0,3.6c0.2,0.2,0.3,0.5,0.4,0.7h-1.5 C11.6,14.7,11.6,12.7,12.7,11.2z M9.6,11.2c0.8-1.1,0.8-2.6,0-3.6c0,0,0,0,0-0.1h1.4c0.7,1.4,0.5,3.1-0.4,4.4 c-0.8,1.1-0.8,2.6,0,3.6c0.2,0.2,0.3,0.5,0.4,0.7H9.5C8.5,14.7,8.5,12.7,9.6,11.2z M6.4,11.2c0.8-1.1,0.8-2.6,0-3.6c0,0,0,0,0-0.1 h1.4c0.7,1.4,0.5,3.1-0.4,4.4c-0.8,1.1-0.8,2.6,0,3.6c0.2,0.2,0.3,0.5,0.4,0.7H6.4C5.4,14.7,5.4,12.7,6.4,11.2z",
+      "name": {
+        "de-DE": "Steam",
+        "en-US": "Steam",
+        "kk-KZ": "Steam",
+        "ru-RU": "Варка на пару",
+        "uk-UA": "Приготування на пару"
+      },
+      "steps": [
+        {
+          "timer": 3600,
+          "program": [
+            1
+          ],
+          "temperature": 95
+        }
+      ],
+      "keep_warm": 1
+    }
+  ],
+  "features": [
+    "program",
+    "temperature",
+    "timer",
+    "multi_step",
+    "delay_start",
+    "recipe",
+    "keep_warm",
+    "demo",
+    "child_lock",
+    "volume"
+  ],
+  "messages": {
+    "diag": {
+      "ar-AE": "اضغط مع الاستمرار على الزرين \" + \" و \" - \" على اللوحة حتى يصدر صوت صفير واحد. انتظر 10 ثانية ، وسوف مؤشر واي فاي تبدأ وامض ببطء.",
+      "de-DE": "Halten Sie die Tasten \"+\" und \"-\" auf dem Bedienfeld gedrückt, bis ein Piepton ertönt. Warten Sie 10 Sekunden, und die WLAN-Anzeige beginnt langsam zu blinken.",
+      "en-US": "Hold down the \"+\" and \"-\" buttons on the panel until one beep sounds. Wait 10 seconds, and the Wi-Fi indicator will start blinking slowly.",
+      "kk-KZ": "Панельдегі \"+\" және \"-\" түймелерін бір дыбыстық сигнал шыққанша басып тұрыңыз. 10 секунд күтіңіз, Сонда Wi-Fi индикаторы баяу жыпылықтай бастайды.",
+      "ru-RU": "Зажмите и удерживайте кнопки \"+\" и \"-\" на панели до одного звукового сигнала. Подождите 10 секунд, индикатор Wi-Fi начнет медленно мигать."
+    },
+    "pair": {
+      "ar-AE": "اضغط باستمرار على الزرين \" + \" و \" - \" على اللوحة حتى يصدر صوت صفير واحد ، وبعد ذلك سيبدأ مؤشر واي فاي في الوميض بسرعة.",
+      "de-DE": "Halten Sie die Tasten \"+\" und \"-\" auf dem Bedienfeld gedrückt, bis ein Piepton ertönt, wonach die WLAN-Anzeige schnell zu blinken beginnt.",
+      "en-US": "Hold down the \"+\" and \"-\" buttons on the panel until one beep sounds, after which the Wi-Fi indicator will start flashing rapidly.",
+      "kk-KZ": "Панельдегі \"+\" және \"-\" түймелерін бір дыбыстық сигнал шыққанша басып тұрыңыз, Содан кейін Wi-Fi индикаторы жылдам жыпылықтай бастайды. ",
+      "ru-RU": "Зажмите и удерживайте кнопки \"+\" и \"-\" на панели до одного звукового сигнала, после чего индикатор Wi-Fi начнет быстро мигать.",
+      "uk-UA": "Утримуйте кнопки \" + \" і \" - \" на панелі, поки не пролунає один звуковий сигнал, після чого індикатор Wi-Fi почне швидко блимати."
+    },
+    "reset": {
+      "ar-AE": "اضغط باستمرار على زري \" + \" و \" - \" على اللوحة لمدة تصل إلى ثلاثة أصوات تنبيه ، وبعد ذلك سيخرج مؤشر واي فاي.",
+      "de-DE": "Halten Sie die Tasten \"+\" und \"-\" auf dem Bedienfeld bis zu drei Pieptöne lang gedrückt, danach erlischt die WLAN-Anzeige.",
+      "en-US": "Hold down the \"+\" and \"-\" buttons on the panel for up to three beeps, after which the Wi-Fi indicator will go out.",
+      "kk-KZ": "Панельдегі \"+\" және \"-\" түймелерін үш дыбыстық сигналға дейін басып тұрыңыз, Содан кейін Wi-Fi индикаторы сөнеді.",
+      "ru-RU": "Зажмите и удерживайте кнопки \"+\" и \"-\" на панели до трех звуковых сигналов, после чего индикатор Wi-Fi погаснет.",
+      "uk-UA": "Утримуйте кнопки \" + \" і \" - \" на панелі до трьох звукових сигналів, після чого індикатор Wi-Fi згасне."
+    },
+    "error.1": {
+      "en-US": "Temperature sensor failure",
+      "kk-KZ": "Жылу датчигінің қатесі",
+      "ru-RU": "Ошибка термодатчика",
+      "uk-UA": "Несправність датчика температури"
+    },
+    "error.2": {
+      "en-US": "Temperature sensor failure",
+      "kk-KZ": "Жылу датчигінің қатесі",
+      "ru-RU": "Ошибка термодатчика",
+      "uk-UA": "Несправність датчика температури"
+    },
+    "error.3": {
+      "en-US": "Temperature sensor failure",
+      "kk-KZ": "Жылу датчигінің қатесі",
+      "ru-RU": "Ошибка термодатчика",
+      "uk-UA": "Несправність датчика температури"
+    },
+    "error.4": {
+      "en-US": "Temperature sensor failure",
+      "kk-KZ": "Жылу датчигінің қатесі",
+      "ru-RU": "Ошибка термодатчика",
+      "uk-UA": "Несправність датчика температури"
+    },
+    "error.6": {
+      "de-DE": "Schüssel fehlt",
+      "en-US": "Cup is not present",
+      "kk-KZ": "Тостаған орнатылмаған",
+      "ru-RU": "Чаша не установлена",
+      "uk-UA": "Чашка до складу не входить"
+    },
+    "error.7": {
+      "en-US": "Child lock operated",
+      "kk-KZ": "Кездейсоқ басудан қорғау атқарылды",
+      "ru-RU": "Сработала защита от случайного нажатия",
+      "uk-UA": "Функція захисту від дітей"
+    },
+    "error.8": {
+      "ar-AE": "التسخين",
+      "de-DE": "Vorheizen",
+      "en-US": "Preheating",
+      "kk-KZ": "Алдын ала қыздыру",
+      "ru-RU": "Предварительный нагрев",
+      "uk-UA": "Попередній нагрів"
+    },
+    "alert.step": {
+      "en-US": "Cooking step completed",
+      "kk-KZ": "Даярлау қадамы аяқталды",
+      "ru-RU": "Шаг приготовления завершён",
+      "uk-UA": "Крок приготування завершено"
+    },
+    "url.manual": {
+      "ar-AE": "https://images.cdn.polaris-iot.com/pdf/polaris/302/PMC0597_User Manual_v4_ru_kz_проверено.pdf",
+      "de-DE": "https://images.cdn.polaris-iot.com/pdf/polaris/302/PMC0597_User Manual_v4_ru_kz_проверено.pdf",
+      "en-US": "https://images.cdn.polaris-iot.com/pdf/polaris/302/PMC0597_User Manual_v4_ru_kz_проверено.pdf",
+      "kk-KZ": "https://images.cdn.polaris-iot.com/pdf/polaris/302/PMC0597_User Manual_v4_ru_kz_проверено.pdf",
+      "ru-RU": "https://images.cdn.polaris-iot.com/pdf/polaris/302/PMC0597_User Manual_v4_ru_kz_проверено.pdf",
+      "uk-UA": "https://images.cdn.polaris-iot.com/pdf/polaris/302/PMC0597_User Manual_v4_ru_kz_проверено.pdf"
+    },
+    "alert.ready": {
+      "en-US": "Cooking finished",
+      "kk-KZ": "Даярлау аяқталды",
+      "ru-RU": "Приготовление завершено",
+      "uk-UA": "Приготування їжі завершено"
+    },
+    "alert.start": {
+      "en-US": "Cooking started",
+      "kk-KZ": "Дайындық басталды",
+      "ru-RU": "Приготовление началось",
+      "uk-UA": "Розпочато приготування їжі"
+    },
+    "url.catalog": {
+      "ar-AE": "https://polaris.ru/catalog/multivarki/polaris-pmc-0597-wifi-iq-home-silver/",
+      "de-DE": "https://polaris.ru/catalog/multivarki/polaris-pmc-0597-wifi-iq-home-silver/",
+      "en-US": "https://polaris.ru/catalog/multivarki/polaris-pmc-0597-wifi-iq-home-silver/",
+      "kk-KZ": "https://polaris.ru/catalog/multivarki/polaris-pmc-0597-wifi-iq-home-silver/",
+      "ru-RU": "https://polaris.ru/catalog/multivarki/polaris-pmc-0597-wifi-iq-home-silver/",
+      "uk-UA": "https://polaris.ru/catalog/multivarki/polaris-pmc-0597-wifi-iq-home-silver/"
+    }
+  },
+  "programs": [
+    null,
+    {
+      "icon": "M0,0h28v28V0M19.9814,24.5H7.9823c-.252,0-.4648-.188-.4961-.438l-1.0322-8.2905c-.8496-.0757-1.8994-.417-2.7002-1.1987-.832-.812-1.2539-1.9307-1.2539-3.3257,0-2.5566,2.1104-4.6362,4.7041-4.6362.6475-.0376,1.2627.126,1.8477.3721.3408-.9204.9258-1.7378,1.6865-2.3447h0c.9189-.7344,2.0674-1.1382,3.2334-1.1382.0078.001.0156.0005.0215,0,1.1689,0,2.3203.4062,3.2412,1.1445.7607.6094,1.3447,1.4292,1.6836,2.3506.5928-.2549,1.2324-.3823,1.8779-.3843,2.5928,0,4.7031,2.0796,4.7031,4.6362.0225.877-.2842,2.1753-1.2129,3.1509-.752.7905-1.7695,1.2466-3.0283,1.3579l-.7783,8.291c-.0244.2568-.2402.4531-.498.4531ZM8.4237,23.5h11.1025l.7754-8.2661c.0234-.252.2324-.4468.4863-.4531,1.1904-.0288,2.124-.3896,2.7734-1.0718.7178-.7549.9551-1.7598.9375-2.4492,0-2.0176-1.6621-3.6489-3.7041-3.6489h-.0098c-.6729,0-1.335.1826-1.916.5288-.1367.082-.3027.0928-.4502.0312-.1465-.062-.2549-.1895-.292-.3438-.2285-.9482-.7676-1.8013-1.5176-2.4023-.7441-.5967-1.6738-.9248-2.6182-.9248-.0078-.0005-.0117-.001-.0176,0-.9424,0-1.8691.3262-2.6123.9194h0c-.748.5972-1.2881,1.4468-1.5205,2.3926-.0371.1533-.1455.2798-.29.3413-.1455.0615-.3115.0503-.4482-.0288-.5742-.3359-1.2266-.5137-1.8877-.5137h-.0098c-2.043,0-3.7051,1.6313-3.7051,3.6362,0,1.1152.3203,1.9932.9521,2.6099.7295.7119,1.7861.9453,2.4326.9302h.0127c.252,0,.4648.1875.4961.438l1.0303,8.2749ZM11.0497,5.0288h.0098-.0098ZM12.9999,10.5c-.2764,0-.5.2236-.5.5v1c0,.651-.4192,1.2008-1,1.4079v-2.4079c0-.2764-.2236-.5-.5-.5s-.5.2236-.5.5v2.4079c-.5808-.2071-1-.7569-1-1.4079v-1c0-.2764-.2236-.5-.5-.5s-.5.2236-.5.5v1c0,1.2072.8601,2.2171,2,2.4494v6.5506c0,.2764.2236.5.5.5s.5-.2236.5-.5v-6.5506c1.1399-.2323,2-1.2422,2-2.4494v-1c0-.2764-.2236-.5-.5-.5ZM16.9999,10.5c-1.3789,0-2.5,1.1216-2.5,2.5v4c0,.2764.2236.5.5.5h1.5v3.5c0,.2764.2236.5.5.5s.5-.2236.5-.5v-10c0-.2764-.2236-.5-.5-.5ZM15.4999,16.5v-3.5c0-.651.4192-1.2008,1-1.4079v4.9079h-1Z",
+      "name": {
+        "ar-AE": "وصفتي بلس",
+        "de-DE": "Mein Rezept plus",
+        "en-US": "My recipe Plus",
+        "kk-KZ": "Менің рецептім плюс",
+        "ru-RU": "Мой рецепт плюс",
+        "uk-UA": "Мій рецепт Плюс"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 35700,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 300,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 9,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 160,
+          "min": 35,
+          "step": 1,
+          "round": 1,
+          "default": 100,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": [
+        {
+          "max": 160,
+          "min": 140,
+          "limits": {
+            "timer": {
+              "max": 7200,
+              "min": 300,
+              "step": 300,
+              "round": 1,
+              "default": 1200,
+              "round_alt": 1
+            }
+          },
+          "feature": "temperature"
+        },
+        {
+          "max": 35700,
+          "min": 7201,
+          "limits": {
+            "temperature": {
+              "max": 135,
+              "min": 35,
+              "step": 5,
+              "round": 1,
+              "default": 60,
+              "round_alt": 1
+            }
+          },
+          "feature": "timer"
+        }
+      ]
+    },
+    {
+      "icon": "M0,0h28v28V0M5.9586,10.4689h-1.9795c-.2764,0-.5-.2236-.5-.5s.2236-.5.5-.5h1.9795c.2764,0,.5.2236.5.5s-.2236.5-.5.5ZM6.4586,12.9382c0-.2764-.2236-.5-.5-.5H1.9996c-.2764,0-.5.2236-.5.5s.2236.5.5.5h3.959c.2764,0,.5-.2236.5-.5ZM6.4586,15.9074c0-.2764-.2236-.5-.5-.5h-1.9795c-.2764,0-.5.2236-.5.5s.2236.5.5.5h1.9795c.2764,0,.5-.2236.5-.5ZM6.4586,7.0002c0-.2764-.2236-.5-.5-.5H1.9996c-.2764,0-.5.2236-.5.5s.2236.5.5.5h3.959c.2764,0,.5-.2236.5-.5ZM12.7457,23.1637c.6807-.4727,1.1924-1.1548,1.4375-1.9097.2695-.7651.2695-1.6084-.0049-2.3862-.2559-.6699-.7148-1.2632-1.3066-1.6948V6.4059c.001-.3071-.0605-.6074-.1846-.8936-.1221-.2812-.2988-.5332-.5332-.7568-.458-.4185-1.0596-.6523-1.6973-.6577-.3604-.0156-.6201.0566-.9121.1704-.2939.1147-.5566.2808-.7773.4897-.2324.2153-.4131.4678-.5381.751-.126.2876-.1895.5894-.1885.895v10.7632c-.6064.4268-1.0791,1.021-1.3477,1.7036-.2881.7666-.3115,1.585-.0664,2.3716.248.7651.7598,1.4473,1.4365,1.9185.6729.4775,1.5049.7407,2.3428.7412h.0078c.8369,0,1.667-.2632,2.332-.7383ZM10.4518,5.0978c.3867.0034.751.144,1.0195.3887.1299.124.2305.2671.2988.4238.0684.1577.1025.3232.1016.4937v11.0342c0,.1729.0889.333.2354.4243.5215.3247.9258.8086,1.1328,1.3501.1943.5513.1943,1.1582-.0039,1.7212-.1846.5679-.5508,1.0547-1.0654,1.4126-.5029.3584-1.126.5557-1.7578.5557h-.0059c-.6328-.0005-1.2598-.1982-1.7686-.5591-.5029-.3501-.8789-.8506-1.0586-1.4038-.1768-.5669-.1602-1.1602.0459-1.7095.2207-.5596.6367-1.043,1.1709-1.3618.1514-.0903.2441-.2534.2441-.4297V6.402c-.001-.167.0342-.332.1045-.4907.0684-.1567.1699-.2983.3057-.4238.1309-.1235.2842-.2202.457-.2876.1738-.0679.3564-.1021.541-.1021h.0029ZM8.5406,17.4382h.0098-.0098ZM26.4996,11.5002c0-3.3086-2.6914-6-6-6s-6,2.6914-6,6,2.6914,6,6,6,6-2.6914,6-6ZM25.4996,11.5002c0,2.7568-2.2432,5-5,5s-5-2.2432-5-5,2.2432-5,5-5,5,2.2432,5,5ZM23.4996,12.0002c0-.2764-.2236-.5-.5-.5h-2.5v-2.5c0-.2764-.2236-.5-.5-.5s-.5.2236-.5.5v3c0,.2764.2236.5.5.5h3c.2764,0,.5-.2236.5-.5Z",
+      "name": {
+        "ar-AE": "الإحماء",
+        "de-DE": "sich warm laufen",
+        "en-US": "Reheat",
+        "kk-KZ": "Ысыту",
+        "ru-RU": "Разогрев",
+        "uk-UA": "Розігрів"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 3600,
+          "min": 600,
+          "step": 300,
+          "round": 1,
+          "default": 1200,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 105,
+          "min": 105,
+          "step": 1,
+          "round": 1,
+          "default": 105,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M25.5002,11.6149c0-.3286-.0742-.6475-.2197-.9482l-.002-.0029c-2.0869-4.23-6.5137-6.9629-11.2783-6.9629S4.8078,6.4338,2.7199,10.6667c-.1455.3008-.2197.6196-.2197.9482,0,.8133.4548,1.5153,1.1182,1.8879l.5332,8.7801c.1943,1.168,1.1963,2.0161,2.3828,2.0161h14.9307c1.1865,0,2.1885-.8481,2.3887-2.0679l.5273-8.7278c.6641-.3724,1.1191-1.0747,1.1191-1.8884ZM22.8615,22.1188c-.1133.6841-.7012,1.1802-1.3965,1.1802H6.5344c-.6953,0-1.2832-.4961-1.3906-1.1284l-.5067-8.386c.0126.0002.0243.0037.037.0037.4463,0,.876-.1357,1.2402-.3916l.5996-.4165c.7588-.5298,1.7783-.5288,2.5371.001,1.1006.7676,2.5781.7695,3.6807,0,.7588-.5308,1.7793-.5298,2.5361,0,1.1025.7695,2.583.7666,3.6816,0,.7578-.5293,1.7754-.5303,2.5371-.0015l.5977.4175c.3672.2559.7969.3911,1.2422.3911.0125,0,.0239-.0035.0361-.0037l-.501,8.3342ZM23.3264,12.7883c-.2402,0-.4727-.0732-.6709-.2109l-.5967-.4175c-.5508-.3838-1.1953-.5752-1.8408-.5752s-1.291.1919-1.8408.5762c-.7568.5298-1.7764.5308-2.5371,0-1.1025-.769-2.5801-.7681-3.6807,0-.7588.5308-1.7793.5298-2.5361,0-1.1006-.7681-2.5801-.7686-3.6807-.0015l-.6006.4175c-.1973.1382-.4277.2114-.668.2114-.6475,0-1.1738-.5264-1.1738-1.1733,0-.1758.04-.3481.1182-.5088,1.9189-3.8911,5.9941-6.4053,10.3818-6.4053s8.46,2.5137,10.3809,6.4033c.0791.1631.1191.335.1191.5107,0,.647-.5264,1.1733-1.1738,1.1733ZM19.2248,7.5441c-.0898.1694-.2637.2661-.4424.2661-.0791,0-.1592-.0186-.2334-.0581-.8604-.4546-1.7793-.7793-2.7314-.9653-.2715-.0527-.4482-.3154-.3955-.5864.0527-.272.3174-.4487.5869-.395,1.0488.2046,2.0605.562,3.0068,1.063.2441.1289.3379.4316.209.6758ZM12.5764,6.2004c.0527.271-.124.5337-.3955.5864-.9482.1851-1.8682.5088-2.7324.9619-.0742.0391-.1533.0571-.2324.0571-.1797,0-.3535-.0972-.4434-.2681-.1279-.2446-.0332-.5469.2109-.6748.9512-.4985,1.9629-.854,3.0059-1.0576.2695-.0527.5342.123.5869.395ZM14.4992,6.1149v1.9131c0,.2764-.2236.5-.5.5s-.5-.2236-.5-.5v-1.9131c0-.2764.2236-.5.5-.5s.5.2236.5.5Z",
+      "name": {
+        "ar-AE": "منتجات المخبز",
+        "de-DE": "Bäckereiprodukte",
+        "en-US": "Cake",
+        "kk-KZ": "Нан-тоқаш өнімдері",
+        "ru-RU": "Выпечка",
+        "uk-UA": "Торт"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 12600,
+          "min": 1800,
+          "step": 600,
+          "round": 1,
+          "default": 3600,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 130,
+          "min": 130,
+          "step": 1,
+          "round": 1,
+          "default": 130,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M21.8739,12.5163c.2715-.0732.541.0908.6104.3579.0693.2676-.0908.5405-.3584.6099-.2529.0659-4.0439,1.0303-8.4893,1.0303-2.7598,0-5.7715-.3716-8.3467-1.5601-.25-.1157-.3594-.4131-.2441-.6636.1162-.2515.4131-.3589.6641-.2446,6.4014,2.9556,15.7695.5737,16.1641.4702ZM8.1122,11.0129c-.2695-.063-.5371.106-.5996.375-.0615.269.1055.5376.375.5996,2.3037.5317,4.415.7158,6.2363.7158,2.8145,0,4.9355-.4404,6.002-.7192l-.2959-.9565c-1.6406.4297-6.0693,1.2891-11.7178-.0146ZM19.9579,21.504l-.6816,1.3859c-.2432.4956-.6865.8765-1.2148,1.0449-1.2012.3755-2.5664.5654-4.0615.5654s-2.8613-.1899-4.0605-.5649c-.5293-.1685-.9717-.5488-1.2168-1.0444l-.6814-1.3865c-3.5186-1.8488-5.5413-5.0884-5.5413-8.9275v-.1147c0-.0693.0142-.1352.0396-.1951.2002-1.362,2.114-2.5177,5.3589-3.1906.2676-.0527.5352.1172.5908.3882.0566.2705-.1172.5352-.3877.5913-3.1787.6587-4.6016,1.7026-4.6016,2.4443,0,1.2529,3.9941,3,10.5,3,6.4707,0,10.4531-1.7278,10.496-2.9792-.0001-.0102.0018-.0198.0017-.03-.0122-.798-1.6771-1.9399-5.3229-2.5733-.2715-.0474-.4541-.3062-.4062-.5781.0469-.2734.3115-.4546.5781-.4072,3.7106.645,5.895,1.8524,6.1108,3.3305.0259.0595.0408.1249.0415.1939.0001.0098-.0017.019-.0017.0289.0001.0049.0027.0096.0027.0146,0,.0135-.0054.0259-.0056.0394.0134,3.853-2.0005,7.1036-5.5364,8.9644ZM24.3118,14.3393c-2.0038,1.4119-6.2454,2.1609-10.3119,2.1609s-8.3109-.7495-10.3138-2.1622c.5255,2.7252,2.2574,4.9956,4.9633,6.3663.624.3188,1.3018.5854,2.0156.793.2646.0767.418.354.3408.6196-.0635.2183-.2637.3604-.4805.3604-.0459,0-.0928-.0063-.1396-.02-.3135-.0909-.6157-.1999-.9155-.3118l.1489.303c.125.2529.3516.4473.6211.5332,1.0996.3438,2.3652.5186,3.7598.5186,1.3936,0,2.6592-.1748,3.7607-.519.2676-.0854.4941-.2798.6191-.5327l.1481-.3011c-.3036.1132-.6091.2223-.9215.3109-.0449.0127-.0908.019-.1367.019-.2764,0-.502-.2236-.502-.5,0-.2402.168-.4409.3936-.4893.6875-.1973,1.3555-.4604,1.9863-.7832,2.7109-1.375,4.439-3.6425,4.9642-6.3655ZM17.4862,10.3571c.0977.0952.2246.1431.3506.1431.1299,0,.2588-.0498.3564-.1499.1934-.1968.1904-.5137-.0059-.707-1.0889-1.0684-.6699-1.585.0225-2.4404.6445-.7959,1.6182-1.999-.0283-3.5649-.1992-.189-.5156-.1816-.707.0176-.1904.2002-.1826.5166.0176.707.9775.9297.6094,1.3848-.0596,2.2109-.6699.8276-1.6826,2.0786.0537,3.7837ZM14.0067,10.3571c.0977.0952.2246.1431.3506.1431.1299,0,.2588-.0498.3564-.1499.1934-.1968.1904-.5137-.0059-.707-1.0889-1.0684-.6699-1.585.0225-2.4404.6445-.7959,1.6182-1.999-.0283-3.5649-.1992-.189-.5156-.1816-.707.0176-.1904.2002-.1826.5166.0176.707.9775.9297.6094,1.3848-.0596,2.2109-.6699.8276-1.6826,2.0786.0537,3.7837ZM10.4657,10.3571c.0977.0952.2246.1431.3506.1431.1299,0,.2588-.0498.3564-.1499.1934-.1968.1904-.5137-.0059-.707-1.0889-1.0684-.6699-1.585.0225-2.4404.6445-.7959,1.6182-1.999-.0283-3.5649-.1982-.189-.5146-.1816-.707.0176-.1904.2002-.1826.5166.0176.707.9775.9297.6094,1.3848-.0596,2.2109-.6699.8276-1.6826,2.0786.0537,3.7837Z",
+      "name": {
+        "ar-AE": "حساء",
+        "de-DE": "Suppe",
+        "en-US": "Soup",
+        "kk-KZ": "Бұқтыру",
+        "ru-RU": "Суп",
+        "uk-UA": "Суп"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 14400,
+          "min": 3600,
+          "step": 600,
+          "round": 1,
+          "default": 3600,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 97,
+          "min": 97,
+          "step": 1,
+          "round": 1,
+          "default": 97,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M25.3628,18.3337c-.083-.1279-.1924-.2295-.3271-.3022-.1318-.0718-.2812-.1094-.4316-.1094h-.1738l-1.3926-12.4033c-.0889-.5664-.3857-1.082-.8359-1.4521-.4443-.3652-1.0107-.5664-1.5938-.5664H7.313c-.584,0-1.1504.2012-1.5967.5684-.4512.3721-.7471.8887-.8369,1.4751l-1.3788,12.3784h-.1066c-.1455,0-.292.0356-.4346.1099-.1318.0728-.2441.1772-.3252.3042-.083.1313-.1289.2817-.1328.4282-.0078.1538.0283.3086.0879.415l1.7432,3.8423c.2002.4419.5283.8154.9512,1.0806.418.2603.9014.3979,1.3975.3979h14.6367c.4971,0,.9795-.1377,1.3975-.3984.4229-.2646.751-.6387.9502-1.0796l1.7344-3.8169c.0713-.1362.1064-.2891.0986-.4424-.0068-.1528-.0537-.3013-.1357-.4292ZM20.604,4.5002h.0029c.3535,0,.6943.1201.96.3389.2607.2144.4316.5103.4795.8125l1.3771,12.2705h-2.5909l-.9883-12.5317c-.0349-.3157-.1365-.6149-.2852-.8901h1.0449ZM8.1643,17.922l.9661-12.4248c.0312-.2979.1553-.5767.3643-.8125l.1576-.1846h1.8153l-.0061.0283c-.083.375-.1328.7607-.1494,1.1533l-.3489,12.2402h-2.7988ZM12.3121,5.7165c.0127-.3271.0557-.6543.126-.9741l.0524-.2422h3.0054l.0624.2451c.0703.3169.1133.644.126.9644l.333,12.2124h-4.0531l.348-12.2056ZM17.0179,17.922l-.3337-12.2466c-.0166-.3862-.0664-.772-.1533-1.1621l-.0034-.0132h1.7977l.1627.1909c.2041.231.3301.5107.3613.7935l.981,12.4375h-2.8123ZM5.8706,5.675c.0498-.3228.2207-.6196.4814-.835.2666-.2192.6074-.3398.9619-.3398h1.1055c-.1497.2783-.2506.5812-.2842.9062l-.973,12.5156h-2.6552l1.3635-12.2471ZM22.7544,22.6095c-.1182.2622-.3154.4849-.5693.6445-.2578.1611-.5576.2461-.8672.2461H6.6812c-.3096,0-.6094-.0854-.8672-.2456-.2539-.1602-.4521-.3833-.5713-.646l-1.6729-3.687,7.8484-.0176c.0059.0004.0107.0038.0168.004h.0146c.0073,0,.0134-.0038.0205-.0041l4.9835-.0112c.0261.0042.0498.0153.077.0153h.0137c.0242-.0007.0444-.0117.0676-.0156l3.6326-.0081c.0405.0107.0804.0237.124.0237.0137,0,.0273-.0005.04-.0015.0288-.0023.0527-.016.0798-.0228l3.3074-.0074c.0576.0233.1199.0371.1851.0371.0186,0,.0381-.001.0566-.0029.0396-.0045.073-.0222.1089-.035l.3062-.0007-1.6982,3.7349Z",
+      "name": {
+        "ar-AE": "لحم",
+        "de-DE": "Sulze",
+        "en-US": "Meat",
+        "kk-KZ": "Іркілдек",
+        "ru-RU": "Холодец",
+        "uk-UA": "М'ясо"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 28800,
+          "min": 7200,
+          "step": 3600,
+          "round": 1,
+          "default": 21600,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 93,
+          "min": 93,
+          "step": 1,
+          "round": 1,
+          "default": 93,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M16.3443,18.9841c0-.5215-.1523-1.0322-.4395-1.4775l-1.9424-3.2729c-.0176-.0439-.0596-.1182-.0879-.1553-.2578-.3286-.7676-.4014-1.1172.0864l-1.9688,3.3325c-.291.4468-.4443.9604-.4443,1.4868,0,1.5645,1.3457,2.8369,3,2.8369s3-1.2725,3-2.8369ZM11.3443,18.9841c0-.332.0977-.6572.2939-.9595l1.7031-2.8882,1.708,2.8882c.0039.0063.0078.0122.0117.0186.1855.2847.2832.6099.2832.9409,0,1.0127-.8975,1.8369-2,1.8369s-2-.8242-2-1.8369ZM24.6412,14.798v6.9971c0,1.7305-1.4082,3.1387-3.1396,3.1387H6.5358c-1.7314,0-3.1396-1.4082-3.1396-3.1387v-6.9971c0-.2764.2236-.5.5-.5s.5.2236.5.5v6.9971c0,1.1792.96,2.1387,2.1396,2.1387h14.9658c1.1797,0,2.1396-.9595,2.1396-2.1387v-6.9971c0-.2764.2236-.5.5-.5s.5.2236.5.5ZM26.4996,11.7809c0,1.1001-.8945,1.9951-1.9941,1.9951h-1.7812c-.2764,0-.5-.2236-.5-.5s.2236-.5.5-.5h1.7812c.5479,0,.9941-.4463.9941-.9951,0-.5483-.4463-.9941-.9941-.9941H3.4947c-.5488,0-.9951.4458-.9951.9941,0,.5488.4463.9951.9951.9951h1.7812c.2764,0,.5.2236.5.5s-.2236.5-.5.5h-1.7812c-1.1006,0-1.9951-.895-1.9951-1.9951s.8945-1.9941,1.9951-1.9941h21.0107c1.0996,0,1.9941.8945,1.9941,1.9941ZM4.2418,9.1965c1.6201-1.4399,5.5488-2.4072,9.7764-2.4072,4.2432,0,8.1777.9727,9.7891,2.4199.0957.0859.2148.1279.334.1279.1367,0,.2734-.0562.3721-.166.1846-.2056.167-.5215-.0381-.7061-1.5923-1.4302-4.9623-2.4134-8.8433-2.6294.1523-.27.2466-.5771.2466-.9087,0-1.0259-.835-1.8608-1.8604-1.8608-1.0273,0-1.8623.835-1.8623,1.8608,0,.3316.0942.6387.2468.9087-3.8643.2155-7.2269,1.1926-8.825,2.6138-.207.1831-.2256.4995-.042.7056.1846.2065.5.2251.7061.0415ZM13.1559,4.9269c0-.4746.3867-.8608.8623-.8608.4746,0,.8604.3862.8604.8608,0,.4756-.3857.8623-.8604.8623-.4756,0-.8623-.3867-.8623-.8623Z",
+      "name": {
+        "ar-AE": "تسوية على البخار",
+        "de-DE": "Löschen",
+        "en-US": "Stew",
+        "kk-KZ": "Бұқтыру",
+        "ru-RU": "Тушение",
+        "uk-UA": "Тушкування"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 28800,
+          "min": 1800,
+          "step": 1800,
+          "round": 1,
+          "default": 7200,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 93,
+          "min": 93,
+          "step": 1,
+          "round": 1,
+          "default": 93,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M12.1083,16.1706c.6885-.6606,1.0752-1.3008,1.0615-1.7563-.0059-.1885-.0801-.3369-.2334-.4673-.1846-.1572-.2295-.4253-.1064-.6348.123-.209.3799-.3003.6064-.2139,1.2266.4609,1.9775,1.7642,1.748,3.0312-.125.687-.3828,1.022-.5537,1.2437-.1309.1709-.1387.1875-.1318.292.0098.1533.1387.2241.2139.2524.1221.0449.3076.0537.4336-.0732.0557-.0479.2871-.2476.1426-.688-.0635-.1914-.0049-.4014.1465-.5337.1523-.1313.3682-.1602.5488-.0713.9209.4526,1.5156,1.4712,1.5156,2.5947,0,.9619-.6953,1.8594-1.6162,2.0874-.2715.0654-.5391-.0986-.6055-.3652-.0664-.2681.0977-.5391.3652-.6055.5293-.1309.8564-.6816.8564-1.1167,0-.4224-.1191-.7866-.2979-1.0757-.0986.2266-.2432.4082-.4023.5273-.3281.335-.9141.4531-1.4385.2559-.4971-.187-.8271-.6172-.8604-1.1226-.0312-.4883.1729-.7544.3379-.9683.1445-.187.2803-.3638.3613-.812.0615-.3374.0098-.6616-.1143-.9468-.1729.5967-.6084,1.2383-1.2842,1.8877-.8555.8213-1.3018,1.2871-1.3018,2.0811,0,.5571.4355,1.1162.8574,1.3345.2451.127.3408.4287.2139.6738-.0889.1719-.2637.27-.4443.27-.0781,0-.1562-.0181-.2305-.0562-.6934-.3599-1.3965-1.2383-1.3965-2.2222,0-1.2573.7451-1.9731,1.6084-2.8022ZM24.1415,14.298c-.2764,0-.5.2236-.5.5v6.9971c0,1.1792-.96,2.1387-2.1396,2.1387H6.536c-1.1797,0-2.1396-.9595-2.1396-2.1387v-6.9971c0-.2764-.2236-.5-.5-.5s-.5.2236-.5.5v6.9971c0,1.7305,1.4082,3.1387,3.1396,3.1387h14.9658c1.7314,0,3.1396-1.4082,3.1396-3.1387v-6.9971c0-.2764-.2236-.5-.5-.5ZM24.5057,9.7868H3.495c-1.1006,0-1.9951.8945-1.9951,1.9941s.8945,1.9951,1.9951,1.9951h1.7812c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5h-1.7812c-.5488,0-.9951-.4463-.9951-.9951,0-.5483.4463-.9941.9951-.9941h21.0107c.5479,0,.9941.4458.9941.9941,0,.5488-.4463.9951-.9941.9951h-1.7812c-.2764,0-.5.2236-.5.5s.2236.5.5.5h1.7812c1.0996,0,1.9941-.895,1.9941-1.9951s-.8945-1.9941-1.9941-1.9941ZM3.536,9.155c-.1836-.2065-.1641-.5225.042-.7061,1.5989-1.4208,4.9612-2.3978,8.8248-2.6133-.1525-.27-.2467-.5771-.2467-.9087,0-1.0259.835-1.8608,1.8613-1.8608s1.8613.835,1.8613,1.8608c0,.3316-.0942.6387-.2467.9087,3.8807.2161,7.2504,1.1993,8.8424,2.6294.2051.1846.2227.5005.0381.7061-.0986.1099-.2354.166-.3721.166-.1191,0-.2383-.042-.334-.1279-1.6113-1.4473-5.5459-2.4199-9.7891-2.4199-4.2266,0-8.1543.9673-9.7754,2.4077-.2051.1826-.5234.1646-.7061-.042ZM14.0174,5.7892c.4746,0,.8613-.3867.8613-.8623,0-.4746-.3867-.8608-.8613-.8608s-.8613.3862-.8613.8608c0,.4756.3867.8623.8613.8623Z",
+      "name": {
+        "ar-AE": "قلى",
+        "de-DE": "Braten",
+        "en-US": "Fry",
+        "kk-KZ": "Қуыру",
+        "ru-RU": "Жарка",
+        "uk-UA": "Смаження"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 3600,
+          "min": 600,
+          "step": 60,
+          "round": 1,
+          "default": 1800,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 160,
+          "min": 100,
+          "step": 10,
+          "round": 1,
+          "default": 160,
+          "round_alt": 1
+        }
+      },
+      "prepare": "temperature",
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M8.3239,24.4997c-.3574,0-.7324-.0278-1.1289-.0923-.4668-.0762-1.0459-.2236-1.7197-.4395-1.1641-.3716-1.8926-1.6294-1.7715-3.0581.0332-.4067.0332-.7993-.001-1.1665-.0264-.2896-.1562-.5317-.3203-.8384-.3076-.5742-.6895-1.2891-.5439-2.5977.083-.7388.3018-1.2505.4951-1.7021.2246-.5254.4023-.9404.3682-1.6499-.0186-.3794-.1934-.7207-.3955-1.1157-.3428-.6714-.7695-1.5063-.4561-2.7573,0-.0005.001-.001.001-.001.167-.6616.2549-1.2695.2607-1.8066.0127-1.1382.8691-3.2466,2.2305-3.2778.8936-.0269,1.5068.1758,2.1299.3638.5703.1724,1.0957.3379,1.8105.3223.6367-.0112,1.125-.1616,1.6416-.3208.5596-.1724,1.1377-.3506,1.9131-.3652.8428-.021,1.4785.1963,2.0508.3823.6123.1982,1.1387.3672,1.8525.3057.5938-.0532,1.0371-.2871,1.5068-.5347.5312-.2808,1.1338-.5991,1.9697-.6426.3535-.0171.7471-.0029,1.1777.0454,1.0127.1123,1.8252.9473,2.0215,2.0781.1045.604.2275,1.084.3652,1.4253.21.521.4277.9673.626,1.3755.4434.9116.8271,1.6987.8506,2.7212.0205.835-.3242,1.4614-.6279,2.0142-.2451.4453-.4756.8657-.5254,1.3804-.0771.7812.1309,1.4941.3506,2.2485.1992.686.4062,1.396.4189,2.207.0186,1.1587-.2354,2.3359-.4512,3.1191-.2295.8276-.9424,1.4526-1.8174,1.5913-.9473.1509-2.3047.3262-3.3311.3081-.9561-.0181-1.6826-.1895-2.3848-.355-.6445-.1523-1.2529-.2959-2.0488-.3325-1.3203-.0581-2.3223.249-3.3984.5752-.9619.2915-1.9482.5903-3.1191.5903ZM3.8209,9.3254h0c-.2236.8872.0547,1.4302.376,2.0591.2334.4561.4746.9277.5029,1.522.0469.9395-.2041,1.5254-.4463,2.0918-.1826.4258-.3545.8281-.4209,1.4204-.1113.9995.1523,1.4927.4316,2.0146.1914.3574.3896.7275.4346,1.2183.0391.4243.04.8765.001,1.3418-.0684.812.2803,1.7671,1.0801,2.0225.627.2002,1.1572.3364,1.5752.4043,1.4639.2378,2.5977-.105,3.7979-.4678,1.1084-.3369,2.2607-.687,3.7334-.6172.8896.041,1.5732.2021,2.2344.3584.6807.1606,1.3232.3125,2.1729.3281.9385.0176,2.2461-.1514,3.1562-.2954.4961-.0791.8828-.4126,1.0088-.8706.1992-.7197.4326-1.7964.416-2.8364-.0107-.6768-.1895-1.2925-.3789-1.9438-.2373-.812-.4814-1.6519-.3867-2.6245.0703-.7192.375-1.2749.6445-1.7651.2783-.5059.5186-.9429.5049-1.5088-.0186-.8052-.3252-1.4355-.749-2.3076-.208-.4272-.4346-.8936-.6553-1.4395-.1631-.4067-.3057-.9541-.4229-1.6279-.0996-.5728-.4922-1.1826-1.1475-1.2549-.377-.0425-.7158-.0571-1.0137-.0405-.6162.0317-1.0518.2617-1.5557.5278-.5107.2695-1.0898.5752-1.8838.6465-.9229.0835-1.5947-.1377-2.251-.3506-.5479-.1782-1.0664-.3486-1.7236-.3335-.6348.0117-1.1211.1621-1.6377.3208-.5605.1729-1.1396.3516-1.917.3652-.8467.0156-1.499-.1777-2.1182-.3652-.5742-.1729-1.1221-.3418-1.8184-.3208-.542.0122-1.2432,1.4297-1.2529,2.2886-.0068.6162-.1045,1.3027-.291,2.04ZM8.9811,9.2165c1.0449-.4829,3.9043-1.2012,7.2617-.4551.2734.0601.5371-.1108.5967-.3799.0596-.2695-.1104-.5366-.3799-.5967-3.2656-.7256-6.1348-.1479-7.5088.3633l-1.0049-1.4351c-.1572-.2271-.4697-.2808-.6963-.123-.2256.1582-.2812.4702-.1221.6963l1.2344,1.7632c.0957.1377.25.2134.4092.2134.0713,0,.1426-.0151.21-.0464ZM20.7623,21.5026c.2217-.1655.2666-.4785.1016-.6997l-1.3154-1.7627c-.1396-.187-.3887-.2534-.5996-.1597-1.1191.4863-4.1875,1.2085-7.7842.459-.2676-.0552-.5352.1162-.5908.3872-.0566.2705.1172.5352.3877.5913,3.501.7305,6.5732.1377,8.0137-.375l1.0879,1.4575c.0977.1318.248.2012.4004.2012.1045,0,.209-.0322.2988-.0991ZM21.4186,15.2687c.2002-2.3179-.1309-4.1064-.3975-5.0986l.9854-1.0679c.1875-.2031.1748-.5195-.0283-.7065-.2021-.1875-.5176-.1738-.7061.0278l-1.1758,1.2739c-.1201.1299-.1621.3135-.1123.4824.252.8438.6445,2.6157.4385,5.0029-.0234.2749.1797.5176.4551.541.0146.0015.0293.002.0439.002.2559,0,.4746-.1963.4971-.457ZM6.069,19.7438l1.7617-1.2754c.1924-.1387.2598-.3931.1631-.6094-.3711-.8281-.9482-2.5688-.6445-4.9204.0352-.2739-.1582-.5244-.4316-.5601-.2832-.0317-.5244.1582-.5605.4321-.2949,2.2822.1689,4.0566.5664,5.0801l-1.4404,1.0435c-.2236.1616-.2744.4741-.1123.6978.0977.1353.251.207.4053.207.1016,0,.2051-.0308.293-.0952ZM19.6783,9.0754c.5908-.7388,1.0605-1.5283,1.2266-1.8423.1289-.2446.0352-.5469-.209-.6758-.2422-.1274-.5469-.0366-.6758.209-.1211.2295-.5586.979-1.123,1.6841-.1719.2158-.1377.5303.0781.7026.0918.0742.2021.1099.3125.1099.1465,0,.292-.064.3906-.1875ZM7.2692,20.8981c.2324-.1934.8838-.6768,1.6865-1.1221.2412-.1338.3281-.4385.1943-.6797-.1357-.2432-.4414-.3281-.6807-.1943-.8662.4814-1.582,1.0132-1.8389,1.2275-.2129.1768-.2412.4917-.0654.7041.0996.1187.2412.1802.3848.1802.1133,0,.2266-.0381.3193-.1157ZM8.0084,10.5676c.2002-.1904.208-.5068.0176-.7065-.8271-.8677-1.7188-.9888-2.0986-1.0405-.2832-.0371-.5264.1548-.5625.4282-.0371.2739.1543.5259.4277.563.3232.0435.9238.125,1.5088.7388.0986.1035.2305.1553.3623.1553.124,0,.248-.0459.3447-.1382ZM22.7037,19.4875c.082-.2637-.0654-.5439-.3291-.626-.3545-.1108-1.0156-.3169-1.5068-.9922-.1621-.2231-.4756-.272-.6982-.1099-.2236.1626-.2725.4756-.1104.6987.6865.9429,1.5859,1.2231,2.0176,1.3579.0498.0151.0996.0225.1494.0225.2129,0,.4102-.1372.4775-.3511ZM15.6305,18.8327c-.6064,0-1.2041-.1558-1.7266-.4502-.5498-.3081-.9951-.7554-1.2881-1.293-.2549-.4683-.6465-.8335-1.166-1.0859-.1953-.0957-.6152-.2173-1.5068-.2563-.6699-.0293-1.2422-.3853-1.5312-.9521-.0996-.1943-.1523-.4238-.1523-.6621l.0029-1.8262c0-.1978.0381-.3945.1113-.5684.002-.0049.0039-.0098.0059-.0142.1514-.3545.4111-.6782.7695-.9624.5723-.4531,1.3975-.8066,2.4541-1.0493.6143-.1411,1.2266-.2129,1.8213-.2129,1.6914,0,2.9502.5698,3.708,1.0483.4404.2773.8486.6128,1.1787.9692.3154.3398.5596.6968.7041,1.0322.1562.3667.2383.7559.2441,1.1587v1.5146c-.001.3447-.0469.6758-.1367.9868-.002.0054-.0332.1021-.0342.1074-.2217.6309-.5566,1.1523-1.001,1.5596-.376.3442-.8301.606-1.3496.7778-.3535.1182-.7266.1782-1.1074.1782ZM9.2604,13.6838l-.001.4502c0,.0776.0156.1533.043.2065.123.2422.3789.394.6846.4077.8652.0376,1.4873.1543,1.9014.3564.71.3452,1.25.8525,1.6055,1.5063.2031.3716.5146.6831.9004.8999.6074.3423,1.3711.4126,2.0283.1948.3857-.1279.7178-.3184.9893-.5664.3105-.2852.5508-.6548.7139-1.0986-.3818.3179-.8623.5698-1.4453.7627-1.4893.4927-3.1543-.1279-3.873-1.4463-.2822-.5186-.7109-.9204-1.2744-1.1943-.2119-.103-.6582-.2344-1.582-.2754-.2363-.0107-.4727-.082-.6904-.2036ZM9.3102,12.0915c-.0244.1221.0273.2891.1367.4429.1455.2036.3662.3457.5488.354.8906.04,1.5371.1626,1.9746.375.7539.3667,1.3311.9102,1.7158,1.6152.4893.9004,1.6436,1.3193,2.6797.9756,1.208-.3994,1.7588-1.0249,1.8926-2.1553-.0059-.2642-.0605-.5176-.1621-.7549-.0996-.2305-.2783-.4893-.5176-.7466-.2725-.2939-.6113-.5718-.9795-.8037-.6465-.4077-1.7227-.894-3.1748-.894-.5195,0-1.0566.063-1.5967.1875-.9111.2095-1.6025.498-2.0576.8584-.2178.1724-.3721.3555-.46.5459Z",
+      "name": {
+        "ar-AE": "سو في",
+        "de-DE": "Suvid",
+        "en-US": "Sous Vide",
+        "kk-KZ": "Су-вид",
+        "ru-RU": "Сувид",
+        "uk-UA": "Сувид"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 57600,
+          "min": 7200,
+          "step": 300,
+          "round": 1,
+          "default": 28800,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 85,
+          "min": 48,
+          "step": 1,
+          "round": 1,
+          "default": 55,
+          "round_alt": 1
+        }
+      },
+      "prepare": "temperature",
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M4.1239,12.0915c-.0859-.2876-.1924-.646-.0762-1.0225.1055-.3408.3584-.561.582-.7554.1201-.104.2441-.2119.2949-.3013.042-.0747.0664-.2285.0898-.3774.043-.2734.0957-.6143.3184-.896.2061-.2617.4961-.3877.7529-.499.1494-.0649.3047-.1323.374-.2026.0635-.064.125-.2153.1846-.3613.1045-.2573.2227-.5493.4805-.7676.251-.2139.5557-.2861.8242-.3496.1572-.0376.3203-.0762.3945-.1304.0781-.0571.165-.2021.249-.3423.1387-.2329.2959-.4966.5713-.6699.2852-.1812.6143-.2124.8779-.2378.1494-.0142.3193-.0303.3936-.0708.0947-.0508.2051-.1875.3115-.3198.167-.208.3574-.4434.6455-.5718.3408-.1514.6914-.125.9688-.1035.1299.0088.291.022.3564.001.1494-.0464.3076-.1567.4609-.2642.2451-.1714.499-.3491.8213-.3491s.5762.1777.8223.3496c.1523.1069.3105.2178.459.2637.0654.0205.2266.0088.3584-.001.2803-.0195.6299-.0454.9688.104.2891.1289.4795.3643.6465.5723.1074.1318.2178.2686.3125.3203.0752.0405.2451.0571.3955.0713.2637.0254.5908.0566.877.2368.2744.1743.4316.438.5703.6704.084.1401.1709.2856.249.3433.0752.0547.2383.0933.3965.1309.2676.0635.5713.1353.8232.3496.2559.2178.374.5088.4785.7661.0596.1465.1211.2979.1846.3618.0703.0708.2246.1382.375.2031.2549.1108.5449.2363.752.4976.2217.2822.2754.6221.3174.895.0234.1489.0479.3027.0898.377.0508.0898.1748.1978.2949.3018.2227.1943.4756.415.5811.7559.1172.3755.0107.7344-.0762,1.0229-.041.1367-.083.2783-.083.3696,0,.2764-.2236.5-.5.5s-.5-.2236-.5-.5c0-.2373.0664-.46.125-.6562.0498-.166.1064-.3545.0791-.4399-.0215-.0703-.1729-.2017-.2832-.2979-.1748-.1519-.3721-.3242-.5068-.5625-.1328-.2324-.1729-.4893-.208-.7163-.0264-.166-.0557-.354-.1152-.4302-.0498-.063-.2246-.1387-.3652-.1992-.2256-.0981-.4824-.2095-.6875-.418-.2041-.2056-.3076-.4619-.3994-.6885-.0615-.1504-.1309-.3208-.2002-.3799-.0693-.0586-.248-.1011-.4062-.1387-.2432-.0576-.5176-.123-.7559-.2974-.2432-.1772-.3887-.4219-.5176-.6377-.0811-.1362-.1738-.291-.2471-.3374-.083-.0527-.2637-.0698-.4375-.0864-.2441-.0234-.5215-.0503-.7754-.187-.2715-.1475-.4541-.373-.6152-.5728-.0918-.1138-.2061-.2554-.2734-.2852-.1084-.0488-.3018-.0347-.4912-.021-.2266.0171-.4824.0347-.7275-.0415-.2969-.0923-.54-.2627-.7363-.3994-.0898-.063-.2246-.1577-.2754-.1719.0039.0142-.1309.1089-.2207.1719-.1963.1367-.4395.3071-.7383.3994-.2441.0762-.501.0576-.7256.041-.1865-.0132-.3779-.0273-.4902.0205-.0664.0298-.1807.1714-.2725.2852-.1602.1992-.3418.4253-.6152.5728-.2529.1362-.5293.1626-.7725.186-.1748.0166-.3555.0337-.4395.0874-.0742.0464-.166.2012-.2471.3374-.1289.2153-.2744.4595-.5176.6367-.2383.1738-.5117.2388-.7539.2959-.1582.0376-.3379.0806-.4072.1392-.0713.0605-.1406.2314-.2021.3818-.0918.2261-.1963.4824-.3994.688-.2051.2075-.4609.3188-.6865.4165-.1406.061-.3154.1367-.3652.2007-.0615.0776-.0908.2661-.1172.4321-.0352.2266-.0752.4829-.208.7158-.1348.2383-.333.4106-.5078.5625-.1104.0962-.2617.228-.2832.2964-.0264.0864.0293.2749.0791.4414.0586.1963.125.4189.125.6562,0,.2764-.2236.5-.5.5s-.5-.2236-.5-.5c0-.0913-.042-.2334-.083-.3706ZM25.4989,12.4621v.0006c.0436,3.8845-1.9783,7.1677-5.5415,9.0421l-.6821,1.385c-.2432.4956-.6855.876-1.2129,1.0444-1.2021.376-2.5684.5659-4.0635.5659s-2.8604-.1899-4.0596-.5649c-.5303-.1689-.9736-.5498-1.2168-1.0454l-.6818-1.3863c-3.5177-1.849-5.5399-5.0881-5.5399-8.9267v-.108c0-.0023-.001-.0044-.001-.0067,0-.1855.0332-.3706.0977-.5508.071-.1946.2522-.3187.4463-.3291.0647-.0035.1311.0055.1953.0288.2598.0938.3945.3804.3008.6401-.0264.0718-.0391.1406-.0391.2109v.005c.0105,1.2359,4.0017,2.9559,10.499,2.9559,6.501,0,10.4937-1.7224,10.4985-2.9586-.0002-.0533-.014-.1028-.0267-.153-.0052-.0201-.0035-.0397-.0109-.0602-.0947-.2598.04-.5464.2998-.6401.0005-.0002.0012,0,.0017-.0002s.0007-.0005.0012-.0007c.0205-.0071.041-.0043.0618-.0087.0447-.0097.0895-.0214.1338-.0187.0613.0034.1199.0197.175.0441.0024.0012.0054.0009.0078.0021.1174.0543.2139.153.2603.2844.0645.1797.0967.3638.0967.5479v.001ZM24.3252,14.2737c-1.9979,1.4044-6.2501,2.1494-10.3253,2.1494s-8.3285-.745-10.3264-2.1494c.5101,2.7542,2.2495,5.0491,4.9768,6.4307.626.3198,1.3027.5859,2.0156.793.2646.0767.417.354.3408.6191-.0635.2188-.2637.3608-.4805.3608-.0459,0-.0928-.0063-.1396-.02-.3137-.0909-.6165-.2-.9167-.312l.1492.3032c.125.2529.3516.4473.6211.5332,1.0996.3438,2.3652.5186,3.7588.5186,1.3945,0,2.6602-.1748,3.7617-.519.2676-.0854.4932-.2798.6182-.5327l.1479-.3004c-.303.1129-.6078.2217-.9194.3102-.0449.0127-.0908.019-.1367.019-.2764,0-.502-.2236-.502-.5,0-.2402.168-.4409.3936-.4893.6875-.1973,1.3555-.4604,1.9863-.7832,2.7334-1.3864,4.4678-3.6791,4.9767-6.4311ZM12.3485,8.091c.0615-.1738.0205-.3594-.0908-.4907.0352-.1699-.0186-.353-.1572-.4761-.208-.1836-.5234-.1646-.7061.0425-.1641.1851-.2236.4458-.1592.6968.0645.2505.2422.4492.4746.5317.0547.0195.1113.0288.167.0288.2061,0,.3984-.1279.4717-.333ZM10.8866,10.5749c-.4111.083-.748.4155-.8398.8276-.0596.2695.1777.5205.4473.5806.0342.0073.0703.0112.1055.0112.2451,0,.5068-.1719.5596-.4072.1572.2271.4688.2832.6953.1255s.2832-.4692.125-.6958c-.2402-.3477-.6855-.5269-1.0928-.4419ZM16.2772,10.8649c.0195,0,.0381-.001.0576-.0034.2744-.0308.4717-.2783.4404-.5527-.0176-.1538.001-.2866.0498-.3706.0234-.0386.0537-.063.0664-.0962.0068.1787.1094.3428.2705.4263.1787.0928.3984.0679.5537-.064.0986-.0845.2422-.1201.3691-.0884.1279.0322.2432.1333.2939.2583.1025.2559.3936.3784.6504.2754.2568-.104.3799-.3955.2754-.6514-.1689-.4165-.543-.7432-.9775-.8525-.2305-.0576-.4727-.0532-.7002.0078-.1641-.1694-.3838-.2769-.6133-.2964-.4092-.0396-.8213.188-1.0498.5732-.1611.2764-.2246.6187-.1826.9907.0293.2554.2451.4438.4961.4438ZM17.702,14.36c.0508.0161.1025.0239.1533.0239.2109,0,.4082-.1348.4756-.3467.0332-.1025.127-.1904.2305-.2144.0996-.0249.2197.0132.292.0889.1914.2007.5078.207.707.0176.2002-.1904.208-.5073.0176-.707-.3154-.3311-.8018-.4771-1.2432-.3735-.4473.1035-.8135.4414-.9551.8818-.085.2632.0596.5444.3223.6294ZM7.5721,11.8078c.0508-.2715-.127-.5332-.3984-.584-.2666-.0518-.5332.127-.584.3984-.1045.5522.2266,1.1313.752,1.3188.0557.0195.1123.0288.168.0288.2051,0,.3984-.1274.4707-.3325.0928-.2598-.043-.5459-.3027-.6387-.0635-.0225-.1182-.1226-.1055-.1909ZM16.0624,6.7399c-.1201-.1401-.2969-.228-.4844-.2412-.1797-.0068-.376.0498-.5146.1719-.2842.2515-.3145.707-.0654.9941.0986.1138.2383.1724.3779.1724.1162,0,.2334-.04.3271-.1221.0576-.0493.0996-.1084.1289-.1724.0625-.02.123-.0522.1758-.0981.21-.1797.2344-.4951.0547-.7046ZM13.4149,13.6423c-.1309.2427-.04.5459.2031.6772.0752.0405.1572.0596.2373.0596.0732,0,.1465-.0166.2129-.0479.1475.0454.3105.0215.4414-.0742.2227-.1631.2715-.4761.1084-.6987-.1406-.1938-.3682-.2944-.623-.2822-.249.0171-.4658.1538-.5801.3662ZM21.4052,10.9704c-.2461-.1191-.5469-.0161-.667.2339-.1475.3062-.1104.6772.0957.9448.1084.1406.2793.228.4453.228.0928,0,.1846-.0273.2627-.0874.2188-.1685.2656-.4326.0967-.6519.1201-.2485.0156-.5474-.2334-.6675Z",
+      "name": {
+        "ar-AE": "بيلاف",
+        "de-DE": "Pilaw",
+        "en-US": "Pilaf",
+        "kk-KZ": "Палау",
+        "ru-RU": "Плов",
+        "uk-UA": "Плов"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 7200,
+          "min": 1200,
+          "step": 300,
+          "round": 1,
+          "default": 3600,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 120,
+          "min": 120,
+          "step": 1,
+          "round": 1,
+          "default": 120,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M25.4989,12.4618v-.0007c0-.0236-.0112-.0458-.0122-.0693-.0073-.1599-.0282-.3205-.0835-.4775-.0004-.001-.0012-.0017-.0017-.0027-.0001-.0005,0-.0011-.0002-.0016-.0098-.0265-.0288-.0455-.0424-.0693-.0192-.0338-.0345-.0705-.0602-.0982-.0171-.0184-.04-.0286-.0594-.0441-.0309-.0248-.0599-.0526-.0956-.0694-.0093-.0044-.0203-.0039-.0298-.0077-.05-.0198-.1016-.0361-.156-.0389-.0105-.0005-.021.0044-.0315.0045-.0537.0006-.1082.0042-.1619.0233-.0007.0002-.0012.0009-.002.0012s-.0012,0-.002.0003c-.0292.0106-.0503.0313-.0762.0464-.0311.0182-.0657.0319-.0914.0557-.0253.0233-.0404.0536-.0602.0812-.0176.0246-.0402.0457-.053.0731-.0137.0289-.0161.0615-.0242.0927-.0079.0312-.0212.0607-.0232.0933-.0013.0258.0083.052.011.0782.004.0388.0028.0776.0164.1161.0154.0428.0166.0837.0228.1251.0045.0303.0157.0581.0157.0911-.0049,1.2362-3.9976,2.9586-10.4995,2.9586-6.4963,0-10.4875-1.72-10.498-2.9559v-.005c0-.0684.0127-.1387.04-.2139.0918-.2607-.0449-.5464-.3047-.6382-.0652-.0226-.1318-.031-.1968-.027-.1952.0114-.3732.1356-.4429.3312-.0645.1821-.0967.3662-.0967.5479,0,.0023.001.0044.001.0067v.108c0,3.8384,2.022,7.0775,5.5396,8.926l.6821,1.3879c.2451.4951.6875.8755,1.2168,1.0444,1.1992.375,2.5645.5649,4.0596.5649,1.4941,0,2.8604-.1899,4.0625-.5654.5293-.1685.9717-.5498,1.2139-1.0449l.6821-1.385c3.5632-1.8745,5.5851-5.1577,5.5415-9.0421v-.0009ZM19.3485,20.7048c-.6289.3223-1.2959.5854-1.9824.7827-.2275.0469-.3965.248-.3965.4897,0,.2764.2256.5.502.5.0459,0,.0918-.0063.1367-.019.3113-.0885.6156-.1973.918-.31l-.1484.3012c-.123.252-.3496.4463-.6172.5317-1.1025.3442-2.3682.519-3.7617.519s-2.6592-.1748-3.7578-.5181c-.2705-.0864-.4971-.2812-.6221-.5337l-.149-.303c.3.1119.6027.2209.9166.3118.0469.0137.0938.02.1396.02.2168,0,.417-.1421.4805-.3608.0762-.2651-.0762-.5425-.3408-.6191-.7148-.2075-1.3926-.4741-2.0156-.793-2.7273-1.3816-4.4667-3.6765-4.9768-6.4307,1.9978,1.4044,6.2502,2.1494,10.3254,2.1494s8.3284-.7451,10.3263-2.1494c-.5089,2.752-2.2433,5.0447-4.9767,6.4312ZM4.3329,11.9899c0-.4067.2363-.7729.7021-1.0879.2275-.1543.54-.0952.6943.1343.1553.2285.0947.5396-.1338.6938-.2412.1631-.2627.2593-.2627.2603.0557.4395,2.8047,1.5996,8.666,1.5996s8.6113-1.1602,8.667-1.6011c0,0-.0234-.0972-.2617-.2583-.2295-.1548-.29-.4653-.1348-.6943s.4678-.2871.6934-.1348c.4668.3149.7031.6812.7031,1.0884,0,2.0566-6.3232,2.6001-9.667,2.6001s-9.666-.5435-9.666-2.6001ZM6.3143,10.3879c0-1.0581,1.6855-1.4165,2.2393-1.5342.2598-.0557.5352.1147.5928.3853.0576.27-.1152.5356-.3857.5933-1.2793.272-1.4492.5762-1.4502.5791.21.2817,2.3994.9668,6.6885.9668,4.2578,0,6.4463-.6748,6.6934-1.0435h-.001c-.0322,0-.1885-.2437-1.0732-.5137-.2646-.0801-.4131-.3599-.333-.624.0811-.2632.3613-.4146.624-.332.4395.1338,1.7754.541,1.7754,1.5229,0,1.894-6.4023,1.9902-7.6855,1.9902s-7.6846-.0962-7.6846-1.9902ZM9.8729,9.0632c-.0459-.2607.0312-.6406.6582-.9668,1.0938-.5693,2.7236-.8086,4.8291-.7217.2754.0117.4902.2451.4785.521-.0127.2754-.2236.4932-.5215.478-1.8379-.0776-3.25.1035-4.1895.543.9424.292,3.4971.5068,5.3359.1445.834-.1641,1.1377-.3882,1.1826-.4839.0508-.1104-.1162-.4766-.7812-.9893-.5693-.4385-1.1455-.6265-1.6543-.792-1.0205-.3315-2.0752-.6748-1.7051-2.8789.0459-.2729.3086-.4507.5762-.4102.2725.0459.4561.3037.4102.5762-.2275,1.3535.0635,1.4482,1.0273,1.7622.5576.1812,1.251.4067,1.9561.9507,1.2773.9839,1.291,1.7402,1.0781,2.2017-.4688,1.0088-2.583,1.2461-4.3213,1.2461-.9189,0-1.7324-.0664-2.1416-.1201-1.8418-.2402-2.1523-.6929-2.2178-1.0605Z",
+      "name": {
+        "ar-AE": "السباغيتي",
+        "de-DE": "Spaghettitrgern",
+        "en-US": "Spaghetti",
+        "kk-KZ": "Спагетти ",
+        "ru-RU": "Паста",
+        "uk-UA": "Спаґеті "
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 1200,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 480,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 110,
+          "min": 110,
+          "step": 1,
+          "round": 1,
+          "default": 110,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M25.4476,7.0002v14.2646c0,1.7842-1.458,3.2354-3.251,3.2354H5.6996c-1.793,0-3.251-1.4512-3.251-3.2354V7.0002c0-.2764.2236-.5.5-.5s.5.2236.5.5v14.2646c0,1.2324,1.0098,2.2354,2.251,2.2354h16.4971c1.2412,0,2.251-1.0029,2.251-2.2354V7.0002c0-.2764.2236-.5.5-.5s.5.2236.5.5ZM2.5521,4.0002c0-.2764.2236-.5.5-.5h22c.2764,0,.5.2236.5.5s-.2236.5-.5.5h-2.5v16c0,.8271-.6729,1.5-1.5,1.5H7.0521c-.8271,0-1.5-.6729-1.5-1.5V4.5002h-2.5c-.2764,0-.5-.2236-.5-.5ZM11.5521,7.5002v4h5v-4h-5ZM16.5521,6.5002v-2h-5v2h5ZM16.5521,16.5002v-4h-5v4h5ZM11.5521,17.5002v3.5h5v-3.5h-5ZM6.5521,16.5002h4v-4h-4v4ZM17.5521,16.5002h4v-4h-4v4ZM21.5521,7.5002h-4v4h4v-4ZM10.5521,7.5002h-4v4h4v-4ZM7.0521,21.0002h3.5v-3.5h-4v3c0,.2759.2246.5.5.5ZM21.5521,20.5002v-3h-4v3.5h3.5c.2754,0,.5-.2241.5-.5ZM21.5521,4.5002h-4v2h4v-2ZM6.5521,4.5002v2h4v-2h-4Z",
+      "name": {
+        "ar-AE": "القلي العميق",
+        "de-DE": "Frittieren ",
+        "en-US": "Deep frying",
+        "kk-KZ": "Терең қуыру",
+        "ru-RU": "Фритюр ",
+        "uk-UA": "Фритюр "
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 900,
+          "min": 180,
+          "step": 60,
+          "round": 1,
+          "default": 300,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 170,
+          "min": 150,
+          "step": 1,
+          "round": 1,
+          "default": 160,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M24.675,18.3732c-.3623.4316-.8936.6787-1.457.6787H4.7824c-.5645,0-1.0957-.2476-1.458-.6797-.3623-.4316-.5137-.9985-.415-1.5542l1.9648-11.2266c.1602-.9126.9473-1.5747,1.873-1.5747h9.9883c.2764,0,.5.2236.5.5s-.2236.5-.5.5H6.7473c-.4385,0-.8125.3145-.8887.7476l-1.9648,11.2271c-.0469.2646.0254.5337.1963.7383.1719.2051.4238.3223.6924.3223h18.4355c.2676,0,.5195-.1172.6914-.3213.1719-.2051.2432-.4741.1973-.7393l-1.749-9.9912c-.0479-.272.1338-.5312.4062-.5791.2686-.0469.5303.1333.5781.4062l1.749,9.9912c.0977.5562-.0537,1.123-.416,1.5547ZM15.8537,7.5519c0-.2764-.2236-.5-.5-.5h-6.3984c-.6006,0-1.1172.4546-1.2021,1.0601l-.8643,6.5176c-.0459.356.0615.7124.2959.979.2275.2593.5557.4082.8984.4082h11.834c.3428,0,.6709-.1489.8984-.4082.2344-.2666.3418-.623.2959-.9805l-.5166-3.873c-.0381-.2744-.2988-.4663-.5625-.4297-.2734.0366-.4658.2881-.4297.5615l.5166,3.8716c.0127.0962-.0293.1606-.0547.1904-.0273.0308-.0752.0679-.1475.0679h-11.834c-.0723,0-.1201-.0371-.1475-.0679-.0254-.0298-.0674-.0942-.0547-.189l.8633-6.5127c.0156-.1099.1084-.1953.2109-.1953h6.3984c.2764,0,.5-.2236.5-.5ZM20.0588,19.5773c-.2715-.0449-.5332.127-.583.3999l-.5742,3.0635c-.0459.2549-.2012.4814-.416.6157-.46.2734-1.418.8433-4.4854.8433s-4.0254-.5698-4.4766-.8379c-.2236-.1396-.3789-.3662-.4258-.6235l-.5732-3.061c-.0508-.2729-.3164-.4443-.583-.3999-.2715.0513-.4502.3125-.3994.5835l.5723,3.0586c.0967.5317.417,1.002.8887,1.2964.8184.4868,2.0527.9839,4.9971.9839s4.1787-.4971,5.0059-.9893c.4629-.2891.7832-.7593.8789-1.2886l.5732-3.061c.0508-.271-.1279-.5322-.3994-.5835ZM13.9494,10.9391c-.0654.0259-.126.0645-.1748.1133-.1953.1953-.1953.5117,0,.707.1416.1421.3467.1802.5225.1172.0176-.0059.0352-.0127.0527-.0205.2939-.1357.668-.2285,1.1445-.2837.1758-.02.3271-.1318.3994-.2935.7617-1.7153,2.8008-6.2749,3.083-6.77.4619-.792.8936-1.353,1.9102-.7646.9307.5386.8271,1.1113.2881,2.0454-.1836.3203-1.6182,2.3428-3.8369,5.4102-.1621.2236-.1113.5361.1123.6982.0889.064.1914.0947.293.0947.1543,0,.3076-.0718.4053-.207,1.6299-2.2539,3.6289-5.0376,3.8926-5.4971.3252-.562,1.3115-2.272-.6533-3.4102-1.959-1.1328-2.9502.5684-3.2832,1.1406-.3252.5713-2.4443,5.3237-3.0117,6.5986-.4453.0698-.8223.1758-1.1436.3213ZM9.5734,12.8307c-.0918.2607.0459.5459.3066.6372.8018.2798,1.4707.4146,2.1025.4146.3008,0,.5938-.0308.8887-.0908.3457-.0708.6885-.1602,1.0303-.25.5039-.1318.9795-.2568,1.4629-.3213,1.0059-.1328,1.6553.0176,2.1084.4917.1895.2002.5049.207.707.0161.1992-.1904.207-.5068.0156-.7065-.9014-.9434-2.123-.9058-2.9629-.7925-.5459.0728-1.0732.2114-1.585.3452-.3242.085-.6494.1704-.9766.2378-.7334.1504-1.4463.0664-2.4609-.2886-.2607-.0898-.5469.0469-.6367.3071Z",
+      "name": {
+        "ar-AE": "زبادي",
+        "de-DE": "Joghurt",
+        "en-US": "Yogurt",
+        "kk-KZ": "Йогурт",
+        "ru-RU": "Йогурт",
+        "uk-UA": "Йогурт"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 43200,
+          "min": 14400,
+          "step": 1800,
+          "round": 1,
+          "default": 28800,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 0,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 40,
+          "min": 40,
+          "step": 1,
+          "round": 1,
+          "default": 40,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M13.6633,25.4972c-1.5176,0-2.9736-.5234-4.3018-1.5601-.5-.2871-.9395-.7925-1.2588-1.4058-1.6934-.2207-3.0791-1.1338-3.7422-2.4805-.6367-1.292-.5225-2.7754.3135-4.0698l.1592-.2017c1.1553-1.4189,3.0879-3.7944,1.2188-8.1318-.4951-1.147-.252-2.6235.6035-3.6738,1.0176-1.249,2.7188-1.7329,4.666-1.3325,2.6611.5483,3.8789,2.0874,4.749,4.2534.0244-.0142.0498-.0278.0752-.041,1.498-.8008,3.3604-.5894,5.1025.5801,3.7539,2.521,2.7656,7.5796,2.3936,9.4839-.4619,2.3584-3.582,6.6753-7.4268,8.1016-.8613.3193-1.7158.478-2.5518.478ZM18.1096,7.3713c-.6562,0-1.1631.1885-1.4941.3647-.876.4673-1.4648,1.3525-1.4648,2.2031,0,5.3452-3.3193,6.9922-5.1025,7.8774l-.1846.0918c-1.1133.7148-1.3262,1.7866-1.2998,2.5557.04,1.209.7012,2.2803,1.3164,2.6177.0244.0132.0479.0288.0693.0459,1.8027,1.4209,3.7949,1.7407,5.918.9541,3.4697-1.2871,6.3848-5.2725,6.791-7.3438.3711-1.9009,1.2354-6.3232-1.9668-8.4741-1.0088-.6768-1.8809-.8926-2.582-.8926ZM10.0022,3.5002c-1.0869,0-1.9785.3779-2.5713,1.105-.627.769-.8115,1.833-.4609,2.647,2.1104,4.894-.1475,7.668-1.3604,9.1587l-.127.1553c-.6084.9492-.7021,2.0742-.2246,3.043.4434.9019,1.3271,1.5547,2.4365,1.8296-.0752-.3076-.1201-.6245-.1309-.9409-.0488-1.4541.5928-2.6821,1.8066-3.458l.2334-.1191c1.7002-.8438,4.5469-2.2563,4.5469-6.9814,0-.8857.4072-1.7627,1.0889-2.4248-.7949-2.0972-1.7734-3.4102-4.1191-3.8936-.3916-.0806-.7646-.1206-1.1182-.1206ZM13.2229,19.026c-.1953,0-.3809-.1152-.4609-.3066-.1074-.2549.0127-.5479.2676-.6543,1.3086-.5488,3.7354-2.2334,3.5527-4.6812-.0205-.2754.1865-.5151.4619-.5356.2617-.0234.5156.186.5361.4614.2246,3.0156-2.626,5.0322-4.1641,5.6772-.0635.0269-.1289.0391-.1934.0391ZM8.5031,15.7258c-.1133,0-.2275-.0381-.3213-.1167-.2119-.1777-.2393-.4932-.0615-.7046.7549-.9004,1.8975-3.1655.8174-5.292-.125-.2466-.0264-.5474.2197-.6724.2451-.1226.5469-.0264.6729.2192,1.3154,2.5928-.042,5.312-.9443,6.3877-.0986.1177-.2402.1787-.3828.1787Z",
+      "name": {
+        "ar-AE": "الفول / الحمص",
+        "de-DE": "Bohnen/Kichererbsen",
+        "en-US": "Beans/chickpeas",
+        "kk-KZ": "Бұршақ / ноқат",
+        "ru-RU": "Бобы/нут",
+        "uk-UA": "Боби / нут"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 14400,
+          "min": 3600,
+          "step": 600,
+          "round": 1,
+          "default": 3600,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 96,
+          "min": 96,
+          "step": 1,
+          "round": 1,
+          "default": 96,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M20.9787,6.9371v-.4918c.4618-.2074.7871-.6677.7871-1.2064,0-.5486-.3357-1.02-.8121-1.2209-.1259-.8561-.8589-1.5179-1.7494-1.5179h-10.2031c-.876,0-1.6008.6398-1.7441,1.4756-.5804.1411-1.0215.6405-1.0215,1.2631,0,.6127.4258,1.1068.9912,1.2584v.413c-1.679.2564-2.9736,1.6973-2.9736,3.4468v11.6431c0,1.9297,1.5703,3.5,3.5,3.5h12.4932c1.9297,0,3.5-1.5703,3.5-3.5v-11.6431c0-1.6782-1.1888-3.082-2.7676-3.42ZM7.5617,4.9142h12.8789c.1797,0,.3252.1455.3252.3247,0,.1797-.1455.3262-.3252.3262H7.5617c-.1797,0-.3262-.1465-.3262-.3262,0-.1792.1465-.3247.3262-.3247ZM19.9787,6.5651v.292h-11.752v-.292h11.752ZM9.0012,3.5002h10.2031c.2949,0,.5432.1713.6743.4141h-11.5508c.1311-.2427.379-.4141.6733-.4141ZM22.7463,22.0002c0,1.3784-1.1211,2.5-2.5,2.5H7.7531c-1.3789,0-2.5-1.1216-2.5-2.5v-11.6431c0-1.3784,1.1211-2.5,2.5-2.5h12.4932c1.3789,0,2.5,1.1216,2.5,2.5v11.6431ZM20.9465,9.4465l-1.0303.4028c-.4238.1665-.8916.1685-1.3154.0103l-.9082-.3418c-.6309-.2358-1.3262-.2388-1.957-.0122l-1.041.3745c-.4072.147-.8584.144-1.2676-.0093l-.9424-.353c-.6299-.2358-1.3252-.2393-1.957-.0117l-1.0215.3672c-.418.1504-.8779.1436-1.2939-.0181l-1.0439-.4077c-.2842-.1123-.6055-.0781-.8594.0947-.2539.1724-.4053.4585-.4053.7651v11.3867c0,1.2139.9873,2.2012,2.2012,2.2012h11.9033c1.2129,0,2.2002-.9873,2.2002-2.2012v-11.3867c0-.3066-.1514-.5928-.4053-.7651-.2529-.1724-.5742-.2065-.8564-.0957ZM21.2082,21.694c0,.6621-.5381,1.2012-1.2002,1.2012h-11.9033c-.6621,0-1.2012-.5391-1.2012-1.2012v-11.2764l.9453.3691c.6396.25,1.3477.2607,1.9951.0273l1.0215-.3672c.4111-.1484.8613-.145,1.2686.0073l.9414.353c.6318.2358,1.3262.2402,1.958.0137l1.04-.374c.4111-.1484.8613-.1445,1.2686.0068l.9082.3423c.6572.2441,1.3779.2393,2.0293-.0151l.9287-.3633v11.2764ZM21.2082,10.3083l-.001-.0005.001-.0005v.001ZM9.2248,12.4792c-.9199,0-1.6689.7485-1.6689,1.6689s.749,1.6689,1.6689,1.6689,1.6689-.7485,1.6689-1.6689-.749-1.6689-1.6689-1.6689ZM9.2248,14.8171c-.3691,0-.6689-.3003-.6689-.6689s.2998-.6689.6689-.6689.6689.3003.6689.6689-.2998.6689-.6689.6689ZM14.1135,18.8561c-.6855,0-1.2441.5581-1.2441,1.2441,0,.6855.5586,1.2437,1.2441,1.2437s1.2441-.5581,1.2441-1.2437c0-.686-.5586-1.2441-1.2441-1.2441ZM13.8693,20.1003c0-.1348.1094-.2441.2441-.2441s.2441.1094.2441.2441c0,.2686-.4883.2686-.4883,0ZM18.7893,14.8171c-.9199,0-1.6689.7485-1.6689,1.6689s.749,1.6694,1.6689,1.6694,1.6689-.749,1.6689-1.6694-.749-1.6689-1.6689-1.6689ZM18.7893,17.1554c-.3691,0-.6689-.3003-.6689-.6694,0-.3687.2998-.6689.6689-.6689s.6689.3003.6689.6689c0,.3691-.2998.6694-.6689.6694ZM14.4318,13.0851c0-.1761.1427-.3188.3188-.3188.176,0,.3188.1428.3188.3188s-.1428.3188-.3188.3188c-.1761,0-.3188-.1428-.3188-.3188ZM18.8967,13.298c0-.1761.1428-.3188.3188-.3188.1761,0,.3188.1428.3188.3188s-.1427.3188-.3188.3188c-.176,0-.3188-.1428-.3188-.3188ZM13.1577,14.573c0-.1761.1428-.3188.3188-.3188.1761,0,.3188.1428.3188.3188s-.1427.3188-.3188.3188c-.176,0-.3188-.1428-.3188-.3188ZM9.3315,19.462c0,.1761-.1428.3188-.3188.3188-.1761,0-.3188-.1428-.3188-.3188s.1427-.3188.3188-.3188c.176,0,.3188.1428.3188.3188ZM10.6074,20.737c0,.1761-.1427.3188-.3188.3188-.176,0-.3188-.1428-.3188-.3188s.1428-.3188.3188-.3188c.1761,0,.3188.1428.3188.3188ZM16.9845,19.462c0,.1761-.1427.3188-.3188.3188s-.3188-.1428-.3188-.3188.1427-.3188.3188-.3188.3188.1428.3188.3188Z",
+      "name": {
+        "ar-AE": "مربى",
+        "de-DE": "Marmelade",
+        "en-US": "Jam",
+        "kk-KZ": "Тосап",
+        "ru-RU": "Варенье",
+        "uk-UA": "Варення"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 14400,
+          "min": 1800,
+          "step": 300,
+          "round": 1,
+          "default": 3600,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 106,
+          "min": 102,
+          "step": 2,
+          "round": 1,
+          "default": 102,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M24.6407,14.798v6.9966c0,1.7314-1.4082,3.1396-3.1387,3.1396H6.5362c-1.7314,0-3.1406-1.4082-3.1406-3.1396v-6.9966c0-.2764.2236-.5.5-.5s.5.2236.5.5v6.9966c0,1.1797.96,2.1396,2.1406,2.1396h14.9658c1.1797,0,2.1387-.96,2.1387-2.1396v-6.9966c0-.2764.2236-.5.5-.5s.5.2236.5.5ZM24.505,9.7868H3.4952c-1.1006,0-1.9951.895-1.9951,1.9946s.8945,1.9946,1.9951,1.9946h1.7812c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5h-1.7812c-.5488,0-.9951-.4463-.9951-.9946s.4463-.9946.9951-.9946h21.0098c.5488,0,.9951.4463.9951.9946s-.4463.9946-.9951.9946h-1.7812c-.2764,0-.5.2236-.5.5s.2236.5.5.5h1.7812c1.1006,0,1.9951-.895,1.9951-1.9946s-.8945-1.9946-1.9951-1.9946ZM3.5362,9.155c-.1836-.2061-.165-.522.042-.7056,1.5981-1.4212,4.9602-2.3987,8.8245-2.6143-.1522-.2697-.2463-.5765-.2463-.9077,0-1.0264.835-1.8613,1.8613-1.8613s1.8613.835,1.8613,1.8613c0,.3312-.0942.6381-.2465.9078,3.8798.2161,7.2493,1.1993,8.8422,2.6293.2051.1846.2227.5005.0381.7061-.0986.1099-.2354.166-.3721.166-.1191,0-.2383-.042-.334-.1279-1.6123-1.4473-5.5459-2.4199-9.7891-2.4199-4.2275,0-8.1553.9678-9.7754,2.4077-.2051.1836-.5215.165-.7061-.0415ZM14.0177,5.7887c.4746,0,.8613-.3862.8613-.8613s-.3867-.8613-.8613-.8613-.8613.3862-.8613.8613.3867.8613.8613.8613ZM18.3067,18.6755c-.0996.1948-.2324.3643-.3945.5029-.21.1797-.2344.4956-.0547.7051.0986.1157.2393.1748.3799.1748.1152,0,.2314-.0396.3252-.1201.2617-.2241.4746-.4951.6348-.8071.1572-.3076.2549-.6411.29-.9922.0332-.3496.002-.6963-.0938-1.0303-.0957-.3379-.252-.6475-.4639-.9214-.4307-.5542-1.041-.9023-1.7197-.979-.54-.0649-1.082.0547-1.5508.333-.3135-.2012-.6768-.3091-1.0518-.3091h-.0127c-.2695,0-.5322.0552-.7803.1636-.2471.1069-.4678.2622-.6582.4619-.1914.1997-.1836.5161.0166.707s.5176.1836.7061-.0166c.0977-.1025.21-.1816.335-.2358.1221-.0532.25-.0801.3848-.0801h.0059c.2549,0,.498.1021.6855.2871.1816.1812.4717.1943.6719.0293.3242-.271.7266-.394,1.1348-.3472.4092.0469.7793.2593,1.043.5986.1328.1719.2314.3677.293.5825.0605.2139.0801.436.0596.6592-.0225.2246-.085.438-.1855.6338ZM13.9933,13.0661c-.4756,0-.9277.187-1.2734.5264-.2148.21-.376.4663-.4746.7485-.5059-.0181-1.0156.1226-1.4629.4062-.5859.373-1.0068.9585-1.1865,1.6479-.1875.7129-.1006,1.4609.2441,2.106.3428.6436.9287,1.1274,1.6094,1.3271.0469.0142.0938.0205.1406.0205.2168,0,.416-.1411.4795-.3589.0781-.2651-.0732-.543-.3389-.6206-.4229-.125-.791-.4302-1.0078-.8389-.2227-.4165-.2812-.9194-.1602-1.3818.1162-.4453.3848-.8213.7568-1.0576.3652-.2314.7939-.3057,1.2041-.21.1396.0327.292.0024.4092-.084.1182-.0869.1924-.2207.2031-.3662.0176-.2402.1182-.4619.2832-.6245.1582-.1548.3623-.2402.5752-.2402.5479.001.9141.1143,1.0479.6777.0625.269.3301.4336.6016.3721.2686-.0635.4346-.333.3711-.6016-.2266-.9595-.9053-1.4468-2.0215-1.4482ZM14.9903,17.2438h-.002c-.2754.001-.499.2256-.498.5015l.0098,3.2642c.001.2759.2246.4985.5.4985h.002c.2754-.001.499-.2256.498-.5015l-.0098-3.2642c-.001-.2759-.2246-.4985-.5-.4985ZM16.7599,18.276l-.8896,3.1538c-.0752.2656.0801.542.3457.6172.0449.0127.0908.0186.1357.0186.2188,0,.4189-.144.4814-.3643l.8896-3.1538c.0752-.2656-.0801-.542-.3457-.6172-.2646-.0737-.542.0806-.6172.3457ZM12.671,17.9303c-.2656.0752-.4209.3516-.3457.6172l.8896,3.1538c.0625.2202.2627.3643.4814.3643.0449,0,.0908-.0059.1357-.0186.2656-.0752.4209-.3516.3457-.6172l-.8896-3.1538c-.0752-.2656-.3525-.4204-.6172-.3457Z",
+      "name": {
+        "ar-AE": "الطهي بالبخار",
+        "de-DE": "Dampfgaren",
+        "en-US": "Steam",
+        "kk-KZ": "Бумен пісіру",
+        "ru-RU": "Варка на пару",
+        "uk-UA": "Пара"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 3600,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 300,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 115,
+          "min": 115,
+          "step": 1,
+          "round": 1,
+          "default": 115,
+          "round_alt": 1
+        }
+      },
+      "prepare": "temperature",
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M25.3925,18.5798l-9.0205-11.4727c.1436-.3452.1943-.7256.1445-1.1001-.1406-1.0698-1.0596-1.8613-2.126-1.8613-.0215,0-.042.0005-.0625.001-.0732-.0225-.1709-.0591-.2588-.0913-.5322-.188-1.4258-.5015-2.4199-.2217-1.0068.2798-1.6074,1.0229-1.96,1.4595l-.002.0029c-.0088-.0005-.0166-.001-.0254-.0015-.5654-.0308-1.5078-.0796-2.3838.4658-.875.5425-1.2412,1.3984-1.4717,1.9556l-.0049.001c-.5547.1279-1.4824.3418-2.1787,1.1191-.6934.7817-.793,1.7227-.8516,2.2832-.0088.0776-.0205.1797-.0322.2573-.373.7202-.3057,1.5854.167,2.2358v3.2065c0,.9629.6523,1.8101,1.5869,2.0601l20.3789,5.3823c.042.0112.085.0166.1279.0166.1094,0,.2168-.0356.3047-.104.123-.0947.1953-.2407.1953-.396v-4.8892c0-.1123-.0381-.2207-.1074-.3091ZM23.6866,18.0275L6.4603,13.5062c.3662-.5693.49-1.1762.5532-1.6769.4707-.1143,1.084-.3047,1.6318-.7661.5254-.4409.8164-.9927,1.0322-1.481.4883.0234,1.1309.0112,1.791-.2788.6553-.2896,1.0957-.7554,1.4062-1.1274.4609.1543,1.0918.3262,1.791.2329.4043-.0522.7793-.2168,1.0879-.4702l7.9329,10.0888ZM24.4999,23.1286l-19.75-5.2158c-.4971-.1328-.8438-.5825-.8438-1.0938v-3.3813c0-.1216-.0439-.2393-.125-.3306-.3203-.3643-.3721-.8926-.1289-1.3149.0273-.0479.0469-.0996.0566-.1538.0186-.0947.043-.2808.0566-.4131.0498-.4712.125-1.1841.6035-1.7241.4834-.5391,1.1621-.6953,1.6631-.811l.2607-.0649c.1484-.0381.2715-.1416.333-.2817l.1035-.2437c.1826-.4404.457-1.106,1.0771-1.4902.4355-.272.9121-.3306,1.3584-.3306.1777,0,.3506.0093.5137.0181.2275.0142.4668.0015.6084-.1636l.1738-.2041c.3203-.396.7588-.938,1.458-1.1323.6895-.1943,1.3428.0342,1.8252.2036.1279.0479.3145.1128.4141.1362.0488.0112.0986.0151.1494.0117.6055-.0415,1.1387.3911,1.2178.9893.0352.2646-.0244.5332-.166.7563-.1855.2891-.4844.4795-.8223.5229-.583.0757-1.1172-.1089-1.5449-.2578l-.1133-.0425c-.2002-.0747-.4951.0762-.6279.2422-.2686.3315-.6348.7861-1.1855,1.0288-.5537.2432-1.1406.208-1.5986.1821-.0039,0-.1074-.0044-.1113-.0044-.1895,0-.3623.1069-.4473.2764-.0176.0361-.0342.0747-.0625.1465-.1748.415-.3936.9316-.8438,1.3091-.4609.3882-1.0303.5171-1.4463.6113-.002.0005-.1123.0254-.1143.0254-.2012.0479-.3545.2261-.3818.4316-.001.0054-.0137.106-.0137.1113-.04.3979-.1006.9995-.4375,1.5098-.0947.1445-.2158.2583-.377.3521-.0967.0576-.2002.0996-.3086.125-.2266.0527-.3867.2544-.3867.4868v2.3179c0,.5972.4033,1.1196.9805,1.2695l18.9834,4.9946v.5957ZM5.7694,16.571c-.1377-.0356-.2334-.1602-.2334-.3022v-1.9619c.0044-.002.0082-.0045.0125-.0065l18.9514,4.9741v2.2249l-18.7305-4.9282ZM13.537,9.8185c-1.1055.5522-2.4814,1.2402-2.4814,2.5415,0,1.8799,2.001,2.5469,3.7139,2.5469,1.1553,0,2.9893-.5767,2.9893-2.124,0-.9868-.9023-1.5962-1.6807-1.8926.1504-.7036-.0107-1.4326-.459-2.0679-.126-.1782-.3486-.2661-.5576-.2007-.208.0659-.3467.2461-.3467.4639-.0742.1812-.7646.5264-1.1777.7329ZM15.1053,10.0832c.0518.2666.0244.4995-.0244.6777-.1113.416-.376.7065-.5195.7725l.416.9092c.2578-.1182.5039-.3442.7021-.6304.4561.1694,1.0791.5039,1.0791.9707,0,.7944-1.2959,1.124-1.9893,1.124-.2773,0-2.7139-.0435-2.7139-1.5469,0-.6831,1.0244-1.1953,1.9287-1.647.4209-.2104.8154-.4077,1.1211-.6299Z",
+      "name": {
+        "ar-AE": "تشيز كيك",
+        "de-DE": "Käsekuchen",
+        "en-US": "Cheesecake",
+        "kk-KZ": "Ірімшік торты",
+        "ru-RU": "Чизкейк",
+        "uk-UA": "Чізкейк"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 5400,
+          "min": 2400,
+          "step": 600,
+          "round": 1,
+          "default": 3600,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 120,
+          "min": 120,
+          "step": 1,
+          "round": 1,
+          "default": 120,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M20.7847,11.4728c0-.3262.335-.5742.6494-.478.585.1807,1.0967.3838,1.5215.6045.2451.1274.3408.4297.2129.6743-.0889.1714-.2637.2695-.4434.2695-.0781,0-.1572-.0181-.2305-.0562-.3691-.1919-.8203-.3711-1.3438-.5327-.2109-.0591-.3662-.252-.3662-.4814ZM21.0611,12.9992c-.624.1899-1.3184.353-2.0654.4854-.2715.0479-.4531.3071-.4053.5791.043.2427.2539.4131.4912.4131.0293,0,.0586-.0024.0879-.0078.7871-.1387,1.5215-.3115,2.1826-.5127.2646-.0806.4131-.3599.333-.624s-.3574-.4146-.624-.333ZM10.5152,13.6989c-1.8711-.21-3.1768-.561-3.9434-.8188-.2607-.0874-.5439.0527-.6328.314-.0879.2617.0527.5454.3145.6333.8115.2734,2.1914.6455,4.1504.8657.0186.002.0381.0029.0566.0029.251,0,.4668-.189.4961-.4443.0303-.2744-.167-.522-.4414-.5527ZM6.4126,12.07c.0527,0,.1074-.0083.1602-.0264,1.0625-.3594,3.3965-.9668,7.0771-1.002h.0039l-.0088-1c-3.8242.0366-6.2734.6763-7.3926,1.0547-.2617.0884-.4023.3721-.3135.6338.0703.2085.2646.3398.4736.3398ZM19.9576,21.504l-.6816,1.3859c-.2432.4956-.6865.876-1.2148,1.0444-1.1982.3755-2.5645.5654-4.0615.5654s-2.8633-.1899-4.0596-.5649c-.5303-.1689-.9736-.5493-1.2168-1.0449l-.6814-1.3854c-3.5195-1.8484-5.5422-5.0884-5.5422-8.9276v-.1147c0-2.5737,5.9248-3.9624,11.5-3.9624,1.4172,0,2.7981.0909,4.1206.2556.3438-.3755.6635-.7261.8843-.969l.5986-.6533c.8291-.9048,1.626-1.7739,2.4209-2.6909.2744-.312.6133-.6968,1.1123-.8711.5605-.1938,1.2705.0215,1.7725.5322.499.5059.71,1.2207.5225,1.7783-.1719.5049-.5508.8481-.8545,1.1235-.9033.8057-1.7578,1.6104-2.6455,2.4473l-.074.0695c.2806.0865.5408.1786.7906.2736.0895.034.1904.065.276.1001.0365.015.0654.0319.1012.0471.7848.3326,1.399.7081,1.8143,1.1207.4348.4316.6602.9016.6602,1.3988,0,.0038-.0016.0073-.0016.011.0392,3.8796-1.9821,7.1583-5.5404,9.0308ZM19.8658,11.3952c-.6055.5713-1.1953,1.1353-1.4404,1.3833-.2012.2085-.4629,1.374-.5889,1.9346-.041.1827-.0785.3466-.1157.5018,4.262-.4922,6.7692-1.7697,6.7778-2.7476-.0002-.4084-.4817-.9762-1.6696-1.5168-.4822-.2192-1.0819-.4329-1.8201-.6306l-1.1432,1.0754ZM17.3912,11.0192l-.3467.3594c-.3945.4048-.9043.5049-1.3535.5933-.1914.0381-.3857.0742-.5684.1421-.6816.2549-1.6016.7432-2.1094,1.6211l-.0752.125c-.1506.2432-.3918.6376-.6379,1.5176.5476.0267,1.1094.0453,1.6995.0453.9436,0,1.8275-.0399,2.661-.1057.0602-.1953.1256-.4888.2003-.8231.2646-1.1807.4814-2.0449.8545-2.4199.248-.251.8477-.8247,1.4648-1.4072l2.0645-1.9424c.8955-.8438,1.7559-1.6548,2.6631-2.4629.25-.2266.4883-.4434.5771-.7007.0557-.1689-.0352-.5-.2881-.7563-.25-.2529-.5703-.3462-.7314-.2896-.251.0879-.4727.3403-.6885.5845-.7988.9214-1.6016,1.7974-2.4365,2.709l-.5967.6514c-.5508.6045-1.7051,1.8696-2.3525,2.5591ZM3.4996,12.4621c0,1.053,2.9048,2.4564,7.7834,2.8506.3013-1.1581.6265-1.6909.8044-1.979l.0596-.0986c.5195-.8984,1.4277-1.6099,2.626-2.0576.2334-.0874.4805-.1382.7246-.1865.3506-.0688.6533-.1289.834-.313l.334-.3467c.1726-.184.3833-.4111.608-.6547-1.0626-.1063-2.1519-.1769-3.274-.1769-6.5059,0-10.5,1.7256-10.5,2.9624ZM24.3243,14.2746c-1.9985,1.4037-6.2498,2.1484-10.3247,2.1484s-8.3301-.7453-10.3275-2.1502c.5099,2.7546,2.2495,5.0497,4.9779,6.431.627.3208,1.3037.5874,2.0137.7925.2656.0771.418.354.3418.6196-.0635.2188-.2637.3608-.4805.3608-.0459,0-.0928-.0063-.1387-.0195-.313-.0905-.6154-.1994-.9154-.3114l.1488.3026c.125.2524.3506.4468.6211.5327,1.0977.3438,2.3633.5186,3.7588.5186s2.6611-.1748,3.7607-.519c.2686-.0854.4941-.2798.6191-.5322l.1484-.3018c-.3032.113-.6084.2221-.9209.311-.0449.0127-.0908.019-.1367.019-.2764,0-.502-.2236-.502-.5,0-.2402.168-.4409.3936-.4893.6895-.1978,1.3564-.4609,1.9854-.7827,2.7324-1.3859,4.4673-3.6782,4.9771-6.4301ZM11.3443,11.9621h-1.5176c-.2764,0-.5.2236-.5.5s.2236.5.5.5h1.5176c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5Z",
+      "name": {
+        "ar-AE": "عصيدة الحليب",
+        "de-DE": "Milchbrei",
+        "en-US": "Milk porridge",
+        "kk-KZ": "Сүт ботқасы",
+        "ru-RU": "Молочная каша",
+        "uk-UA": "Молочна каша"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 5400,
+          "min": 600,
+          "step": 300,
+          "round": 1,
+          "default": 3600,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 95,
+          "min": 95,
+          "step": 1,
+          "round": 1,
+          "default": 95,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M25.3573,22.2301c-.2656-.8516-.7725-1.5161-1.2646-2.0601.2266-1.5679.3955-3.2173.043-4.7891-.083-.376-.1963-.7354-.3096-1.0947-.1396-.4424-.2715-.8604-.3457-1.312-.0762-.458-.0889-1.3003-.0889-1.8965.0029-.0195.0039-.0396.0039-.0601v-.4785c-.0012-.0461-.0164-.0876-.0293-.1298.3121-.2713.5029-.5774.5029-.9303,0-.2764-.2236-.5-.5-.5-.1006,0-.1887.037-.2671.0881-.6864-.7275-2.0568-2.0291-2.7612-2.4138-.3555-.1934-.7197-.373-1.083-.5532-.7402-.3657-1.4404-.7114-2.0742-1.168-.1182-.084-.2324-.1719-.3477-.2593-.2607-.1987-.5225-.396-.8066-.5596-.6514-.374-1.4434-.5791-2.3564-.6104-.3477-.0078-.877-.0049-1.376.1646-.835.2812-1.4121.8965-1.9697,1.4917-.3857.4111-.75.7998-1.1768,1.0591-.2646.1602-.5674.2798-.8867.4062-.5391.2129-1.0957.4331-1.5479.8745-.1975.1902-1.2776,1.1586-1.7834,1.5919-.0847-.0661-.1865-.1119-.3025-.1119-.2764,0-.5.2236-.5.5,0,.3207.1609.6019.4219.8549-.0337.0684-.0569.1426-.0557.2242.0059.4292.0215,1.7354-.0889,2.3481-.0771.439-.2148.8486-.3613,1.2827-.1191.3525-.2373.7046-.3262,1.0752-.3857,1.6484-.1797,3.418-.0225,4.3252.0535.3085.1438.7075.3027,1.0828-.5215.4693-1.0585,1.0373-1.3389,1.7682-.1777.4463-.209.8442-.0889,1.1919.1172.3164.4111.7173,1.1602.8315.1748.0244.3496.0366.5254.0366.4326,0,.8662-.0732,1.2979-.2197.8633-.3066,1.6729-.3931,2.374-.2598.0801.0205.1592.0342.2363.0454,1.3262.2148,3.4229.3511,4.8154.4028.015.0015.0273-.0052.042-.0051.5056.0237.979.0358,1.3809.0358,1.7402,0,4.1719-.2207,5.6572-.5132.0801-.0161.1562-.0322.2002-.0464.6807-.1602,1.4355-.0625,2.252.293.583.2461,1.2051.3223,1.8115.2207.5674-.1089.9619-.4458,1.1152-.9556.1025-.3569.0732-.7856-.083-1.2686ZM7.412,8.2175c.3105-.3037.752-.478,1.2188-.6626.3447-.1362.7012-.2773,1.0381-.4814.5449-.3306.9736-.7876,1.3877-1.23.4951-.5283.9629-1.0269,1.5605-1.228.3477-.1187.751-.1211,1.0244-.1128.7451.0254,1.3809.186,1.8896.478.2471.1416.4727.3154.6982.4878.123.0938.2461.1875.3711.2764.7002.5039,1.4697.8843,2.2139,1.252.3525.1743.7051.3486,1.0488.5352.5834.3185,1.9963,1.6553,2.6128,2.3318-.9839.5601-3.835,1.3044-8.4771,1.3044-4.6018,0-7.4424-.7316-8.4495-1.2899.5431-.4626,1.6584-1.4644,1.8625-1.6608ZM24.4813,23.217c-.0312.1045-.0947.2075-.333.2529-.4141.0698-.833.0171-1.2412-.1553-1.0117-.4395-1.9756-.5581-2.9053-.3394-.0439.0137-.0889.022-.1348.0308-1.4297.2817-3.7783.4941-5.4629.4941-.4014,0-.873-.0122-1.3799-.0366-.0153-.0009-.0264.0051-.041.0053-1.7848-.0676-3.6095-.2198-4.665-.3906-.0479-.0073-.0938-.0142-.1709-.0327-.9082-.1733-1.8955-.0742-2.9209.2905-.4512.1533-.9092.1982-1.3506.1387-.208-.0322-.3311-.0952-.3613-.1777-.0166-.0479-.042-.1904.0781-.4917.2124-.5535.6587-1.0171,1.0958-1.4084.0004,0,.0006.0002.0009.0002.1064,0,.2129-.0337.3037-.103.2197-.168.2607-.4814.0938-.7007-.1758-.229-.3076-.6128-.4043-1.1738-.1436-.833-.334-2.4512.0107-3.9258.0801-.3384.1904-.6611.2998-.9849.1523-.4507.3096-.9165.3984-1.4277.0967-.5344.1105-1.4079.1069-2.1433,2.0807.9396,6.0619,1.2302,8.5005,1.2302,2.3969,0,6.2853-.2797,8.3943-1.1807-.0029.7756.0121,1.6198.1008,2.15.085.521.2344.9937.3779,1.4502.1055.3315.21.6626.2871,1.0107.334,1.4854.1387,3.1177-.0898,4.6626-.0225.1514.0254.3042.1299.4155.4629.4927.9678,1.0977,1.2051,1.8569.0938.2876.1201.5327.0771.6836ZM13.9061,6.2868c0-.2764.2236-.5.5-.5.2656,0,.4824.207.499.4688.2266.0547.4004.2598.3945.499-.0078.271-.2148.4873-.4863.4873-.5889,0-.9072-.4922-.9072-.9551ZM11.0428,7.8283c-.0645-.2627.0752-.5249.3359-.5972.3057-.0845.54-.0034.6807.0811.3252.1948.4199.5532.4355.6226.0596.2695-.1094.5371-.3789.5972-.0371.0083-.0732.0122-.1094.0122-.2119,0-.4043-.1348-.4736-.3384-.2246-.0034-.4355-.1528-.4902-.3774ZM8.9198,9.3908c.1211-.25.4189-.353.668-.2344l.2197.105c.25.1182.3564.416.2383.6655-.0859.1807-.2656.2861-.4521.2861-.0723,0-.1445-.0156-.2139-.0483l-.2256-.1069c-.249-.1196-.3535-.4185-.2344-.667ZM13.828,10.1471c-.0596-.2686.0293-.5596.2334-.7583.1904-.186.4463-.2617.6953-.2026.2676.0659.4326.3364.3662.6045-.041.1699-.165.2979-.3174.3525-.04.1851-.1836.3398-.3809.3838-.0361.0078-.0732.0117-.1084.0117-.2295,0-.4365-.1587-.4883-.3916ZM17.0565,8.8923c.2139-.3418.585-.562.9697-.5742.4023.0127.7734.1885,1.002.5181.1582.2271.1016.5386-.125.6963-.2266.1572-.5391.1016-.6953-.125-.0439-.0635-.1348-.0913-.1523-.0894-.041.001-.1064.0342-.1494.1035-.0957.1519-.2588.2354-.4248.2354-.0908,0-.1826-.0244-.2646-.0757-.2344-.146-.3057-.4546-.1602-.689ZM7.5692,16.5051c.1396-.2388.4463-.3149.6846-.1768.8408.4956,1.8145.8311,2.8145.9697.2734.0376.4648.29.4268.5635-.0342.2505-.249.4316-.4941.4316-.0234,0-.0459-.0015-.0693-.0049-1.1299-.1562-2.2314-.5361-3.1855-1.0986-.2383-.1401-.3174-.4468-.1768-.6846ZM13.4989,20.4909c.0186.2754-.1904.5137-.4658.5322-.291.0195-.583.0288-.874.0288-.7061,0-1.4111-.0566-2.1064-.1694-.9092-.1475-1.6484-.5376-2.3105-.9375-.2373-.1426-.3125-.4502-.1699-.6865.1436-.2373.4541-.3105.6855-.1699.5771.3481,1.2129.6865,1.9551.8066.9092.1479,1.8359.1919,2.7539.1299.2559-.0137.5146.1899.5322.4658Z",
+      "name": {
+        "ar-AE": "أرز منقوع",
+        "de-DE": "Grütze",
+        "en-US": "Soaked rice",
+        "kk-KZ": "Жарма",
+        "ru-RU": "Крупа",
+        "uk-UA": "Крупа"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 7200,
+          "min": 1200,
+          "step": 300,
+          "round": 1,
+          "default": 2400,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 115,
+          "min": 115,
+          "step": 1,
+          "round": 1,
+          "default": 115,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M20.8723,25.5002H7.1252c-1.7197,0-3.1377-1.4263-3.1611-3.1792-.0527-4.1602-.1025-8.0239.5146-9.9834.0469-.1494.0195-.3267-.0713-.4604-1.1377-1.6675-1.3057-3.5728-.4619-5.2256.6445-1.2617,1.8535-2.3037,3.4971-3.0137,1.7471-.7549,3.9531-1.1377,6.5566-1.1377,2.6211,0,4.8398.3887,6.5967,1.1543,1.6494.7217,2.8555,1.7778,3.4873,3.0547.8369,1.6924.6211,3.6279-.5918,5.3105-.0332.0459-.0391.1162-.0156.1841.6631,1.9121.6133,5.8545.5596,10.0288-.0234,1.8413-1.4414,3.2676-3.1631,3.2676ZM13.9992,3.5002c-2.4668,0-4.5391.355-6.1602,1.0557-1.4277.6167-2.4658,1.4985-3.0029,2.5508-.6729,1.3169-.5273,2.8511.3984,4.2085.2617.3872.3359.8809.1982,1.3218-.5693,1.8076-.5215,5.5938-.4697,9.6016.0166,1.2783.9863,2.2617,2.1621,2.2617h13.7471c1.1768,0,2.1475-.9834,2.1621-2.1924.0537-4.1719.1025-8.0293-.5049-9.7788-.1279-.3774-.0713-.7856.1514-1.0942.9883-1.3721,1.1729-2.9331.5059-4.2822-.5254-1.063-1.5605-1.9556-2.9912-2.5815-1.6289-.7104-3.7139-1.0708-6.1963-1.0708ZM9.007,14.5827l5.5762-5.6992c.1934-.1973.1895-.5137-.0078-.707-.1973-.1929-.5137-.189-.707.0078l-5.5762,5.6992c-.1934.1973-.1895.5137.0078.707.0977.0952.2236.1426.3496.1426.1299,0,.2598-.0503.3574-.1504ZM14.1291,19.8176l5.5762-5.6987c.1934-.1973.1895-.5137-.0078-.707-.1973-.1929-.5137-.189-.707.0078l-5.5762,5.6987c-.1934.1973-.1895.5137.0078.707.0977.0952.2236.1426.3496.1426.1299,0,.2598-.0503.3574-.1504ZM9.6174,19.1945l9.2344-9.439c.1934-.1973.1895-.5137-.0078-.707-.1982-.1929-.5146-.189-.707.0078l-9.2344,9.439c-.1934.1973-.1895.5137.0078.707.0977.0952.2236.1426.3496.1426.1299,0,.2598-.0503.3574-.1504Z",
+      "name": {
+        "ar-AE": "خبز",
+        "de-DE": "Brot",
+        "en-US": "Bread",
+        "kk-KZ": "Нан",
+        "ru-RU": "Хлеб",
+        "uk-UA": "Хліб"
+      },
+      "follow": [
+        255
+      ],
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 9000,
+          "min": 1800,
+          "step": 300,
+          "round": 1,
+          "default": 7200,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 2,
+          "min": 2,
+          "step": 1,
+          "round": 1,
+          "default": 2,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 45,
+          "min": 45,
+          "step": 1,
+          "round": 1,
+          "default": 45,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M9.8518,7.2531c0-.2764.2236-.5.5-.5h3.2393v-3.7529c0-.2764.2236-.5.5-.5s.5.2236.5.5v3.7529h3.1553c.2764,0,.5.2236.5.5s-.2236.5-.5.5h-7.3945c-.2764,0-.5-.2236-.5-.5ZM19.0002,9.7941l-.0098,12.0425c-.001.9717-.3428,1.8867-.9619,2.5762-.6338.7007-1.4766,1.0864-2.373,1.0874h-3.3291c-.8984-.001-1.7402-.3867-2.3721-1.0864-.6182-.6943-.9561-1.6094-.9541-2.5786v-12.041c-.0029-.1553.0234-.3169.0781-.4707.0566-.1592.1396-.3013.2471-.4224.2305-.2529.5469-.3975.8721-.4009h7.5908c.3301,0,.6494.146.876.3999.2158.2388.3359.5571.3359.894ZM18.0002,9.7941c0-.0874-.0293-.1694-.0801-.2256-.04-.0449-.0859-.0684-.1318-.0684h-7.5859c-.0439.0005-.0928.0254-.1328.0693-.0176.02-.0361.0527-.0498.0894-.0137.0386-.0205.0825-.0195.126v12.0513c-.002.7139.2529,1.4097.6982,1.9102.4375.4844,1.0166.7529,1.6289.7539h3.3271c.6104-.001,1.1904-.2695,1.6309-.7568.4473-.4976.7041-1.1934.7051-1.9077l.0098-12.0415Z",
+      "name": {
+        "ar-AE": "صلصة",
+        "de-DE": "Soße",
+        "en-US": "Sauce",
+        "kk-KZ": "Тұздық",
+        "ru-RU": "Соус",
+        "uk-UA": "Соус"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 3600,
+          "min": 600,
+          "step": 300,
+          "round": 1,
+          "default": 1800,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 98,
+          "min": 98,
+          "step": 1,
+          "round": 1,
+          "default": 98,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M11.5043,17.7096l-2.1455,2.6812h1.7549c.2764,0,.5.2236.5.5s-.2236.5-.5.5h-2.7949c-.1924,0-.3672-.1104-.4502-.2832-.084-.1733-.0605-.3789.0596-.5293l2.1455-2.6812h-1.7549c-.2764,0-.5-.2236-.5-.5s.2236-.5.5-.5h2.7949c.1924,0,.3672.1104.4502.2832.084.1733.0605.3789-.0596.5293ZM15.7572,15.7834c-.083-.1729-.2578-.2832-.4502-.2832h-2.7949c-.2764,0-.5.2236-.5.5s.2236.5.5.5h1.7549l-2.1455,2.6812c-.1201.1504-.1436.356-.0596.5293.083.1729.2578.2832.4502.2832h2.7949c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5h-1.7549l2.1455-2.6812c.1201-.1504.1436-.356.0596-.5293ZM19.9496,14.3854c-.083-.1729-.2578-.2832-.4502-.2832h-2.7949c-.2764,0-.5.2236-.5.5s.2236.5.5.5h1.7549l-2.1455,2.6812c-.1201.1504-.1436.356-.0596.5293.083.1729.2578.2832.4502.2832h2.7949c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5h-1.7549l2.1455-2.6812c.1201-.1504.1436-.356.0596-.5293ZM23.7191,14.2648c-.2764,0-.5.2236-.5.5v6.7051c0,1.1196-.9102,2.0303-2.0293,2.0303H6.8461c-1.1191,0-2.0293-.9106-2.0293-2.0303v-6.7051c0-.2764-.2236-.5-.5-.5s-.5.2236-.5.5v6.7051c0,1.6709,1.3594,3.0303,3.0293,3.0303h14.3438c1.6699,0,3.0293-1.3594,3.0293-3.0303v-6.7051c0-.2764-.2236-.5-.5-.5ZM24.0687,9.9411H3.932c-1.0654,0-1.9326.8672-1.9326,1.9331,0,1.0649.8672,1.9316,1.9326,1.9316h1.707c.2764,0,.5-.2236.5-.5s-.2236-.5-.5-.5h-1.707c-.5146,0-.9326-.418-.9326-.9316,0-.5146.418-.9331.9326-.9331h20.1367c.5137,0,.9316.4185.9316.9331,0,.5137-.418.9316-.9316.9316h-1.708c-.2764,0-.5.2236-.5.5s.2236.5.5.5h1.708c1.0654,0,1.9316-.8667,1.9316-1.9316,0-1.0659-.8662-1.9331-1.9316-1.9331ZM3.9564,9.3698c-.1836-.2061-.1641-.5225.042-.7056,1.5309-1.3609,4.7429-2.299,8.436-2.5097-.1371-.2544-.2222-.5408-.2222-.8497,0-.9951.8096-1.8047,1.8047-1.8047s1.8047.8096,1.8047,1.8047c0,.3088-.0852.5953-.2223.8498,3.7089.2112,6.9281,1.1548,8.4537,2.5242.2051.1846.2227.5005.0381.7061-.0986.1099-.2354.166-.3721.166-.1191,0-.2383-.042-.334-.1279-1.541-1.3834-5.302-2.3125-9.3606-2.3137-.0026,0-.005.0007-.0076.0007s-.005-.0008-.0076-.0008c-4.043.0012-7.7981.926-9.3469,2.3021-.2061.1831-.5234.165-.7061-.0415ZM14.0128,6.1092c.0013,0,.0027-.0001.0042-.0001s.0028.0001.0042.0001c.4414-.0024.8005-.362.8005-.8043,0-.4438-.3613-.8047-.8047-.8047s-.8047.3608-.8047.8047c0,.4423.3591.8019.8005.8043Z",
+      "name": {
+        "ar-AE": "طبخ بطيء",
+        "de-DE": "Mattigkeit",
+        "en-US": "Slow cook",
+        "kk-KZ": "Бұқтырып дәмдеу",
+        "ru-RU": "Томление",
+        "uk-UA": "Повільне приготування"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 28800,
+          "min": 1800,
+          "step": 1800,
+          "round": 1,
+          "default": 18000,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 1,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 95,
+          "min": 45,
+          "step": 1,
+          "round": 1,
+          "default": 95,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0,0h28v28V0M19.9814,24.5H7.9823c-.252,0-.4648-.188-.4961-.438l-1.0322-8.2905c-.8496-.0757-1.8994-.417-2.7002-1.1987-.832-.812-1.2539-1.9307-1.2539-3.3257,0-2.5566,2.1104-4.6362,4.7041-4.6362.6475-.0376,1.2627.126,1.8477.3721.3408-.9204.9258-1.7378,1.6865-2.3447h0c.9189-.7344,2.0674-1.1382,3.2334-1.1382.0078.001.0156.0005.0215,0,1.1689,0,2.3203.4062,3.2412,1.1445.7607.6094,1.3447,1.4292,1.6836,2.3506.5928-.2549,1.2324-.3823,1.8779-.3843,2.5928,0,4.7031,2.0796,4.7031,4.6362.0225.877-.2842,2.1753-1.2129,3.1509-.752.7905-1.7695,1.2466-3.0283,1.3579l-.7783,8.291c-.0244.2568-.2402.4531-.498.4531ZM8.4237,23.5h11.1025l.7754-8.2661c.0234-.252.2324-.4468.4863-.4531,1.1904-.0288,2.124-.3896,2.7734-1.0718.7178-.7549.9551-1.7598.9375-2.4492,0-2.0176-1.6621-3.6489-3.7041-3.6489h-.0098c-.6729,0-1.335.1826-1.916.5288-.1367.082-.3027.0928-.4502.0312-.1465-.062-.2549-.1895-.292-.3438-.2285-.9482-.7676-1.8013-1.5176-2.4023-.7441-.5967-1.6738-.9248-2.6182-.9248-.0078-.0005-.0117-.001-.0176,0-.9424,0-1.8691.3262-2.6123.9194h0c-.748.5972-1.2881,1.4468-1.5205,2.3926-.0371.1533-.1455.2798-.29.3413-.1455.0615-.3115.0503-.4482-.0288-.5742-.3359-1.2266-.5137-1.8877-.5137h-.0098c-2.043,0-3.7051,1.6313-3.7051,3.6362,0,1.1152.3203,1.9932.9521,2.6099.7295.7119,1.7861.9453,2.4326.9302h.0127c.252,0,.4648.1875.4961.438l1.0303,8.2749ZM11.0497,5.0288h.0098-.0098ZM12.9999,10.5c-.2764,0-.5.2236-.5.5v1c0,.651-.4192,1.2008-1,1.4079v-2.4079c0-.2764-.2236-.5-.5-.5s-.5.2236-.5.5v2.4079c-.5808-.2071-1-.7569-1-1.4079v-1c0-.2764-.2236-.5-.5-.5s-.5.2236-.5.5v1c0,1.2072.8601,2.2171,2,2.4494v6.5506c0,.2764.2236.5.5.5s.5-.2236.5-.5v-6.5506c1.1399-.2323,2-1.2422,2-2.4494v-1c0-.2764-.2236-.5-.5-.5ZM16.9999,10.5c-1.3789,0-2.5,1.1216-2.5,2.5v4c0,.2764.2236.5.5.5h1.5v3.5c0,.2764.2236.5.5.5s.5-.2236.5-.5v-10c0-.2764-.2236-.5-.5-.5ZM15.4999,16.5v-3.5c0-.651.4192-1.2008,1-1.4079v4.9079h-1Z",
+      "name": {
+        "ar-AE": "وصفتي بلس",
+        "de-DE": "Mein Rezept plus",
+        "en-US": "My recipe Plus",
+        "kk-KZ": "Менің рецептім плюс",
+        "ru-RU": "Мой рецепт плюс",
+        "uk-UA": "Мій рецепт Плюс"
+      },
+      "hidden": true,
+      "limits": {
+        "timer": {
+          "max": 35700,
+          "min": 300,
+          "step": 60,
+          "round": 1,
+          "default": 300,
+          "round_alt": 1
+        },
+        "keep_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 3,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 160,
+          "min": 35,
+          "step": 1,
+          "round": 1,
+          "default": 100,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": [
+        {
+          "max": 160,
+          "min": 140,
+          "limits": {
+            "timer": {
+              "max": 7200,
+              "min": 300,
+              "step": 300,
+              "round": 1,
+              "default": 1200,
+              "round_alt": 1
+            }
+          },
+          "feature": "temperature"
+        },
+        {
+          "max": 35700,
+          "min": 7201,
+          "limits": {
+            "timer": {
+              "max": 135,
+              "min": 35,
+              "step": 5,
+              "round": 1,
+              "default": 60,
+              "round_alt": 1
+            }
+          },
+          "feature": "timer"
+        }
+      ]
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+      "icon": "M0,0h28v28V0M20.8723,25.5002H7.1252c-1.7197,0-3.1377-1.4263-3.1611-3.1792-.0527-4.1602-.1025-8.0239.5146-9.9834.0469-.1494.0195-.3267-.0713-.4604-1.1377-1.6675-1.3057-3.5728-.4619-5.2256.6445-1.2617,1.8535-2.3037,3.4971-3.0137,1.7471-.7549,3.9531-1.1377,6.5566-1.1377,2.6211,0,4.8398.3887,6.5967,1.1543,1.6494.7217,2.8555,1.7778,3.4873,3.0547.8369,1.6924.6211,3.6279-.5918,5.3105-.0332.0459-.0391.1162-.0156.1841.6631,1.9121.6133,5.8545.5596,10.0288-.0234,1.8413-1.4414,3.2676-3.1631,3.2676ZM13.9992,3.5002c-2.4668,0-4.5391.355-6.1602,1.0557-1.4277.6167-2.4658,1.4985-3.0029,2.5508-.6729,1.3169-.5273,2.8511.3984,4.2085.2617.3872.3359.8809.1982,1.3218-.5693,1.8076-.5215,5.5938-.4697,9.6016.0166,1.2783.9863,2.2617,2.1621,2.2617h13.7471c1.1768,0,2.1475-.9834,2.1621-2.1924.0537-4.1719.1025-8.0293-.5049-9.7788-.1279-.3774-.0713-.7856.1514-1.0942.9883-1.3721,1.1729-2.9331.5059-4.2822-.5254-1.063-1.5605-1.9556-2.9912-2.5815-1.6289-.7104-3.7139-1.0708-6.1963-1.0708ZM9.007,14.5827l5.5762-5.6992c.1934-.1973.1895-.5137-.0078-.707-.1973-.1929-.5137-.189-.707.0078l-5.5762,5.6992c-.1934.1973-.1895.5137.0078.707.0977.0952.2236.1426.3496.1426.1299,0,.2598-.0503.3574-.1504ZM14.1291,19.8176l5.5762-5.6987c.1934-.1973.1895-.5137-.0078-.707-.1973-.1929-.5137-.189-.707.0078l-5.5762,5.6987c-.1934.1973-.1895.5137.0078.707.0977.0952.2236.1426.3496.1426.1299,0,.2598-.0503.3574-.1504ZM9.6174,19.1945l9.2344-9.439c.1934-.1973.1895-.5137-.0078-.707-.1982-.1929-.5146-.189-.707.0078l-9.2344,9.439c-.1934.1973-.1895.5137.0078.707.0977.0952.2236.1426.3496.1426.1299,0,.2598-.0503.3574-.1504Z",
+      "name": {
+        "ar-AE": "خبز",
+        "de-DE": "Brot",
+        "en-US": "Bread",
+        "kk-KZ": "Нан",
+        "ru-RU": "Хлеб",
+        "uk-UA": "Хліб"
+      },
+      "hidden": true,
+      "limits": {
+        "timer": {
+          "max": 7200,
+          "min": 1800,
+          "step": 300,
+          "round": 1,
+          "default": 3600,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 130,
+          "min": 130,
+          "step": 1,
+          "round": 1,
+          "default": 130,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "diag": {
+      "60": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/1800.webp",
+      "id": "04e6e28b-5e69-4cf3-a007-f904f8e811d0",
+      "original": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/original.webp"
+    },
+    "pair": {
+      "60": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/1800.webp",
+      "id": "04e6e28b-5e69-4cf3-a007-f904f8e811d0",
+      "original": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/original.webp"
+    },
+    "reset": {
+      "60": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/1800.webp",
+      "id": "04e6e28b-5e69-4cf3-a007-f904f8e811d0",
+      "original": "https://images.cdn.polaris-iot.com/0/4e/6e28b-5e69-4cf3-a007-f904f8e811d0/original.webp"
+    },
+    "enable": {
+      "60": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/1800.webp",
+      "id": "21746afc-97f0-4dca-9aa9-fcc7a729fa16",
+      "original": "https://images.cdn.polaris-iot.com/2/17/46afc-97f0-4dca-9aa9-fcc7a729fa16/original.webp"
+    },
+    "manualbg": {
+      "60": "https://images.cdn.polaris-iot.com/e/bf/27365-6762-4a64-82d6-1024629eaff1/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/e/bf/27365-6762-4a64-82d6-1024629eaff1/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/e/bf/27365-6762-4a64-82d6-1024629eaff1/240.webp",
+      "id": "ebf27365-6762-4a64-82d6-1024629eaff1",
+      "original": "https://images.cdn.polaris-iot.com/e/bf/27365-6762-4a64-82d6-1024629eaff1/original.webp"
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1783446720,
+  "temperature_units": "celsius"
+}

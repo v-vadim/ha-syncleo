@@ -1,0 +1,2064 @@
+{
+  "id": "b2ec8b44-3c8a-4640-9a96-84190cce658b",
+  "name": "PUH-6090",
+  "type": 25,
+  "class": "humidifier",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/9/03/6eada-d5f2-4d60-bcfa-d4c9b2669852/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/9/03/6eada-d5f2-4d60-bcfa-d4c9b2669852/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/9/03/6eada-d5f2-4d60-bcfa-d4c9b2669852/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/9/03/6eada-d5f2-4d60-bcfa-d4c9b2669852/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/9/03/6eada-d5f2-4d60-bcfa-d4c9b2669852/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/9/03/6eada-d5f2-4d60-bcfa-d4c9b2669852/900.webp",
+    "1200": "https://images.cdn.polaris-iot.com/9/03/6eada-d5f2-4d60-bcfa-d4c9b2669852/1200.webp",
+    "1800": "https://images.cdn.polaris-iot.com/9/03/6eada-d5f2-4d60-bcfa-d4c9b2669852/1800.webp",
+    "id": "9036eada-d5f2-4d60-bcfa-d4c9b2669852",
+    "original": "https://images.cdn.polaris-iot.com/9/03/6eada-d5f2-4d60-bcfa-d4c9b2669852/original.webp"
+  },
+  "layout": {
+    "home.top": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "switch",
+        "action": {
+          "speed": 0,
+          "program": [
+            4
+          ],
+          "humidity": 30,
+          "backlight": 1
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "humidity",
+        "position": 0,
+        "formatRules": [
+          {
+            "max": 29.999,
+            "min": 0,
+            "string": "auto"
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "feature": "current_temperature",
+        "position": 0
+      },
+      {
+        "type": "info",
+        "feature": "current_humidity",
+        "position": 0
+      }
+    ],
+    "manual.bottom": [
+      {
+        "type": "button_power",
+        "position": 0
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "type": "info",
+        "feature": "humidity",
+        "position": 2,
+        "formatRules": [
+          {
+            "max": 29.999,
+            "min": 0,
+            "string": "auto"
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "feature": "current_temperature",
+        "position": 2
+      },
+      {
+        "type": "info",
+        "feature": "current_humidity",
+        "position": 2
+      },
+      {
+        "type": "container_tail",
+        "position": 3
+      },
+      {
+        "type": "slider",
+        "style": "picker",
+        "feature": "timer",
+        "position": 4
+      },
+      {
+        "type": "container_head",
+        "position": 5
+      },
+      {
+        "type": "slider",
+        "points": {
+          "0": {
+            "label": "Auto"
+          },
+          "30": {
+            "label": "30%"
+          },
+          "50": {
+            "label": "50%"
+          },
+          "70": {
+            "label": "70%"
+          },
+          "90": {
+            "label": "90%"
+          }
+        },
+        "feature": "humidity",
+        "position": 6,
+        "step_ticks": 1,
+        "formatRules": [
+          {
+            "max": 29.999,
+            "min": 0,
+            "string": "auto"
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "points": {
+          "0": {
+            "label": "Auto"
+          },
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          }
+        },
+        "feature": "speed",
+        "position": 7,
+        "step_ticks": 1,
+        "formatRules": [
+          {
+            "max": 0,
+            "min": 0,
+            "string": "auto"
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 8
+      },
+      {
+        "type": "container_head",
+        "position": 9
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "وسائط",
+          "de-DE": "Modi",
+          "en-US": "Modes",
+          "kk-KZ": "Режимдер",
+          "ru-RU": "Режимы",
+          "uk-UA": "Режими"
+        },
+        "position": 10
+      },
+      {
+        "icon": "M4 18H0V26H4V18ZM12 12H8V26H12V12ZM20 6H16V26H20V6ZM28 0H24V26H28V0Z",
+        "type": "button",
+        "title": {
+          "ar-AE": "كثافة",
+          "de-DE": "Intensität",
+          "en-US": "Intensity",
+          "kk-KZ": "Конфигурацияны қалдырып, жалғастырыңыз",
+          "ru-RU": "Интенсивность",
+          "uk-UA": "Інтенсивність"
+        },
+        "action": {
+          "speed": 3,
+          "program": [
+            2
+          ],
+          "humidity": 0,
+          "backlight": 1
+        },
+        "position": 11,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "M5 6.1V6V1C5 0.4 4.6 0 4 0C3.4 0 3 0.4 3 1V6V6.1C1.3 6.5 0 8.1 0 10C0 11.9 1.3 13.4 3 13.9V27C3 27.6 3.4 28 4 28C4.6 28 5 27.6 5 27V13.9C6.7 13.5 8 11.9 8 10C8 8.1 6.7 6.6 5 6.1ZM4 12C2.9 12 2 11.1 2 10C2 8.9 2.9 8 4 8C5.1 8 6 8.9 6 10C6 11.1 5.1 12 4 12ZM28 10C28 8.1 26.7 6.6 25 6.1V6V1C25 0.4 24.6 0 24 0C23.4 0 23 0.4 23 1V6V6.1C21.3 6.5 20 8.1 20 10C20 11.9 21.3 13.4 23 13.9V27C23 27.6 23.4 28 24 28C24.6 28 25 27.6 25 27V13.9C26.7 13.4 28 11.9 28 10ZM24 12C22.9 12 22 11.1 22 10C22 8.9 22.9 8 24 8C25.1 8 26 8.9 26 10C26 11.1 25.1 12 24 12ZM15 14.1V1C15 0.4 14.6 0 14 0C13.4 0 13 0.4 13 1V14.1C11.3 14.5 10 16.1 10 18C10 19.9 11.3 21.4 13 21.9V22V27C13 27.6 13.4 28 14 28C14.6 28 15 27.6 15 27V22V21.9C16.7 21.5 18 19.9 18 18C18 16.1 16.7 14.6 15 14.1ZM14 20C12.9 20 12 19.1 12 18C12 16.9 12.9 16 14 16C15.1 16 16 16.9 16 18C16 19.1 15.1 20 14 20Z",
+        "type": "button",
+        "title": {
+          "ar-AE": "مخصص",
+          "de-DE": "Handbuch",
+          "en-US": "Custom",
+          "kk-KZ": "Қолмен",
+          "ru-RU": "Ручной",
+          "uk-UA": "Звичай"
+        },
+        "action": {
+          "speed": 3,
+          "program": [
+            3
+          ],
+          "humidity": 30,
+          "backlight": 1
+        },
+        "position": 11,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "M20.1 15.1L13.2 26.2L14.6 26.9L21.5 15.8L20.1 15.1ZM23.1 22.4C22.5 21.9 21.8 21.6 20.9 21.6C20 21.6 19.2 21.9 18.7 22.4C18.2 22.9 17.8 23.6 17.8 24.5V25.2C17.8 26.1 18.1 26.8 18.6 27.3C19.1 27.8 19.9 28.1 20.9 28.1C21.8 28.1 22.6 27.8 23.1 27.3C23.6 26.8 23.9 26.1 23.9 25.2V24.5C23.9 23.6 23.6 22.9 23.1 22.4ZM22 25.3C22 26.2 21.6 26.6 20.8 26.6C20.4 26.6 20.2 26.5 19.9 26.2C19.6 25.9 19.5 25.6 19.5 25.3V24.6C19.5 24.2 19.6 23.9 19.8 23.6C20 23.3 20.3 23.2 20.7 23.2C21.1 23.2 21.4 23.3 21.6 23.6C21.8 23.9 21.9 24.2 21.9 24.5V25.3H22ZM11.8 14.4C11.2 14.9 11 15.7 11 16.5V17.2C11 18.1 11.3 18.8 11.9 19.4C12.5 20 13.2 20.2 14.1 20.2C15 20.2 15.8 19.9 16.3 19.4C16.8 18.9 17.1 18.2 17.1 17.3V16.6C17.1 15.7 16.8 15 16.3 14.4C15.8 13.8 15 13.6 14.1 13.6C13.1 13.6 12.3 13.8 11.8 14.4ZM15.2 16.5V17.2C15.2 17.6 15.1 17.9 14.9 18.2C14.7 18.5 14.4 18.6 14 18.6C13.6 18.6 13.3 18.5 13.1 18.2C12.9 17.9 12.8 17.6 12.8 17.3V16.6C12.8 16.2 12.9 15.8 13.1 15.6C13.3 15.4 13.6 15.2 14 15.2C14.4 15.2 14.7 15.3 14.9 15.6C15.1 15.9 15.2 16.1 15.2 16.5ZM10.4 20.8C9.4 19.9 8.9 18.6 8.9 17.2V16.5C8.9 15.1 9.4 13.9 10.4 12.9C11.3 12 12.6 11.5 14 11.5C15.4 11.5 16.7 12 17.6 12.9C17.9 13.2 18.2 13.6 18.4 14L18.7 13.5C16.1 7.6 10 0 10 0C10 0 0 12.5 0 18C0 23.4 4.3 27.8 9.7 28L13.3 22.2C12.2 22 11.2 21.6 10.4 20.8Z",
+        "type": "button",
+        "title": {
+          "ar-AE": "رطوبة",
+          "de-DE": "Feuchtigkeit",
+          "en-US": "Humidity",
+          "kk-KZ": "Ылғалдылық",
+          "ru-RU": "Влажность",
+          "uk-UA": "Вологість"
+        },
+        "action": {
+          "speed": 0,
+          "program": [
+            4
+          ],
+          "humidity": 30,
+          "backlight": 1
+        },
+        "position": 11,
+        "condition": [
+          {
+            "program": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "type": "fill",
+        "position": 11
+      },
+      {
+        "type": "container_tail",
+        "position": 12
+      },
+      {
+        "type": "container_head",
+        "position": 13
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "إعدادات",
+          "de-DE": "Einstellungen",
+          "en-US": "Settings",
+          "kk-KZ": "Параметрлер",
+          "ru-RU": "Настройки",
+          "uk-UA": "Налаштування"
+        },
+        "position": 14
+      },
+      {
+        "type": "button",
+        "layout": "userPresets",
+        "position": 15
+      },
+      {
+        "type": "button",
+        "feature": "backlight",
+        "position": 15
+      },
+      {
+        "type": "button",
+        "feature": "schedule",
+        "position": 15
+      },
+      {
+        "icon": "M0.0,0.0h29.0v30.0V0.0M4.62159 3.75354C4.23145 3.3634 3.60124 3.3634 3.21111 3.75354C2.82097 4.14367 2.82097 4.77389 3.21111 5.16402L8.04277 10.0057L8.00276 10.0457H1.01035C0.450157 10.0457 0 10.4959 0 11.0561V19.0388C0 19.599 0.450157 20.0492 1.01035 20.0492H8.00276L14.3449 25.6011C14.9952 26.1713 16.0055 25.7111 16.0055 24.8508V17.9684L18.1162 20.0792C17.5561 20.5293 17.1059 20.8194 16.9959 20.8894C16.5257 21.1795 16.3756 21.7898 16.6557 22.2599C16.8458 22.57 17.1759 22.7401 17.516 22.7401C17.6961 22.7401 17.8662 22.6901 18.0362 22.6C18.2663 22.46 18.8565 22.0799 19.5467 21.4997L22.4677 24.4207C20.9972 25.6811 19.2366 26.6214 17.266 27.1316C16.7258 27.2716 16.4057 27.8118 16.5457 28.352C16.6657 28.8022 17.0659 29.1023 17.516 29.1023C17.5961 29.1023 17.6861 29.0923 17.7661 29.0723C20.0869 28.4721 22.1676 27.3417 23.8782 25.8412L25.3888 27.3517C25.5888 27.5517 25.8389 27.6418 26.099 27.6418C26.3591 27.6418 26.6092 27.5417 26.8092 27.3517C27.1994 26.9615 27.1994 26.3313 26.8092 25.9412L4.62159 3.75354ZM16.0055 5.25428C16.0055 4.39398 14.9952 3.93382 14.3449 4.50402L11.1138 7.33499L16.0055 12.2267V5.25428ZM17.2559 1.97354C22.9979 3.45405 27.0093 8.62583 27.0093 14.5479C27.0093 17.1288 26.249 19.5696 24.9086 21.6203L26.3391 23.0508C28.0296 20.61 29 17.669 29 14.5479C29 7.71552 24.3684 1.74346 17.7461 0.0328684C17.2059 -0.10718 16.6657 0.21293 16.5257 0.753117C16.3956 1.2933 16.7157 1.83349 17.2559 1.97354ZM17.0659 8.25516C19.4967 9.44557 21.0073 11.8564 21.0073 14.5473C21.0073 15.2476 20.9072 15.9278 20.7072 16.588C20.6471 16.7881 20.5571 16.9782 20.4671 17.1682L21.9676 18.6687C22.2377 18.2086 22.4578 17.7084 22.6278 17.1782C22.8879 16.3279 23.018 15.4476 23.018 14.5473C23.018 11.0861 21.0773 7.98507 17.9562 6.46454C17.456 6.22446 16.8658 6.42453 16.6158 6.9247C16.3657 7.42487 16.5657 8.01508 17.0659 8.25516Z",
+        "type": "button",
+        "title": {
+          "de-DE": "Still",
+          "en-US": "Silent",
+          "kk-KZ": "Дыбыссыз",
+          "ru-RU": "Беззвучный",
+          "uk-UA": "Беззвучний"
+        },
+        "action": {
+          "volume": 0
+        },
+        "feature": "volume",
+        "position": 15,
+        "condition": [
+          {
+            "source": "state",
+            "volume": 0
+          }
+        ],
+        "action_off": {
+          "volume": 1
+        }
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 15
+      },
+      {
+        "type": "fill",
+        "position": 15
+      },
+      {
+        "type": "container_tail",
+        "position": 16
+      },
+      {
+        "type": "container_head",
+        "position": 17
+      },
+      {
+        "type": "header",
+        "title": {
+          "de-DE": "Voreinstellungen",
+          "en-US": "Presets",
+          "kk-KZ": "Алдын ала орнатулар",
+          "ru-RU": "Предустановки",
+          "uk-UA": "Передустановки"
+        },
+        "position": 18
+      },
+      {
+        "type": "button",
+        "position": 19,
+        "presetId": 0
+      },
+      {
+        "type": "fill",
+        "position": 19
+      },
+      {
+        "type": "container_tail",
+        "position": 20
+      }
+    ],
+    "schedule.editor": [
+      {
+        "type": "button",
+        "measure": "input_name",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "measure": "input_date_time",
+        "position": 0
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "row": "repeat_days",
+        "type": "info",
+        "position": 2
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "وسائط",
+          "de-DE": "Modi",
+          "en-US": "Modes",
+          "kk-KZ": "Режимдер",
+          "ru-RU": "Режимы",
+          "uk-UA": "Режими"
+        },
+        "position": 3
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            4
+          ]
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 3,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        },
+        "points": {
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          }
+        },
+        "feature": "speed",
+        "position": 5,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "or": [
+              {
+                "program": [
+                  2
+                ]
+              },
+              {
+                "program": [
+                  3
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 90,
+          "min": 30,
+          "step": 5,
+          "round": 1,
+          "default": 30,
+          "roundAlt": 1
+        },
+        "points": {
+          "30": {
+            "label": "30%"
+          },
+          "50": {
+            "label": "50%"
+          },
+          "70": {
+            "label": "70%"
+          },
+          "90": {
+            "label": "90%"
+          }
+        },
+        "feature": "humidity",
+        "position": 6,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "or": [
+              {
+                "program": [
+                  3
+                ]
+              },
+              {
+                "program": [
+                  4
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 43200,
+          "min": 0,
+          "step": 3600,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 7
+      },
+      {
+        "type": "button",
+        "title": {
+          "de-DE": "Still",
+          "en-US": "Silent",
+          "kk-KZ": "Дыбыссыз",
+          "ru-RU": "Беззвучный",
+          "uk-UA": "Беззвучний"
+        },
+        "action": {
+          "volume": 0
+        },
+        "feature": "volume",
+        "position": 8,
+        "condition": [
+          {
+            "volume": 0
+          }
+        ],
+        "action_off": {
+          "volume": 1
+        }
+      },
+      {
+        "type": "button",
+        "feature": "backlight",
+        "position": 8
+      },
+      {
+        "type": "container_tail",
+        "position": 9
+      }
+    ],
+    "manual.shortcuts": [
+      {
+        "type": "button",
+        "feature": "backlight",
+        "position": 0
+      },
+      {
+        "icon": "M20.1 15.1L13.2 26.2L14.6 26.9L21.5 15.8L20.1 15.1ZM23.1 22.4C22.5 21.9 21.8 21.6 20.9 21.6C20 21.6 19.2 21.9 18.7 22.4C18.2 22.9 17.8 23.6 17.8 24.5V25.2C17.8 26.1 18.1 26.8 18.6 27.3C19.1 27.8 19.9 28.1 20.9 28.1C21.8 28.1 22.6 27.8 23.1 27.3C23.6 26.8 23.9 26.1 23.9 25.2V24.5C23.9 23.6 23.6 22.9 23.1 22.4ZM22 25.3C22 26.2 21.6 26.6 20.8 26.6C20.4 26.6 20.2 26.5 19.9 26.2C19.6 25.9 19.5 25.6 19.5 25.3V24.6C19.5 24.2 19.6 23.9 19.8 23.6C20 23.3 20.3 23.2 20.7 23.2C21.1 23.2 21.4 23.3 21.6 23.6C21.8 23.9 21.9 24.2 21.9 24.5V25.3H22ZM11.8 14.4C11.2 14.9 11 15.7 11 16.5V17.2C11 18.1 11.3 18.8 11.9 19.4C12.5 20 13.2 20.2 14.1 20.2C15 20.2 15.8 19.9 16.3 19.4C16.8 18.9 17.1 18.2 17.1 17.3V16.6C17.1 15.7 16.8 15 16.3 14.4C15.8 13.8 15 13.6 14.1 13.6C13.1 13.6 12.3 13.8 11.8 14.4ZM15.2 16.5V17.2C15.2 17.6 15.1 17.9 14.9 18.2C14.7 18.5 14.4 18.6 14 18.6C13.6 18.6 13.3 18.5 13.1 18.2C12.9 17.9 12.8 17.6 12.8 17.3V16.6C12.8 16.2 12.9 15.8 13.1 15.6C13.3 15.4 13.6 15.2 14 15.2C14.4 15.2 14.7 15.3 14.9 15.6C15.1 15.9 15.2 16.1 15.2 16.5ZM10.4 20.8C9.4 19.9 8.9 18.6 8.9 17.2V16.5C8.9 15.1 9.4 13.9 10.4 12.9C11.3 12 12.6 11.5 14 11.5C15.4 11.5 16.7 12 17.6 12.9C17.9 13.2 18.2 13.6 18.4 14L18.7 13.5C16.1 7.6 10 0 10 0C10 0 0 12.5 0 18C0 23.4 4.3 27.8 9.7 28L13.3 22.2C12.2 22 11.2 21.6 10.4 20.8Z",
+        "type": "button",
+        "title": {
+          "ar-AE": "رطوبة",
+          "de-DE": "Feuchtigkeit",
+          "en-US": "Humidity",
+          "kk-KZ": "Ылғалдылық",
+          "ru-RU": "Влажность",
+          "uk-UA": "Вологість"
+        },
+        "action": {
+          "speed": 0,
+          "program": [
+            4
+          ],
+          "humidity": 30,
+          "backlight": 1
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 0
+      },
+      {
+        "icon": "M4 18H0V26H4V18ZM12 12H8V26H12V12ZM20 6H16V26H20V6ZM28 0H24V26H28V0Z",
+        "type": "button",
+        "title": {
+          "ar-AE": "كثافة",
+          "de-DE": "Intensität",
+          "en-US": "Intensity",
+          "kk-KZ": "Конфигурацияны қалдырып, жалғастырыңыз",
+          "ru-RU": "Интенсивность",
+          "uk-UA": "Інтенсивність"
+        },
+        "action": {
+          "speed": 3,
+          "program": [
+            2
+          ],
+          "humidity": 0,
+          "backlight": 1
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "userPresets.list": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Custom modes",
+          "ru-RU": "Персональные режимы"
+        },
+        "position": 0
+      },
+      {
+        "row": "userPresets",
+        "type": "info",
+        "position": 1
+      },
+      {
+        "row": "addPreset",
+        "type": "button",
+        "title": {
+          "en-US": "Add",
+          "ru-RU": "Добавить"
+        },
+        "position": 2
+      }
+    ],
+    "userPresets.editor": [
+      {
+        "type": "button",
+        "measure": "input_name",
+        "position": 0
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "position": 2,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 2,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            4
+          ]
+        },
+        "position": 2,
+        "condition": [
+          {
+            "program": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 3,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        },
+        "points": {
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          }
+        },
+        "feature": "speed",
+        "position": 2,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "or": [
+              {
+                "program": [
+                  2
+                ]
+              },
+              {
+                "program": [
+                  3
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 90,
+          "min": 30,
+          "step": 5,
+          "round": 1,
+          "default": 30,
+          "roundAlt": 1
+        },
+        "points": {
+          "30": {
+            "label": "30%"
+          },
+          "50": {
+            "label": "50%"
+          },
+          "70": {
+            "label": "70%"
+          },
+          "90": {
+            "label": "90%"
+          }
+        },
+        "feature": "humidity",
+        "position": 3,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "or": [
+              {
+                "program": [
+                  3
+                ]
+              },
+              {
+                "program": [
+                  4
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 43200,
+          "min": 0,
+          "step": 3600,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "style": "picker",
+        "feature": "timer",
+        "position": 4
+      },
+      {
+        "type": "button",
+        "title": {
+          "de-DE": "Still",
+          "en-US": "Silent",
+          "kk-KZ": "Дыбыссыз",
+          "ru-RU": "Беззвучный",
+          "uk-UA": "Беззвучний"
+        },
+        "action": {
+          "volume": 0
+        },
+        "feature": "volume",
+        "position": 5,
+        "condition": [
+          {
+            "volume": 0
+          }
+        ],
+        "action_off": {
+          "volume": 1
+        }
+      },
+      {
+        "type": "button",
+        "feature": "backlight",
+        "position": 5
+      },
+      {
+        "type": "container_tail",
+        "position": 6
+      }
+    ]
+  },
+  "limits": {
+    "speed": {
+      "max": 3,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 3,
+      "round_alt": 1
+    },
+    "timer": {
+      "max": 43200,
+      "min": 0,
+      "step": 3600,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "volume": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 1,
+      "round_alt": 1
+    },
+    "humidity": {
+      "max": 90,
+      "min": 0,
+      "step": 5,
+      "round": 1,
+      "default": 30,
+      "round_alt": 1
+    },
+    "backlight": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 1,
+      "round_alt": 1
+    },
+    "child_lock": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "voice": {
+      "sber": {
+        "info": {
+          "model": "PUH-6090",
+          "manufacturer": "polaris"
+        },
+        "type": "hvac_humidifier",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "speed": 0,
+              "ioniser": 0,
+              "program": [
+                4
+              ],
+              "humidity": 0
+            },
+            "instance": "on_off",
+            "actionOff": {
+              "speed": 0,
+              "program": [
+                0
+              ],
+              "humidity": 0
+            },
+            "condition": {
+              "not": {
+                "source": "state",
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "feature": "current_humidity",
+            "instance": "humidity",
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "action": {
+              "ioniser": 1
+            },
+            "instance": "hvac_ionization",
+            "actionOff": {
+              "ioniser": 0
+            },
+            "condition": {
+              "source": "state",
+              "ioniser": 1
+            },
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "action": {
+              "program": [
+                0
+              ]
+            },
+            "instance": "hvac_water_low_level",
+            "condition": {
+              "error": 1,
+              "source": "state"
+            },
+            "retrievable": true
+          },
+          {
+            "type": "slider",
+            "limit": {
+              "max": 90,
+              "min": 30,
+              "step": 5,
+              "round": 1,
+              "default": 30,
+              "roundAlt": 1
+            },
+            "action": {
+              "program": [
+                4
+              ],
+              "humidity": 30
+            },
+            "feature": "humidity",
+            "instance": "hvac_humidity_set",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "items": [
+                  {
+                    "action": {
+                      "speed": 1,
+                      "program": [
+                        2
+                      ]
+                    },
+                    "visibility": {
+                      "or": [
+                        {
+                          "speed": 2,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 3,
+                          "source": "state"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "value": "low",
+                "condition": {
+                  "speed": 1,
+                  "source": "state"
+                }
+              },
+              {
+                "items": [
+                  {
+                    "action": {
+                      "speed": 2,
+                      "program": [
+                        2
+                      ]
+                    },
+                    "visibility": {
+                      "or": [
+                        {
+                          "speed": 1,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 3,
+                          "source": "state"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "value": "medium",
+                "condition": {
+                  "speed": 2,
+                  "source": "state"
+                }
+              },
+              {
+                "items": [
+                  {
+                    "action": {
+                      "speed": 3,
+                      "program": [
+                        2
+                      ]
+                    },
+                    "visibility": {
+                      "or": [
+                        {
+                          "speed": 1,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 2,
+                          "source": "state"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "value": "high",
+                "condition": {
+                  "speed": 3,
+                  "source": "state"
+                }
+              }
+            ],
+            "instance": "hvac_air_flow_power",
+            "retrievable": true
+          }
+        ]
+      },
+      "alice": {
+        "info": {
+          "model": "PUH-6090",
+          "manufacturer": "polaris"
+        },
+        "type": "devices.types.humidifier",
+        "errors": [
+          {
+            "code": 1,
+            "errorType": "NOT_ENOUGH_WATER",
+            "allowControl": false
+          }
+        ],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                1
+              ]
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "action": {
+              "volume": 0
+            },
+            "instance": "mute",
+            "actionOff": {
+              "volume": 1
+            },
+            "condition": {
+              "volume": 0
+            },
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "feature": "backlight",
+            "instance": "backlight",
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "feature": "current_temperature",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "feature": "current_humidity",
+            "instance": "humidity",
+            "retrievable": true
+          },
+          {
+            "type": "slider",
+            "limit": {
+              "max": 90,
+              "min": 30,
+              "step": 5,
+              "round": 1,
+              "default": 40,
+              "roundAlt": 1
+            },
+            "feature": "humidity",
+            "instance": "humidity",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "items": [
+                  {
+                    "action": {
+                      "speed": 0,
+                      "program": [
+                        4
+                      ]
+                    },
+                    "visibility": {
+                      "program": [
+                        4
+                      ]
+                    }
+                  },
+                  {
+                    "action": {
+                      "speed": 0,
+                      "ioniser": 0,
+                      "program": [
+                        4
+                      ],
+                      "humidity": 0,
+                      "backlight": 0
+                    },
+                    "visibility": {
+                      "not": {
+                        "or": [
+                          {
+                            "program": [
+                              2
+                            ]
+                          },
+                          {
+                            "program": [
+                              3
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "value": "auto",
+                "condition": {
+                  "not": {
+                    "or": [
+                      {
+                        "program": [
+                          3
+                        ]
+                      },
+                      {
+                        "program": [
+                          2
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "value": "low",
+                "action": {
+                  "speed": 1,
+                  "program": [
+                    2
+                  ]
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "or": [
+                        {
+                          "speed": 1
+                        },
+                        {
+                          "speed": 0
+                        },
+                        {
+                          "program": [
+                            2
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "medium",
+                "action": {
+                  "speed": 2,
+                  "program": [
+                    2
+                  ]
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "program": [
+                        2
+                      ]
+                    },
+                    {
+                      "speed": 2
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "high",
+                "action": {
+                  "speed": 3,
+                  "program": [
+                    2
+                  ]
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "speed": 3
+                    },
+                    {
+                      "program": [
+                        2
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "instance": "work_speed",
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "feature": "child_lock",
+            "instance": "controls_locked",
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "hidden": true,
+    "realtime": true,
+    "shortcuts": [
+      {
+        "values": {
+          "backlight": 1
+        }
+      },
+      {
+        "program": [
+          4
+        ]
+      },
+      {
+        "program": [
+          2
+        ]
+      },
+      {
+        "program": [
+          3
+        ]
+      }
+    ],
+    "invertSound": true,
+    "userPresets": true,
+    "adminPresets": true,
+    "voiceControl": {
+      "intents": {
+        "preset": {
+          "values": {
+            "preset": {}
+          }
+        },
+        "status": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_low_water": {
+                  "condition": [
+                    {
+                      "error": 1,
+                      "source": "state"
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "values": {
+                "program": {
+                  "type": "program_name"
+                }
+              }
+            },
+            "current_humidity": {
+              "values": {
+                "current_humidity": {
+                  "type": "number_value"
+                }
+              }
+            },
+            "current_temperature": {
+              "values": {
+                "current_temperature": {
+                  "type": "number_value"
+                }
+              }
+            }
+          }
+        },
+        "program": {
+          "values": {
+            "speed": {
+              "enum_values": {
+                "param_low": {
+                  "action": {
+                    "speed": 1
+                  }
+                },
+                "param_max": {
+                  "action": {
+                    "speed": 3
+                  }
+                },
+                "param_mid": {
+                  "action": {
+                    "speed": 2
+                  }
+                }
+              }
+            },
+            "timer": {},
+            "program": {
+              "enum_values": {
+                "program_humidity": {
+                  "query": {
+                    "humidity": {}
+                  },
+                  "action": {
+                    "program": [
+                      4
+                    ]
+                  }
+                },
+                "program_intensity": {
+                  "query": {
+                    "speed": {}
+                  },
+                  "action": {
+                    "program": [
+                      4
+                    ]
+                  }
+                }
+              }
+            },
+            "humidity": {}
+          }
+        },
+        "rollcall": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_low_water": {
+                  "condition": [
+                    {
+                      "error": 1
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "device_on": {
+          "action": {
+            "program": [
+              2
+            ]
+          },
+          "errors": {
+            "deviceTurnedOn": {
+              "condition": [
+                {
+                  "not": {
+                    "source": "state",
+                    "program": [
+                      0
+                    ]
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          }
+        },
+        "greetings": {},
+        "intensity": {
+          "values": {
+            "speed": {
+              "enum_values": {
+                "param_low": {
+                  "action": {
+                    "speed": 2
+                  }
+                },
+                "param_max": {
+                  "action": {
+                    "speed": 5
+                  }
+                },
+                "param_mid": {
+                  "action": {
+                    "speed": 3
+                  }
+                },
+                "param_min": {
+                  "action": {
+                    "speed": 1
+                  }
+                },
+                "param_high": {
+                  "action": {
+                    "speed": 4
+                  }
+                }
+              }
+            }
+          }
+        },
+        "volume.on": {
+          "action": {
+            "volume": 1
+          }
+        },
+        "device_off": {
+          "action": {
+            "program": [
+              0
+            ]
+          }
+        },
+        "volume.off": {
+          "action": {
+            "volume": 0
+          }
+        },
+        "status.full": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_low_water": {
+                  "condition": [
+                    {
+                      "error": 1
+                    }
+                  ]
+                }
+              }
+            },
+            "speed": {
+              "values": {
+                "speed": {
+                  "type": "number_value"
+                }
+              }
+            },
+            "timer": {
+              "values": {
+                "timer": {
+                  "type": "time_value"
+                }
+              }
+            },
+            "volume": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "volume": 1
+                    }
+                  ]
+                },
+                "off": {
+                  "condition": [
+                    {
+                      "volume": 0
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "values": {
+                "program": {
+                  "type": "program_name"
+                }
+              }
+            },
+            "humidity": {
+              "values": {
+                "humidity": {
+                  "type": "number_value"
+                }
+              }
+            },
+            "backlight": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "backlight": 1
+                    }
+                  ]
+                },
+                "off": {
+                  "condition": [
+                    {
+                      "backlight": 0
+                    }
+                  ]
+                }
+              }
+            },
+            "child_lock": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "child_lock": 1
+                    }
+                  ]
+                },
+                "off": {
+                  "condition": [
+                    {
+                      "child_lock": 0
+                    }
+                  ]
+                }
+              }
+            },
+            "current_humidity": {
+              "values": {
+                "current_humidity": {
+                  "type": "number_value"
+                }
+              }
+            },
+            "current_temperature": {
+              "values": {
+                "current_temperature": {
+                  "type": "number_value"
+                }
+              }
+            }
+          }
+        },
+        "backlight.on": {
+          "action": {
+            "backlight": 1
+          }
+        },
+        "humidity_set": {
+          "values": {
+            "humidity": {}
+          }
+        },
+        "backlight.off": {
+          "action": {
+            "backlight": 0
+          }
+        },
+        "child_lock.on": {
+          "action": {
+            "child_lock": 1
+          }
+        },
+        "off_timer.set": {
+          "values": {
+            "timer": {}
+          }
+        },
+        "child_lock.off": {
+          "action": {
+            "child_lock": 0
+          }
+        },
+        "status.current_humidity": {
+          "status": {
+            "current_humidity": {}
+          }
+        },
+        "status.current_temperature": {
+          "status": {
+            "current_temperature": {}
+          }
+        }
+      }
+    },
+    "defaultProgram": [
+      4
+    ],
+    "manualInfoFields": [
+      "humidity",
+      "current_temperature",
+      "speed"
+    ],
+    "mqttFeatureNames": {
+      "speed": "intensity",
+      "volume": "sound"
+    }
+  },
+  "vendor": "polaris",
+  "presets": [
+    {
+      "icon": "M20.1,17.3c-0.1,0-0.1-0.1-0.2-0.1c-0.1,0-0.1-0.1-0.2-0.1h-0.1c-0.9,0.3-1.8,0.4-2.7,0.4h-0.7\n\tc-2.3-0.2-4.5-1.2-6.1-2.8C8.5,13,7.5,10.9,7.3,8.5c-0.1-1.1,0-2.3,0.4-3.3c0-0.1,0-0.1,0-0.2s0-0.1-0.1-0.2c0-0.1-0.1-0.1-0.2-0.1\n\tc-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0.1C5.3,5.7,3.8,7.2,3,9s-1.2,3.9-0.8,5.9c0.4,2,1.3,3.8,2.8,5.2c1.5,1.4,3.3,2.3,5.3,2.6\n\tc0.5,0.1,0.9,0.1,1.4,0.1c1.7,0,3.4-0.5,4.9-1.4c1.5-0.9,2.7-2.1,3.5-3.7c0-0.1,0.1-0.1,0.1-0.2S20.2,17.3,20.1,17.3z M11.6,21.2\n\tc-0.4,0-0.8,0-1.2-0.1c-1.4-0.2-2.8-0.8-3.9-1.7c-0.8-0.7-1.5-1.5-2-2.5s-0.8-2-0.9-3.1c-0.1-1.1,0.1-2.2,0.4-3.2s0.9-2,1.6-2.8v0.9\n\tC5.9,11.4,7,13.9,9,15.8c1.9,1.9,4.5,3.1,7.2,3.3h0.9C15.6,20.5,13.6,21.2,11.6,21.2z M21.8,7.8C21.9,8,22,8.2,22,8.4\n\tc0,0.2-0.1,0.4-0.2,0.6c-0.1,0.2-0.4,0.2-0.6,0.2h-6.5c-0.2,0.5-0.6,1-1,1.3c-0.5,0.3-1.1,0.4-1.6,0.3c-0.6-0.1-1.1-0.4-1.4-0.8\n\tC10.2,9.5,10,9,10,8.4c0-0.6,0.2-1.1,0.6-1.5C10.9,6.4,11.4,6.1,12,6s1.1,0,1.6,0.3s0.9,0.7,1,1.3h6.6C21.4,7.6,21.6,7.7,21.8,7.8z\n\t M10.2,4.1C10.1,4,10,3.8,10,3.6c0-0.2,0.1-0.4,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.3h6.6c0.2-0.5,0.6-1,1-1.3c0.5-0.3,1.1-0.4,1.6-0.3\n\tC20.4,1.3,21,1.6,21.3,2C21.8,2.5,22,3,22,3.6c0,0.6-0.2,1.1-0.6,1.5C21.1,5.6,20.6,5.9,20,6s-1.1,0-1.6-0.3s-0.9-0.7-1-1.3h-6.6\n\tC10.5,4.4,10.3,4.3,10.2,4.1z M21.7,12.1c0.2,0.4,0.3,0.8,0.3,1.3c0,0.4-0.2,0.9-0.4,1.2c-0.3,0.4-0.6,0.6-1,0.8\n\tc-0.4,0.2-0.8,0.2-1.3,0.2c-0.4-0.1-0.8-0.2-1.2-0.5c-0.3-0.3-0.6-0.6-0.7-1.1h-6.6c-0.2,0-0.4-0.1-0.6-0.2\n\tc-0.1-0.2-0.2-0.4-0.2-0.6s0.1-0.4,0.2-0.6c0.1-0.1,0.4-0.2,0.6-0.2h6.6c0.2-0.5,0.5-0.9,0.9-1.2c0.4-0.3,0.9-0.4,1.4-0.4\n\tc0.4,0,0.9,0.1,1.2,0.3C21.2,11.4,21.5,11.7,21.7,12.1z",
+      "name": {
+        "en-US": "Custom night",
+        "ru-RU": "Персональный ночной",
+        "uk-UA": "Custom night"
+      },
+      "speed": 2,
+      "volume": 0,
+      "program": [
+        3
+      ],
+      "humidity": 55,
+      "backlight": 0
+    }
+  ],
+  "features": [
+    "program",
+    "timer",
+    "speed",
+    "humidity",
+    "current_temperature",
+    "current_humidity",
+    "volume",
+    "schedule",
+    "backlight",
+    "child_lock",
+    "demo"
+  ],
+  "messages": {
+    "auto": {
+      "ar-AE": "تلقائي",
+      "de-DE": "Auto",
+      "en-US": "Auto",
+      "kk-KZ": "Автоматты",
+      "ru-RU": "Авто",
+      "uk-UA": "Авто"
+    },
+    "dash": {
+      "en-US": "—"
+    },
+    "diag": {
+      "ar-AE": "استمر في الضغط على زر \"تشغيل/ إيقاف\" حتى تسمع صوتي تنبيه قصيرين. للتأكيد، سيومض مؤشرالواي فاي ببطء",
+      "de-DE": "Halten Sie die „On/Off“-Taste gedrückt, bis zwei kurze Pieptöne zu hören sind. Zur Bestätigung blinkt die WI-FI-Anzeige auf dem Display des Luftbefeuchters",
+      "en-US": "Hold the \"On/Off\" button until two short beeps. In confirmation the Wi-Fi indicator will flash slowly",
+      "kk-KZ": "«\"On/Off» батырмасын екі қысқа дыбыстық сигнал шыққанша басып тұрыңыз. WI-FI индикаторы дымқылдатқыш дисплейінде жыпылықтап, растайды",
+      "ru-RU": "Зажмите и удерживайте кнопку \"On/Off\" до двух коротких звуковых сигналов. В подтверждение на дисплее увлажнителя индикатор WI-FI начнет мигать",
+      "uk-UA": "Утримуйте кнопку \"Увімк. / Вимк.\" до двох коротких звукових сигналів. На підтвердження індикатор Wi-Fi буде повільно блимати"
+    },
+    "pair": {
+      "ar-AE": "اضغط مع الاستمرار على زر \"تشغيل/ إيقاف\" حتى تسمع صوت تنبيه قصير. للتأكيد، سيومض مؤشر الواي فاي بسرعة",
+      "de-DE": "Halten Sie die „On/Off“-Taste gedrückt, bis ein kurzer Piepton ertönt. Zur Bestätigung blinkt die WI-FI-Anzeige auf dem Display des Luftbefeuchters schnell",
+      "en-US": "Hold the \"On/Off\" button until short beep. In confirmation the Wi-Fi indicator will flash rapidly",
+      "kk-KZ": "Қысқа сигнал естілгенше «\"On/Off» батырмасын басып тұрыңыз. Ылғалдатқыштың дисплейін растау үшін WI-FI индикаторы тез жыпылықтайды",
+      "ru-RU": "Зажмите и удерживайте кнопку \"On/Off\" до короткого звукового сигнала. В подтверждение на дисплее увлажнителя индикатор WI-FI начнет быстро мигать",
+      "uk-UA": "Утримуйте кнопку \"Вимк./Вимк.\" до короткого звукового сигналу. На підтвердження індикатор  почне Wi-Fi швидко блиматиме"
+    },
+    "reset": {
+      "ar-AE": "استمر في الضغط على زر \"تشغيل/ إيقاف\" حتى إصدار ثلاث أصوات تنبيه قصيرة. للتأكيد، سينطفئ مؤشر الواي فاي",
+      "de-DE": "Halten Sie die „Ein/Aus“-Taste für bis zu drei Pieptöne gedrückt. Zur Bestätigung sollte die WI-FI-Anzeige auf dem Display des Luftbefeuchters erlöschen",
+      "en-US": "Hold the \"On/Off\" button until three short beeps. In confirmation the Wi-Fi indicator will turn off",
+      "kk-KZ": "\"On/Off\" батырмасын үш дыбыстық сигналға дейін басып тұрыңыз. Ылғалдатқышты көрсетуді растау үшін WI-FI индикаторы сөніп қалуы керек",
+      "ru-RU": "Зажмите и удерживайте кнопку \"On/Off\" до трех звуковых сигналов. В подтверждение на дисплее увлажнителя индикатор WI-FI должен погаснуть",
+      "uk-UA": "Утримуйте кнопку \"Вимк./Вимк.\", до появи трьох коротких звукових сигналів. Вимкнеться Wi-Fi індикатор "
+    },
+    "error.1": {
+      "ar-AE": "مياه منخفضة",
+      "de-DE": "Kleines Wasser",
+      "en-US": "Low water",
+      "kk-KZ": "Су аз",
+      "ru-RU": "Мало воды",
+      "uk-UA": "Низький pівень води "
+    },
+    "error.2": {
+      "ar-AE": "تمت إزالة خزان المياه",
+      "de-DE": "Fehlender Wassertank",
+      "en-US": "Water tank removed",
+      "kk-KZ": "Су ыдысы жоқ",
+      "ru-RU": "Отсутствует бак для воды",
+      "uk-UA": "Водяний бачок вилучено"
+    },
+    "error.3": {
+      "ar-AE": "يوصى باستبدال الفلتر",
+      "de-DE": "Es wird empfohlen, den Filter auszutauschen",
+      "en-US": "It is recommended to replace the filter",
+      "kk-KZ": "Сүзгіні ауыстырған жөн",
+      "ru-RU": "Рекомендуется заменить фильтр",
+      "uk-UA": "Рекомендується замінити фільтр"
+    },
+    "error.4": {
+      "ar-AE": "قفل الأطفال قيد العمل",
+      "de-DE": "Der Schutz gegen unbeabsichtigtes Drücken hat funktioniert",
+      "en-US": "Child lock operated",
+      "kk-KZ": "Кездейсоқ басудан қорғау атқарылды",
+      "ru-RU": "Сработала защита от случайного нажатия",
+      "uk-UA": "Функція захисту від дітей"
+    },
+    "attr.speed": {
+      "ar-AE": "كثافة",
+      "de-DE": "Intensität",
+      "en-US": "Intensity",
+      "kk-KZ": "Конфигурацияны қалдырып, жалғастырыңыз",
+      "ru-RU": "Интенсивность",
+      "uk-UA": "Інтенсивність"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "ar-AE": "إيقاف التشغيل",
+        "de-DE": "Aus",
+        "en-US": "Off",
+        "kk-KZ": "Өшіру",
+        "ru-RU": "Выкл",
+        "uk-UA": "Вимкнено"
+      },
+      "hidden": true,
+      "limits": {
+        "speed": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "default": 0
+        },
+        "timer": {
+          "max": 0,
+          "min": 0,
+          "step": 3600,
+          "default": 0
+        },
+        "ioniser": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "default": 0
+        },
+        "humidity": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "default": 0
+        },
+        "backlight": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "default": 0
+        },
+        "stream_warm": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "default": 0
+        }
+      },
+      "limits_constraints": []
+    },
+    null,
+    {
+      "icon": "M4 18H0V26H4V18ZM12 12H8V26H12V12ZM20 6H16V26H20V6ZM28 0H24V26H28V0Z",
+      "name": {
+        "ar-AE": "كثافة",
+        "de-DE": "Intensität",
+        "en-US": "Intensity",
+        "kk-KZ": "Конфигурацияны қалдырып, жалғастырыңыз",
+        "ru-RU": "Интенсивность",
+        "uk-UA": "Інтенсивність"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 3,
+          "min": 1,
+          "step": 1,
+          "default": 3
+        },
+        "ioniser": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "default": 0
+        },
+        "humidity": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "default": 0
+        },
+        "backlight": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "default": 1
+        },
+        "stream_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "default": 0
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M5 6.1V6V1C5 0.4 4.6 0 4 0C3.4 0 3 0.4 3 1V6V6.1C1.3 6.5 0 8.1 0 10C0 11.9 1.3 13.4 3 13.9V27C3 27.6 3.4 28 4 28C4.6 28 5 27.6 5 27V13.9C6.7 13.5 8 11.9 8 10C8 8.1 6.7 6.6 5 6.1ZM4 12C2.9 12 2 11.1 2 10C2 8.9 2.9 8 4 8C5.1 8 6 8.9 6 10C6 11.1 5.1 12 4 12ZM28 10C28 8.1 26.7 6.6 25 6.1V6V1C25 0.4 24.6 0 24 0C23.4 0 23 0.4 23 1V6V6.1C21.3 6.5 20 8.1 20 10C20 11.9 21.3 13.4 23 13.9V27C23 27.6 23.4 28 24 28C24.6 28 25 27.6 25 27V13.9C26.7 13.4 28 11.9 28 10ZM24 12C22.9 12 22 11.1 22 10C22 8.9 22.9 8 24 8C25.1 8 26 8.9 26 10C26 11.1 25.1 12 24 12ZM15 14.1V1C15 0.4 14.6 0 14 0C13.4 0 13 0.4 13 1V14.1C11.3 14.5 10 16.1 10 18C10 19.9 11.3 21.4 13 21.9V22V27C13 27.6 13.4 28 14 28C14.6 28 15 27.6 15 27V22V21.9C16.7 21.5 18 19.9 18 18C18 16.1 16.7 14.6 15 14.1ZM14 20C12.9 20 12 19.1 12 18C12 16.9 12.9 16 14 16C15.1 16 16 16.9 16 18C16 19.1 15.1 20 14 20Z",
+      "name": {
+        "ar-AE": "مخصص",
+        "de-DE": "Handbuch",
+        "en-US": "Custom",
+        "kk-KZ": "Қолмен",
+        "ru-RU": "Ручной",
+        "uk-UA": "Звичай"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 3,
+          "min": 1,
+          "step": 1,
+          "default": 3
+        },
+        "ioniser": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "default": 0
+        },
+        "humidity": {
+          "max": 90,
+          "min": 30,
+          "step": 5,
+          "default": 30
+        },
+        "backlight": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "default": 1
+        },
+        "stream_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "default": 0
+        }
+      },
+      "limits_constraints": []
+    },
+    {
+      "icon": "M20.1 15.1L13.2 26.2L14.6 26.9L21.5 15.8L20.1 15.1ZM23.1 22.4C22.5 21.9 21.8 21.6 20.9 21.6C20 21.6 19.2 21.9 18.7 22.4C18.2 22.9 17.8 23.6 17.8 24.5V25.2C17.8 26.1 18.1 26.8 18.6 27.3C19.1 27.8 19.9 28.1 20.9 28.1C21.8 28.1 22.6 27.8 23.1 27.3C23.6 26.8 23.9 26.1 23.9 25.2V24.5C23.9 23.6 23.6 22.9 23.1 22.4ZM22 25.3C22 26.2 21.6 26.6 20.8 26.6C20.4 26.6 20.2 26.5 19.9 26.2C19.6 25.9 19.5 25.6 19.5 25.3V24.6C19.5 24.2 19.6 23.9 19.8 23.6C20 23.3 20.3 23.2 20.7 23.2C21.1 23.2 21.4 23.3 21.6 23.6C21.8 23.9 21.9 24.2 21.9 24.5V25.3H22ZM11.8 14.4C11.2 14.9 11 15.7 11 16.5V17.2C11 18.1 11.3 18.8 11.9 19.4C12.5 20 13.2 20.2 14.1 20.2C15 20.2 15.8 19.9 16.3 19.4C16.8 18.9 17.1 18.2 17.1 17.3V16.6C17.1 15.7 16.8 15 16.3 14.4C15.8 13.8 15 13.6 14.1 13.6C13.1 13.6 12.3 13.8 11.8 14.4ZM15.2 16.5V17.2C15.2 17.6 15.1 17.9 14.9 18.2C14.7 18.5 14.4 18.6 14 18.6C13.6 18.6 13.3 18.5 13.1 18.2C12.9 17.9 12.8 17.6 12.8 17.3V16.6C12.8 16.2 12.9 15.8 13.1 15.6C13.3 15.4 13.6 15.2 14 15.2C14.4 15.2 14.7 15.3 14.9 15.6C15.1 15.9 15.2 16.1 15.2 16.5ZM10.4 20.8C9.4 19.9 8.9 18.6 8.9 17.2V16.5C8.9 15.1 9.4 13.9 10.4 12.9C11.3 12 12.6 11.5 14 11.5C15.4 11.5 16.7 12 17.6 12.9C17.9 13.2 18.2 13.6 18.4 14L18.7 13.5C16.1 7.6 10 0 10 0C10 0 0 12.5 0 18C0 23.4 4.3 27.8 9.7 28L13.3 22.2C12.2 22 11.2 21.6 10.4 20.8Z",
+      "name": {
+        "ar-AE": "رطوبة",
+        "de-DE": "Feuchtigkeit",
+        "en-US": "Humidity",
+        "kk-KZ": "Ылғалдылық",
+        "ru-RU": "Влажность",
+        "uk-UA": "Вологість"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "default": 0
+        },
+        "ioniser": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "default": 0
+        },
+        "humidity": {
+          "max": 90,
+          "min": 30,
+          "step": 5,
+          "default": 30
+        },
+        "backlight": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "default": 1
+        },
+        "stream_warm": {
+          "max": 1,
+          "min": 0,
+          "step": 1,
+          "default": 0
+        }
+      },
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "manualbg": {
+      "60": "https://images.cdn.polaris-iot.com/1/e1/d139d-6c2d-4f65-bf5c-ed7d45babc9e/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/1/e1/d139d-6c2d-4f65-bf5c-ed7d45babc9e/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/1/e1/d139d-6c2d-4f65-bf5c-ed7d45babc9e/240.webp",
+      "id": "1e1d139d-6c2d-4f65-bf5c-ed7d45babc9e",
+      "original": "https://images.cdn.polaris-iot.com/1/e1/d139d-6c2d-4f65-bf5c-ed7d45babc9e/original.webp"
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1770660665,
+  "temperature_units": "celsius"
+}

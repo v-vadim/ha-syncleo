@@ -1,0 +1,1480 @@
+{
+  "id": "9d50cb2e-e234-4a81-85d9-c2bdf2af23e1",
+  "name": "PBHC-3211FB Wi-Fi",
+  "type": 288,
+  "class": "cooktop",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/900.webp",
+    "1200": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/1200.webp",
+    "1800": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/1800.webp",
+    "id": "f770e29b-a370-4dc1-b939-a20e61294697",
+    "original": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/original.webp"
+  },
+  "layout": {
+    "home.top": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "switch",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "settings": [
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "إعادة تعيين تكوين نفك",
+          "de-DE": "Zurücksetzen der NFC-konfiguration",
+          "en-US": "NFC configuration reset",
+          "kk-KZ": "NFC конфигурациясын қалпына келтіру",
+          "ru-RU": "Сброс конфигурации по NFC",
+          "uk-UA": "Скидання конфігурації по NFC"
+        },
+        "measure": "nfcReset",
+        "position": 1
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "program",
+        "position": 0
+      }
+    ],
+    "manual.bottom": [
+      {
+        "type": "button_power",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "T1"
+        },
+        "suffix": "degree",
+        "position": 2,
+        "text_suffix": true,
+        "program_data": {
+          "field": "curtemp_1",
+          "program": [
+            3
+          ]
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "T2"
+        },
+        "suffix": "degree",
+        "position": 2,
+        "text_suffix": true,
+        "program_data": {
+          "field": "curtemp_2",
+          "program": [
+            3
+          ]
+        }
+      },
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "إيقاف مؤقت",
+          "de-DE": "Pause",
+          "en-US": "Pause",
+          "kk-KZ": "Уақытша тоқтату",
+          "ru-RU": "Пауза",
+          "uk-UA": "Пауза"
+        },
+        "action": {
+          "program_data": {
+            "field": "pause",
+            "value": 1,
+            "program": [
+              0
+            ]
+          }
+        },
+        "position": 3,
+        "condition": [
+          {
+            "program_data": {
+              "field": "pause",
+              "value": 1,
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "pause",
+            "value": 0,
+            "program": [
+              0
+            ]
+          }
+        },
+        "precondition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          },
+          {
+            "or": [
+              {
+                "not": {
+                  "custom_field": {
+                    "name": "burner_1",
+                    "value": 0,
+                    "feature": "temperature"
+                  }
+                }
+              },
+              {
+                "not": {
+                  "custom_field": {
+                    "name": "burner_2",
+                    "value": 0,
+                    "feature": "temperature"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "program_data": {
+              "field": "flag_pause",
+              "value": 3,
+              "program": [
+                5
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "fill",
+        "position": 3
+      },
+      {
+        "type": "container_tail",
+        "position": 4
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Level 1"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "3": {
+            "label": "3"
+          },
+          "6": {
+            "label": "6"
+          },
+          "9": {
+            "label": "9"
+          }
+        },
+        "position": 5,
+        "custom_field": {
+          "name": "burner_1",
+          "feature": "temperature"
+        },
+        "precondition": [
+          {
+            "or": [
+              {
+                "source": "state",
+                "program_data": {
+                  "field": "pause",
+                  "value": 0,
+                  "program": [
+                    0
+                  ]
+                }
+              },
+              {
+                "and": [
+                  {
+                    "source": "state",
+                    "program_data": {
+                      "field": "pause",
+                      "value": 1,
+                      "program": [
+                        0
+                      ]
+                    }
+                  },
+                  {
+                    "not": {
+                      "source": "state",
+                      "custom_field": {
+                        "name": "burner_1",
+                        "value": 0,
+                        "feature": "temperature"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Level 2"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "3": {
+            "label": "3"
+          },
+          "6": {
+            "label": "6"
+          },
+          "9": {
+            "label": "9"
+          }
+        },
+        "position": 6,
+        "custom_field": {
+          "name": "burner_2",
+          "feature": "temperature"
+        },
+        "precondition": [
+          {
+            "or": [
+              {
+                "source": "state",
+                "program_data": {
+                  "field": "pause",
+                  "value": 0,
+                  "program": [
+                    0
+                  ]
+                }
+              },
+              {
+                "and": [
+                  {
+                    "source": "state",
+                    "program_data": {
+                      "field": "pause",
+                      "value": 1,
+                      "program": [
+                        0
+                      ]
+                    }
+                  },
+                  {
+                    "not": {
+                      "source": "state",
+                      "custom_field": {
+                        "name": "burner_2",
+                        "value": 0,
+                        "feature": "temperature"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 10
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5940,
+          "min": 0,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Timer 1"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "600": {
+            "label": "10"
+          },
+          "1200": {
+            "label": "20"
+          },
+          "1800": {
+            "label": "30"
+          },
+          "2400": {
+            "label": "40"
+          },
+          "3000": {
+            "label": "50"
+          },
+          "3600": {
+            "label": "60"
+          },
+          "4200": {
+            "label": "70"
+          },
+          "4800": {
+            "label": "80"
+          },
+          "5400": {
+            "label": "90"
+          },
+          "5940": {
+            "label": "99"
+          }
+        },
+        "position": 11,
+        "custom_field": {
+          "name": "burner_1",
+          "feature": "timer"
+        }
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5940,
+          "min": 0,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Timer 2"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "600": {
+            "label": "10"
+          },
+          "1200": {
+            "label": "20"
+          },
+          "1800": {
+            "label": "30"
+          },
+          "2400": {
+            "label": "40"
+          },
+          "3000": {
+            "label": "50"
+          },
+          "3600": {
+            "label": "60"
+          },
+          "4200": {
+            "label": "70"
+          },
+          "4800": {
+            "label": "80"
+          },
+          "5400": {
+            "label": "90"
+          },
+          "5940": {
+            "label": "99"
+          }
+        },
+        "position": 12,
+        "custom_field": {
+          "name": "burner_2",
+          "feature": "timer"
+        }
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5940,
+          "min": 0,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Alarm"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "600": {
+            "label": "10"
+          },
+          "1200": {
+            "label": "20"
+          },
+          "1800": {
+            "label": "30"
+          },
+          "2400": {
+            "label": "40"
+          },
+          "3000": {
+            "label": "50"
+          },
+          "3600": {
+            "label": "60"
+          },
+          "4200": {
+            "label": "70"
+          },
+          "4800": {
+            "label": "80"
+          },
+          "5400": {
+            "label": "90"
+          },
+          "5940": {
+            "label": "99"
+          }
+        },
+        "position": 13,
+        "custom_field": {
+          "name": "alarm",
+          "feature": "timer"
+        }
+      },
+      {
+        "type": "container_tail",
+        "position": 16
+      },
+      {
+        "type": "container_head",
+        "position": 17
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "إعدادات",
+          "de-DE": "Einstellungen",
+          "en-US": "Settings",
+          "kk-KZ": "Параметрлер",
+          "ru-RU": "Настройки",
+          "uk-UA": "Налаштування"
+        },
+        "position": 18
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "Double circle 1"
+        },
+        "action": {
+          "program_data": {
+            "field": "boost_1",
+            "value": 1,
+            "program": [
+              2
+            ]
+          }
+        },
+        "position": 19,
+        "condition": [
+          {
+            "program_data": {
+              "field": "boost_1",
+              "value": 1,
+              "program": [
+                2
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "boost_1",
+            "value": 0,
+            "program": [
+              2
+            ]
+          }
+        },
+        "precondition": [
+          {
+            "not": {
+              "custom_field": {
+                "name": "burner_1",
+                "value": 0,
+                "feature": "temperature"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 19
+      },
+      {
+        "icon": "M0.0,0.0h29.0v30.0V0.0M4.62159 3.75354C4.23145 3.3634 3.60124 3.3634 3.21111 3.75354C2.82097 4.14367 2.82097 4.77389 3.21111 5.16402L8.04277 10.0057L8.00276 10.0457H1.01035C0.450157 10.0457 0 10.4959 0 11.0561V19.0388C0 19.599 0.450157 20.0492 1.01035 20.0492H8.00276L14.3449 25.6011C14.9952 26.1713 16.0055 25.7111 16.0055 24.8508V17.9684L18.1162 20.0792C17.5561 20.5293 17.1059 20.8194 16.9959 20.8894C16.5257 21.1795 16.3756 21.7898 16.6557 22.2599C16.8458 22.57 17.1759 22.7401 17.516 22.7401C17.6961 22.7401 17.8662 22.6901 18.0362 22.6C18.2663 22.46 18.8565 22.0799 19.5467 21.4997L22.4677 24.4207C20.9972 25.6811 19.2366 26.6214 17.266 27.1316C16.7258 27.2716 16.4057 27.8118 16.5457 28.352C16.6657 28.8022 17.0659 29.1023 17.516 29.1023C17.5961 29.1023 17.6861 29.0923 17.7661 29.0723C20.0869 28.4721 22.1676 27.3417 23.8782 25.8412L25.3888 27.3517C25.5888 27.5517 25.8389 27.6418 26.099 27.6418C26.3591 27.6418 26.6092 27.5417 26.8092 27.3517C27.1994 26.9615 27.1994 26.3313 26.8092 25.9412L4.62159 3.75354ZM16.0055 5.25428C16.0055 4.39398 14.9952 3.93382 14.3449 4.50402L11.1138 7.33499L16.0055 12.2267V5.25428ZM17.2559 1.97354C22.9979 3.45405 27.0093 8.62583 27.0093 14.5479C27.0093 17.1288 26.249 19.5696 24.9086 21.6203L26.3391 23.0508C28.0296 20.61 29 17.669 29 14.5479C29 7.71552 24.3684 1.74346 17.7461 0.0328684C17.2059 -0.10718 16.6657 0.21293 16.5257 0.753117C16.3956 1.2933 16.7157 1.83349 17.2559 1.97354ZM17.0659 8.25516C19.4967 9.44557 21.0073 11.8564 21.0073 14.5473C21.0073 15.2476 20.9072 15.9278 20.7072 16.588C20.6471 16.7881 20.5571 16.9782 20.4671 17.1682L21.9676 18.6687C22.2377 18.2086 22.4578 17.7084 22.6278 17.1782C22.8879 16.3279 23.018 15.4476 23.018 14.5473C23.018 11.0861 21.0773 7.98507 17.9562 6.46454C17.456 6.22446 16.8658 6.42453 16.6158 6.9247C16.3657 7.42487 16.5657 8.01508 17.0659 8.25516Z",
+        "type": "button",
+        "feature": "volume",
+        "position": 19
+      },
+      {
+        "type": "fill",
+        "position": 19
+      },
+      {
+        "type": "container_tail",
+        "position": 20
+      }
+    ],
+    "manual.shortcuts": [
+      {
+        "icon": "M0.0,0.0h29.0v30.0V0.0M4.62159 3.75354C4.23145 3.3634 3.60124 3.3634 3.21111 3.75354C2.82097 4.14367 2.82097 4.77389 3.21111 5.16402L8.04277 10.0057L8.00276 10.0457H1.01035C0.450157 10.0457 0 10.4959 0 11.0561V19.0388C0 19.599 0.450157 20.0492 1.01035 20.0492H8.00276L14.3449 25.6011C14.9952 26.1713 16.0055 25.7111 16.0055 24.8508V17.9684L18.1162 20.0792C17.5561 20.5293 17.1059 20.8194 16.9959 20.8894C16.5257 21.1795 16.3756 21.7898 16.6557 22.2599C16.8458 22.57 17.1759 22.7401 17.516 22.7401C17.6961 22.7401 17.8662 22.6901 18.0362 22.6C18.2663 22.46 18.8565 22.0799 19.5467 21.4997L22.4677 24.4207C20.9972 25.6811 19.2366 26.6214 17.266 27.1316C16.7258 27.2716 16.4057 27.8118 16.5457 28.352C16.6657 28.8022 17.0659 29.1023 17.516 29.1023C17.5961 29.1023 17.6861 29.0923 17.7661 29.0723C20.0869 28.4721 22.1676 27.3417 23.8782 25.8412L25.3888 27.3517C25.5888 27.5517 25.8389 27.6418 26.099 27.6418C26.3591 27.6418 26.6092 27.5417 26.8092 27.3517C27.1994 26.9615 27.1994 26.3313 26.8092 25.9412L4.62159 3.75354ZM16.0055 5.25428C16.0055 4.39398 14.9952 3.93382 14.3449 4.50402L11.1138 7.33499L16.0055 12.2267V5.25428ZM17.2559 1.97354C22.9979 3.45405 27.0093 8.62583 27.0093 14.5479C27.0093 17.1288 26.249 19.5696 24.9086 21.6203L26.3391 23.0508C28.0296 20.61 29 17.669 29 14.5479C29 7.71552 24.3684 1.74346 17.7461 0.0328684C17.2059 -0.10718 16.6657 0.21293 16.5257 0.753117C16.3956 1.2933 16.7157 1.83349 17.2559 1.97354ZM17.0659 8.25516C19.4967 9.44557 21.0073 11.8564 21.0073 14.5473C21.0073 15.2476 20.9072 15.9278 20.7072 16.588C20.6471 16.7881 20.5571 16.9782 20.4671 17.1682L21.9676 18.6687C22.2377 18.2086 22.4578 17.7084 22.6278 17.1782C22.8879 16.3279 23.018 15.4476 23.018 14.5473C23.018 11.0861 21.0773 7.98507 17.9562 6.46454C17.456 6.22446 16.8658 6.42453 16.6158 6.9247C16.3657 7.42487 16.5657 8.01508 17.0659 8.25516Z",
+        "type": "button",
+        "feature": "volume",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "title": {
+          "en-US": "Boost 1"
+        },
+        "action": {
+          "program_data": {
+            "field": "boost_1",
+            "value": 1,
+            "program": [
+              2
+            ]
+          }
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program_data": {
+              "field": "boost_1",
+              "value": 1,
+              "program": [
+                2
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "boost_1",
+            "value": 0,
+            "program": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "إيقاف مؤقت",
+          "de-DE": "Pause",
+          "en-US": "Pause",
+          "kk-KZ": "Уақытша тоқтату",
+          "ru-RU": "Пауза",
+          "uk-UA": "Пауза"
+        },
+        "action": {
+          "program_data": {
+            "field": "pause",
+            "value": 1,
+            "program": [
+              0
+            ]
+          }
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program_data": {
+              "field": "pause",
+              "value": 1,
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "pause",
+            "value": 0,
+            "program": [
+              0
+            ]
+          }
+        },
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "userPresets.list": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Custom modes",
+          "ru-RU": "Персональные режимы"
+        },
+        "position": 0
+      },
+      {
+        "row": "userPresets",
+        "type": "info",
+        "position": 1
+      },
+      {
+        "row": "savePreset",
+        "type": "button",
+        "title": {
+          "en-US": "Add",
+          "ru-RU": "Добавить"
+        },
+        "position": 2
+      }
+    ]
+  },
+  "limits": {
+    "timer": {
+      "max": 5940,
+      "min": 0,
+      "step": 60,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "volume": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "child_lock": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "temperature": {
+      "max": 9,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "hidden": false,
+    "altTypes": [
+      319
+    ],
+    "realtime": true,
+    "shortcuts": [
+      {
+        "values": {
+          "recipe": 1
+        }
+      },
+      {
+        "program": [
+          1
+        ]
+      },
+      {
+        "program": [
+          2
+        ]
+      },
+      {
+        "program": [
+          3
+        ]
+      }
+    ],
+    "fastSwitch": {
+      "on": {
+        "program": [
+          1
+        ]
+      },
+      "off": {
+        "program": [
+          0
+        ]
+      }
+    },
+    "invertSound": true,
+    "staticTimer": true,
+    "adminPresets": true,
+    "hotspot_ssid": "PBHC-3211FB",
+    "program_data": {
+      "0": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "pause",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "2": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "boost_1",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        }
+      ],
+      "3": [
+        {
+          "max": 65535,
+          "min": 0,
+          "name": "curtemp_1",
+          "size": 2,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 65535,
+          "min": 0,
+          "name": "curtemp_2",
+          "size": 2,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "5": [
+        {
+          "max": 3,
+          "min": 0,
+          "name": "flag_pause",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "voiceControl": {
+      "intents": {
+        "status": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                },
+                "off": {}
+              }
+            }
+          }
+        },
+        "program": {
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          },
+          "values": {
+            "timer": {},
+            "program": {
+              "enum_values": {
+                "program_fry": {
+                  "action": {
+                    "program": [
+                      7
+                    ]
+                  }
+                },
+                "program_jam": {
+                  "action": {
+                    "program": [
+                      14
+                    ]
+                  }
+                },
+                "program_bake": {
+                  "action": {
+                    "program": [
+                      8
+                    ]
+                  }
+                },
+                "program_cake": {
+                  "action": {
+                    "program": [
+                      3
+                    ]
+                  }
+                },
+                "program_soup": {
+                  "query": {
+                    "timer": {}
+                  },
+                  "action": {
+                    "program": [
+                      4
+                    ]
+                  }
+                },
+                "program_stew": {
+                  "action": {
+                    "program": [
+                      6
+                    ]
+                  }
+                },
+                "program_wine": {
+                  "action": {
+                    "program": [
+                      22
+                    ]
+                  }
+                },
+                "program_aspic": {
+                  "action": {
+                    "program": [
+                      10
+                    ]
+                  }
+                },
+                "program_bread": {
+                  "action": {
+                    "program": [
+                      19
+                    ]
+                  }
+                },
+                "program_pilaf": {
+                  "action": {
+                    "program": [
+                      9
+                    ]
+                  }
+                },
+                "program_steam": {
+                  "action": {
+                    "program": [
+                      15
+                    ]
+                  }
+                },
+                "program_reheat": {
+                  "action": {
+                    "program": [
+                      2
+                    ]
+                  }
+                },
+                "program_yogurt": {
+                  "action": {
+                    "program": [
+                      12
+                    ]
+                  }
+                },
+                "program_oatmeal": {
+                  "action": {
+                    "program": [
+                      13
+                    ]
+                  }
+                },
+                "program_oil_fry": {
+                  "action": {
+                    "program": [
+                      25
+                    ]
+                  }
+                },
+                "program_omelette": {
+                  "action": {
+                    "program": [
+                      20
+                    ]
+                  }
+                },
+                "program_slow_cook": {
+                  "action": {
+                    "program": [
+                      21
+                    ]
+                  }
+                },
+                "program_sous_vide": {
+                  "action": {
+                    "program": [
+                      24
+                    ]
+                  }
+                },
+                "program_soaked_rice": {
+                  "action": {
+                    "program": [
+                      18
+                    ]
+                  }
+                },
+                "program_milk_porridge": {
+                  "action": {
+                    "program": [
+                      17
+                    ]
+                  }
+                },
+                "program_my_recipe_plus": {
+                  "query": {
+                    "timer": {},
+                    "temperature": {}
+                  },
+                  "action": {
+                    "program": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            "temperature": {}
+          }
+        },
+        "rollcall": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "device_on": {
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          }
+        },
+        "greetings": {},
+        "device_off": {
+          "action": {
+            "steps": []
+          }
+        },
+        "status.full": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "timer": {
+              "items": {
+                "value": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                },
+                "off": {}
+              }
+            },
+            "child_lock": {}
+          }
+        },
+        "child_lock.on": {},
+        "child_lock.off": {}
+      }
+    },
+    "bastardOfType": 319,
+    "custom_command": {
+      "timer": [
+        {
+          "max": 5940,
+          "min": 0,
+          "name": "burner_1",
+          "size": 2,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 5940,
+          "min": 0,
+          "name": "burner_2",
+          "size": 2,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 5940,
+          "min": 0,
+          "name": "alarm",
+          "size": 2,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "temperature": [
+        {
+          "max": 9,
+          "min": 0,
+          "name": "burner_1",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 9,
+          "min": 0,
+          "name": "burner_2",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "openMqttSupport": true,
+    "manualInfoFields": [
+      "program",
+      "temperature",
+      "timer"
+    ],
+    "open_mqtt_support": true,
+    "excludeScheduleFeatures": [
+      "keep_warm"
+    ]
+  },
+  "vendor": "polaris",
+  "features": [
+    "program",
+    "temperature",
+    "timer",
+    "child_lock",
+    "volume",
+    "demo",
+    "semi_recipe"
+  ],
+  "messages": {
+    "diag": {
+      "ar-AE": "اضغط باستمرار على زر التشغيل على سطح الطهي حتى تسمع صوت إشارة صوتية واحدة. انتظر 10 ثوانٍ، سيومض مؤشر واي فاي بشكل بطيء.",
+      "de-DE": "Drücken und halten Sie die Ein/Aus-Taste am Kochfeld, bis ein Piepton ertönt. Warten Sie 10 Sekunden, die WLAN-Anzeige blinkt dann langsam.",
+      "en-US": "Press and hold the power button on the hob until one beep. Wait 10 seconds, the Wi-Fi indicator flashes slowly.",
+      "kk-KZ": "Плитадағы қуат түймесін бір дыбыстық сигнал шыққанша басып тұрыңыз. 10 секунд күтіңіз, Wi-Fi индикаторы баяу жыпылықтайды.",
+      "ru-RU": "Зажмите и удерживайте кнопку включения на поверхности варочной панели до одного звукового сигнала. Подождите 10 секунд, индикатор Wi-Fi начнет медленно мигать.",
+      "uk-UA": "Натисніть і утримуйте кнопку живлення на варильній поверхні, доки не пролунає один звуковий сигнал. Зачекайте 10 секунд, індикатор Wi-Fi повільно блиматиме."
+    },
+    "pair": {
+      "ar-AE": "اضغط باستمرار على زر التشغيل على سطح الطهي حتى تسمع صوت إشارة صوتية واحدة. سيومض مؤشر شبكة الواي فاي بسرعة.",
+      "de-DE": "Drücken Sie die Ein/Aus-Taste am Kochfeld und halten Sie diese gedrückt, bis ein Piepton ertönt. Die WLAN-Anzeige blinkt schnell.",
+      "en-US": "Press and hold the power button on the hob until one beep. The Wi-Fi indicator flashes quickly.",
+      "kk-KZ": "Плитадағы қуат түймесін бір дыбыстық сигнал шыққанша басып тұрыңыз. Wi-Fi индикаторы жылдам жыпылықтайды.",
+      "ru-RU": "Зажмите и удерживайте кнопку включения на поверхности варочной панели до одного звукового сигнала, после чего индикатор Wi-Fi начнет быстро мигать.",
+      "uk-UA": "Натисніть і утримуйте кнопку живлення на варильній поверхні, доки не пролунає один звуковий сигнал. Індикатор Wi-Fi швидко блиматиме."
+    },
+    "zero": {
+      "en-US": "Off"
+    },
+    "reset": {
+      "ar-AE": "اضغط باستمرار على زر شبكة الواي فاي على سطح الطهي حتى تسمع ثلاث إشارات صوتية. سيتم إيقاف تشغيل مؤشر شبكة الواي فاي.",
+      "de-DE": "Drücken Sie die WLAN-Taste am Kochfeld und halten Sie diese gedrückt, bis drei Pieptöne ertönen. Die WLAN-Anzeige erlischt.",
+      "en-US": "Press and hold the Wi-Fi button on the hob until three beeps.The Wi-Fi indicator turns off.",
+      "kk-KZ": "Үш сигнал естілгенше плитадағы Wi-Fi түймесін басып тұрыңыз. Wi-Fi индикаторы өшеді.",
+      "ru-RU": "Зажмите и удерживайте кнопку включения на поверхности варочной панели до трех звуковых сигналов, после чего индикатор Wi-Fi погаснет.",
+      "uk-UA": "Натисніть і утримуйте кнопку Wi-Fi на варильній поверхні, доки не пролунає три звукові сигнали. Індикатор Wi-Fi вимкнеться."
+    },
+    "Kw-Two": {
+      "en-US": "70°C"
+    },
+    "degree": {
+      "en-US": "°C"
+    },
+    "kw_one": {
+      "en-US": "40°C"
+    },
+    "error.1": {
+      "en-US": "Child lock operated",
+      "kk-KZ": "Кездейсоқ басудан қорғау атқарылды",
+      "ru-RU": "Сработала защита от случайного нажатия",
+      "uk-UA": "Функція захисту від дітей"
+    },
+    "error.2": {
+      "en-US": "1 NTC open short circuit fault, the display board shows E7"
+    },
+    "error.3": {
+      "en-US": "1 The furnace plate thermocouple falls off from the computer board or the thermocouple is abnormal; 2. The furnace plate temperature is too high, the furnace plate thermocouple detection temperature ≧720℃ (the power board relay (Relay) is sticky or the thermocouple is abnormal), the actual version shows EH"
+    },
+    "error.4": {
+      "en-US": "1 No temperature rise/slow temperature rise (the heating output starts to be detected 1 minute after the heating zone starts heating, and it cannot rise by 1℃ in 15 seconds); possible faults: heating open circuit, thermocouple reverse connection or short circuit, the display board shows EL"
+    },
+    "error.31": {
+      "en-US": "2 NTC open short circuit fault, the display board shows E7"
+    },
+    "error.32": {
+      "en-US": "2 The furnace plate thermocouple falls off from the computer board or the thermocouple is abnormal; 2. The furnace plate temperature is too high, the furnace plate thermocouple detection temperature ≧720℃ (the power board relay (Relay) is sticky or the thermocouple is abnormal), the actual version shows EH"
+    },
+    "error.33": {
+      "en-US": "2 No temperature rise/slow temperature rise (the heating output starts to be detected 1 minute after the heating zone starts heating, and it cannot rise by 1℃ in 15 seconds); possible faults: heating open circuit, thermocouple reverse connection or short circuit, the display board shows EL"
+    },
+    "kw_three": {
+      "en-US": "100°C"
+    },
+    "alert.step": {
+      "en-US": "Cooking step completed",
+      "kk-KZ": "Даярлау қадамы аяқталды",
+      "ru-RU": "Шаг приготовления завершён",
+      "uk-UA": "Крок приготування завершено"
+    },
+    "url.manual": {
+      "ar-AE": "https://images.cdn.polaris-iot.com/pdf/polaris/288/PBHC3211FB_WIFI_User Manual_v2_ru_kz.pdf",
+      "de-DE": "https://images.cdn.polaris-iot.com/pdf/polaris/288/PBHC3211FB_WIFI_User Manual_v2_ru_kz.pdf",
+      "en-US": "https://images.cdn.polaris-iot.com/pdf/polaris/288/PBHC3211FB_WIFI_User Manual_v2_ru_kz.pdf",
+      "kk-KZ": "https://images.cdn.polaris-iot.com/pdf/polaris/288/PBHC3211FB_WIFI_User Manual_v2_ru_kz.pdf",
+      "ru-RU": "https://images.cdn.polaris-iot.com/pdf/polaris/288/PBHC3211FB_WIFI_User Manual_v2_ru_kz.pdf",
+      "uk-UA": "https://images.cdn.polaris-iot.com/pdf/polaris/288/PBHC3211FB_WIFI_User Manual_v2_ru_kz.pdf"
+    },
+    "alert.ready": {
+      "en-US": "Cooking finished",
+      "kk-KZ": "Даярлау аяқталды",
+      "ru-RU": "Приготовление завершено",
+      "uk-UA": "Приготування їжі завершено"
+    },
+    "alert.start": {
+      "en-US": "Cooking started",
+      "kk-KZ": "Дайындық басталды",
+      "ru-RU": "Приготовление началось",
+      "uk-UA": "Розпочато приготування їжі"
+    },
+    "url.catalog": {
+      "ar-AE": "https://polaris.ru/catalog/hobs/polaris-pbhc3211fb-wifi-iq-home/",
+      "de-DE": "https://polaris.ru/catalog/hobs/polaris-pbhc3211fb-wifi-iq-home/",
+      "en-US": "https://polaris.ru/catalog/hobs/polaris-pbhc3211fb-wifi-iq-home/",
+      "kk-KZ": "https://polaris.ru/catalog/hobs/polaris-pbhc3211fb-wifi-iq-home/",
+      "ru-RU": "https://polaris.ru/catalog/hobs/polaris-pbhc3211fb-wifi-iq-home/",
+      "uk-UA": "https://polaris.ru/catalog/hobs/polaris-pbhc3211fb-wifi-iq-home/"
+    },
+    "talking.no_wifi": {
+      "de-DE": "Wenn die Anzeige der verzögerten Startzeit 20 Minuten anzeigt, kann das Gerät das konfigurierte Netzwerk nicht finden",
+      "en-US": "If the delayed start time indicator shows 20 minutes, the device cannot detect the configured network",
+      "kk-KZ": "Егер кешіктірілген бастау уақытының индикаторы 20 минутты көрсетсе, құрылғы конфигурацияланған желіні таба алмайды.",
+      "ru-RU": "Если индикатор времени отложенного старта показывает 20 минут - устройство не может обнаружить настроенную сеть",
+      "uk-UA": "Якщо індикатор відкладеного часу затримки запуску показує 20 хвилин, пристрій не може виявити налаштовану мережу"
+    },
+    "talking.wifi_error": {
+      "de-DE": "Wenn die Anzeige für die verzögerte Startzeit 40 Minuten anzeigt, ist das Passwort bei der Verbinden mit dem konfigurierten Netzwerk nicht korrekt",
+      "en-US": "If the delayed start time indicator shows 40 minutes, the password did not match when connecting to the configured network",
+      "kk-KZ": "Егер кешіктірілген бастау уақыты индикаторы 40 минутты көрсетсе, конфигурацияланған желіге қосылу кезінде пароль сәйкес келмеді",
+      "ru-RU": "Если индикатор времени отложенного старта показывает 40 минут - при подключении к настроенной сети не подошел пароль",
+      "uk-UA": "Якщо індикатор часу затримки запуску показує 40 хвилин, пароль не збігався при підключенні до налаштованої мережі"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    },
+    {
+      "name": {
+        "en-US": "On"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "pair": {
+      "60": "https://images.cdn.polaris-iot.com/a/df/63cc0-0752-46fd-9ca7-c5c23e1507e2/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/a/df/63cc0-0752-46fd-9ca7-c5c23e1507e2/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/a/df/63cc0-0752-46fd-9ca7-c5c23e1507e2/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/a/df/63cc0-0752-46fd-9ca7-c5c23e1507e2/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/a/df/63cc0-0752-46fd-9ca7-c5c23e1507e2/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/a/df/63cc0-0752-46fd-9ca7-c5c23e1507e2/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/a/df/63cc0-0752-46fd-9ca7-c5c23e1507e2/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/a/df/63cc0-0752-46fd-9ca7-c5c23e1507e2/1800.webp",
+      "id": "adf63cc0-0752-46fd-9ca7-c5c23e1507e2",
+      "original": "https://images.cdn.polaris-iot.com/a/df/63cc0-0752-46fd-9ca7-c5c23e1507e2/original.webp"
+    },
+    "enable": {
+      "60": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/1800.webp",
+      "id": "f770e29b-a370-4dc1-b939-a20e61294697",
+      "original": "https://images.cdn.polaris-iot.com/f/77/0e29b-a370-4dc1-b939-a20e61294697/original.webp"
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1782996702,
+  "temperature_units": "celsius"
+}

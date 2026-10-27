@@ -1,0 +1,97 @@
+{
+  "id": "0d6e0757-2ce9-44e2-b8b2-aca4aaec6e30",
+  "name": "Watch",
+  "type": 170,
+  "class": "other",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/c/a2/d9565-3316-4613-9b02-5ec661fc15d6/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/c/a2/d9565-3316-4613-9b02-5ec661fc15d6/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/c/a2/d9565-3316-4613-9b02-5ec661fc15d6/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/c/a2/d9565-3316-4613-9b02-5ec661fc15d6/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/c/a2/d9565-3316-4613-9b02-5ec661fc15d6/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/c/a2/d9565-3316-4613-9b02-5ec661fc15d6/900.webp",
+    "id": "ca2d9565-3316-4613-9b02-5ec661fc15d6",
+    "original": "https://images.cdn.polaris-iot.com/c/a2/d9565-3316-4613-9b02-5ec661fc15d6/original.webp"
+  },
+  "layout": {
+    "top": [
+      {
+        "pin": false,
+        "type": "slider",
+        "source": "state",
+        "feature": "battery",
+        "position": 0
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "pin": false,
+        "type": "slider",
+        "source": "state",
+        "feature": "battery",
+        "position": 2
+      },
+      {
+        "type": "container_tail",
+        "position": 3
+      }
+    ]
+  },
+  "limits": {
+    "battery": {
+      "max": 100,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "hidden": true,
+    "realtime": true,
+    "syncable": false,
+    "bleBondable": true,
+    "userPresets": false,
+    "bleWearService": true
+  },
+  "vendor": "polaris",
+  "features": [
+    "battery",
+    "program"
+  ],
+  "messages": {
+    "enable": {
+      "ru-RU": "Нажмите кнопку сбоку для активации bluetooth. В подтверждение загорится зеленый индикатор"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    }
+  ],
+  "connectivity": [
+    "ble"
+  ],
+  "last_modified": 1729083161,
+  "temperature_units": "celsius"
+}

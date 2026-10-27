@@ -1,0 +1,1067 @@
+{
+  "id": "202727d6-b02b-4c29-a442-5d664769d226",
+  "name": "PCM 1255",
+  "type": 247,
+  "class": "coffeemaker",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/6/7e/b8e87-9593-4023-b339-3fb6da5df931/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/6/7e/b8e87-9593-4023-b339-3fb6da5df931/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/6/7e/b8e87-9593-4023-b339-3fb6da5df931/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/6/7e/b8e87-9593-4023-b339-3fb6da5df931/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/6/7e/b8e87-9593-4023-b339-3fb6da5df931/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/6/7e/b8e87-9593-4023-b339-3fb6da5df931/900.webp",
+    "1200": "https://images.cdn.polaris-iot.com/6/7e/b8e87-9593-4023-b339-3fb6da5df931/1200.webp",
+    "1800": "https://images.cdn.polaris-iot.com/6/7e/b8e87-9593-4023-b339-3fb6da5df931/1800.webp",
+    "id": "67eb8e87-9593-4023-b339-3fb6da5df931",
+    "original": "https://images.cdn.polaris-iot.com/6/7e/b8e87-9593-4023-b339-3fb6da5df931/original.webp"
+  },
+  "layout": {
+    "home.top": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "switch",
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        },
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "إعادة تعيين تكوين نفك",
+          "de-DE": "Zurücksetzen der NFC-konfiguration",
+          "en-US": "NFC configuration reset",
+          "kk-KZ": "NFC конфигурациясын қалпына келтіру",
+          "ru-RU": "Сброс конфигурации по NFC",
+          "uk-UA": "Скидання конфігурації по NFC"
+        },
+        "measure": "nfcReset",
+        "position": 0
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "program",
+        "position": 0
+      }
+    ],
+    "manual.bottom": [
+      {
+        "type": "button_power",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "type": "info",
+        "feature": "program",
+        "position": 2,
+        "visibility": [
+          {
+            "not": {
+              "source": "state",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 3
+      },
+      {
+        "type": "container_head",
+        "position": 4
+      },
+      {
+        "type": "slider",
+        "style": "picker",
+        "feature": "timer",
+        "position": 5,
+        "precondition": [
+          {
+            "source": "state",
+            "program": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "points": {
+          "2": {
+            "label": "2"
+          },
+          "4": {
+            "label": "4"
+          },
+          "6": {
+            "label": "6"
+          },
+          "8": {
+            "label": "8"
+          },
+          "10": {
+            "label": "10"
+          },
+          "12": {
+            "label": "12"
+          }
+        },
+        "feature": "amount",
+        "position": 6,
+        "step_ticks": 1,
+        "precondition": [
+          {
+            "source": "state",
+            "program": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "points": {
+          "0": {
+            "name": {
+              "ar-AE": "معتدل ",
+              "de-DE": "mäßig ",
+              "en-US": "regular",
+              "kk-KZ": "орташа аз ",
+              "ru-RU": "умеренная ",
+              "uk-UA": "помірна "
+            },
+            "label": "regular"
+          },
+          "1": {
+            "name": {
+              "ar-AE": "متوسط ",
+              "de-DE": "mittel ",
+              "en-US": "middle",
+              "kk-KZ": "орташа ",
+              "ru-RU": "средняя",
+              "uk-UA": "середня "
+            },
+            "label": "middle"
+          },
+          "2": {
+            "name": {
+              "ar-AE": "عالي",
+              "de-DE": "hoch ",
+              "en-US": "bold",
+              "kk-KZ": "жоғары ",
+              "ru-RU": "высокая ",
+              "uk-UA": "висока "
+            },
+            "label": "boild"
+          }
+        },
+        "feature": "weight",
+        "position": 8,
+        "step_ticks": 1,
+        "formatRules": [
+          {
+            "max": 0,
+            "min": 0,
+            "string": "concentration_regular"
+          },
+          {
+            "max": 1,
+            "min": 1,
+            "string": "concentration_middle"
+          },
+          {
+            "max": 2,
+            "min": 2,
+            "string": "concentration_bold"
+          }
+        ],
+        "precondition": [
+          {
+            "source": "state",
+            "program": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 9
+      },
+      {
+        "type": "container_head",
+        "position": 10
+      },
+      {
+        "type": "header",
+        "title": {
+          "de-DE": "Einstellungen",
+          "en-US": "Function",
+          "kk-KZ": "Параметрлер",
+          "ru-RU": "Настройки",
+          "uk-UA": "Налаштування"
+        },
+        "position": 11
+      },
+      {
+        "type": "button",
+        "feature": "ioniser",
+        "position": 12
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 12,
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "icon": "M0.0,0.0h29.0v30.0V0.0M4.62159 3.75354C4.23145 3.3634 3.60124 3.3634 3.21111 3.75354C2.82097 4.14367 2.82097 4.77389 3.21111 5.16402L8.04277 10.0057L8.00276 10.0457H1.01035C0.450157 10.0457 0 10.4959 0 11.0561V19.0388C0 19.599 0.450157 20.0492 1.01035 20.0492H8.00276L14.3449 25.6011C14.9952 26.1713 16.0055 25.7111 16.0055 24.8508V17.9684L18.1162 20.0792C17.5561 20.5293 17.1059 20.8194 16.9959 20.8894C16.5257 21.1795 16.3756 21.7898 16.6557 22.2599C16.8458 22.57 17.1759 22.7401 17.516 22.7401C17.6961 22.7401 17.8662 22.6901 18.0362 22.6C18.2663 22.46 18.8565 22.0799 19.5467 21.4997L22.4677 24.4207C20.9972 25.6811 19.2366 26.6214 17.266 27.1316C16.7258 27.2716 16.4057 27.8118 16.5457 28.352C16.6657 28.8022 17.0659 29.1023 17.516 29.1023C17.5961 29.1023 17.6861 29.0923 17.7661 29.0723C20.0869 28.4721 22.1676 27.3417 23.8782 25.8412L25.3888 27.3517C25.5888 27.5517 25.8389 27.6418 26.099 27.6418C26.3591 27.6418 26.6092 27.5417 26.8092 27.3517C27.1994 26.9615 27.1994 26.3313 26.8092 25.9412L4.62159 3.75354ZM16.0055 5.25428C16.0055 4.39398 14.9952 3.93382 14.3449 4.50402L11.1138 7.33499L16.0055 12.2267V5.25428ZM17.2559 1.97354C22.9979 3.45405 27.0093 8.62583 27.0093 14.5479C27.0093 17.1288 26.249 19.5696 24.9086 21.6203L26.3391 23.0508C28.0296 20.61 29 17.669 29 14.5479C29 7.71552 24.3684 1.74346 17.7461 0.0328684C17.2059 -0.10718 16.6657 0.21293 16.5257 0.753117C16.3956 1.2933 16.7157 1.83349 17.2559 1.97354ZM17.0659 8.25516C19.4967 9.44557 21.0073 11.8564 21.0073 14.5473C21.0073 15.2476 20.9072 15.9278 20.7072 16.588C20.6471 16.7881 20.5571 16.9782 20.4671 17.1682L21.9676 18.6687C22.2377 18.2086 22.4578 17.7084 22.6278 17.1782C22.8879 16.3279 23.018 15.4476 23.018 14.5473C23.018 11.0861 21.0773 7.98507 17.9562 6.46454C17.456 6.22446 16.8658 6.42453 16.6158 6.9247C16.3657 7.42487 16.5657 8.01508 17.0659 8.25516Z",
+        "type": "button",
+        "title": {
+          "de-DE": "Tonlos",
+          "en-US": "Silent",
+          "kk-KZ": "Үнсіз",
+          "ru-RU": "Беззвучный",
+          "uk-UA": "Беззвучний"
+        },
+        "action": {
+          "volume": 0
+        },
+        "position": 12,
+        "condition": [
+          {
+            "source": "state",
+            "volume": 0
+          }
+        ],
+        "action_off": {
+          "volume": 1
+        },
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "title": {
+          "ar-AE": "جدول",
+          "de-DE": "Zeitplan",
+          "en-US": "Schedule",
+          "kk-KZ": "Кесте",
+          "ru-RU": "Расписание",
+          "uk-UA": "Расписание"
+        },
+        "feature": "schedule",
+        "position": 12
+      },
+      {
+        "type": "container_tail",
+        "position": 13
+      }
+    ],
+    "schedule.editor": [
+      {
+        "type": "button",
+        "measure": "input_name",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "measure": "input_date_time",
+        "position": 0
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "row": "repeat_days",
+        "type": "info",
+        "position": 2
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "وسائط",
+          "de-DE": "Modi",
+          "en-US": "Modes",
+          "kk-KZ": "Режимдер",
+          "ru-RU": "Режимы",
+          "uk-UA": "Режими"
+        },
+        "position": 4
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 5,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "style": "picker",
+        "feature": "timer",
+        "position": 6
+      },
+      {
+        "type": "slider",
+        "points": {
+          "2": {
+            "label": "2"
+          },
+          "4": {
+            "label": "4"
+          },
+          "6": {
+            "label": "6"
+          },
+          "8": {
+            "label": "8"
+          },
+          "10": {
+            "label": "10"
+          },
+          "12": {
+            "label": "12"
+          }
+        },
+        "feature": "amount",
+        "position": 7,
+        "step_ticks": 1
+      },
+      {
+        "type": "slider",
+        "points": {
+          "0": {
+            "label": "regular"
+          },
+          "1": {
+            "label": "middle"
+          },
+          "2": {
+            "label": "boild"
+          }
+        },
+        "feature": "weight",
+        "position": 8
+      },
+      {
+        "type": "button",
+        "feature": "ioniser",
+        "position": 9
+      },
+      {
+        "type": "fill",
+        "position": 9
+      },
+      {
+        "type": "container_tail",
+        "position": 10
+      }
+    ],
+    "manual.shortcuts": [
+      {
+        "icon": "M0.0,0.0h29.0v30.0V0.0M4.62159 3.75354C4.23145 3.3634 3.60124 3.3634 3.21111 3.75354C2.82097 4.14367 2.82097 4.77389 3.21111 5.16402L8.04277 10.0057L8.00276 10.0457H1.01035C0.450157 10.0457 0 10.4959 0 11.0561V19.0388C0 19.599 0.450157 20.0492 1.01035 20.0492H8.00276L14.3449 25.6011C14.9952 26.1713 16.0055 25.7111 16.0055 24.8508V17.9684L18.1162 20.0792C17.5561 20.5293 17.1059 20.8194 16.9959 20.8894C16.5257 21.1795 16.3756 21.7898 16.6557 22.2599C16.8458 22.57 17.1759 22.7401 17.516 22.7401C17.6961 22.7401 17.8662 22.6901 18.0362 22.6C18.2663 22.46 18.8565 22.0799 19.5467 21.4997L22.4677 24.4207C20.9972 25.6811 19.2366 26.6214 17.266 27.1316C16.7258 27.2716 16.4057 27.8118 16.5457 28.352C16.6657 28.8022 17.0659 29.1023 17.516 29.1023C17.5961 29.1023 17.6861 29.0923 17.7661 29.0723C20.0869 28.4721 22.1676 27.3417 23.8782 25.8412L25.3888 27.3517C25.5888 27.5517 25.8389 27.6418 26.099 27.6418C26.3591 27.6418 26.6092 27.5417 26.8092 27.3517C27.1994 26.9615 27.1994 26.3313 26.8092 25.9412L4.62159 3.75354ZM16.0055 5.25428C16.0055 4.39398 14.9952 3.93382 14.3449 4.50402L11.1138 7.33499L16.0055 12.2267V5.25428ZM17.2559 1.97354C22.9979 3.45405 27.0093 8.62583 27.0093 14.5479C27.0093 17.1288 26.249 19.5696 24.9086 21.6203L26.3391 23.0508C28.0296 20.61 29 17.669 29 14.5479C29 7.71552 24.3684 1.74346 17.7461 0.0328684C17.2059 -0.10718 16.6657 0.21293 16.5257 0.753117C16.3956 1.2933 16.7157 1.83349 17.2559 1.97354ZM17.0659 8.25516C19.4967 9.44557 21.0073 11.8564 21.0073 14.5473C21.0073 15.2476 20.9072 15.9278 20.7072 16.588C20.6471 16.7881 20.5571 16.9782 20.4671 17.1682L21.9676 18.6687C22.2377 18.2086 22.4578 17.7084 22.6278 17.1782C22.8879 16.3279 23.018 15.4476 23.018 14.5473C23.018 11.0861 21.0773 7.98507 17.9562 6.46454C17.456 6.22446 16.8658 6.42453 16.6158 6.9247C16.3657 7.42487 16.5657 8.01508 17.0659 8.25516Z",
+        "type": "button",
+        "title": {
+          "de-DE": "Tonlos",
+          "en-US": "Silent",
+          "kk-KZ": "Үнсіз",
+          "ru-RU": "Беззвучный",
+          "uk-UA": "Беззвучний"
+        },
+        "action": {
+          "volume": 0
+        },
+        "position": 0,
+        "condition": [
+          {
+            "source": "state",
+            "volume": 0
+          }
+        ],
+        "action_off": {
+          "volume": 1
+        },
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "ioniser",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 0,
+        "pendingAction": [
+          {
+            "or": []
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "recipe",
+        "position": 0,
+        "precondition": [
+          {
+            "source": "state",
+            "program": [
+              0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "limits": {
+    "timer": {
+      "max": 18000,
+      "min": 3600,
+      "step": 3600,
+      "round": 1,
+      "default": 3600,
+      "round_alt": 1
+    },
+    "amount": {
+      "max": 12,
+      "min": 2,
+      "step": 2,
+      "round": 1,
+      "default": 2,
+      "round_alt": 1
+    },
+    "volume": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 1,
+      "round_alt": 1
+    },
+    "weight": {
+      "max": 2,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "ioniser": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "child_lock": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "icons": {
+      "ioniser": "M0,0h28v30V0M18.5,20.9c-0.1,0-0.1,0-0.2,0c-0.4-0.1-0.7-0.5-0.6-0.9l0.1-0.4c0.1-0.4,0.5-0.7,0.9-0.6 c0.4,0.1,0.7,0.5,0.6,0.9l-0.1,0.4C19.2,20.7,18.8,20.9,18.5,20.9z M11.9,20.8l0-0.4c0.1-0.4-0.2-0.8-0.7-0.9 c-0.4-0.1-0.8,0.2-0.9,0.7l0,0.4c-0.1,0.4,0.2,0.8,0.7,0.9c0,0,0.1,0,0.1,0C11.5,21.5,11.9,21.2,11.9,20.8z M14.2,22.4l0-0.4 c0.1-0.4-0.2-0.8-0.7-0.9c-0.4-0.1-0.8,0.2-0.9,0.7l0,0.4c-0.1,0.4,0.2,0.8,0.7,0.9c0,0,0.1,0,0.1,0C13.8,23.1,14.1,22.8,14.2,22.4z M15.7,20.3l0-0.4c0.1-0.4-0.2-0.8-0.7-0.9c-0.4-0.1-0.8,0.2-0.9,0.7l0,0.4c-0.1,0.4,0.2,0.8,0.7,0.9c0,0,0.1,0,0.1,0 C15.3,21,15.7,20.7,15.7,20.3z M16.8,23.1l0.3-0.2c0.4-0.2,0.5-0.7,0.2-1.1c-0.2-0.4-0.7-0.5-1.1-0.2L16,21.8 c-0.4,0.2-0.5,0.7-0.2,1.1c0.2,0.2,0.4,0.4,0.7,0.4C16.6,23.2,16.7,23.2,16.8,23.1z M13.3,18.9l0.3-0.2c0.4-0.2,0.5-0.7,0.2-1.1 c-0.2-0.4-0.7-0.5-1.1-0.2l-0.3,0.2c-0.4,0.2-0.5,0.7-0.2,1.1c0.2,0.2,0.4,0.4,0.7,0.4C13,19.1,13.2,19,13.3,18.9z M7.2,18.5 l0.3-0.2c0.4-0.2,0.5-0.7,0.2-1.1C7.5,16.9,7,16.8,6.7,17l-0.3,0.2c-0.4,0.2-0.5,0.7-0.2,1.1c0.2,0.2,0.4,0.4,0.7,0.4 C7,18.7,7.1,18.6,7.2,18.5z M17,18.4l0.3-0.2c0.4-0.2,0.5-0.7,0.2-1.1c-0.2-0.4-0.7-0.5-1.1-0.2l-0.3,0.2c-0.4,0.2-0.5,0.7-0.2,1.1 c0.2,0.2,0.4,0.4,0.7,0.4C16.7,18.6,16.9,18.5,17,18.4z M15.7,15.9l0-0.4c0-0.4-0.3-0.8-0.7-0.9c-0.4,0-0.8,0.3-0.9,0.7l0,0.4 c0,0.4,0.3,0.8,0.7,0.9c0,0,0,0,0.1,0C15.3,16.6,15.6,16.3,15.7,15.9z M10.3,23.8l0.3-0.2c0.4-0.2,0.5-0.7,0.2-1.1 c-0.2-0.4-0.7-0.5-1.1-0.2l-0.3,0.2c-0.4,0.2-0.5,0.7-0.2,1.1c0.2,0.2,0.4,0.4,0.7,0.4C10,23.9,10.2,23.8,10.3,23.8z M9,21.2l0-0.4 C9,20.4,8.7,20,8.3,20c-0.4,0-0.8,0.3-0.9,0.7l0,0.4c0,0.4,0.3,0.8,0.7,0.9c0,0,0,0,0.1,0C8.6,21.9,8.9,21.6,9,21.2z M8.7,15 c0.1-0.4-0.2-0.8-0.6-0.9L7.7,14c-0.4-0.1-0.8,0.2-0.9,0.6c-0.1,0.4,0.2,0.8,0.6,0.9l0.4,0.1c0,0,0.1,0,0.1,0 C8.3,15.7,8.6,15.4,8.7,15z M10.2,13.9c0.4-0.2,0.5-0.7,0.3-1.1l-0.2-0.3c-0.2-0.4-0.7-0.5-1.1-0.3c-0.4,0.2-0.5,0.7-0.3,1.1 l0.2,0.3C9.3,13.8,9.5,14,9.8,14C9.9,14,10.1,14,10.2,13.9z M10.5,17.6c0.4-0.2,0.5-0.7,0.3-1.1l-0.2-0.3c-0.2-0.4-0.7-0.5-1.1-0.3 S9,16.6,9.2,17l0.2,0.3c0.1,0.3,0.4,0.4,0.7,0.4C10.2,17.7,10.4,17.7,10.5,17.6z M13.1,15.2c0.1-0.4-0.2-0.8-0.7-0.9l-0.4-0.1 c-0.4-0.1-0.8,0.2-0.9,0.7c-0.1,0.4,0.2,0.8,0.7,0.9l0.4,0.1c0,0,0.1,0,0.1,0C12.7,15.9,13.1,15.6,13.1,15.2z M13.5,12.3 c0.1-0.4-0.2-0.8-0.6-0.9l-0.4-0.1c-0.4-0.1-0.8,0.2-0.9,0.6c-0.1,0.4,0.2,0.8,0.6,0.9l0.4,0.1c0,0,0.1,0,0.1,0 C13.1,13,13.4,12.7,13.5,12.3z M15.9,13.7c0.4-0.2,0.5-0.7,0.3-1.1L16,12.3c-0.2-0.4-0.7-0.5-1.1-0.3c-0.4,0.2-0.5,0.7-0.3,1.1 l0.2,0.3c0.1,0.3,0.4,0.4,0.7,0.4C15.7,13.8,15.8,13.7,15.9,13.7z M19.3,15.4c0.1-0.4-0.2-0.8-0.7-0.9l-0.4-0.1 c-0.4-0.1-0.8,0.2-0.9,0.7c-0.1,0.4,0.2,0.8,0.7,0.9l0.4,0.1c0,0,0.1,0,0.1,0C18.9,16.1,19.3,15.8,19.3,15.4z M24.6,6V4.6 c0-0.7-0.6-1.3-1.3-1.3c-0.7,0-1.2,0.6-1.2,1.3v1.2h-7.4V5.5c0-1-0.8-1.8-1.8-1.8c-1,0-1.8,0.8-1.8,1.8v2.8h3.6V7.2h7.4v0h1.4 C24.1,7.2,24.6,6.7,24.6,6L24.6,6z M22.8,19.6v-8.1c0-1.5-1.2-2.6-2.6-2.6H6c-1.5,0-2.6,1.2-2.6,2.6v8.1c0,3.9,3.2,7,7,7h5.4 C19.7,26.6,22.8,23.5,22.8,19.6z M20.2,10.3c0.6,0,1.1,0.5,1.1,1.1v8.1c0,3.1-2.5,5.5-5.6,5.5h-5.4c-3.1,0-5.5-2.5-5.5-5.5v-8.1 c0-0.6,0.5-1.1,1.1-1.1H20.2z"
+    },
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "PCM 1255",
+          "manufacturer": "Polaris"
+        },
+        "type": "devices.types.cooking.coffee_maker",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                1
+              ]
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "action": {
+              "volume": 0
+            },
+            "instance": "mute",
+            "actionOff": {
+              "volume": 1
+            },
+            "condition": {
+              "volume": 0
+            },
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "feature": "child_lock",
+            "instance": "controls_locked",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "espresso",
+                "action": {
+                  "program": [
+                    1
+                  ]
+                }
+              }
+            ],
+            "instance": "coffee_mode",
+            "retrievable": false
+          },
+          {
+            "type": "dropdown",
+            "instance": "input_source",
+            "retrievable": false
+          }
+        ]
+      }
+    },
+    "hidden": true,
+    "realtime": true,
+    "staticTimer": true,
+    "userPresets": true,
+    "adminPresets": true,
+    "hotspot_ssid": "PCM-1255",
+    "program_data": {
+      "0": [
+        {
+          "max": 4,
+          "min": 0,
+          "name": "working_status",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "voiceControl": {
+      "intents": {
+        "status": {},
+        "program": {
+          "values": {
+            "program": {
+              "enum_values": {
+                "program_espresso": {}
+              }
+            }
+          }
+        },
+        "device_on": {
+          "action": {
+            "program": [
+              1
+            ]
+          }
+        },
+        "volume.on": {
+          "action": {
+            "volume": 1
+          }
+        },
+        "device_off": {
+          "action": {
+            "program": [
+              0
+            ]
+          }
+        },
+        "volume.off": {
+          "action": {
+            "volume": 0
+          }
+        },
+        "status.full": {},
+        "child_lock.on": {
+          "action": {
+            "child_lock": 1
+          }
+        },
+        "off_timer.set": {
+          "values": {
+            "timer": {}
+          }
+        },
+        "child_lock.off": {
+          "action": {
+            "child_lock": 0
+          }
+        }
+      },
+      "betaIntents": {
+        "status": {},
+        "program": {
+          "values": {
+            "program": {
+              "enum_values": {
+                "program_espresso": {}
+              }
+            }
+          }
+        },
+        "device_on": {
+          "action": {
+            "program": [
+              1
+            ]
+          }
+        },
+        "volume.on": {
+          "action": {
+            "volume": 1
+          }
+        },
+        "device_off": {
+          "action": {
+            "program": [
+              0
+            ]
+          }
+        },
+        "volume.off": {
+          "action": {
+            "volume": 0
+          }
+        },
+        "status.full": {},
+        "child_lock.on": {
+          "action": {
+            "child_lock": 1
+          }
+        },
+        "off_timer.set": {
+          "values": {
+            "timer": {}
+          }
+        },
+        "child_lock.off": {
+          "action": {
+            "child_lock": 0
+          }
+        }
+      }
+    },
+    "recipeAdvices": false,
+    "defaultProgram": [
+      1
+    ],
+    "multiUserConfig": {
+      "maxUsers": 1,
+      "userPrograms": [
+        {
+          "program": [
+            1
+          ],
+          "program_data_id": [
+            4
+          ]
+        },
+        {
+          "program": [
+            2
+          ],
+          "program_data_id": [
+            5
+          ]
+        },
+        {
+          "program": [
+            3
+          ],
+          "program_data_id": [
+            6
+          ]
+        },
+        {
+          "program": [
+            4
+          ],
+          "program_data_id": [
+            7
+          ]
+        },
+        {
+          "program": [
+            5
+          ],
+          "program_data_id": [
+            8
+          ]
+        }
+      ]
+    },
+    "shareblePresets": true,
+    "mqttFeatureNames": {
+      "volume": "sound"
+    },
+    "excludeScheduleFeatures": [
+      "volume"
+    ]
+  },
+  "vendor": "polaris",
+  "features": [
+    "program",
+    "child_lock",
+    "semi_recipe",
+    "amount",
+    "volume",
+    "schedule",
+    "recipe",
+    "weight",
+    "ioniser",
+    "timer"
+  ],
+  "messages": {
+    "diag": {
+      "ar-AE": "اضغط باستمرار على زري \"القائمة\" و \"السهم\" حتى تسمع صوت تنبيه واحد. ثم انتظر 10 ثوانٍ، وسيبدأ رمز Wi-Fi في الوميض بسرعة.",
+      "de-DE": "Halten Sie die \"Menü\"- und \"Pfeil\"-Tasten bis zu einem Signalton gedrückt. Warten Sie dann 10 Sekunden, und das Wi-Fi-Symbol beginnt schnell zu blinken.",
+      "en-US": "Press and hold the \"Menu\" and \"Arrow\" buttons until you hear one beep. Then wait 10 seconds, and the Wi-Fi icon will start flashing rapidly.",
+      "kk-KZ": "\"Мәзір\" және \"Бағыттар\" батырмаларын бір дыбыстық сигнал шыққанша басып тұрыңыз. Содан кейін 10 секунд күтіңіз, Wi-Fi белгішесі жылдам жыпылықтай бастайды.",
+      "ru-RU": "Зажмите кнопки \"Меню\" и \"Стрелки\" до одного звукового сигнала. Затем подождите 10 секунд, значок Wi-Fi начнет быстро мигать.",
+      "uk-UA": "Затисніть кнопки \"Меню\" та \"Стрілки\" до одного звукового сигналу. Потім зачекайте 10 секунд, значок Wi-Fi почне швидко блимати."
+    },
+    "pair": {
+      "ar-AE": "اضغط باستمرار على زري \"القائمة\" و \"السهم\" حتى تسمع صوت تنبيه واحد. كتأكيد ، سيبدأ رمز Wi-Fi في الوميض بسرعة.",
+      "de-DE": "Halten Sie die \"Menü\"- und \"Pfeil\"-Tasten gedrückt, bis Sie einen Signalton hören. Zur Bestätigung beginnt das Wi-Fi-Symbol schnell zu blinken.",
+      "en-US": "Press and hold the \"Menu\" and \"Arrows\" buttons until you hear one beep. As confirmation, the Wi-Fi icon will start flashing rapidly.",
+      "kk-KZ": "Мәзір және \"Бағыттар\" батырмаларын бір дыбыстық сигнал шыққанша басып тұрыңыз. Растау ретінде Wi-Fi белгішесі жылдам жыпылықтай бастайды.",
+      "ru-RU": "Зажмите кнопки \"Меню\" и \"Стрелки\" до одного звукового сигнала. В подтверждение значок Wi-Fi начнет быстро мигать.",
+      "uk-UA": "Затисніть кнопки \"Меню\" та \"Стрілки\" до одного звукового сигналу. На підтвердження значок Wi-Fi почне швидко блимати."
+    },
+    "reset": {
+      "ar-AE": "اضغط باستمرار على زري \"القائمة\" و \"السهم\". بعد ثلاثة أصوات تنبيه ، يجب أن ينطفئ رمز Wi-Fi.",
+      "de-DE": "Halten Sie die \"Menü\"- und \"Pfeil\"-Tasten gedrückt. Nach drei Signaltönen sollte das Wi-Fi-Symbol erlöschen.",
+      "en-US": "Press and hold the \"Menu\" and \"Arrows\" buttons. After three beeps, the Wi-Fi icon should turn off.",
+      "kk-KZ": "Мәзір және \"Бағыттар\" батырмаларын басып тұрыңыз. Үш дыбыстық сигналдан кейін Wi-Fi белгішесі өшуі керек.",
+      "ru-RU": "Зажмите кнопки \"Меню\" и \"Стрелки\". После трех звуковых сигналов значок Wi-Fi должен погаснуть.",
+      "uk-UA": "Затисніть кнопки \"Меню\" та \"Стрілки\". Після трьох звукових сигналів значок Wi-Fi повинен згаснути."
+    },
+    "error.1": {
+      "en-US": "door open"
+    },
+    "error.2": {
+      "en-US": "circuitul"
+    },
+    "error.3": {
+      "ar-AE": "قفل الأطفال قيد العمل",
+      "de-DE": "Der Schutz gegen unbeabsichtigtes Drücken hat funktioniert",
+      "en-US": "Child lock operated",
+      "kk-KZ": "Кездейсоқ басудан қорғау атқарылды",
+      "ru-RU": "Сработала защита от случайного нажатия",
+      "uk-UA": "Функція захисту від дітей"
+    },
+    "url.manual": {
+      "ar-AE": "https://images.cdn.polaris-iot.com/pdf/polaris/45/PCM%201540_User%20Manual_Restyle_v6_RU_UKR_KZ%20upd%20version%20140823.pdf",
+      "de-DE": "https://images.cdn.polaris-iot.com/pdf/polaris/45/PCM%201540_User%20Manual_Restyle_v6_RU_UKR_KZ%20upd%20version%20140823.pdf",
+      "en-US": "https://images.cdn.polaris-iot.com/pdf/polaris/45/PCM%201540_User%20Manual_Restyle_v6_RU_UKR_KZ%20upd%20version%20140823.pdf",
+      "kk-KZ": "https://images.cdn.polaris-iot.com/pdf/polaris/45/PCM%201540_User%20Manual_Restyle_v6_RU_UKR_KZ%20upd%20version%20140823.pdf",
+      "ru-RU": "https://images.cdn.polaris-iot.com/pdf/polaris/45/PCM%201540_User%20Manual_Restyle_v6_RU_UKR_KZ%20upd%20version%20140823.pdf",
+      "uk-UA": "https://images.cdn.polaris-iot.com/pdf/polaris/45/PCM%201540_User%20Manual_Restyle_v6_RU_UKR_KZ%20upd%20version%20140823.pdf"
+    },
+    "alert.ready": {
+      "ru-RU": "Нагрев пара завершен"
+    },
+    "attr.amount": {
+      "ar-AE": "قهوة",
+      "de-DE": "Kaffee",
+      "en-US": "Coffee",
+      "kk-KZ": "Кофе",
+      "ru-RU": "Кофе",
+      "uk-UA": "Кава"
+    },
+    "attr.weight": {
+      "ar-AE": "تركيز المشروب",
+      "de-DE": "Getrankekonzentration ",
+      "en-US": "Drink concentration",
+      "kk-KZ": "Сусынның қалыңдығы",
+      "ru-RU": "Насыщенность напитка",
+      "uk-UA": "Насиченість напою "
+    },
+    "heating_low": {
+      "en-US": "Low"
+    },
+    "heating_mid": {
+      "en-US": "Mid"
+    },
+    "url.catalog": {
+      "ar-AE": "https://polaris.ru/catalog/kofevarki/polaris-pcm-1540-wifi-iq-home/",
+      "de-DE": "https://polaris.ru/catalog/kofevarki/polaris-pcm-1540-wifi-iq-home/",
+      "en-US": "https://polaris.ru/catalog/kofevarki/polaris-pcm-1540-wifi-iq-home/",
+      "kk-KZ": "https://polaris.ru/catalog/kofevarki/polaris-pcm-1540-wifi-iq-home/",
+      "ru-RU": "https://polaris.ru/catalog/kofevarki/polaris-pcm-1540-wifi-iq-home/",
+      "uk-UA": "https://polaris.ru/catalog/kofevarki/polaris-pcm-1540-wifi-iq-home/"
+    },
+    "attr.ioniser": {
+      "ar-AE": "طحن",
+      "de-DE": "Schleifen",
+      "en-US": "Grinding",
+      "kk-KZ": "Ұнтақтау",
+      "ru-RU": "Помол",
+      "uk-UA": "Помел"
+    },
+    "heating_hight": {
+      "en-US": "Hight"
+    },
+    "attr.amount.suffix": {
+      "de-DE": "ml",
+      "en-US": "ml",
+      "kk-KZ": "мл",
+      "ru-RU": "мл",
+      "uk-UA": "мл"
+    },
+    "concentration_bold": {
+      "ar-AE": "عالي",
+      "de-DE": "hoch ",
+      "en-US": "bold",
+      "kk-KZ": "жоғары ",
+      "ru-RU": "высокая ",
+      "uk-UA": "висока "
+    },
+    "concentration_middle": {
+      "ar-AE": "متوسط ",
+      "de-DE": "mittel ",
+      "en-US": "middle",
+      "kk-KZ": "орташа ",
+      "ru-RU": "средняя",
+      "uk-UA": "середня "
+    },
+    "concentration_regular": {
+      "ar-AE": "معتدل ",
+      "de-DE": "mäßig ",
+      "en-US": "regular",
+      "kk-KZ": "орташа аз ",
+      "ru-RU": "умеренная ",
+      "uk-UA": "помірна "
+    },
+    "attr.water_tank.suffix": {
+      "de-DE": "ml",
+      "en-US": "ml",
+      "kk-KZ": "мл",
+      "ru-RU": "мл",
+      "uk-UA": "мл"
+    },
+    "attr.temperature.suffix": {
+      "en-US": " "
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    },
+    {
+      "icon": "M0.0,0.0h24.0v25.0V0.0M22 7H18V0H0V19C0.00287235 19.8846 0.298871 20.7432 0.841689 21.4416C1.38451 22.1401 2.14352 22.6389 3 22.86V25H15V22.86C15.8565 22.6389 16.6155 22.1401 17.1583 21.4416C17.7011 20.7432 17.9971 19.8846 18 19V15H22C22.5304 15 23.0391 14.7893 23.4142 14.4142C23.7893 14.0391 24 13.5304 24 13V9C24 8.46957 23.7893 7.96086 23.4142 7.58579C23.0391 7.21071 22.5304 7 22 7ZM16 14H2V2H16V14ZM22 13H18V9H22V13Z",
+      "name": {
+        "ar-AE": "اسبريسو",
+        "de-DE": "Espresso",
+        "en-US": "Espresso",
+        "kk-KZ": "Эспрессо",
+        "ru-RU": "Эспрессо",
+        "uk-UA": "Еспресо"
+      },
+      "hidden": false,
+      "limits": {
+        "timer": {
+          "max": 18000,
+          "min": 3600,
+          "step": 3600,
+          "round": 1,
+          "default": 3600,
+          "round_alt": 1
+        },
+        "amount": {
+          "max": 12,
+          "min": 2,
+          "step": 2,
+          "round": 1,
+          "default": 2,
+          "round_alt": 1
+        },
+        "weight": {
+          "max": 2,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "diag": {
+      "60": "https://images.cdn.polaris-iot.com/e/b4/fc642-b97b-4892-b846-42459e91664a/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/e/b4/fc642-b97b-4892-b846-42459e91664a/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/e/b4/fc642-b97b-4892-b846-42459e91664a/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/e/b4/fc642-b97b-4892-b846-42459e91664a/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/e/b4/fc642-b97b-4892-b846-42459e91664a/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/e/b4/fc642-b97b-4892-b846-42459e91664a/900.webp",
+      "id": "eb4fc642-b97b-4892-b846-42459e91664a",
+      "original": "https://images.cdn.polaris-iot.com/e/b4/fc642-b97b-4892-b846-42459e91664a/original.webp"
+    },
+    "pair": {
+      "60": "https://images.cdn.polaris-iot.com/0/2d/c9ce1-f4c2-43b3-9844-ccba86ea19a0/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/0/2d/c9ce1-f4c2-43b3-9844-ccba86ea19a0/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/0/2d/c9ce1-f4c2-43b3-9844-ccba86ea19a0/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/0/2d/c9ce1-f4c2-43b3-9844-ccba86ea19a0/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/0/2d/c9ce1-f4c2-43b3-9844-ccba86ea19a0/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/0/2d/c9ce1-f4c2-43b3-9844-ccba86ea19a0/900.webp",
+      "id": "02dc9ce1-f4c2-43b3-9844-ccba86ea19a0",
+      "original": "https://images.cdn.polaris-iot.com/0/2d/c9ce1-f4c2-43b3-9844-ccba86ea19a0/original.webp"
+    },
+    "reset": {
+      "60": "https://images.cdn.polaris-iot.com/8/b1/27404-6e6e-4f6d-931e-47b402a9e592/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/8/b1/27404-6e6e-4f6d-931e-47b402a9e592/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/8/b1/27404-6e6e-4f6d-931e-47b402a9e592/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/8/b1/27404-6e6e-4f6d-931e-47b402a9e592/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/8/b1/27404-6e6e-4f6d-931e-47b402a9e592/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/8/b1/27404-6e6e-4f6d-931e-47b402a9e592/900.webp",
+      "id": "8b127404-6e6e-4f6d-931e-47b402a9e592",
+      "original": "https://images.cdn.polaris-iot.com/8/b1/27404-6e6e-4f6d-931e-47b402a9e592/original.webp"
+    },
+    "manualbg": {
+      "60": "https://images.cdn.polaris-iot.com/8/01/a2797-54ab-451a-bbc6-0425b82213c1/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/8/01/a2797-54ab-451a-bbc6-0425b82213c1/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/8/01/a2797-54ab-451a-bbc6-0425b82213c1/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/8/01/a2797-54ab-451a-bbc6-0425b82213c1/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/8/01/a2797-54ab-451a-bbc6-0425b82213c1/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/8/01/a2797-54ab-451a-bbc6-0425b82213c1/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/8/01/a2797-54ab-451a-bbc6-0425b82213c1/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/8/01/a2797-54ab-451a-bbc6-0425b82213c1/1800.webp",
+      "id": "801a2797-54ab-451a-bbc6-0425b82213c1",
+      "original": "https://images.cdn.polaris-iot.com/8/01/a2797-54ab-451a-bbc6-0425b82213c1/original.webp"
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1767107825,
+  "temperature_units": "celsius"
+}

@@ -1,0 +1,418 @@
+{
+  "id": "a5f34420-4a48-46a7-87c4-d751f5015d88",
+  "name": "PVSG-01",
+  "type": 329,
+  "class": "ai_wearable",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/3/0d/ffed1-c10b-482c-9989-df7c2fa69469/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/3/0d/ffed1-c10b-482c-9989-df7c2fa69469/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/3/0d/ffed1-c10b-482c-9989-df7c2fa69469/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/3/0d/ffed1-c10b-482c-9989-df7c2fa69469/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/3/0d/ffed1-c10b-482c-9989-df7c2fa69469/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/3/0d/ffed1-c10b-482c-9989-df7c2fa69469/900.webp",
+    "1200": "https://images.cdn.polaris-iot.com/3/0d/ffed1-c10b-482c-9989-df7c2fa69469/1200.webp",
+    "1800": "https://images.cdn.polaris-iot.com/3/0d/ffed1-c10b-482c-9989-df7c2fa69469/1800.webp",
+    "id": "30dffed1-c10b-482c-9989-df7c2fa69469",
+    "original": "https://images.cdn.polaris-iot.com/3/0d/ffed1-c10b-482c-9989-df7c2fa69469/original.webp"
+  },
+  "layout": {
+    "settings": [
+      {
+        "type": "slider",
+        "title": {
+          "ar-AE": "حجم الوسائط",
+          "de-DE": "Medienvolumen",
+          "en-US": "Media volume",
+          "kk-KZ": "Гучність мультимедіа",
+          "ru-RU": "Громкость мультимедиа"
+        },
+        "measure": "system_volume",
+        "position": 0
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "battery",
+        "position": 0
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "pin": false,
+        "type": "info",
+        "source": "state",
+        "feature": "battery",
+        "position": 2
+      },
+      {
+        "type": "container_tail",
+        "position": 3
+      },
+      {
+        "type": "container_head",
+        "position": 4
+      },
+      {
+        "type": "icon",
+        "image": "logo",
+        "aspect": 2.3,
+        "position": 5
+      },
+      {
+        "type": "container_tail",
+        "position": 6
+      },
+      {
+        "type": "container_head",
+        "position": 13
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "وظائف الذكاء الاصطناعي",
+          "de-DE": "KI-Funktionen",
+          "en-US": "AI functions",
+          "kk-KZ": "AI функциялары",
+          "ru-RU": "Функции ИИ",
+          "uk-UA": "Функції штучного інтелекту"
+        },
+        "position": 14
+      },
+      {
+        "type": "button",
+        "image": "translate",
+        "title": {
+          "en-US": "Translation",
+          "ru-RU": "Переводчик"
+        },
+        "aspect": 1,
+        "measure": "translation",
+        "position": 15
+      },
+      {
+        "type": "button",
+        "image": "dialogs",
+        "title": {
+          "en-US": "Dialogs",
+          "ru-RU": "Запись встреч"
+        },
+        "aspect": 1,
+        "measure": "dialog",
+        "position": 15
+      },
+      {
+        "type": "button",
+        "image": "howto",
+        "title": {
+          "en-US": "How to",
+          "ru-RU": "Обучение"
+        },
+        "aspect": 1,
+        "feature": "recipe",
+        "position": 16
+      },
+      {
+        "type": "button",
+        "image": "assistant",
+        "title": {
+          "en-US": "Assistant",
+          "ru-RU": "Голосовой ассистент"
+        },
+        "aspect": 1,
+        "measure": "assistant",
+        "position": 16
+      },
+      {
+        "type": "container_tail",
+        "position": 17
+      }
+    ],
+    "manual.shortcuts": [
+      {
+        "type": "button",
+        "image": "translate",
+        "title": {
+          "en-US": "Translation",
+          "ru-RU": "Переводчик"
+        },
+        "aspect": 1,
+        "measure": "translation",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "image": "dialogs",
+        "title": {
+          "en-US": "Dialogs",
+          "ru-RU": "Запись встреч"
+        },
+        "aspect": 1,
+        "measure": "dialog",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "image": "howto",
+        "title": {
+          "en-US": "How to",
+          "ru-RU": "Обучение"
+        },
+        "aspect": 1,
+        "feature": "recipe",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "image": "assistant",
+        "title": {
+          "en-US": "Assistant",
+          "ru-RU": "Голосовой ассистент"
+        },
+        "aspect": 1,
+        "measure": "assistant",
+        "position": 0
+      }
+    ]
+  },
+  "limits": {},
+  "params": {
+    "hidden": false,
+    "realtime": true,
+    "syncable": false,
+    "bleBondable": true,
+    "bleProtocol": "sg01",
+    "program_data": {
+      "17": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "switch_music",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        }
+      ],
+      "18": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "toggle_music",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        }
+      ],
+      "19": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "volume_control",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "20": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "call_answer",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "regionGroups": [
+      "restWorld",
+      "arabic"
+    ],
+    "voiceControl": {
+      "intents": {
+        "status": {
+          "status": {
+            "battery": {}
+          }
+        }
+      }
+    },
+    "recipeAdvices": true,
+    "ai_description": "smart audio glasses",
+    "bleVoiceService": true
+  },
+  "vendor": "polaris",
+  "features": [
+    "battery",
+    "recipe",
+    "program",
+    "demo"
+  ],
+  "messages": {
+    "howto": {
+      "ar-AE": "نصائح",
+      "de-DE": "Beratung",
+      "en-US": "Advices",
+      "kk-KZ": "Кеңестер",
+      "ru-RU": "Обучение",
+      "uk-UA": "Рада"
+    },
+    "enable": {
+      "ar-AE": "للاتصال \"فتح كل من الأسلحة معبد من النظارات وانتظر\" الاقتران \" إشارة الصوت",
+      "de-DE": "Öffnen Sie zum Verbinden beide Bügelarme der Brille und warten Sie auf das Tonsignal \"Pairing\"",
+      "en-US": "For connection, open both temple arms of the glasses and wait for the “Pairing” sound signal",
+      "kk-KZ": "Қосылу үшін екі көзілдірікті де ашып, \"Сопряжение\"дыбыстық сигналын күтіңіз",
+      "ru-RU": "Для подключения откройте обе дужки очков и дождитесь звукового сигнала \"Сопряжение\"",
+      "uk-UA": "For connection, open both temple arms of the glasses and wait for the “Pairing” sound signal"
+    },
+    "dialogs": {
+      "ar-AE": "تسجيل الاجتماع",
+      "de-DE": "Protokoll der Sitzung",
+      "en-US": "Meeting recording",
+      "kk-KZ": "Жиналыс жазбасы",
+      "ru-RU": "Запись встреч",
+      "uk-UA": "Запис зборів"
+    },
+    "assistant": {
+      "ar-AE": "مساعد صوت",
+      "de-DE": "Sprachassistent",
+      "en-US": "Voice Assistant",
+      "kk-KZ": "Дауыстық Көмекші",
+      "ru-RU": "Голосовой ассистент",
+      "uk-UA": "Голосовий асистент"
+    },
+    "translate": {
+      "ar-AE": "مترجم",
+      "de-DE": "Übersetzer",
+      "en-US": "Translator",
+      "kk-KZ": "Аудармашы",
+      "ru-RU": "Переводчик",
+      "uk-UA": "Перекладач"
+    },
+    "enable_ios": {
+      "ar-AE": "للاتصال ، افتح ذراعي المعبد للنظارات وانتظر إشارة الصوت\" الاقتران\". افتح إعدادات البلوتوث وقم بتوصيل الجهاز الإضافي\" سغ-01 \" في قسم الأجهزة الأخرى. بعد إشارة الصوت\" المتصلة \" ، ارجع إلى التطبيق للمتابعة.",
+      "de-DE": "Öffnen Sie zum Verbinden beide Bügelarme der Brille und warten Sie auf das Tonsignal \"Pairing\". Öffnen Sie die Bluetooth-Einstellungen und verbinden Sie das Zusatzgerät \"SG-01\" im Bereich Andere Geräte. Kehren Sie nach dem Tonsignal \"Verbunden\" zur App zurück, um fortzufahren.",
+      "en-US": "For connection, open both temple arms of the glasses and wait for the “Pairing” sound signal. Open the Bluetooth settings and connect the additional device “SG-01” in the Other Devices section. After the “Connected” sound signal, return to the app to continue.",
+      "kk-KZ": "Қосылу үшін екі көзілдірікті де ашып, \"Сопряжение\"дыбыстық сигналын күтіңіз. Bluetooth параметрлерін ашып, \"SG-01\" қосымша құрылғысын басқа құрылғылар бөлімінде қосыңыз. \"Соединено\" дыбыстық сигналдан кейін жалғастыру үшін қолданбаға оралыңыз",
+      "ru-RU": "Для подключения откройте обе дужки очков и дождитесь звукового сигнала \"Сопряжение\". Откройте настройки Bluetooth и подключите дополнительное устройство \"SG-01\" в разделе Другие устройства. После звукового сигнала \"Соединено\" вернитесь в приложение, чтобы продолжить",
+      "uk-UA": "For connection, open both temple arms of the glasses and wait for the “Pairing” sound signal. Open the Bluetooth settings and connect the additional device “SG-01” in the Other Devices section. After the “Connected” sound signal, return to the app to continue."
+    },
+    "unpair_ios": {
+      "ar-AE": "هل تريد فصل هذا الجهاز عن هاتفك?\nلا تنس إلغاء الاقتران في إعدادات البلوتوث بالهاتف",
+      "de-DE": "Möchten Sie dieses Gerät von Ihrem Telefon trennen?\nVergessen Sie nicht, die Kopplung in den Bluetooth-Einstellungen des Telefons abzubrechen",
+      "en-US": "Do you want to disconnect this device from your phone?\nDon’t forget to cancel the pairing in the phone’s Bluetooth settings",
+      "kk-KZ": "Бұл құрылғыны телефоннан ажыратқыңыз келе ме?\nТелефонның Bluetooth параметрлерінде жұптастырудан бас тартуды ұмытпаңыз",
+      "ru-RU": "Вы хотите отключить это устройство от своего телефона?\nНе забудьте отменить сопряжение в Bluetooth настройках телефона"
+    },
+    "url.manual": {
+      "ar-AE": "https://images.cdn.polaris-iot.com/pdf/polaris/329/SG-01 User manual_09.26.pdf",
+      "de-DE": "https://images.cdn.polaris-iot.com/pdf/polaris/329/SG-01 User manual_09.26.pdf",
+      "en-US": "https://images.cdn.polaris-iot.com/pdf/polaris/329/SG-01 User manual_09.26.pdf",
+      "kk-KZ": "https://images.cdn.polaris-iot.com/pdf/polaris/329/SG-01 User manual_09.26.pdf",
+      "ru-RU": "https://images.cdn.polaris-iot.com/pdf/polaris/329/SG-01 User manual_09.26.pdf",
+      "uk-UA": "https://images.cdn.polaris-iot.com/pdf/polaris/329/SG-01 User manual_09.26.pdf"
+    },
+    "url.catalog": {
+      "ar-AE": "https://polaris.ru/catalog/smart_glasses/polaris-sg-01-iq-home/",
+      "de-DE": "https://polaris.ru/catalog/smart_glasses/polaris-sg-01-iq-home/",
+      "en-US": "https://polaris.ru/catalog/smart_glasses/polaris-sg-01-iq-home/",
+      "kk-KZ": "https://polaris.ru/catalog/smart_glasses/polaris-sg-01-iq-home/",
+      "ru-RU": "https://polaris.ru/catalog/smart_glasses/polaris-sg-01-iq-home/",
+      "uk-UA": "https://polaris.ru/catalog/smart_glasses/polaris-sg-01-iq-home/"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "None"
+      },
+      "hidden": true,
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "logo": {
+      "60": "https://images.cdn.polaris-iot.com/0/fe/6cd11-5bca-4f04-b9f0-6ce0204d0ea9/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/0/fe/6cd11-5bca-4f04-b9f0-6ce0204d0ea9/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/0/fe/6cd11-5bca-4f04-b9f0-6ce0204d0ea9/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/0/fe/6cd11-5bca-4f04-b9f0-6ce0204d0ea9/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/0/fe/6cd11-5bca-4f04-b9f0-6ce0204d0ea9/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/0/fe/6cd11-5bca-4f04-b9f0-6ce0204d0ea9/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/0/fe/6cd11-5bca-4f04-b9f0-6ce0204d0ea9/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/0/fe/6cd11-5bca-4f04-b9f0-6ce0204d0ea9/1800.webp",
+      "id": "0fe6cd11-5bca-4f04-b9f0-6ce0204d0ea9",
+      "original": "https://images.cdn.polaris-iot.com/0/fe/6cd11-5bca-4f04-b9f0-6ce0204d0ea9/original.webp"
+    },
+    "howto": {
+      "60": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/1200.webp",
+      "id": "46ed1e22-8700-478e-9038-85d8bfe45e4c",
+      "original": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/original.webp"
+    },
+    "dialogs": {
+      "60": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/1200.webp",
+      "id": "73b07569-7c5c-4836-87e8-50f86b4d84a6",
+      "original": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/original.webp"
+    },
+    "assistant": {
+      "60": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/1200.webp",
+      "id": "d0076827-a6b5-4844-9efa-168ec552c944",
+      "original": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/original.webp"
+    },
+    "translate": {
+      "60": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/900.webp",
+      "id": "7f3bac63-e4d3-4919-bc2d-8e01a7cb9cc6",
+      "original": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/original.webp"
+    }
+  },
+  "connectivity": [
+    "ble"
+  ],
+  "last_modified": 1789995471,
+  "temperature_units": "celsius"
+}

@@ -1,0 +1,1185 @@
+{
+  "id": "d24b3286-450e-47e6-ab3f-062a6daf26d1",
+  "name": "PBHG-6461GB",
+  "type": 334,
+  "class": "cooktop",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/e/28/c833d-c977-4371-b547-6feee50de77c/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/e/28/c833d-c977-4371-b547-6feee50de77c/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/e/28/c833d-c977-4371-b547-6feee50de77c/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/e/28/c833d-c977-4371-b547-6feee50de77c/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/e/28/c833d-c977-4371-b547-6feee50de77c/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/e/28/c833d-c977-4371-b547-6feee50de77c/900.webp",
+    "1200": "https://images.cdn.polaris-iot.com/e/28/c833d-c977-4371-b547-6feee50de77c/1200.webp",
+    "id": "e28c833d-c977-4371-b547-6feee50de77c",
+    "original": "https://images.cdn.polaris-iot.com/e/28/c833d-c977-4371-b547-6feee50de77c/original.webp"
+  },
+  "layout": {
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "إعداد منطقة التسخين",
+          "de-DE": "Heizzoneneinstellung",
+          "en-US": "Heating zone setting",
+          "kk-KZ": "Жылыту аймағын орнату",
+          "ru-RU": "Настройка конфорки",
+          "uk-UA": "Налаштування зони нагріву"
+        },
+        "position": 1
+      },
+      {
+        "type": "container_head",
+        "position": 2
+      },
+      {
+        "type": "info",
+        "title": {
+          "ar-AE": "مستوى التسخين",
+          "de-DE": "Heizstufe",
+          "en-US": "Heating level",
+          "kk-KZ": "Жылыту деңгейі",
+          "ru-RU": "Уровень нагрева",
+          "uk-UA": "Рівень нагріву"
+        },
+        "feature": "speed",
+        "position": 3,
+        "text_suffix": true
+      },
+      {
+        "type": "info",
+        "feature": "timer",
+        "position": 3,
+        "text_suffix": true
+      },
+      {
+        "type": "container_tail",
+        "position": 4
+      },
+      {
+        "type": "slider",
+        "style": "picker",
+        "title": {
+          "en-US": "Timer "
+        },
+        "feature": "timer",
+        "position": 5,
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 6
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "title": {
+          "ar-AE": "مستوى التسخين",
+          "de-DE": "Heizstufe",
+          "en-US": "Heating level",
+          "kk-KZ": "Жылыту деңгейі",
+          "ru-RU": "Уровень нагрева",
+          "uk-UA": "Рівень нагріву"
+        },
+        "points": {
+          "0": {
+            "label": "0"
+          },
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          },
+          "4": {
+            "label": "4"
+          },
+          "5": {
+            "label": "5"
+          }
+        },
+        "feature": "speed",
+        "position": 7,
+        "precondition": [
+          {
+            "or": [
+              {
+                "speed": 1,
+                "source": "state"
+              },
+              {
+                "speed": 2,
+                "source": "state"
+              },
+              {
+                "speed": 3,
+                "source": "state"
+              },
+              {
+                "speed": 4,
+                "source": "state"
+              },
+              {
+                "speed": 5,
+                "source": "state"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "container_tail",
+        "position": 8
+      },
+      {
+        "type": "container_head",
+        "position": 9
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "الميزات",
+          "de-DE": "Funktionen",
+          "en-US": "Features",
+          "kk-KZ": "Ерекше өзгешеліктері",
+          "ru-RU": "Функции",
+          "uk-UA": "Функції"
+        },
+        "position": 10
+      },
+      {
+        "type": "button",
+        "layout": "userPresets",
+        "position": 11,
+        "precondition": [
+          {
+            "not": {
+              "source": "state",
+              "multi_step": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "fill",
+        "position": 11
+      },
+      {
+        "type": "container_tail",
+        "position": 12
+      }
+    ],
+    "userPresets.list": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Custom modes",
+          "ru-RU": "Персональные режимы"
+        },
+        "position": 0
+      },
+      {
+        "row": "userPresets",
+        "type": "info",
+        "position": 1
+      },
+      {
+        "row": "addPreset",
+        "type": "button",
+        "title": {
+          "en-US": "Add",
+          "ru-RU": "Добавить"
+        },
+        "position": 2
+      }
+    ],
+    "userPresets.editor": [
+      {
+        "type": "button",
+        "measure": "input_name",
+        "position": 0
+      },
+      {
+        "type": "slider",
+        "style": "picker",
+        "title": {
+          "en-US": "Timer "
+        },
+        "feature": "timer",
+        "position": 1
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 5,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        "title": {
+          "ar-AE": "مستوى التسخين",
+          "de-DE": "Heizstufe",
+          "en-US": "Heating level",
+          "kk-KZ": "Жылыту деңгейі",
+          "ru-RU": "Уровень нагрева",
+          "uk-UA": "Рівень нагріву"
+        },
+        "points": {
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          },
+          "4": {
+            "label": "4"
+          },
+          "5": {
+            "label": "5"
+          }
+        },
+        "feature": "speed",
+        "position": 2
+      }
+    ]
+  },
+  "limits": {
+    "speed": {
+      "max": 5,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "timer": {
+      "max": 5940,
+      "min": 0,
+      "step": 60,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "turbo": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "multi_step": {
+      "max": 9,
+      "min": 1,
+      "step": 1,
+      "round": 1,
+      "default": 1,
+      "round_alt": 1
+    },
+    "temperature": {
+      "max": 3,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "icons": {
+      "volume": "M0.0,0.0h29.0v30.0V0.0M4.62159 3.75354C4.23145 3.3634 3.60124 3.3634 3.21111 3.75354C2.82097 4.14367 2.82097 4.77389 3.21111 5.16402L8.04277 10.0057L8.00276 10.0457H1.01035C0.450157 10.0457 0 10.4959 0 11.0561V19.0388C0 19.599 0.450157 20.0492 1.01035 20.0492H8.00276L14.3449 25.6011C14.9952 26.1713 16.0055 25.7111 16.0055 24.8508V17.9684L18.1162 20.0792C17.5561 20.5293 17.1059 20.8194 16.9959 20.8894C16.5257 21.1795 16.3756 21.7898 16.6557 22.2599C16.8458 22.57 17.1759 22.7401 17.516 22.7401C17.6961 22.7401 17.8662 22.6901 18.0362 22.6C18.2663 22.46 18.8565 22.0799 19.5467 21.4997L22.4677 24.4207C20.9972 25.6811 19.2366 26.6214 17.266 27.1316C16.7258 27.2716 16.4057 27.8118 16.5457 28.352C16.6657 28.8022 17.0659 29.1023 17.516 29.1023C17.5961 29.1023 17.6861 29.0923 17.7661 29.0723C20.0869 28.4721 22.1676 27.3417 23.8782 25.8412L25.3888 27.3517C25.5888 27.5517 25.8389 27.6418 26.099 27.6418C26.3591 27.6418 26.6092 27.5417 26.8092 27.3517C27.1994 26.9615 27.1994 26.3313 26.8092 25.9412L4.62159 3.75354ZM16.0055 5.25428C16.0055 4.39398 14.9952 3.93382 14.3449 4.50402L11.1138 7.33499L16.0055 12.2267V5.25428ZM17.2559 1.97354C22.9979 3.45405 27.0093 8.62583 27.0093 14.5479C27.0093 17.1288 26.249 19.5696 24.9086 21.6203L26.3391 23.0508C28.0296 20.61 29 17.669 29 14.5479C29 7.71552 24.3684 1.74346 17.7461 0.0328684C17.2059 -0.10718 16.6657 0.21293 16.5257 0.753117C16.3956 1.2933 16.7157 1.83349 17.2559 1.97354ZM17.0659 8.25516C19.4967 9.44557 21.0073 11.8564 21.0073 14.5473C21.0073 15.2476 20.9072 15.9278 20.7072 16.588C20.6471 16.7881 20.5571 16.9782 20.4671 17.1682L21.9676 18.6687C22.2377 18.2086 22.4578 17.7084 22.6278 17.1782C22.8879 16.3279 23.018 15.4476 23.018 14.5473C23.018 11.0861 21.0773 7.98507 17.9562 6.46454C17.456 6.22446 16.8658 6.42453 16.6158 6.9247C16.3657 7.42487 16.5657 8.01508 17.0659 8.25516Z"
+    },
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "Burner",
+          "manufacturer": "polaris"
+        },
+        "type": "devices.types.other",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "steps": [
+                {
+                  "speed": 5,
+                  "timer": 0,
+                  "program": [
+                    1
+                  ]
+                }
+              ]
+            },
+            "actionOff": {
+              "steps": []
+            },
+            "condition": {
+              "not": {
+                "multi_step": 0
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "one",
+                "action": {
+                  "steps": [
+                    {
+                      "speed": 1,
+                      "timer": 0,
+                      "program": [
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "condition": {
+                  "speed": 1
+                }
+              },
+              {
+                "value": "two",
+                "action": {
+                  "steps": [
+                    {
+                      "speed": 2,
+                      "timer": 0,
+                      "program": [
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "condition": {
+                  "speed": 2
+                }
+              },
+              {
+                "value": "three",
+                "action": {
+                  "steps": [
+                    {
+                      "speed": 3,
+                      "timer": 0,
+                      "program": [
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "condition": {
+                  "speed": 3
+                }
+              },
+              {
+                "value": "four",
+                "action": {
+                  "steps": [
+                    {
+                      "speed": 4,
+                      "timer": 0,
+                      "program": [
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "condition": {
+                  "speed": 4
+                }
+              },
+              {
+                "value": "five",
+                "action": {
+                  "steps": [
+                    {
+                      "speed": 5,
+                      "timer": 0,
+                      "program": [
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "condition": {
+                  "speed": 5
+                }
+              }
+            ],
+            "instance": "heat",
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "hidden": true,
+    "realtime": true,
+    "userPresets": true,
+    "adminPresets": true,
+    "program_data": {
+      "0": [
+        {
+          "max": 2,
+          "min": 0,
+          "name": "double_circle",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "1": [
+        {
+          "max": 2,
+          "min": 0,
+          "name": "keepwarm",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "2": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "boost",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        }
+      ],
+      "3": [
+        {
+          "max": 4,
+          "min": 0,
+          "name": "flag_pause",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "4": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "residual_temperature",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "voiceControl": {
+      "intents": {
+        "status": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                },
+                "off": {}
+              }
+            }
+          }
+        },
+        "program": {
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          },
+          "values": {
+            "timer": {},
+            "program": {
+              "enum_values": {
+                "program_fry": {
+                  "action": {
+                    "program": [
+                      7
+                    ]
+                  }
+                },
+                "program_jam": {
+                  "action": {
+                    "program": [
+                      14
+                    ]
+                  }
+                },
+                "program_bake": {
+                  "action": {
+                    "program": [
+                      8
+                    ]
+                  }
+                },
+                "program_cake": {
+                  "action": {
+                    "program": [
+                      3
+                    ]
+                  }
+                },
+                "program_soup": {
+                  "query": {
+                    "timer": {}
+                  },
+                  "action": {
+                    "program": [
+                      4
+                    ]
+                  }
+                },
+                "program_stew": {
+                  "action": {
+                    "program": [
+                      6
+                    ]
+                  }
+                },
+                "program_wine": {
+                  "action": {
+                    "program": [
+                      22
+                    ]
+                  }
+                },
+                "program_aspic": {
+                  "action": {
+                    "program": [
+                      10
+                    ]
+                  }
+                },
+                "program_bread": {
+                  "action": {
+                    "program": [
+                      19
+                    ]
+                  }
+                },
+                "program_pilaf": {
+                  "action": {
+                    "program": [
+                      9
+                    ]
+                  }
+                },
+                "program_steam": {
+                  "action": {
+                    "program": [
+                      15
+                    ]
+                  }
+                },
+                "program_reheat": {
+                  "action": {
+                    "program": [
+                      2
+                    ]
+                  }
+                },
+                "program_yogurt": {
+                  "action": {
+                    "program": [
+                      12
+                    ]
+                  }
+                },
+                "program_oatmeal": {
+                  "action": {
+                    "program": [
+                      13
+                    ]
+                  }
+                },
+                "program_oil_fry": {
+                  "action": {
+                    "program": [
+                      25
+                    ]
+                  }
+                },
+                "program_omelette": {
+                  "action": {
+                    "program": [
+                      20
+                    ]
+                  }
+                },
+                "program_slow_cook": {
+                  "action": {
+                    "program": [
+                      21
+                    ]
+                  }
+                },
+                "program_sous_vide": {
+                  "action": {
+                    "program": [
+                      24
+                    ]
+                  }
+                },
+                "program_soaked_rice": {
+                  "action": {
+                    "program": [
+                      18
+                    ]
+                  }
+                },
+                "program_milk_porridge": {
+                  "action": {
+                    "program": [
+                      17
+                    ]
+                  }
+                },
+                "program_my_recipe_plus": {
+                  "query": {
+                    "timer": {},
+                    "temperature": {}
+                  },
+                  "action": {
+                    "program": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            "temperature": {}
+          }
+        },
+        "rollcall": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "device_on": {
+          "errors": {
+            "deviceBusyProgram": {
+              "condition": [
+                {
+                  "not": {
+                    "steps": []
+                  }
+                }
+              ],
+              "allowControl": false
+            }
+          }
+        },
+        "greetings": {},
+        "device_off": {
+          "action": {
+            "steps": []
+          }
+        },
+        "status.full": {
+          "status": {
+            "ready": {
+              "items": {
+                "offline": {},
+                "is_ready": {},
+                "not_ready": {},
+                "error_no_bowl": {
+                  "condition": [
+                    {
+                      "error": 6
+                    }
+                  ]
+                },
+                "error_temperature_sensor": {
+                  "condition": [
+                    {
+                      "or": [
+                        {
+                          "error": 1
+                        },
+                        {
+                          "error": 2
+                        },
+                        {
+                          "error": 3
+                        },
+                        {
+                          "error": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "timer": {
+              "items": {
+                "value": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "program": {
+              "items": {
+                "on": {
+                  "condition": [
+                    {
+                      "not": {
+                        "steps": []
+                      }
+                    }
+                  ]
+                },
+                "off": {}
+              }
+            },
+            "child_lock": {}
+          }
+        },
+        "child_lock.on": {},
+        "child_lock.off": {}
+      }
+    },
+    "defaultProgram": [
+      1
+    ],
+    "multiStepFields": [
+      "speed",
+      "timer"
+    ],
+    "excludeScheduleFeatures": [
+      "keep_warm"
+    ]
+  },
+  "vendor": "polaris",
+  "features": [
+    "program",
+    "temperature",
+    "timer",
+    "multi_step",
+    "current_temperature",
+    "turbo",
+    "speed"
+  ],
+  "messages": {
+    "hot": {
+      "en-US": "H",
+      "ru-RU": "X"
+    },
+    "zero": {
+      "en-US": "Off"
+    },
+    "degree": {
+      "en-US": "°C"
+    },
+    "error.1": {
+      "ar-AE": "قفل الأطفال قيد العمل",
+      "de-DE": "Der Schutz gegen unbeabsichtigtes Drücken hat funktioniert",
+      "en-US": "Child lock operated",
+      "kk-KZ": "Кездейсоқ басудан қорғау атқарылды",
+      "ru-RU": "Сработала защита от случайного нажатия",
+      "uk-UA": "Функція захисту від дітей"
+    },
+    "error.2": {
+      "ar-AE": "فشل مستشعر الفرن. العملية محظورة. اتصل بمركز الخدمة.",
+      "de-DE": "Fehler am Kochfeldsensor. Nicht verwenden. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Cooktop sensor error. Do not use. Contact a service center.",
+      "kk-KZ": "Плита сенсорының істен шығуы. Пайдалануға тыйым салынады. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Cбой датчика варочной панели. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Збій датчика варильної панелі.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.3": {
+      "ar-AE": "ارتفاع درجة حرارة السطح. العملية محظورة. اقرأ الخطوات الواردة في التعليمات.",
+      "de-DE": "Oberfläche überhitzt. Nicht verwenden. Beachten Sie die Anweisungen zur Abhilfe.",
+      "en-US": "Surface overheated. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "Беттің қызып кетуі. Пайдалануға тыйым салынады. Нұсқаулықтағы әрекеттерді тексеріңіз.",
+      "ru-RU": "Перегрев поверхности. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Перегрів поверхні. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.4": {
+      "ar-AE": "خلل في استشعار وحدة إغبت. العملية محظورة. اتصل بمركز الخدمة.",
+      "de-DE": "Fehler am IGBT-Modulsensor. Nicht verwenden. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "IGBT module sensor error. Do not use. Contact a service center.",
+      "kk-KZ": "IGBT Модулінің сенсорының дұрыс жұмыс істемеуі. Пайдалануға тыйым салынады. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Cбой работы датчика IGBT-модуля. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Збій роботи датчика IGBT-модуля. Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.5": {
+      "ar-AE": "ارتفاع درجة حرارة وحدة إغبت استشعار درجة الحرارة. العملية محظورة. اقرأ الخطوات الواردة في التعليمات.",
+      "de-DE": "Temperatursensor des IGBT-Moduls überhitzt. Nicht verwenden. Beachten Sie die Anweisungen zur Abhilfe.",
+      "en-US": "IGBT module temperature sensor overheated. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "IGBT Модулінің температура сенсорының қызып кетуі. Пайдалануға тыйым салынады. Нұсқаулықтағы әрекеттерді тексеріңіз.",
+      "ru-RU": "Перегрев датчика температуры IGBT-модуля. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Перегрівання датчика температури IGBT-модуля. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.6": {
+      "ar-AE": "خطأ استشعار درجة الحرارة (المجلس الوطني الانتقالي). العملية محظورة. اتصل بمركز الخدمة.",
+      "de-DE": "Fehler am Temperatursensor (NTC). Nicht verwenden. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Temperature sensor error (NTC). Do not use. Contact a service center.",
+      "kk-KZ": "Температура сенсорының қатесі (NTC). Пайдалануға тыйым салынады. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Ошибка температурного датчика (NTC). Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Помилка датчика температури (NTC). Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.7": {
+      "ar-AE": "الجهد الكهربائي العالي. العملية محظورة. اقرأ الخطوات الواردة في التعليمات.",
+      "de-DE": "Hohe Netzspannung. Nicht verwenden. Beachten Sie die Anweisungen zur Abhilfe.",
+      "en-US": "Line voltage too high. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "Желінің жоғары кернеуі. Пайдалануға тыйым салынады. Нұсқаулықтағы әрекеттерді тексеріңіз.",
+      "ru-RU": "Высокое напряжение сети. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Висока напруга мережі. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.8": {
+      "ar-AE": "الجهد الكهربائي المنخفض. العملية محظورة. اقرأ الخطوات الواردة في التعليمات.",
+      "de-DE": "Niedrige Netzspannung. Nicht verwenden. Beachten Sie die Anweisungen zur Abhilfe.",
+      "en-US": "Line voltage too low. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "Төмен кернеу желісі. Пайдалануға тыйым салынады. Нұсқаулықтағы әрекеттерді тексеріңіз.",
+      "ru-RU": "Низкое напряжение сети. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Низька напруга мережі. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.9": {
+      "ar-AE": "تتم إزالة الأطباق أو غير مناسبة لسطح الحث.",
+      "de-DE": "Kochgeschirr entfernt oder nicht für Induktionskochen geeignet.",
+      "en-US": "Cookware has been removed or is not suitable for induction cooking.",
+      "kk-KZ": "Ыдыс-аяқ алынып тасталады немесе индукциялық бетке жарамайды.",
+      "ru-RU": "Посуда снята или не подходит для индукционной поверхности.",
+      "uk-UA": "Посуд знятий або не підходить для індукційної поверхні."
+    },
+    "error.10": {
+      "ar-AE": "عطل في الشاشة ولوحة التحكم. العملية محظورة. اتصل بمركز الخدمة.",
+      "de-DE": "Störung der Anzeige und Bedienplatine. Nicht verwenden. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Display and control board malfunction. Do not use. Contact a service center.",
+      "kk-KZ": "Дисплей мен басқару тақтасының дұрыс жұмыс істемеуі. Пайдалануға тыйым салынады. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Сбой работы дисплея и платы управления. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Збій роботи дисплея та плати управління. Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.11": {
+      "ar-AE": "تم تنشيط حماية السائل. تنظيف السطح وتشغيل الفرن.",
+      "de-DE": "Flüssigkeitsschutz hat ausgelöst. Reinigen Sie die Oberfläche und schalten Sie das Kochfeld ein.",
+      "en-US": "Liquid protection has been activated. Clean the surface and turn on the cooktop.",
+      "kk-KZ": "Сұйықтықтан қорғау жұмыс істеді. Бетті тазалап, пешті қосыңыз.",
+      "ru-RU": "Сработала защита от жидкости. Очистите поверхность и включите варочную панель.",
+      "uk-UA": "Спрацював захист від рідини. Очистіть поверхню та увімкніть варильну панель."
+    },
+    "error.31": {
+      "ar-AE": "الجهد الكهربائي العالي. العملية محظورة. اقرأ الخطوات الواردة في التعليمات.",
+      "de-DE": "Hohe Netzspannung. Nicht verwenden. Beachten Sie die Anweisungen zur Abhilfe.",
+      "en-US": "Line voltage too high. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "Желінің жоғары кернеуі. Пайдалануға тыйым салынады. Нұсқаулықтағы әрекеттерді тексеріңіз.",
+      "ru-RU": "Высокое напряжение сети. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Висока напруга мережі. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.32": {
+      "ar-AE": "الجهد الكهربائي المنخفض. العملية محظورة. اقرأ الخطوات الواردة في التعليمات.",
+      "de-DE": "Niedrige Netzspannung. Nicht verwenden. Beachten Sie die Anweisungen zur Abhilfe.",
+      "en-US": "Line voltage too low. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "Төмен кернеу желісі. Пайдалануға тыйым салынады. Нұсқаулықтағы әрекеттерді тексеріңіз.",
+      "ru-RU": "Низкое напряжение сети. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Низька напруга мережі. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.33": {
+      "ar-AE": "ارتفاع درجة حرارة السطح. العملية محظورة. اقرأ الخطوات الواردة في التعليمات.",
+      "de-DE": "Oberfläche überhitzt. Nicht verwenden. Beachten Sie die Anweisungen zur Abhilfe.",
+      "en-US": "Surface overheated. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "Беттің қызып кетуі. Пайдалануға тыйым салынады. Нұсқаулықтағы әрекеттерді тексеріңіз.",
+      "ru-RU": "Перегрев поверхности. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Перегрів поверхні. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.34": {
+      "ar-AE": "تتم إزالة الأطباق أو غير مناسبة لسطح الحث.",
+      "de-DE": "Kochgeschirr entfernt oder nicht für Induktionskochen geeignet.",
+      "en-US": "Cookware has been removed or is not suitable for induction cooking.",
+      "kk-KZ": "Ыдыс-аяқ алынып тасталады немесе индукциялық бетке жарамайды.",
+      "ru-RU": "Посуда снята или не подходит для индукционной поверхности.",
+      "uk-UA": "Посуд знятий або не підходить для індукційної поверхні."
+    },
+    "error.35": {
+      "ar-AE": "ارتفاع درجة حرارة وحدة إغبت استشعار درجة الحرارة. العملية محظورة. اقرأ الخطوات الواردة في التعليمات.",
+      "de-DE": "Temperatursensor des IGBT-Moduls überhitzt. Nicht verwenden. Beachten Sie die Anweisungen zur Abhilfe.",
+      "en-US": "IGBT module temperature sensor overheated. Do not use. Refer to the instructions for corrective action.",
+      "kk-KZ": "IGBT Модулінің температура сенсорының қызып кетуі. Пайдалануға тыйым салынады. Нұсқаулықтағы әрекеттерді тексеріңіз.",
+      "ru-RU": "Перегрев датчика температуры IGBT-модуля. Эксплуатация запрещена. Ознакомьтесь с действиями в инструкции.",
+      "uk-UA": "Перегрівання датчика температури IGBT-модуля. Експлуатацію заборонено. Ознайомтеся з інструкціями."
+    },
+    "error.36": {
+      "ar-AE": "عطل في جهاز استشعار الفرن. العملية محظورة. اتصل بمركز الخدمة.",
+      "de-DE": "Fehlfunktion des Kochfeldsensors. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Cooktop sensor malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Плита сенсорының дұрыс жұмыс істемеуі. Пайдалануға тыйым салынады. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Сбой работы датчика варочной панели. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Збій роботи датчика варильної панелі.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.37": {
+      "ar-AE": "فشل اتصال مستشعر الفرن. العملية محظورة. اتصل بمركز الخدمة.",
+      "de-DE": "Fehlfunktion des Kochfeldsensoranschlusses. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Cooktop sensor connection malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "Плита сенсорын қосу сәтсіз аяқталды. Пайдалануға тыйым салынады. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Cбой подключения датчика варочной панели. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Збій підключення датчика варильної панелі.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.38": {
+      "ar-AE": "خلل في استشعار وحدة إغبت. العملية محظورة. اتصل بمركز الخدمة.",
+      "de-DE": "Fehlfunktion des IGBT-Modulsensors. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "IGBT module sensor malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "IGBT Модулінің сенсорының дұрыс жұмыс істемеуі. Пайдалануға тыйым салынады. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Cбой работы датчика IGBT-модуля. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Збій роботи датчика IGBT-модуля.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.39": {
+      "ar-AE": "فشل اتصال استشعار وحدة إغبت. العملية محظورة. اتصل بمركز الخدمة.",
+      "de-DE": "Fehlfunktion des IGBT-Modulsensoranschlusses. Nicht bedienen. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "IGBT module sensor connection malfunction. Do not operate. Contact a service center.",
+      "kk-KZ": "IGBT Модулінің сенсор қосылымының бұзылуы. Пайдалануға тыйым салынады. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Cбой подключения датчика IGBT-модуля. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Збій підключення датчика IGBT-модуля.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.51": {
+      "ar-AE": "عطل في مستشعر سطح الطهي. لا تشغّله. اتصل بمركز خدمة.",
+      "de-DE": "Fehler am Kochfeldsensor. Nicht verwenden. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Cooktop sensor error. Do not use. Contact a service center.",
+      "kk-KZ": "Пештің сенсорының ақаулығы. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Cбой работы датчика варочной панели. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Збій роботи датчика варильної панелі.Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.52": {
+      "ar-AE": "عطل في لوحة الدوائر المطبوعة لسطح الطهي. لا تشغّله. اتصل بمركز خدمة.",
+      "de-DE": "Fehler an der Leiterplatte des Kochfelds. Nicht verwenden. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Cooktop printed circuit board error. Do not use. Contact a service center.",
+      "kk-KZ": "Пісіру тақтасы басылған. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Сбой работы печатной платы варочной панели. Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Збій роботи друкованої плати варильної панелі. Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.53": {
+      "ar-AE": "عطل في مستشعر درجة الحرارة (NTC). لا تشغّله. اتصل بمركز خدمة.",
+      "de-DE": "Fehler am Temperatursensor (NTC). Nicht verwenden. Wenden Sie sich an ein Servicecenter.",
+      "en-US": "Temperature sensor (NTC) error. Do not use. Contact a service center.",
+      "kk-KZ": "Температура сенсорының (NTC) ақаулығы. Операция жасамаңыз. Қызмет көрсету орталығына хабарласыңыз.",
+      "ru-RU": "Ошибка температурного датчика (NTC). Эксплуатация запрещена. Обратитесь в сервисный центр.",
+      "uk-UA": "Помилка датчика температури (NTC). Експлуатацію заборонено. Зверніться до сервісного центру."
+    },
+    "error.71": {
+      "ar-AE": "انطفأت الشعلة.",
+      "de-DE": "Die Flamme ist erloschen.",
+      "en-US": "Flameout detected.",
+      "kk-KZ": "Жалын сөнді.",
+      "ru-RU": "Пламя погасло.",
+      "uk-UA": "Полум'я згасло."
+    },
+    "speed_off": {
+      "en-US": "Off",
+      "ru-RU": "Выкл."
+    },
+    "alert.step": {
+      "en-US": "Cooking step completed",
+      "kk-KZ": "Даярлау қадамы аяқталды",
+      "ru-RU": "Шаг приготовления завершён",
+      "uk-UA": "Крок приготування завершено"
+    },
+    "url.manual": {
+      "en-US": "https://images.cdn.polaris-iot.com/pdf/polaris/9/PMC%200526.pdf"
+    },
+    "alert.ready": {
+      "en-US": "Cooking finished",
+      "kk-KZ": "Даярлау аяқталды",
+      "ru-RU": "Приготовление завершено",
+      "uk-UA": "Приготування їжі завершено"
+    },
+    "alert.start": {
+      "en-US": "Cooking started",
+      "kk-KZ": "Дайындық басталды",
+      "ru-RU": "Приготовление началось",
+      "uk-UA": "Розпочато приготування їжі"
+    },
+    "url.catalog": {
+      "de-DE": "https://www.polar.ru/catalog/multivarki/multivarka-polaris-pmc-0526-iq-home/",
+      "en-US": "https://www.polar.ru/catalog/multivarki/multivarka-polaris-pmc-0526-iq-home/",
+      "kk-KZ": "https://www.polar.ru/catalog/multivarki/multivarka-polaris-pmc-0526-iq-home/",
+      "ru-RU": "https://www.polar.ru/catalog/multivarki/multivarka-polaris-pmc-0526-iq-home/",
+      "uk-UA": "https://polaris.company/ua/catalog/multicookers/multivarka-polaris-pmc-0526-iq-home/"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off"
+      },
+      "hidden": false,
+      "limits_constraints": []
+    },
+    {
+      "name": {
+        "ar-AE": "وصفتي بلس",
+        "de-DE": "Mein Rezept plus",
+        "en-US": "My recipe Plus",
+        "kk-KZ": "Менің рецептім плюс",
+        "ru-RU": "Мой рецепт плюс",
+        "uk-UA": "Мій рецепт Плюс"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 5,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        },
+        "timer": {
+          "max": 5940,
+          "min": 0,
+          "step": 60,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        },
+        "multi_step": {
+          "max": 9,
+          "min": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "round_alt": 1
+        }
+      },
+      "limits_constraints": []
+    }
+  ],
+  "connectivity": [
+    "subdevice"
+  ],
+  "last_modified": 1788349612,
+  "temperature_units": "celsius"
+}

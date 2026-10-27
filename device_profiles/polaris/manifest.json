@@ -1,0 +1,1975 @@
+{
+  "sources": {
+    "com.polaris.iot 3.6.1": {
+      "kind": "apk",
+      "application": "Polaris IQ Home",
+      "package": "com.polaris.iot",
+      "version": "3.6.1",
+      "apk_sha256": "5ec4760d8f0da1e99105c15cd7c47b1684435de98bd5a98759e52cb2132bc2a7"
+    }
+  },
+  "profiles": {
+    "devices-00636E48-2239-4063-89F9-92E4C4216A4B.json": {
+      "type": 156,
+      "name": "PVCR-0905",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-00636E48-2239-4063-89F9-92E4C4216A4B.json"
+    },
+    "devices-02626647-1994-4B21-BB22-4523D9CB9D47.json": {
+      "type": 252,
+      "name": "PWF-2005",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-02626647-1994-4B21-BB22-4523D9CB9D47.json"
+    },
+    "devices-0266C6B3-3302-47D2-B8C1-51E3C865BAD0.json": {
+      "type": 323,
+      "name": "PAW-0808",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-0266C6B3-3302-47D2-B8C1-51E3C865BAD0.json"
+    },
+    "devices-032EA10A-D36B-46FA-8659-D2AA57E3F9FB.json": {
+      "type": 222,
+      "name": "PCM-1540WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-032EA10A-D36B-46FA-8659-D2AA57E3F9FB.json"
+    },
+    "devices-04EA445A-F608-4631-84DD-D155C4D15AC2.json": {
+      "type": 51,
+      "name": "PWK 1775CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-04EA445A-F608-4631-84DD-D155C4D15AC2.json"
+    },
+    "devices-054B2155-F909-46C8-8C4E-824D7AABE3B8.json": {
+      "type": 186,
+      "name": "PVCRDC-6004",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-054B2155-F909-46C8-8C4E-824D7AABE3B8.json"
+    },
+    "devices-0554B3AA-3C0C-4F98-95D7-531A6FAE8512.json": {
+      "type": 57,
+      "name": "PWK 1725CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-0554B3AA-3C0C-4F98-95D7-531A6FAE8512.json"
+    },
+    "devices-05F9875E-52BC-4D42-B498-314DD8D1CCE7.json": {
+      "type": 163,
+      "name": "PVCR-0735",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-05F9875E-52BC-4D42-B498-314DD8D1CCE7.json"
+    },
+    "devices-061C41F4-C9F3-4BF1-8C42-F7C0786899BE.json": {
+      "type": 219,
+      "name": "PVCR-G2-5001",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-061C41F4-C9F3-4BF1-8C42-F7C0786899BE.json"
+    },
+    "devices-06BCE9A5-8B45-473C-9233-A3B5893FC4A5.json": {
+      "type": 331,
+      "name": "PVCRAC-9540",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-06BCE9A5-8B45-473C-9233-A3B5893FC4A5.json"
+    },
+    "devices-06DE5CF8-06AC-432D-B91A-DB027C593820.json": {
+      "type": 84,
+      "name": "PWK-1720CGLD RGB",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-06DE5CF8-06AC-432D-B91A-DB027C593820.json"
+    },
+    "devices-082539BB-E4EC-4993-914A-D43DB38DBF0C.json": {
+      "type": 109,
+      "name": "PVCR-1226 GYRO",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-082539BB-E4EC-4993-914A-D43DB38DBF0C.json"
+    },
+    "devices-0831A0C4-7CA2-4A11-82F4-3590400EC629.json": {
+      "type": 161,
+      "name": "PIR-3074SG",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-0831A0C4-7CA2-4A11-82F4-3590400EC629.json"
+    },
+    "devices-088F6814-E7DF-43FE-8023-61BA3C73EEB7.json": {
+      "type": 91,
+      "name": "PIR-2624AK 3m",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-088F6814-E7DF-43FE-8023-61BA3C73EEB7.json"
+    },
+    "devices-0921B615-4F6E-4392-8F47-120E73F22388.json": {
+      "type": 195,
+      "name": "PVCR-4500",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-0921B615-4F6E-4392-8F47-120E73F22388.json"
+    },
+    "devices-0950E68D-7F2C-4ADB-B5E3-91CB5780014B.json": {
+      "type": 47,
+      "name": "PMC-0530WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-0950E68D-7F2C-4ADB-B5E3-91CB5780014B.json"
+    },
+    "devices-0BC3D2F2-FD73-42B4-9729-94348043BAD3.json": {
+      "type": 322,
+      "name": "PRWC-3007",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-0BC3D2F2-FD73-42B4-9729-94348043BAD3.json"
+    },
+    "devices-0C32F052-43B1-4A0D-99C8-FC1BCDF4A0C4.json": {
+      "type": 4,
+      "name": "PUH 9105/PUH 2709",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-0C32F052-43B1-4A0D-99C8-FC1BCDF4A0C4.json"
+    },
+    "devices-0D6E0757-2CE9-44E2-B8B2-ACA4AAEC6E30.json": {
+      "type": 170,
+      "name": "Watch",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-0D6E0757-2CE9-44E2-B8B2-ACA4AAEC6E30.json"
+    },
+    "devices-0D77E8DC-0C0C-487A-90B3-319255DD8DA3.json": {
+      "type": 351,
+      "name": "PVCRAC-7750",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-0D77E8DC-0C0C-487A-90B3-319255DD8DA3.json"
+    },
+    "devices-12BF4E95-B850-46A6-8D86-D9F3AFB49DA6.json": {
+      "type": 173,
+      "name": "PIR-3050AK",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-12BF4E95-B850-46A6-8D86-D9F3AFB49DA6.json"
+    },
+    "devices-135520FA-D7DB-4B52-A29F-939A9B20E43B.json": {
+      "type": 206,
+      "name": "PMC-0524WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-135520FA-D7DB-4B52-A29F-939A9B20E43B.json"
+    },
+    "devices-13B7BF70-30A5-4466-A08B-35DC1602F64F.json": {
+      "type": 257,
+      "name": "PVCRDC-7028",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-13B7BF70-30A5-4466-A08B-35DC1602F64F.json"
+    },
+    "devices-1427E1E4-1B39-4A0F-AA3C-9E4C9EC671B9.json": {
+      "type": 347,
+      "name": "Basket 1402W",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-1427E1E4-1B39-4A0F-AA3C-9E4C9EC671B9.json"
+    },
+    "devices-142EE00F-0F56-49C3-8B44-9C2B299E9622.json": {
+      "type": 342,
+      "name": "PAF-9007WS",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-142EE00F-0F56-49C3-8B44-9C2B299E9622.json"
+    },
+    "devices-14C35E33-207C-403D-AC06-22D9E49468D7.json": {
+      "type": 264,
+      "name": "PVCRAC-7790/7790 Pro",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-14C35E33-207C-403D-AC06-22D9E49468D7.json"
+    },
+    "devices-15B399F6-51F3-4531-992D-8673ECF8FAE0.json": {
+      "type": 145,
+      "name": "PHSC-1234",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-15B399F6-51F3-4531-992D-8673ECF8FAE0.json"
+    },
+    "devices-1688F7B5-0B15-46D3-B8AA-423B5003DA05.json": {
+      "type": 215,
+      "name": "PMC-5001WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-1688F7B5-0B15-46D3-B8AA-423B5003DA05.json"
+    },
+    "devices-1776157A-4007-48AC-BC84-43052ED879D5.json": {
+      "type": 177,
+      "name": "PWK 1725CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-1776157A-4007-48AC-BC84-43052ED879D5.json"
+    },
+    "devices-18112DF6-862B-4D0C-A085-FF08E67459F8.json": {
+      "type": 166,
+      "name": "PACM-2085GC",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-18112DF6-862B-4D0C-A085-FF08E67459F8.json"
+    },
+    "devices-18138E89-33A0-49C7-8BDF-9CE2127E7090.json": {
+      "type": 317,
+      "name": "PBHI-3231FB Wi-Fi ",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-18138E89-33A0-49C7-8BDF-9CE2127E7090.json"
+    },
+    "devices-182F1879-BE39-4DF0-A96B-E9B3746944D7.json": {
+      "type": 298,
+      "name": "PBOE-6753SB WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-182F1879-BE39-4DF0-A96B-E9B3746944D7.json"
+    },
+    "devices-184020D0-F2DD-409A-8742-25764DBF8FB8.json": {
+      "type": 86,
+      "name": "PWK 1725CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-184020D0-F2DD-409A-8742-25764DBF8FB8.json"
+    },
+    "devices-18FC1AAC-947E-4D4E-B31F-7B5BE59C566C.json": {
+      "type": 105,
+      "name": "PWK 1725CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-18FC1AAC-947E-4D4E-B31F-7B5BE59C566C.json"
+    },
+    "devices-197BB595-FBFA-4863-940A-34AAD74728D2.json": {
+      "type": 155,
+      "name": "PUH-8802",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-197BB595-FBFA-4863-940A-34AAD74728D2.json"
+    },
+    "devices-1A31C14A-DC4B-427C-9A2C-6E56AFBACD01.json": {
+      "type": 39,
+      "name": "PMC-0528WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-1A31C14A-DC4B-427C-9A2C-6E56AFBACD01.json"
+    },
+    "devices-1A69B6F3-1EE2-42B8-8A23-57B94E1902E9.json": {
+      "type": 318,
+      "name": "PBHC-6411FB Wi-Fi ",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-1A69B6F3-1EE2-42B8-8A23-57B94E1902E9.json"
+    },
+    "devices-1AB2DA47-4EB4-40E1-B330-FF5113783E3C.json": {
+      "type": 3,
+      "name": "PWS18XX",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-1AB2DA47-4EB4-40E1-B330-FF5113783E3C.json"
+    },
+    "devices-1AC8BB1B-A9DE-4D86-B8A7-EE386206312C.json": {
+      "type": 183,
+      "name": "PPC-1505 Wi-FI*",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-1AC8BB1B-A9DE-4D86-B8A7-EE386206312C.json"
+    },
+    "devices-1AFBCB76-B499-446A-8B37-EAA046C138AE.json": {
+      "type": 248,
+      "name": "PSF 4025",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-1AFBCB76-B499-446A-8B37-EAA046C138AE.json"
+    },
+    "devices-1B7DB3A5-1083-4075-A703-966DF165CDE4.json": {
+      "type": 81,
+      "name": "PVCR-3400",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-1B7DB3A5-1083-4075-A703-966DF165CDE4.json"
+    },
+    "devices-1C39CB7D-9588-4B2C-8586-F4A98D3D0D40.json": {
+      "type": 315,
+      "name": "PBHI-6431FB Wi-Fi",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-1C39CB7D-9588-4B2C-8586-F4A98D3D0D40.json"
+    },
+    "devices-1E6982A3-D07C-478E-B105-A0E8360DDA47.json": {
+      "type": 97,
+      "name": "PWK-1712CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-1E6982A3-D07C-478E-B105-A0E8360DDA47.json"
+    },
+    "devices-1EDF55CB-B7B9-44CE-86D2-B3EC866F3B92.json": {
+      "type": 174,
+      "name": "PIR-3225AK 3m",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-1EDF55CB-B7B9-44CE-86D2-B3EC866F3B92.json"
+    },
+    "devices-1F00FBE4-1F0C-42FA-AE53-20DC5248BE92.json": {
+      "type": 65,
+      "name": "PCH-0320WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-1F00FBE4-1F0C-42FA-AE53-20DC5248BE92.json"
+    },
+    "devices-202727D6-B02B-4C29-A442-5D664769D226.json": {
+      "type": 247,
+      "name": "PCM 1255",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-202727D6-B02B-4C29-A442-5D664769D226.json"
+    },
+    "devices-22A36709-E081-424F-BF13-64ED344A5B17.json": {
+      "type": 273,
+      "name": "PAF-4001WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-22A36709-E081-424F-BF13-64ED344A5B17.json"
+    },
+    "devices-2349EB96-844A-43D1-9A7C-BD05900718E2.json": {
+      "type": 9,
+      "name": "PMC-0526WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-2349EB96-844A-43D1-9A7C-BD05900718E2.json"
+    },
+    "devices-237105CB-E394-45EB-8A0A-B573867CBF05.json": {
+      "type": 96,
+      "name": "PGP-4001",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-237105CB-E394-45EB-8A0A-B573867CBF05.json"
+    },
+    "devices-23B7A915-E117-4113-96B1-4B7B7740FE9B.json": {
+      "type": 301,
+      "name": "PMC-0515 WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-23B7A915-E117-4113-96B1-4B7B7740FE9B.json"
+    },
+    "devices-23EAF546-A975-4DEE-9442-F10A877C64DA.json": {
+      "type": 93,
+      "name": "PHB-1350WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-23EAF546-A975-4DEE-9442-F10A877C64DA.json"
+    },
+    "devices-23EB26A4-C01E-4FE1-A2BD-7DCF076F1F72.json": {
+      "type": 152,
+      "name": "PPA-4050",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-23EB26A4-C01E-4FE1-A2BD-7DCF076F1F72.json"
+    },
+    "devices-23F9E757-47B6-4600-B2DB-09B5D41922AA.json": {
+      "type": 101,
+      "name": "PVCR-0726 Aqua",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-23F9E757-47B6-4600-B2DB-09B5D41922AA.json"
+    },
+    "devices-244F6605-76AE-43E4-8BCB-062AD3499273.json": {
+      "type": 294,
+      "name": "PWK 1775CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-244F6605-76AE-43E4-8BCB-062AD3499273.json"
+    },
+    "devices-252AEEDA-C768-4D5D-9567-0A540C661F2F.json": {
+      "type": 242,
+      "name": "PVCR-5005",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-252AEEDA-C768-4D5D-9567-0A540C661F2F.json"
+    },
+    "devices-26FEDBFF-3735-4867-A616-DC72D10660EC.json": {
+      "type": 290,
+      "name": "PAF-6003WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-26FEDBFF-3735-4867-A616-DC72D10660EC.json"
+    },
+    "devices-27D98AE7-9D8C-43A5-86BD-35D823CA431E.json": {
+      "type": 289,
+      "name": "PBHG-6461GB Wi-Fi ",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-27D98AE7-9D8C-43A5-86BD-35D823CA431E.json"
+    },
+    "devices-27FCF60F-E6D4-467C-90E4-DDA59B6FE0C0.json": {
+      "type": 125,
+      "name": "PVCRDC-6002",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-27FCF60F-E6D4-467C-90E4-DDA59B6FE0C0.json"
+    },
+    "devices-29A26FF0-678E-4ECE-AE62-B6658C815183.json": {
+      "type": 48,
+      "name": "PMC-0528WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-29A26FF0-678E-4ECE-AE62-B6658C815183.json"
+    },
+    "devices-29C3B99A-6283-4054-8E93-B76A13428E6E.json": {
+      "type": 72,
+      "name": "PUH-2300",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-29C3B99A-6283-4054-8E93-B76A13428E6E.json"
+    },
+    "devices-2A4521EA-5109-4005-A787-5ED0478A99F1.json": {
+      "type": 340,
+      "name": "PAF-5502WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-2A4521EA-5109-4005-A787-5ED0478A99F1.json"
+    },
+    "devices-2A95A233-5E13-4F81-9D7F-7C36A6EB5C33.json": {
+      "type": 235,
+      "name": "AM7310(test)",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-2A95A233-5E13-4F81-9D7F-7C36A6EB5C33.json"
+    },
+    "devices-2AF6E173-214A-44EB-9884-09F825ACAF61.json": {
+      "type": 259,
+      "name": "PSS-8010K",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-2AF6E173-214A-44EB-9884-09F825ACAF61.json"
+    },
+    "devices-2C43C2C9-E7EC-4300-AC7B-11EE2A958FE1.json": {
+      "type": 92,
+      "name": "PGS-1450CWIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-2C43C2C9-E7EC-4300-AC7B-11EE2A958FE1.json"
+    },
+    "devices-2C7EDECB-6AE3-4DFB-9353-AD20F3CB34D7.json": {
+      "type": 202,
+      "name": "PVCRDC-5004",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-2C7EDECB-6AE3-4DFB-9353-AD20F3CB34D7.json"
+    },
+    "devices-2DCF0E1B-6348-4F09-A512-0F1EDB2C95B9.json": {
+      "type": 80,
+      "name": "PMC-5020WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-2DCF0E1B-6348-4F09-A512-0F1EDB2C95B9.json"
+    },
+    "devices-2E0BBCB9-CFDB-475D-A525-138B5D692ED7.json": {
+      "type": 58,
+      "name": "PWK 1755CAD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-2E0BBCB9-CFDB-475D-A525-138B5D692ED7.json"
+    },
+    "devices-2ED19295-E5A3-4427-8CAA-180E793B5D1B.json": {
+      "type": 30,
+      "name": "SIGMA WI-FI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-2ED19295-E5A3-4427-8CAA-180E793B5D1B.json"
+    },
+    "devices-2F74B972-1968-431E-B414-892A4D1157B0.json": {
+      "type": 212,
+      "name": "PVCRAC-7290",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-2F74B972-1968-431E-B414-892A4D1157B0.json"
+    },
+    "devices-3085E5B2-AA26-4E4A-97EC-D31E48476A87.json": {
+      "type": 262,
+      "name": "PWK 1775CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-3085E5B2-AA26-4E4A-97EC-D31E48476A87.json"
+    },
+    "devices-30FCE807-70CD-4B8B-BF2D-401F5E24A34C.json": {
+      "type": 197,
+      "name": "PVCR-4000",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-30FCE807-70CD-4B8B-BF2D-401F5E24A34C.json"
+    },
+    "devices-317E6BEE-27F4-4728-835F-98E4AC1878CC.json": {
+      "type": 263,
+      "name": "PWK 1775CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-317E6BEE-27F4-4728-835F-98E4AC1878CC.json"
+    },
+    "devices-31D21B12-880F-4479-9AFD-01DE46E0219A.json": {
+      "type": 154,
+      "name": "PVCR-5001",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-31D21B12-880F-4479-9AFD-01DE46E0219A.json"
+    },
+    "devices-31DC116F-1087-405F-9438-05438B15C4AE.json": {
+      "type": 324,
+      "name": "PVCRDC-G2-5006",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-31DC116F-1087-405F-9438-05438B15C4AE.json"
+    },
+    "devices-3536A3D9-A9F5-4C0A-813C-3AB8FB9B8DE3.json": {
+      "type": 352,
+      "name": "PVCRAC-9540",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-3536A3D9-A9F5-4C0A-813C-3AB8FB9B8DE3.json"
+    },
+    "devices-35BBF03C-A9FF-4AD2-A1E0-C9BC8439A2F1.json": {
+      "type": 87,
+      "name": "PUH 8080/PUH 4606",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-35BBF03C-A9FF-4AD2-A1E0-C9BC8439A2F1.json"
+    },
+    "devices-35F6BE44-B107-4DFC-BD84-2D0D61F4E896.json": {
+      "type": 38,
+      "name": "PWK-1712CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-35F6BE44-B107-4DFC-BD84-2D0D61F4E896.json"
+    },
+    "devices-363A2E7E-BDD1-4F17-A9E4-19F2F60F245D.json": {
+      "type": 275,
+      "name": "PWK 1775CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-363A2E7E-BDD1-4F17-A9E4-19F2F60F245D.json"
+    },
+    "devices-37466498-BBD6-4CDC-B782-5D439C37B078.json": {
+      "type": 24,
+      "name": "PVCR-1229",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-37466498-BBD6-4CDC-B782-5D439C37B078.json"
+    },
+    "devices-38DF127B-89B8-47CF-B439-148650459AC1.json": {
+      "type": 328,
+      "name": "PVCR-G2-5005",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-38DF127B-89B8-47CF-B439-148650459AC1.json"
+    },
+    "devices-393BF477-45F2-4E62-832E-D94AECE2CEA5.json": {
+      "type": 310,
+      "name": "PBHI-6452BB Wi-Fi",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-393BF477-45F2-4E62-832E-D94AECE2CEA5.json"
+    },
+    "devices-3BE351CF-664C-43F9-87DC-F9BEFDA23112.json": {
+      "type": 210,
+      "name": "PMC-0590AD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-3BE351CF-664C-43F9-87DC-F9BEFDA23112.json"
+    },
+    "devices-3D39E0D0-5FE7-4386-9788-6A9D146DFB07.json": {
+      "type": 126,
+      "name": "PVCRDC-0101",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-3D39E0D0-5FE7-4386-9788-6A9D146DFB07.json"
+    },
+    "devices-3D40102F-3B26-469C-8203-C37E7F25A957.json": {
+      "type": 229,
+      "name": "PVCS-4070",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-3D40102F-3B26-469C-8203-C37E7F25A957.json"
+    },
+    "devices-3E53FBF4-AB39-496B-B96C-E655BC1D37A1.json": {
+      "type": 346,
+      "name": "PAF-1302W DUAL WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-3E53FBF4-AB39-496B-B96C-E655BC1D37A1.json"
+    },
+    "devices-3EE099C4-F3AF-4D11-9590-CC3F850B1047.json": {
+      "type": 198,
+      "name": "PVCRAC-7790/7790 Pro",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-3EE099C4-F3AF-4D11-9590-CC3F850B1047.json"
+    },
+    "devices-3F58F3F7-172B-4899-B6F5-6A6835BA00F5.json": {
+      "type": 181,
+      "name": "PVCRDC-5006",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-3F58F3F7-172B-4899-B6F5-6A6835BA00F5.json"
+    },
+    "devices-4143525D-CF7A-4C27-9EC6-19517042EA8A.json": {
+      "type": 36,
+      "name": "PWK 17107CGLD WIFI (old)",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-4143525D-CF7A-4C27-9EC6-19517042EA8A.json"
+    },
+    "devices-41F94161-F3AE-49E6-9F19-66D966DA1F8F.json": {
+      "type": 137,
+      "name": "PUH-4066",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-41F94161-F3AE-49E6-9F19-66D966DA1F8F.json"
+    },
+    "devices-425BAE30-07B5-47EB-943A-E1BBDFD73FFF.json": {
+      "type": 128,
+      "name": "PVCRAC-7050",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-425BAE30-07B5-47EB-943A-E1BBDFD73FFF.json"
+    },
+    "devices-42A44EDF-97BB-425E-B244-0E94458CE056.json": {
+      "type": 73,
+      "name": "PUH-3030",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-42A44EDF-97BB-425E-B244-0E94458CE056.json"
+    },
+    "devices-446DA404-900F-4B2D-95E9-D194D8841AF9.json": {
+      "type": 192,
+      "name": "PMC-5017WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-446DA404-900F-4B2D-95E9-D194D8841AF9.json"
+    },
+    "devices-448B4C1B-3FFA-4899-839F-88A52E09C48B.json": {
+      "type": 21,
+      "name": "PVCR-0735",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-448B4C1B-3FFA-4899-839F-88A52E09C48B.json"
+    },
+    "devices-45AD6EDD-89CD-4C19-859C-F6CBB3628226.json": {
+      "type": 201,
+      "name": "PVCR-5003",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-45AD6EDD-89CD-4C19-859C-F6CBB3628226.json"
+    },
+    "devices-46931F49-4EBC-4E63-A409-AECF9017C861.json": {
+      "type": 159,
+      "name": "PSS-9090K",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-46931F49-4EBC-4E63-A409-AECF9017C861.json"
+    },
+    "devices-469C862E-76E0-4202-A49E-09BD5960C10E.json": {
+      "type": 74,
+      "name": "PUH-9009",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-469C862E-76E0-4202-A49E-09BD5960C10E.json"
+    },
+    "devices-46A6C12B-CAE6-478B-AB48-11B0E7ACFE1F.json": {
+      "type": 110,
+      "name": "PVCR-4105",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-46A6C12B-CAE6-478B-AB48-11B0E7ACFE1F.json"
+    },
+    "devices-46C33054-F3DD-4BEB-BD42-6639BB50A8F4.json": {
+      "type": 146,
+      "name": "PVCR-5001",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-46C33054-F3DD-4BEB-BD42-6639BB50A8F4.json"
+    },
+    "devices-46FE5277-B116-49EE-A04C-1F4D02598D4C.json": {
+      "type": 129,
+      "name": "PVCR-G2-3200",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-46FE5277-B116-49EE-A04C-1F4D02598D4C.json"
+    },
+    "devices-48419EF7-C63C-4882-9B6C-93412C9B71D1.json": {
+      "type": 353,
+      "name": "PVCRAC-7790/7790 Pro",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-48419EF7-C63C-4882-9B6C-93412C9B71D1.json"
+    },
+    "devices-4A6B4AAA-7A88-464F-9AC0-2CAA0FC671E6.json": {
+      "type": 79,
+      "name": "PMC-5017WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-4A6B4AAA-7A88-464F-9AC0-2CAA0FC671E6.json"
+    },
+    "devices-4A74238D-CA01-46CE-BF58-B6D7A6348A0E.json": {
+      "type": 130,
+      "name": "PVCR-3600",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-4A74238D-CA01-46CE-BF58-B6D7A6348A0E.json"
+    },
+    "devices-4B330822-6720-4422-A822-78E2CF4049BA.json": {
+      "type": 120,
+      "name": "PHD-4000",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-4B330822-6720-4422-A822-78E2CF4049BA.json"
+    },
+    "devices-4B89A847-79B4-4FAE-9635-B1DC90DDCE8A.json": {
+      "type": 256,
+      "name": "PVCR-7026",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-4B89A847-79B4-4FAE-9635-B1DC90DDCE8A.json"
+    },
+    "devices-4C11D18B-F4AB-492C-8EB1-855585F5FF32.json": {
+      "type": 138,
+      "name": "PMC-0526WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-4C11D18B-F4AB-492C-8EB1-855585F5FF32.json"
+    },
+    "devices-4CDF35C8-8C6F-48F1-8910-E1090A164D31.json": {
+      "type": 99,
+      "name": "PUH-4040",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-4CDF35C8-8C6F-48F1-8910-E1090A164D31.json"
+    },
+    "devices-4CFD1CA7-7784-4E6C-A10B-475CC49A6C77.json": {
+      "type": 345,
+      "name": "PUH-4560",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-4CFD1CA7-7784-4E6C-A10B-475CC49A6C77.json"
+    },
+    "devices-4D02255D-A8CB-48FB-8F7A-3C4E5A4B380A.json": {
+      "type": 141,
+      "name": "SLG-V3",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-4D02255D-A8CB-48FB-8F7A-3C4E5A4B380A.json"
+    },
+    "devices-4D270498-ADE4-413A-BC23-FD5BEB55379F.json": {
+      "type": 150,
+      "name": "PVCRDC-6002",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-4D270498-ADE4-413A-BC23-FD5BEB55379F.json"
+    },
+    "devices-4D8B2116-0A8E-47E0-9351-0325DBE667ED.json": {
+      "type": 308,
+      "name": "PWK 1746CA",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-4D8B2116-0A8E-47E0-9351-0325DBE667ED.json"
+    },
+    "devices-4E0B8FBE-A646-4972-A6DA-CBCFE2376BF9.json": {
+      "type": 234,
+      "name": "PVCSDC-3000",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-4E0B8FBE-A646-4972-A6DA-CBCFE2376BF9.json"
+    },
+    "devices-4E8C311E-A5FB-4CE1-87F4-78AF5BC661D2.json": {
+      "type": 90,
+      "name": "PVCS-2090",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-4E8C311E-A5FB-4CE1-87F4-78AF5BC661D2.json"
+    },
+    "devices-5089B8C6-2E7E-4D0C-A1C6-66BCBC990117.json": {
+      "type": 82,
+      "name": "PWK 1725CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5089B8C6-2E7E-4D0C-A1C6-66BCBC990117.json"
+    },
+    "devices-515D7228-2F7B-4D59-8B68-FA4EEE8EE976.json": {
+      "type": 147,
+      "name": "PUH-0205",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-515D7228-2F7B-4D59-8B68-FA4EEE8EE976.json"
+    },
+    "devices-51FB77B3-886D-4B8B-9BAF-15650151A4C4.json": {
+      "type": 343,
+      "name": "PAF-9017DWS",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-51FB77B3-886D-4B8B-9BAF-15650151A4C4.json"
+    },
+    "devices-5262B310-0308-401B-9913-59E0A15A36E6.json": {
+      "type": 184,
+      "name": "PHS-1300",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5262B310-0308-401B-9913-59E0A15A36E6.json"
+    },
+    "devices-5284F3C1-BC7B-4CF2-BC2D-1235FD4446E2.json": {
+      "type": 326,
+      "name": "PVCRAC-9550",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5284F3C1-BC7B-4CF2-BC2D-1235FD4446E2.json"
+    },
+    "devices-52A701A7-1411-4483-B17F-832AAAE616CA.json": {
+      "type": 56,
+      "name": "PWK 1775CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-52A701A7-1411-4483-B17F-832AAAE616CA.json"
+    },
+    "devices-52CCBF09-3966-4607-B20A-5E03EC6920A3.json": {
+      "type": 172,
+      "name": "PAW-0804",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-52CCBF09-3966-4607-B20A-5E03EC6920A3.json"
+    },
+    "devices-54263836-6AA1-403C-8325-45872482A141.json": {
+      "type": 332,
+      "name": "PWK 0726DDW",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-54263836-6AA1-403C-8325-45872482A141.json"
+    },
+    "devices-54B31040-8FEF-4B2B-AD47-BC8DC1CA90AD.json": {
+      "type": 119,
+      "name": "PVCR-5001",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-54B31040-8FEF-4B2B-AD47-BC8DC1CA90AD.json"
+    },
+    "devices-5504C44E-617A-4D9C-81B1-589EF6EC41FF.json": {
+      "type": 199,
+      "name": "PVCR-4250",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5504C44E-617A-4D9C-81B1-589EF6EC41FF.json"
+    },
+    "devices-567A366B-D170-4CDF-AA20-72A7D1A0A5A7.json": {
+      "type": 240,
+      "name": "PMC-5060 Smart Motion",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-567A366B-D170-4CDF-AA20-72A7D1A0A5A7.json"
+    },
+    "devices-56957586-30C1-4EB0-8F25-8D40F2561D6D.json": {
+      "type": 348,
+      "name": "Basket 1302W",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-56957586-30C1-4EB0-8F25-8D40F2561D6D.json"
+    },
+    "devices-569E9E95-9952-4C23-8820-16960C273233.json": {
+      "type": 208,
+      "name": "PWK 1712CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-569E9E95-9952-4C23-8820-16960C273233.json"
+    },
+    "devices-56CFE5BC-13D8-4F23-BE31-C955E3E4E5F4.json": {
+      "type": 221,
+      "name": "PVCR-6001",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-56CFE5BC-13D8-4F23-BE31-C955E3E4E5F4.json"
+    },
+    "devices-57D9256F-A453-44DC-BB51-9A1765F9CF31.json": {
+      "type": 63,
+      "name": "PWK-1712CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-57D9256F-A453-44DC-BB51-9A1765F9CF31.json"
+    },
+    "devices-58C26E63-2040-4D65-A18B-8A98F71BE610.json": {
+      "type": 44,
+      "name": "PUH 9105/PUH 2709",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-58C26E63-2040-4D65-A18B-8A98F71BE610.json"
+    },
+    "devices-5A24FC36-4FED-445C-BF9A-289A6FED3984.json": {
+      "type": 62,
+      "name": "PWK 1755CAD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5A24FC36-4FED-445C-BF9A-289A6FED3984.json"
+    },
+    "devices-5A3AC323-AE6A-47A7-9D9A-F0F78C2790E5.json": {
+      "type": 178,
+      "name": "PVCRAC-7750",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5A3AC323-AE6A-47A7-9D9A-F0F78C2790E5.json"
+    },
+    "devices-5A4BA4B1-F0EE-4C0F-8B7B-984E0594C7E1.json": {
+      "type": 66,
+      "name": "PVCR-3900",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5A4BA4B1-F0EE-4C0F-8B7B-984E0594C7E1.json"
+    },
+    "devices-5AC0F8CB-F8C4-48B4-852B-22524027A95E.json": {
+      "type": 103,
+      "name": "PACM-2080AC",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5AC0F8CB-F8C4-48B4-852B-22524027A95E.json"
+    },
+    "devices-5ADC2530-251D-40BF-A077-C5AD462198AD.json": {
+      "type": 68,
+      "name": "PVCR-3100",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5ADC2530-251D-40BF-A077-C5AD462198AD.json"
+    },
+    "devices-5B5597FF-FB89-493F-AB12-D03251F4CDC9.json": {
+      "type": 41,
+      "name": "PMC-0521WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5B5597FF-FB89-493F-AB12-D03251F4CDC9.json"
+    },
+    "devices-5C415E91-5DD0-4EFF-A443-3CB8D61A6A29.json": {
+      "type": 175,
+      "name": "PWK 1823CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5C415E91-5DD0-4EFF-A443-3CB8D61A6A29.json"
+    },
+    "devices-5C58FB99-D5CD-4AC2-857E-AA2E9749C40A.json": {
+      "type": 182,
+      "name": "Смарт джойстик",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5C58FB99-D5CD-4AC2-857E-AA2E9749C40A.json"
+    },
+    "devices-5CD4418B-8035-4DD3-8866-BCF8A9A130E9.json": {
+      "type": 45,
+      "name": "PCM-1540WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5CD4418B-8035-4DD3-8866-BCF8A9A130E9.json"
+    },
+    "devices-5D15972E-4508-4352-A8C7-7BA4CBD3566F.json": {
+      "type": 114,
+      "name": "PMC-5060 Smart Motion",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5D15972E-4508-4352-A8C7-7BA4CBD3566F.json"
+    },
+    "devices-5D50FF56-9489-4F9D-8351-15A9FBEB6629.json": {
+      "type": 341,
+      "name": "PAF-6006DW WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5D50FF56-9489-4F9D-8351-15A9FBEB6629.json"
+    },
+    "devices-5E6F6D6F-25AD-4B1A-A9A8-0CD49B1AC4DC.json": {
+      "type": 179,
+      "name": "PGP-3010 SMOKELESS",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5E6F6D6F-25AD-4B1A-A9A8-0CD49B1AC4DC.json"
+    },
+    "devices-5FB8BBD2-44B7-47D2-B1D6-E397F49F4BBB.json": {
+      "type": 83,
+      "name": "PWK-1712CGLD RGB",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-5FB8BBD2-44B7-47D2-B1D6-E397F49F4BBB.json"
+    },
+    "devices-610B7E2A-B205-4137-83AA-F5DEF8202F05.json": {
+      "type": 223,
+      "name": "PWK 1775CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-610B7E2A-B205-4137-83AA-F5DEF8202F05.json"
+    },
+    "devices-611C359F-E484-44CE-B9A4-2BE7DBB311F8.json": {
+      "type": 117,
+      "name": "PWK-1712CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-611C359F-E484-44CE-B9A4-2BE7DBB311F8.json"
+    },
+    "devices-61D9B9F3-49C5-49D3-BAE6-AC8B88D226E5.json": {
+      "type": 246,
+      "name": "PRWC-3001",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-61D9B9F3-49C5-49D3-BAE6-AC8B88D226E5.json"
+    },
+    "devices-65F7A872-E331-47CA-9CF9-E2B626966B24.json": {
+      "type": 349,
+      "name": "PAF-1402W DUO WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-65F7A872-E331-47CA-9CF9-E2B626966B24.json"
+    },
+    "devices-66B67A8E-577E-4B4B-8524-7C1E7DC4A847.json": {
+      "type": 316,
+      "name": "PBHI-6430FB Wi-Fi ",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-66B67A8E-577E-4B4B-8524-7C1E7DC4A847.json"
+    },
+    "devices-67EACE6E-90B6-400A-A2EC-969048FB0F0D.json": {
+      "type": 169,
+      "name": "PPC-1505 Wi-FI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-67EACE6E-90B6-400A-A2EC-969048FB0F0D.json"
+    },
+    "devices-6834CF6F-E9B5-4998-9C81-78CF13706076.json": {
+      "type": 236,
+      "name": "PPAT-02A",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-6834CF6F-E9B5-4998-9C81-78CF13706076.json"
+    },
+    "devices-68D89D59-0992-426F-89D7-1565D2582DF0.json": {
+      "type": 299,
+      "name": "PBOE-6352AB WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-68D89D59-0992-426F-89D7-1565D2582DF0.json"
+    },
+    "devices-695E0C47-B9C0-4D23-9133-9CE1EAC8BB0E.json": {
+      "type": 127,
+      "name": "PVCR-4105",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-695E0C47-B9C0-4D23-9133-9CE1EAC8BB0E.json"
+    },
+    "devices-6A2C5943-5874-4B16-9E65-DAF1B4D4B006.json": {
+      "type": 300,
+      "name": "PBOE-6142AB WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-6A2C5943-5874-4B16-9E65-DAF1B4D4B006.json"
+    },
+    "devices-6AC5B017-CFEC-467B-841F-17ACC8332448.json": {
+      "type": 124,
+      "name": "PVCRDC-5002",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-6AC5B017-CFEC-467B-841F-17ACC8332448.json"
+    },
+    "devices-6C582FB7-E359-45D8-96F3-01A0912C0F52.json": {
+      "type": 260,
+      "name": "PWK 1746CA",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-6C582FB7-E359-45D8-96F3-01A0912C0F52.json"
+    },
+    "devices-6C5B5ADB-07BD-4662-AEF5-9AAEAC4ADED5.json": {
+      "type": 302,
+      "name": "PMC-0597 WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-6C5B5ADB-07BD-4662-AEF5-9AAEAC4ADED5.json"
+    },
+    "devices-6D08FD07-DC89-4F83-9C4D-0B798B7CC247.json": {
+      "type": 122,
+      "name": "PVCR-G2-3600",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-6D08FD07-DC89-4F83-9C4D-0B798B7CC247.json"
+    },
+    "devices-6D125EB2-6F54-4F46-9AFB-CFB4B757A025.json": {
+      "type": 238,
+      "name": "PPAT-80P",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-6D125EB2-6F54-4F46-9AFB-CFB4B757A025.json"
+    },
+    "devices-6DD1292B-E5DA-4D67-8662-50FC566F6484.json": {
+      "type": 176,
+      "name": "PWK 1841CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-6DD1292B-E5DA-4D67-8662-50FC566F6484.json"
+    },
+    "devices-6DD882E4-421E-4BCB-8FEA-27D03B84D639.json": {
+      "type": 337,
+      "name": "PWK 1746CA",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-6DD882E4-421E-4BCB-8FEA-27D03B84D639.json"
+    },
+    "devices-6DD8F636-FCAC-4D38-BB3A-D33439DC40E1.json": {
+      "type": 278,
+      "name": "PACM-2085GC",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-6DD8F636-FCAC-4D38-BB3A-D33439DC40E1.json"
+    },
+    "devices-6E875633-F526-4834-AFCE-AAC6A7ECAD32.json": {
+      "type": 312,
+      "name": "PVSG-02",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-6E875633-F526-4834-AFCE-AAC6A7ECAD32.json"
+    },
+    "devices-6FC41683-ADAA-4F60-8CC6-2122B3F80A17.json": {
+      "type": 255,
+      "name": "PWK 1841CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-6FC41683-ADAA-4F60-8CC6-2122B3F80A17.json"
+    },
+    "devices-6FFBE7D4-EAD4-4A85-AD1F-65D89B8B2F63.json": {
+      "type": 151,
+      "name": "PPA-2025",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-6FFBE7D4-EAD4-4A85-AD1F-65D89B8B2F63.json"
+    },
+    "devices-7212AD85-E62A-427B-93C4-299445CCC010.json": {
+      "type": 296,
+      "name": "PBFB-6038IB Wi-Fi ",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-7212AD85-E62A-427B-93C4-299445CCC010.json"
+    },
+    "devices-738D6AA1-D27D-41A8-845A-896F513462E5.json": {
+      "type": 37,
+      "name": "PWK 17111CGLD WIFI (old)",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-738D6AA1-D27D-41A8-845A-896F513462E5.json"
+    },
+    "devices-74B71D12-A01C-4674-843C-40D75E09E01A.json": {
+      "type": 191,
+      "name": "PSS-2002K",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-74B71D12-A01C-4674-843C-40D75E09E01A.json"
+    },
+    "devices-74B733E1-9775-4715-BDCC-D9A14B298AB2.json": {
+      "type": 17,
+      "name": "PUH 9105/PUH 2709",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-74B733E1-9775-4715-BDCC-D9A14B298AB2.json"
+    },
+    "devices-7678068D-4D9C-44A2-A0F6-6EE8FD29434D.json": {
+      "type": 53,
+      "name": "PWK 1755CAD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-7678068D-4D9C-44A2-A0F6-6EE8FD29434D.json"
+    },
+    "devices-771EC109-978D-4830-8509-CE2C9A53030D.json": {
+      "type": 232,
+      "name": "PVCS-6020",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-771EC109-978D-4830-8509-CE2C9A53030D.json"
+    },
+    "devices-78097CFB-7094-4396-B42F-BBB83329A5F9.json": {
+      "type": 319,
+      "name": "PBHC-3211FB Wi-Fi",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-78097CFB-7094-4396-B42F-BBB83329A5F9.json"
+    },
+    "devices-783E7723-DE47-4DB0-A97C-958D7037F0BB.json": {
+      "type": 249,
+      "name": "VEKTOR WI-FI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-783E7723-DE47-4DB0-A97C-958D7037F0BB.json"
+    },
+    "devices-78EA240B-A4BE-4D50-8419-751F93ACFB43.json": {
+      "type": 19,
+      "name": "PVCR-0833",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-78EA240B-A4BE-4D50-8419-751F93ACFB43.json"
+    },
+    "devices-79F68F01-7674-46D9-980F-9BABF36A01C1.json": {
+      "type": 46,
+      "name": "PCH-0320WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-79F68F01-7674-46D9-980F-9BABF36A01C1.json"
+    },
+    "devices-7A946FFC-2614-4E66-A9C4-535E7F2300DF.json": {
+      "type": 330,
+      "name": "PVSG-03",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-7A946FFC-2614-4E66-A9C4-535E7F2300DF.json"
+    },
+    "devices-7B82D157-04F8-4BEA-83D9-1AE88D4C86CA.json": {
+      "type": 1,
+      "name": "EVO-0225",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-7B82D157-04F8-4BEA-83D9-1AE88D4C86CA.json"
+    },
+    "devices-7BE359FD-DC5F-483D-9ACC-F59043B69622.json": {
+      "type": 279,
+      "name": "PCM-1540WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-7BE359FD-DC5F-483D-9ACC-F59043B69622.json"
+    },
+    "devices-7E356EE8-7BF0-4AAF-91AF-C0CE325A494E.json": {
+      "type": 216,
+      "name": "PMG-3060",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-7E356EE8-7BF0-4AAF-91AF-C0CE325A494E.json"
+    },
+    "devices-7E4515B0-3258-4F4C-9485-7EAFD5AA575B.json": {
+      "type": 241,
+      "name": "PVCR-4250",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-7E4515B0-3258-4F4C-9485-7EAFD5AA575B.json"
+    },
+    "devices-7ED6D7FF-37AD-454D-A1D9-C9E29BD7F319.json": {
+      "type": 8,
+      "name": "PWK 1755CAD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-7ED6D7FF-37AD-454D-A1D9-C9E29BD7F319.json"
+    },
+    "devices-7FE971D8-3348-49FC-B20F-E94FAABC01DA.json": {
+      "type": 95,
+      "name": "PMC-00000",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-7FE971D8-3348-49FC-B20F-E94FAABC01DA.json"
+    },
+    "devices-8032E25A-F4A7-421B-B19E-7E4B8F3EBF09.json": {
+      "type": 12,
+      "name": "PVCR-3300",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-8032E25A-F4A7-421B-B19E-7E4B8F3EBF09.json"
+    },
+    "devices-810DA964-3534-41DB-9C1B-4869D831C7F9.json": {
+      "type": 71,
+      "name": "PUH-1010",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-810DA964-3534-41DB-9C1B-4869D831C7F9.json"
+    },
+    "devices-81AA10D0-1C3D-404C-A75E-923AA2FFA18F.json": {
+      "type": 2,
+      "name": "PWK 1775CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-81AA10D0-1C3D-404C-A75E-923AA2FFA18F.json"
+    },
+    "devices-82D43C9A-969F-412C-BF5D-8E73E2AD818E.json": {
+      "type": 164,
+      "name": "PWK 1728CGLDA",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-82D43C9A-969F-412C-BF5D-8E73E2AD818E.json"
+    },
+    "devices-834B9936-F8D2-40C0-A7AA-79AC68840D6D.json": {
+      "type": 64,
+      "name": "PMH-21XX",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-834B9936-F8D2-40C0-A7AA-79AC68840D6D.json"
+    },
+    "devices-83BF7B09-4C62-4553-90CA-8471E6ED68BA.json": {
+      "type": 209,
+      "name": "PWK 1729CAD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-83BF7B09-4C62-4553-90CA-8471E6ED68BA.json"
+    },
+    "devices-849A8855-B75C-44EA-AB8E-C0912956A29F.json": {
+      "type": 98,
+      "name": "PWK 1775CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-849A8855-B75C-44EA-AB8E-C0912956A29F.json"
+    },
+    "devices-8543C81A-2CFC-4128-942F-6D0DD9D2C16C.json": {
+      "type": 287,
+      "name": "PBHC-6411FB Wi-Fi ",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-8543C81A-2CFC-4128-942F-6D0DD9D2C16C.json"
+    },
+    "devices-86692D92-84A8-4B0A-9E57-0CF63EE6B4FD.json": {
+      "type": 31,
+      "name": "ENIGMA WI-FI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-86692D92-84A8-4B0A-9E57-0CF63EE6B4FD.json"
+    },
+    "devices-869301BA-E079-4B86-9246-F29E9AC5A332.json": {
+      "type": 49,
+      "name": "PMH-21XX",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-869301BA-E079-4B86-9246-F29E9AC5A332.json"
+    },
+    "devices-87B6FBBA-B5C2-466C-BE2A-795445E9B82A.json": {
+      "type": 207,
+      "name": "PCM 2035",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-87B6FBBA-B5C2-466C-BE2A-795445E9B82A.json"
+    },
+    "devices-89705814-ABA2-4EC5-B319-F9973EBF2AFC.json": {
+      "type": 321,
+      "name": "PRWC-3004",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-89705814-ABA2-4EC5-B319-F9973EBF2AFC.json"
+    },
+    "devices-8A97253B-BA26-46D2-98BC-ADD07F948872.json": {
+      "type": 11,
+      "name": "PWH-IDF06",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-8A97253B-BA26-46D2-98BC-ADD07F948872.json"
+    },
+    "devices-8A9911D1-9639-4C3B-9029-194E208F293E.json": {
+      "type": 88,
+      "name": "PVCR-3800",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-8A9911D1-9639-4C3B-9029-194E208F293E.json"
+    },
+    "devices-8ACF6EE3-C040-4990-8849-48B842E68080.json": {
+      "type": 113,
+      "name": "PVCR-4000",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-8ACF6EE3-C040-4990-8849-48B842E68080.json"
+    },
+    "devices-8C310E92-F394-4B90-B87F-17A6374F0FAE.json": {
+      "type": 77,
+      "name": "PMC-5040WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-8C310E92-F394-4B90-B87F-17A6374F0FAE.json"
+    },
+    "devices-8C8649A5-F518-42CA-BB91-BCDAAEE76AE0.json": {
+      "type": 85,
+      "name": "PWK 1775CGLD SMART",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-8C8649A5-F518-42CA-BB91-BCDAAEE76AE0.json"
+    },
+    "devices-8D01E448-9DD2-443D-9641-86579810B180.json": {
+      "type": 60,
+      "name": "PWK 1775CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-8D01E448-9DD2-443D-9641-86579810B180.json"
+    },
+    "devices-8D93247F-D7B9-4B88-B1D0-73BBC1F16E44.json": {
+      "type": 218,
+      "name": "PVCRDC-G2-6002",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-8D93247F-D7B9-4B88-B1D0-73BBC1F16E44.json"
+    },
+    "devices-8DE8FE42-2A55-40F4-8A2F-47DDBBF7237A.json": {
+      "type": 204,
+      "name": "PPA-4050",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-8DE8FE42-2A55-40F4-8A2F-47DDBBF7237A.json"
+    },
+    "devices-8E37619E-33DD-49B8-B0A6-10906D1EB9A2.json": {
+      "type": 29,
+      "name": "PWK-1712CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-8E37619E-33DD-49B8-B0A6-10906D1EB9A2.json"
+    },
+    "devices-8F6E68D4-DCB3-4FA5-B5BE-26600EBBED8A.json": {
+      "type": 70,
+      "name": "PUH 9105/PUH 2709",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-8F6E68D4-DCB3-4FA5-B5BE-26600EBBED8A.json"
+    },
+    "devices-9081DBDB-8976-4BC8-A1D5-7DBB9C07C561.json": {
+      "type": 200,
+      "name": "PACM-2081AC",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-9081DBDB-8976-4BC8-A1D5-7DBB9C07C561.json"
+    },
+    "devices-92DC94D7-1B27-4B0C-B098-699C57BD20DA.json": {
+      "type": 135,
+      "name": "PVCR-G2-1226",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-92DC94D7-1B27-4B0C-B098-699C57BD20DA.json"
+    },
+    "devices-938CB6A5-FACD-4987-B8A1-100058A8F043.json": {
+      "type": 54,
+      "name": "PWK-1712CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-938CB6A5-FACD-4987-B8A1-100058A8F043.json"
+    },
+    "devices-942A1708-5BF2-47E5-A9C4-C638030557D1.json": {
+      "type": 274,
+      "name": "PCM-1540WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-942A1708-5BF2-47E5-A9C4-C638030557D1.json"
+    },
+    "devices-9460EE44-4360-49E4-9A23-CB242B78EFAC.json": {
+      "type": 313,
+      "name": "PBDS-4631IS",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-9460EE44-4360-49E4-9A23-CB242B78EFAC.json"
+    },
+    "devices-9539E558-6DB2-4F60-9C9C-C7B82543FB81.json": {
+      "type": 23,
+      "name": "PVCR-1028",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-9539E558-6DB2-4F60-9C9C-C7B82543FB81.json"
+    },
+    "devices-95F6CA2F-6CF2-48E2-83C8-14878616479A.json": {
+      "type": 89,
+      "name": "PMC-5055WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-95F6CA2F-6CF2-48E2-83C8-14878616479A.json"
+    },
+    "devices-96592B8A-F157-4969-BB88-AC9B5CF67E3E.json": {
+      "type": 94,
+      "name": "PSS-7070KWIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-96592B8A-F157-4969-BB88-AC9B5CF67E3E.json"
+    },
+    "devices-967405BA-C34B-4F61-A1B4-C25046A0F627.json": {
+      "type": 61,
+      "name": "PWK 1725CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-967405BA-C34B-4F61-A1B4-C25046A0F627.json"
+    },
+    "devices-991DFBB6-C739-4C2E-A66F-65CA2D63944E.json": {
+      "type": 245,
+      "name": "PWK 0105",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-991DFBB6-C739-4C2E-A66F-65CA2D63944E.json"
+    },
+    "devices-9B169E94-9223-403D-9EB6-33AB6A6E3542.json": {
+      "type": 258,
+      "name": "Watch(new)",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-9B169E94-9223-403D-9EB6-33AB6A6E3542.json"
+    },
+    "devices-9BBFBDB5-C2E2-427B-AABD-C23B4FA68644.json": {
+      "type": 165,
+      "name": "PWK 1755CAD VOICE",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-9BBFBDB5-C2E2-427B-AABD-C23B4FA68644.json"
+    },
+    "devices-9BC7D0CE-1C48-40E1-9E22-99AE25543664.json": {
+      "type": 148,
+      "name": "PVCR-6001",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-9BC7D0CE-1C48-40E1-9E22-99AE25543664.json"
+    },
+    "devices-9D50CB2E-E234-4A81-85D9-C2BDF2AF23E1.json": {
+      "type": 288,
+      "name": "PBHC-3211FB Wi-Fi",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-9D50CB2E-E234-4A81-85D9-C2BDF2AF23E1.json"
+    },
+    "devices-9E2CFF75-99E6-4AE1-A6E8-5D89C63249A1.json": {
+      "type": 217,
+      "name": "PVCRDC-G2-5002",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-9E2CFF75-99E6-4AE1-A6E8-5D89C63249A1.json"
+    },
+    "devices-9E392DDD-E86D-45F6-8040-DC533F41806E.json": {
+      "type": 112,
+      "name": "PVCR-3700",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-9E392DDD-E86D-45F6-8040-DC533F41806E.json"
+    },
+    "devices-9E3D0879-2E5C-45A7-AE05-CEB8876097FF.json": {
+      "type": 272,
+      "name": "PKM-2640 WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-9E3D0879-2E5C-45A7-AE05-CEB8876097FF.json"
+    },
+    "devices-9F194CA2-135A-4CCD-8FAB-55DCB27E2E5B.json": {
+      "type": 50,
+      "name": "PETB-0202TC",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-9F194CA2-135A-4CCD-8FAB-55DCB27E2E5B.json"
+    },
+    "devices-9F40CD9B-F8B6-4EBC-B460-34511DCE582C.json": {
+      "type": 193,
+      "name": "PVCR-G2-0826",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-9F40CD9B-F8B6-4EBC-B460-34511DCE582C.json"
+    },
+    "devices-9F82850E-E44A-4C97-AEA2-249A33541024.json": {
+      "type": 286,
+      "name": "PBHI-3231FB Wi-Fi ",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-9F82850E-E44A-4C97-AEA2-249A33541024.json"
+    },
+    "devices-9FFE8C97-F1CF-4760-AE02-888969B27AA7.json": {
+      "type": 75,
+      "name": "PUH-4040",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-9FFE8C97-F1CF-4760-AE02-888969B27AA7.json"
+    },
+    "devices-A0C80515-8299-43AF-9869-66923C116C03.json": {
+      "type": 67,
+      "name": "PWK-1720CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-A0C80515-8299-43AF-9869-66923C116C03.json"
+    },
+    "devices-A0F728AD-EF91-4AB1-B0CB-61A6F2A07DF7.json": {
+      "type": 291,
+      "name": "PAF-8003WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-A0F728AD-EF91-4AB1-B0CB-61A6F2A07DF7.json"
+    },
+    "devices-A1E04C87-B25A-462E-AB16-0F77018C6437.json": {
+      "type": 131,
+      "name": "PVCR-3900",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-A1E04C87-B25A-462E-AB16-0F77018C6437.json"
+    },
+    "devices-A2321F87-EE9A-4939-85F8-4301947BE43F.json": {
+      "type": 270,
+      "name": "PMC-0530WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-A2321F87-EE9A-4939-85F8-4301947BE43F.json"
+    },
+    "devices-A2509A6E-5A75-4050-B3E2-4C66E2722EEC.json": {
+      "type": 280,
+      "name": "PACM-2081AC",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-A2509A6E-5A75-4050-B3E2-4C66E2722EEC.json"
+    },
+    "devices-A33F8939-960F-4108-8834-CA24FB126DC6.json": {
+      "type": 333,
+      "name": "PIR-3050AK",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-A33F8939-960F-4108-8834-CA24FB126DC6.json"
+    },
+    "devices-A3C7B04A-2372-4286-81B6-D1D94E358BA2.json": {
+      "type": 267,
+      "name": "PMC-0521WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-A3C7B04A-2372-4286-81B6-D1D94E358BA2.json"
+    },
+    "devices-A43B4D0C-AEC4-46D8-B33B-45A49BF7FB1F.json": {
+      "type": 106,
+      "name": "PWK 1725CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-A43B4D0C-AEC4-46D8-B33B-45A49BF7FB1F.json"
+    },
+    "devices-A461C945-C872-4C8B-887D-9DEF2948E8C0.json": {
+      "type": 254,
+      "name": "PWK 1823CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-A461C945-C872-4C8B-887D-9DEF2948E8C0.json"
+    },
+    "devices-A58D7418-A709-4C73-BDB9-3B1539BD339E.json": {
+      "type": 188,
+      "name": "PWK 1775CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-A58D7418-A709-4C73-BDB9-3B1539BD339E.json"
+    },
+    "devices-A5F34420-4A48-46A7-87C4-D751F5015D88.json": {
+      "type": 329,
+      "name": "PVSG-01",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-A5F34420-4A48-46A7-87C4-D751F5015D88.json"
+    },
+    "devices-A648FE97-DAB7-4A81-9D02-50FBC4E3D66F.json": {
+      "type": 303,
+      "name": "PMC-0547 WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-A648FE97-DAB7-4A81-9D02-50FBC4E3D66F.json"
+    },
+    "devices-AA84798D-F2EA-4A66-B81D-40E531029F03.json": {
+      "type": 311,
+      "name": "PBDS-6031IS",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-AA84798D-F2EA-4A66-B81D-40E531029F03.json"
+    },
+    "devices-AACA49D1-2A74-4C1D-937B-C291073CE191.json": {
+      "type": 157,
+      "name": "PUH-4550",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-AACA49D1-2A74-4C1D-937B-C291073CE191.json"
+    },
+    "devices-AD0A0836-E3EF-439F-9C45-47B1710D1AE6.json": {
+      "type": 144,
+      "name": "SLG-V4",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-AD0A0836-E3EF-439F-9C45-47B1710D1AE6.json"
+    },
+    "devices-AD46AEBA-0BD4-465D-8778-81CCBC6BB2C7.json": {
+      "type": 190,
+      "name": "PCM-1560",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-AD46AEBA-0BD4-465D-8778-81CCBC6BB2C7.json"
+    },
+    "devices-ADE9CA47-F49D-4B6C-AC5E-5AF7EC8BE8C6.json": {
+      "type": 307,
+      "name": "PVCR-4750",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-ADE9CA47-F49D-4B6C-AC5E-5AF7EC8BE8C6.json"
+    },
+    "devices-AE2727E0-AEE7-4477-91CD-38BE5BB0BCEB.json": {
+      "type": 180,
+      "name": "PSF-3315",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-AE2727E0-AEE7-4477-91CD-38BE5BB0BCEB.json"
+    },
+    "devices-AEC0C8BB-5750-4B44-A514-B53DC3BC1A76.json": {
+      "type": 239,
+      "name": "PPAT-90GDi",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-AEC0C8BB-5750-4B44-A514-B53DC3BC1A76.json"
+    },
+    "devices-AF039023-F5E7-4163-AC78-F2F4DC35E198.json": {
+      "type": 160,
+      "name": "PVCRDC-0101",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-AF039023-F5E7-4163-AC78-F2F4DC35E198.json"
+    },
+    "devices-AF2CF6DE-1D6B-4675-87B8-211BC3CD6B6C.json": {
+      "type": 15,
+      "name": "PUH-7406",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-AF2CF6DE-1D6B-4675-87B8-211BC3CD6B6C.json"
+    },
+    "devices-AF6C7D4C-950B-467E-B48D-3F842063BF75.json": {
+      "type": 205,
+      "name": "PWK 1538CC",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-AF6C7D4C-950B-467E-B48D-3F842063BF75.json"
+    },
+    "devices-AF6ED5C8-7A30-40AF-B9CF-912D4131D64D.json": {
+      "type": 350,
+      "name": "PVCR-3550 AS",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-AF6ED5C8-7A30-40AF-B9CF-912D4131D64D.json"
+    },
+    "devices-B107EE9A-18B0-4716-874B-D6A0A5AD3B43.json": {
+      "type": 167,
+      "name": "Scales collection",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-B107EE9A-18B0-4716-874B-D6A0A5AD3B43.json"
+    },
+    "devices-B2EC8B44-3C8A-4640-9A96-84190CCE658B.json": {
+      "type": 25,
+      "name": "PUH-6090",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-B2EC8B44-3C8A-4640-9A96-84190CCE658B.json"
+    },
+    "devices-B445FC27-A252-4FD2-B05B-A511FE249DCF.json": {
+      "type": 123,
+      "name": "PVCR-6001",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-B445FC27-A252-4FD2-B05B-A511FE249DCF.json"
+    },
+    "devices-B4C20858-0B77-4E70-B02B-F414B00754A2.json": {
+      "type": 16,
+      "name": "PHV-1401",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-B4C20858-0B77-4E70-B02B-F414B00754A2.json"
+    },
+    "devices-B537F8C6-BB05-4EDF-B30B-523196EB87A7.json": {
+      "type": 295,
+      "name": "PBFI-6038IB Wi-Fi",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-B537F8C6-BB05-4EDF-B30B-523196EB87A7.json"
+    },
+    "devices-B58B412B-F499-4B1D-A7F2-2AB72D1C194C.json": {
+      "type": 52,
+      "name": "PWK 1725CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-B58B412B-F499-4B1D-A7F2-2AB72D1C194C.json"
+    },
+    "devices-B5D3B37D-4C5D-4B1F-A04D-012B53762F85.json": {
+      "type": 187,
+      "name": "PVCR-6003",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-B5D3B37D-4C5D-4B1F-A04D-012B53762F85.json"
+    },
+    "devices-B5E84FC5-6CB7-4352-ACCB-D73F538AB5C9.json": {
+      "type": 116,
+      "name": "Smart-Lid",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-B5E84FC5-6CB7-4352-ACCB-D73F538AB5C9.json"
+    },
+    "devices-B6C458EC-E60B-479B-8571-634B56605AE0.json": {
+      "type": 18,
+      "name": "PUH 9105/PUH 2709",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-B6C458EC-E60B-479B-8571-634B56605AE0.json"
+    },
+    "devices-B6D7F8E0-D37B-4FAA-9BD4-844205153813.json": {
+      "type": 320,
+      "name": "PBHG-6461GB Wi-Fi",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-B6D7F8E0-D37B-4FAA-9BD4-844205153813.json"
+    },
+    "devices-B9140587-B2F5-4D86-946B-659DD5CA93FF.json": {
+      "type": 32,
+      "name": "PMG-2580",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-B9140587-B2F5-4D86-946B-659DD5CA93FF.json"
+    },
+    "devices-BB5CC8CC-01A4-4EA4-A8EC-E6284C72AAA1.json": {
+      "type": 305,
+      "name": "PACM-2072",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-BB5CC8CC-01A4-4EA4-A8EC-E6284C72AAA1.json"
+    },
+    "devices-BB7B7FBE-5DBC-45CA-B8E1-1D6E585F6D77.json": {
+      "type": 55,
+      "name": "PMC-0524WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-BB7B7FBE-5DBC-45CA-B8E1-1D6E585F6D77.json"
+    },
+    "devices-BDD5BC56-49AB-4CD4-860B-B7B8A6FF3203.json": {
+      "type": 133,
+      "name": "PVCR-G2-0726W",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-BDD5BC56-49AB-4CD4-860B-B7B8A6FF3203.json"
+    },
+    "devices-BFC912AD-33DA-4405-BDA3-5BB17E69E2C0.json": {
+      "type": 100,
+      "name": "PVCR Wave-15",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-BFC912AD-33DA-4405-BDA3-5BB17E69E2C0.json"
+    },
+    "devices-C042A794-49F9-43DA-A7D4-617003BA5D16.json": {
+      "type": 211,
+      "name": "PVCR-4260",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-C042A794-49F9-43DA-A7D4-617003BA5D16.json"
+    },
+    "devices-C1031CB6-4E2B-4964-AB2E-7233DFFAFA03.json": {
+      "type": 104,
+      "name": "PVCR-0905",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-C1031CB6-4E2B-4964-AB2E-7233DFFAFA03.json"
+    },
+    "devices-C12E15F5-B1C6-497A-949C-9BCB81215D57.json": {
+      "type": 253,
+      "name": "PWK 1715",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-C12E15F5-B1C6-497A-949C-9BCB81215D57.json"
+    },
+    "devices-C1BEC5BB-6A32-4B80-8F7B-72E4AB531F28.json": {
+      "type": 233,
+      "name": "PVCSDC-3005",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-C1BEC5BB-6A32-4B80-8F7B-72E4AB531F28.json"
+    },
+    "devices-C3797DFD-5599-4AA3-9C40-84FACFAD9BC1.json": {
+      "type": 7,
+      "name": "PVCR-3200",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-C3797DFD-5599-4AA3-9C40-84FACFAD9BC1.json"
+    },
+    "devices-C397CF7A-294A-4F53-A1EE-7E76E5EF7D83.json": {
+      "type": 134,
+      "name": "PVCR-G2-0926W",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-C397CF7A-294A-4F53-A1EE-7E76E5EF7D83.json"
+    },
+    "devices-C4DFD692-BC82-4D24-B9C6-D3B593A57328.json": {
+      "type": 22,
+      "name": "PVCR-1050",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-C4DFD692-BC82-4D24-B9C6-D3B593A57328.json"
+    },
+    "devices-C5002EF8-67A7-4C83-8AC3-0AD10B168F95.json": {
+      "type": 284,
+      "name": "PBHI-6431FB Wi-Fi",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-C5002EF8-67A7-4C83-8AC3-0AD10B168F95.json"
+    },
+    "devices-C6362125-3ADA-4141-A89C-80ACDA21D33B.json": {
+      "type": 171,
+      "name": "PHSB-5000",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-C6362125-3ADA-4141-A89C-80ACDA21D33B.json"
+    },
+    "devices-C65BD003-288E-4EC7-89D5-7F2E9FFBAD7A.json": {
+      "type": 111,
+      "name": "PVCS-1150",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-C65BD003-288E-4EC7-89D5-7F2E9FFBAD7A.json"
+    },
+    "devices-C70C5AEE-5C2A-4C4C-A621-0FFDCCF94230.json": {
+      "type": 306,
+      "name": "PVCSDC-3005",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-C70C5AEE-5C2A-4C4C-A621-0FFDCCF94230.json"
+    },
+    "devices-C803739C-B935-47ED-AD7A-954BD96ABD43.json": {
+      "type": 327,
+      "name": "PVCR-3550",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-C803739C-B935-47ED-AD7A-954BD96ABD43.json"
+    },
+    "devices-C9C4E0C3-1EEE-4B67-8A87-AA6E6ACB6188.json": {
+      "type": 335,
+      "name": "PVCRAC-7390 Pro",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-C9C4E0C3-1EEE-4B67-8A87-AA6E6ACB6188.json"
+    },
+    "devices-C9CBCD80-D0F8-4249-9910-EA31F367BB40.json": {
+      "type": 34,
+      "name": "PHB-1551WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-C9CBCD80-D0F8-4249-9910-EA31F367BB40.json"
+    },
+    "devices-CA08052B-0AAB-46D3-926C-C6DBE447AE46.json": {
+      "type": 115,
+      "name": "PVCR-3200",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-CA08052B-0AAB-46D3-926C-C6DBE447AE46.json"
+    },
+    "devices-CA5EEF9E-9A55-4988-B7EA-9EA0E9A95AE7.json": {
+      "type": 189,
+      "name": "PWK 1746CA",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-CA5EEF9E-9A55-4988-B7EA-9EA0E9A95AE7.json"
+    },
+    "devices-CC738BAD-A289-40EC-8211-C7E275697F2F.json": {
+      "type": 213,
+      "name": "PVCRDC-5002",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-CC738BAD-A289-40EC-8211-C7E275697F2F.json"
+    },
+    "devices-CDF723AC-9298-457A-95E9-639B41DF9EB6.json": {
+      "type": 139,
+      "name": "PWK 1775CGLD VOICE",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-CDF723AC-9298-457A-95E9-639B41DF9EB6.json"
+    },
+    "devices-CEC1F5ED-BE5E-4545-9CE9-E2D843032587.json": {
+      "type": 6,
+      "name": "PWK 1725CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-CEC1F5ED-BE5E-4545-9CE9-E2D843032587.json"
+    },
+    "devices-CF4D594A-4071-4020-B6FE-BFC893C2214C.json": {
+      "type": 230,
+      "name": "PVCS-8200",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-CF4D594A-4071-4020-B6FE-BFC893C2214C.json"
+    },
+    "devices-CF703E7C-023A-45B4-88D6-D496D23AEE8B.json": {
+      "type": 142,
+      "name": "PVCR-4500",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-CF703E7C-023A-45B4-88D6-D496D23AEE8B.json"
+    },
+    "devices-CFC9E849-763F-492E-83CC-2A5BBABAE646.json": {
+      "type": 5,
+      "name": "PWS1830/1883",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-CFC9E849-763F-492E-83CC-2A5BBABAE646.json"
+    },
+    "devices-D195FDB7-686C-4B91-8D20-1B2979C10595.json": {
+      "type": 153,
+      "name": "PUH-4055",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-D195FDB7-686C-4B91-8D20-1B2979C10595.json"
+    },
+    "devices-D1DEC3AE-8B75-4E9D-AEE1-AAD6ABFC8A80.json": {
+      "type": 237,
+      "name": "PKM-2640 WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-D1DEC3AE-8B75-4E9D-AEE1-AAD6ABFC8A80.json"
+    },
+    "devices-D24B3286-450E-47E6-AB3F-062A6DAF26D1.json": {
+      "type": 334,
+      "name": "PBHG-6461GB",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-D24B3286-450E-47E6-AB3F-062A6DAF26D1.json"
+    },
+    "devices-D2E3C4BB-1B22-4D4D-81B5-CC4813776962.json": {
+      "type": 162,
+      "name": "PMC-5063WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-D2E3C4BB-1B22-4D4D-81B5-CC4813776962.json"
+    },
+    "devices-D42AFA1A-4545-409C-964E-3AE71268AB56.json": {
+      "type": 271,
+      "name": "PWK 1701CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-D42AFA1A-4545-409C-964E-3AE71268AB56.json"
+    },
+    "devices-D49B441B-5D9A-4277-BD44-01FCB7A09B9C.json": {
+      "type": 265,
+      "name": "PACM-2081AC",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-D49B441B-5D9A-4277-BD44-01FCB7A09B9C.json"
+    },
+    "devices-D4B6E701-F775-4C4A-B2B1-88033DDB815F.json": {
+      "type": 336,
+      "name": "PVCRAC-7390 Lite",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-D4B6E701-F775-4C4A-B2B1-88033DDB815F.json"
+    },
+    "devices-D4E2E35A-EDCD-4F26-B742-05517810CD71.json": {
+      "type": 59,
+      "name": "PWK-1712CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-D4E2E35A-EDCD-4F26-B742-05517810CD71.json"
+    },
+    "devices-D53BDFDF-65F0-4914-A2C6-CB320A37F549.json": {
+      "type": 140,
+      "name": "PAW-0804(c3 test)",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-D53BDFDF-65F0-4914-A2C6-CB320A37F549.json"
+    },
+    "devices-D54A651C-4418-4A05-BF70-2B855466431F.json": {
+      "type": 40,
+      "name": "PMC-0526WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-D54A651C-4418-4A05-BF70-2B855466431F.json"
+    },
+    "devices-D79707C6-8614-4DFE-9782-E328CA6A654C.json": {
+      "type": 309,
+      "name": "PBHI-6452BB Wi-Fi",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-D79707C6-8614-4DFE-9782-E328CA6A654C.json"
+    },
+    "devices-D9423FEF-6728-4DF6-BDEA-8087442186B5.json": {
+      "type": 194,
+      "name": "PWK 1725CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-D9423FEF-6728-4DF6-BDEA-8087442186B5.json"
+    },
+    "devices-DB051008-8AE7-4EF4-9F53-55A3DE61CB19.json": {
+      "type": 269,
+      "name": "PVCR-4260",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-DB051008-8AE7-4EF4-9F53-55A3DE61CB19.json"
+    },
+    "devices-DDEC77FB-B115-49D8-90FE-C81F052ED9BA.json": {
+      "type": 292,
+      "name": "PAF-8005WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-DDEC77FB-B115-49D8-90FE-C81F052ED9BA.json"
+    },
+    "devices-DE27FDD6-95EF-4216-8951-96050686F3FF.json": {
+      "type": 220,
+      "name": "PVCR-G2-6001",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-DE27FDD6-95EF-4216-8951-96050686F3FF.json"
+    },
+    "devices-E0261D9E-89F0-4911-A68E-B23D48193672.json": {
+      "type": 338,
+      "name": "PWK 1823CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-E0261D9E-89F0-4911-A68E-B23D48193672.json"
+    },
+    "devices-E0BF4806-082F-4B17-BA54-F5AD8F50DA07.json": {
+      "type": 283,
+      "name": "PGS-2250VA",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-E0BF4806-082F-4B17-BA54-F5AD8F50DA07.json"
+    },
+    "devices-E1A68AED-93FC-40FD-A5BF-BB5CF4FF6707.json": {
+      "type": 268,
+      "name": "PMC-0528WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-E1A68AED-93FC-40FD-A5BF-BB5CF4FF6707.json"
+    },
+    "devices-E24D7597-C4CF-4403-A7CC-EBABFB3F5DB4.json": {
+      "type": 136,
+      "name": "PVCS-4070",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-E24D7597-C4CF-4403-A7CC-EBABFB3F5DB4.json"
+    },
+    "devices-E3D424AA-D7E9-45E5-892F-5DAD91A54B50.json": {
+      "type": 121,
+      "name": "PWK 1774CAD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-E3D424AA-D7E9-45E5-892F-5DAD91A54B50.json"
+    },
+    "devices-E434FAA4-A62B-4D3F-9B7E-445B22B4AD4E.json": {
+      "type": 35,
+      "name": "PHB-1503 WIFI (old)",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-E434FAA4-A62B-4D3F-9B7E-445B22B4AD4E.json"
+    },
+    "devices-E493A6BE-CABC-4EC9-84C7-34093A4D9124.json": {
+      "type": 277,
+      "name": "PACM-2080AC",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-E493A6BE-CABC-4EC9-84C7-34093A4D9124.json"
+    },
+    "devices-E4D2DD99-116F-4657-8308-E71078753F15.json": {
+      "type": 76,
+      "name": "PVCR-3200",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-E4D2DD99-116F-4657-8308-E71078753F15.json"
+    },
+    "devices-E52E5C4B-65E6-4F1E-A4C9-7A586F963DD7.json": {
+      "type": 276,
+      "name": "PACM-2080AC",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-E52E5C4B-65E6-4F1E-A4C9-7A586F963DD7.json"
+    },
+    "devices-E55E3051-2513-4445-BE33-9FC2A0557721.json": {
+      "type": 102,
+      "name": "PVCR-1226 Aqua",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-E55E3051-2513-4445-BE33-9FC2A0557721.json"
+    },
+    "devices-E5F3E532-C9D7-412E-A6EA-A6ED45894B72.json": {
+      "type": 107,
+      "name": "PVCR-0926",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-E5F3E532-C9D7-412E-A6EA-A6ED45894B72.json"
+    },
+    "devices-E5FA574C-2227-41E7-9213-28169CA2DDB4.json": {
+      "type": 10,
+      "name": "PMC-0521WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-E5FA574C-2227-41E7-9213-28169CA2DDB4.json"
+    },
+    "devices-E8912C27-3D42-47E2-BB33-82F1F440784B.json": {
+      "type": 244,
+      "name": "PWK 1716CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-E8912C27-3D42-47E2-BB33-82F1F440784B.json"
+    },
+    "devices-E9566B0E-D8B5-4127-B59A-497611261BCC.json": {
+      "type": 185,
+      "name": "PWK 1755CAD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-E9566B0E-D8B5-4127-B59A-497611261BCC.json"
+    },
+    "devices-EA032B43-DEF1-4907-B546-B8C1E3A7CFC3.json": {
+      "type": 108,
+      "name": "PVCR-0726 GYRO",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-EA032B43-DEF1-4907-B546-B8C1E3A7CFC3.json"
+    },
+    "devices-EDF2BABF-2A1C-4B43-9792-EADCBDBE24E4.json": {
+      "type": 266,
+      "name": "PMC-5020WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-EDF2BABF-2A1C-4B43-9792-EADCBDBE24E4.json"
+    },
+    "devices-F0C6AFD0-E0D4-43E5-BC00-F9700C66A438.json": {
+      "type": 43,
+      "name": "PVCR-0833",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-F0C6AFD0-E0D4-43E5-BC00-F9700C66A438.json"
+    },
+    "devices-F0F08667-64F8-4D6D-A84A-21C83973FDB0.json": {
+      "type": 203,
+      "name": "PPA-2025",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-F0F08667-64F8-4D6D-A84A-21C83973FDB0.json"
+    },
+    "devices-F0F7F5A2-FA38-4BF3-8538-F173D21B9BB0.json": {
+      "type": 304,
+      "name": "XFC604I (test)",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-F0F7F5A2-FA38-4BF3-8538-F173D21B9BB0.json"
+    },
+    "devices-F125D25F-81D5-43E4-88E4-9B264D661BCA.json": {
+      "type": 196,
+      "name": "PWK 1725CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-F125D25F-81D5-43E4-88E4-9B264D661BCA.json"
+    },
+    "devices-F2A3E186-3CFD-41FA-90AB-1F1D94A6E0B0.json": {
+      "type": 339,
+      "name": "PWK 1841CGLD",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-F2A3E186-3CFD-41FA-90AB-1F1D94A6E0B0.json"
+    },
+    "devices-F34B4A61-5699-4C3A-B204-55DDDCDF3219.json": {
+      "type": 158,
+      "name": "PUH-6060",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-F34B4A61-5699-4C3A-B204-55DDDCDF3219.json"
+    },
+    "devices-F47C7EE5-CD44-4E51-84B3-DA8113F9D78B.json": {
+      "type": 132,
+      "name": "PWF-2005",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-F47C7EE5-CD44-4E51-84B3-DA8113F9D78B.json"
+    },
+    "devices-F5B79743-11A4-443C-8717-8E66CBEA975E.json": {
+      "type": 285,
+      "name": "PBHI-6430FB Wi-Fi ",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-F5B79743-11A4-443C-8717-8E66CBEA975E.json"
+    },
+    "devices-F6FE1229-3412-4D55-B034-75495F1FA0AF.json": {
+      "type": 78,
+      "name": "PMC-5050WIFI",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-F6FE1229-3412-4D55-B034-75495F1FA0AF.json"
+    },
+    "devices-F802BBB7-B1CA-4425-9610-68DD73A8AFA1.json": {
+      "type": 261,
+      "name": "PACM-2080AC",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-F802BBB7-B1CA-4425-9610-68DD73A8AFA1.json"
+    },
+    "devices-FAABA7CD-38A9-4EB1-96E6-4BBAD8DF4880.json": {
+      "type": 282,
+      "name": "PBHI-6452BB Wi-Fi",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-FAABA7CD-38A9-4EB1-96E6-4BBAD8DF4880.json"
+    },
+    "devices-FBA9E1B2-0ED4-4A5A-BE3D-689202F6FF9F.json": {
+      "type": 281,
+      "name": "PVCS-6020",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-FBA9E1B2-0ED4-4A5A-BE3D-689202F6FF9F.json"
+    },
+    "devices-FEDAC313-3D10-40C1-BD22-4E40DC0DEE58.json": {
+      "type": 149,
+      "name": "PVCRDC-5002",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-FEDAC313-3D10-40C1-BD22-4E40DC0DEE58.json"
+    },
+    "devices-FFB801D2-4B60-4D37-A2FF-AF94C83B35A3.json": {
+      "type": 297,
+      "name": "PBFP-3839IB Wi-Fi ",
+      "source": "com.polaris.iot 3.6.1",
+      "apk_path": "assets/prepopulate/devices-FFB801D2-4B60-4D37-A2FF-AF94C83B35A3.json"
+    }
+  }
+}

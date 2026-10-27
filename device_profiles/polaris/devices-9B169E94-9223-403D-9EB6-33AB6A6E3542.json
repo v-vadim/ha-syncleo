@@ -1,0 +1,124 @@
+{
+  "id": "9b169e94-9223-403d-9eb6-33ab6a6e3542",
+  "name": "Watch(new)",
+  "type": 258,
+  "class": "other",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/c/a2/d9565-3316-4613-9b02-5ec661fc15d6/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/c/a2/d9565-3316-4613-9b02-5ec661fc15d6/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/c/a2/d9565-3316-4613-9b02-5ec661fc15d6/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/c/a2/d9565-3316-4613-9b02-5ec661fc15d6/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/c/a2/d9565-3316-4613-9b02-5ec661fc15d6/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/c/a2/d9565-3316-4613-9b02-5ec661fc15d6/900.webp",
+    "id": "ca2d9565-3316-4613-9b02-5ec661fc15d6",
+    "original": "https://images.cdn.polaris-iot.com/c/a2/d9565-3316-4613-9b02-5ec661fc15d6/original.webp"
+  },
+  "layout": {
+    "top": [
+      {
+        "pin": false,
+        "type": "slider",
+        "source": "state",
+        "feature": "battery",
+        "position": 0
+      },
+      {
+        "type": "slider",
+        "feature": "weight",
+        "position": 1
+      }
+    ],
+    "home.info": [
+      {
+        "type": "info",
+        "feature": "battery",
+        "position": 0
+      }
+    ],
+    "manual.content": [
+      {
+        "type": "error",
+        "position": 0,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      },
+      {
+        "type": "container_head",
+        "position": 1
+      },
+      {
+        "pin": false,
+        "type": "info",
+        "source": "state",
+        "feature": "battery",
+        "position": 2
+      },
+      {
+        "pin": false,
+        "type": "info",
+        "source": "state",
+        "feature": "weight",
+        "position": 2,
+        "icon_suffix": false,
+        "text_suffix": false
+      },
+      {
+        "type": "slider",
+        "feature": "weight",
+        "position": 3
+      },
+      {
+        "type": "container_tail",
+        "position": 3
+      }
+    ]
+  },
+  "limits": {
+    "weight": {
+      "max": 3000,
+      "min": 10,
+      "step": 1,
+      "round": 1,
+      "default": 200,
+      "round_alt": 1
+    },
+    "battery": {
+      "max": 100,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "hidden": true,
+    "realtime": true,
+    "syncable": false,
+    "bleBondable": true,
+    "userPresets": false
+  },
+  "vendor": "polaris",
+  "features": [
+    "battery",
+    "weight"
+  ],
+  "messages": {
+    "enable": {
+      "ru-RU": "Нажмите кнопку сбоку для активации bluetooth. В подтверждение загорится зеленый индикатор"
+    },
+    "attr.weight": {
+      "ru-RU": "Частота"
+    }
+  },
+  "connectivity": [
+    "ble"
+  ],
+  "last_modified": 1736431894,
+  "temperature_units": "celsius"
+}

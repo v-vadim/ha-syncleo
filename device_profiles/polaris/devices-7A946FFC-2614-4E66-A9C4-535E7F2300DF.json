@@ -1,0 +1,311 @@
+{
+  "id": "7a946ffc-2614-4e66-a9c4-535e7f2300df",
+  "name": "PVSG-03",
+  "type": 330,
+  "class": "ai_wearable",
+  "image": {
+    "60": "https://images.cdn.polaris-iot.com/8/0d/43d79-a2d7-472c-8c7c-8fd5caaf51f3/60.webp",
+    "120": "https://images.cdn.polaris-iot.com/8/0d/43d79-a2d7-472c-8c7c-8fd5caaf51f3/120.webp",
+    "240": "https://images.cdn.polaris-iot.com/8/0d/43d79-a2d7-472c-8c7c-8fd5caaf51f3/240.webp",
+    "480": "https://images.cdn.polaris-iot.com/8/0d/43d79-a2d7-472c-8c7c-8fd5caaf51f3/480.webp",
+    "600": "https://images.cdn.polaris-iot.com/8/0d/43d79-a2d7-472c-8c7c-8fd5caaf51f3/600.webp",
+    "900": "https://images.cdn.polaris-iot.com/8/0d/43d79-a2d7-472c-8c7c-8fd5caaf51f3/900.webp",
+    "1200": "https://images.cdn.polaris-iot.com/8/0d/43d79-a2d7-472c-8c7c-8fd5caaf51f3/1200.webp",
+    "1800": "https://images.cdn.polaris-iot.com/8/0d/43d79-a2d7-472c-8c7c-8fd5caaf51f3/1800.webp",
+    "id": "80d43d79-a2d7-472c-8c7c-8fd5caaf51f3",
+    "original": "https://images.cdn.polaris-iot.com/8/0d/43d79-a2d7-472c-8c7c-8fd5caaf51f3/original.webp"
+  },
+  "layout": {
+    "manual.content": [
+      {
+        "type": "container_head",
+        "position": 4
+      },
+      {
+        "type": "icon",
+        "image": "logo",
+        "aspect": 2.3,
+        "position": 5
+      },
+      {
+        "type": "container_tail",
+        "position": 6
+      },
+      {
+        "type": "container_head",
+        "position": 13
+      },
+      {
+        "type": "header",
+        "title": {
+          "ar-AE": "وظائف الذكاء الاصطناعي",
+          "de-DE": "KI-Funktionen",
+          "en-US": "AI functions",
+          "kk-KZ": "AI функциялары",
+          "ru-RU": "Функции ИИ",
+          "uk-UA": "Функції штучного інтелекту"
+        },
+        "position": 14
+      },
+      {
+        "type": "button",
+        "image": "translate",
+        "title": {
+          "en-US": "Translation",
+          "ru-RU": "Переводчик"
+        },
+        "aspect": 1,
+        "measure": "translation",
+        "position": 15
+      },
+      {
+        "type": "button",
+        "image": "dialogs",
+        "title": {
+          "en-US": "Dialogs",
+          "ru-RU": "Запись встреч"
+        },
+        "aspect": 1,
+        "measure": "dialog",
+        "position": 15
+      },
+      {
+        "type": "button",
+        "image": "howto",
+        "title": {
+          "en-US": "How to",
+          "ru-RU": "Обучение"
+        },
+        "aspect": 1,
+        "feature": "recipe",
+        "position": 16
+      },
+      {
+        "type": "button",
+        "image": "assistant",
+        "title": {
+          "en-US": "Assistant",
+          "ru-RU": "Голосовой ассистент"
+        },
+        "aspect": 1,
+        "measure": "assistant",
+        "position": 16
+      },
+      {
+        "type": "container_tail",
+        "position": 17
+      }
+    ],
+    "manual.shortcuts": [
+      {
+        "type": "button",
+        "image": "translate",
+        "title": {
+          "en-US": "Translation",
+          "ru-RU": "Переводчик"
+        },
+        "aspect": 1,
+        "measure": "translation",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "image": "dialogs",
+        "title": {
+          "en-US": "Dialogs",
+          "ru-RU": "Запись встреч"
+        },
+        "aspect": 1,
+        "measure": "dialog",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "image": "howto",
+        "title": {
+          "en-US": "How to",
+          "ru-RU": "Обучение"
+        },
+        "aspect": 1,
+        "feature": "recipe",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "image": "assistant",
+        "title": {
+          "en-US": "Assistant",
+          "ru-RU": "Голосовой ассистент"
+        },
+        "aspect": 1,
+        "measure": "assistant",
+        "position": 0
+      }
+    ]
+  },
+  "limits": {},
+  "params": {
+    "hidden": false,
+    "realtime": true,
+    "syncable": false,
+    "bleBondable": true,
+    "regionGroups": [
+      "restWorld",
+      "arabic"
+    ],
+    "voiceControl": {
+      "intents": {
+        "status": {
+          "status": {
+            "battery": {}
+          }
+        }
+      }
+    },
+    "btAudioDevice": "SG-03",
+    "recipeAdvices": true,
+    "bleVoiceService": true
+  },
+  "vendor": "polaris",
+  "features": [
+    "recipe",
+    "program",
+    "demo"
+  ],
+  "messages": {
+    "howto": {
+      "ar-AE": "نصائح",
+      "de-DE": "Beratung",
+      "en-US": "Advices",
+      "kk-KZ": "Кеңестер",
+      "ru-RU": "Обучение",
+      "uk-UA": "Рада"
+    },
+    "enable": {
+      "ar-AE": "للاتصال ، اضغط مع الاستمرار على زر اللمس في كلا الصدغين حتى تسمع عبارة \" متصل.\"افتح إعدادات البلوتوث ، قم بتوصيل جهاز سغ-03 ، والعودة إلى التطبيق للمتابعة.",
+      "de-DE": "Um eine Verbindung herzustellen, halten Sie die Touch-Taste an beiden Bügeln gedrückt, bis Sie den Satz “Verbunden.\" Öffnen Sie die Bluetooth-Einstellungen, verbinden Sie das SG-03-Gerät und kehren Sie zur App zurück, um fortzufahren.",
+      "en-US": "For connection, press and hold the touch button on both temples until you hear the phrase “Connected.” Open the Bluetooth settings, connect the SG-03 device, and return to the app to continue.",
+      "kk-KZ": "Қосылу үшін екі қолдағы сенсорлық түймені \"Включено\"тіркесіне дейін басып тұрыңыз. Bluetooth параметрлерін ашып, SG-03 құрылғысын қосып, жалғастыру үшін қолданбаға оралыңыз",
+      "ru-RU": "Для подключения нажмите и удерживайте сенсорную кнопку на обоих дужках до фразы \"Включено\". Откройте настройки Bluetooth, подключите устройство SG-03 и вернитесь в приложение, чтобы продолжить",
+      "uk-UA": "For connection, press and hold the touch button on both temples until you hear the phrase “Connected.” Open the Bluetooth settings, connect the SG-03 device, and return to the app to continue."
+    },
+    "dialogs": {
+      "ar-AE": "تسجيل الاجتماع",
+      "de-DE": "Protokoll der Sitzung",
+      "en-US": "Meeting recording",
+      "kk-KZ": "Жиналыс жазбасы",
+      "ru-RU": "Запись встреч",
+      "uk-UA": "Запис зборів"
+    },
+    "assistant": {
+      "ar-AE": "مساعد صوت",
+      "de-DE": "Sprachassistent",
+      "en-US": "Voice Assistant",
+      "kk-KZ": "Дауыстық Көмекші",
+      "ru-RU": "Голосовой ассистент",
+      "uk-UA": "Голосовий асистент"
+    },
+    "translate": {
+      "ar-AE": "مترجم",
+      "de-DE": "Übersetzer",
+      "en-US": "Translator",
+      "kk-KZ": "Аудармашы",
+      "ru-RU": "Переводчик",
+      "uk-UA": "Перекладач"
+    },
+    "unpair_ios": {
+      "ar-AE": "هل تريد فصل هذا الجهاز عن هاتفك?\nلا تنس إلغاء الاقتران في إعدادات البلوتوث بالهاتف",
+      "de-DE": "Möchten Sie dieses Gerät von Ihrem Telefon trennen?\nVergessen Sie nicht, die Kopplung in den Bluetooth-Einstellungen des Telefons abzubrechen",
+      "en-US": "Do you want to disconnect this device from your phone?\nDon’t forget to cancel the pairing in the phone’s Bluetooth settings",
+      "kk-KZ": "Бұл құрылғыны телефоннан ажыратқыңыз келе ме?\nТелефонның Bluetooth параметрлерінде жұптастырудан бас тартуды ұмытпаңыз",
+      "ru-RU": "Вы хотите отключить это устройство от своего телефона?\nНе забудьте отменить сопряжение в Bluetooth настройках телефона"
+    },
+    "url.manual": {
+      "ar-AE": "https://images.cdn.polaris-iot.com/pdf/polaris/330/SG03_User Manual_v7_ru.pdf",
+      "de-DE": "https://images.cdn.polaris-iot.com/pdf/polaris/330/SG03_User Manual_v7_ru.pdf",
+      "en-US": "https://images.cdn.polaris-iot.com/pdf/polaris/330/SG03_User Manual_v7_ru.pdf",
+      "kk-KZ": "https://images.cdn.polaris-iot.com/pdf/polaris/330/SG03_User Manual_v7_ru.pdf",
+      "ru-RU": "https://images.cdn.polaris-iot.com/pdf/polaris/330/SG03_User Manual_v7_ru.pdf",
+      "uk-UA": "https://images.cdn.polaris-iot.com/pdf/polaris/330/SG03_User Manual_v7_ru.pdf"
+    },
+    "url.catalog": {
+      "ar-AE": "https://polaris.ru/catalog/smart_glasses/polaris-sg-03-iq-home/",
+      "de-DE": "https://polaris.ru/catalog/smart_glasses/polaris-sg-03-iq-home/",
+      "en-US": "https://polaris.ru/catalog/smart_glasses/polaris-sg-03-iq-home/",
+      "kk-KZ": "https://polaris.ru/catalog/smart_glasses/polaris-sg-03-iq-home/",
+      "ru-RU": "https://polaris.ru/catalog/smart_glasses/polaris-sg-03-iq-home/",
+      "uk-UA": "https://polaris.ru/catalog/smart_glasses/polaris-sg-03-iq-home/"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "None"
+      },
+      "hidden": true,
+      "limits_constraints": []
+    }
+  ],
+  "alt_images": {
+    "logo": {
+      "60": "https://images.cdn.polaris-iot.com/c/8b/513fb-119b-4312-aca0-c2a0296d36a4/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/c/8b/513fb-119b-4312-aca0-c2a0296d36a4/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/c/8b/513fb-119b-4312-aca0-c2a0296d36a4/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/c/8b/513fb-119b-4312-aca0-c2a0296d36a4/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/c/8b/513fb-119b-4312-aca0-c2a0296d36a4/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/c/8b/513fb-119b-4312-aca0-c2a0296d36a4/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/c/8b/513fb-119b-4312-aca0-c2a0296d36a4/1200.webp",
+      "1800": "https://images.cdn.polaris-iot.com/c/8b/513fb-119b-4312-aca0-c2a0296d36a4/1800.webp",
+      "id": "c8b513fb-119b-4312-aca0-c2a0296d36a4",
+      "original": "https://images.cdn.polaris-iot.com/c/8b/513fb-119b-4312-aca0-c2a0296d36a4/original.webp"
+    },
+    "howto": {
+      "60": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/1200.webp",
+      "id": "46ed1e22-8700-478e-9038-85d8bfe45e4c",
+      "original": "https://images.cdn.polaris-iot.com/4/6e/d1e22-8700-478e-9038-85d8bfe45e4c/original.webp"
+    },
+    "dialogs": {
+      "60": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/1200.webp",
+      "id": "73b07569-7c5c-4836-87e8-50f86b4d84a6",
+      "original": "https://images.cdn.polaris-iot.com/7/3b/07569-7c5c-4836-87e8-50f86b4d84a6/original.webp"
+    },
+    "assistant": {
+      "60": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/900.webp",
+      "1200": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/1200.webp",
+      "id": "d0076827-a6b5-4844-9efa-168ec552c944",
+      "original": "https://images.cdn.polaris-iot.com/d/00/76827-a6b5-4844-9efa-168ec552c944/original.webp"
+    },
+    "translate": {
+      "60": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/60.webp",
+      "120": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/120.webp",
+      "240": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/240.webp",
+      "480": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/480.webp",
+      "600": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/600.webp",
+      "900": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/900.webp",
+      "id": "7f3bac63-e4d3-4919-bc2d-8e01a7cb9cc6",
+      "original": "https://images.cdn.polaris-iot.com/7/f3/bac63-e4d3-4919-bc2d-8e01a7cb9cc6/original.webp"
+    }
+  },
+  "connectivity": [
+    "ble"
+  ],
+  "last_modified": 1790346428,
+  "temperature_units": "celsius"
+}
