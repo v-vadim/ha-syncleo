@@ -1,0 +1,2184 @@
+{
+  "id": "dca6fe8d-ed16-45df-a0f5-129f2ed5778f",
+  "name": "SmartControl Pro",
+  "type": 73,
+  "class": "thermostat",
+  "image": {
+    "60": "https://images.cdn.rusklimat.ru/6/fa/b75ab-2e92-49eb-9c1a-38eb03a4853e/60.webp",
+    "120": "https://images.cdn.rusklimat.ru/6/fa/b75ab-2e92-49eb-9c1a-38eb03a4853e/120.webp",
+    "240": "https://images.cdn.rusklimat.ru/6/fa/b75ab-2e92-49eb-9c1a-38eb03a4853e/240.webp",
+    "480": "https://images.cdn.rusklimat.ru/6/fa/b75ab-2e92-49eb-9c1a-38eb03a4853e/480.webp",
+    "600": "https://images.cdn.rusklimat.ru/6/fa/b75ab-2e92-49eb-9c1a-38eb03a4853e/600.webp",
+    "900": "https://images.cdn.rusklimat.ru/6/fa/b75ab-2e92-49eb-9c1a-38eb03a4853e/900.webp",
+    "1200": "https://images.cdn.rusklimat.ru/6/fa/b75ab-2e92-49eb-9c1a-38eb03a4853e/1200.webp",
+    "1800": "https://images.cdn.rusklimat.ru/6/fa/b75ab-2e92-49eb-9c1a-38eb03a4853e/1800.webp",
+    "id": "6fab75ab-2e92-49eb-9c1a-38eb03a4853e",
+    "original": "https://images.cdn.rusklimat.ru/6/fa/b75ab-2e92-49eb-9c1a-38eb03a4853e/original.webp"
+  },
+  "layout": {
+    "top": [
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Air temp",
+          "ru-RU": "Температура воздуха"
+        },
+        "suffix": "suffix.celsius",
+        "feature": "current_humidity",
+        "position": 0
+      }
+    ],
+    "bottom": [
+      {
+        "icon": "M0,0h24v24V0M21.451,12.523C21.451,17.749,17.211,22,12,22c-5.211,0-9.451-4.251-9.451-9.477c0-3.817,2.266-7.245,5.772-8.732c0.101-0.043,0.207-0.065,0.316-0.065c0.327,0,0.621,0.195,0.748,0.497c0.084,0.2,0.086,0.421,0.005,0.623C9.308,5.048,9.153,5.206,8.953,5.291c-2.904,1.232-4.781,4.071-4.781,7.232c0,4.328,3.511,7.849,7.827,7.849c4.316,0,7.827-3.521,7.827-7.849c0-3.18-1.891-6.025-4.818-7.248c-0.2-0.084-0.356-0.24-0.438-0.441c-0.083-0.201-0.082-0.422,0.001-0.623c0.127-0.304,0.421-0.501,0.75-0.501c0.107,0,0.212,0.021,0.312,0.063C19.167,5.25,21.451,8.684,21.451,12.523zM12,13.746c0.588,0,1.065-0.479,1.065-1.068v-9.61C13.065,2.479,12.587,2,12,2c-0.587,0-1.065,0.479-1.065,1.068v9.61C10.935,13.267,11.412,13.746,12,13.746z",
+        "type": "button",
+        "action": {
+          "program_data": {
+            "field": "on_switch",
+            "value": 1,
+            "program": [
+              0
+            ]
+          }
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      },
+      {
+        "icon": "M0,0h24v24V0M19.31,11.34l-6.07-6.07c-0.69-0.69-1.8-0.69-2.49,0l-6.07,6.07c-0.25,0.25-0.25,0.65,0,0.9c0.25,0.25,0.65,0.25,0.9,0l6.07-6.07c0.19-0.19,0.51-0.19,0.7,0l6.07,6.07c0.12,0.12,0.29,0.19,0.45,0.19c0.16,0,0.32-0.06,0.45-0.19C19.56,11.99,19.56,11.59,19.31,11.34zM12.3,7.34c-0.16-0.16-0.43-0.16-0.59,0l-5.12,5.12c-0.08,0.08-0.12,0.19-0.12,0.3v5.57c0,0.5,0.4,0.92,0.9,0.92h9.26c0.5,0,0.92-0.42,0.92-0.92v-5.57c0-0.11-0.05-0.22-0.13-0.3L12.3,7.34zM14.8,15.06c-0.04,0.04-1.88,1.87-2.56,2.55c-0.14,0.14-0.36,0.14-0.49,0c-0.68-0.67-2.52-2.51-2.56-2.55c-0.78-0.78-0.78-2.03,0-2.81c0.77-0.77,2.03-0.78,2.8-0.01c0.78-0.77,2.03-0.77,2.8,0.01C15.58,13.02,15.58,14.28,14.8,15.06z",
+        "type": "button",
+        "title": {
+          "en-US": "Comfort",
+          "ru-RU": "Comfort"
+        },
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h24v24V0M5.572,6.357V6.286V2.714C5.572,2.286,5.286,2,4.857,2S4.143,2.286,4.143,2.714v3.571v0.071C2.929,6.643,2,7.786,2,9.143c0,1.357,0.929,2.429,2.143,2.786v9.357C4.143,21.714,4.429,22,4.857,22s0.714-0.286,0.714-0.714v-9.357c1.214-0.286,2.143-1.429,2.143-2.786C7.714,7.786,6.786,6.714,5.572,6.357zM4.857,10.571c-0.786,0-1.429-0.643-1.429-1.429s0.643-1.429,1.429-1.429s1.429,0.643,1.429,1.429S5.643,10.571,4.857,10.571zM19.857,6.357V6.286V2.714C19.857,2.286,19.571,2,19.143,2c-0.429,0-0.714,0.286-0.714,0.714v3.571v0.071c-1.214,0.286-2.143,1.429-2.143,2.786c0,1.357,0.929,2.429,2.143,2.786v9.357c0,0.429,0.286,0.714,0.714,0.714c0.429,0,0.714-0.286,0.714-0.714v-9.357C21.071,11.571,22,10.5,22,9.143C22,7.786,21.071,6.714,19.857,6.357zM19.143,10.571c-0.786,0-1.429-0.643-1.429-1.429s0.643-1.429,1.429-1.429s1.429,0.643,1.429,1.429S19.928,10.571,19.143,10.571zM12.714,12.071V2.714C12.714,2.286,12.429,2,12,2s-0.714,0.286-0.714,0.714v9.357c-1.214,0.286-2.143,1.429-2.143,2.786c0,1.357,0.929,2.429,2.143,2.786v0.071v3.571C11.286,21.714,11.571,22,12,22s0.714-0.286,0.714-0.714v-3.571v-0.071c1.214-0.286,2.143-1.429,2.143-2.786C14.857,13.5,13.929,12.429,12.714,12.071zM12,16.286c-0.786,0-1.429-0.643-1.429-1.429c0-0.786,0.643-1.428,1.429-1.428s1.429,0.643,1.429,1.428C13.429,15.643,12.786,16.286,12,16.286z",
+        "type": "button",
+        "title": {
+          "en-US": "Manual",
+          "ru-RU": "Manual"
+        },
+        "action": {
+          "program": [
+            7
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h24v24V0M7.76273 11.8814C7.76273 13.4727 6.4727 14.7627 4.88136 14.7627C3.29003 14.7627 2 13.4727 2 11.8814C2 10.29 3.29003 9 4.88136 9C6.4727 9 7.76273 10.29 7.76273 11.8814ZM14.8814 11.8814C14.8814 13.4727 13.5913 14.7627 12 14.7627C10.4087 14.7627 9.11863 13.4727 9.11863 11.8814C9.11863 10.29 10.4087 9 12 9C13.5913 9 14.8814 10.29 14.8814 11.8814ZM22 11.8814C22 13.4727 20.71 14.7627 19.1186 14.7627C17.5273 14.7627 16.2373 13.4727 16.2373 11.8814C16.2373 10.29 17.5273 9 19.1186 9C20.71 9 22 10.29 22 11.8814Z",
+        "type": "button",
+        "title": {
+          "en-US": "More",
+          "ru-RU": "Ещё"
+        },
+        "layout": "program",
+        "position": 0,
+        "condition": [
+          {
+            "or": [
+              {
+                "program": [
+                  1
+                ]
+              },
+              {
+                "program": [
+                  8
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "shape": "roundrect",
+        "feature": "schedule",
+        "position": 1
+      },
+      {
+        "type": "button",
+        "shape": "roundrect",
+        "aspect": 1.36,
+        "feature": "child_lock",
+        "position": 1
+      }
+    ],
+    "middle": [
+      {
+        "info": [
+          {
+            "type": "info",
+            "params": {
+              "params": {
+                "params": {
+                  "params": {
+                    "params": {
+                      "params": {
+                        "params": {
+                          "params": {
+                            "params": {
+                              "params": {
+                                "params": {
+                                  "params": {}
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "feature": "temperature"
+          },
+          {
+            "type": "info",
+            "params": {
+              "params": {}
+            },
+            "suffix": "suffix.percent",
+            "feature": "current_power"
+          },
+          {
+            "type": "info",
+            "feature": "program"
+          }
+        ],
+        "type": "slider",
+        "colors": [
+          {
+            "max": 49.9999,
+            "min": 0,
+            "color": "condition/normal"
+          }
+        ],
+        "points": {
+          "5": {
+            "label": "5"
+          },
+          "10": {
+            "label": "10"
+          },
+          "15": {
+            "label": "15"
+          },
+          "20": {
+            "label": "20"
+          },
+          "25": {
+            "label": "25"
+          },
+          "30": {
+            "label": "30"
+          }
+        },
+        "feature": "temperature",
+        "position": 0,
+        "visibility": [
+          {
+            "or": [
+              {
+                "program": [
+                  0
+                ]
+              },
+              {
+                "program": [
+                  1
+                ]
+              },
+              {
+                "program": [
+                  2
+                ]
+              },
+              {
+                "program": [
+                  7
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "info": [
+          {
+            "type": "info",
+            "params": {
+              "params": {
+                "params": {
+                  "params": {
+                    "params": {
+                      "params": {
+                        "params": {
+                          "params": {
+                            "params": {
+                              "params": {
+                                "params": {
+                                  "params": {}
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "feature": "speed"
+          },
+          {
+            "type": "info",
+            "params": {
+              "params": {}
+            },
+            "suffix": "suffix.percent",
+            "feature": "current_power"
+          },
+          {
+            "type": "info",
+            "feature": "program"
+          }
+        ],
+        "type": "slider",
+        "colors": [
+          {
+            "max": 49.9999,
+            "min": 0,
+            "color": "condition/normal"
+          }
+        ],
+        "points": {
+          "20": {
+            "label": "20"
+          },
+          "30": {
+            "label": "30"
+          },
+          "40": {
+            "label": "40"
+          },
+          "50": {
+            "label": "50"
+          },
+          "60": {
+            "label": "60"
+          },
+          "70": {
+            "label": "70"
+          },
+          "80": {
+            "label": "80"
+          },
+          "90": {
+            "label": "90"
+          },
+          "100": {
+            "label": "100"
+          }
+        },
+        "feature": "speed",
+        "position": 0,
+        "visibility": [
+          {
+            "program": [
+              8
+            ]
+          }
+        ],
+        "formatRules": [
+          {
+            "max": 100,
+            "min": 0,
+            "formatValue": [
+              {
+                "op": "add",
+                "value": 0
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "program": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Modes",
+          "ru-RU": "Режимы"
+        },
+        "position": 0
+      },
+      {
+        "type": "separator",
+        "position": 1
+      },
+      {
+        "icon": "M0,0h24v24V0M15.883,17.281c-1.619,1.765-4.017,2.804-6.655,2.557c-3.802-0.356-6.876-3.461-7.198-7.266c-0.34-4.03,2.31-7.493,5.974-8.434c0.318-0.081,0.566,0.269,0.401,0.553c-0.679,1.173-1.07,2.532-1.07,3.985c0,4.418,3.581,7.998,7.998,7.998c0.087,0,0.174-0.002,0.26-0.006C15.915,16.655,16.101,17.042,15.883,17.281zM11.067,6.657l-0.352,1.167c-0.044,0.148,0.122,0.269,0.249,0.181l1.001-0.695l1.002,0.695c0.126,0.087,0.294-0.033,0.248-0.181l-0.352-1.167l0.971-0.738c0.122-0.093,0.06-0.289-0.095-0.293L12.521,5.6L12.12,4.449c-0.051-0.146-0.257-0.146-0.308,0L11.411,5.6l-1.219,0.027c-0.154,0.003-0.218,0.199-0.095,0.293L11.067,6.657zM21.16,14.692l-1.171-0.025l-0.385-1.106c-0.056-0.16-0.283-0.16-0.339,0l-0.386,1.106l-1.171,0.025c-0.169,0.004-0.24,0.22-0.104,0.322l0.933,0.709l-0.337,1.121c-0.049,0.162,0.135,0.296,0.274,0.199l0.962-0.668l0.962,0.668c0.139,0.097,0.323-0.036,0.274-0.199l-0.338-1.121l0.933-0.709C21.401,14.912,21.331,14.696,21.16,14.692zM21.795,7.24l-1.758-0.038l-0.579-1.661c-0.066-0.186-0.329-0.186-0.396,0l-0.579,1.661L16.724,7.24c-0.197,0.004-0.279,0.256-0.122,0.375l1.401,1.064l-0.508,1.685c-0.057,0.189,0.156,0.344,0.319,0.231l1.445-1.003l1.445,1.003c0.163,0.113,0.376-0.042,0.319-0.231l-0.508-1.685l1.401-1.064C22.075,7.495,21.993,7.244,21.795,7.24z",
+        "type": "button",
+        "title": {
+          "en-US": "Night",
+          "ru-RU": "Ночной"
+        },
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 2,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "position": 3
+      },
+      {
+        "icon": "M0,0h200v200V0M100.024 182.8C86.4013 182.8 73.5747 178.795 62.7501 171.852L70.8052 163.542C79.3883 168.581 89.3722 171.477 100.024 171.477V159.762C92.5597 159.762 85.5071 157.979 79.2601 154.82L86.9475 146.889C73.6754 141.656 64.2577 128.7 64.2577 113.592C64.2577 111.746 64.3981 109.93 64.6712 108.154L53.9366 110.809C54.28 104.956 55.7097 99.3132 58.2015 94.0062L47.5997 89.0273C43.9757 96.7437 42.1401 105.006 42.1401 113.592V113.73L3.3629 123.328L2.35429 126.413C-1.97158 139.63 -0.283955 154.457 6.98228 167.096C14.2485 179.732 26.2129 188.65 39.8101 191.563L42.9839 192.242L54.4249 180.443C67.7947 189.567 83.6562 194.516 100.024 194.516C105.604 194.516 111.182 193.941 116.6 192.813L114.21 181.345C109.576 182.309 104.805 182.8 100.024 182.8ZM124.099 113.591C124.099 126.882 113.325 137.657 100.033 137.657C86.7407 137.657 75.965 126.882 75.965 113.591C75.965 100.299 86.7407 89.5228 100.033 89.5228C113.325 89.5228 124.099 100.299 124.099 113.591ZM68.0834 52.1072L71.3061 63.3453C65.9396 66.4108 61.0476 70.3384 56.8545 75.032L65.5856 82.8384C68.2788 79.8232 71.332 77.2079 74.6524 75.0289L77.7011 85.6613C83.8275 80.7494 91.5942 77.8091 100.037 77.8091C108.483 77.8091 116.249 80.7494 122.376 85.6613L139.783 24.9267L137.612 22.5173C128.311 12.181 114.614 6.2499 100.037 6.2499C85.4602 6.2499 71.7654 12.181 62.4652 22.5173L60.2938 24.9267L64.812 40.7012C60.2038 42.9351 55.7833 45.6222 51.6055 48.7487C38.0099 58.9172 27.759 73.4008 22.7419 89.5309L33.9297 93.0099C39.58 74.8367 52.0709 60.3896 68.0834 52.1072ZM197.685 126.678L196.686 123.59L180.719 119.59C180.864 117.607 180.946 115.608 180.946 113.594C180.946 90.4537 171.003 68.3727 153.674 53.0147L145.904 61.7809C160.727 74.9156 169.232 93.803 169.232 113.594C169.232 114.631 169.2 115.666 169.153 116.697L157.899 113.877C157.904 113.784 157.907 113.687 157.907 113.594C157.907 100.177 153.21 87.0998 144.687 76.7711L135.65 84.225C141.882 91.7766 145.537 101.171 146.103 110.926L135.42 108.247C135.681 109.993 135.818 111.778 135.818 113.594C135.818 128.735 126.356 141.716 113.038 146.923L156.877 192.395L160.051 191.723C173.655 188.85 185.647 179.962 192.946 167.346C200.247 154.73 201.973 139.907 197.685 126.678Z",
+        "type": "button",
+        "title": {
+          "en-US": "Stand by",
+          "ru-RU": "Дежурный"
+        },
+        "action": {
+          "program": [
+            8
+          ]
+        },
+        "position": 4,
+        "condition": [
+          {
+            "program": [
+              8
+            ]
+          }
+        ]
+      }
+    ],
+    "schedule": [
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            0
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            7
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            8
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              8
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 30,
+          "min": 5,
+          "step": 1,
+          "round": 1,
+          "default": 25,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Temp",
+          "ru-RU": "Температура"
+        },
+        "feature": "temperature",
+        "position": 3,
+        "visibility": [
+          {
+            "or": [
+              {
+                "program": [
+                  1
+                ]
+              },
+              {
+                "program": [
+                  2
+                ]
+              },
+              {
+                "program": [
+                  7
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 100,
+          "min": 20,
+          "step": 1,
+          "round": 1,
+          "default": 20,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Speed",
+          "ru-RU": "Скорость вентилятора"
+        },
+        "feature": "speed",
+        "position": 4,
+        "visibility": [
+          {
+            "or": [
+              {
+                "program": [
+                  7
+                ]
+              },
+              {
+                "program": [
+                  8
+                ]
+              }
+            ]
+          }
+        ],
+        "formatRules": [
+          {
+            "max": 100,
+            "min": 0,
+            "formatValue": [
+              {
+                "op": "add",
+                "value": 0
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "switch",
+        "title": {
+          "en-US": "Display auto-off",
+          "ru-RU": "Автоотключение дисплея"
+        },
+        "feature": "backlight",
+        "position": 0
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 100,
+          "min": 20,
+          "step": 1,
+          "round": 1,
+          "default": 20,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Manual mode speed",
+          "ru-RU": "Скорость вращения вентилятора в режиме Ручной"
+        },
+        "position": 1,
+        "program_data": {
+          "field": "manual_speed",
+          "program": [
+            0
+          ]
+        }
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 100,
+          "min": 20,
+          "step": 20,
+          "round": 1,
+          "default": 100,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Display brightness",
+          "ru-RU": "Яркость дисплея"
+        },
+        "position": 2,
+        "program_data": {
+          "field": "display_brightness",
+          "program": [
+            0
+          ]
+        }
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 6,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Hysteresis setting",
+          "ru-RU": "Настройка гистерезиса"
+        },
+        "position": 3,
+        "program_data": {
+          "field": "hysteresis",
+          "program": [
+            0
+          ]
+        },
+        "value_strings": {
+          "0": "2",
+          "1": "3",
+          "2": "4",
+          "3": "5",
+          "4": "6",
+          "5": "7",
+          "6": "8"
+        }
+      }
+    ],
+    "middle_info": [
+      {
+        "type": "error",
+        "position": 0
+      }
+    ]
+  },
+  "limits": {
+    "speed": {
+      "max": 100,
+      "min": 20,
+      "step": 1,
+      "round": 1,
+      "default": 20,
+      "round_alt": 1
+    },
+    "backlight": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "child_lock": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "temperature": {
+      "max": 30,
+      "min": 5,
+      "step": 0.5,
+      "round": 1,
+      "default": 25,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "voice": {
+      "sber": {
+        "info": {
+          "model": "SmartControl Pro",
+          "manufacturer": "rusclimate"
+        },
+        "type": "hvac_underfloor_heating",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program_data": {
+                "field": "on_switch",
+                "value": 1,
+                "program": [
+                  0
+                ]
+              }
+            },
+            "instance": "on_off",
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "slider",
+            "limit": {
+              "max": 30,
+              "min": 5,
+              "step": 1,
+              "round": 1,
+              "default": 25,
+              "roundAlt": 1
+            },
+            "feature": "temperature",
+            "instance": "hvac_temp_set",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "auto",
+                "action": {
+                  "program": [
+                    2
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    2
+                  ]
+                }
+              },
+              {
+                "value": "eco",
+                "action": {
+                  "program": [
+                    1
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    1
+                  ]
+                }
+              },
+              {
+                "value": "turbo",
+                "action": {
+                  "program": [
+                    8
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    8
+                  ]
+                }
+              },
+              {
+                "value": "heating",
+                "action": {
+                  "program": [
+                    7
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    7
+                  ]
+                }
+              }
+            ],
+            "instance": "hvac_thermostat_mode",
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "feature": "current_humidity",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "3",
+                "action": {
+                  "speed": 30
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "speed": 30,
+                      "source": "state"
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "4",
+                "action": {
+                  "speed": 40
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "speed": 40,
+                      "source": "state"
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "5",
+                "action": {
+                  "speed": 50
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "speed": 50,
+                      "source": "state"
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "6",
+                "action": {
+                  "speed": 60
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "speed": 60,
+                      "source": "state"
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "7",
+                "action": {
+                  "speed": 70
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "speed": 70,
+                      "source": "state"
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "8",
+                "action": {
+                  "speed": 80
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "speed": 80,
+                      "source": "state"
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "9",
+                "action": {
+                  "speed": 90
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "speed": 90,
+                      "source": "state"
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "10",
+                "action": {
+                  "speed": 100
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "speed": 100,
+                      "source": "state"
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "2",
+                "action": {
+                  "speed": 20
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "speed": 20,
+                      "source": "state"
+                    }
+                  ]
+                }
+              }
+            ],
+            "instance": "hvac_heating_rate",
+            "retrievable": true
+          }
+        ]
+      },
+      "alice": {
+        "info": {
+          "model": "SmartControl Pro",
+          "manufacturer": "rusclimate"
+        },
+        "type": "devices.types.thermostat",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program_data": {
+                "field": "on_switch",
+                "value": 1,
+                "program": [
+                  0
+                ]
+              }
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "feature": "current_humidity",
+            "instance": "temperature",
+            "realtime": true,
+            "retrievable": true
+          },
+          {
+            "type": "slider",
+            "limit": {
+              "max": 30,
+              "min": 5,
+              "step": 1,
+              "round": 1,
+              "default": 25,
+              "roundAlt": 1
+            },
+            "feature": "temperature",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "normal",
+                "action": {
+                  "program": [
+                    7
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    7
+                  ]
+                }
+              },
+              {
+                "value": "auto",
+                "action": {
+                  "program": [
+                    2
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    2
+                  ]
+                }
+              },
+              {
+                "value": "eco",
+                "action": {
+                  "program": [
+                    1
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    1
+                  ]
+                }
+              },
+              {
+                "value": "fast",
+                "action": {
+                  "program": [
+                    8
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    8
+                  ]
+                }
+              }
+            ],
+            "instance": "heat",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "min",
+                "action": {
+                  "speed": 20
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "or": [
+                        {
+                          "speed": 20,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 21,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 22,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 23,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 24,
+                          "source": "state"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "low",
+                "action": {
+                  "speed": 30
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "or": [
+                        {
+                          "speed": 25,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 26,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 27,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 28,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 29,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 30,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 31,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 32,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 33,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 34,
+                          "source": "state"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "slow",
+                "action": {
+                  "speed": 40
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "or": [
+                        {
+                          "speed": 35,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 36,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 37,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 38,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 39,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 40,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 41,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 42,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 43,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 44,
+                          "source": "state"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "normal",
+                "action": {
+                  "speed": 50
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "or": [
+                        {
+                          "speed": 45,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 46,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 47,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 48,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 49,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 50,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 51,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 52,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 53,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 54,
+                          "source": "state"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "medium",
+                "action": {
+                  "speed": 60
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "or": [
+                        {
+                          "speed": 55,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 56,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 57,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 58,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 59,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 60,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 61,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 62,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 63,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 64,
+                          "source": "state"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "fast",
+                "action": {
+                  "speed": 70
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "or": [
+                        {
+                          "speed": 65,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 66,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 67,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 68,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 69,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 70,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 71,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 72,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 73,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 74,
+                          "source": "state"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "high",
+                "action": {
+                  "speed": 80
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "or": [
+                        {
+                          "speed": 75,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 76,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 77,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 78,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 79,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 80,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 81,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 82,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 83,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 84,
+                          "source": "state"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "turbo",
+                "action": {
+                  "speed": 90
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "or": [
+                        {
+                          "speed": 85,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 86,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 87,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 88,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 89,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 90,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 91,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 92,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 93,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 94,
+                          "source": "state"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "max",
+                "action": {
+                  "speed": 100
+                },
+                "condition": {
+                  "and": [
+                    {
+                      "source": "state",
+                      "program": [
+                        8
+                      ]
+                    },
+                    {
+                      "or": [
+                        {
+                          "speed": 95,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 96,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 97,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 98,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 99,
+                          "source": "state"
+                        },
+                        {
+                          "speed": 100,
+                          "source": "state"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "instance": "fan_speed",
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "hidden": false,
+    "server": "Hommyn",
+    "realtime": true,
+    "fabric_OTA": true,
+    "fastSwitch": {
+      "on": {
+        "program": [
+          2
+        ]
+      },
+      "off": {
+        "program": [
+          0
+        ]
+      }
+    },
+    "hotspot_ssid": "SmartControl Pro",
+    "program_data": {
+      "0": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "on_switch",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 100,
+          "min": 20,
+          "name": "display_brightness",
+          "size": 1,
+          "step": 20,
+          "round": 1,
+          "default": 20,
+          "roundAlt": 1
+        },
+        {
+          "max": 20,
+          "min": 0,
+          "name": "temp_calibration",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 5,
+          "min": 0,
+          "name": "hysteresis",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 5,
+          "min": 0,
+          "name": "resistance",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 4,
+          "min": 0,
+          "name": "floor_mode",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 900,
+          "min": 0,
+          "name": "eco_temp",
+          "size": 2,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 900,
+          "min": 0,
+          "name": "comfort_temp",
+          "size": 2,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 900,
+          "min": 0,
+          "name": "turbo_temp",
+          "size": 2,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 90,
+          "min": 0,
+          "name": "vacation_temp",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 90,
+          "min": 0,
+          "name": "anti_frost_temp",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 3,
+          "min": 0,
+          "name": "temp_control",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 90,
+          "min": 0,
+          "name": "min_temp_out_sens",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 90,
+          "min": 0,
+          "name": "max_temp_out_sens",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 5,
+          "roundAlt": 1
+        },
+        {
+          "max": 45,
+          "min": 0,
+          "name": "min_temp_in_sens",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 45,
+          "min": 0,
+          "name": "max_temp_in_sens",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 5,
+          "roundAlt": 1
+        },
+        {
+          "max": 100,
+          "min": 0,
+          "name": "manual_speed",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 20,
+          "roundAlt": 1
+        }
+      ],
+      "1": [
+        {
+          "max": 3,
+          "min": 0,
+          "name": "monday",
+          "size": 24,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        }
+      ],
+      "2": [
+        {
+          "max": 3,
+          "min": 0,
+          "name": "tuesday",
+          "size": 24,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        }
+      ],
+      "3": [
+        {
+          "max": 3,
+          "min": 0,
+          "name": "wednesday",
+          "size": 24,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        }
+      ],
+      "4": [
+        {
+          "max": 3,
+          "min": 0,
+          "name": "thursday",
+          "size": 24,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        }
+      ],
+      "5": [
+        {
+          "max": 3,
+          "min": 0,
+          "name": "friday",
+          "size": 24,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        }
+      ],
+      "6": [
+        {
+          "max": 3,
+          "min": 0,
+          "name": "saturday",
+          "size": 24,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        }
+      ],
+      "7": [
+        {
+          "max": 3,
+          "min": 0,
+          "name": "sunday",
+          "size": 24,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        }
+      ],
+      "8": [
+        {
+          "max": 4294967295,
+          "min": 0,
+          "name": "time_start",
+          "size": 4,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 4294967295,
+          "min": 0,
+          "name": "time_end",
+          "size": 4,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "9": [
+        {
+          "max": 3600,
+          "min": 50,
+          "name": "cable_power",
+          "size": 2,
+          "step": 25,
+          "round": 1,
+          "default": 50,
+          "roundAlt": 1
+        }
+      ],
+      "66": [
+        {
+          "max": 1,
+          "min": 1,
+          "name": "current_preset",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "defaultProgram": [
+      1
+    ],
+    "swapEdgeSliders": true,
+    "gridScheduleConfig": {
+      "setup": [
+        {
+          "color": "condition/very_good",
+          "program": [
+            2
+          ]
+        },
+        {
+          "color": "device/primary",
+          "program": [
+            1
+          ],
+          "isDefault": true
+        },
+        {
+          "color": "schedule/grid/gray",
+          "program": [
+            4
+          ]
+        },
+        {
+          "color": "condition/bad",
+          "program": [
+            3
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "id": 1,
+          "setup": [],
+          "title": "schedule.1",
+          "editable": true,
+          "settings": [
+            {
+              "days": 1,
+              "program_data.name": "monday",
+              "program_data.program": [
+                1
+              ]
+            },
+            {
+              "days": 2,
+              "program_data.name": "tuesday",
+              "program_data.program": [
+                2
+              ]
+            },
+            {
+              "days": 4,
+              "program_data.name": "wednesday",
+              "program_data.program": [
+                3
+              ]
+            },
+            {
+              "days": 8,
+              "program_data.name": "thursday",
+              "program_data.program": [
+                4
+              ]
+            },
+            {
+              "days": 16,
+              "program_data.name": "friday",
+              "program_data.program": [
+                5
+              ]
+            },
+            {
+              "days": 32,
+              "program_data.name": "saturday",
+              "program_data.program": [
+                6
+              ]
+            },
+            {
+              "days": 64,
+              "program_data.name": "sunday",
+              "program_data.program": [
+                7
+              ]
+            }
+          ],
+          "shortTitle": "schedule.short.1"
+        }
+      ],
+      "program_data.name": "current_preset",
+      "program_data.program": [
+        66
+      ]
+    },
+    "excludeScheduleFeatures": [
+      "backlight",
+      "current_temperature",
+      "child_lock"
+    ]
+  },
+  "vendor": "rusclimate",
+  "features": [
+    "program",
+    "temperature",
+    "current_temperature",
+    "demo",
+    "child_lock",
+    "backlight",
+    "schedule",
+    "speed",
+    "current_humidity",
+    "current_power"
+  ],
+  "messages": {
+    "diag": {
+      "en-US": "Proceed to service menu of the device: switch the device on, press and hold its encoder for 7 sec. The display will show Set.\nRotate encoder to F6. Press the encoder.\nRotate encoder to Res. Press the encoder.",
+      "ru-RU": "Перейдите в сервисное меню: выключите прибор, зажмите кнопку энкодера на 7 сек. На экране появится Set.\nПерейдите энкодером до F6, нажмите энкодер.\nПерейдите энкодером до Res, нажмите энкодер."
+    },
+    "pair": {
+      "en-US": "Proceed to service menu of the device: switch the device on, press and hold its encoder for 7 sec. The display will show Set.\nRotate encoder to F6. Press the encoder.\nRotate encoder to Con. Press the encoder. Con will blink.",
+      "ru-RU": "Перейдите в сервисное меню: выключите прибор, зажмите кнопку энкодера на 7 сек. На экране появится Set.\nПерейдите энкодером до F6, нажмите энкодер.\nПерейдите энкодером до Сon, нажмите энкодер. Con будет моргать."
+    },
+    "reset": {
+      "en-US": "Proceed to service menu of the device: switch the device on, press and hold its encoder for 7 sec. The display will show Set.\nRotate encoder to F6. Press the encoder.\nRotate encoder to Res. Press the encoder.",
+      "ru-RU": "Перейдите в сервисное меню: выключите прибор, зажмите кнопку энкодера на 7 сек. На экране появится Set.\nПерейдите энкодером до F6, нажмите энкодер.\nПерейдите энкодером до Res, нажмите энкодер."
+    },
+    "error.1": {
+      "en-US": "Air temperature sensor failure",
+      "ru-RU": "Сбой датчика температуры воздуха"
+    },
+    "suffix.celsius": {
+      "en-US": "°C",
+      "ru-RU": "°C"
+    },
+    "suffix.percent": {
+      "en-US": "%",
+      "ru-RU": "%"
+    },
+    "attr.temperature": {
+      "en-US": "Target temp",
+      "ru-RU": "Целевая t°"
+    },
+    "alert.bss.message": {
+      "en-US": "Attention! When BSS and Economy Mode work together, energy savings may be less.",
+      "ru-RU": "Внимание! При совместной работе BSS и режима Экономии экономия электроэнергии может быть меньше."
+    },
+    "alert.eco.message": {
+      "en-US": "Attention! You are going to switch off Economy mode.",
+      "ru-RU": "Внимание! Вы выйдете из режима экономии."
+    },
+    "attr.current_power": {
+      "en-US": "current speed",
+      "ru-RU": "Текущая скорость"
+    },
+    "alert.eco_help.title": {
+      "en-US": "Mode information",
+      "ru-RU": "Информация о режиме"
+    },
+    "attr.current_humidity": {
+      "ru-RU": "Температура воздуха"
+    },
+    "alert.eco_help.message": {
+      "en-US": "Economy mode provides heating of water at the most optimal time for this. Heating is done at night when it is cheapest, and in the evening. But you can use hot water at any convenient time thanks to effective thermal insulation, the water inside the water heater at room temperature cools down by 5-8 degrees per day on average.\n\nAttention! When BSS and Economy Mode work together, energy savings may be less.",
+      "ru-RU": "Режим Экономии предусматривает нагрев воды в самое оптимальное для этого время. Нагрев осуществляется в ночное время, когда это дешевле всего, и в вечерние часы. При этом использовать горячую воду вы можете в любое удобное время – благодаря эффективной теплоизоляции вода внутри водонагревателя при комнатной температуре остывает в среднем на 5-8 градусов в сутки.\n\nВнимание! При совместной работе BSS и режима Экономии экономия электроэнергии может быть меньше."
+    },
+    "attr.current_temperature": {
+      "en-US": "Floor temp",
+      "ru-RU": "Температура пола"
+    },
+    "alert.eco_schedule.confirm": {
+      "en-US": "Schedule",
+      "ru-RU": "Расписание"
+    },
+    "alert.eco_schedule.message": {
+      "en-US": "Please activate one or two periods of saving water heating in the schedules.",
+      "ru-RU": "Пожалуйста, активируйте один или два периода экономного нагрева воды в расписаниях."
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off",
+        "ru-RU": "Выкл"
+      },
+      "hidden": true
+    },
+    {
+      "icon": "M7.33444 8.54962C7.33444 7.09711 7.7262 5.73816 8.4048 4.56505C8.5692 4.28128 8.32129 3.93061 8.00341 4.01194C4.33934 4.95288 1.68922 8.41582 2.0294 12.4463C2.35121 16.2507 5.42588 19.356 9.22769 19.7119C11.8656 19.959 14.2634 18.9201 15.8829 17.1549C16.1015 16.9162 15.9148 16.5288 15.5917 16.5424C15.506 16.5463 15.419 16.5481 15.332 16.5481C10.915 16.5481 7.33444 12.9675 7.33444 8.54962ZM12.1199 4.32295L12.5208 5.4742L13.7399 5.50087C13.8947 5.50437 13.9576 5.70025 13.8352 5.79339L12.8641 6.53101L13.2161 7.69801C13.2615 7.84579 13.0941 7.96647 12.9677 7.87902L11.9655 7.18381L10.9643 7.87902C10.8375 7.96691 10.6718 7.84579 10.7155 7.69801L11.0675 6.53101L10.0963 5.79339C9.97392 5.70025 10.0378 5.50437 10.1917 5.50087L11.4107 5.4742L11.8121 4.32295C11.8628 4.17734 12.0687 4.17734 12.1199 4.32295ZM19.6039 13.4351L19.9891 14.5413L21.1605 14.5662C21.3306 14.5702 21.4006 14.7857 21.2655 14.8885L20.3324 15.5972L20.6699 16.7183C20.7185 16.8805 20.5348 17.0143 20.3958 16.9168L19.4334 16.2492L18.4715 16.9168C18.3324 17.0143 18.1484 16.8805 18.1978 16.7183L18.5353 15.5972L17.6027 14.8885C17.4671 14.7862 17.5375 14.5697 17.7068 14.5662L18.8781 14.5413L19.2646 13.4351C19.3206 13.2751 19.5475 13.2751 19.6039 13.4351ZM19.4579 5.41533L20.0372 7.07641L21.7954 7.11401C21.993 7.11838 22.0748 7.36936 21.9169 7.48916L20.516 8.55341L21.0241 10.2381C21.0813 10.4274 20.8684 10.5826 20.7053 10.4694L19.2598 9.46637L17.8147 10.4694C17.6521 10.5826 17.4387 10.427 17.496 10.2381L18.0036 8.55341L16.6023 7.48916C16.4457 7.3698 16.527 7.11795 16.7242 7.11401L18.4828 7.07641L19.0617 5.41533C19.1286 5.22907 19.3923 5.22907 19.4579 5.41533Z",
+      "name": {
+        "en-US": "Night",
+        "ru-RU": "Ночной"
+      },
+      "hidden": false
+    },
+    {
+      "icon": "M0,0h24v24V0M19.31,11.34l-6.07-6.07c-0.69-0.69-1.8-0.69-2.49,0l-6.07,6.07c-0.25,0.25-0.25,0.65,0,0.9c0.25,0.25,0.65,0.25,0.9,0l6.07-6.07c0.19-0.19,0.51-0.19,0.7,0l6.07,6.07c0.12,0.12,0.29,0.19,0.45,0.19c0.16,0,0.32-0.06,0.45-0.19C19.56,11.99,19.56,11.59,19.31,11.34zM12.3,7.34c-0.16-0.16-0.43-0.16-0.59,0l-5.12,5.12c-0.08,0.08-0.12,0.19-0.12,0.3v5.57c0,0.5,0.4,0.92,0.9,0.92h9.26c0.5,0,0.92-0.42,0.92-0.92v-5.57c0-0.11-0.05-0.22-0.13-0.3L12.3,7.34zM14.8,15.06c-0.04,0.04-1.88,1.87-2.56,2.55c-0.14,0.14-0.36,0.14-0.49,0c-0.68-0.67-2.52-2.51-2.56-2.55c-0.78-0.78-0.78-2.03,0-2.81c0.77-0.77,2.03-0.78,2.8-0.01c0.78-0.77,2.03-0.77,2.8,0.01C15.58,13.02,15.58,14.28,14.8,15.06z",
+      "name": {
+        "en-US": "Comfort",
+        "ru-RU": "Комфорт"
+      },
+      "hidden": false
+    },
+    null,
+    null,
+    null,
+    null,
+    {
+      "icon": "M0,0h24v24V0M5.572,6.357V6.286V2.714C5.572,2.286,5.286,2,4.857,2S4.143,2.286,4.143,2.714v3.571v0.071C2.929,6.643,2,7.786,2,9.143c0,1.357,0.929,2.429,2.143,2.786v9.357C4.143,21.714,4.429,22,4.857,22s0.714-0.286,0.714-0.714v-9.357c1.214-0.286,2.143-1.429,2.143-2.786C7.714,7.786,6.786,6.714,5.572,6.357zM4.857,10.571c-0.786,0-1.429-0.643-1.429-1.429s0.643-1.429,1.429-1.429s1.429,0.643,1.429,1.429S5.643,10.571,4.857,10.571zM19.857,6.357V6.286V2.714C19.857,2.286,19.571,2,19.143,2c-0.429,0-0.714,0.286-0.714,0.714v3.571v0.071c-1.214,0.286-2.143,1.429-2.143,2.786c0,1.357,0.929,2.429,2.143,2.786v9.357c0,0.429,0.286,0.714,0.714,0.714c0.429,0,0.714-0.286,0.714-0.714v-9.357C21.071,11.571,22,10.5,22,9.143C22,7.786,21.071,6.714,19.857,6.357zM19.143,10.571c-0.786,0-1.429-0.643-1.429-1.429s0.643-1.429,1.429-1.429s1.429,0.643,1.429,1.429S19.928,10.571,19.143,10.571zM12.714,12.071V2.714C12.714,2.286,12.429,2,12,2s-0.714,0.286-0.714,0.714v9.357c-1.214,0.286-2.143,1.429-2.143,2.786c0,1.357,0.929,2.429,2.143,2.786v0.071v3.571C11.286,21.714,11.571,22,12,22s0.714-0.286,0.714-0.714v-3.571v-0.071c1.214-0.286,2.143-1.429,2.143-2.786C14.857,13.5,13.929,12.429,12.714,12.071zM12,16.286c-0.786,0-1.429-0.643-1.429-1.429c0-0.786,0.643-1.428,1.429-1.428s1.429,0.643,1.429,1.428C13.429,15.643,12.786,16.286,12,16.286z",
+      "name": {
+        "en-US": "Manual",
+        "ru-RU": "Ручной"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Stand by",
+        "ru-RU": "Дежурный"
+      },
+      "hidden": false
+    }
+  ],
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1772116348,
+  "temperature_units": "celsius"
+}

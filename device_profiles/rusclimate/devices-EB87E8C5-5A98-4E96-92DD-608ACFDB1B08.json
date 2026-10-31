@@ -1,0 +1,756 @@
+{
+  "id": "eb87e8c5-5a98-4e96-92dd-608acfdb1b08",
+  "name": "Aurus F",
+  "type": 80,
+  "class": "boiler",
+  "image": {
+    "60": "https://images.cdn.rusklimat.ru/6/9f/a9f33-729b-43e1-9bc9-dba9460d6457/60.webp",
+    "120": "https://images.cdn.rusklimat.ru/6/9f/a9f33-729b-43e1-9bc9-dba9460d6457/120.webp",
+    "240": "https://images.cdn.rusklimat.ru/6/9f/a9f33-729b-43e1-9bc9-dba9460d6457/240.webp",
+    "480": "https://images.cdn.rusklimat.ru/6/9f/a9f33-729b-43e1-9bc9-dba9460d6457/480.webp",
+    "600": "https://images.cdn.rusklimat.ru/6/9f/a9f33-729b-43e1-9bc9-dba9460d6457/600.webp",
+    "900": "https://images.cdn.rusklimat.ru/6/9f/a9f33-729b-43e1-9bc9-dba9460d6457/900.webp",
+    "1200": "https://images.cdn.rusklimat.ru/6/9f/a9f33-729b-43e1-9bc9-dba9460d6457/1200.webp",
+    "1800": "https://images.cdn.rusklimat.ru/6/9f/a9f33-729b-43e1-9bc9-dba9460d6457/1800.webp",
+    "2400": "https://images.cdn.rusklimat.ru/6/9f/a9f33-729b-43e1-9bc9-dba9460d6457/2400.webp",
+    "id": "69fa9f33-729b-43e1-9bc9-dba9460d6457",
+    "original": "https://images.cdn.rusklimat.ru/6/9f/a9f33-729b-43e1-9bc9-dba9460d6457/original.webp"
+  },
+  "layout": {
+    "bottom": [
+      {
+        "icon": "M0,0h24v24V0M6.6,13.5h2v0.7H5.7V9.8h0.9V13.5zM12.6,12.1c0,0.4-0.1,0.8-0.2,1.2c-0.2,0.3-0.4,0.6-0.7,0.8c-0.3,0.2-0.6,0.3-1,0.3c-0.4,0-0.7-0.1-1-0.3c-0.3-0.2-0.5-0.4-0.7-0.8c-0.2-0.3-0.2-0.7-0.2-1.1v-0.2c0-0.4,0.1-0.8,0.2-1.2c0.2-0.3,0.4-0.6,0.7-0.8c0.3-0.2,0.6-0.3,1-0.3c0.4,0,0.7,0.1,1,0.3c0.3,0.2,0.5,0.4,0.7,0.8c0.2,0.3,0.2,0.7,0.2,1.2V12.1zM11.7,11.9c0-0.5-0.1-0.8-0.3-1.1c-0.2-0.2-0.4-0.4-0.7-0.4c-0.3,0-0.5,0.1-0.7,0.4c-0.2,0.2-0.3,0.6-0.3,1.1v0.2c0,0.5,0.1,0.8,0.3,1.1c0.2,0.3,0.4,0.4,0.7,0.4c0.3,0,0.5-0.1,0.7-0.4c0.2-0.2,0.2-0.6,0.3-1.1V11.9zM16.8,12.9l0.6-3.2h0.9l-1,4.5h-0.9l-0.7-3l-0.7,3H14l-1-4.5h0.9l0.6,3.2l0.7-3.2H16L16.8,12.9z",
+        "type": "button",
+        "shape": "roundrect",
+        "title": {
+          "en-US": "700 W",
+          "ru-RU": "700 Вт"
+        },
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "error": 0,
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h24v24V0M7.8,9.8L9,13l1.1-3.2h1.2v4.5h-0.9V13l0.1-2.1l-1.2,3.3H8.7l-1.2-3.3L7.5,13v1.2H6.6V9.8H7.8zM13.1,14.2h-0.9V9.8h0.9V14.2zM14,14.2V9.8h1.4c0.4,0,0.7,0.1,1.1,0.3c0.3,0.2,0.6,0.4,0.7,0.8c0.2,0.3,0.3,0.7,0.3,1.1v0.2c0,0.4-0.1,0.8-0.3,1.1c-0.2,0.3-0.4,0.6-0.7,0.8c-0.3,0.2-0.7,0.3-1.1,0.3H14zM14.9,10.5v3h0.4c0.4,0,0.6-0.1,0.8-0.4c0.2-0.2,0.3-0.6,0.3-1v-0.2c0-0.5-0.1-0.8-0.3-1c-0.2-0.2-0.5-0.4-0.8-0.4H14.9z",
+        "type": "button",
+        "shape": "roundrect",
+        "title": {
+          "en-US": "1300 W",
+          "ru-RU": "1300 Вт"
+        },
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "error": 0,
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h24v24V0M5.6,10.5H4.3v3.7H3.4v-3.7H2V9.8h3.6V10.5zM9.5,9.8v2.9c0,0.5-0.2,0.9-0.5,1.2c-0.3,0.3-0.7,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.3-0.3-0.5-0.7-0.5-1.1v-3H7v2.9c0,0.3,0.1,0.5,0.2,0.6c0.1,0.1,0.3,0.2,0.6,0.2c0.5,0,0.8-0.3,0.8-0.8v-3H9.5zM12,12.6h-0.7v1.6h-0.9V9.8H12c0.5,0,0.9,0.1,1.2,0.4c0.3,0.2,0.4,0.6,0.4,1c0,0.3-0.1,0.6-0.2,0.8c-0.1,0.2-0.3,0.4-0.6,0.5l1,1.8v0h-1L12,12.6zM11.2,11.9H12c0.2,0,0.4-0.1,0.5-0.2c0.1-0.1,0.2-0.3,0.2-0.5c0-0.2-0.1-0.4-0.2-0.5c-0.1-0.1-0.3-0.2-0.5-0.2h-0.7V11.9zM14.3,14.2V9.8h1.6c0.5,0,1,0.1,1.2,0.3c0.3,0.2,0.4,0.5,0.4,0.9c0,0.2-0.1,0.4-0.2,0.6c-0.1,0.2-0.3,0.3-0.5,0.4c0.2,0.1,0.4,0.2,0.5,0.3c0.1,0.2,0.2,0.4,0.2,0.6c0,0.4-0.1,0.8-0.4,1c-0.3,0.2-0.7,0.3-1.2,0.3H14.3zM15.2,12.3v1.2H16c0.2,0,0.4-0.1,0.5-0.2c0.1-0.1,0.2-0.2,0.2-0.4c0-0.4-0.2-0.6-0.6-0.6H15.2zM15.2,11.6h0.7c0.5,0,0.7-0.2,0.7-0.6c0-0.2-0.1-0.3-0.2-0.4c-0.1-0.1-0.3-0.1-0.6-0.1h-0.6V11.6zM22,12.1c0,0.4-0.1,0.8-0.2,1.2c-0.2,0.3-0.4,0.6-0.7,0.8c-0.3,0.2-0.6,0.3-1,0.3c-0.4,0-0.7-0.1-1-0.3c-0.3-0.2-0.5-0.4-0.7-0.8c-0.2-0.3-0.2-0.7-0.2-1.1v-0.2c0-0.4,0.1-0.8,0.2-1.2c0.2-0.3,0.4-0.6,0.7-0.8c0.3-0.2,0.6-0.3,1-0.3c0.4,0,0.7,0.1,1,0.3c0.3,0.2,0.5,0.4,0.7,0.8c0.2,0.3,0.2,0.7,0.2,1.2V12.1zM21.1,11.9c0-0.5-0.1-0.8-0.3-1.1c-0.2-0.2-0.4-0.4-0.7-0.4c-0.3,0-0.5,0.1-0.7,0.4c-0.2,0.2-0.3,0.6-0.3,1.1v0.2c0,0.5,0.1,0.8,0.3,1.1c0.2,0.3,0.4,0.4,0.7,0.4c0.3,0,0.5-0.1,0.7-0.4c0.2-0.2,0.2-0.6,0.3-1.1V11.9z",
+        "type": "button",
+        "shape": "roundrect",
+        "title": {
+          "en-US": "2000 W",
+          "ru-RU": "2000 Вт"
+        },
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "error": 0,
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h24v24V0M21.451,12.523C21.451,17.749,17.211,22,12,22c-5.211,0-9.451-4.251-9.451-9.477c0-3.817,2.266-7.245,5.772-8.732c0.101-0.043,0.207-0.065,0.316-0.065c0.327,0,0.621,0.195,0.748,0.497c0.084,0.2,0.086,0.421,0.005,0.623C9.308,5.048,9.153,5.206,8.953,5.291c-2.904,1.232-4.781,4.071-4.781,7.232c0,4.328,3.511,7.849,7.827,7.849c4.316,0,7.827-3.521,7.827-7.849c0-3.18-1.891-6.025-4.818-7.248c-0.2-0.084-0.356-0.24-0.438-0.441c-0.083-0.201-0.082-0.422,0.001-0.623c0.127-0.304,0.421-0.501,0.75-0.501c0.107,0,0.212,0.021,0.312,0.063C19.167,5.25,21.451,8.684,21.451,12.523zM12,13.746c0.588,0,1.065-0.479,1.065-1.068v-9.61C13.065,2.479,12.587,2,12,2c-0.587,0-1.065,0.479-1.065,1.068v9.61C10.935,13.267,11.412,13.746,12,13.746z",
+        "type": "button",
+        "shape": "roundrect",
+        "action": {
+          "program_data": {
+            "field": "last_program",
+            "value": 1,
+            "program": [
+              1
+            ]
+          }
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        },
+        "precondition": [
+          {
+            "error": 0,
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h24v24V0M4.4,13c0-0.2-0.1-0.3-0.2-0.4c-0.1-0.1-0.3-0.2-0.6-0.3c-0.3-0.1-0.5-0.2-0.7-0.3c-0.5-0.3-0.7-0.6-0.7-1.1c0-0.2,0.1-0.4,0.2-0.6c0.1-0.2,0.3-0.3,0.6-0.4c0.2-0.1,0.5-0.2,0.8-0.2C4,9.8,4.3,9.9,4.5,10c0.2,0.1,0.4,0.3,0.6,0.5c0.1,0.2,0.2,0.4,0.2,0.7H4.4c0-0.2-0.1-0.3-0.2-0.5c-0.1-0.1-0.3-0.2-0.5-0.2c-0.2,0-0.4,0-0.5,0.1C3.1,10.7,3,10.9,3,11c0,0.1,0.1,0.3,0.2,0.3c0.1,0.1,0.3,0.2,0.6,0.3c0.5,0.1,0.9,0.3,1.1,0.6s0.3,0.5,0.3,0.8c0,0.4-0.1,0.7-0.4,0.9c-0.3,0.2-0.7,0.3-1.1,0.3c-0.3,0-0.6-0.1-0.9-0.2c-0.3-0.1-0.5-0.3-0.6-0.5C2.1,13.3,2,13.1,2,12.8h0.9c0,0.5,0.3,0.7,0.8,0.7c0.2,0,0.4,0,0.5-0.1C4.3,13.3,4.4,13.2,4.4,13zM7,9.9L8.1,13l1.1-3.1h1.1v4.2H9.4V13l0.1-2l-1.1,3.2H7.8L6.6,11l0.1,2v1.2H5.8V9.9H7zM13.5,13.2H12l-0.3,0.9h-0.9l1.6-4.2h0.8l1.6,4.2h-0.9L13.5,13.2zM12.2,12.5h1.1L12.8,11L12.2,12.5zM16.7,12.6H16v1.6h-0.9V9.9h1.6c0.5,0,0.9,0.1,1.2,0.3c0.3,0.2,0.4,0.5,0.4,0.9c0,0.3-0.1,0.5-0.2,0.7c-0.1,0.2-0.3,0.3-0.6,0.5l0.9,1.7v0h-0.9L16.7,12.6zM16,11.9h0.7c0.2,0,0.4-0.1,0.5-0.2c0.1-0.1,0.2-0.3,0.2-0.5c0-0.2-0.1-0.4-0.2-0.5c-0.1-0.1-0.3-0.2-0.5-0.2H16V11.9zM22,10.6h-1.3v3.5h-0.9v-3.5h-1.3V9.9H22V10.6z",
+        "type": "button",
+        "shape": "roundrect",
+        "feature": "smart_mode",
+        "position": 1,
+        "precondition": [
+          {
+            "error": 0,
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h24v24V0M22,2.5h-0.8l-5.9,5.6c-0.3-0.3-0.7-0.7-1.1-0.9l0.4-0.6l-0.9-0.6l-0.4,0.7c-0.3-0.1-0.5-0.2-0.8-0.3l0.2-0.7l-1.1-0.3l-0.3,0.8c-0.4,0-0.7,0.1-1,0.3L9.5,5.6L8.8,6.4l0.8,0.8C9.4,7.3,9.3,7.6,9.2,7.8C9.1,8.1,9.1,8.4,9.1,8.7L8.3,9l0.3,1.1l0.9-0.3c0.2,0.3,0.5,0.6,0.9,0.8l-0.3,0.7l1,0.4l0.3-0.7c0.2,0.1,0.3,0.2,0.5,0.4l-2.1,2C9.5,13.2,9.3,13,9,13c-0.1,0-0.3-0.1-0.4-0.1c-0.7,0-1.3,0.5-1.5,1.2c-0.2,0.6-0.2,1.2-0.1,1.8L7,16l-5,4.7v0.8h0.8l4.6-4.3c0.5,0.9,1.3,1.6,2.2,1.9c0.1,0,0.3,0.1,0.4,0.1c0.7,0,1.3-0.5,1.5-1.2c0.1-0.4,0.1-0.8-0.1-1.2c-0.2-0.4-0.5-0.7-0.9-0.8c-0.2,0-0.3-0.2-0.4-0.3c-0.1-0.2-0.1-0.4,0-0.7c0,0,0-0.1,0-0.1l0.1-0.3l1.7-1.6l0.2,0.5l0.7-0.3c0,0.3,0,0.6-0.1,0.9L11.7,14l-0.1,1.1l0.9,0.1c0,0.2,0.1,0.4,0.1,0.6l-0.8,0.7l0.7,0.8l0.7-0.6c0.1,0.1,0.2,0.2,0.4,0.3l-0.2,0.9l1.1,0.3l0.2-0.9c0.2,0,0.5,0,0.7-0.1l0.4,0.6l1-0.5l-0.4-0.6c0.3-0.2,0.5-0.5,0.6-0.8l0.6,0.2l0.3-1.1l-0.6-0.2c0.1-0.5,0.1-1.1,0.1-1.6l0.6-0.1l-0.1-1.1L17.3,12c-0.1-0.4-0.2-0.8-0.3-1.2l0.7-0.4l-0.6-1l-0.6,0.3c-0.1-0.3-0.3-0.5-0.5-0.8l6-5.7V2.5zM8.2,14.4C8.2,14.1,8.4,14,8.6,14c0,0,0.1,0,0.1,0c0.1,0,0.1,0.1,0.2,0.2L8,15C8.1,14.8,8.1,14.6,8.2,14.4zM10.2,17c0.1,0,0.2,0.1,0.2,0.2c0.1,0.1,0.1,0.3,0,0.4C10.4,17.9,10.1,18,10,18c0,0-0.1,0-0.1,0c-0.8-0.2-1.4-0.8-1.7-1.6l0,0l0.7-0.7C9.1,16.3,9.5,16.8,10.2,17zM12.7,10.6c-0.4-0.4-1-0.7-1.6-0.9c-0.7-0.2-1-0.9-0.8-1.6c0.2-0.5,0.7-0.9,1.2-0.9c0.1,0,0.2,0,0.3,0c1,0.3,1.9,0.9,2.7,1.6L12.7,10.6z M16.1,15.2c-0.2,0.5-0.7,0.9-1.2,0.9c-0.1,0-0.2,0-0.3,0c-0.7-0.2-1-0.9-0.8-1.6c0.3-1,0.2-2-0.3-3l1.9-1.8C16.3,11.3,16.6,13.3,16.1,15.2z",
+        "type": "button",
+        "shape": "roundrect",
+        "title": {
+          "en-US": "BSS",
+          "ru-RU": "BSS"
+        },
+        "feature": "bss",
+        "position": 1,
+        "precondition": [
+          {
+            "error": 0,
+            "source": "state"
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "shape": "roundrect",
+        "title": {
+          "en-US": "Schedule",
+          "ru-RU": "Расписание"
+        },
+        "feature": "schedule",
+        "position": 1,
+        "precondition": [
+          {
+            "error": 0,
+            "source": "state"
+          }
+        ]
+      }
+    ],
+    "middle": [
+      {
+        "info": [
+          {
+            "type": "info",
+            "feature": "temperature"
+          },
+          {
+            "type": "info",
+            "feature": "current_temperature",
+            "text_suffix": false
+          },
+          {
+            "type": "info",
+            "feature": "program"
+          }
+        ],
+        "type": "slider",
+        "colors": [
+          {
+            "max": 49.9999,
+            "min": 0,
+            "color": "condition/normal"
+          },
+          {
+            "max": 55,
+            "min": 50,
+            "color": "condition/very_good"
+          },
+          {
+            "max": 75,
+            "min": 55.0001,
+            "color": "condition/danger"
+          }
+        ],
+        "points": {
+          "30": {
+            "label": "30"
+          },
+          "35": {
+            "label": "35"
+          },
+          "40": {
+            "label": "40"
+          },
+          "45": {
+            "label": "45"
+          },
+          "50": {
+            "label": "50"
+          },
+          "55": {
+            "label": "55"
+          },
+          "60": {
+            "label": "60"
+          },
+          "65": {
+            "label": "65"
+          },
+          "70": {
+            "label": "70"
+          },
+          "75": {
+            "label": "75"
+          }
+        },
+        "feature": "temperature",
+        "position": 0,
+        "segments": [
+          {
+            "max": 55,
+            "min": 50,
+            "color": "condition/good",
+            "label": "ECO"
+          }
+        ],
+        "precondition": [
+          {
+            "error": 0,
+            "source": "state"
+          }
+        ]
+      }
+    ],
+    "schedule": [
+      {
+        "type": "slider",
+        "limit": {
+          "max": 75,
+          "min": 30,
+          "step": 1,
+          "round": 1,
+          "default": 55,
+          "roundAlt": 1
+        },
+        "feature": "temperature",
+        "position": 0
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "switch",
+        "title": {
+          "en-US": "Brightness 50%",
+          "ru-RU": "Яркость 50%"
+        },
+        "action": {
+          "program_data": {
+            "field": "display_brightness",
+            "value": 1,
+            "program": [
+              0
+            ]
+          }
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program_data": {
+              "field": "display_brightness",
+              "value": 1,
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "display_brightness",
+            "value": 0,
+            "program": [
+              0
+            ]
+          }
+        }
+      }
+    ],
+    "middle_info": [
+      {
+        "type": "error",
+        "position": 0
+      }
+    ]
+  },
+  "limits": {
+    "bss": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "keep_warm": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "smart_mode": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "temperature": {
+      "max": 75,
+      "min": 30,
+      "step": 1,
+      "round": 1,
+      "default": 55,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "theme": {
+      "style": "aurus",
+      "palette": "aurus_brown"
+    },
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "Aurus F",
+          "manufacturer": "rusclimate"
+        },
+        "type": "devices.types.thermostat",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                1
+              ]
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "feature": "current_temperature",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "slider",
+            "limit": {
+              "max": 75,
+              "min": 30,
+              "step": 1,
+              "round": 1,
+              "default": 55,
+              "roundAlt": 1
+            },
+            "feature": "temperature",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "low",
+                "action": {
+                  "program": [
+                    1
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    1
+                  ]
+                }
+              },
+              {
+                "value": "normal",
+                "action": {
+                  "program": [
+                    2
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    2
+                  ]
+                }
+              },
+              {
+                "value": "turbo",
+                "action": {
+                  "program": [
+                    3
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    3
+                  ]
+                }
+              }
+            ],
+            "instance": "heat",
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "hidden": false,
+    "server": "Hommyn",
+    "realtime": true,
+    "fastSwitch": {
+      "on": {
+        "program": [
+          1
+        ]
+      },
+      "off": {
+        "program": [
+          0
+        ]
+      }
+    },
+    "expendables": [
+      {
+        "icon": "expendable.0",
+        "name": "expendable.0",
+        "title": "expendable.0",
+        "maxValue": 100
+      }
+    ],
+    "hotspot_ssid": "Wi-Fi Aurus F",
+    "program_data": {
+      "0": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "display_brightness",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "1": [
+        {
+          "max": 1,
+          "min": 1,
+          "name": "last_program",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        }
+      ],
+      "2": [
+        {
+          "max": 2,
+          "min": 0,
+          "name": "expendables500",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "defaultProgram": [
+      1
+    ],
+    "expendable_max": [
+      100
+    ],
+    "scheduleConfig": {
+      "timer": {
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "behavior": "onceOrEveryday",
+        "canCreate": false,
+        "canUpdate": true
+      },
+      "normal": {
+        "behavior": "regular",
+        "canCreate": false
+      },
+      "default": {
+        "behavior": "regular",
+        "canCreate": false
+      }
+    },
+    "mqttFeatureNames": {
+      "keep_warm": "keep_warm"
+    },
+    "excludeScheduleFeatures": [
+      "bss",
+      "smart_mode",
+      "keep_warm"
+    ]
+  },
+  "vendor": "rusclimate",
+  "features": [
+    "program",
+    "temperature",
+    "current_temperature",
+    "keep_warm",
+    "water_tank",
+    "smart_mode",
+    "power_consume",
+    "schedule",
+    "bss",
+    "expendables"
+  ],
+  "messages": {
+    "days": {
+      "en-US": "d",
+      "ru-RU": "д"
+    },
+    "diag": {
+      "en-US": "To reset the settings, press the \"Tools\" on the device, scroll to the \"WIFI\" menu item, confirm the selection and press \"Reset Settings \"",
+      "ru-RU": "Для активации режима сопряжения нажмите «Шестеренку» нас устройстве, пролистайте до пункта меню «WIFI», подтвердите выбор и нажмите «Сброс настроек»"
+    },
+    "pair": {
+      "en-US": "To activate the pairing mode, press the \"Tools\" on the device, scroll to the \"WIFI\" menu item, confirm the selection and press \"Connection\".",
+      "ru-RU": "Для активации режима сопряжения нажмите «Шестеренку» на устройстве, пролистайте до пункта меню «WIFI», подтвердите выбор и нажмите «Подключение»."
+    },
+    "reset": {
+      "en-US": "To reset the settings, press the \"Tools\" on the device, scroll to the \"WIFI\" menu item, confirm the selection and press \"Reset Settings\".",
+      "ru-RU": "Для сброса настроек нажмите «Шестеренку» на устройстве, пролистайте до пункта меню «WIFI», подтвердите выбор и нажмите «Сброс настроек». "
+    },
+    "space": {
+      "en-US": " "
+    },
+    "error.1": {
+      "en-US": "Lack of water or short circuit of the anode",
+      "ru-RU": "Отсутствие воды или замыкание анода"
+    },
+    "error.2": {
+      "en-US": "Temperature sensor error",
+      "ru-RU": "Неисправность температурного датчика."
+    },
+    "expendable.0": {
+      "en-US": "Anode resource",
+      "ru-RU": "Ресурс анода"
+    },
+    "schedule.1.name": {
+      "en-US": "Timer 1",
+      "ru-RU": "Таймер 1"
+    },
+    "schedule.2.name": {
+      "en-US": "Timer 2",
+      "ru-RU": "Таймер 2"
+    },
+    "schedule.3.name": {
+      "en-US": "Timer 3",
+      "ru-RU": "Таймер 3"
+    },
+    "attr.temperature": {
+      "en-US": "Target temp",
+      "ru-RU": "Целевая t°"
+    },
+    "read_only_schedule": {
+      "en-US": "Please change the timer from device panel",
+      "ru-RU": "Изменение таймера возможно только с прибора"
+    },
+    "attr.current_temperature": {
+      "en-US": "Water temp - ℃",
+      "ru-RU": "Температура - ℃"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off",
+        "ru-RU": "Выкл"
+      },
+      "hidden": true,
+      "limits": {
+        "temperature": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        }
+      }
+    },
+    {
+      "name": {
+        "en-US": "Low",
+        "ru-RU": "Низкий"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Mid",
+        "ru-RU": "Средний"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Turbo",
+        "ru-RU": "Турбо"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "No Frost",
+        "ru-RU": "No Frost"
+      },
+      "hidden": true
+    },
+    {
+      "name": {
+        "en-US": "BSS",
+        "ru-RU": "Самоочистка"
+      },
+      "hidden": true
+    },
+    {
+      "name": {
+        "en-US": "Smart",
+        "ru-RU": "Smart"
+      },
+      "hidden": true
+    }
+  ],
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1761231029,
+  "temperature_units": "celsius"
+}

@@ -1,0 +1,557 @@
+{
+  "id": "6ad000fc-957b-4d4b-a5f6-73b5922703ed",
+  "name": "Ballu RDU ANTICOVIDgenerator WiFi",
+  "type": 27,
+  "class": "recirculator",
+  "image": {
+    "60": "https://images.cdn.rusklimat.ru/6/b3/c8e39-e547-4bc8-88eb-786a6e50cb06/60.webp",
+    "120": "https://images.cdn.rusklimat.ru/6/b3/c8e39-e547-4bc8-88eb-786a6e50cb06/120.webp",
+    "240": "https://images.cdn.rusklimat.ru/6/b3/c8e39-e547-4bc8-88eb-786a6e50cb06/240.webp",
+    "480": "https://images.cdn.rusklimat.ru/6/b3/c8e39-e547-4bc8-88eb-786a6e50cb06/480.webp",
+    "600": "https://images.cdn.rusklimat.ru/6/b3/c8e39-e547-4bc8-88eb-786a6e50cb06/600.webp",
+    "900": "https://images.cdn.rusklimat.ru/6/b3/c8e39-e547-4bc8-88eb-786a6e50cb06/900.webp",
+    "1200": "https://images.cdn.rusklimat.ru/6/b3/c8e39-e547-4bc8-88eb-786a6e50cb06/1200.webp",
+    "1800": "https://images.cdn.rusklimat.ru/6/b3/c8e39-e547-4bc8-88eb-786a6e50cb06/1800.webp",
+    "id": "6b3c8e39-e547-4bc8-88eb-786a6e50cb06",
+    "original": "https://images.cdn.rusklimat.ru/6/b3/c8e39-e547-4bc8-88eb-786a6e50cb06/original.webp"
+  },
+  "layout": {
+    "top": [
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Filter running days",
+          "ru-RU": "Наработка фильтра"
+        },
+        "position": 0,
+        "program_data": {
+          "field": "filter_duration",
+          "program": [
+            1
+          ]
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Lamp running hours",
+          "ru-RU": "Наработка ламп"
+        },
+        "position": 0,
+        "program_data": {
+          "field": "lamps_duration",
+          "program": [
+            1
+          ]
+        }
+      }
+    ],
+    "bottom": [
+      {
+        "type": "button",
+        "feature": "schedule",
+        "position": 0,
+        "condition": [
+          {
+            "schedule": {
+              "enabled": true
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "program_data": {
+              "field": "modbus",
+              "value": 0,
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "ioniser",
+        "position": 0,
+        "precondition": [
+          {
+            "program_data": {
+              "field": "modbus",
+              "value": 0,
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "child_lock",
+        "position": 0,
+        "precondition": [
+          {
+            "program_data": {
+              "field": "modbus",
+              "value": 0,
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "middle": [
+      {
+        "type": "button_power",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        },
+        "precondition": [
+          {
+            "program_data": {
+              "field": "modbus",
+              "value": 0,
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "schedule": [
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            0
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Switch off device in (hours:min)",
+          "ru-RU": "Выключение прибора через (ч:мин)"
+        },
+        "feature": "timer",
+        "position": 1,
+        "visibility": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "switch",
+        "feature": "ioniser",
+        "position": 2,
+        "precondition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "button",
+        "alert": "reset_filter",
+        "title": {
+          "en-US": "Filter running days",
+          "ru-RU": "Наработка фильтра"
+        },
+        "action": {
+          "program_data": {
+            "field": "filter_duration",
+            "value": 0,
+            "program": [
+              1
+            ]
+          }
+        },
+        "position": 0,
+        "precondition": [
+          {
+            "program_data": {
+              "field": "modbus",
+              "value": 0,
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "program_data": {
+          "field": "filter_duration",
+          "program": [
+            1
+          ]
+        }
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 2,
+          "min": 0,
+          "step": 1,
+          "default": 0
+        },
+        "title": {
+          "en-US": "Display Brightness",
+          "ru-RU": "Яркость дисплея"
+        },
+        "position": 1,
+        "precondition": [
+          {
+            "program_data": {
+              "field": "modbus",
+              "value": 0,
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "program_data": {
+          "field": "brightness",
+          "program": [
+            0
+          ]
+        },
+        "value_strings": {
+          "0": "10%",
+          "1": "50%",
+          "2": "100%"
+        }
+      }
+    ],
+    "top_info": [
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Please clean the filter",
+          "ru-RU": "Пожалуйста, очистите фильтр"
+        },
+        "position": 0,
+        "visibility": [
+          {
+            "program_data": {
+              "field": "filter_duration",
+              "value": {
+                "min": 30
+              },
+              "program": [
+                1
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Please replace UV lamps",
+          "ru-RU": "Пожалуйста, замените лампы"
+        },
+        "position": 1,
+        "visibility": [
+          {
+            "program_data": {
+              "field": "lamps_duration",
+              "value": {
+                "min": 8900
+              },
+              "program": [
+                1
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "middle_info": [
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Attention! The device is controlled with Modbus protocol. Application control is not available",
+          "ru-RU": "Внимание, прибор управляется по протоколу Modbus. Управление с приложения недоступно"
+        },
+        "position": 1,
+        "visibility": [
+          {
+            "program_data": {
+              "field": "modbus",
+              "value": 1,
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "limits": {
+    "timer": {
+      "max": 86400,
+      "min": 1800,
+      "step": 1800,
+      "round": 1,
+      "default": 1800,
+      "round_alt": 1
+    },
+    "ioniser": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "child_lock": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "Ballu RDU ANTICOVIDgenerator WiFi",
+          "manufacturer": "rusclimate"
+        },
+        "type": "devices.types.purifier",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                1
+              ]
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "feature": "ioniser",
+            "instance": "ionization",
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "realtime": true,
+    "fastSwitch": {
+      "on": {
+        "program": [
+          1
+        ]
+      },
+      "off": {
+        "program": [
+          0
+        ]
+      }
+    },
+    "adminPresets": true,
+    "hotspot_ssid": "Ballu-RDU",
+    "program_data": {
+      "0": [
+        {
+          "max": 2,
+          "min": 0,
+          "name": "brightness",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "modbus",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "1": [
+        {
+          "max": 255,
+          "min": 0,
+          "name": "filter_duration",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 65536,
+          "min": 0,
+          "name": "lamps_duration",
+          "size": 2,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "defaultProgram": [
+      1
+    ],
+    "mqttFeatureNames": {
+      "speed": "fan_speed",
+      "ultraviolet": "uv"
+    }
+  },
+  "vendor": "rusclimate",
+  "features": [
+    "program",
+    "ioniser",
+    "child_lock",
+    "demo",
+    "current_co2",
+    "current_pm2",
+    "expendables",
+    "schedule",
+    "timer"
+  ],
+  "messages": {
+    "diag": {
+      "en-US": "To reset settings please do the following:\n\n·         Press Menu\n\n·         Find UUF\n\n·         Press Menu again\n\n·         Find reS\n\n·         Press Menu again.",
+      "ru-RU": "Для сброса настроек сделайте следующее:\n\n·         Нажмите Menu\n\n·         Найдите пункт UUF\n\n·         Нажмите Menu еще раз\n\n·         Найдите пункт reS\n\n·         Нажмите Menu еще раз"
+    },
+    "pair": {
+      "en-US": "Switch on pairing mode on the device:\n\n·         Press Menu\n\n·         Find UUF\n\n·         Press Menu again\n\n·         Find CON\n\n·         Press Menu again.",
+      "ru-RU": "Активируйте режим подключения на устройстве:\n\n·         Нажмите Menu\n\n·         Найдите пункт UUF\n\n·         Нажмите Menu еще раз\n\n·         Найдите пункт CON\n\n·         Нажмите Menu еще раз"
+    },
+    "reset": {
+      "en-US": "To reset settings please do the following:\n\n·         Press Menu\n\n·         Find UUF\n\n·         Press Menu again\n\n·         Find reS\n\n·         Press Menu again.",
+      "ru-RU": "Для сброса настроек сделайте следующее:\n\n·         Нажмите Menu\n\n·         Найдите пункт UUF\n\n·         Нажмите Menu еще раз\n\n·         Найдите пункт reS\n\n·         Нажмите Menu еще раз"
+    },
+    "enable": {
+      "en-US": "Switch on Wi-Fi on device:\n\n·         Press Menu\n\n·         Find UUF\n\n·         Press Menu again\n\n·         Find ON\n\n·         Press Menu again.",
+      "ru-RU": "Включите Wi-Fi на устройстве:\n\n·         Нажмите Menu\n\n·         Найдите пункт UUF\n\n·         Нажмите Menu еще раз\n\n·         Найдите пункт ON\n\n·         Нажмите Menu еще раз"
+    },
+    "attr.speed": {
+      "en-US": "FAN SPEED",
+      "ru-RU": "СКОРОСТЬ ВЕНТИЛЯТОРОВ"
+    },
+    "url.manual": {
+      "en-US": "https://images.cdn.rusklimat.ru/ee/7c/180f-fd40-4b7d-bdda-18a84c7b611b/original.pdf",
+      "ru-RU": "https://images.cdn.rusklimat.ru/ee/7c/180f-fd40-4b7d-bdda-18a84c7b611b/original.pdf"
+    },
+    "fw.complete": {
+      "en-US": "Please replug the device",
+      "ru-RU": "Пожалуйста, переподключите электропитание устройства"
+    },
+    "expendable.0": {
+      "en-US": "Filter",
+      "ru-RU": "Фильтр"
+    },
+    "alert.reset_filter.title": {
+      "en-US": "Reset consumable counter?",
+      "ru-RU": "Сбросить счетчик расходных материалов?"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off",
+        "ru-RU": "Выкл"
+      },
+      "hidden": false
+    },
+    {
+      "icon": "M5.58838 13.4655H3.59104L3.21132 14.6047H2L4.0581 9.07594H5.11373L7.18322 14.6047H5.9719L5.58838 13.4655ZM3.89861 12.5428H5.2808L4.58591 10.4733L3.89861 12.5428ZM11.8158 9.07594V12.7175C11.8158 13.3225 11.626 13.801 11.2463 14.1528C10.8691 14.5047 10.3526 14.6807 9.69698 14.6807C9.05145 14.6807 8.53883 14.5098 8.1591 14.168C7.77938 13.8263 7.58572 13.3567 7.57813 12.7593V9.07594H8.7173V12.7251C8.7173 13.0871 8.80337 13.3516 8.97551 13.5187C9.15018 13.6832 9.39067 13.7655 9.69698 13.7655C10.3374 13.7655 10.6627 13.4288 10.6729 12.7555V9.07594H11.8158ZM16.9117 9.99867H15.2182V14.6047H14.079V9.99867H12.4082V9.07594H16.9117V9.99867ZM22 11.9656C22 12.5099 21.9038 12.9871 21.7114 13.3972C21.519 13.8073 21.2431 14.1237 20.8836 14.3465C20.5267 14.5693 20.1166 14.6807 19.6533 14.6807C19.1951 14.6807 18.7863 14.5705 18.4268 14.3503C18.0673 14.1301 17.7889 13.8162 17.5914 13.4086C17.394 12.9985 17.294 12.5276 17.2914 11.996V11.7226C17.2914 11.1783 17.3889 10.6999 17.5838 10.2873C17.7813 9.8721 18.0585 9.5544 18.4154 9.33416C18.7749 9.11139 19.185 9 19.6457 9C20.1064 9 20.5153 9.11139 20.8722 9.33416C21.2317 9.5544 21.5089 9.8721 21.7038 10.2873C21.9013 10.6999 22 11.1771 22 11.7188V11.9656ZM20.8456 11.715C20.8456 11.1353 20.7419 10.6948 20.5343 10.3936C20.3267 10.0923 20.0305 9.94171 19.6457 9.94171C19.2635 9.94171 18.9685 10.0911 18.761 10.3898C18.5534 10.686 18.4483 11.1214 18.4458 11.696V11.9656C18.4458 12.5302 18.5496 12.9681 18.7572 13.2795C18.9647 13.5908 19.2635 13.7465 19.6533 13.7465C20.0356 13.7465 20.3292 13.5972 20.5343 13.2985C20.7393 12.9972 20.8431 12.5593 20.8456 11.9846V11.715Z",
+      "name": {
+        "en-US": "Auto",
+        "ru-RU": "Авто"
+      },
+      "hidden": false
+    }
+  ],
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1727456111,
+  "temperature_units": "celsius"
+}

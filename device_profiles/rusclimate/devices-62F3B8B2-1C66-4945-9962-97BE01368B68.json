@@ -1,0 +1,823 @@
+{
+  "id": "62f3b8b2-1c66-4945-9962-97be01368b68",
+  "name": "Shuft Allston-VH/ERV Пульт AirPad 7",
+  "type": 100,
+  "class": "ventilation",
+  "image": {
+    "60": "https://images.cdn.rusklimat.ru/2/a8/4b8c3-e36c-4701-9c8f-e43c6fbbee07/60.webp",
+    "120": "https://images.cdn.rusklimat.ru/2/a8/4b8c3-e36c-4701-9c8f-e43c6fbbee07/120.webp",
+    "240": "https://images.cdn.rusklimat.ru/2/a8/4b8c3-e36c-4701-9c8f-e43c6fbbee07/240.webp",
+    "480": "https://images.cdn.rusklimat.ru/2/a8/4b8c3-e36c-4701-9c8f-e43c6fbbee07/480.webp",
+    "600": "https://images.cdn.rusklimat.ru/2/a8/4b8c3-e36c-4701-9c8f-e43c6fbbee07/600.webp",
+    "900": "https://images.cdn.rusklimat.ru/2/a8/4b8c3-e36c-4701-9c8f-e43c6fbbee07/900.webp",
+    "1200": "https://images.cdn.rusklimat.ru/2/a8/4b8c3-e36c-4701-9c8f-e43c6fbbee07/1200.webp",
+    "1800": "https://images.cdn.rusklimat.ru/2/a8/4b8c3-e36c-4701-9c8f-e43c6fbbee07/1800.webp",
+    "id": "2a84b8c3-e36c-4701-9c8f-e43c6fbbee07",
+    "original": "https://images.cdn.rusklimat.ru/2/a8/4b8c3-e36c-4701-9c8f-e43c6fbbee07/original.webp"
+  },
+  "layout": {
+    "top": [
+      {
+        "type": "info",
+        "title": {
+          "en-US": "CO2 - ppm",
+          "ru-RU": "CO2 - ppm"
+        },
+        "feature": "current_co2",
+        "position": 0,
+        "text_suffix": false
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "PM 2.5 - mkg/m³",
+          "ru-RU": "PM 2.5 - мкг/м³"
+        },
+        "feature": "current_pm2",
+        "position": 0,
+        "text_suffix": false
+      },
+      {
+        "type": "info",
+        "index": 0,
+        "title": {
+          "en-US": "Filter resource",
+          "ru-RU": "Ресурс фильтра"
+        },
+        "colors": [
+          {
+            "max": 30,
+            "min": 0,
+            "color": "condition/danger"
+          },
+          {
+            "max": 70,
+            "min": 30.0001,
+            "color": "condition/normal"
+          },
+          {
+            "max": 100,
+            "min": 70.0001,
+            "color": "condition/very_good"
+          }
+        ],
+        "suffix": "percent",
+        "feature": "expendables",
+        "position": 0,
+        "text_suffix": true
+      }
+    ],
+    "bottom": [
+      {
+        "type": "button",
+        "feature": "schedule",
+        "position": 0
+      },
+      {
+        "icon": "M0,0h24v24V0M21.451,12.523C21.451,17.749,17.211,22,12,22c-5.211,0-9.451-4.251-9.451-9.477c0-3.817,2.266-7.245,5.772-8.732c0.101-0.043,0.207-0.065,0.316-0.065c0.327,0,0.621,0.195,0.748,0.497c0.084,0.2,0.086,0.421,0.005,0.623C9.308,5.048,9.153,5.206,8.953,5.291c-2.904,1.232-4.781,4.071-4.781,7.232c0,4.328,3.511,7.849,7.827,7.849c4.316,0,7.827-3.521,7.827-7.849c0-3.18-1.891-6.025-4.818-7.248c-0.2-0.084-0.356-0.24-0.438-0.441c-0.083-0.201-0.082-0.422,0.001-0.623c0.127-0.304,0.421-0.501,0.75-0.501c0.107,0,0.212,0.021,0.312,0.063C19.167,5.25,21.451,8.684,21.451,12.523zM12,13.746c0.588,0,1.065-0.479,1.065-1.068v-9.61C13.065,2.479,12.587,2,12,2c-0.587,0-1.065,0.479-1.065,1.068v9.61C10.935,13.267,11.412,13.746,12,13.746z",
+        "type": "button",
+        "action": {
+          "program": {
+            "program_data": {
+              "field": "last_program",
+              "program": [
+                3
+              ]
+            }
+          }
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      },
+      {
+        "icon": "M0,0h24v24V0M12,22c-3.9,0-7-3.1-7-7v-3.4c0-1,0.8-1.8,1.8-1.8c0.3,0,0.5,0.1,0.8,0.2V4.7c0-1,0.8-1.8,1.8-1.8c0.3,0,0.6,0.1,0.9,0.2 C10.6,2.5,11.3,2,12,2c1,0,1.8,0.8,1.8,1.8v0.1c0.2-0.1,0.5-0.2,0.8-0.2c1,0,1.8,0.8,1.8,1.8v0.9c0.2-0.1,0.5-0.2,0.8-0.2 c1,0,1.8,0.8,1.8,1.8V15C19,18.9,15.9,22,12,22z M6.8,10.8c-0.4,0-0.8,0.3-0.8,0.8V15c0,3.3,2.7,5.9,5.9,5.9c3.3,0,5.9-2.7,5.9-5.9 V8.1c0-0.4-0.3-0.8-0.8-0.8c-0.4,0-0.8,0.3-0.8,0.8V12c0,0.3-0.2,0.5-0.5,0.5c-0.3,0-0.5-0.2-0.5-0.5V5.5c0-0.4-0.3-0.8-0.8-0.8 c-0.4,0-0.8,0.3-0.8,0.8v5.6c0,0.3-0.2,0.5-0.5,0.5s-0.5-0.2-0.5-0.5V3.8c0-0.4-0.3-0.8-0.8-0.8s-0.8,0.3-0.8,0.8v7.3 c0,0.3-0.2,0.5-0.5,0.5c-0.3,0-0.5-0.2-0.5-0.5V4.7c0-0.4-0.3-0.8-0.8-0.8C9,3.9,8.7,4.3,8.7,4.7v6.5c0,0.1,0,0.1,0,0.2 c0,0.1,0,0.2,0,0.3v3c0,0.3-0.2,0.5-0.5,0.5c-0.3,0-0.5-0.2-0.5-0.5v-3C7.6,11.1,7.3,10.8,6.8,10.8z",
+        "type": "button",
+        "shape": "roundrect",
+        "title": {
+          "en-US": "Manage",
+          "ru-RU": "Manage"
+        },
+        "layout": "screen.manage_screen",
+        "position": 1
+      }
+    ],
+    "middle": [
+      {
+        "icon": "M0,0h200v200V0M100.024 182.8C86.4013 182.8 73.5747 178.795 62.7501 171.852L70.8052 163.542C79.3883 168.581 89.3722 171.477 100.024 171.477V159.762C92.5597 159.762 85.5071 157.979 79.2601 154.82L86.9475 146.889C73.6754 141.656 64.2577 128.7 64.2577 113.592C64.2577 111.746 64.3981 109.93 64.6712 108.154L53.9366 110.809C54.28 104.956 55.7097 99.3132 58.2015 94.0062L47.5997 89.0273C43.9757 96.7437 42.1401 105.006 42.1401 113.592V113.73L3.3629 123.328L2.35429 126.413C-1.97158 139.63 -0.283955 154.457 6.98228 167.096C14.2485 179.732 26.2129 188.65 39.8101 191.563L42.9839 192.242L54.4249 180.443C67.7947 189.567 83.6562 194.516 100.024 194.516C105.604 194.516 111.182 193.941 116.6 192.813L114.21 181.345C109.576 182.309 104.805 182.8 100.024 182.8ZM124.099 113.591C124.099 126.882 113.325 137.657 100.033 137.657C86.7407 137.657 75.965 126.882 75.965 113.591C75.965 100.299 86.7407 89.5228 100.033 89.5228C113.325 89.5228 124.099 100.299 124.099 113.591ZM68.0834 52.1072L71.3061 63.3453C65.9396 66.4108 61.0476 70.3384 56.8545 75.032L65.5856 82.8384C68.2788 79.8232 71.332 77.2079 74.6524 75.0289L77.7011 85.6613C83.8275 80.7494 91.5942 77.8091 100.037 77.8091C108.483 77.8091 116.249 80.7494 122.376 85.6613L139.783 24.9267L137.612 22.5173C128.311 12.181 114.614 6.2499 100.037 6.2499C85.4602 6.2499 71.7654 12.181 62.4652 22.5173L60.2938 24.9267L64.812 40.7012C60.2038 42.9351 55.7833 45.6222 51.6055 48.7487C38.0099 58.9172 27.759 73.4008 22.7419 89.5309L33.9297 93.0099C39.58 74.8367 52.0709 60.3896 68.0834 52.1072ZM197.685 126.678L196.686 123.59L180.719 119.59C180.864 117.607 180.946 115.608 180.946 113.594C180.946 90.4537 171.003 68.3727 153.674 53.0147L145.904 61.7809C160.727 74.9156 169.232 93.803 169.232 113.594C169.232 114.631 169.2 115.666 169.153 116.697L157.899 113.877C157.904 113.784 157.907 113.687 157.907 113.594C157.907 100.177 153.21 87.0998 144.687 76.7711L135.65 84.225C141.882 91.7766 145.537 101.171 146.103 110.926L135.42 108.247C135.681 109.993 135.818 111.778 135.818 113.594C135.818 128.735 126.356 141.716 113.038 146.923L156.877 192.395L160.051 191.723C173.655 188.85 185.647 179.962 192.946 167.346C200.247 154.73 201.973 139.907 197.685 126.678Z",
+        "info": [
+          {
+            "type": "info",
+            "feature": "speed",
+            "value_strings": {
+              "0": "Auto"
+            }
+          },
+          {
+            "type": "info",
+            "feature": "current_temperature"
+          },
+          {
+            "type": "info",
+            "feature": "current_humidity"
+          }
+        ],
+        "type": "slider",
+        "limit": {
+          "max": 6,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Fan speed",
+          "ru-RU": "Скорость вентилятора"
+        },
+        "points": {
+          "0": {
+            "label": "Auto"
+          },
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          },
+          "4": {
+            "label": "4"
+          },
+          "5": {
+            "label": "5"
+          },
+          "6": {
+            "label": "6"
+          }
+        },
+        "feature": "speed",
+        "position": 0,
+        "icon_suffix": false
+      }
+    ],
+    "schedule": [
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            0
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 6,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "feature": "speed",
+        "position": 1,
+        "visibility": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "value_strings": {
+          "0": "Auto"
+        }
+      }
+    ],
+    "settings": [
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Reset the filter replacement counter",
+          "ru-RU": "Сбросить"
+        },
+        "feature": "expendables",
+        "position": 1,
+        "formatRules": [
+          {
+            "max": 999,
+            "min": 0,
+            "string": "hum"
+          }
+        ],
+        "text_suffix": false
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Backlight off time",
+          "ru-RU": "Время выключения подсветки"
+        },
+        "position": 2,
+        "program_data": {
+          "field": "light_time",
+          "program": [
+            0
+          ]
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "ID устройства",
+          "ru-RU": "ID устройства"
+        },
+        "position": 3,
+        "program_data": {
+          "field": "device_id",
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "top_info": [
+      {
+        "type": "info",
+        "measure": "air_quality",
+        "position": 0
+      },
+      {
+        "type": "separator",
+        "position": 0
+      },
+      {
+        "row": "external_air_condition",
+        "type": "info",
+        "position": 0
+      }
+    ],
+    "middle_info": [
+      {
+        "type": "error",
+        "position": 2
+      }
+    ],
+    "screen.manage_screen": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Manage",
+          "ru-RU": "Управление"
+        },
+        "position": 0
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Current humidity",
+          "ru-RU": "Влажность"
+        },
+        "feature": "current_humidity",
+        "position": 1
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Indoor temperature",
+          "ru-RU": "6.\tТемпература в помещении"
+        },
+        "suffix": "suffix",
+        "feature": "current_temperature",
+        "position": 2,
+        "text_suffix": true
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "TVOC"
+        },
+        "suffix": "suffix.tvoc",
+        "position": 3,
+        "text_suffix": true,
+        "program_data": {
+          "field": "tvoc",
+          "program": [
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "limits": {
+    "speed": {
+      "max": 10,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 1,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "Shuft Allston-VH/ERV Пульт AirPad 7",
+          "manufacturer": "rusclimate"
+        },
+        "type": "devices.types.other",
+        "errors": [],
+        "features": [
+          {
+            "type": "info",
+            "feature": "current_co2",
+            "instance": "co2_level",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "auto",
+                "action": {
+                  "speed": 0
+                },
+                "condition": {
+                  "speed": 0
+                }
+              },
+              {
+                "value": "quiet",
+                "action": {
+                  "speed": 1
+                },
+                "condition": {
+                  "speed": 1
+                }
+              },
+              {
+                "value": "min",
+                "action": {
+                  "speed": 2
+                },
+                "condition": {
+                  "speed": 2
+                }
+              },
+              {
+                "value": "low",
+                "action": {
+                  "speed": 3
+                },
+                "condition": {
+                  "speed": 3
+                }
+              },
+              {
+                "value": "medium",
+                "action": {
+                  "speed": 4
+                },
+                "condition": {
+                  "speed": 4
+                }
+              },
+              {
+                "value": "high",
+                "action": {
+                  "speed": 5
+                },
+                "condition": {
+                  "speed": 5
+                }
+              },
+              {
+                "value": "max",
+                "action": {
+                  "speed": 6
+                },
+                "condition": {
+                  "speed": 6
+                }
+              }
+            ],
+            "instance": "fan_speed",
+            "retrievable": true
+          },
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                1
+              ]
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "feature": "current_pm2",
+            "instance": "pm2.5_density",
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "feature": "current_humidity",
+            "instance": "humidity",
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "feature": "current_temperature",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "instance": "tvoc",
+            "retrievable": true,
+            "program_data": {
+              "field": "tvoc",
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "hidden": true,
+    "reverse": true,
+    "realtime": true,
+    "fastSwitch": {
+      "on": {
+        "program": [
+          1
+        ]
+      },
+      "off": {
+        "program": [
+          0
+        ]
+      }
+    },
+    "expendables": [
+      {
+        "icon": "expendable.0",
+        "name": "expendable.0",
+        "title": "expendable.0",
+        "maxValue": 100
+      }
+    ],
+    "hotspot_ssid": "Shuft Allston-VH/ERV 4",
+    "program_data": {
+      "0": [
+        {
+          "max": 10000,
+          "min": 0,
+          "name": "tvoc",
+          "size": 2,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 60,
+          "min": 10,
+          "name": "light_time",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 60,
+          "roundAlt": 1
+        },
+        {
+          "max": 127,
+          "min": 0,
+          "name": "device_id",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        }
+      ],
+      "1": [
+        {
+          "max": 30,
+          "min": 5,
+          "name": "bypass_temp",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 5,
+          "roundAlt": 1
+        },
+        {
+          "max": 15,
+          "min": 2,
+          "name": "bypass_range",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 2,
+          "roundAlt": 1
+        }
+      ],
+      "2": [
+        {
+          "max": 255,
+          "min": 0,
+          "name": "ra",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 255,
+          "min": 0,
+          "name": "oa",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "3": [
+        {
+          "max": 6,
+          "min": 0,
+          "name": "last_program",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "expendable_max": [
+      100
+    ],
+    "excludeScheduleFeatures": [
+      "timer",
+      "ioniser",
+      "ultraviolet",
+      "child_lock",
+      "demo",
+      "current_humidity",
+      "schedule",
+      "expendables",
+      "current_pm2",
+      "current_co2",
+      "current_temperature"
+    ]
+  },
+  "vendor": "rusclimate",
+  "features": [
+    "program",
+    "speed",
+    "current_temperature",
+    "current_co2",
+    "current_pm2",
+    "expendables",
+    "schedule",
+    "current_humidity",
+    "demo",
+    "child_lock"
+  ],
+  "messages": {
+    "hum": {
+      "en-US": " ",
+      "ru-RU": " "
+    },
+    "pm2": {
+      "en-US": "mkg/m³",
+      "ru-RU": "мкг/м³"
+    },
+    "days": {
+      "en-US": "d",
+      "ru-RU": "д"
+    },
+    "diag": {
+      "en-US": "To reset the Wi-Fi settings on the device, go to the settings menu by clicking on the \"Settings\" button, then click on the exclamation mark button and click on the \"Reset WI-FI\" button.",
+      "ru-RU": "Для сброса настроек Wi-Fi на приборе зайдите в меню настроек, нажав на кнопку «Настройки», затем перейдите по кнопке с восклицательным знаком и нажмите на кнопку «Reset WI-FI»."
+    },
+    "pair": {
+      "en-US": "To turn on the pairing mode on the device, go to the settings menu by clicking on the \"Settings\" button, then click on the exclamation mark button and click on the \"Reset WI-FI\" button",
+      "ru-RU": "Для включения режима сопряжения на приборе, зайдите в меню настроек, нажав на кнопку \"Настройки\", затем перейдите по кнопке с восклицательным знаком и нажмите на кнопку «Reset WI-FI»."
+    },
+    "hours": {
+      "en-US": "h",
+      "ru-RU": "ч"
+    },
+    "reset": {
+      "en-US": "To reset the Wi-Fi settings on the device, go to the settings menu by clicking on the \"Settings\" button, then click on the exclamation mark button and click on the \"Reset WI-FI\" button.",
+      "ru-RU": "Для сброса настроек Wi-Fi на приборе зайдите в меню настроек, нажав на кнопку «Настройки», затем перейдите по кнопке с восклицательным знаком и нажмите на кнопку «Reset WI-FI»."
+    },
+    "45days": {
+      "en-US": "45 d",
+      "ru-RU": "45 д"
+    },
+    "60days": {
+      "en-US": "60 d",
+      "ru-RU": "60 д"
+    },
+    "90days": {
+      "en-US": "90 d",
+      "ru-RU": "90 д"
+    },
+    "suffix": {
+      "en-US": "°C",
+      "ru-RU": "°C"
+    },
+    "180days": {
+      "en-US": "180 d",
+      "ru-RU": "180 д"
+    },
+    "error.1": {
+      "en-US": "Outdoor air temperature sensor error",
+      "ru-RU": "Ошибка датчика температуры наружного воздуха"
+    },
+    "error.2": {
+      "en-US": "EEPROM error",
+      "ru-RU": "Ошибка памяти ЭСППЗУ"
+    },
+    "error.3": {
+      "en-US": "Temperature air sensor error/Humidity sensor is abnormal/ CO2 sensor is abnormal",
+      "ru-RU": "Ошибка датчика температуры воздуха/влажности/CO2"
+    },
+    "error.4": {
+      "en-US": "Exhaust air temperature sensor error",
+      "ru-RU": "Ошибка датчика выбрасываемого воздуха"
+    },
+    "error.5": {
+      "en-US": "Communication error",
+      "ru-RU": "Ошибка связи"
+    },
+    "error.6": {
+      "en-US": "Supply air temperature sensor error",
+      "ru-RU": "Ошибка датчика приточного воздуха"
+    },
+    "error.7": {
+      "en-US": "Exhausted fan error",
+      "ru-RU": "Ошибка вытяжного вентилятора"
+    },
+    "error.8": {
+      "en-US": "Supply fan speed",
+      "ru-RU": "Ошибка приточного вентилятора"
+    },
+    "percent": {
+      "en-US": "%",
+      "ru-RU": "%"
+    },
+    "attr.speed": {
+      "en-US": "Supply fan speed",
+      "ru-RU": "Скорость приточного вентилятора"
+    },
+    "suffix.tvoc": {
+      "en-US": "mkg/m3",
+      "ru-RU": "мкг/м3"
+    },
+    "expendable.0": {
+      "en-US": "Filter",
+      "ru-RU": "Фильтр"
+    },
+    "expendable.1": {
+      "ru-RU": "2"
+    },
+    "expendable.2": {
+      "ru-RU": "3"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off",
+        "ru-RU": "Выкл"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        },
+        "damper": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        },
+        "ioniser": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        },
+        "humidity": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        },
+        "ultraviolet": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        }
+      }
+    },
+    {
+      "name": {
+        "en-US": "On",
+        "ru-RU": "Вкл"
+      },
+      "hidden": false
+    }
+  ],
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1769086044,
+  "temperature_units": "celsius"
+}
