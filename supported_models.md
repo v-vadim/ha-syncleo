@@ -4,8 +4,10 @@
 | Polaris | 2 | PWK1775CGLD |
 | Polaris | 98 | PWK1775CGLD |
 |&nbsp;|||
+| Rusclimate | 1 | Electrolux EAP-1040D, Electrolux EAP-1055D |
 | Rusclimate | 2 | Electrolux SI (SE/BE) EEC, Electrolux Smartinverter, Electrolux Smartinverter PRO, Electrolux Smartinverter PRO 2.0, Electrolux Smartinverter Enamel |
 | Rusclimate | 3 | Ballu ONEAIR ASP-200 |
+| Rusclimate | 4 | Electrolux EHU-3910D, Electrolux EHU-3915D |
 | Rusclimate | 6 | (Transformer DI 3.0) Electrolux Air Gate, Electrolux Rapid, Ballu Apollo, Ballu Evolution, Electrolux Brilliant Marble |
 | Rusclimate | 7 | Zanussi Azurro PRO WiFi, Zanussi Artendo WiFi |
 | Rusclimate | 8 | Electrolux Fusion EVO DC, Electrolux Atrium DC, Electrolux Arctic Air DC, Zanussi Siena DC, Ballu Lagoon DC, Royal Thermo Siena DC, Climber Dresden, Climer Dresden Cki 24, ONE AIR MASTER |
@@ -22,11 +24,17 @@
 | Rusclimate | 19 | Electrolux Regency |
 | Rusclimate | 20 | Ballu Defender DC, Royal Thermo Milano, Ballu Olympio Legend, Electrolux Skandi DC, Ballu Platinum Evolution DC, Electrolux Onix Black Super DC |
 | Rusclimate | 21 | Shuft Soturai, Ballu Maverick DC, Ballu iGreen Pro, Ballu Maverick DC, Electrolux Loft DC, Zanussi Moderno DC, Electrolux Slide DC, Electrolux Arctic Air Wi-Fi, Shuft Asgard Black DC, Ballu Platinum Black DC, Ballu Platinum DC Inverter |
+| Rusclimate | 26 | Electrolux EAP-2050D, Electrolux EAP-2075D |
+| Rusclimate | 27 | Ballu RDU ANTICOVIDgenerator WiFi |
 | Rusclimate | 28 | (Transformer DI 4.0) Electrolux Air Gate, Electrolux Rapid, Ballu Apollo, Ballu Evolution, Electrolux Brilliant Marble, Electrolux ECH/AG, Electrolux ECH/AG2, Electrolux ECH/AT, Electrolux ECH/BM |
+| Rusclimate | 29 | Electrolux ETS-16, Electrolux ETV-16, Royal Thermo RTS-16, Royal Thermo RTI-16 |
 | Rusclimate | 30 | Ballu ONEAIR ASP-200S |
 | Rusclimate | 31 | (Transformer 4.0) Electrolux Air Gate, Electrolux Rapid, Ballu Apollo, Ballu Evolution, Electrolux Brilliant Marble, Electrolux ECH/AG2, Electrolux ECH/AT, Electrolux EIH/R, Electrolux EIH/S, Ballu Plaza |
 | Rusclimate | 32 | Ballu ONEAIR ASP-100, Electrolux EASP-100 |
 | Rusclimate | 33 | Electrolux Centurio IQ 3.0 |
+| Rusclimate | 35 | Electrolux YOGAhealthline 2.0 |
+| Rusclimate | 34 | Electrolux EPVS / ERVX inv |
+| Rusclimate | 36 | Electrolux EPVS / ERVX inv |
 | Rusclimate | 38 | Toshiba Shorai EE |
 | Rusclimate | 41 | Electrolux Monaco DC |
 | Rusclimate | 42 | (Transformer DI 3.0 XS) Electrolux Air Gate, Electrolux Rapid, Ballu Apollo, Ballu Evolution, Electrolux Brilliant Marble |
@@ -34,21 +42,27 @@
 | Rusclimate | 46 | (Transformer DI 4.0) Electrolux Air Gate, Electrolux Rapid, Ballu Apollo, Ballu Evolution, Electrolux Brilliant Marble, Electrolux ECH/AG, Electrolux ECH/AG2, Electrolux ECH/AT, Electrolux ECH/BM |
 | Rusclimate | 47 | Wi-Fi Convection Heater |
 | Rusclimate | 49 | (Transformer 4.0) Electrolux Air Gate, Electrolux Rapid, Ballu Apollo, Ballu Evolution, Electrolux Brilliant Marble, Electrolux ECH/AG2, Electrolux ECH/AT, Electrolux EIH/R, Electrolux EIH/S, Ballu Plaza |
+| Rusclimate | 50 | Electrolux 3D Fireplace |
 | Rusclimate | 51 | Zanussi Massimo Solar 2023 |
 | Rusclimate | 55 | Zanussi Barocco DC, Royal Thermo Barocco DC |
 | Rusclimate | 56 | Toshiba Haori, Toshiba Seiya, Toshiba Shorai E |
 | Rusclimate | 57 | Shuft Berg, MBO M-1, MI-3 DC, NeoLine, HitAir HAM, Monroe Dream Air |
 | Rusclimate | 59 | Ballu ONEAIR ASP-200S |
 | Rusclimate | 60 | Ballu Discovery DC |
+| Rusclimate | 65 | SmartControl |
+| Rusclimate | 67 | Electrolux ETS-16, Electrolux ETV-16, Royal Thermo RTS-16, Royal Thermo RTI-16, Electrolux Maximus WiFi |
 | Rusclimate | 68 | Ballu iGreen Pro, Electrolux Loft DC, Zanussi Moderno DC, Electrolux Slide DC, Electrolux Arctic Air Wi-Fi, Shuft Asgard Black DC, Ballu Platinum Black DC, Ballu Platinum DC Inverter |
 | Rusclimate | 69 | Ballu ONEAIR ASP-100, Electrolux EASP-100 |
 | Rusclimate | 70 | Ballu Universal 3, DC, Free Match |
 | Rusclimate | 71 | (Transformer DI 4.0) Electrolux Air Gate, Electrolux Rapid, Ballu Apollo, Ballu Evolution, Electrolux Brilliant Marble, Electrolux ECH/AG, Electrolux ECH/AG2, Electrolux ECH/AT, Electrolux ECH/BM |
 | Rusclimate | 72 | Zanussi Barocco, Royal Thermo Barocco |
+| Rusclimate | 73 | SmartControl Pro |
 | Rusclimate | 74 | Aurus S |
 | Rusclimate | 76 | Ballu Artendo Inverter, Electrolux Royal Flash, Electrolux Centurio IQ Inverter |
 | Rusclimate | 77 | Royal Thermo Major Inverter, Royal Thermo Smalto Inverter |
+| Rusclimate | 78 | Electrolux ETS-16, Electrolux ETV-16, Royal Thermo RTS-16, Royal Thermo RTI-16 |
 | Rusclimate | 80 | Aurus F |
+| Rusclimate | 81 | Ballu UHB-960 ET |
 | Rusclimate | 82 | Goldstar GSAC/GSACI |
 | Rusclimate | 83 | Ballu Aura 07, Ballu Aura 09/12 |
 | Rusclimate | 84 | Ballu Aura 07, Ballu Aura 09/12 |
@@ -58,7 +72,9 @@
 | Rusclimate | 91 | Royal Thermo Regency |
 | Rusclimate | 93 | Electrolux SI (SE/BE) EEC, Electrolux Smartinverter, Electrolux Smartinverter PRO, Electrolux Smartinverter PRO 2.0, Electrolux Smartinverter Enamel |
 | Rusclimate | 95 | Climer Dresden ??K/in-07/G8, Climer Dresden ??K/in-09/G8, Climer Dresden CK/in-18/G8 |
+| Rusclimate | 98 | Shuft Allston-VH/ERV Комплектный пульт |
 | Rusclimate | 99 | Aurus A |
+| Rusclimate | 100 | Shuft Allston-VH/ERV Пульт AirPad 7 |
 | Rusclimate | 102 | Ballu ONEAIR ASP-90 (without CO₂ sensor or heater) |
 | Rusclimate | 105 | Ballu ONEAIR ASP-90 (with CO₂ sensor and heater) |
 | Rusclimate | 106 | Ballu ONEAIR ASP-90 (with heater, without CO₂ sensor) |
@@ -67,6 +83,15 @@
 | Rusclimate | 109 | Aurus S |
 | Rusclimate | 110 | GoldStar GSTI |
 | Rusclimate | 111 | Shuft SFMS/-09 |
+| Rusclimate | 112 | Royal Thermo 5D DaVinci |
 | Rusclimate | 114 | Shuft SFMS/-07 |
+| Rusclimate | 117 | Ballu AP-135 |
 | Rusclimate | 119 | Electrolux SI (SE/BE) EEC, Electrolux Smartinverter, Electrolux Smartinverter PRO, Electrolux Smartinverter PRO 2.0, Electrolux Smartinverter Enamel |
 | Rusclimate | 120 | Aurus VRF |
+| Rusclimate | 122 | Electrolux EAP-1040D Basalt |
+| Rusclimate | 123 | Ballu Voyager |
+| Rusclimate | 125 | Electrolux Grace DC |
+| Rusclimate | 126 | Ballu ONEAIR ASP-220 |
+| Rusclimate | 128 | Ballu Olympio Pro |
+| Rusclimate | 129 | Electrolux Arizona |
+| Rusclimate | 124 | Ballu ONEAIR ASV-60 |

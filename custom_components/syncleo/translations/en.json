@@ -39,6 +39,15 @@
       "activate_options": {
         "name": "Activate options"
       },
+      "flame": {
+        "name": "Flame"
+      },
+      "flame_color": {
+        "name": "Flame color"
+      },
+      "illumination_brightness": {
+        "name": "Illumination brightness"
+      },
       "reset_filter": {
         "name": "Reset filter life"
       },
@@ -73,6 +82,9 @@
       },
       "volume": {
         "name": "Sound"
+      },
+      "damper_state": {
+        "name": "Open window mode"
       }
     },
     "climate": {
@@ -93,7 +105,12 @@
               "anti_frost": "Anti Frost",
               "manual": "Manual",
               "auto": "Auto",
+              "demo": "Demo",
+              "eco_ventilation": "Eco ventilation",
+              "hybrid": "Hybrid",
               "night": "Sleep",
+              "schedule": "Schedule",
+              "standby": "Standby",
               "turbo": "Turbo",
               "ventilation": "Fan",
               "vacation": "Vacation"
@@ -111,7 +128,13 @@
               "auto": "Auto",
               "night": "Sleep",
               "turbo": "Turbo",
-              "ventilation": "Fan"
+              "ventilation": "Fan",
+              "energy_recovery": "Energy recovery ventilation",
+              "mixed_air": "Mixed air",
+              "purification": "Purification",
+              "supply_air": "Supply air",
+              "on": "On",
+              "sync": "Sync"
             }
           }
         }
@@ -153,6 +176,99 @@
       },
       "vacation_temperature": {
         "name": "Vacation temperature"
+      },
+      "timer": {
+        "name": "Timer"
+      },
+      "cable_power": {
+        "name": "Heating cable power, W"
+      },
+      "comfort_temperature": {
+        "name": "Comfort temperature"
+      },
+      "display_brightness": {
+        "name": "Display brightness, %"
+      },
+      "eco_temperature": {
+        "name": "Eco temperature"
+      },
+      "fan_speed": {
+        "name": "Fan speed, %"
+      },
+      "hysteresis": {
+        "name": "Hysteresis setting"
+      },
+      "manual_speed": {
+        "name": "Manual mode fan speed, %"
+      },
+      "max_temperature_air": {
+        "name": "Maximum air temperature"
+      },
+      "max_temperature_floor": {
+        "name": "Maximum floor temperature"
+      },
+      "min_temperature_air": {
+        "name": "Minimum air temperature"
+      },
+      "min_temperature_floor": {
+        "name": "Minimum floor temperature"
+      },
+      "temperature_calibration": {
+        "name": "Temperature calibration"
+      },
+      "turbo_temperature": {
+        "name": "Turbo temperature"
+      },
+      "fitness_timer": {
+        "name": "Fitness duration"
+      },
+      "meditation_timer": {
+        "name": "Meditation duration"
+      },
+      "prana_iteration_time": {
+        "name": "Prana cycle duration"
+      },
+      "prana_iterations": {
+        "name": "Prana repetitions"
+      },
+      "yoga_iterations": {
+        "name": "Yoga repetitions"
+      },
+      "yoga_timer": {
+        "name": "Yoga duration"
+      },
+      "auto_temperature": {
+        "name": "Auto temperature"
+      },
+      "bypass_range": {
+        "name": "Bypass temperature range"
+      },
+      "bypass_temperature": {
+        "name": "Bypass opening temperature"
+      },
+      "exhaust_fan_speed": {
+        "name": "Exhaust fan speed"
+      },
+      "heater_start_temperature": {
+        "name": "Heater start temperature"
+      },
+      "light_time": {
+        "name": "Backlight off time"
+      },
+      "ventilation_duration": {
+        "name": "Ventilation duration"
+      },
+      "ventilation_interval": {
+        "name": "Interval between ventilation"
+      },
+      "flame_brightness": {
+        "name": "Flame brightness level"
+      },
+      "steam_level": {
+        "name": "Steam level"
+      },
+      "volume": {
+        "name": "Volume level"
       }
     },
     "sensor": {
@@ -175,7 +291,7 @@
         "name": "PM2.5"
       },
       "current_temperature": {
-        "name": "Inlet temperature"
+        "name": "Current temperature"
       },
       "expendables_anode": {
         "name": "Anode resource, d"
@@ -191,6 +307,27 @@
       },
       "power": {
         "name": "Current power"
+      },
+      "current_air_temperature": {
+        "name": "Air temperature"
+      },
+      "current_humidity": {
+        "name": "Current humidity"
+      },
+      "filter_running_days": {
+        "name": "Filter running days"
+      },
+      "lamp_running_hours": {
+        "name": "Lamp running hours"
+      },
+      "modbus": {
+        "name": "Modbus control"
+      },
+      "tvoc": {
+        "name": "TVOC"
+      },
+      "water_level": {
+        "name": "Water level"
       }
     },
     "select": {
@@ -213,6 +350,13 @@
           "melody_sea_sound": "Sea sound"
         }
       },
+      "display_brightness": {
+        "name": "Display brightness",
+        "state": {
+          "brightness_100": "100%",
+          "brightness_50": "50%"
+        }
+      },
       "kettle_temperature_preset": {
         "name": "Temperature preset",
         "state": {
@@ -233,6 +377,7 @@
       "night": {
         "name": "Night mode settings",
         "state": {
+          "night_mode_adult": "Adult",
           "night_mode_off": "Off",
           "night_mode_standard": "Standard",
           "night_mode_child": "Child",
@@ -261,6 +406,117 @@
         "state": {
           "datasource_preset_none": "Internal Sensor"
         }
+      },
+      "floor_mode": {
+        "name": "Floor covering",
+        "state": {
+          "tile": "Tile",
+          "carpet": "Carpet",
+          "laminate": "Laminate",
+          "linoleum": "Linoleum",
+          "other": "Other"
+        }
+      },
+      "resistance": {
+        "name": "Floor sensor resistance",
+        "state": {
+          "caleo_5k": "Caleo 5 kΩ",
+          "teplolux_6_8k": "Teplolux 6.8 kΩ",
+          "electrolux_10k": "Electrolux 10 kΩ",
+          "raychem_12k": "Raychem 12 kΩ",
+          "devi_15k": "Devi 15 kΩ",
+          "eberle_33k": "Eberle 33 kΩ"
+        }
+      },
+      "temperature_control": {
+        "name": "Temperature control",
+        "state": {
+          "air": "Air",
+          "floor": "Floor",
+          "air_with_floor_limit": "Air with floor limit",
+          "floor_with_air_limit": "Floor with air limit"
+        }
+      },
+      "fan_speed": {
+        "name": "Fan speed"
+      },
+      "auto_valve_position": {
+        "name": "Valve position in Auto"
+      },
+      "filter_days": {
+        "name": "Filter replacement interval",
+        "state": {
+          "45_days": "45 days",
+          "60_days": "60 days",
+          "90_days": "90 days",
+          "180_days": "180 days"
+        }
+      },
+      "interval_valve_position": {
+        "name": "Valve position during interval ventilation"
+      },
+      "operating_mode": {
+        "name": "Operating mode",
+        "state": {
+          "off": "Off",
+          "auto": "Auto",
+          "manual": "Manual",
+          "night": "Night",
+          "interval_ventilation": "Interval ventilation"
+        }
+      },
+      "valve_position": {
+        "name": "Valve position"
+      },
+      "bottom_illumination": {
+        "name": "Bottom illumination",
+        "state": {
+          "orange": "Orange",
+          "red": "Red",
+          "yellow": "Yellow",
+          "blue": "Blue",
+          "green": "Green",
+          "purple": "Purple",
+          "pink": "Pink",
+          "auto_1": "Auto 1",
+          "auto_2": "Auto 2",
+          "auto_red": "Auto red",
+          "auto_green": "Auto green",
+          "auto_blue": "Auto blue",
+          "off": "Off"
+        }
+      },
+      "display_temperature_unit": {
+        "name": "Display temperature unit",
+        "state": {
+          "celsius": "Celsius",
+          "fahrenheit": "Fahrenheit"
+        }
+      },
+      "firewood_brightness": {
+        "name": "Firewood brightness",
+        "state": {
+          "min": "Min",
+          "max": "Max"
+        }
+      },
+      "top_illumination": {
+        "name": "Top illumination",
+        "state": {
+          "orange": "Orange",
+          "red": "Red",
+          "yellow": "Yellow",
+          "blue": "Blue",
+          "green": "Green",
+          "purple": "Purple",
+          "pink": "Pink",
+          "auto_1": "Auto 1",
+          "auto_2": "Auto 2",
+          "auto_red": "Auto red",
+          "auto_green": "Auto green",
+          "auto_blue": "Auto blue",
+          "off": "Off"
+        }
       }
     },
     "switch": {
@@ -287,6 +543,9 @@
       },
       "auto_off_backlight": {
         "name": "Auto-off backlight"
+      },
+      "auto_off_display": {
+        "name": "Auto off display"
       },
       "backlight": {
         "name": "Backlight"
@@ -315,11 +574,17 @@
       "freeze_protection": {
         "name": "Freeze Protection +8"
       },
+      "full_display_brightness": {
+        "name": "Full display brightness"
+      },
       "fungus_proof": {
         "name": "Fungus proof"
       },
       "goldstar_gsti_damper": {
         "name": "Health"
+      },
+      "half_display_brightness": {
+        "name": "Display brightness 50%"
       },
       "ionization": {
         "name": "Ionization"
@@ -329,6 +594,9 @@
       },
       "night": {
         "name": "Night Mode"
+      },
+      "noiseless": {
+        "name": "Noiseless"
       },
       "selfclean": {
         "name": "Self clean"
@@ -353,16 +621,27 @@
       },
       "warm_stream": {
         "name": "Warm Air Stream"
+      },
+      "open_window_detection": {
+        "name": "Open window detection"
+      },
+      "device_power": {
+        "name": "Power"
       }
     },
     "water_heater": {
       "syncleo_boiler": {
         "state": {
+          "bss": "BSS",
           "off": "Off",
           "eco": "Low (700W)",
+          "economy": "Eco",
           "electric": "Mid (1300W)",
           "performance": "Turbo (2000W)",
-          "heat_pump": "NO Frost"
+          "heat_pump": "NO Frost",
+          "idle": "Waiting for heating",
+          "smart_mode": "Smart",
+          "timer": "Timer"
         }
       },
       "syncleo_kettle": {
@@ -373,6 +652,23 @@
           "warm_up_keep": "Warm up with keep",
           "iq_boiling": "IQ Boiling",
           "tea_time": "Tea time"
+        }
+      }
+    },
+    "humidifier": {
+      "syncleo_humidifier": {
+        "state_attributes": {
+          "mode": {
+            "state": {
+              "aroma": "Aroma",
+              "fitness": "Fitness",
+              "health": "Health",
+              "meditation": "Meditation",
+              "prana_auto": "Prana auto",
+              "prana_manual": "Prana manual",
+              "yoga": "Yoga"
+            }
+          }
         }
       }
     }

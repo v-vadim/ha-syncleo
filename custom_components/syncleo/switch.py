@@ -20,9 +20,7 @@ async def async_setup_entry(
 
     if isinstance(profile, SwitchMixin) and profile.switches:
         entities = [
-            SyncleoSwitch(conn, profile, entry, key)
-            for key in profile.switches
-            if key in FEATURE_TO_COMMAND_MAP
+            SyncleoSwitch(conn, profile, entry, key) for key in profile.switches
         ]
         async_add_entities(entities)
 
@@ -49,7 +47,9 @@ class SyncleoSwitch(SyncleoBaseEntity, SwitchEntity):
         )
 
         self._attr_unique_id = f"{self._device_unique_id}_{feature_key}"
-        self._attr_translation_key = feature_key
+        self._attr_translation_key = (
+            config.translation_key if config is not None else None
+        ) or feature_key
         self._is_on = False
 
     @property

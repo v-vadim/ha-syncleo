@@ -39,6 +39,15 @@
       "activate_options": {
         "name": "Активация опций"
       },
+      "flame": {
+        "name": "Пламя"
+      },
+      "flame_color": {
+        "name": "Цвет пламени"
+      },
+      "illumination_brightness": {
+        "name": "Яркость подсветки"
+      },
       "reset_filter": {
         "name": "Сброс ресурса фильтра"
       },
@@ -73,6 +82,9 @@
       },
       "volume": {
         "name": "Звук"
+      },
+      "damper_state": {
+        "name": "Режим открытого окна"
       }
     },
     "climate": {
@@ -93,7 +105,12 @@
               "anti_frost": "Anti Frost",
               "manual": "Ручной",
               "auto": "Авто",
+              "demo": "Демонстрационный",
+              "eco_ventilation": "Эко проветривание",
+              "hybrid": "Гибридный",
               "night": "Ночной",
+              "schedule": "Расписание",
+              "standby": "Дежурный",
               "turbo": "Турбо",
               "ventilation": "Вентиляция",
               "vacation": "Отпуск"
@@ -111,7 +128,13 @@
               "auto": "Авто",
               "night": "Ночной",
               "turbo": "Турбо",
-              "ventilation": "Вентиляция"
+              "ventilation": "Вентиляция",
+              "energy_recovery": "Вентиляция с рекуперацией энергии",
+              "mixed_air": "Режим смешанного воздуха",
+              "purification": "Режим очистки",
+              "supply_air": "Режим приточного воздуха",
+              "on": "Вкл",
+              "sync": "Синхронный"
             }
           }
         }
@@ -153,6 +176,99 @@
       },
       "vacation_temperature": {
         "name": "Температура режима Отпуск"
+      },
+      "timer": {
+        "name": "Таймер"
+      },
+      "cable_power": {
+        "name": "Мощность нагревательного кабеля, Вт"
+      },
+      "comfort_temperature": {
+        "name": "Температура Комфорт"
+      },
+      "display_brightness": {
+        "name": "Яркость дисплея, %"
+      },
+      "eco_temperature": {
+        "name": "Температура Эко"
+      },
+      "fan_speed": {
+        "name": "Скорость вентилятора, %"
+      },
+      "hysteresis": {
+        "name": "Настройка гистерезиса"
+      },
+      "manual_speed": {
+        "name": "Скорость вентилятора в ручном режиме, %"
+      },
+      "max_temperature_air": {
+        "name": "Максимальная температура воздуха"
+      },
+      "max_temperature_floor": {
+        "name": "Максимальная температура пола"
+      },
+      "min_temperature_air": {
+        "name": "Минимальная температура воздуха"
+      },
+      "min_temperature_floor": {
+        "name": "Минимальная температура пола"
+      },
+      "temperature_calibration": {
+        "name": "Калибровка температуры"
+      },
+      "turbo_temperature": {
+        "name": "Температура Турбо"
+      },
+      "fitness_timer": {
+        "name": "Длительность фитнеса"
+      },
+      "meditation_timer": {
+        "name": "Длительность медитации"
+      },
+      "prana_iteration_time": {
+        "name": "Длительность цикла праны"
+      },
+      "prana_iterations": {
+        "name": "Количество повторений праны"
+      },
+      "yoga_iterations": {
+        "name": "Количество повторений йоги"
+      },
+      "yoga_timer": {
+        "name": "Длительность йоги"
+      },
+      "auto_temperature": {
+        "name": "Температура Auto"
+      },
+      "bypass_range": {
+        "name": "Диапазон температур открытия перепуска"
+      },
+      "bypass_temperature": {
+        "name": "Температура открытия перепуска"
+      },
+      "exhaust_fan_speed": {
+        "name": "Скорость вытяжного вентилятора"
+      },
+      "heater_start_temperature": {
+        "name": "Температура запуска нагревателя"
+      },
+      "light_time": {
+        "name": "Время выключения подсветки"
+      },
+      "ventilation_duration": {
+        "name": "Продолжительность проветривания"
+      },
+      "ventilation_interval": {
+        "name": "Интервал между проветриванием"
+      },
+      "flame_brightness": {
+        "name": "Уровень яркости пламени"
+      },
+      "steam_level": {
+        "name": "Ступень испарения"
+      },
+      "volume": {
+        "name": "Уровень громкости"
       }
     },
     "select": {
@@ -175,6 +291,13 @@
           "melody_sea_sound": "Звук моря"
         }
       },
+      "display_brightness": {
+        "name": "Яркость дисплея",
+        "state": {
+          "brightness_100": "100%",
+          "brightness_50": "50%"
+        }
+      },
       "kettle_temperature_preset": {
         "name": "Предустановка температуры",
         "state": {
@@ -195,6 +318,7 @@
       "night": {
         "name": "Настройки ночного режима",
         "state": {
+          "night_mode_adult": "Для взрослых",
           "night_mode_off": "Выключен",
           "night_mode_standard": "Стандартный",
           "night_mode_child": "Детский",
@@ -223,6 +347,117 @@
         "state": {
           "datasource_preset_none": "Встроенный датчик"
         }
+      },
+      "floor_mode": {
+        "name": "Покрытие пола",
+        "state": {
+          "tile": "Плитка",
+          "carpet": "Ковролин",
+          "laminate": "Ламинат",
+          "linoleum": "Линолеум",
+          "other": "Другое"
+        }
+      },
+      "resistance": {
+        "name": "Сопротивление датчика пола",
+        "state": {
+          "caleo_5k": "Caleo 5 кОм",
+          "teplolux_6_8k": "Теплолюкс 6,8 кОм",
+          "electrolux_10k": "Electrolux 10 кОм",
+          "raychem_12k": "Raychem 12 кОм",
+          "devi_15k": "Devi 15 кОм",
+          "eberle_33k": "Eberle 33 кОм"
+        }
+      },
+      "temperature_control": {
+        "name": "Управление температурой",
+        "state": {
+          "air": "Воздух",
+          "floor": "Пол",
+          "air_with_floor_limit": "Воздух с ограничением по полу",
+          "floor_with_air_limit": "Пол с ограничением по воздуху"
+        }
+      },
+      "fan_speed": {
+        "name": "Скорость вентилятора"
+      },
+      "auto_valve_position": {
+        "name": "Положение клапана в Auto"
+      },
+      "filter_days": {
+        "name": "Срок замены фильтра",
+        "state": {
+          "45_days": "45 дней",
+          "60_days": "60 дней",
+          "90_days": "90 дней",
+          "180_days": "180 дней"
+        }
+      },
+      "interval_valve_position": {
+        "name": "Положение клапана при интервальном проветривании"
+      },
+      "operating_mode": {
+        "name": "Режим работы",
+        "state": {
+          "off": "Выкл",
+          "auto": "Авто",
+          "manual": "Ручной",
+          "night": "Ночной",
+          "interval_ventilation": "Интервальное проветривание"
+        }
+      },
+      "valve_position": {
+        "name": "Положение клапана"
+      },
+      "bottom_illumination": {
+        "name": "Нижняя подсветка",
+        "state": {
+          "orange": "Оранжевый",
+          "red": "Красный",
+          "yellow": "Жёлтый",
+          "blue": "Синий",
+          "green": "Зелёный",
+          "purple": "Фиолетовый",
+          "pink": "Розовый",
+          "auto_1": "Авто 1",
+          "auto_2": "Авто 2",
+          "auto_red": "Авто красный",
+          "auto_green": "Авто зелёный",
+          "auto_blue": "Авто синий",
+          "off": "Выключить"
+        }
+      },
+      "display_temperature_unit": {
+        "name": "Единица температуры на дисплее",
+        "state": {
+          "celsius": "Цельсий",
+          "fahrenheit": "Фаренгейт"
+        }
+      },
+      "firewood_brightness": {
+        "name": "Яркость подсветки дров",
+        "state": {
+          "min": "Минимальная",
+          "max": "Максимальная"
+        }
+      },
+      "top_illumination": {
+        "name": "Верхняя подсветка",
+        "state": {
+          "orange": "Оранжевый",
+          "red": "Красный",
+          "yellow": "Жёлтый",
+          "blue": "Синий",
+          "green": "Зелёный",
+          "purple": "Фиолетовый",
+          "pink": "Розовый",
+          "auto_1": "Авто 1",
+          "auto_2": "Авто 2",
+          "auto_red": "Авто красный",
+          "auto_green": "Авто зелёный",
+          "auto_blue": "Авто синий",
+          "off": "Выключить"
+        }
       }
     },
     "sensor": {
@@ -245,7 +480,7 @@
         "name": "PM2.5"
       },
       "current_temperature": {
-        "name": "Температура притока"
+        "name": "Текущая температура"
       },
       "expendables_anode": {
         "name": "Ресурс анода, д"
@@ -261,6 +496,27 @@
       },
       "power": {
         "name": "Текущая мощность"
+      },
+      "current_air_temperature": {
+        "name": "Температура воздуха"
+      },
+      "current_humidity": {
+        "name": "Текущая влажность"
+      },
+      "filter_running_days": {
+        "name": "Наработка фильтра"
+      },
+      "lamp_running_hours": {
+        "name": "Наработка ламп"
+      },
+      "modbus": {
+        "name": "Управление по Modbus"
+      },
+      "tvoc": {
+        "name": "TVOC"
+      },
+      "water_level": {
+        "name": "Уровень воды"
       }
     },
     "switch": {
@@ -288,11 +544,14 @@
       "auto_off_backlight": {
         "name": "Автоотключение подсветки"
       },
+      "auto_off_display": {
+        "name": "Автоотключение дисплея"
+      },
       "backlight": {
         "name": "Подсветка"
       },
       "breeze_away": {
-        "name": "Деликативный обдув"
+        "name": "Деликатный обдув"
       },
       "breezer_damper": {
         "name": "Рециркуляция"
@@ -315,11 +574,17 @@
       "freeze_protection": {
         "name": "Автообогрев +8"
       },
+      "full_display_brightness": {
+        "name": "Полная яркость дисплея"
+      },
       "fungus_proof": {
         "name": "Профилактика грибка"
       },
       "goldstar_gsti_damper": {
         "name": "Здоровье"
+      },
+      "half_display_brightness": {
+        "name": "Яркость дисплея 50%"
       },
       "ionization": {
         "name": "Ионизация"
@@ -329,6 +594,9 @@
       },
       "night": {
         "name": "Ночной режим"
+      },
+      "noiseless": {
+        "name": "Бесшумный режим"
       },
       "selfclean": {
         "name": "Самоочистка"
@@ -353,16 +621,27 @@
       },
       "warm_stream": {
         "name": "Тёплый воздушный поток"
+      },
+      "open_window_detection": {
+        "name": "Открытое окно"
+      },
+      "device_power": {
+        "name": "Питание"
       }
     },
     "water_heater": {
       "syncleo_boiler": {
         "state": {
+          "bss": "Самоочистка (BSS)",
           "off": "Выключено",
           "eco": "Низкий (700Вт)",
+          "economy": "Eco",
           "electric": "Средний (1300Вт)",
           "performance": "Турбо (2000Вт)",
-          "heat_pump": "NO Frost"
+          "heat_pump": "NO Frost",
+          "idle": "Ожидание нагрева",
+          "smart_mode": "Smart",
+          "timer": "Таймер"
         }
       },
       "syncleo_kettle": {
@@ -373,6 +652,23 @@
           "warm_up_keep": "Разогрев с удержанием",
           "iq_boiling": "IQ кипячение",
           "tea_time": "Чайная церемония"
+        }
+      }
+    },
+    "humidifier": {
+      "syncleo_humidifier": {
+        "state_attributes": {
+          "mode": {
+            "state": {
+              "aroma": "Арома",
+              "fitness": "Фитнес",
+              "health": "Здоровье",
+              "meditation": "Медитация",
+              "prana_auto": "Прана авто",
+              "prana_manual": "Прана ручной",
+              "yoga": "Йога"
+            }
+          }
         }
       }
     }

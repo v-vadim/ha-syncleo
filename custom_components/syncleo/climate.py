@@ -8,6 +8,7 @@ from homeassistant.components.climate.const import (
     SWING_OFF,
     SWING_VERTICAL,
     ClimateEntityFeature,
+    HVACAction,
     HVACMode,
 )
 from homeassistant.const import ATTR_TEMPERATURE, UnitOfTemperature
@@ -73,7 +74,27 @@ class SyncleoClimate(SyncleoBaseEntity, ClimateEntity):
         return self._current_hvac_mode
 
     @property
+    def hvac_action(self) -> HVACAction | None:
+        field_key = self._profile.heating_program_data_field
+        if field_key is None:
+            return None
+        if self.hvac_mode == HVACMode.OFF:
+            return HVACAction.OFF
+        data = self.get_known_program_data(field_key)
+        if data is None:
+            return None
+        return (
+            HVACAction.HEATING
+            if int.from_bytes(data, byteorder="little")
+            else HVACAction.IDLE
+        )
+
+    @property
     def preset_mode(self) -> str | None:
+        if self._current_preset_mode == PRESET_NONE and PRESET_NONE not in (
+            self.preset_modes or []
+        ):
+            return None
         return self._current_preset_mode
 
     @property
@@ -95,6 +116,20 @@ class SyncleoClimate(SyncleoBaseEntity, ClimateEntity):
         if self._requirement_is_absent(self._profile.target_temperature_requirement):
             features &= ~ClimateEntityFeature.TARGET_TEMPERATURE
         return features
+
+    @property
+    def max_temp(self) -> float:
+        field_key = self._profile.preset_max_temp_offsets.get(
+            self._current_preset_mode or PRESET_NONE
+        )
+        if field_key is None:
+            return self._attr_max_temp
+
+        data = self.get_known_program_data(field_key)
+        if data is None:
+            return self._attr_max_temp
+
+        return self._attr_max_temp - int.from_bytes(data, byteorder="little")
 
     @property
     def target_temperature(self) -> float | None:
@@ -174,7 +209,7 @@ class SyncleoClimate(SyncleoBaseEntity, ClimateEntity):
             self._target_temp = float(cmd.value)
             update_needed = True
 
-        elif cmd.command_type == UdpCommandType.TEMPERATURE:
+        elif cmd.command_type == self._profile.cmd_current_temperature:
             self._current_temp = float(cmd.value)
             update_needed = True
 
@@ -231,7 +266,7 @@ class SyncleoClimate(SyncleoBaseEntity, ClimateEntity):
 
         temp = kwargs.get(ATTR_TEMPERATURE)
         if temp is not None:
-            temp = max(self._attr_min_temp, min(self._attr_max_temp, float(temp)))
+            temp = max(self._attr_min_temp, min(self.max_temp, float(temp)))
             await self.async_send_command(CmdTargetTemperature(temp))
             self._target_temp = temp
             self.async_write_ha_state()

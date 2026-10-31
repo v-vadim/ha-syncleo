@@ -14,6 +14,7 @@ from pysyncleo.commands import (
     CmdBss,
     CmdChildLock,
     CmdCO2,
+    CmdCurrentHumidity,
     CmdCurrentTemperature,
     CmdDamper,
     CmdDataSource,
@@ -22,15 +23,20 @@ from pysyncleo.commands import (
     CmdInitDiagnostic,
     CmdIonization,
     CmdKeepWarm,
+    CmdMode,
     CmdNight,
     CmdPlaceholder1,
     CmdPlaceholder2,
     CmdPlaceholder3,
+    CmdPlaceholder4,
+    CmdPlaceholder5,
+    CmdPlaceholder6,
     CmdPM2,
     CmdProgramData,
     CmdSmartMode,
     CmdSpeed,
     CmdTank,
+    CmdTargetHumidity,
     CmdTargetId,
     CmdTargetTemperature,
     CmdTargetTime,
@@ -55,43 +61,60 @@ from .const import (
     FEATURE_AURUS_VRF_NOISELESS_MODE,
     FEATURE_AUTO_OFF_BACKLIGHT,
     FEATURE_BACKLIGHT,
+    FEATURE_BOTTOM_ILLUMINATION,
     FEATURE_BREEZER_DAMPER,
     FEATURE_BREEZER_MELODY,
     FEATURE_BREEZER_TEMPERATURE,
     FEATURE_BSS,
     FEATURE_CHILD_LOCK,
+    FEATURE_CURRENT_AIR_TEMPERATURE,
     FEATURE_CURRENT_CO2,
+    FEATURE_CURRENT_HUMIDITY,
     FEATURE_CURRENT_PM2,
     FEATURE_CURRENT_TEMPERATURE,
     FEATURE_DAMPER,
     FEATURE_DATA_SOURCE_CURRENT_TEMPERATURE,
+    FEATURE_DEVICE_POWER,
     FEATURE_ECO_AS_SMART_MODE,
     FEATURE_ERROR,
+    FEATURE_EXHAUST_FAN_SPEED,
     FEATURE_EXPENDABLES_ANODE,
     FEATURE_EXPENDABLES_FILTER,
     FEATURE_EXPENDABLES_PREFILTER,
+    FEATURE_FAN_SPEED,
+    FEATURE_FIREWOOD_BRIGHTNESS,
+    FEATURE_FLAME,
+    FEATURE_FLAME_BRIGHTNESS,
+    FEATURE_FLAME_COLOR,
     FEATURE_GATEWAY_LATENCY,
     FEATURE_GATEWAY_PACKET_LOSS,
     FEATURE_GOLDSTAR_GSTI_BREEZE_AWAY,
     FEATURE_GOLDSTAR_GSTI_CLEAN,
     FEATURE_GOLDSTAR_GSTI_DAMPER,
-    FEATURE_GOLDSTAR_GSTI_FREEZE_PROTECTION,
+    FEATURE_ILLUMINATION_BRIGHTNESS,
     FEATURE_IONIZATION,
     FEATURE_KEEP_WARM,
     FEATURE_KETTLE_TEMPERATURE_PRESET,
     FEATURE_MQTT_LATENCY,
     FEATURE_NIGHT,
+    FEATURE_OPEN_WINDOW_DETECTION,
+    FEATURE_OPERATING_MODE,
     FEATURE_POWER_LEVEL,
     FEATURE_REMAINING_TIME,
     FEATURE_RSSI,
     FEATURE_SHUFT_SFMS_07_09_FREEZE_PROTECTION,
     FEATURE_SHUFT_SFMS_09_ANTI_MELDEW,
     FEATURE_SMART_MODE,
+    FEATURE_STEAM_LEVEL,
     FEATURE_TANK,
+    FEATURE_TIMER,
+    FEATURE_TOP_ILLUMINATION,
     FEATURE_TURBO,
     FEATURE_ULTRAVIOLET,
+    FEATURE_VALVE_POSITION,
     FEATURE_VOLUME,
     FEATURE_WARM_STREAM,
+    FEATURE_WATER_LEVEL,
 )
 from .devices import DeviceBaseProfile
 from .models import SyncleoConfigEntry
@@ -105,7 +128,23 @@ FEATURE_TO_COMMAND_MAP = {
     FEATURE_BACKLIGHT: CmdBacklight,
     FEATURE_BSS: CmdBss,
     FEATURE_CHILD_LOCK: CmdChildLock,
+    FEATURE_DEVICE_POWER: CmdMode,
+    FEATURE_STEAM_LEVEL: CmdTargetHumidity,
+    FEATURE_WATER_LEVEL: CmdTank,
+    FEATURE_FIREWOOD_BRIGHTNESS: CmdBacklight,
+    FEATURE_FLAME: CmdPlaceholder1,
+    FEATURE_FLAME_COLOR: CmdPlaceholder2,
+    FEATURE_FLAME_BRIGHTNESS: CmdPlaceholder3,
+    FEATURE_BOTTOM_ILLUMINATION: CmdPlaceholder4,
+    FEATURE_TOP_ILLUMINATION: CmdPlaceholder5,
+    FEATURE_ILLUMINATION_BRIGHTNESS: CmdPlaceholder6,
+    FEATURE_TIMER: CmdTargetTime,
     FEATURE_CURRENT_CO2: CmdCO2,
+    FEATURE_CURRENT_AIR_TEMPERATURE: CmdCurrentHumidity,
+    FEATURE_CURRENT_HUMIDITY: CmdCurrentHumidity,
+    FEATURE_EXHAUST_FAN_SPEED: CmdTargetHumidity,
+    FEATURE_OPERATING_MODE: CmdMode,
+    FEATURE_VALVE_POSITION: CmdSpeed,
     FEATURE_CURRENT_PM2: CmdPM2,
     FEATURE_CURRENT_TEMPERATURE: CmdCurrentTemperature,
     FEATURE_DAMPER: CmdDamper,
@@ -115,12 +154,14 @@ FEATURE_TO_COMMAND_MAP = {
     FEATURE_EXPENDABLES_ANODE: CmdExpendables,
     FEATURE_EXPENDABLES_FILTER: CmdExpendables,
     FEATURE_EXPENDABLES_PREFILTER: CmdExpendables,
+    FEATURE_FAN_SPEED: CmdSpeed,
     FEATURE_GATEWAY_LATENCY: CmdInitDiagnostic,
     FEATURE_GATEWAY_PACKET_LOSS: CmdInitDiagnostic,
     FEATURE_IONIZATION: CmdIonization,
     FEATURE_KEEP_WARM: CmdKeepWarm,
     FEATURE_MQTT_LATENCY: CmdInitDiagnostic,
     FEATURE_NIGHT: CmdNight,
+    FEATURE_OPEN_WINDOW_DETECTION: CmdDamper,
     FEATURE_POWER_LEVEL: CmdSpeed,
     FEATURE_SMART_MODE: CmdSmartMode,
     FEATURE_REMAINING_TIME: CmdTargetTime,
@@ -140,10 +181,9 @@ FEATURE_TO_COMMAND_MAP = {
     FEATURE_BREEZER_DAMPER: CmdDamper,
     FEATURE_BREEZER_MELODY: CmdAmount,
     FEATURE_BREEZER_TEMPERATURE: CmdTargetTemperature,
-    FEATURE_GOLDSTAR_GSTI_BREEZE_AWAY: CmdPlaceholder1,
+    FEATURE_GOLDSTAR_GSTI_BREEZE_AWAY: CmdPlaceholder3,
     FEATURE_GOLDSTAR_GSTI_CLEAN: CmdPlaceholder2,
     FEATURE_GOLDSTAR_GSTI_DAMPER: CmdDamper,
-    FEATURE_GOLDSTAR_GSTI_FREEZE_PROTECTION: CmdPlaceholder3,
     FEATURE_KETTLE_TEMPERATURE_PRESET: CmdTargetTemperature,
     FEATURE_SHUFT_SFMS_07_09_FREEZE_PROTECTION: CmdPlaceholder1,
     FEATURE_SHUFT_SFMS_09_ANTI_MELDEW: CmdPlaceholder2,
@@ -285,6 +325,30 @@ class SyncleoBaseEntity(Entity):
             return data
         field = self._profile.program_data_fields.get(feature_key)
         return bytes(field.size) if field else b""
+
+    def get_program_data_bounds(self, feature_key: str) -> tuple[int, int]:
+        """Resolve numeric bounds from received fields, or use profile defaults."""
+        config = self._profile.program_data_fields[feature_key]
+        min_value, max_value = config.min_value, config.max_value
+        if config.min_value_source is not None:
+            data = self.get_known_program_data(config.min_value_source)
+            if data is not None:
+                value = int.from_bytes(data, byteorder="little")
+                min_value = (
+                    config.min_value_map.get(value, min_value)
+                    if config.min_value_map
+                    else value
+                )
+        if config.max_value_source is not None:
+            data = self.get_known_program_data(config.max_value_source)
+            if data is not None:
+                value = int.from_bytes(data, byteorder="little")
+                max_value = (
+                    config.max_value_map.get(value, max_value)
+                    if config.max_value_map
+                    else value
+                )
+        return min_value, max_value
 
     def _requirement_is_absent(self, feature_key: str | None) -> bool:
         """Only a received zero confirms that optional hardware is absent."""

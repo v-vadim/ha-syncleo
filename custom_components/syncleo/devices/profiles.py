@@ -4,6 +4,7 @@ from typing import Any
 
 from homeassistant.components.climate.const import ClimateEntityFeature, HVACMode
 from homeassistant.components.fan import FanEntityFeature
+from homeassistant.components.humidifier import HumidifierEntityFeature
 from homeassistant.components.sensor import SensorDeviceClass, SensorStateClass
 from homeassistant.components.water_heater import WaterHeaterEntityFeature
 from homeassistant.const import (
@@ -23,9 +24,15 @@ from ..const import (
     FEATURE_MQTT_LATENCY,
     FEATURE_RSSI,
     PROFILE_TYPE_AC,
+    PROFILE_TYPE_AIR_CLEANER,
     PROFILE_TYPE_BOILER,
+    PROFILE_TYPE_BREEZER,
+    PROFILE_TYPE_FIREPLACE,
     PROFILE_TYPE_HEATER,
+    PROFILE_TYPE_HUMIDIFIER,
     PROFILE_TYPE_KETTLE,
+    PROFILE_TYPE_THERMOSTAT,
+    PROFILE_TYPE_VENTILATION,
 )
 
 
@@ -36,6 +43,7 @@ class NumberBounds:
     min_value: int = 0
     max_value: int = 1
     step: int = 1
+    unit_of_measurement: str | None = None
 
 
 @dataclass(kw_only=True)
@@ -50,6 +58,13 @@ class ProgramDataField(NumberBounds):
     mode: int
     offset: int = 0
     size: int = 1
+    value_scale: float = 1.0
+    value_offset: float = 0.0
+    min_value_source: str | None = None
+    min_value_map: dict[int, int] = field(default_factory=dict)
+    max_value_source: str | None = None
+    max_value_map: dict[int, int] = field(default_factory=dict)
+    available_when: tuple[str, int] | None = None
 
 
 @dataclass
@@ -90,6 +105,7 @@ class SensorConfig:
 @dataclass(kw_only=True)
 class SwitchConfig:
     required_program_data_field: str | None = None
+    translation_key: str | None = None
 
 
 DEFAULT_SENSOR_CONFIGS = {
@@ -237,7 +253,7 @@ class DeviceBaseProfile(PlatformProviderBase):
 
 
 @dataclass(kw_only=True)
-class BreezerProfile(
+class VentilationControlProfile(
     DeviceBaseProfile,
     BinarySensorMixin,
     NumberMixin,
@@ -245,7 +261,49 @@ class BreezerProfile(
     SensorMixin,
     SwitchMixin,
 ):
-    """Profile for Breezers and Ventilation systems."""
+    """Ventilation controls without a fan or climate main entity."""
+
+    profile_type: str = PROFILE_TYPE_VENTILATION
+
+
+@dataclass(kw_only=True)
+class AirCleanerProfile(
+    DeviceBaseProfile,
+    ButtonMixin,
+    BinarySensorMixin,
+    NumberMixin,
+    SelectMixin,
+    SensorMixin,
+    SwitchMixin,
+):
+    """Profile for air cleaners exposed as fan entities."""
+
+    profile_type: str = PROFILE_TYPE_AIR_CLEANER
+    supported_features: FanEntityFeature = (
+        FanEntityFeature.SET_SPEED
+        | FanEntityFeature.PRESET_MODE
+        | FanEntityFeature.TURN_OFF
+        | FanEntityFeature.TURN_ON
+    )
+    speed_count: int
+    preset_modes_map: dict[str, int] = field(default_factory=dict)
+    default_preset_mode: str
+
+    @property
+    def supported_platforms(self) -> list[Platform]:
+        return super().supported_platforms + [Platform.FAN]
+
+
+@dataclass(kw_only=True)
+class VentilationProfile(
+    DeviceBaseProfile,
+    BinarySensorMixin,
+    NumberMixin,
+    SelectMixin,
+    SensorMixin,
+    SwitchMixin,
+):
+    """Profile for Ventilation systems."""
 
     supported_features: FanEntityFeature
     speed_count: int
@@ -267,7 +325,7 @@ class ClimateProfile(
     SensorMixin,
     SwitchMixin,
 ):
-    """Profile for Heaters and Air Conditioners."""
+    """Base profile for devices exposed as climate entities."""
 
     min_temp: int
     max_temp: int
@@ -278,10 +336,13 @@ class ClimateProfile(
     default_hvac_mode: HVACMode
     turn_on_program_data_field: str | None = None
 
+    cmd_current_temperature: UdpCommandType = UdpCommandType.TEMPERATURE
     cmd_current_humidity: UdpCommandType | None = None
+    heating_program_data_field: str | None = None
 
     preset_modes_map: dict[str, int] = field(default_factory=dict)
     preset_mode_requirements: dict[str, str] = field(default_factory=dict)
+    preset_max_temp_offsets: dict[str, str] = field(default_factory=dict)
     target_temperature_requirement: str | None = None
 
     cmd_fan_mode: UdpCommandType | None = None
@@ -292,6 +353,39 @@ class ClimateProfile(
     @property
     def supported_platforms(self) -> list[Platform]:
         return super().supported_platforms + [Platform.CLIMATE]
+
+
+@dataclass(kw_only=True)
+class BreezerProfile(ClimateProfile):
+    """Profile for breezers exposed as climate entities."""
+
+    fan_modes_count: int
+
+    profile_type: str = PROFILE_TYPE_BREEZER
+    min_temp: int = 5
+    max_temp: int = 25
+    target_temp_step: float = 1.0
+    supported_features: ClimateEntityFeature = (
+        ClimateEntityFeature.TARGET_TEMPERATURE
+        | ClimateEntityFeature.FAN_MODE
+        | ClimateEntityFeature.PRESET_MODE
+        | ClimateEntityFeature.TURN_ON
+        | ClimateEntityFeature.TURN_OFF
+    )
+    hvac_modes_map: dict[HVACMode, int] = field(
+        default_factory=lambda: {
+            HVACMode.OFF: 0,
+            HVACMode.FAN_ONLY: 1,
+        }
+    )
+    default_hvac_mode: HVACMode = HVACMode.FAN_ONLY
+    cmd_fan_mode: UdpCommandType | None = UdpCommandType.SPEED
+
+    def __post_init__(self) -> None:
+        super().__post_init__()
+        self.fan_modes_map = {
+            str(speed): speed for speed in range(1, self.fan_modes_count + 1)
+        }
 
 
 @dataclass(kw_only=True)
@@ -313,6 +407,9 @@ class WaterHeaterProfile(
 
     operation_modes_map: dict[str, int]
     default_operation_mode: str
+    turn_on_program_data_field: str | None = None
+    operation_mode_aliases: dict[int, int] = field(default_factory=dict)
+    operation_mode_states: dict[int, str] = field(default_factory=dict)
 
     @property
     def supported_platforms(self) -> list[Platform]:
@@ -357,6 +454,35 @@ class HeaterProfile(ClimateProfile):
 
 
 @dataclass(kw_only=True)
+class ThermostatProfile(ClimateProfile):
+    """Profile for thermostats with device-defined presets."""
+
+    profile_type: str = PROFILE_TYPE_THERMOSTAT
+    target_temp_step: float = 0.1
+    supported_features: ClimateEntityFeature = (
+        ClimateEntityFeature.TARGET_TEMPERATURE
+        | ClimateEntityFeature.PRESET_MODE
+        | ClimateEntityFeature.TURN_ON
+        | ClimateEntityFeature.TURN_OFF
+    )
+
+
+@dataclass(kw_only=True)
+class FireplaceProfile(
+    DeviceBaseProfile,
+    ButtonMixin,
+    LightMixin,
+    NumberMixin,
+    SelectMixin,
+    SensorMixin,
+    SwitchMixin,
+):
+    """Profile for decorative fireplaces without a temperature target."""
+
+    profile_type: str = PROFILE_TYPE_FIREPLACE
+
+
+@dataclass(kw_only=True)
 class KettleProfile(WaterHeaterProfile):
     profile_type: str = PROFILE_TYPE_KETTLE
     min_temp: int = 30
@@ -369,37 +495,35 @@ class KettleProfile(WaterHeaterProfile):
     )
 
 
+@dataclass(kw_only=True)
+class HumidifierProfile(
+    DeviceBaseProfile,
+    ButtonMixin,
+    BinarySensorMixin,
+    LightMixin,
+    NumberMixin,
+    SelectMixin,
+    SensorMixin,
+    SwitchMixin,
+):
+    """Profile for humidifiers with optional controls on other platforms."""
+
+    profile_type: str = PROFILE_TYPE_HUMIDIFIER
+    supported_features: HumidifierEntityFeature = HumidifierEntityFeature.MODES
+    min_humidity: int
+    max_humidity: int
+    target_humidity_step: int = 1
+    modes_map: dict[str, int] = field(default_factory=dict)
+    default_mode: str
+
+    @property
+    def supported_platforms(self) -> list[Platform]:
+        return super().supported_platforms + [Platform.HUMIDIFIER]
+
+
 # ==========================================
 #     TEMPLATES FOR FUTURE DEVICE PROFILES
 # ==========================================
-
-# @dataclass(kw_only=True)
-# class HumidifierProfile(DeviceBaseProfile):
-#     """Profile for Humidifiers."""
-
-#     min_humidity: int
-#     max_humidity: int
-#     supported_features: HumidifierEntityFeature
-#     cmd_mode: UdpCommandType
-#     modes_map: Dict[str, int]
-#     cmd_target_humidity: UdpCommandType
-#     cmd_current_humidity: Optional[UdpCommandType] = None
-#     switches: List[str] = field(default_factory=list)
-#     sensors: List[str] = field(default_factory=list)
-#     speed_map: Dict[str, int] = field(default_factory=dict)
-
-#     @property
-#     def supported_platforms(self) -> List[Platform]:
-#         platforms = [Platform.HUMIDIFIER]
-
-#         if self.switches:
-#             platforms.append(Platform.SWITCH)
-#         if self.sensors:
-#             platforms.append(Platform.SENSOR)
-#         if self.speed_map:
-#             platforms.append(Platform.SELECT)
-
-#         return platforms
 
 
 # @dataclass(kw_only=True)
