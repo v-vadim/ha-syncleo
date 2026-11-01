@@ -1,6 +1,5 @@
 {
     "name": "Syncleo (Rusclimate/Polaris) WiFi (UDP) Integration",
-    "filename": "syncleo.zip",
     "hide_default_branch": false,
     "homeassistant": "2026.5.0",
     "render_readme": true,
