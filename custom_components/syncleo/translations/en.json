@@ -82,9 +82,6 @@
       },
       "volume": {
         "name": "Sound"
-      },
-      "damper_state": {
-        "name": "Open window mode"
       }
     },
     "climate": {
@@ -574,17 +571,11 @@
       "freeze_protection": {
         "name": "Freeze Protection +8"
       },
-      "full_display_brightness": {
-        "name": "Full display brightness"
-      },
       "fungus_proof": {
         "name": "Fungus proof"
       },
       "goldstar_gsti_damper": {
         "name": "Health"
-      },
-      "half_display_brightness": {
-        "name": "Display brightness 50%"
       },
       "ionization": {
         "name": "Ionization"

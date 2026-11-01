@@ -57,6 +57,7 @@ from ..const import (
 from .profiles import (
     BreezerProfile,
     ButtonConfig,
+    PresetConfig,
     ProgramDataField,
     SelectConfig,
     SensorConfig,
@@ -71,12 +72,12 @@ PROFILES = [
             HVACMode.OFF: 0,
             HVACMode.FAN_ONLY: 2,
         },
-        preset_modes_map={
-            PRESET_NONE: 0,
-            PRESET_MANUAL: 1,
-            PRESET_AUTO: 2,
-            PRESET_NIGHT: 3,
-            PRESET_TURBO: 4,
+        presets={
+            PRESET_NONE: PresetConfig(mode=0),
+            PRESET_MANUAL: PresetConfig(mode=1),
+            PRESET_AUTO: PresetConfig(mode=2),
+            PRESET_NIGHT: PresetConfig(mode=3),
+            PRESET_TURBO: PresetConfig(mode=4),
         },
         fan_modes_count=8,
         program_data_fields={
@@ -106,12 +107,12 @@ PROFILES = [
         device_type=30,
         turn_on_program_data_field=PD_TURN_ON,
         target_temperature_requirement=PD_HEATER_INSTALLED,
-        preset_modes_map={
-            PRESET_NONE: 0,
-            PRESET_MANUAL: 1,
-            PRESET_AUTO: 2,
-            PRESET_NIGHT: 3,
-            PRESET_TURBO: 4,
+        presets={
+            PRESET_NONE: PresetConfig(mode=0),
+            PRESET_MANUAL: PresetConfig(mode=1),
+            PRESET_AUTO: PresetConfig(mode=2),
+            PRESET_NIGHT: PresetConfig(mode=3),
+            PRESET_TURBO: PresetConfig(mode=4),
         },
         fan_modes_count=8,
         program_data_fields={
@@ -195,15 +196,16 @@ PROFILES = [
             HVACMode.FAN_ONLY: 5,
         },
         turn_on_program_data_field=PD_TURN_ON,
-        preset_mode_requirements={PRESET_AUTO: PD_CO2_INSTALLED},
         target_temperature_requirement=PD_HEATER_INSTALLED,
-        preset_modes_map={
-            PRESET_NONE: 0,
-            PRESET_MANUAL: 1,
-            PRESET_AUTO: 2,
-            PRESET_NIGHT: 3,
-            PRESET_TURBO: 4,
-            PRESET_VENTILATION: 5,
+        presets={
+            PRESET_NONE: PresetConfig(mode=0),
+            PRESET_MANUAL: PresetConfig(mode=1),
+            PRESET_AUTO: PresetConfig(
+                mode=2, required_program_data_field=PD_CO2_INSTALLED
+            ),
+            PRESET_NIGHT: PresetConfig(mode=3),
+            PRESET_TURBO: PresetConfig(mode=4),
+            PRESET_VENTILATION: PresetConfig(mode=5),
         },
         fan_modes_count=7,
         program_data_fields={
@@ -248,12 +250,12 @@ PROFILES = [
         device_type=59,
         turn_on_program_data_field=PD_TURN_ON,
         target_temperature_requirement=PD_HEATER_INSTALLED,
-        preset_modes_map={
-            PRESET_NONE: 0,
-            PRESET_MANUAL: 1,
-            PRESET_AUTO: 2,
-            PRESET_NIGHT: 3,
-            PRESET_TURBO: 4,
+        presets={
+            PRESET_NONE: PresetConfig(mode=0),
+            PRESET_MANUAL: PresetConfig(mode=1),
+            PRESET_AUTO: PresetConfig(mode=2),
+            PRESET_NIGHT: PresetConfig(mode=3),
+            PRESET_TURBO: PresetConfig(mode=4),
         },
         fan_modes_count=8,
         program_data_fields={
@@ -349,15 +351,16 @@ PROFILES = [
             HVACMode.FAN_ONLY: 5,
         },
         turn_on_program_data_field=PD_TURN_ON,
-        preset_mode_requirements={PRESET_AUTO: PD_CO2_INSTALLED},
         target_temperature_requirement=PD_HEATER_INSTALLED,
-        preset_modes_map={
-            PRESET_NONE: 0,
-            PRESET_MANUAL: 1,
-            PRESET_AUTO: 2,
-            PRESET_NIGHT: 3,
-            PRESET_TURBO: 4,
-            PRESET_VENTILATION: 5,
+        presets={
+            PRESET_NONE: PresetConfig(mode=0),
+            PRESET_MANUAL: PresetConfig(mode=1),
+            PRESET_AUTO: PresetConfig(
+                mode=2, required_program_data_field=PD_CO2_INSTALLED
+            ),
+            PRESET_NIGHT: PresetConfig(mode=3),
+            PRESET_TURBO: PresetConfig(mode=4),
+            PRESET_VENTILATION: PresetConfig(mode=5),
         },
         fan_modes_count=7,
         program_data_fields={
@@ -419,11 +422,11 @@ PROFILES = [
             | ClimateEntityFeature.TURN_OFF
         ),
         turn_on_program_data_field=PD_TURN_ON,
-        preset_modes_map={
-            PRESET_NONE: 0,
-            PRESET_MANUAL: 1,
-            PRESET_NIGHT: 3,
-            PRESET_TURBO: 4,
+        presets={
+            PRESET_NONE: PresetConfig(mode=0),
+            PRESET_MANUAL: PresetConfig(mode=1),
+            PRESET_NIGHT: PresetConfig(mode=3),
+            PRESET_TURBO: PresetConfig(mode=4),
         },
         fan_modes_count=5,
         program_data_fields={
@@ -477,12 +480,12 @@ PROFILES = [
         vendor=VENDOR_RUSCLIMATE,
         device_type=105,
         turn_on_program_data_field=PD_TURN_ON,
-        preset_modes_map={
-            PRESET_NONE: 0,
-            PRESET_MANUAL: 1,
-            PRESET_AUTO: 2,
-            PRESET_NIGHT: 3,
-            PRESET_TURBO: 4,
+        presets={
+            PRESET_NONE: PresetConfig(mode=0),
+            PRESET_MANUAL: PresetConfig(mode=1),
+            PRESET_AUTO: PresetConfig(mode=2),
+            PRESET_NIGHT: PresetConfig(mode=3),
+            PRESET_TURBO: PresetConfig(mode=4),
         },
         fan_modes_count=5,
         program_data_fields={
@@ -541,11 +544,11 @@ PROFILES = [
         vendor=VENDOR_RUSCLIMATE,
         device_type=106,
         turn_on_program_data_field=PD_TURN_ON,
-        preset_modes_map={
-            PRESET_NONE: 0,
-            PRESET_MANUAL: 1,
-            PRESET_NIGHT: 3,
-            PRESET_TURBO: 4,
+        presets={
+            PRESET_NONE: PresetConfig(mode=0),
+            PRESET_MANUAL: PresetConfig(mode=1),
+            PRESET_NIGHT: PresetConfig(mode=3),
+            PRESET_TURBO: PresetConfig(mode=4),
         },
         fan_modes_count=5,
         program_data_fields={
@@ -605,12 +608,12 @@ PROFILES = [
             | ClimateEntityFeature.TURN_OFF
         ),
         turn_on_program_data_field=PD_TURN_ON,
-        preset_modes_map={
-            PRESET_NONE: 0,
-            PRESET_MANUAL: 1,
-            PRESET_AUTO: 2,
-            PRESET_NIGHT: 3,
-            PRESET_TURBO: 4,
+        presets={
+            PRESET_NONE: PresetConfig(mode=0),
+            PRESET_MANUAL: PresetConfig(mode=1),
+            PRESET_AUTO: PresetConfig(mode=2),
+            PRESET_NIGHT: PresetConfig(mode=3),
+            PRESET_TURBO: PresetConfig(mode=4),
         },
         fan_modes_count=5,
         program_data_fields={
@@ -676,14 +679,14 @@ PROFILES = [
         turn_on_program_data_field=PD_TURN_ON,
         target_temperature_requirement=PD_HEATER_INSTALLED,
         cmd_current_humidity=UdpCommandType.CURRENT_HUMIDITY,
-        preset_modes_map={
-            PRESET_AUTO: 1,
-            PRESET_MANUAL: 2,
-            PRESET_TURBO: 3,
-            PRESET_NIGHT: 4,
-            PRESET_HYBRID: 5,
-            PRESET_ECO_VENTILATION: 6,
-            PRESET_DEMO: 7,
+        presets={
+            PRESET_AUTO: PresetConfig(mode=1),
+            PRESET_MANUAL: PresetConfig(mode=2),
+            PRESET_TURBO: PresetConfig(mode=3),
+            PRESET_NIGHT: PresetConfig(mode=4),
+            PRESET_HYBRID: PresetConfig(mode=5),
+            PRESET_ECO_VENTILATION: PresetConfig(mode=6),
+            PRESET_DEMO: PresetConfig(mode=7),
         },
         fan_modes_count=9,
         program_data_fields={

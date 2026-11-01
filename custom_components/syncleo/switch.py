@@ -47,9 +47,8 @@ class SyncleoSwitch(SyncleoBaseEntity, SwitchEntity):
         )
 
         self._attr_unique_id = f"{self._device_unique_id}_{feature_key}"
-        self._attr_translation_key = (
-            config.translation_key if config is not None else None
-        ) or feature_key
+        self._attr_translation_key = feature_key
+        self._inverted = config.inverted if config is not None else False
         self._is_on = False
 
     @property
@@ -75,7 +74,11 @@ class SyncleoSwitch(SyncleoBaseEntity, SwitchEntity):
                 self._attr_unique_id,
                 data.hex(),
             )
-            is_on = int.from_bytes(data, byteorder="little") != 0 if data else False
+            is_on = (
+                (int.from_bytes(data, byteorder="little") != 0) != self._inverted
+                if data
+                else False
+            )
 
         elif self._cmd_class and cmd.command_type == self._cmd_class.command_type:
             _LOGGER.debug(
@@ -83,7 +86,7 @@ class SyncleoSwitch(SyncleoBaseEntity, SwitchEntity):
                 self._attr_unique_id,
                 cmd,
             )
-            is_on = bool(cmd.value)
+            is_on = bool(cmd.value) != self._inverted
         else:
             _LOGGER.debug(
                 "Entity %s ignoring unrelated cmd: %s", self._attr_unique_id, cmd
@@ -99,13 +102,14 @@ class SyncleoSwitch(SyncleoBaseEntity, SwitchEntity):
                 "Switch is not available because required hardware is not installed"
             )
 
+        raw_value = value != self._inverted
         if self._is_program_data:
             field_size = self._profile.program_data_fields[self._feature_key].size
             await self.async_set_program_data(
-                self._feature_key, value.to_bytes(field_size, byteorder="little")
+                self._feature_key, raw_value.to_bytes(field_size, byteorder="little")
             )
         elif self._cmd_class:
-            await self.async_send_command(self._cmd_class(value))
+            await self.async_send_command(self._cmd_class(raw_value))
         else:
             _LOGGER.error(
                 "No command class or program data field defined for feature: %s",
