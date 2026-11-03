@@ -156,6 +156,9 @@
       "eco_delta": {
         "name": "Разница температур в режиме Eco"
       },
+      "meditation_timer": {
+        "name": "Длительность медитации"
+      },
       "min_voltage": {
         "name": "Минимальное напряжение (145+X)"
       },
@@ -165,17 +168,35 @@
       "power_level": {
         "name": "Мощность"
       },
+      "prana_exhale": {
+        "name": "Выдох Prana"
+      },
+      "prana_exhale_delay": {
+        "name": "Пауза после выдоха Prana"
+      },
+      "prana_inhale": {
+        "name": "Вдох Prana"
+      },
+      "prana_inhale_delay": {
+        "name": "Пауза после вдоха Prana"
+      },
+      "prana_iteration_time": {
+        "name": "Длительность цикла праны"
+      },
+      "prana_iterations": {
+        "name": "Количество повторений праны"
+      },
       "swing_horizontal": {
         "name": "Положение горизонтальных жалюзей"
       },
       "swing_vertical": {
         "name": "Положение вертикальных жалюзей"
       },
-      "vacation_temperature": {
-        "name": "Температура режима Отпуск"
-      },
       "timer": {
         "name": "Таймер"
+      },
+      "vacation_temperature": {
+        "name": "Температура режима Отпуск"
       },
       "cable_power": {
         "name": "Мощность нагревательного кабеля, Вт"
@@ -218,15 +239,6 @@
       },
       "fitness_timer": {
         "name": "Длительность фитнеса"
-      },
-      "meditation_timer": {
-        "name": "Длительность медитации"
-      },
-      "prana_iteration_time": {
-        "name": "Длительность цикла праны"
-      },
-      "prana_iterations": {
-        "name": "Количество повторений праны"
       },
       "yoga_iterations": {
         "name": "Количество повторений йоги"
@@ -288,11 +300,15 @@
           "melody_sea_sound": "Звук моря"
         }
       },
-      "display_brightness": {
-        "name": "Яркость дисплея",
+      "fan_speed": {
+        "name": "Скорость вентилятора"
+      },
+      "fitness_timer": {
+        "name": "Длительность фитнеса",
         "state": {
-          "brightness_100": "100%",
-          "brightness_50": "50%"
+          "15": "15 мин",
+          "30": "30 мин",
+          "60": "60 мин"
         }
       },
       "kettle_temperature_preset": {
@@ -339,6 +355,18 @@
           "power_100": "100%"
         }
       },
+      "prana_auto_exercise": {
+        "name": "Упражнение Prana Auto"
+      },
+      "prana_iteration_time": {
+        "name": "Длительность цикла праны",
+        "state": {
+          "3": "3 с",
+          "6": "6 с",
+          "12": "12 с",
+          "24": "24 с"
+        }
+      },
       "source_current_temperature": {
         "name": "Источник температуры",
         "state": {
@@ -374,9 +402,6 @@
           "air_with_floor_limit": "Воздух с ограничением по полу",
           "floor_with_air_limit": "Пол с ограничением по воздуху"
         }
-      },
-      "fan_speed": {
-        "name": "Скорость вентилятора"
       },
       "auto_valve_position": {
         "name": "Положение клапана в Auto"
@@ -623,16 +648,11 @@
     "water_heater": {
       "syncleo_boiler": {
         "state": {
-          "bss": "Самоочистка (BSS)",
           "off": "Выключено",
           "eco": "Низкий (700Вт)",
-          "economy": "Eco",
           "electric": "Средний (1300Вт)",
           "performance": "Турбо (2000Вт)",
-          "heat_pump": "NO Frost",
-          "idle": "Ожидание нагрева",
-          "smart_mode": "Smart",
-          "timer": "Таймер"
+          "heat_pump": "NO Frost"
         }
       },
       "syncleo_kettle": {

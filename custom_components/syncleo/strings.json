@@ -156,6 +156,9 @@
       "eco_delta": {
         "name": "Eco Delta Temperature"
       },
+      "meditation_timer": {
+        "name": "Meditation duration"
+      },
       "min_voltage": {
         "name": "Min voltage (145+X)"
       },
@@ -165,17 +168,35 @@
       "power_level": {
         "name": "Power Level"
       },
+      "prana_exhale": {
+        "name": "Prana exhale"
+      },
+      "prana_exhale_delay": {
+        "name": "Prana pause after exhale"
+      },
+      "prana_inhale": {
+        "name": "Prana inhale"
+      },
+      "prana_inhale_delay": {
+        "name": "Prana pause after inhale"
+      },
+      "prana_iteration_time": {
+        "name": "Prana cycle duration"
+      },
+      "prana_iterations": {
+        "name": "Prana repetitions"
+      },
       "swing_horizontal": {
         "name": "Horizontal blinds position"
       },
       "swing_vertical": {
         "name": "Vertical blinds position"
       },
-      "vacation_temperature": {
-        "name": "Vacation temperature"
-      },
       "timer": {
         "name": "Timer"
+      },
+      "vacation_temperature": {
+        "name": "Vacation temperature"
       },
       "cable_power": {
         "name": "Heating cable power, W"
@@ -218,15 +239,6 @@
       },
       "fitness_timer": {
         "name": "Fitness duration"
-      },
-      "meditation_timer": {
-        "name": "Meditation duration"
-      },
-      "prana_iteration_time": {
-        "name": "Prana cycle duration"
-      },
-      "prana_iterations": {
-        "name": "Prana repetitions"
       },
       "yoga_iterations": {
         "name": "Yoga repetitions"
@@ -347,11 +359,15 @@
           "melody_sea_sound": "Sea sound"
         }
       },
-      "display_brightness": {
-        "name": "Display brightness",
+      "fan_speed": {
+        "name": "Fan speed"
+      },
+      "fitness_timer": {
+        "name": "Fitness duration",
         "state": {
-          "brightness_100": "100%",
-          "brightness_50": "50%"
+          "15": "15 min",
+          "30": "30 min",
+          "60": "60 min"
         }
       },
       "kettle_temperature_preset": {
@@ -398,6 +414,18 @@
           "power_100": "100%"
         }
       },
+      "prana_auto_exercise": {
+        "name": "Prana auto exercise"
+      },
+      "prana_iteration_time": {
+        "name": "Prana cycle duration",
+        "state": {
+          "3": "3 s",
+          "6": "6 s",
+          "12": "12 s",
+          "24": "24 s"
+        }
+      },
       "source_current_temperature": {
         "name": "Temperature Source",
         "state": {
@@ -433,9 +461,6 @@
           "air_with_floor_limit": "Air with floor limit",
           "floor_with_air_limit": "Floor with air limit"
         }
-      },
-      "fan_speed": {
-        "name": "Fan speed"
       },
       "auto_valve_position": {
         "name": "Valve position in Auto"
@@ -623,16 +648,11 @@
     "water_heater": {
       "syncleo_boiler": {
         "state": {
-          "bss": "BSS",
           "off": "Off",
           "eco": "Low (700W)",
-          "economy": "Eco",
           "electric": "Mid (1300W)",
           "performance": "Turbo (2000W)",
-          "heat_pump": "NO Frost",
-          "idle": "Waiting for heating",
-          "smart_mode": "Smart",
-          "timer": "Timer"
+          "heat_pump": "NO Frost"
         }
       },
       "syncleo_kettle": {

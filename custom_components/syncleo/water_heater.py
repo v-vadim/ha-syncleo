@@ -47,7 +47,6 @@ class SyncleoWaterHeater(SyncleoBaseEntity, WaterHeaterEntity):
 
         self._op_mode_map = profile.operation_modes_map
         self._rev_op_mode_map = {v: k for k, v in self._op_mode_map.items()}
-        self._rev_op_mode_map.update(profile.operation_mode_states)
 
         self._attr_operation_list = list(self._op_mode_map.keys())
 
@@ -74,7 +73,6 @@ class SyncleoWaterHeater(SyncleoBaseEntity, WaterHeaterEntity):
 
         if cmd.command_type == UdpCommandType.MODE:
             raw_val = int(cmd.value)
-            raw_val = self._profile.operation_mode_aliases.get(raw_val, raw_val)
             resolved_mode = self._rev_op_mode_map.get(raw_val)
             if resolved_mode:
                 self._current_operation = resolved_mode

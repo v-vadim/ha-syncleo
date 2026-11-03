@@ -51,8 +51,6 @@ CONF_VENDOR = "vendor"
 
 DATASOURCE_PRESET_NONE = "datasource_preset_none"
 
-OPERATION_MODE_ECONOMY = "economy"
-
 FAN_MAX = "max"
 FAN_MID_HIGH = "mid_high"
 FAN_MID_LOW = "mid_low"
@@ -95,7 +93,6 @@ PD_UV_INSTALLED = "uv_installed"
 PD_CURRENT_PRESET = "current_preset"
 PD_COOLDOWN = "cooldown"
 PD_DAMPER = "breezer_damper_state"
-PD_DISPLAY_BRIGHTNESS = "display_brightness"
 PD_DISPLAY_HALF_POWER = "display_half_power"
 PD_DISPLAY_BRIGHTNESS = "display_brightness"
 PD_HALF_POWER = "half_power"
@@ -179,9 +176,6 @@ PRESET_AURUS_SCREENSAVER_MODE_OFF = "screensaver_off"
 PRESET_AURUS_SCREENSAVER_MODE_1 = "screensaver_1"
 PRESET_AURUS_SCREENSAVER_MODE_3 = "screensaver_3"
 PRESET_AURUS_SCREENSAVER_MODE_5 = "screensaver_5"
-
-PRESET_DISPLAY_BRIGHTNESS_50 = "brightness_50"
-PRESET_DISPLAY_BRIGHTNESS_100 = "brightness_100"
 
 PRESET_MELODY_BIRDS_SINGING = "melody_birds_singing"
 PRESET_MELODY_FIREPLACE_SOUND = "melody_fireplace_sound"

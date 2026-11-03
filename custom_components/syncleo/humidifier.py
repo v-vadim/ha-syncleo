@@ -1,4 +1,4 @@
-"""Humidifier platform; initial profiles still require device verification."""
+"""Humidifier platform for Syncleo devices."""
 
 import logging
 from typing import Any
@@ -69,7 +69,19 @@ class SyncleoHumidifier(SyncleoBaseEntity, HumidifierEntity):
         self.async_write_ha_state()
 
     async def async_turn_on(self, **kwargs: Any) -> None:
-        await self.async_set_mode(self._profile.default_mode)
+        field_key = self._profile.turn_on_program_data_field
+        if field_key is None:
+            await self.async_set_mode(self._profile.default_mode)
+            return
+
+        field = self._profile.program_data_fields[field_key]
+        await self.async_set_program_data_fields(
+            {field_key: True.to_bytes(field.size, byteorder="little")}
+        )
+        self._attr_is_on = True
+        if self._attr_mode == STATE_OFF:
+            self._attr_mode = None
+        self.async_write_ha_state()
 
     async def async_turn_off(self, **kwargs: Any) -> None:
         await self.async_send_command(CmdMode(0))

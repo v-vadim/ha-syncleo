@@ -413,8 +413,6 @@ class WaterHeaterProfile(
     operation_modes_map: dict[str, int]
     default_operation_mode: str
     turn_on_program_data_field: str | None = None
-    operation_mode_aliases: dict[int, int] = field(default_factory=dict)
-    operation_mode_states: dict[int, str] = field(default_factory=dict)
 
     @property
     def supported_platforms(self) -> list[Platform]:
@@ -520,6 +518,7 @@ class HumidifierProfile(
     target_humidity_step: int = 1
     modes_map: dict[str, int] = field(default_factory=dict)
     default_mode: str
+    turn_on_program_data_field: str | None = None
 
     @property
     def supported_platforms(self) -> list[Platform]:
