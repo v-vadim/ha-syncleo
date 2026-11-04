@@ -27,6 +27,7 @@ from ..const import (
     PROFILE_TYPE_AIR_CLEANER,
     PROFILE_TYPE_BOILER,
     PROFILE_TYPE_BREEZER,
+    PROFILE_TYPE_FIREPLACE,
     PROFILE_TYPE_HEATER,
     PROFILE_TYPE_HUMIDIFIER,
     PROFILE_TYPE_KETTLE,
@@ -534,3 +535,18 @@ class HumidifierProfile(
 #     @property
 #     def supported_platforms(self) -> List[Platform]:
 #         return [Platform.FAN]
+
+
+@dataclass(kw_only=True)
+class FireplaceProfile(
+    DeviceBaseProfile,
+    ButtonMixin,
+    LightMixin,
+    NumberMixin,
+    SelectMixin,
+    SensorMixin,
+    SwitchMixin,
+):
+    """Profile for decorative fireplaces without a temperature target."""
+
+    profile_type: str = PROFILE_TYPE_FIREPLACE

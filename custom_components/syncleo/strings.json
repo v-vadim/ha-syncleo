@@ -44,6 +44,15 @@
       },
       "reset_prefilter": {
         "name": "Reset prefilter life"
+      },
+      "flame": {
+        "name": "Flame"
+      },
+      "flame_color": {
+        "name": "Flame color"
+      },
+      "illumination_brightness": {
+        "name": "Illumination brightness"
       }
     },
     "binary_sensor": {
@@ -257,6 +266,15 @@
       },
       "ventilation_interval": {
         "name": "Interval between ventilation"
+      },
+      "flame_brightness": {
+        "name": "Flame brightness level"
+      },
+      "steam_level": {
+        "name": "Steam level"
+      },
+      "volume": {
+        "name": "Volume level"
       }
     },
     "sensor": {
@@ -313,6 +331,9 @@
       },
       "tvoc": {
         "name": "TVOC"
+      },
+      "water_level": {
+        "name": "Water level"
       }
     },
     "select": {
@@ -493,6 +514,56 @@
       },
       "valve_position": {
         "name": "Valve position"
+      },
+      "bottom_illumination": {
+        "name": "Bottom illumination",
+        "state": {
+          "orange": "Orange",
+          "red": "Red",
+          "yellow": "Yellow",
+          "blue": "Blue",
+          "green": "Green",
+          "purple": "Purple",
+          "pink": "Pink",
+          "auto_1": "Auto 1",
+          "auto_2": "Auto 2",
+          "auto_red": "Auto red",
+          "auto_green": "Auto green",
+          "auto_blue": "Auto blue",
+          "off": "Off"
+        }
+      },
+      "display_temperature_unit": {
+        "name": "Display temperature unit",
+        "state": {
+          "celsius": "Celsius",
+          "fahrenheit": "Fahrenheit"
+        }
+      },
+      "firewood_brightness": {
+        "name": "Firewood brightness",
+        "state": {
+          "min": "Min",
+          "max": "Max"
+        }
+      },
+      "top_illumination": {
+        "name": "Top illumination",
+        "state": {
+          "orange": "Orange",
+          "red": "Red",
+          "yellow": "Yellow",
+          "blue": "Blue",
+          "green": "Green",
+          "purple": "Purple",
+          "pink": "Pink",
+          "auto_1": "Auto 1",
+          "auto_2": "Auto 2",
+          "auto_red": "Auto red",
+          "auto_green": "Auto green",
+          "auto_blue": "Auto blue",
+          "off": "Off"
+        }
       }
     },
     "switch": {
@@ -597,6 +668,9 @@
       },
       "air_cleaner_child_lock": {
         "name": "Child lock"
+      },
+      "device_power": {
+        "name": "Power"
       }
     },
     "water_heater": {

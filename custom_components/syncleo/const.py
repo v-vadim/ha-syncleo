@@ -285,3 +285,29 @@ ZEROCONF_CURRENT_TEMPERATURE = "000000000000.temperature"
 ZEROCONF_CURVE = "curve"
 ZEROCONF_DEVICE_TYPE = "devtype"
 ZEROCONF_MAC_ADDRESS = "macaddr"
+
+FEATURE_DEVICE_POWER = "device_power"
+
+FEATURE_STEAM_LEVEL = "steam_level"
+
+FEATURE_WATER_LEVEL = "water_level"
+
+FEATURE_FIREWOOD_BRIGHTNESS = "firewood_brightness"
+
+FEATURE_FLAME = "flame"
+
+FEATURE_FLAME_COLOR = "flame_color"
+
+FEATURE_FLAME_BRIGHTNESS = "flame_brightness"
+
+FEATURE_TOP_ILLUMINATION = "top_illumination"
+
+FEATURE_BOTTOM_ILLUMINATION = "bottom_illumination"
+
+FEATURE_ILLUMINATION_BRIGHTNESS = "illumination_brightness"
+
+PD_BUTTON_SOUND = "button_sound"
+
+PD_DISPLAY_TEMPERATURE_UNIT = "display_temperature_unit"
+
+PROFILE_TYPE_FIREPLACE = "fireplace"

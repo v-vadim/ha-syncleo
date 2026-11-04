@@ -42,6 +42,7 @@
 | Rusclimate | 46 | (Transformer DI 4.0) Electrolux Air Gate, Electrolux Rapid, Ballu Apollo, Ballu Evolution, Electrolux Brilliant Marble, Electrolux ECH/AG, Electrolux ECH/AG2, Electrolux ECH/AT, Electrolux ECH/BM |
 | Rusclimate | 47 | Wi-Fi Convection Heater |
 | Rusclimate | 49 | (Transformer 4.0) Electrolux Air Gate, Electrolux Rapid, Ballu Apollo, Ballu Evolution, Electrolux Brilliant Marble, Electrolux ECH/AG2, Electrolux ECH/AT, Electrolux EIH/R, Electrolux EIH/S, Ballu Plaza |
+| Rusclimate | 50 | Electrolux 3D Fireplace |
 | Rusclimate | 51 | Zanussi Massimo Solar 2023 |
 | Rusclimate | 55 | Zanussi Barocco DC, Royal Thermo Barocco DC |
 | Rusclimate | 56 | Toshiba Haori, Toshiba Seiya, Toshiba Shorai E |
@@ -82,6 +83,7 @@
 | Rusclimate | 109 | Aurus S |
 | Rusclimate | 110 | GoldStar GSTI |
 | Rusclimate | 111 | Shuft SFMS/-09 |
+| Rusclimate | 112 | Royal Thermo 5D DaVinci |
 | Rusclimate | 114 | Shuft SFMS/-07 |
 | Rusclimate | 117 | Ballu AP-135 |
 | Rusclimate | 119 | Electrolux SI (SE/BE) EEC, Electrolux Smartinverter, Electrolux Smartinverter PRO, Electrolux Smartinverter PRO 2.0, Electrolux Smartinverter Enamel |

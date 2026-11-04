@@ -44,6 +44,15 @@
       },
       "reset_prefilter": {
         "name": "Сброс ресурса префильтра"
+      },
+      "flame": {
+        "name": "Пламя"
+      },
+      "flame_color": {
+        "name": "Цвет пламени"
+      },
+      "illumination_brightness": {
+        "name": "Яркость подсветки"
       }
     },
     "binary_sensor": {
@@ -257,6 +266,15 @@
       },
       "ventilation_interval": {
         "name": "Интервал между проветриванием"
+      },
+      "flame_brightness": {
+        "name": "Уровень яркости пламени"
+      },
+      "steam_level": {
+        "name": "Ступень испарения"
+      },
+      "volume": {
+        "name": "Уровень громкости"
       }
     },
     "select": {
@@ -437,6 +455,56 @@
       },
       "valve_position": {
         "name": "Положение клапана"
+      },
+      "bottom_illumination": {
+        "name": "Нижняя подсветка",
+        "state": {
+          "orange": "Оранжевый",
+          "red": "Красный",
+          "yellow": "Жёлтый",
+          "blue": "Синий",
+          "green": "Зелёный",
+          "purple": "Фиолетовый",
+          "pink": "Розовый",
+          "auto_1": "Авто 1",
+          "auto_2": "Авто 2",
+          "auto_red": "Авто красный",
+          "auto_green": "Авто зелёный",
+          "auto_blue": "Авто синий",
+          "off": "Выключить"
+        }
+      },
+      "display_temperature_unit": {
+        "name": "Единица температуры на дисплее",
+        "state": {
+          "celsius": "Цельсий",
+          "fahrenheit": "Фаренгейт"
+        }
+      },
+      "firewood_brightness": {
+        "name": "Яркость подсветки дров",
+        "state": {
+          "min": "Минимальная",
+          "max": "Максимальная"
+        }
+      },
+      "top_illumination": {
+        "name": "Верхняя подсветка",
+        "state": {
+          "orange": "Оранжевый",
+          "red": "Красный",
+          "yellow": "Жёлтый",
+          "blue": "Синий",
+          "green": "Зелёный",
+          "purple": "Фиолетовый",
+          "pink": "Розовый",
+          "auto_1": "Авто 1",
+          "auto_2": "Авто 2",
+          "auto_red": "Авто красный",
+          "auto_green": "Авто зелёный",
+          "auto_blue": "Авто синий",
+          "off": "Выключить"
+        }
       }
     },
     "sensor": {
@@ -493,6 +561,9 @@
       },
       "tvoc": {
         "name": "TVOC"
+      },
+      "water_level": {
+        "name": "Уровень воды"
       }
     },
     "switch": {
@@ -597,6 +668,9 @@
       },
       "air_cleaner_child_lock": {
         "name": "Замок от детей"
+      },
+      "device_power": {
+        "name": "Питание"
       }
     },
     "water_heater": {
