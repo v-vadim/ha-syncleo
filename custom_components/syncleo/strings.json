@@ -265,6 +265,9 @@
       },
       "power": {
         "name": "Current power"
+      },
+      "current_humidity": {
+        "name": "Current humidity"
       }
     },
     "select": {
@@ -389,6 +392,28 @@
           "12": "12 s",
           "24": "24 s"
         }
+      },
+      "air_cleaner_display_brightness": {
+        "name": "Display brightness"
+      },
+      "backlight_mode": {
+        "name": "Backlight mode",
+        "state": {
+          "off": "Display and all light off",
+          "all": "All light on, display off",
+          "upper": "Upper light on, display off",
+          "middle": "Middle light on, display off",
+          "lower": "Lower light on, display off"
+        }
+      },
+      "light_time": {
+        "name": "Display auto off",
+        "state": {
+          "off": "Off",
+          "1": "1 min",
+          "3": "3 min",
+          "5": "5 min"
+        }
       }
     },
     "switch": {
@@ -490,6 +515,9 @@
       },
       "warm_stream": {
         "name": "Warm Air Stream"
+      },
+      "air_cleaner_child_lock": {
+        "name": "Child lock"
       }
     },
     "water_heater": {

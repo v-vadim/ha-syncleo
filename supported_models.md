@@ -4,6 +4,7 @@
 | Polaris | 2 | PWK1775CGLD |
 | Polaris | 98 | PWK1775CGLD |
 |&nbsp;|||
+| Rusclimate | 1 | Electrolux EAP-1040D, Electrolux EAP-1055D |
 | Rusclimate | 2 | Electrolux SI (SE/BE) EEC, Electrolux Smartinverter, Electrolux Smartinverter PRO, Electrolux Smartinverter PRO 2.0, Electrolux Smartinverter Enamel |
 | Rusclimate | 3 | Ballu ONEAIR ASP-200 |
 | Rusclimate | 4 | Electrolux EHU-3910D, Electrolux EHU-3915D |
@@ -23,6 +24,7 @@
 | Rusclimate | 19 | Electrolux Regency |
 | Rusclimate | 20 | Ballu Defender DC, Royal Thermo Milano, Ballu Olympio Legend, Electrolux Skandi DC, Ballu Platinum Evolution DC, Electrolux Onix Black Super DC |
 | Rusclimate | 21 | Shuft Soturai, Ballu Maverick DC, Ballu iGreen Pro, Ballu Maverick DC, Electrolux Loft DC, Zanussi Moderno DC, Electrolux Slide DC, Electrolux Arctic Air Wi-Fi, Shuft Asgard Black DC, Ballu Platinum Black DC, Ballu Platinum DC Inverter |
+| Rusclimate | 26 | Electrolux EAP-2050D, Electrolux EAP-2075D |
 | Rusclimate | 28 | (Transformer DI 4.0) Electrolux Air Gate, Electrolux Rapid, Ballu Apollo, Ballu Evolution, Electrolux Brilliant Marble, Electrolux ECH/AG, Electrolux ECH/AG2, Electrolux ECH/AT, Electrolux ECH/BM |
 | Rusclimate | 29 | Electrolux ETS-16, Electrolux ETV-16, Royal Thermo RTS-16, Royal Thermo RTI-16 |
 | Rusclimate | 30 | Ballu ONEAIR ASP-200S |
@@ -76,8 +78,10 @@
 | Rusclimate | 110 | GoldStar GSTI |
 | Rusclimate | 111 | Shuft SFMS/-09 |
 | Rusclimate | 114 | Shuft SFMS/-07 |
+| Rusclimate | 117 | Ballu AP-135 |
 | Rusclimate | 119 | Electrolux SI (SE/BE) EEC, Electrolux Smartinverter, Electrolux Smartinverter PRO, Electrolux Smartinverter PRO 2.0, Electrolux Smartinverter Enamel |
 | Rusclimate | 120 | Aurus VRF |
+| Rusclimate | 122 | Electrolux EAP-1040D Basalt |
 | Rusclimate | 123 | Ballu Voyager |
 | Rusclimate | 125 | Electrolux Grace DC |
 | Rusclimate | 128 | Ballu Olympio Pro |
