@@ -31,6 +31,7 @@ from ..const import (
     PROFILE_TYPE_HUMIDIFIER,
     PROFILE_TYPE_KETTLE,
     PROFILE_TYPE_THERMOSTAT,
+    PROFILE_TYPE_VENTILATION,
 )
 
 
@@ -258,6 +259,20 @@ class DeviceBaseProfile(PlatformProviderBase):
 
 
 @dataclass(kw_only=True)
+class VentilationControlProfile(
+    DeviceBaseProfile,
+    BinarySensorMixin,
+    NumberMixin,
+    SelectMixin,
+    SensorMixin,
+    SwitchMixin,
+):
+    """Ventilation controls without a fan or climate main entity."""
+
+    profile_type: str = PROFILE_TYPE_VENTILATION
+
+
+@dataclass(kw_only=True)
 class AirCleanerProfile(
     DeviceBaseProfile,
     ButtonMixin,
@@ -292,6 +307,7 @@ class AirCleanerProfile(
 @dataclass(kw_only=True)
 class VentilationProfile(
     DeviceBaseProfile,
+    ButtonMixin,
     BinarySensorMixin,
     NumberMixin,
     SelectMixin,

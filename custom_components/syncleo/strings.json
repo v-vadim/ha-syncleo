@@ -113,7 +113,13 @@
               "auto": "Auto",
               "night": "Sleep",
               "turbo": "Turbo",
-              "ventilation": "Fan"
+              "ventilation": "Fan",
+              "energy_recovery": "Energy recovery ventilation",
+              "mixed_air": "Mixed air",
+              "purification": "Purification",
+              "supply_air": "Supply air",
+              "on": "On",
+              "sync": "Sync"
             }
           }
         }
@@ -224,6 +230,33 @@
       },
       "yoga_timer": {
         "name": "Yoga duration"
+      },
+      "auto_temperature": {
+        "name": "Auto temperature"
+      },
+      "bypass_range": {
+        "name": "Bypass temperature range"
+      },
+      "bypass_temperature": {
+        "name": "Bypass opening temperature"
+      },
+      "exhaust_fan_speed": {
+        "name": "Exhaust fan speed"
+      },
+      "heater_start_temperature": {
+        "name": "Heater start temperature"
+      },
+      "light_time": {
+        "name": "Backlight off time"
+      },
+      "preheater_start_temperature": {
+        "name": "Preheater start temperature"
+      },
+      "ventilation_duration": {
+        "name": "Ventilation duration"
+      },
+      "ventilation_interval": {
+        "name": "Interval between ventilation"
       }
     },
     "sensor": {
@@ -268,6 +301,18 @@
       },
       "current_humidity": {
         "name": "Current humidity"
+      },
+      "filter_running_days": {
+        "name": "Filter running days"
+      },
+      "lamp_running_hours": {
+        "name": "Lamp running hours"
+      },
+      "modbus": {
+        "name": "Modbus control"
+      },
+      "tvoc": {
+        "name": "TVOC"
       }
     },
     "select": {
@@ -371,7 +416,10 @@
         }
       },
       "fan_speed": {
-        "name": "Fan speed"
+        "name": "Fan speed",
+        "state": {
+          "auto": "Auto"
+        }
       },
       "fitness_timer": {
         "name": "Fitness duration",
@@ -414,6 +462,37 @@
           "3": "3 min",
           "5": "5 min"
         }
+      },
+      "auto_valve_position": {
+        "name": "Valve position in Auto"
+      },
+      "display_brightness": {
+        "name": "Display brightness"
+      },
+      "filter_days": {
+        "name": "Filter replacement interval",
+        "state": {
+          "45_days": "45 days",
+          "60_days": "60 days",
+          "90_days": "90 days",
+          "180_days": "180 days"
+        }
+      },
+      "interval_valve_position": {
+        "name": "Valve position during interval ventilation"
+      },
+      "operating_mode": {
+        "name": "Operating mode",
+        "state": {
+          "off": "Off",
+          "auto": "Auto",
+          "manual": "Manual",
+          "night": "Night",
+          "interval_ventilation": "Interval ventilation"
+        }
+      },
+      "valve_position": {
+        "name": "Valve position"
       }
     },
     "switch": {

@@ -113,7 +113,13 @@
               "auto": "Авто",
               "night": "Ночной",
               "turbo": "Турбо",
-              "ventilation": "Вентиляция"
+              "ventilation": "Вентиляция",
+              "energy_recovery": "Вентиляция с рекуперацией энергии",
+              "mixed_air": "Режим смешанного воздуха",
+              "purification": "Режим очистки",
+              "supply_air": "Режим приточного воздуха",
+              "on": "Вкл",
+              "sync": "Синхронный"
             }
           }
         }
@@ -224,6 +230,33 @@
       },
       "yoga_timer": {
         "name": "Длительность йоги"
+      },
+      "auto_temperature": {
+        "name": "Температура Auto"
+      },
+      "bypass_range": {
+        "name": "Диапазон температур открытия перепуска"
+      },
+      "bypass_temperature": {
+        "name": "Температура открытия перепуска"
+      },
+      "exhaust_fan_speed": {
+        "name": "Скорость вытяжного вентилятора"
+      },
+      "heater_start_temperature": {
+        "name": "Температура запуска нагревателя"
+      },
+      "light_time": {
+        "name": "Время выключения подсветки"
+      },
+      "preheater_start_temperature": {
+        "name": "Температура запуска преднагревателя"
+      },
+      "ventilation_duration": {
+        "name": "Продолжительность проветривания"
+      },
+      "ventilation_interval": {
+        "name": "Интервал между проветриванием"
       }
     },
     "select": {
@@ -327,7 +360,10 @@
         }
       },
       "fan_speed": {
-        "name": "Скорость вентилятора"
+        "name": "Скорость вентилятора",
+        "state": {
+          "auto": "Авто"
+        }
       },
       "fitness_timer": {
         "name": "Длительность фитнеса",
@@ -370,6 +406,37 @@
           "3": "3 мин",
           "5": "5 мин"
         }
+      },
+      "auto_valve_position": {
+        "name": "Положение клапана в Auto"
+      },
+      "display_brightness": {
+        "name": "Яркость дисплея"
+      },
+      "filter_days": {
+        "name": "Срок замены фильтра",
+        "state": {
+          "45_days": "45 дней",
+          "60_days": "60 дней",
+          "90_days": "90 дней",
+          "180_days": "180 дней"
+        }
+      },
+      "interval_valve_position": {
+        "name": "Положение клапана при интервальном проветривании"
+      },
+      "operating_mode": {
+        "name": "Режим работы",
+        "state": {
+          "off": "Выкл",
+          "auto": "Авто",
+          "manual": "Ручной",
+          "night": "Ночной",
+          "interval_ventilation": "Интервальное проветривание"
+        }
+      },
+      "valve_position": {
+        "name": "Положение клапана"
       }
     },
     "sensor": {
@@ -414,6 +481,18 @@
       },
       "current_humidity": {
         "name": "Текущая влажность"
+      },
+      "filter_running_days": {
+        "name": "Наработка фильтра"
+      },
+      "lamp_running_hours": {
+        "name": "Наработка ламп"
+      },
+      "modbus": {
+        "name": "Управление по Modbus"
+      },
+      "tvoc": {
+        "name": "TVOC"
       }
     },
     "switch": {

@@ -25,13 +25,16 @@
 | Rusclimate | 20 | Ballu Defender DC, Royal Thermo Milano, Ballu Olympio Legend, Electrolux Skandi DC, Ballu Platinum Evolution DC, Electrolux Onix Black Super DC |
 | Rusclimate | 21 | Shuft Soturai, Ballu Maverick DC, Ballu iGreen Pro, Ballu Maverick DC, Electrolux Loft DC, Zanussi Moderno DC, Electrolux Slide DC, Electrolux Arctic Air Wi-Fi, Shuft Asgard Black DC, Ballu Platinum Black DC, Ballu Platinum DC Inverter |
 | Rusclimate | 26 | Electrolux EAP-2050D, Electrolux EAP-2075D |
+| Rusclimate | 27 | Ballu RDU ANTICOVIDgenerator WiFi |
 | Rusclimate | 28 | (Transformer DI 4.0) Electrolux Air Gate, Electrolux Rapid, Ballu Apollo, Ballu Evolution, Electrolux Brilliant Marble, Electrolux ECH/AG, Electrolux ECH/AG2, Electrolux ECH/AT, Electrolux ECH/BM |
 | Rusclimate | 29 | Electrolux ETS-16, Electrolux ETV-16, Royal Thermo RTS-16, Royal Thermo RTI-16 |
 | Rusclimate | 30 | Ballu ONEAIR ASP-200S |
 | Rusclimate | 31 | (Transformer 4.0) Electrolux Air Gate, Electrolux Rapid, Ballu Apollo, Ballu Evolution, Electrolux Brilliant Marble, Electrolux ECH/AG2, Electrolux ECH/AT, Electrolux EIH/R, Electrolux EIH/S, Ballu Plaza |
 | Rusclimate | 32 | Ballu ONEAIR ASP-100, Electrolux EASP-100 |
 | Rusclimate | 33 | Electrolux Centurio IQ 3.0 |
+| Rusclimate | 34 | Electrolux EPVS / ERVX inv |
 | Rusclimate | 35 | Electrolux YOGAhealthline 2.0 |
+| Rusclimate | 36 | Electrolux EPVS / ERVX inv |
 | Rusclimate | 38 | Toshiba Shorai EE |
 | Rusclimate | 41 | Electrolux Monaco DC |
 | Rusclimate | 42 | (Transformer DI 3.0 XS) Electrolux Air Gate, Electrolux Rapid, Ballu Apollo, Ballu Evolution, Electrolux Brilliant Marble |
@@ -68,7 +71,9 @@
 | Rusclimate | 91 | Royal Thermo Regency |
 | Rusclimate | 93 | Electrolux SI (SE/BE) EEC, Electrolux Smartinverter, Electrolux Smartinverter PRO, Electrolux Smartinverter PRO 2.0, Electrolux Smartinverter Enamel |
 | Rusclimate | 95 | Climer Dresden ??K/in-07/G8, Climer Dresden ??K/in-09/G8, Climer Dresden CK/in-18/G8 |
+| Rusclimate | 98 | Shuft Allston-VH/ERV Комплектный пульт |
 | Rusclimate | 99 | Aurus A |
+| Rusclimate | 100 | Shuft Allston-VH/ERV Пульт AirPad 7 |
 | Rusclimate | 102 | Ballu ONEAIR ASP-90 (without CO₂ sensor or heater) |
 | Rusclimate | 105 | Ballu ONEAIR ASP-90 (with CO₂ sensor and heater) |
 | Rusclimate | 106 | Ballu ONEAIR ASP-90 (with heater, without CO₂ sensor) |
@@ -83,6 +88,7 @@
 | Rusclimate | 120 | Aurus VRF |
 | Rusclimate | 122 | Electrolux EAP-1040D Basalt |
 | Rusclimate | 123 | Ballu Voyager |
+| Rusclimate | 124 | Ballu ONEAIR ASV-60 |
 | Rusclimate | 125 | Electrolux Grace DC |
 | Rusclimate | 128 | Ballu Olympio Pro |
 | Rusclimate | 129 | Electrolux Arizona |
