@@ -197,6 +197,33 @@
       },
       "vacation_temperature": {
         "name": "Температура режима Отпуск"
+      },
+      "meditation_timer": {
+        "name": "Длительность медитации"
+      },
+      "prana_exhale": {
+        "name": "Выдох Prana"
+      },
+      "prana_exhale_delay": {
+        "name": "Пауза после выдоха Prana"
+      },
+      "prana_inhale": {
+        "name": "Вдох Prana"
+      },
+      "prana_inhale_delay": {
+        "name": "Пауза после вдоха Prana"
+      },
+      "prana_iteration_time": {
+        "name": "Длительность цикла праны"
+      },
+      "prana_iterations": {
+        "name": "Количество повторений праны"
+      },
+      "yoga_iterations": {
+        "name": "Количество повторений йоги"
+      },
+      "yoga_timer": {
+        "name": "Длительность йоги"
       }
     },
     "select": {
@@ -298,6 +325,29 @@
           "air_with_floor_limit": "Воздух с ограничением по полу",
           "floor_with_air_limit": "Пол с ограничением по воздуху"
         }
+      },
+      "fan_speed": {
+        "name": "Скорость вентилятора"
+      },
+      "fitness_timer": {
+        "name": "Длительность фитнеса",
+        "state": {
+          "15": "15 мин",
+          "30": "30 мин",
+          "60": "60 мин"
+        }
+      },
+      "prana_auto_exercise": {
+        "name": "Упражнение Prana Auto"
+      },
+      "prana_iteration_time": {
+        "name": "Длительность цикла праны",
+        "state": {
+          "3": "3 с",
+          "6": "6 с",
+          "12": "12 с",
+          "24": "24 с"
+        }
       }
     },
     "sensor": {
@@ -323,7 +373,7 @@
         "name": "PM2.5"
       },
       "current_temperature": {
-        "name": "Температура притока"
+        "name": "Текущая температура"
       },
       "expendables_anode": {
         "name": "Ресурс анода, д"
@@ -460,6 +510,23 @@
           "warm_up_keep": "Разогрев с удержанием",
           "iq_boiling": "IQ кипячение",
           "tea_time": "Чайная церемония"
+        }
+      }
+    },
+    "humidifier": {
+      "syncleo_humidifier": {
+        "state_attributes": {
+          "mode": {
+            "state": {
+              "aroma": "Арома",
+              "fitness": "Фитнес",
+              "health": "Здоровье",
+              "meditation": "Медитация",
+              "prana_auto": "Прана авто",
+              "prana_manual": "Прана ручной",
+              "yoga": "Йога"
+            }
+          }
         }
       }
     }

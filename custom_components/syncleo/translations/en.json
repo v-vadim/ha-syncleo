@@ -197,6 +197,33 @@
       },
       "vacation_temperature": {
         "name": "Vacation temperature"
+      },
+      "meditation_timer": {
+        "name": "Meditation duration"
+      },
+      "prana_exhale": {
+        "name": "Prana exhale"
+      },
+      "prana_exhale_delay": {
+        "name": "Prana pause after exhale"
+      },
+      "prana_inhale": {
+        "name": "Prana inhale"
+      },
+      "prana_inhale_delay": {
+        "name": "Prana pause after inhale"
+      },
+      "prana_iteration_time": {
+        "name": "Prana cycle duration"
+      },
+      "prana_iterations": {
+        "name": "Prana repetitions"
+      },
+      "yoga_iterations": {
+        "name": "Yoga repetitions"
+      },
+      "yoga_timer": {
+        "name": "Yoga duration"
       }
     },
     "sensor": {
@@ -222,7 +249,7 @@
         "name": "PM2.5"
       },
       "current_temperature": {
-        "name": "Inlet temperature"
+        "name": "Current temperature"
       },
       "expendables_anode": {
         "name": "Anode resource, d"
@@ -338,6 +365,29 @@
           "floor": "Floor",
           "air_with_floor_limit": "Air with floor limit",
           "floor_with_air_limit": "Floor with air limit"
+        }
+      },
+      "fan_speed": {
+        "name": "Fan speed"
+      },
+      "fitness_timer": {
+        "name": "Fitness duration",
+        "state": {
+          "15": "15 min",
+          "30": "30 min",
+          "60": "60 min"
+        }
+      },
+      "prana_auto_exercise": {
+        "name": "Prana auto exercise"
+      },
+      "prana_iteration_time": {
+        "name": "Prana cycle duration",
+        "state": {
+          "3": "3 s",
+          "6": "6 s",
+          "12": "12 s",
+          "24": "24 s"
         }
       }
     },
@@ -460,6 +510,23 @@
           "warm_up_keep": "Warm up with keep",
           "iq_boiling": "IQ Boiling",
           "tea_time": "Tea time"
+        }
+      }
+    },
+    "humidifier": {
+      "syncleo_humidifier": {
+        "state_attributes": {
+          "mode": {
+            "state": {
+              "aroma": "Aroma",
+              "fitness": "Fitness",
+              "health": "Health",
+              "meditation": "Meditation",
+              "prana_auto": "Prana auto",
+              "prana_manual": "Prana manual",
+              "yoga": "Yoga"
+            }
+          }
         }
       }
     }

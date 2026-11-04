@@ -98,6 +98,24 @@ PD_TURN_ON = "turn_on"
 PD_TURBO_TEMPERATURE = "turbo_temperature"
 PD_VACATION_TEMPERATURE = "vacation_temperature"
 
+# Humidifier program settings
+PD_FITNESS_TIMER = "fitness_timer"
+PD_MEDITATION_HOUR = "meditation_hour"
+PD_MEDITATION_MINUTE = "meditation_minute"
+PD_MEDITATION_REPEAT = "meditation_repeat"
+PD_MEDITATION_TIMER = "meditation_timer"
+PD_PRANA_AUTO_CURRENT_ITERATION = "prana_auto_current_iteration"
+PD_PRANA_AUTO_EXERCISE = "prana_auto_exercise"
+PD_PRANA_CURRENT_ITERATION = "prana_current_iteration"
+PD_PRANA_EXHALE = "prana_exhale"
+PD_PRANA_EXHALE_DELAY = "prana_exhale_delay"
+PD_PRANA_INHALE = "prana_inhale"
+PD_PRANA_INHALE_DELAY = "prana_inhale_delay"
+PD_PRANA_ITERATIONS = "prana_iterations"
+PD_PRANA_ITERATION_TIME = "prana_iteration_time"
+PD_YOGA_ITERATIONS = "yoga_iterations"
+PD_YOGA_TIMER = "yoga_timer"
+
 # Custom device specific values
 PD_AURUS_A_AIR_CLEAN = "aurus_a_air_clean"
 PD_AURUS_SCREENSAVER_MODE = "aurus_screensaver_mode"
@@ -206,11 +224,21 @@ PROFILE_TYPE_AIR_FRYER = "air_fryer"
 PROFILE_TYPE_BOILER = "boiler"
 PROFILE_TYPE_BREEZER = "breezer"
 PROFILE_TYPE_HEATER = "heater"
+PROFILE_TYPE_HUMIDIFIER = "humidifier"
 PROFILE_TYPE_KETTLE = "kettle"
 PROFILE_TYPE_THERMOSTAT = "thermostat"
 
 TRANLATION_KEY_CLIMATE = DOMAIN + "_climate"
 TRANLATION_KEY_FAN = DOMAIN + "_fan"
+TRANSLATION_KEY_HUMIDIFIER = DOMAIN + "_humidifier"
+
+HUMIDIFIER_MODE_AROMA = "aroma"
+HUMIDIFIER_MODE_FITNESS = "fitness"
+HUMIDIFIER_MODE_HEALTH = "health"
+HUMIDIFIER_MODE_MEDITATION = "meditation"
+HUMIDIFIER_MODE_PRANA_AUTO = "prana_auto"
+HUMIDIFIER_MODE_PRANA_MANUAL = "prana_manual"
+HUMIDIFIER_MODE_YOGA = "yoga"
 
 VIRTUAL_DEVICE_TYPE = 39  # 39, 53 and 92 broadcast only current temperature
 
