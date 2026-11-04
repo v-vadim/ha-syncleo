@@ -1,0 +1,839 @@
+{
+  "sources": {
+    "Rusclimate server 2026-10-31": {
+      "kind": "server",
+      "catalog_url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/all/short",
+      "retrieved_at": "2026-10-31T11:06:56.551718+00:00"
+    }
+  },
+  "profiles": {
+    "devices-F3B4A44F-24D7-4F51-9010-EB52BCE63DD0.json": {
+      "type": 1,
+      "name": "Electrolux EAP-1040D/1055D",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/f3b4a44f-24d7-4f51-9010-eb52bce63dd0",
+      "retrieved_at": "2026-10-31T11:06:51.236561+00:00",
+      "sha256": "39bd252e04b1617800c2bcbecb52c12485591353d025ebf9689bd97c6184a09e",
+      "source_sha256": "5feb28b5b9956e893b272272088d6801850fa2229a8d9aa156aa7b813e31b0b1"
+    },
+    "devices-2136EDEE-E074-4CEB-A17B-6A40F4290564.json": {
+      "type": 2,
+      "name": "SmartInverter",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/2136edee-e074-4ceb-a17b-6a40f4290564",
+      "retrieved_at": "2026-10-31T11:06:51.536220+00:00",
+      "sha256": "df7115dcadc74d8836c9ebf737a2159be53fd356ba2079038023c4c80f7102cc",
+      "source_sha256": "fb984d0960d0b3f549ab9e4c9eae4839a4c1a247590ac79c4b68abf906977ece"
+    },
+    "devices-1015EBFE-1874-489C-85D8-FC656A3F6E17.json": {
+      "type": 3,
+      "name": "Ballu ONEAIR ASP-200",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/1015ebfe-1874-489c-85d8-fc656a3f6e17",
+      "retrieved_at": "2026-10-31T11:06:51.563884+00:00",
+      "sha256": "098d03e585d6af16ff5e81185e2d84827896b88db24449713d2bbdd84fba9c4b",
+      "source_sha256": "eaf3d450eea8f3e98272ef48a0d7406afd380ff9c6fb31f25a07f86f968d41cb"
+    },
+    "devices-01BB4F28-5B39-4695-9764-6CF5F6E6ACA5.json": {
+      "type": 4,
+      "name": "Electrolux EHU-3910D/EHU-3915D",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/01bb4f28-5b39-4695-9764-6cf5f6e6aca5",
+      "retrieved_at": "2026-10-31T11:06:51.571284+00:00",
+      "sha256": "235cb3279f085408ae1bbea3b9dc210641c8b03911e98015027f1dd7035b9498",
+      "source_sha256": "e851741f507f0633c8bff0e1e87a5cbbadd5603bb4c352d64035e1e37ac272bf"
+    },
+    "devices-E4ADC2FB-11C0-4FFD-8035-8870847BA10F.json": {
+      "type": 6,
+      "name": "Transformer DI 3.0",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/e4adc2fb-11c0-4ffd-8035-8870847ba10f",
+      "retrieved_at": "2026-10-31T11:06:51.563147+00:00",
+      "sha256": "aefa3bf7e6e0676efd1bde070bc3de88ef80ad2b4762d52e186c19f3a95d7946",
+      "source_sha256": "5c74aa6c55e5ad8479f544f548d7098948ab2f41435a8f0bcbeb9718c99570cf"
+    },
+    "devices-EC3B1C07-6D1F-4464-AE79-EBC7C12D2923.json": {
+      "type": 7,
+      "name": "Zanussi Artendo WiFi/ Azurro PRO WiFi",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/ec3b1c07-6d1f-4464-ae79-ebc7c12d2923",
+      "retrieved_at": "2026-10-31T11:06:51.359947+00:00",
+      "sha256": "394f76ed5d749ef40cb3f09b5fe1b3cb26ce99ece48fbb2187d97a040937c1b1",
+      "source_sha256": "0d7cf696c080154186b53668861e919557d8c5a1885d2be466624a1639579cca"
+    },
+    "devices-C9D5C949-E1DF-4EB9-B8C5-72C610CB6A51.json": {
+      "type": 8,
+      "name": "Electrolux Atrium DC / Zanussi Siena DC / Ballu Lagoon",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/c9d5c949-e1df-4eb9-b8c5-72c610cb6a51",
+      "retrieved_at": "2026-10-31T11:06:51.569671+00:00",
+      "sha256": "615c7d4ceb50b4ded03d1bf32fc56ac89d0fa37831799cc411a1434fdf887401",
+      "source_sha256": "36875dbe319d54b7a490797cbe5f3d2506322f12f700ce21ca8893b8c9f50eb9"
+    },
+    "devices-97AD9CF1-B969-4BE5-91CE-4FD97C39166B.json": {
+      "type": 9,
+      "name": "Transformer DI 3.0 S",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/97ad9cf1-b969-4be5-91ce-4fd97c39166b",
+      "retrieved_at": "2026-10-31T11:06:51.462145+00:00",
+      "sha256": "3871d7215393b05fd7e645e329c4f5f8f5843aba800e4e459d00c7a8ed3b54be",
+      "source_sha256": "2f7ddcf049e1e5511024c692d3d52e023989a674097c0cdd94a3f2ec9cbab182"
+    },
+    "devices-51CD2C58-0318-4FCF-80F9-18BD527F3C4C.json": {
+      "type": 10,
+      "name": "Zanussi Massimo Solar",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/51cd2c58-0318-4fcf-80f9-18bd527f3c4c",
+      "retrieved_at": "2026-10-31T11:06:51.581539+00:00",
+      "sha256": "4a2fc8cf2486ade45e374588632fbed4910bd89956dedcd84e919e960b34f0a0",
+      "source_sha256": "f366b4cbee27beae0ab1e32aacb31f266622e08c67a48a86e837ed4a362d7cb9"
+    },
+    "devices-8F7F25B1-F8B4-4D59-9C4C-51E4EAE05272.json": {
+      "type": 11,
+      "name": "Ballu Rapid",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/8f7f25b1-f8b4-4d59-9c4c-51e4eae05272",
+      "retrieved_at": "2026-10-31T11:06:51.774378+00:00",
+      "sha256": "75e47098003d1a129c88b60541a65c83bcaf4707c47ad48bb8bfee4e82fd482e",
+      "source_sha256": "4d2c79b33582f8e6cca195e7e881545d21046aa62deed1c7d95eeee011eb7386"
+    },
+    "devices-BB4B5BD9-B2B7-4814-B495-8500C9020539.json": {
+      "type": 12,
+      "name": "Electrolux Centurio IQ 2.0/ Maximus WiFi",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/bb4b5bd9-b2b7-4814-b495-8500c9020539",
+      "retrieved_at": "2026-10-31T11:06:51.868757+00:00",
+      "sha256": "8c7b7f4ce6a023f0afebf909db534fface9568b1d4fb1b3311873e83cc9137f7",
+      "source_sha256": "633f773963d19d7407ef2a2875827b06a25e29db7cf25f9c35dcb15249bc8974"
+    },
+    "devices-6DFD280E-BC0F-4931-9B91-1F995A5769FC.json": {
+      "type": 13,
+      "name": "Electrolux Smartline/ Ballu Eco Smart/ Ice Peak",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/6dfd280e-bc0f-4931-9b91-1f995a5769fc",
+      "retrieved_at": "2026-10-31T11:06:51.909009+00:00",
+      "sha256": "52c99cca4249445cac65e58db4e78498acc4b187a9d136a4ec08e23bafed0c9c",
+      "source_sha256": "e6b6f7e7ea7ef0148c58946275fd420a55f136960456950ee532390c1f6f5a8c"
+    },
+    "devices-14DCF1CF-4372-477F-A4E8-95369EE33159.json": {
+      "type": 14,
+      "name": "Transformer DI",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/14dcf1cf-4372-477f-a4e8-95369ee33159",
+      "retrieved_at": "2026-10-31T11:06:51.866897+00:00",
+      "sha256": "33637823a5eea59f5434ee21a07d3ec2a11baac27059c908e295406fd412481c",
+      "source_sha256": "89ba714a8aae31d8802a27c6a6da89001e35bf0f52b5e689308d10494ca0515c"
+    },
+    "devices-E0302AC0-FD80-4BEF-94F6-7B711DB1A974.json": {
+      "type": 15,
+      "name": "Electrolux Viking DC / Zanussi Perfecto DC / Ballu Greenland DC",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/e0302ac0-fd80-4bef-94f6-7b711db1a974",
+      "retrieved_at": "2026-10-31T11:06:51.883500+00:00",
+      "sha256": "32f7af8ec1308bdf0af4eb7d2d566d4417d3dbff924d24c8c113b82dfe44db61",
+      "source_sha256": "76c4c72789488a30668bb4b3a6187bd67a8fd385045b66292e3ef552ae886472"
+    },
+    "devices-CF335432-ABCE-49E2-A07F-B1D81188B5F5.json": {
+      "type": 16,
+      "name": "Ballu Smart WiFi",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/cf335432-abce-49e2-a07f-b1d81188b5f5",
+      "retrieved_at": "2026-10-31T11:06:51.835099+00:00",
+      "sha256": "71e1b91ce279ecd047f0ad508c3dc01a585c85ea68c17155aeadb793bb72a690",
+      "source_sha256": "20431787eb8a261e66538e4cb6a872121e48b0866778205db0553e0fae819563"
+    },
+    "devices-28BDDE08-44A1-4305-8595-E833D96F6875.json": {
+      "type": 17,
+      "name": "Wi-Fi Convection Heater",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/28bdde08-44a1-4305-8595-e833d96f6875",
+      "retrieved_at": "2026-10-31T11:06:51.841595+00:00",
+      "sha256": "ba49430f7d1de10ab9f2e1761b58a8df5a1fa215d22815a2379801c5a62a1388",
+      "source_sha256": "b6f413e8ecec2aba7fbf4743db658e07735674e6787fccbb4df5bdfa2996d37a"
+    },
+    "devices-627421FA-5F9D-4934-A0CD-A07E8791EBDE.json": {
+      "type": 18,
+      "name": "Electrolux Maximus/ Megapolis WiFi/ Zanussi Splendore XP 2.0/ Artendo PRO-C WiFi",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/627421fa-5f9d-4934-a0cd-a07e8791ebde",
+      "retrieved_at": "2026-10-31T11:06:52.143391+00:00",
+      "sha256": "799f8bd1cd6e6d67faa04c24b4afc78a2ce78f53610eca9b946b23c09bc42970",
+      "source_sha256": "9d0a774329cefc40606700ec97abe98c633fd643dda98d676be013992215468e"
+    },
+    "devices-EF1F6363-770D-47C3-8ABF-5C1A300F446A.json": {
+      "type": 19,
+      "name": "Electrolux Regency",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/ef1f6363-770d-47c3-8abf-5c1a300f446a",
+      "retrieved_at": "2026-10-31T11:06:52.048715+00:00",
+      "sha256": "f3b53698deb320a8576c6f2469538cf0ec0d4c4c4c6f6f065911bdf2d3e998ad",
+      "source_sha256": "ffe1aa3669ebd72629e996f55d84200826e002c8cdee77dcf592b118d1bee840"
+    },
+    "devices-9CBC2A24-BA76-4BE8-8263-CBC1FB6308D5.json": {
+      "type": 20,
+      "name": "Ballu Platinum Evol. DC/Olympio Legend",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/9cbc2a24-ba76-4be8-8263-cbc1fb6308d5",
+      "retrieved_at": "2026-10-31T11:06:52.352380+00:00",
+      "sha256": "be2c1290f7b44fda8b7e78df6f3b3b3925fa1ce9f2170868bf337a98dfc6eac9",
+      "source_sha256": "e1ed34f2895e1a8488c254869aceea24ea50e7da056b49a2670436a87c2f3389"
+    },
+    "devices-D9BE72C5-91DB-499B-B1A2-0A0CA501D61B.json": {
+      "type": 21,
+      "name": "Zanussi Moderno DC/Electrolux Loft DC",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/d9be72c5-91db-499b-b1a2-0a0ca501d61b",
+      "retrieved_at": "2026-10-31T11:06:52.229352+00:00",
+      "sha256": "ba102f9fcfe53c9cc7a2c38cf6911f040c7a95517bb0b09ea5506b9f45a268cf",
+      "source_sha256": "25b0e138a4c08a3fcc6a6e5285d98167aa934064bbd5e75321a423c7eba7f309"
+    },
+    "devices-A03D6F52-2167-4990-A165-2362034D6DC6.json": {
+      "type": 26,
+      "name": "Electrolux EAP-2050D/2075D",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/a03d6f52-2167-4990-a165-2362034d6dc6",
+      "retrieved_at": "2026-10-31T11:06:52.170109+00:00",
+      "sha256": "e0b2791bb1ab90a11076e8b7da13d9f6fd504cbd0d9f3dc2dc0f647dbc8135d0",
+      "source_sha256": "f4066ca8b529b3b594ccf76d521d349ced5a5b8bcb66d2cf101ad7708de1facf"
+    },
+    "devices-6AD000FC-957B-4D4B-A5F6-73B5922703ED.json": {
+      "type": 27,
+      "name": "Ballu RDU ANTICOVIDgenerator WiFi",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/6ad000fc-957b-4d4b-a5f6-73b5922703ed",
+      "retrieved_at": "2026-10-31T11:06:52.084970+00:00",
+      "sha256": "32bc59f8852890b98480f43aeb0bbc12fb52eea7a78f270d85bba39501984b0d",
+      "source_sha256": "6f5f71ea0c67d7f55605c8a7845fb9196d4c4a2343f341500d64f9fff3d4b7fe"
+    },
+    "devices-55DADB6C-C697-45F2-8247-A0C8A57BBFEF.json": {
+      "type": 28,
+      "name": "Transformer DI 4.0",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/55dadb6c-c697-45f2-8247-a0c8a57bbfef",
+      "retrieved_at": "2026-10-31T11:06:52.229884+00:00",
+      "sha256": "4d9a7534e0b99feb841ce6d2681509b8fce2bfc60da42830c75691e5f6d78f72",
+      "source_sha256": "5cc60dfa712f6254d26a12cbbb918c0e3bb138e71ae2995032e567e257e683d1"
+    },
+    "devices-3A3E6492-8A07-4F4F-9FAC-0A4E9356B048.json": {
+      "type": 29,
+      "name": "Electrolux/Royal Thermo",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/3a3e6492-8a07-4f4f-9fac-0a4e9356b048",
+      "retrieved_at": "2026-10-31T11:06:52.564821+00:00",
+      "sha256": "fb81f30ad28a0b043b0c7715795e46099c997afe649f7cfaf98d328b696e65f6",
+      "source_sha256": "8b31072f81e5c8c29e638cbb6db9ea54a6e42b4b01439f625ce21fbdd2c2d29b"
+    },
+    "devices-F4E8067D-E63C-4928-B952-DC4CE3FA255D.json": {
+      "type": 30,
+      "name": "Ballu ONEAIR ASP-200S",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/f4e8067d-e63c-4928-b952-dc4ce3fa255d",
+      "retrieved_at": "2026-10-31T11:06:52.320183+00:00",
+      "sha256": "17521e5272226bd6da6fd082ef5eda0606e6cfcdd59f04c44e08b571ac346a7d",
+      "source_sha256": "6e23958f1bc8cbc5b1ee280c596ee777e82473a748e4b3dc97b7cb8059a3dd80"
+    },
+    "devices-2C1E9CFE-EB85-4EEA-8418-30EF06F4FF7A.json": {
+      "type": 31,
+      "name": "Transformer 4.0",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/2c1e9cfe-eb85-4eea-8418-30ef06f4ff7a",
+      "retrieved_at": "2026-10-31T11:06:52.489390+00:00",
+      "sha256": "dd3189fb15af9a8ebc1b0d8337be5427a42d2f39df611dad2eb18e4672a0df06",
+      "source_sha256": "c8b09ad3393ec23b98927aeaeaef0feb6faa207f6a94085c4cadf704d0a0a66e"
+    },
+    "devices-5C85D4DE-4B5A-4ECA-9E93-C32B3219E6F8.json": {
+      "type": 32,
+      "name": "Ballu ASP-100 / Electrolux EASP-100",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/5c85d4de-4b5a-4eca-9e93-c32b3219e6f8",
+      "retrieved_at": "2026-10-31T11:06:52.485030+00:00",
+      "sha256": "5ec2178ce711bc65cbc5af398bd2532b7b872b3058c8fb370eef510adbcbb4cc",
+      "source_sha256": "abe256677c5914c689bb658ea47d88b4cde2bc2bbb2a82dbfe6369df9e92790d"
+    },
+    "devices-24EE337F-6297-4614-8238-8C0258927D49.json": {
+      "type": 33,
+      "name": "Electrolux Centurio IQ 3.0",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/24ee337f-6297-4614-8238-8c0258927d49",
+      "retrieved_at": "2026-10-31T11:06:52.460868+00:00",
+      "sha256": "820a5b640807d57bc60a01ec4b80ad5618429112c394d281cfb25cc10c6aac74",
+      "source_sha256": "aca576093085609f9b524b5ad09c0d73e73cb737124a26328d4964f733125524"
+    },
+    "devices-B6E45378-2A5B-4AD0-980B-E086D7A65897.json": {
+      "type": 34,
+      "name": "Electrolux EPVS / ERVX inv",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/b6e45378-2a5b-4ad0-980b-e086d7a65897",
+      "retrieved_at": "2026-10-31T11:06:52.992775+00:00",
+      "sha256": "9685bcf9344c242fcc4c45bb2c8e031b06a7bd9adc4a8bb76e3550737a0a669d",
+      "source_sha256": "12fab29f7ff92381910e4ba2626531fac729733ada51d26ad343d7d90721bd54"
+    },
+    "devices-4A37317A-0AA5-44C8-ABEE-E892CE7EE379.json": {
+      "type": 35,
+      "name": "Electrolux YOGAhealthline 2.0.",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/4a37317a-0aa5-44c8-abee-e892ce7ee379",
+      "retrieved_at": "2026-10-31T11:06:52.640293+00:00",
+      "sha256": "024298a05a64daf6c7068700ac0b61a679a244495e23489714b3b4cd3b8ce019",
+      "source_sha256": "345288dcf0030dc89fa453b9a76d33c40b70dac12878fc2f954b2487b2d78024"
+    },
+    "devices-681252FB-3AD7-4C69-8BC3-185C0C3A7B40.json": {
+      "type": 36,
+      "name": "Electrolux EPVS / ERVX inv",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/681252fb-3ad7-4c69-8bc3-185c0c3a7b40",
+      "retrieved_at": "2026-10-31T11:06:52.699691+00:00",
+      "sha256": "bc4b0351585cb937e89f37225d3845ebc1300ab957609a76c5a5de54b241ad2d",
+      "source_sha256": "4d7418b4bcc9868cf7a734038ee34b7d4146f6af7c114fc8b3ef053bd7e292f3"
+    },
+    "devices-D320CDA6-4258-4DD3-A58C-70530A559AFF.json": {
+      "type": 38,
+      "name": "Toshiba Shorai EE",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/d320cda6-4258-4dd3-a58c-70530a559aff",
+      "retrieved_at": "2026-10-31T11:06:52.697815+00:00",
+      "sha256": "fa85f9629b3ebeafbd095377537376cec6e20a8e33227dc7bccd3c66777328c9",
+      "source_sha256": "4bb609ac0dcb9f681787f89359887e3d6b68281cb91bd831fe0120333f14ba65"
+    },
+    "devices-323DFAE6-C5E5-499F-A2C8-FEB80D3367C1.json": {
+      "type": 41,
+      "name": "Electrolux Monaco DC",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/323dfae6-c5e5-499f-a2c8-feb80d3367c1",
+      "retrieved_at": "2026-10-31T11:06:52.867479+00:00",
+      "sha256": "b38c8c8a469381fbadbe96ba773c578064d38b21f810bfc0b96d05a9b31c38be",
+      "source_sha256": "6355eecd275a0567c793eefab13caf593ba365badae42dbfa77be70188679809"
+    },
+    "devices-92252FF5-DD8D-4D85-9B3A-F4FBF8A6431C.json": {
+      "type": 42,
+      "name": "Transformer DI 3.0 XS",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/92252ff5-dd8d-4d85-9b3a-f4fbf8a6431c",
+      "retrieved_at": "2026-10-31T11:06:52.736110+00:00",
+      "sha256": "cffaeb87e43bccdd768e0a187b4503f1da84589e7d0d64628a4e1d257f614dc4",
+      "source_sha256": "d560612a891ae295d85948ed2c97b512ba77ebdec02e81b03c58db4837b655e9"
+    },
+    "devices-E87E33CE-BEF9-44DB-8BF5-FE8EF1B1C173.json": {
+      "type": 44,
+      "name": "Royal Thermo Aqua Inverter/ Royal Thermo Aqua Inox Inverter",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/e87e33ce-bef9-44db-8bf5-fe8ef1b1c173",
+      "retrieved_at": "2026-10-31T11:06:52.957082+00:00",
+      "sha256": "2600f9f4d323c7341f4553b74ba3e3e7db3f1d99841397bde50a3251b5daa70c",
+      "source_sha256": "0faca6d4e82630fa50b311f3b95d59f29a15320dc9f63c85081c05011580bfe5"
+    },
+    "devices-1CC7F89D-C49D-44AD-BF8F-C27F6A956482.json": {
+      "type": 46,
+      "name": "Transformer DI 4.0",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/1cc7f89d-c49d-44ad-bf8f-c27f6a956482",
+      "retrieved_at": "2026-10-31T11:06:52.926288+00:00",
+      "sha256": "79c99a1f50af3a92bdb4edad0488d6a7007329b0bebe2d26a7ef742dccf9009b",
+      "source_sha256": "a4a8fece9bb55c125798582431e6b9273d35ba24454f145352b622a503fc88b5"
+    },
+    "devices-5EA2DBAA-DA69-466E-9D7E-D5906129121E.json": {
+      "type": 47,
+      "name": "Wi-Fi Convection Heater",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/5ea2dbaa-da69-466e-9d7e-d5906129121e",
+      "retrieved_at": "2026-10-31T11:06:52.883818+00:00",
+      "sha256": "da12638bf15362bfd50376d5789b10908390172d0049441c377dc1f82aa13c6e",
+      "source_sha256": "e3d00e1b72cca35a6ee9eaf1e289c00db5276433cb97f7c59894dd5fe7ff68fd"
+    },
+    "devices-47328177-56E1-4665-9EC1-30E90A9126E7.json": {
+      "type": 49,
+      "name": "Transformer 4.0",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/47328177-56e1-4665-9ec1-30e90a9126e7",
+      "retrieved_at": "2026-10-31T11:06:53.177720+00:00",
+      "sha256": "470702845d9c58277ece23135b48ca7f9ebab94f4de50764e598b49e27d90f33",
+      "source_sha256": "887aaee56ab3b6880979772d597c0ddc8891c8366baee30087d1b49f0208930e"
+    },
+    "devices-A1EC3D09-AD5F-42C3-8B64-074CC893A71B.json": {
+      "type": 50,
+      "name": "Electrolux 3D Fireplace",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/a1ec3d09-ad5f-42c3-8b64-074cc893a71b",
+      "retrieved_at": "2026-10-31T11:06:52.927719+00:00",
+      "sha256": "ee143ebd3391f0c2f49e51ae2e0af7c101864d70268e864ae027b13765786dd8",
+      "source_sha256": "3dcae2e6270ee0e4e6afd3375545b0d6fa60454c51e1a27d1a38d4132a5e9f53"
+    },
+    "devices-D5AFD2C0-3BF9-4888-AF6D-B3B511303BD8.json": {
+      "type": 51,
+      "name": "Zanussi Massimo Solar 2023",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/d5afd2c0-3bf9-4888-af6d-b3b511303bd8",
+      "retrieved_at": "2026-10-31T11:06:53.373457+00:00",
+      "sha256": "a2adbb3fb984166e155322e5cf1ed22cc3c71ba16dc92b77bcfdf00684fea820",
+      "source_sha256": "0c9f2341c7ff58a4d0aa79b21699e83c84ae7d1053013f582a533b09ce4ce7e4"
+    },
+    "devices-0A33A984-A7DE-4500-93FE-CB66AD02E514.json": {
+      "type": 55,
+      "name": "Zanussi Barocco DC/ Royal Thermo Barocco DC",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/0a33a984-a7de-4500-93fe-cb66ad02e514",
+      "retrieved_at": "2026-10-31T11:06:53.177918+00:00",
+      "sha256": "27750fc5da803a311582dcded52985a31c1960c156ce26445dbe8051226af55f",
+      "source_sha256": "ae33153998f3a22f785b803bd9fdae1465832fec5d2ead226d9ec4383a7ac07d"
+    },
+    "devices-E8A304AA-ACC5-4032-9AAA-3ABCBD4DAC0E.json": {
+      "type": 56,
+      "name": "Toshiba",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/e8a304aa-acc5-4032-9aaa-3abcbd4dac0e",
+      "retrieved_at": "2026-10-31T11:06:53.490180+00:00",
+      "sha256": "05b79b1a6fc76f5725f34d2d5817049318c96918d06092cce4e809f875e573cd",
+      "source_sha256": "ce692e765b02d7286e87dc0dc96632f70176cba3c8a09feb6f90330efe3f1b52"
+    },
+    "devices-272351CB-0EC6-43A4-9769-9C70FD13CAE8.json": {
+      "type": 57,
+      "name": "Shuft Berg/ MBO M-1",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/272351cb-0ec6-43a4-9769-9c70fd13cae8",
+      "retrieved_at": "2026-10-31T11:06:53.489904+00:00",
+      "sha256": "c6010e191edb9c7614499cf5ce6b7843c861368ef090715bd6c4e9ecee3e4760",
+      "source_sha256": "3e3ccd294c09e4dc20df6b6d547fdd10268a102f9fa48f95bb9b83f516aaef7e"
+    },
+    "devices-805C2346-9936-4102-8182-05396D57B3EF.json": {
+      "type": 59,
+      "name": "Ballu ONEAIR ASP-200S",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/805c2346-9936-4102-8182-05396d57b3ef",
+      "retrieved_at": "2026-10-31T11:06:53.668697+00:00",
+      "sha256": "c3b16026e761114b308eab2faa4164825d35eb0f06659b7f42e5812568f5f016",
+      "source_sha256": "6882a871da10d46c1f2ac03d053e78fa655c4d5824f55dba3f96584895e08109"
+    },
+    "devices-19AE8C30-3304-4736-A521-73493BFA6887.json": {
+      "type": 60,
+      "name": "Ballu Discovery DC",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/19ae8c30-3304-4736-a521-73493bfa6887",
+      "retrieved_at": "2026-10-31T11:06:53.212219+00:00",
+      "sha256": "95c6cb187807310a796e8de398bbcacda35cb80743802053d9972c5b6e63695c",
+      "source_sha256": "113a07cc99d3448ea1738ec2493dede9f75b8ce6a45ed24f6934cba19c39b556"
+    },
+    "devices-96C3777F-81BC-4EFA-904D-68A951856D07.json": {
+      "type": 65,
+      "name": "SmartControl",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/96c3777f-81bc-4efa-904d-68a951856d07",
+      "retrieved_at": "2026-10-31T11:06:53.723526+00:00",
+      "sha256": "c5cdbe9cdb6cb02e93a88c0414b80bf53e9664c0c9cd8173682f9b73bc7bfe04",
+      "source_sha256": "cb3b2733d3f5285029ad850765b36e505543291e3abc5cfb42f54f51214232e5"
+    },
+    "devices-B58622DF-7428-4EE9-B6D9-18D7C26B25E7.json": {
+      "type": 67,
+      "name": "Electrolux/Royal Thermo",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/b58622df-7428-4ee9-b6d9-18d7c26b25e7",
+      "retrieved_at": "2026-10-31T11:06:53.503520+00:00",
+      "sha256": "cb5b17f7813af67005a2db30d75504f3d31773945f0070546aedb31400481cae",
+      "source_sha256": "fae0cc3ad3e0fa7a2fe67f2353256b2f5fad9707885c023cc24256b50b8ac3a0"
+    },
+    "devices-8383CFD7-C684-482A-8B2C-9CDDC3093DCE.json": {
+      "type": 68,
+      "name": "Electrolux Loft DC/Ballu Platinum Black DC",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/8383cfd7-c684-482a-8b2c-9cddc3093dce",
+      "retrieved_at": "2026-10-31T11:06:53.782201+00:00",
+      "sha256": "6d1dab41556325c4ba8e1868901df1e28f6cf02ca2385188874af65e819fc49e",
+      "source_sha256": "e9482a466c98a84e373ab00eb3cfc31b5c37c9876b3a5fff87a45f81f20a2955"
+    },
+    "devices-76EC0B8A-9625-4630-AAF1-3221D25E387E.json": {
+      "type": 69,
+      "name": "Ballu ASP-100 / Electrolux EASP-100 with music",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/76ec0b8a-9625-4630-aaf1-3221d25e387e",
+      "retrieved_at": "2026-10-31T11:06:53.871864+00:00",
+      "sha256": "310b1163401c84cdc0d3b0e1ece2528e1989b8aa7351792139e6cdd3af0afb88",
+      "source_sha256": "d7b4b29123292efe632b6684e38c564daa4053e095b82c7e76a63bd5a022b954"
+    },
+    "devices-29BBC6EA-0B4E-47B5-85DC-D03DF20557A1.json": {
+      "type": 70,
+      "name": "Ballu Universal 3, DC, Free Match",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/29bbc6ea-0b4e-47b5-85dc-d03df20557a1",
+      "retrieved_at": "2026-10-31T11:06:53.764740+00:00",
+      "sha256": "b32b8d46eca10c4c7e31ecd33c9394621a56d1307c7b6b1dab3b083f160c63b8",
+      "source_sha256": "711d678b2043f559d9d1fad358a529a9554db9c50c3315d1b956cd0de3ee4101"
+    },
+    "devices-7967749A-DEF6-40E7-8DFD-034CAD05F53D.json": {
+      "type": 71,
+      "name": "Transformer DI 4.0",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/7967749a-def6-40e7-8dfd-034cad05f53d",
+      "retrieved_at": "2026-10-31T11:06:54.051774+00:00",
+      "sha256": "0ac82e3c6a1d2afe562a907c6317b62ac4f6f9ef4eb7f74207ef888bf633a97a",
+      "source_sha256": "5200d4177fffb53eed4babb2e2abba5ad795126d6dccc854202a6c686f80e262"
+    },
+    "devices-A54EC109-5DA7-41BA-AE4C-BEA8906F495B.json": {
+      "type": 72,
+      "name": "Zanussi Barocco/ Royal Thermo Barocco",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/a54ec109-5da7-41ba-ae4c-bea8906f495b",
+      "retrieved_at": "2026-10-31T11:06:54.211358+00:00",
+      "sha256": "afcf0de996bf2dec9ccb7956d82641495376558c478a2f5bc7d10259c3dac101",
+      "source_sha256": "392032e1b834051d376518a702f8eed998a827ac92c1a84fdf81d1f0bf485d8d"
+    },
+    "devices-DCA6FE8D-ED16-45DF-A0F5-129F2ED5778F.json": {
+      "type": 73,
+      "name": "SmartControl Pro",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/dca6fe8d-ed16-45df-a0f5-129f2ed5778f",
+      "retrieved_at": "2026-10-31T11:06:53.747788+00:00",
+      "sha256": "812d1cd8e34a4c24a807f092b72da77558c75c406bdec855b380c472bdcbc8b7",
+      "source_sha256": "385339c62676bb29df7a2e20229de2468f2cdb28b986465ca9eb39acbd467c29"
+    },
+    "devices-DA3EB8E6-DA4E-435A-86E5-C9E68D90D483.json": {
+      "type": 74,
+      "name": "Aurus S",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/da3eb8e6-da4e-435a-86e5-c9e68d90d483",
+      "retrieved_at": "2026-10-31T11:06:53.898712+00:00",
+      "sha256": "b91d7acdcc47d9939b0b6e95d34edf79ddf4f2d4f6eb2dfd2ba67bb672192a31",
+      "source_sha256": "9ee3447ba66317d0ac85150a8f2af46ab3ac68c6d1f9246b3678727954b5997a"
+    },
+    "devices-7568AE28-D511-4EF6-AD88-953D0649821C.json": {
+      "type": 75,
+      "name": "Aurus Infrared",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/7568ae28-d511-4ef6-ad88-953d0649821c",
+      "retrieved_at": "2026-10-31T11:06:54.049162+00:00",
+      "sha256": "4efda7bd51fd759c5c0db2e69b24b4b389cdc6c85ba5569dc4a194528c938c9e",
+      "source_sha256": "bb4f454cedb0d2295bb8ccc5db4ccf8636388d7345be6906fd0b77369a61263b"
+    },
+    "devices-61AD04A0-EBC4-4448-8868-A8304E437AC3.json": {
+      "type": 76,
+      "name": "Electrolux Royal Flash/ Centurio IQ Inverter",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/61ad04a0-ebc4-4448-8868-a8304e437ac3",
+      "retrieved_at": "2026-10-31T11:06:54.187207+00:00",
+      "sha256": "0209464eb15e219a4fe74cdcd380f8a5b35bb872ced66c0a7c3242faa0af6696",
+      "source_sha256": "147ebdf59f32709660aae8dd34a9964c1c87bd458c0bcd58d20abc46d86f7e7f"
+    },
+    "devices-7F0195DB-C81A-4EA4-A596-799C0B1A98B7.json": {
+      "type": 77,
+      "name": "Royal Thermo Major Inverter/ Smalto Inverter",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/7f0195db-c81a-4ea4-a596-799c0b1a98b7",
+      "retrieved_at": "2026-10-31T11:06:54.191399+00:00",
+      "sha256": "eafdce6120b0c5bf960e22b1e8900df53be939a89405666cd2abdd4ba0213062",
+      "source_sha256": "0422cdd99f3fc0966e48893fb24e88857d05a4936681d9ee3ab9b878ce2aa16c"
+    },
+    "devices-6F3DBAE8-F53C-4337-9208-BD9739D0620C.json": {
+      "type": 78,
+      "name": "Electrolux/Royal Thermo",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/6f3dbae8-f53c-4337-9208-bd9739d0620c",
+      "retrieved_at": "2026-10-31T11:06:54.865422+00:00",
+      "sha256": "4963f5501afc9c33780127314b3b096ea65451e9f19c409992c011c728136d1c",
+      "source_sha256": "99ca95d213e747144a2b7989d67c2e714f9a25af626106ab557e133e0a2eb12a"
+    },
+    "devices-EB87E8C5-5A98-4E96-92DD-608ACFDB1B08.json": {
+      "type": 80,
+      "name": "Aurus F",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/eb87e8c5-5a98-4e96-92dd-608acfdb1b08",
+      "retrieved_at": "2026-10-31T11:06:54.172520+00:00",
+      "sha256": "58a9088bf2d740cd5881a75e271ebdacc8d5f214eb170955a0bc2e27eb2a3734",
+      "source_sha256": "d9505d945bc6b8c2bdd84bb784a6de0e13c3ebf6e4cf1a71ab19335fdecbd248"
+    },
+    "devices-45056542-D42A-4331-82D6-E0E92B34ECF0.json": {
+      "type": 81,
+      "name": "UHB-960 ET",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/45056542-d42a-4331-82d6-e0e92b34ecf0",
+      "retrieved_at": "2026-10-31T11:06:54.126834+00:00",
+      "sha256": "927bd5bd6ead1903129bc2733526d017a399f2ca17933c628be12c695b5063af",
+      "source_sha256": "73ddd1f915df5c20b3ac71e67c2120480ee5f2f0bcd98074a809a581d8cf0f37"
+    },
+    "devices-EEBD423B-CE57-44CF-A236-0108B75853D2.json": {
+      "type": 82,
+      "name": "Goldstar GSAC/GSACI",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/eebd423b-ce57-44cf-a236-0108b75853d2",
+      "retrieved_at": "2026-10-31T11:06:54.631244+00:00",
+      "sha256": "5f59621a67ec52e0ce993566b234049b736baaa3ce548d6d6244b3ba6c8850df",
+      "source_sha256": "356c3a0e8e0a4c134c020f6a8804f8e8ee71aee45325d214f848192aafe09f65"
+    },
+    "devices-F73332E1-D7D0-45AB-89E5-31AE84CCD64A.json": {
+      "type": 83,
+      "name": "Ballu Aura",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/f73332e1-d7d0-45ab-89e5-31ae84ccd64a",
+      "retrieved_at": "2026-10-31T11:06:54.596868+00:00",
+      "sha256": "d6514823f7a47539ffa07e92c0a5e0ef7dac67fdcce27616ef7d603ebed456f3",
+      "source_sha256": "55562433e60a78a8412e2b807d47e83be8f277bb1e5cc9523f30d1558e771079"
+    },
+    "devices-D055972B-FDB2-4A82-A686-E7FE6B16BC22.json": {
+      "type": 84,
+      "name": "Ballu Aura",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/d055972b-fdb2-4a82-a686-e7fe6b16bc22",
+      "retrieved_at": "2026-10-31T11:06:54.606164+00:00",
+      "sha256": "e627edb60066580794d098a1e763aeae45c408ae6fa9a1d2d782fc5b86c16164",
+      "source_sha256": "3517f940b90f033cac3a9c8b1dd583f0cf61450c7102fd5eb302715dbe0f71c3"
+    },
+    "devices-F85778FE-3D56-4C44-8800-D143B3D257D3.json": {
+      "type": 85,
+      "name": "Aurus D",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/f85778fe-3d56-4c44-8800-d143b3d257d3",
+      "retrieved_at": "2026-10-31T11:06:54.801006+00:00",
+      "sha256": "5ba1624b407014d6a05e735e795be276fd90e069fd7dad54abfc7b98e0cedf24",
+      "source_sha256": "fb403aaa198c2857ebaead3609f35f2002117346e2ee10c00875886d8d8eff16"
+    },
+    "devices-54D8F1CF-88CB-4B49-98A9-13DAE3C12146.json": {
+      "type": 89,
+      "name": "Aurus PF",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/54d8f1cf-88cb-4b49-98a9-13dae3c12146",
+      "retrieved_at": "2026-10-31T11:06:54.855330+00:00",
+      "sha256": "dc91c11e66bae4bbf6aed011c21552b859c78311e22968499df180576d27c63e",
+      "source_sha256": "f48c6fe81f950458ce9634a5b63946ff197ee5b8f22eb28508bb3d71e93c6e3e"
+    },
+    "devices-23CE6C67-62FF-488B-B0EB-3C8BE6CCAEBA.json": {
+      "type": 90,
+      "name": "Ballu Cetrion Inverter/ Ballu Cetrion Inox Inverter",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/23ce6c67-62ff-488b-b0eb-3c8be6ccaeba",
+      "retrieved_at": "2026-10-31T11:06:54.523936+00:00",
+      "sha256": "51b34bd081ad7fbf1c71beaa4539dd8813668f68eb3ef8c9a4035ac7c8184c3c",
+      "source_sha256": "185c7ae1ae090da4d0576ced0dc358275c19c31010b23c364d009cc520cc909c"
+    },
+    "devices-C2D8118A-D9AB-440D-89CB-F23E892B5C27.json": {
+      "type": 91,
+      "name": "Royal Thermo Regency",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/c2d8118a-d9ab-440d-89cb-f23e892b5c27",
+      "retrieved_at": "2026-10-31T11:06:54.588557+00:00",
+      "sha256": "7dba0647874c7b081be85013a1851f69624e0f637781ee770d6b215110054a5e",
+      "source_sha256": "4a065f81131d6aa549d1303b05862ec1c08f5e943706e1f7b8b4c6b55d1b996d"
+    },
+    "devices-AFDC18EF-84A2-435A-B3C7-CAEBD34B3F75.json": {
+      "type": 93,
+      "name": "SmartInverter",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/afdc18ef-84a2-435a-b3c7-caebd34b3f75",
+      "retrieved_at": "2026-10-31T11:06:54.773513+00:00",
+      "sha256": "37d3a226d746a9ddd0011485105d746517010c1a92ca573146c3d690d664e608",
+      "source_sha256": "8c31abf12fdab73e325943e3b2cb9b437d422b5190aa6ba41661afd40dedeb40"
+    },
+    "devices-5A9707EB-42E8-483A-8683-1220FC8EFE20.json": {
+      "type": 95,
+      "name": "Climer Dresden",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/5a9707eb-42e8-483a-8683-1220fc8efe20",
+      "retrieved_at": "2026-10-31T11:06:54.921644+00:00",
+      "sha256": "13b4eacbf4258a3d47229a7a72582c0b4c103df52bc6f4ae95d3500131af9d16",
+      "source_sha256": "d18e29daa4af668c4b66c486eb9370aa105846d91cb606a34598e402cec50394"
+    },
+    "devices-049E0865-7E7C-47EF-8AE6-BCF2917BD2DC.json": {
+      "type": 98,
+      "name": "Shuft Allston-VH/ERV Комплектный пульт",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/049e0865-7e7c-47ef-8ae6-bcf2917bd2dc",
+      "retrieved_at": "2026-10-31T11:06:55.062207+00:00",
+      "sha256": "07b0a3b8b2d2a5b861f7391b478314e93279ad548a7394400724a0cb1e64d3c7",
+      "source_sha256": "9e2ee2e2433274adb76abc3ab452fd01e6b9bc47c6f55308bf2ee1140df29055"
+    },
+    "devices-050381C2-5D78-4478-8270-D51616682123.json": {
+      "type": 99,
+      "name": "AURUS A",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/050381c2-5d78-4478-8270-d51616682123",
+      "retrieved_at": "2026-10-31T11:06:55.082541+00:00",
+      "sha256": "14b0b5b16a9dc22a99e77a0dab20c4b91f5d5f8969557c2356ad350c65bf1b7a",
+      "source_sha256": "182f3973f63dccf6d2cba08aaeba7dde57bcb3a9c15d65b38ff2228d71ce6aab"
+    },
+    "devices-62F3B8B2-1C66-4945-9962-97BE01368B68.json": {
+      "type": 100,
+      "name": "Shuft Allston-VH/ERV Пульт AirPad 7",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/62f3b8b2-1c66-4945-9962-97be01368b68",
+      "retrieved_at": "2026-10-31T11:06:54.893018+00:00",
+      "sha256": "fbc6a656e7e7891a27536dea3bed0b305dfbba74087042b44854e255bb636e0f",
+      "source_sha256": "3369e0ed4de2789570b88f0ed5f260bc804281e719708187f410aaa3ea19272d"
+    },
+    "devices-0776A423-1C95-41AF-8937-7C9F1123F2F4.json": {
+      "type": 102,
+      "name": "Ballu ONEAIR ASP-90",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/0776a423-1c95-41af-8937-7c9f1123f2f4",
+      "retrieved_at": "2026-10-31T11:06:55.185798+00:00",
+      "sha256": "9d19f828abda3140273911dbe1c68dadc88af3a86e0ae8c0467d0f11dd2fc65d",
+      "source_sha256": "8292f3f1606211cd044181424b1a2ce79d9e8c022f730b33b023840bfa092d03"
+    },
+    "devices-876397B2-602C-4E81-BE1E-914AF7826C67.json": {
+      "type": 105,
+      "name": "Ballu ONEAIR ASP-90",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/876397b2-602c-4e81-be1e-914af7826c67",
+      "retrieved_at": "2026-10-31T11:06:55.181129+00:00",
+      "sha256": "d1c614ad6620fbb157de852a65ceb1013111eeaec82164519728f51d3781f1bd",
+      "source_sha256": "db01e67cc3413bfdf604b5f920fc88dfb6d0b593d5b62ac3fcfbf83fccf986a6"
+    },
+    "devices-819CAB1A-3FCA-467D-AD83-28979E208D7F.json": {
+      "type": 106,
+      "name": "Ballu ONEAIR ASP-90",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/819cab1a-3fca-467d-ad83-28979e208d7f",
+      "retrieved_at": "2026-10-31T11:06:55.143324+00:00",
+      "sha256": "4b6a891ac86b094b5bf83002718c308020140b568f74c7eed2e390ea4ceebf79",
+      "source_sha256": "320ec414fb98b410d6cb25d6d5e9543aa84dcd41a14cdf510a7c7aed437f988e"
+    },
+    "devices-21A6D3DE-0880-4FBF-89BD-3D190A21C19B.json": {
+      "type": 107,
+      "name": "Ballu ONEAIR ASP-90",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/21a6d3de-0880-4fbf-89bd-3d190a21c19b",
+      "retrieved_at": "2026-10-31T11:06:55.109915+00:00",
+      "sha256": "8e7fa03ad52eede0e16ed8088740de39f829ed10648da98e5ed7bad8bdff7667",
+      "source_sha256": "ca89b0faa2f02474beb06d75592fed0432098ba2fab46f177a524754e26806cd"
+    },
+    "devices-C60347EB-1D16-4D71-B7CA-E480AFD8E4C6.json": {
+      "type": 108,
+      "name": "Royal Thermo Diamond DC",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/c60347eb-1d16-4d71-b7ca-e480afd8e4c6",
+      "retrieved_at": "2026-10-31T11:06:55.572589+00:00",
+      "sha256": "575dc0e25252cde8ec38968009048f2f8b20b0378bc8d4afaada77f20cded1a3",
+      "source_sha256": "413e2eda50cccdbc090c49e5ae32433acddce6ba0034affb7f4d6f51ec4db278"
+    },
+    "devices-9CC5175E-2E7A-4AC0-BC4A-0BAB0DACB34B.json": {
+      "type": 109,
+      "name": "Aurus S",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/9cc5175e-2e7a-4ac0-bc4a-0bab0dacb34b",
+      "retrieved_at": "2026-10-31T11:06:55.547776+00:00",
+      "sha256": "482f3fd971b2f42a32fccefbd976272701d0e19ba7785988d394a2db3a0bcbfd",
+      "source_sha256": "f2870428770e817f4fd4c43d7eeb755960a959c7ddb23644f08f1fb0d73e1030"
+    },
+    "devices-30F7E8EB-48B2-4358-86B3-2869B45CCF6C.json": {
+      "type": 110,
+      "name": "GoldStar GSTI",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/30f7e8eb-48b2-4358-86b3-2869b45ccf6c",
+      "retrieved_at": "2026-10-31T11:06:55.877400+00:00",
+      "sha256": "1ccf49591f15df6e05392cd06d8e8b74f89e2a2497c6e642ed152aec52af2a40",
+      "source_sha256": "7ba2b24ea398b8d5f7438710ce020d691fd6f361e3fb07f22f2145a185f84a5e"
+    },
+    "devices-19CFC08F-52E9-4B7A-94B0-2B727E88C2AB.json": {
+      "type": 111,
+      "name": "Shuft SFMS/-09",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/19cfc08f-52e9-4b7a-94b0-2b727e88c2ab",
+      "retrieved_at": "2026-10-31T11:06:55.877647+00:00",
+      "sha256": "16fac40bf71097482cc2839a5391394137acda4c648b9042eb71cee7809c3141",
+      "source_sha256": "f17fee349eeab4ff16ba0ca351423e5a31dab59a49b44dbebb3387c8e709c678"
+    },
+    "devices-44443C7E-3BF1-48D8-8D82-ADB35B79C6F0.json": {
+      "type": 112,
+      "name": "Royal Thermo 5D DaVinci",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/44443c7e-3bf1-48d8-8d82-adb35b79c6f0",
+      "retrieved_at": "2026-10-31T11:06:56.550191+00:00",
+      "sha256": "8e2a59a0118b585a07fb108f74db8a23efddc3377e3c48fd91ecd5db6c2f130a",
+      "source_sha256": "93a68da9f12e0116bda3b5ddbdfbb823e9aec50a13b494cf753427159553f6cc"
+    },
+    "devices-E9B30428-6C36-43F4-A92B-F612120B811E.json": {
+      "type": 114,
+      "name": "Shuft SFMS/-07",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/e9b30428-6c36-43f4-a92b-f612120b811e",
+      "retrieved_at": "2026-10-31T11:06:55.547548+00:00",
+      "sha256": "bad82c20e1e185648a896518a60d8cff96b9aed116086f9320a0a5875978ee32",
+      "source_sha256": "9fb7017feae2ef2668c59208b8f51a1b8d157a0c537a2cae96f7d3315df46482"
+    },
+    "devices-107C43A9-8611-4FB1-902E-0F32994C84DA.json": {
+      "type": 117,
+      "name": "Ballu AP-135",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/107c43a9-8611-4fb1-902e-0f32994c84da",
+      "retrieved_at": "2026-10-31T11:06:55.657192+00:00",
+      "sha256": "54f20f4d0a324abbe57168ea2e68416fa0f6f9aa803efced95cc86e2719ca380",
+      "source_sha256": "ae5c08ebdc8b2c23a996a70a1e7a9f4a5e94ac4f60aecec83420b0f346437866"
+    },
+    "devices-4F1ECB4A-8B7C-40F6-800D-EF1E55C2A054.json": {
+      "type": 119,
+      "name": "SmartInverter FW",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/4f1ecb4a-8b7c-40f6-800d-ef1e55c2a054",
+      "retrieved_at": "2026-10-31T11:06:55.754983+00:00",
+      "sha256": "1c45c4cec94dc3fd366842eb0a8e020b33ff30974f51262c16b56f56cbf181c5",
+      "source_sha256": "6081f4e18891b0c8e4ce72f4723ff5e985de5bfcc38bd4fa5a7f23c95cbb8c08"
+    },
+    "devices-B320BF2A-CE2B-4EED-9B56-9D79BDD5CD8B.json": {
+      "type": 120,
+      "name": "Aurus VRF",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/b320bf2a-ce2b-4eed-9b56-9d79bdd5cd8b",
+      "retrieved_at": "2026-10-31T11:06:55.858160+00:00",
+      "sha256": "709ee79f7c1a5df8676ed0ab6d840c254bbc0538a72fc92b1881d20ef47619b5",
+      "source_sha256": "509f856b88ac9b85aa955b4c49eb33efa3e43aef4aa674a6021a2f8cc07143d1"
+    },
+    "devices-142FDAB9-BA80-4CE7-9DD6-79D43D8CC4C3.json": {
+      "type": 122,
+      "name": "Electrolux EAP-1040D Basalt",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/142fdab9-ba80-4ce7-9dd6-79d43d8cc4c3",
+      "retrieved_at": "2026-10-31T11:06:56.021726+00:00",
+      "sha256": "f69d0349367055217ff0e07dbf60848bb95f8070ed1b4165be5640b1a474dd19",
+      "source_sha256": "c760e1afeff822a94ad8c8566818d994597a49a65f29a52351ec1fcf02bebeb5"
+    },
+    "devices-6A779D44-7B54-4E82-BFBE-DE2BA19C1431.json": {
+      "type": 123,
+      "name": "Ballu Voyager",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/6a779d44-7b54-4e82-bfbe-de2ba19c1431",
+      "retrieved_at": "2026-10-31T11:06:56.098337+00:00",
+      "sha256": "2926280c1c9fa250dab327c58ffa9401e1abd8b50eb0dfeb39eee58b7ef16e80",
+      "source_sha256": "33f88d460ac135f111c1319aad35972a2bc015a611cb2aabdaa6c9365ef375b0"
+    },
+    "devices-57171D62-70A6-4188-8F6A-0D7E1E63C3A2.json": {
+      "type": 124,
+      "name": "Ballu ONEAIR ASV-60",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/57171d62-70a6-4188-8f6a-0d7e1e63c3a2",
+      "retrieved_at": "2026-10-31T11:06:55.877771+00:00",
+      "sha256": "222ecc7d8e9de1c68d34fb5969bcf15690624c7441d8008a85d4c055a84b52e1",
+      "source_sha256": "118c4efd1dd1ab04d8b6b41706c79e49bf09e4bcbdda74b2a5db58895fbf1408"
+    },
+    "devices-97670404-6601-426D-828A-24D76B7C5CD6.json": {
+      "type": 125,
+      "name": "Electrolux Grace DC",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/97670404-6601-426d-828a-24d76b7c5cd6",
+      "retrieved_at": "2026-10-31T11:06:56.331804+00:00",
+      "sha256": "68beea6ede1414ccebb99f72b8125f7e4735fc44d8f544e1a3009a192eb9bb8c",
+      "source_sha256": "d04a9623c41b59e5ed5f3c95800c16ce5570c2c00b1386b07286793ed08078b6"
+    },
+    "devices-E463D8DF-ABCE-4BE9-84B7-7103266E4959.json": {
+      "type": 126,
+      "name": "Ballu ONEAIR ASP-220",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/e463d8df-abce-4be9-84b7-7103266e4959",
+      "retrieved_at": "2026-10-31T11:06:56.428769+00:00",
+      "sha256": "dfb83592b09cb6ae0f2c364d5792c376d71e94256e51e51644fd5f8085656c06",
+      "source_sha256": "1740c4237387975c172f0a02f8bb34b21d0f0b4fddba145aa7314005d9714ebd"
+    },
+    "devices-F43FD8A2-2C9E-451E-9D2B-29F732138B0B.json": {
+      "type": 128,
+      "name": "Ballu Olympio Pro",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/f43fd8a2-2c9e-451e-9d2b-29f732138b0b",
+      "retrieved_at": "2026-10-31T11:06:56.307787+00:00",
+      "sha256": "fe9bc135e6b22d0ef203db91230fde54c314f010fd88e67580400fb47e8d3ae6",
+      "source_sha256": "21ad0c0c9901e8141bd515de646a0ee97855fa8fc9503d369d407e1b4a1c97ec"
+    },
+    "devices-7F32A5AD-4BA9-4A56-8C87-27D4FAF1F871.json": {
+      "type": 129,
+      "name": "Electrolux Arizona",
+      "source": "Rusclimate server 2026-10-31",
+      "url": "https://device.cdn.rusklimat.ru/v2/rusclimate/devices/7f32a5ad-4ba9-4a56-8c87-27d4faf1f871",
+      "retrieved_at": "2026-10-31T11:06:56.247242+00:00",
+      "sha256": "d60f2a6abab9f6465f7bc4644f199c348dfda7a6b5d05f131d3460e1a08ef296",
+      "source_sha256": "22e4df84bd5464e2cda8d9869f9728201e9a4f11069154f7207e48a277cf1e1f"
+    }
+  }
+}

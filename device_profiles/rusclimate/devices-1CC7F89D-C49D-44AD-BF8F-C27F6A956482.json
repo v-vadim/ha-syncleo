@@ -1,0 +1,2165 @@
+{
+  "id": "1cc7f89d-c49d-44ad-bf8f-c27f6a956482",
+  "name": "Transformer DI 4.0",
+  "type": 46,
+  "class": "heater",
+  "image": {
+    "60": "https://images.cdn.rusklimat.ru/d/9e/3c438-8eeb-49f6-827b-41f93b081088/60.webp",
+    "120": "https://images.cdn.rusklimat.ru/d/9e/3c438-8eeb-49f6-827b-41f93b081088/120.webp",
+    "240": "https://images.cdn.rusklimat.ru/d/9e/3c438-8eeb-49f6-827b-41f93b081088/240.webp",
+    "480": "https://images.cdn.rusklimat.ru/d/9e/3c438-8eeb-49f6-827b-41f93b081088/480.webp",
+    "600": "https://images.cdn.rusklimat.ru/d/9e/3c438-8eeb-49f6-827b-41f93b081088/600.webp",
+    "900": "https://images.cdn.rusklimat.ru/d/9e/3c438-8eeb-49f6-827b-41f93b081088/900.webp",
+    "id": "d9e3c438-8eeb-49f6-827b-41f93b081088",
+    "original": "https://images.cdn.rusklimat.ru/d/9e/3c438-8eeb-49f6-827b-41f93b081088/original.webp"
+  },
+  "layout": {
+    "top": [
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Current power",
+          "ru-RU": "Текущая мощность"
+        },
+        "position": 0,
+        "visibility": [
+          {
+            "program_data": {
+              "field": "half_power",
+              "value": 0,
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "program_data": {
+          "field": "power",
+          "program": [
+            0
+          ]
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Current power",
+          "ru-RU": "Текущая мощность"
+        },
+        "suffix": "suffix.bolt",
+        "position": 0,
+        "visibility": [
+          {
+            "program_data": {
+              "field": "half_power",
+              "value": 1,
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "program_data": {
+          "field": "power",
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "bottom": [
+      {
+        "icon": "M0,0h24v24V0M19.31,11.34l-6.07-6.07c-0.69-0.69-1.8-0.69-2.49,0l-6.07,6.07c-0.25,0.25-0.25,0.65,0,0.9c0.25,0.25,0.65,0.25,0.9,0l6.07-6.07c0.19-0.19,0.51-0.19,0.7,0l6.07,6.07c0.12,0.12,0.29,0.19,0.45,0.19c0.16,0,0.32-0.06,0.45-0.19C19.56,11.99,19.56,11.59,19.31,11.34zM12.3,7.34c-0.16-0.16-0.43-0.16-0.59,0l-5.12,5.12c-0.08,0.08-0.12,0.19-0.12,0.3v5.57c0,0.5,0.4,0.92,0.9,0.92h9.26c0.5,0,0.92-0.42,0.92-0.92v-5.57c0-0.11-0.05-0.22-0.13-0.3L12.3,7.34zM14.8,15.06c-0.04,0.04-1.88,1.87-2.56,2.55c-0.14,0.14-0.36,0.14-0.49,0c-0.68-0.67-2.52-2.51-2.56-2.55c-0.78-0.78-0.78-2.03,0-2.81c0.77-0.77,2.03-0.78,2.8-0.01c0.78-0.77,2.03-0.77,2.8,0.01C15.58,13.02,15.58,14.28,14.8,15.06z",
+        "type": "button",
+        "title": {
+          "en-US": "Comfort",
+          "ru-RU": "Comfort"
+        },
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "error": 0
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h24v24V0M19.11,4.89c-0.28-0.28-0.66-0.42-1.06-0.38c-1,0.09-2.81,0.36-4.6,0.81C11.32,5.86,9.88,6.5,9.17,7.21C8.15,8.22,7.44,9.75,7.26,11.3c-0.09,0.8-0.04,1.56,0.15,2.26c0.1,0.36,0.24,0.7,0.41,1.01c0.03,0.05,0.1,0.06,0.14,0.02c1.41-1.52,3.31-3.31,5.44-4.63c0.22-0.14,0.51-0.07,0.65,0.15c0.14,0.22,0.07,0.51-0.15,0.65c-2.11,1.31-4.01,3.12-5.39,4.62c-0.03,0.03-0.03,0.09,0,0.12l0,0c0.52,0.52,1.17,0.89,1.94,1.1c0.47,0.13,0.97,0.19,1.48,0.19c0.25,0,0.51-0.02,0.77-0.05c1.55-0.18,3.07-0.89,4.09-1.91c0.71-0.71,1.35-2.16,1.89-4.29c0.46-1.79,0.72-3.59,0.81-4.6C19.53,5.55,19.39,5.17,19.11,4.89zM7.09,15.67c-0.02-0.03-0.07-0.04-0.09-0.01c-1.49,1.73-2.37,3.05-2.41,3.11c-0.14,0.22-0.09,0.51,0.13,0.65c0.08,0.05,0.17,0.08,0.26,0.08c0.15,0,0.3-0.07,0.39-0.21c0.01-0.01,0.88-1.31,2.31-2.98c0.02-0.03,0.02-0.07-0.01-0.09C7.42,16.09,7.23,15.9,7.09,15.67z",
+        "type": "button",
+        "title": {
+          "en-US": "Eco",
+          "ru-RU": "Eco"
+        },
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "error": 0
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h24v24V0M12.8,10.5V8.8l1.7-0.9c0.1-0.1,0.2-0.2,0.3-0.3c0-0.1,0-0.3,0-0.4c-0.2-0.3-0.5-0.4-0.8-0.2l-1.2,0.6V6c0-0.3-0.3-0.6-0.6-0.6S11.6,5.7,11.6,6v1.5l-1.2-0.6c-0.3-0.2-0.6,0-0.8,0.2c-0.1,0.1-0.1,0.3,0,0.4c0,0.1,0.1,0.3,0.3,0.3l1.7,0.9v2.3l-2-1.2l0-2c0-0.3-0.2-0.6-0.6-0.6l0,0c-0.2,0-0.3,0.1-0.4,0.2C8.6,7.7,8.5,7.8,8.5,7.9l0,1.3L7.2,8.5C6.9,8.4,6.5,8.5,6.4,8.7C6.3,8.9,6.3,9,6.3,9.2c0,0.1,0.1,0.3,0.3,0.3l1.3,0.7L6.7,11c-0.1,0.1-0.2,0.2-0.3,0.4c0,0.1,0,0.3,0.1,0.4C6.7,11.9,6.9,12,7.1,12c0.1,0,0.2,0,0.3-0.1l1.7-1l2,1.2l-0.5,0.4l-0.1-0.1L9,13.2l-1.7-1c-0.3-0.2-0.6-0.1-0.8,0.2c-0.1,0.1-0.1,0.3-0.1,0.4c0,0.1,0.1,0.3,0.3,0.4l1.1,0.7l-1.3,0.7c-0.3,0.2-0.4,0.5-0.2,0.8c0.1,0.2,0.3,0.3,0.5,0.3c0.1,0,0.2,0,0.3-0.1v0l0.5-0.3L2,20.7v0.8h0.8l6.6-6.2l0,0l0,0L9.6,15l0,0l2-1.9v2.2l-1.7,0.9c-0.1,0.1-0.2,0.2-0.3,0.3c0,0.1,0,0.3,0,0.4l0,0c0.2,0.3,0.5,0.4,0.8,0.2l1.2-0.6v1.5c0,0.3,0.3,0.6,0.6,0.6s0.6-0.3,0.6-0.6v-1.5l1.2,0.7h0c0.1,0,0.2,0,0.2,0c0.2,0,0.4-0.1,0.5-0.3c0.1-0.1,0.1-0.3,0-0.4c0-0.1-0.1-0.3-0.3-0.3l-1.7-0.9v-2.3l2,1.2l0,2c0,0.3,0.2,0.6,0.6,0.6c0.3,0,0.6-0.2,0.6-0.6l0-1.3l1.3,0.8c0.1,0,0.2,0.1,0.3,0.1c0.2,0,0.4-0.1,0.5-0.3c0.1-0.1,0.1-0.3,0.1-0.4c0-0.1-0.1-0.3-0.3-0.3l-1.3-0.8l1.1-0.7c0.1-0.1,0.2-0.2,0.3-0.4c0-0.1,0-0.3-0.1-0.4c-0.2-0.3-0.5-0.4-0.8-0.2l-1.7,1l-2-1.1l2-1.1l1.7,1c0.1,0.1,0.2,0.1,0.3,0.1c0.2,0,0.4-0.1,0.5-0.3c0.1-0.1,0.1-0.3,0.1-0.4c0-0.1-0.1-0.3-0.3-0.4l-1.1-0.7l1.3-0.7C18.1,9.4,18.2,9,18,8.8l0,0c-0.2-0.3-0.5-0.4-0.8-0.2l-1.3,0.8l0-0.2L22,3.3V2.5h-0.8L12.8,10.5z",
+        "type": "button",
+        "title": {
+          "en-US": "Anti frost",
+          "ru-RU": "Anti frost"
+        },
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ],
+        "precondition": [
+          {
+            "error": 0
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h24v24V0M21.451,12.523C21.451,17.749,17.211,22,12,22c-5.211,0-9.451-4.251-9.451-9.477c0-3.817,2.266-7.245,5.772-8.732c0.101-0.043,0.207-0.065,0.316-0.065c0.327,0,0.621,0.195,0.748,0.497c0.084,0.2,0.086,0.421,0.005,0.623C9.308,5.048,9.153,5.206,8.953,5.291c-2.904,1.232-4.781,4.071-4.781,7.232c0,4.328,3.511,7.849,7.827,7.849c4.316,0,7.827-3.521,7.827-7.849c0-3.18-1.891-6.025-4.818-7.248c-0.2-0.084-0.356-0.24-0.438-0.441c-0.083-0.201-0.082-0.422,0.001-0.623c0.127-0.304,0.421-0.501,0.75-0.501c0.107,0,0.212,0.021,0.312,0.063C19.167,5.25,21.451,8.684,21.451,12.523zM12,13.746c0.588,0,1.065-0.479,1.065-1.068v-9.61C13.065,2.479,12.587,2,12,2c-0.587,0-1.065,0.479-1.065,1.068v9.61C10.935,13.267,11.412,13.746,12,13.746z",
+        "type": "button",
+        "action": {
+          "program_data": {
+            "field": "turn_on",
+            "value": 1,
+            "program": [
+              4
+            ]
+          }
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        },
+        "precondition": [
+          {
+            "error": 0
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h24v24V0M12.7149 2.2749C7.1993 2.2749 2.7157 6.7597 2.7157 12.2725C2.7157 17.7877 7.1993 22.2725 12.7149 22.2725C18.2265 22.2725 22.7157 17.7877 22.7157 12.2725C22.7157 6.7597 18.2265 2.2749 12.7149 2.2749ZM19.8961 16.1633L19.2293 15.7753L19.0101 16.1649L19.6837 16.5565C19.0101 17.6517 18.0921 18.5665 16.9957 19.2429L16.6069 18.5669L16.2193 18.7893L16.6037 19.4573C15.5037 20.0569 14.2673 20.4237 12.9413 20.4605V19.6681H12.4917V20.4605C11.1633 20.4237 9.9241 20.0569 8.8261 19.4573L9.2145 18.7893L8.8241 18.5669L8.4349 19.2441C7.3377 18.5697 6.4189 17.6521 5.7445 16.5577L6.4233 16.1653L6.1993 15.7785L5.5289 16.1637C4.9317 15.0637 4.5633 13.8281 4.5249 12.5021H5.3217V12.0521H4.5257C4.5641 10.7237 4.9325 9.4853 5.5297 8.3857L6.2001 8.7729L6.4241 8.3837L5.7453 7.9921C6.4197 6.8969 7.3325 5.9821 8.4277 5.3057L8.8225 5.9833L9.2097 5.7597L8.8245 5.0917C9.9245 4.4929 11.1637 4.1253 12.4901 4.0885V4.8801H12.9365L12.9393 4.0885C14.2661 4.1253 15.5049 4.4929 16.6049 5.0917L16.2169 5.7597L16.6073 5.9833L16.9957 5.3037C18.0913 5.9789 19.0101 6.8941 19.6837 7.9901L19.0049 8.3829L19.2297 8.7693L19.8965 8.3829C20.4969 9.4841 20.8621 10.7205 20.9033 12.0461H20.1097V12.4969H20.9033C20.8617 13.8249 20.4965 15.0625 19.8961 16.1633ZM13.2823 11.4137V5.92053H12.1487V11.4137C12.0319 11.4905 11.9323 11.5901 11.8555 11.7069L8.41589 11.7077V12.8409L11.8555 12.8405C12.0435 13.1297 12.3647 13.3109 12.7155 13.3109C13.2875 13.3109 13.7527 12.8461 13.7527 12.2737C13.7527 11.9229 13.5711 11.6013 13.2823 11.4137Z",
+        "type": "button",
+        "shape": "roundrect",
+        "aspect": 1.36,
+        "feature": "timer",
+        "position": 1,
+        "precondition": [
+          {
+            "error": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "shape": "roundrect",
+        "aspect": 1.36,
+        "feature": "schedule",
+        "position": 1,
+        "condition": [
+          {
+            "schedule": {
+              "enabled": true
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "error": 0
+          }
+        ]
+      },
+      {
+        "icon": "M0,0h24v24V0M16.2095 5.71973H8.35236V18.5768H16.2095V5.71973ZM16.567 18.934V19.1404L22.2812 21.7465V2.55017L16.567 5.56909V18.934ZM19.067 5.45981L21.2098 4.53051V9.29942L19.067 9.71192V5.45981ZM19.067 10.1372L21.2098 9.77654V14.5454L19.067 14.3897V10.1372ZM19.067 14.8148L21.2098 15.0223V19.7912L19.067 19.0669V14.8148ZM17.2812 6.39478L18.7098 5.68659V9.80727L17.2812 10.1273V6.39478ZM17.2812 10.5005L18.7098 10.2194V14.3401L17.2812 14.233V10.5005ZM17.2812 14.6065L18.7098 14.7526V18.8733L17.2812 18.339V14.6065ZM2.28119 21.7465L7.99544 19.1404V18.934V5.71979V5.56909L2.28119 2.55017V21.7465ZM5.8526 5.68659L7.28116 6.39478V10.1273L5.8526 9.80727V5.68659ZM5.8526 10.2194L7.28116 10.5005V14.2329L5.8526 14.3401V10.2194ZM5.8526 14.7522L7.28116 14.6062V18.3387L5.8526 18.873V14.7522ZM3.35263 4.53051L5.49548 5.45981V9.71192L3.35263 9.29942V4.53051ZM3.35263 9.7762L5.49548 10.1369V14.389L3.35263 14.5447V9.7762V9.7762ZM3.35263 15.0222L5.49548 14.8147V19.0669L3.35263 19.7912V15.0222V15.0222Z",
+        "type": "button",
+        "shape": "roundrect",
+        "aspect": 1.36,
+        "feature": "damper",
+        "position": 1,
+        "precondition": [
+          {
+            "error": 0
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "shape": "roundrect",
+        "aspect": 1.36,
+        "feature": "child_lock",
+        "position": 1,
+        "precondition": [
+          {
+            "error": 0
+          }
+        ]
+      }
+    ],
+    "middle": [
+      {
+        "type": "slider",
+        "limit": {
+          "max": 35,
+          "min": 10,
+          "step": 1,
+          "round": 1,
+          "default": 10,
+          "roundAlt": 1
+        },
+        "colors": [
+          {
+            "max": 35,
+            "min": 10,
+            "color": "heater/temp"
+          }
+        ],
+        "points": {
+          "10": {
+            "label": "10"
+          },
+          "15": {
+            "label": "15"
+          },
+          "20": {
+            "label": "20"
+          },
+          "25": {
+            "label": "25"
+          },
+          "30": {
+            "label": "30"
+          },
+          "35": {
+            "label": "35"
+          }
+        },
+        "feature": "temperature",
+        "position": 0,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "not": {
+              "program": [
+                2
+              ]
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "error": 0
+          },
+          {
+            "not": {
+              "program": [
+                3
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 32,
+          "min": 10,
+          "step": 1,
+          "round": 1,
+          "default": 10,
+          "roundAlt": 1
+        },
+        "colors": [
+          {
+            "max": 35,
+            "min": 10,
+            "color": "heater/temp"
+          }
+        ],
+        "points": {
+          "10": {
+            "label": "10"
+          },
+          "32": {
+            "label": "32"
+          }
+        },
+        "feature": "temperature",
+        "position": 0,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "program": [
+              2
+            ]
+          },
+          {
+            "not": {
+              "or": [
+                {
+                  "program_data": {
+                    "field": "delta",
+                    "value": 4,
+                    "program": [
+                      2
+                    ]
+                  }
+                },
+                {
+                  "program_data": {
+                    "field": "delta",
+                    "value": 5,
+                    "program": [
+                      2
+                    ]
+                  }
+                },
+                {
+                  "program_data": {
+                    "field": "delta",
+                    "value": 6,
+                    "program": [
+                      2
+                    ]
+                  }
+                },
+                {
+                  "program_data": {
+                    "field": "delta",
+                    "value": 7,
+                    "program": [
+                      2
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "error": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 31,
+          "min": 10,
+          "step": 1,
+          "round": 1,
+          "default": 10,
+          "roundAlt": 1
+        },
+        "colors": [
+          {
+            "max": 35,
+            "min": 10,
+            "color": "heater/temp"
+          }
+        ],
+        "points": {
+          "10": {
+            "label": "10"
+          },
+          "31": {
+            "label": "31"
+          }
+        },
+        "feature": "temperature",
+        "position": 0,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "program": [
+              2
+            ]
+          },
+          {
+            "program_data": {
+              "field": "delta",
+              "value": 4,
+              "program": [
+                2
+              ]
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "error": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 30,
+          "min": 10,
+          "step": 1,
+          "round": 1,
+          "default": 10,
+          "roundAlt": 1
+        },
+        "colors": [
+          {
+            "max": 35,
+            "min": 10,
+            "color": "heater/temp"
+          }
+        ],
+        "points": {
+          "10": {
+            "label": "10"
+          },
+          "30": {
+            "label": "30"
+          }
+        },
+        "feature": "temperature",
+        "position": 0,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "program": [
+              2
+            ]
+          },
+          {
+            "program_data": {
+              "field": "delta",
+              "value": 5,
+              "program": [
+                2
+              ]
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "error": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 29,
+          "min": 10,
+          "step": 1,
+          "round": 1,
+          "default": 10,
+          "roundAlt": 1
+        },
+        "colors": [
+          {
+            "max": 35,
+            "min": 10,
+            "color": "heater/temp"
+          }
+        ],
+        "points": {
+          "10": {
+            "label": "10"
+          },
+          "29": {
+            "label": "29"
+          }
+        },
+        "feature": "temperature",
+        "position": 0,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "program": [
+              2
+            ]
+          },
+          {
+            "program_data": {
+              "field": "delta",
+              "value": 6,
+              "program": [
+                2
+              ]
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "error": 0
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 28,
+          "min": 10,
+          "step": 1,
+          "round": 1,
+          "default": 10,
+          "roundAlt": 1
+        },
+        "colors": [
+          {
+            "max": 35,
+            "min": 10,
+            "color": "heater/temp"
+          }
+        ],
+        "points": {
+          "10": {
+            "label": "10"
+          },
+          "28": {
+            "label": "28"
+          }
+        },
+        "feature": "temperature",
+        "position": 0,
+        "step_ticks": 1,
+        "visibility": [
+          {
+            "program": [
+              2
+            ]
+          },
+          {
+            "program_data": {
+              "field": "delta",
+              "value": 7,
+              "program": [
+                2
+              ]
+            }
+          }
+        ],
+        "precondition": [
+          {
+            "error": 0
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "style": "line",
+        "position": 0
+      },
+      {
+        "icon": "M0,0h24v24V0M17.2,16.9V2.6c0-0.3,0.3-0.6,0.6-0.6h2.3c0.3,0,0.6,0.3,0.6,0.6v14.3c0,0.3-0.3,0.6-0.6,0.6h-2.3C17.5,17.5,17.2,17.2,17.2,16.9zM15.7,4.5h-2.3c-0.3,0-0.6,0.3-0.6,0.6v11.8c0,0.3,0.3,0.6,0.6,0.6h2.3c0.3,0,0.6-0.3,0.6-0.6V5.1C16.2,4.8,16,4.5,15.7,4.5zM8.3,17.5h2.3c0.3,0,0.6-0.3,0.6-0.6V7.6C11.2,7.3,11,7,10.7,7H8.3C8,7,7.8,7.3,7.8,7.6v9.3C7.8,17.2,8,17.5,8.3,17.5zM3.8,17.5h2.3c0.3,0,0.6-0.3,0.6-0.6v-6.9c0-0.3-0.3-0.6-0.6-0.6H3.8c-0.3,0-0.6,0.3-0.6,0.6v6.9C3.2,17.2,3.5,17.5,3.8,17.5zM2.6,19.9c-0.3,0-0.6,0.3-0.6,0.6c0,0.3,0.3,0.6,0.6,0.6h8.9c0-0.2-0.1-0.4-0.1-0.6c0-0.2,0-0.4,0.1-0.6H2.6zM21.4,19.9h-4.2c0,0.2,0.1,0.4,0.1,0.6c0,0.2,0,0.4-0.1,0.6h4.2c0.3,0,0.6-0.3,0.6-0.6C22,20.2,21.7,19.9,21.4,19.9z M14.5,18.8c-1,0-1.7,0.8-1.7,1.8c0,1,0.8,1.8,1.7,1.8c1,0,1.8-0.8,1.8-1.8C16.2,19.5,15.5,18.8,14.5,18.8z",
+        "type": "slider",
+        "limit": {
+          "max": 10,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Heating intensity",
+          "ru-RU": "Мощность нагрева"
+        },
+        "colors": [
+          {
+            "max": 510,
+            "min": 0,
+            "color": "heater/speed"
+          }
+        ],
+        "points": {
+          "0": {
+            "color": "device/primary",
+            "label": "Auto",
+            "bubble": "device/primary"
+          },
+          "2": {
+            "label": "2"
+          },
+          "4": {
+            "label": "4"
+          },
+          "6": {
+            "label": "6"
+          },
+          "8": {
+            "label": "8"
+          },
+          "10": {
+            "label": "10"
+          }
+        },
+        "feature": "speed",
+        "position": 0,
+        "precondition": [
+          {
+            "error": 0
+          }
+        ],
+        "value_strings": {
+          "0": "Auto"
+        }
+      }
+    ],
+    "schedule": [
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            0
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            1
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "feature": "temperature",
+        "position": 1,
+        "visibility": [
+          {
+            "program": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "switch",
+        "feature": "volume",
+        "position": 0
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Eco mode temperature delta",
+          "ru-RU": "Разница температур в режиме Eco"
+        },
+        "position": 1,
+        "program_data": {
+          "field": "delta",
+          "program": [
+            2
+          ]
+        }
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Anti frost mode temperature",
+          "ru-RU": "Температура в режиме Anti frost"
+        },
+        "position": 2,
+        "program_data": {
+          "field": "temperature",
+          "program": [
+            3
+          ]
+        }
+      },
+      {
+        "type": "switch",
+        "title": {
+          "en-US": "Brightness 50%",
+          "ru-RU": "Яркость 50%"
+        },
+        "action": {
+          "backlight": 0
+        },
+        "feature": "backlight",
+        "position": 3,
+        "condition": [
+          {
+            "backlight": 0
+          }
+        ],
+        "action_off": {
+          "backlight": 1
+        }
+      },
+      {
+        "type": "switch",
+        "title": {
+          "en-US": "Auto off display",
+          "ru-RU": "Автоотключение дисплея"
+        },
+        "position": 4,
+        "program_data": {
+          "field": "auto_off_display",
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "schedules": [
+      {
+        "type": "switch",
+        "title": {
+          "en-US": "Presets",
+          "ru-RU": "Пресеты"
+        },
+        "action": {
+          "program_data": {
+            "field": "schedule.preset.enabled",
+            "value": 1,
+            "program": [
+              5
+            ]
+          }
+        },
+        "layout": "schedule_grid",
+        "position": 0,
+        "condition": [
+          {
+            "program_data": {
+              "field": "schedule.preset.enabled",
+              "value": 1,
+              "program": [
+                5
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program_data": {
+            "field": "schedule.preset.enabled",
+            "value": 0,
+            "program": [
+              5
+            ]
+          }
+        }
+      }
+    ],
+    "middle_info": [
+      {
+        "type": "timer",
+        "color": "device/primary",
+        "title": {
+          "en-US": "OFF Timer",
+          "ru-RU": "Выключение прибора"
+        },
+        "feature": "timer",
+        "position": 1,
+        "visibility": [
+          {
+            "not": {
+              "timer": 0
+            }
+          },
+          {
+            "error": 0
+          }
+        ]
+      },
+      {
+        "type": "error",
+        "position": 2,
+        "visibility": [
+          {
+            "not": {
+              "error": 0
+            }
+          }
+        ]
+      }
+    ],
+    "template.schedules": [
+      {
+        "type": "switch",
+        "position": 0,
+        "precondition": [
+          {
+            "program_data": {
+              "field": "schedule.preset.enabled",
+              "value": 0,
+              "program": [
+                5
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "limits": {
+    "speed": {
+      "max": 10,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "timer": {
+      "max": 86340,
+      "min": 0,
+      "step": 60,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "damper": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "volume": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "child_lock": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    },
+    "temperature": {
+      "max": 35,
+      "min": 10,
+      "step": 1,
+      "round": 1,
+      "default": 10,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "voice": {
+      "sber": {
+        "info": {
+          "model": "Transformer DI 4.0",
+          "manufacturer": "rusclimate"
+        },
+        "type": "hvac_heater",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program_data": {
+                "field": "turn_on",
+                "value": 1,
+                "program": [
+                  4
+                ]
+              }
+            },
+            "instance": "on_off",
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": false
+          },
+          {
+            "type": "slider",
+            "limit": {
+              "max": 35,
+              "min": 10,
+              "step": 1,
+              "round": 1,
+              "default": 10,
+              "roundAlt": 1
+            },
+            "feature": "temperature",
+            "instance": "hvac_temp_set",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "eco",
+                "action": {
+                  "program": [
+                    2
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    2
+                  ]
+                }
+              },
+              {
+                "value": "auto",
+                "action": {
+                  "program": [
+                    1
+                  ]
+                },
+                "condition": {
+                  "not": {
+                    "program": [
+                      2
+                    ]
+                  }
+                }
+              }
+            ],
+            "instance": "hvac_thermostat_mode",
+            "retrievable": false
+          }
+        ]
+      },
+      "alice": {
+        "info": {
+          "model": "Transformer DI 4.0",
+          "manufacturer": "rusclimate"
+        },
+        "type": "devices.types.thermostat",
+        "errors": [],
+        "features": [
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                1
+              ]
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "auto",
+                "action": {
+                  "program": [
+                    1
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    1
+                  ]
+                }
+              },
+              {
+                "value": "eco",
+                "action": {
+                  "program": [
+                    2
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    2
+                  ]
+                }
+              },
+              {
+                "value": "min",
+                "action": {
+                  "program": [
+                    3
+                  ]
+                },
+                "condition": {
+                  "program": [
+                    3
+                  ]
+                }
+              }
+            ],
+            "instance": "heat",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "min",
+                "action": {
+                  "speed": 1
+                },
+                "condition": {
+                  "or": [
+                    {
+                      "speed": 0
+                    },
+                    {
+                      "speed": 1
+                    },
+                    {
+                      "speed": 2
+                    },
+                    {
+                      "speed": 3
+                    },
+                    {
+                      "speed": 4
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "normal",
+                "action": {
+                  "speed": 5
+                },
+                "condition": {
+                  "or": [
+                    {
+                      "speed": 5
+                    },
+                    {
+                      "speed": 6
+                    },
+                    {
+                      "speed": 7
+                    },
+                    {
+                      "speed": 8
+                    },
+                    {
+                      "speed": 9
+                    }
+                  ]
+                }
+              },
+              {
+                "value": "max",
+                "action": {
+                  "speed": 10
+                },
+                "condition": {
+                  "speed": 10
+                }
+              }
+            ],
+            "instance": "work_speed",
+            "retrievable": true
+          },
+          {
+            "type": "slider",
+            "limit": {
+              "max": 35,
+              "min": 5,
+              "step": 1,
+              "round": 1,
+              "default": 10,
+              "roundAlt": 1
+            },
+            "feature": "temperature",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "feature": "current_temperature",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "action": {
+              "volume": 0
+            },
+            "instance": "mute",
+            "actionOff": {
+              "volume": 1
+            },
+            "condition": {
+              "volume": 0
+            },
+            "retrievable": true
+          },
+          {
+            "type": "switch",
+            "feature": "backlight",
+            "instance": "backlight",
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "hidden": true,
+    "realtime": true,
+    "fastSwitch": {
+      "on": {
+        "program": [
+          2
+        ]
+      },
+      "off": {
+        "program": [
+          0
+        ]
+      }
+    },
+    "hotspot_ssid": "Wi-Fi Convection Heater",
+    "program_data": {
+      "0": [
+        {
+          "max": 10,
+          "min": 0,
+          "name": "power",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "auto_off_display",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 1,
+          "min": 0,
+          "name": "half_power",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "2": [
+        {
+          "max": 7,
+          "min": 3,
+          "name": "delta",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        }
+      ],
+      "3": [
+        {
+          "max": 7,
+          "min": 3,
+          "name": "temperature",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        }
+      ],
+      "4": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "turn_on",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "5": [
+        {
+          "max": 1,
+          "min": 0,
+          "name": "schedule.preset.enabled",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "6": [
+        {
+          "max": 8,
+          "min": 1,
+          "name": "schedule.preset.selected.monday",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        {
+          "max": 8,
+          "min": 1,
+          "name": "schedule.preset.selected.tuesday",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        {
+          "max": 8,
+          "min": 1,
+          "name": "schedule.preset.selected.wednesday",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        {
+          "max": 8,
+          "min": 1,
+          "name": "schedule.preset.selected.thursday",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        {
+          "max": 8,
+          "min": 1,
+          "name": "schedule.preset.selected.friday",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        {
+          "max": 8,
+          "min": 1,
+          "name": "schedule.preset.selected.saturday",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        },
+        {
+          "max": 8,
+          "min": 1,
+          "name": "schedule.preset.selected.sunday",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 1,
+          "roundAlt": 1
+        }
+      ],
+      "7": [
+        {
+          "max": 3,
+          "min": 1,
+          "name": "schedule.preset.8.custom",
+          "size": 24,
+          "step": 1,
+          "round": 1,
+          "default": 2,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "wifi_auth_map": {},
+    "defaultProgram": [
+      1
+    ],
+    "swapEdgeSliders": true,
+    "deviceAttributes": [
+      {
+        "name": "model",
+        "title": "title.model",
+        "values": [
+          {
+            "name": "electrolux_air_gate",
+            "image": "model.electrolux_air_gate",
+            "deviceName": "model.electrolux_air_gate"
+          },
+          {
+            "name": "electrolux_rapid",
+            "image": "model.electrolux_rapid",
+            "deviceName": "model.electrolux_rapid"
+          },
+          {
+            "name": "ballu_apollo",
+            "image": "model.ballu_apollo",
+            "deviceName": "model.ballu_apollo"
+          },
+          {
+            "name": "ballu_evolution",
+            "image": "model.ballu_evolution",
+            "deviceName": "model.ballu_evolution"
+          },
+          {
+            "name": "electrolux_brilliant_marble",
+            "image": "model.electrolux_brilliant_marble",
+            "deviceName": "model.electrolux_brilliant_marble"
+          },
+          {
+            "name": "electrolux_ech_ag",
+            "image": "model.electrolux_ech_ag",
+            "deviceName": "model.electrolux_ech_ag"
+          },
+          {
+            "name": "electrolux_ech_ag2",
+            "image": "model.electrolux_ech_ag2",
+            "deviceName": "model.electrolux_ech_ag2"
+          },
+          {
+            "name": "electrolux_ech_at",
+            "image": "model.electrolux_ech_at",
+            "deviceName": "model.electrolux_ech_at"
+          },
+          {
+            "name": "electrolux_ech_bm",
+            "image": "model.electrolux_ech_bm",
+            "deviceName": "model.electrolux_ech_bm"
+          }
+        ]
+      }
+    ],
+    "gridScheduleConfig": {
+      "setup": [
+        {
+          "color": "schedule/grid/orange",
+          "program": [
+            1
+          ]
+        },
+        {
+          "color": "schedule/grid/green",
+          "program": [
+            2
+          ],
+          "isDefault": true
+        },
+        {
+          "color": "schedule/grid/gray",
+          "program": [
+            3
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "id": 1,
+          "editable": false,
+          "settings": [
+            {
+              "days": 127,
+              "enabled": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2
+              ]
+            }
+          ],
+          "shortTitle": "schedule.preset.1.title.short"
+        },
+        {
+          "id": 2,
+          "editable": false,
+          "settings": [
+            {
+              "days": 127,
+              "enabled": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                1,
+                1,
+                1,
+                2,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2
+              ]
+            }
+          ],
+          "shortTitle": "schedule.preset.2.title.short"
+        },
+        {
+          "id": 3,
+          "editable": false,
+          "settings": [
+            {
+              "days": 127,
+              "enabled": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2
+              ]
+            }
+          ],
+          "shortTitle": "schedule.preset.3.title.short"
+        },
+        {
+          "id": 4,
+          "editable": false,
+          "settings": [
+            {
+              "days": 127,
+              "enabled": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                1,
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "shortTitle": "schedule.preset.4.title.short"
+        },
+        {
+          "id": 5,
+          "editable": false,
+          "settings": [
+            {
+              "days": 127,
+              "enabled": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2
+              ]
+            }
+          ],
+          "shortTitle": "schedule.preset.5.title.short"
+        },
+        {
+          "id": 6,
+          "editable": false,
+          "settings": [
+            {
+              "days": 127,
+              "enabled": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2
+              ]
+            }
+          ],
+          "shortTitle": "schedule.preset.6.title.short"
+        },
+        {
+          "id": 7,
+          "editable": false,
+          "settings": [
+            {
+              "days": 127,
+              "enabled": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3
+              ]
+            }
+          ],
+          "shortTitle": "schedule.preset.7.title.short"
+        },
+        {
+          "id": 8,
+          "setup": [
+            {
+              "program": [
+                1
+              ]
+            },
+            {
+              "program": [
+                2
+              ],
+              "isDefault": true
+            },
+            {
+              "program": [
+                3
+              ]
+            }
+          ],
+          "title": "schedule.8",
+          "editable": true,
+          "settings": [
+            {
+              "days": 127,
+              "program_data.name": "schedule.preset.8.custom",
+              "program_data.program": [
+                7
+              ]
+            }
+          ],
+          "shortTitle": "schedule.short.8"
+        }
+      ],
+      "allowCopyDays": false,
+      "selectedPresets": [
+        {
+          "days": 1,
+          "program_data.name": "schedule.preset.selected.monday",
+          "program_data.program": [
+            6
+          ]
+        },
+        {
+          "days": 2,
+          "program_data.name": "schedule.preset.selected.tuesday",
+          "program_data.program": [
+            6
+          ]
+        },
+        {
+          "days": 4,
+          "program_data.name": "schedule.preset.selected.wednesday",
+          "program_data.program": [
+            6
+          ]
+        },
+        {
+          "days": 8,
+          "program_data.name": "schedule.preset.selected.thursday",
+          "program_data.program": [
+            6
+          ]
+        },
+        {
+          "days": 16,
+          "program_data.name": "schedule.preset.selected.friday",
+          "program_data.program": [
+            6
+          ]
+        },
+        {
+          "days": 32,
+          "program_data.name": "schedule.preset.selected.saturday",
+          "program_data.program": [
+            6
+          ]
+        },
+        {
+          "days": 64,
+          "program_data.name": "schedule.preset.selected.sunday",
+          "program_data.program": [
+            6
+          ]
+        }
+      ],
+      "enabled.program_data.name": "schedule.preset.enabled",
+      "enabled.program_data.program": [
+        5
+      ]
+    },
+    "groupControlConfig": {
+      "onOff": {
+        "type": "button",
+        "action": {
+          "program": [
+            2
+          ]
+        },
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      },
+      "syncParams": {
+        "features": [
+          "program",
+          "schedule"
+        ],
+        "program_data": {
+          "2": [
+            "delta"
+          ],
+          "3": [
+            "temperature"
+          ],
+          "5": [
+            "schedule.preset.enabled"
+          ],
+          "6": [
+            "schedule.preset.selected.monday",
+            "schedule.preset.selected.tuesday",
+            "schedule.preset.selected.wednesday",
+            "schedule.preset.selected.thursday",
+            "schedule.preset.selected.friday",
+            "schedule.preset.selected.saturday",
+            "schedule.preset.selected.sunday"
+          ],
+          "7": [
+            "schedule.preset.8.custom"
+          ]
+        }
+      },
+      "groupMaster": true,
+      "groupFeatures": [
+        "program",
+        "current_temperature",
+        "temperature",
+        "schedule"
+      ],
+      "controlInterval": 5,
+      "broadcastFeatures": [
+        "current_temperature",
+        "temperature"
+      ],
+      "subscribeFeatures": [
+        "current_temperature",
+        "temperature"
+      ]
+    },
+    "excludeScheduleFeatures": [
+      "volume",
+      "damper",
+      "timer",
+      "backlight"
+    ]
+  },
+  "vendor": "rusclimate",
+  "features": [
+    "program",
+    "child_lock",
+    "schedule",
+    "current_temperature",
+    "temperature",
+    "speed",
+    "timer",
+    "damper",
+    "volume",
+    "backlight"
+  ],
+  "messages": {
+    "diag": {
+      "en-US": "To erase network settings please press simultaneously buttons Open window (2) and Temperature decrease (4) and hold for 12 seconds. The device will reboot",
+      "ru-RU": "Чтобы сбросить настройки сети одновременно нажмите кнопки Открытое окно (2) и Уменьшения температуры (4) на 12 секунд. Устройство перезагрузится"
+    },
+    "pair": {
+      "en-US": "To enter pairing  mode please press simultaneously buttons Open Window (2) and Decrease Temperature (4) and hold for 2 seconds. The WiFi icon will start blinking on the device.",
+      "ru-RU": "Чтобы перейти в режим сопряжения, пожалуйста, нажмите одновременно кнопки Открыть окно (2) и Уменьшить температуру (4) и удерживайте в течение 2 секунд. На устройстве иконка WiFi начнет моргать."
+    },
+    "reset": {
+      "en-US": "To erase network settings please press simultaneously buttons Open window (2) and Temperature decrease (4) and hold for 12 seconds. The device will reboot",
+      "ru-RU": "Чтобы сбросить настройки сети одновременно нажмите кнопки Открытое окно (2) и Уменьшения температуры (4) на 12 секунд. Устройство перезагрузится"
+    },
+    "error.1": {
+      "en-US": "Temperature sensor break down",
+      "ru-RU": "Обрыв температурного датчика"
+    },
+    "error.2": {
+      "en-US": "Temperature sensor short circuit",
+      "ru-RU": "Короткое замыкание на канале температурного датчика"
+    },
+    "error.4": {
+      "en-US": "Temperature sensor overheating. Current temperature is more then +48˚C",
+      "ru-RU": "Перегрев температурного датчика. Текущая температура больше +48˚C"
+    },
+    "error.8": {
+      "en-US": "Air temperature is below allowed working limit (-26˚C)",
+      "ru-RU": "Температура воздуха ниже предельной температуры эксплуатации устройства (-26˚C)"
+    },
+    "attr.speed": {
+      "en-US": "Heating intensity",
+      "ru-RU": "Мощность нагрева"
+    },
+    "suffix.bolt": {
+      "en-US": "ϟ",
+      "ru-RU": "ϟ"
+    },
+    "attr.temperature": {
+      "en-US": "Target temperature",
+      "ru-RU": "Целевая температура"
+    },
+    "attr.title.model": {
+      "en-US": "Model",
+      "ru-RU": "Модель"
+    },
+    "schedule.short.8": {
+      "en-US": "UP"
+    },
+    "model.ballu_apollo": {
+      "en-US": "Ballu Apollo Transformer DI 4.0",
+      "ru-RU": "Ballu Apollo Transformer DI 4.0"
+    },
+    "model.ballu_evolution": {
+      "en-US": "Ballu Evolution Transformer DI 4.0",
+      "ru-RU": "Ballu Evolution Transformer DI 4.0"
+    },
+    "model.electrolux_rapid": {
+      "en-US": "Electrolux Rapid Transformer DI 4.0",
+      "ru-RU": "Electrolux Rapid Transformer DI 4.0"
+    },
+    "model.electrolux_ech_ag": {
+      "en-US": "Electrolux ECH/AG"
+    },
+    "model.electrolux_ech_at": {
+      "en-US": "Electrolux ECH/AT"
+    },
+    "model.electrolux_ech_bm": {
+      "en-US": "Electrolux ECH/BM"
+    },
+    "model.electrolux_ech_ag2": {
+      "en-US": "Electrolux ECH/AG2",
+      "ru-RU": "Electrolux ECH/AG2"
+    },
+    "model.electrolux_air_gate": {
+      "en-US": "Electrolux Air Gate Transformer DI 4.0",
+      "ru-RU": "Electrolux Air Gate Transformer DI 4.0"
+    },
+    "schedule.preset.1.title.short": {
+      "en-US": "P1"
+    },
+    "schedule.preset.2.title.short": {
+      "en-US": "P2"
+    },
+    "schedule.preset.3.title.short": {
+      "en-US": "P3"
+    },
+    "schedule.preset.4.title.short": {
+      "en-US": "P4"
+    },
+    "schedule.preset.5.title.short": {
+      "en-US": "P5"
+    },
+    "schedule.preset.6.title.short": {
+      "en-US": "P6"
+    },
+    "schedule.preset.7.title.short": {
+      "en-US": "P7"
+    },
+    "schedule.preset.8.title.short": {
+      "en-US": "UP"
+    },
+    "attr.model.kaltemp_wally.device": {
+      "en-US": "Kaltemp WALLY Inverter 4.0"
+    },
+    "model.electrolux_brilliant_marble": {
+      "en-US": "Electrolux Brilliant Marble DI 4.0",
+      "ru-RU": "Electrolux Brilliant Marble DI 4.0"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off",
+        "ru-RU": "Выкл"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        }
+      }
+    },
+    {
+      "name": {
+        "en-US": "Comfort",
+        "ru-RU": "Comfort"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Eco",
+        "ru-RU": "Eco"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Anti frost",
+        "ru-RU": "Anti frost"
+      },
+      "hidden": false
+    }
+  ],
+  "alt_images": {
+    "model.ballu_apollo": {
+      "60": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/1800.webp",
+      "id": "63351eef-4274-47e1-8904-cc1315d5b86d",
+      "original": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/original.webp"
+    },
+    "model.ballu_evolution": {
+      "60": "https://images.cdn.rusklimat.ru/5/e4/6ac58-1076-4944-a1bb-ca20ae7b5a55/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/5/e4/6ac58-1076-4944-a1bb-ca20ae7b5a55/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/5/e4/6ac58-1076-4944-a1bb-ca20ae7b5a55/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/5/e4/6ac58-1076-4944-a1bb-ca20ae7b5a55/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/5/e4/6ac58-1076-4944-a1bb-ca20ae7b5a55/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/5/e4/6ac58-1076-4944-a1bb-ca20ae7b5a55/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/5/e4/6ac58-1076-4944-a1bb-ca20ae7b5a55/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/5/e4/6ac58-1076-4944-a1bb-ca20ae7b5a55/1800.webp",
+      "id": "5e46ac58-1076-4944-a1bb-ca20ae7b5a55",
+      "original": "https://images.cdn.rusklimat.ru/5/e4/6ac58-1076-4944-a1bb-ca20ae7b5a55/original.webp"
+    },
+    "model.electrolux_rapid": {
+      "60": "https://images.cdn.rusklimat.ru/3/eb/329e7-74c9-4135-97fa-0d0f2bb2db17/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/3/eb/329e7-74c9-4135-97fa-0d0f2bb2db17/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/3/eb/329e7-74c9-4135-97fa-0d0f2bb2db17/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/3/eb/329e7-74c9-4135-97fa-0d0f2bb2db17/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/3/eb/329e7-74c9-4135-97fa-0d0f2bb2db17/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/3/eb/329e7-74c9-4135-97fa-0d0f2bb2db17/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/3/eb/329e7-74c9-4135-97fa-0d0f2bb2db17/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/3/eb/329e7-74c9-4135-97fa-0d0f2bb2db17/1800.webp",
+      "id": "3eb329e7-74c9-4135-97fa-0d0f2bb2db17",
+      "original": "https://images.cdn.rusklimat.ru/3/eb/329e7-74c9-4135-97fa-0d0f2bb2db17/original.webp"
+    },
+    "model.electrolux_ech_ag": {
+      "60": "https://images.cdn.rusklimat.ru/d/d5/d131a-06e4-49d4-8b57-72d93ff58b97/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/d/d5/d131a-06e4-49d4-8b57-72d93ff58b97/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/d/d5/d131a-06e4-49d4-8b57-72d93ff58b97/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/d/d5/d131a-06e4-49d4-8b57-72d93ff58b97/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/d/d5/d131a-06e4-49d4-8b57-72d93ff58b97/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/d/d5/d131a-06e4-49d4-8b57-72d93ff58b97/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/d/d5/d131a-06e4-49d4-8b57-72d93ff58b97/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/d/d5/d131a-06e4-49d4-8b57-72d93ff58b97/1800.webp",
+      "id": "dd5d131a-06e4-49d4-8b57-72d93ff58b97",
+      "original": "https://images.cdn.rusklimat.ru/d/d5/d131a-06e4-49d4-8b57-72d93ff58b97/original.webp"
+    },
+    "model.electrolux_ech_at": {
+      "60": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/1800.webp",
+      "id": "63351eef-4274-47e1-8904-cc1315d5b86d",
+      "original": "https://images.cdn.rusklimat.ru/6/33/51eef-4274-47e1-8904-cc1315d5b86d/original.webp"
+    },
+    "model.electrolux_ech_bm": {
+      "60": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/1800.webp",
+      "id": "886b56d6-2fd1-49c4-9dd3-9b21e1addd95",
+      "original": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/original.webp"
+    },
+    "model.electrolux_ech_ag2": {
+      "60": "https://images.cdn.rusklimat.ru/5/9b/4b0d8-9d7a-4d07-bb46-6880703cb814/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/5/9b/4b0d8-9d7a-4d07-bb46-6880703cb814/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/5/9b/4b0d8-9d7a-4d07-bb46-6880703cb814/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/5/9b/4b0d8-9d7a-4d07-bb46-6880703cb814/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/5/9b/4b0d8-9d7a-4d07-bb46-6880703cb814/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/5/9b/4b0d8-9d7a-4d07-bb46-6880703cb814/900.webp",
+      "id": "59b4b0d8-9d7a-4d07-bb46-6880703cb814",
+      "original": "https://images.cdn.rusklimat.ru/5/9b/4b0d8-9d7a-4d07-bb46-6880703cb814/original.webp"
+    },
+    "model.electrolux_air_gate": {
+      "60": "https://images.cdn.rusklimat.ru/5/9b/4b0d8-9d7a-4d07-bb46-6880703cb814/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/5/9b/4b0d8-9d7a-4d07-bb46-6880703cb814/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/5/9b/4b0d8-9d7a-4d07-bb46-6880703cb814/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/5/9b/4b0d8-9d7a-4d07-bb46-6880703cb814/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/5/9b/4b0d8-9d7a-4d07-bb46-6880703cb814/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/5/9b/4b0d8-9d7a-4d07-bb46-6880703cb814/900.webp",
+      "id": "59b4b0d8-9d7a-4d07-bb46-6880703cb814",
+      "original": "https://images.cdn.rusklimat.ru/5/9b/4b0d8-9d7a-4d07-bb46-6880703cb814/original.webp"
+    },
+    "model.electrolux_brilliant_marble": {
+      "60": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/60.webp",
+      "120": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/120.webp",
+      "240": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/240.webp",
+      "480": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/480.webp",
+      "600": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/600.webp",
+      "900": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/900.webp",
+      "1200": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/1200.webp",
+      "1800": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/1800.webp",
+      "id": "886b56d6-2fd1-49c4-9dd3-9b21e1addd95",
+      "original": "https://images.cdn.rusklimat.ru/8/86/b56d6-2fd1-49c4-9dd3-9b21e1addd95/original.webp"
+    }
+  },
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1761233755,
+  "temperature_units": "celsius"
+}

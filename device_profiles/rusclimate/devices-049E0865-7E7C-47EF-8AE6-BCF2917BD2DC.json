@@ -1,0 +1,1091 @@
+{
+  "id": "049e0865-7e7c-47ef-8ae6-bcf2917bd2dc",
+  "name": "Shuft Allston-VH/ERV Комплектный пульт",
+  "type": 98,
+  "class": "ventilation",
+  "image": {
+    "60": "https://images.cdn.rusklimat.ru/2/ec/fca9a-e694-48ad-85f9-3ed9eac3eaba/60.webp",
+    "120": "https://images.cdn.rusklimat.ru/2/ec/fca9a-e694-48ad-85f9-3ed9eac3eaba/120.webp",
+    "240": "https://images.cdn.rusklimat.ru/2/ec/fca9a-e694-48ad-85f9-3ed9eac3eaba/240.webp",
+    "480": "https://images.cdn.rusklimat.ru/2/ec/fca9a-e694-48ad-85f9-3ed9eac3eaba/480.webp",
+    "600": "https://images.cdn.rusklimat.ru/2/ec/fca9a-e694-48ad-85f9-3ed9eac3eaba/600.webp",
+    "900": "https://images.cdn.rusklimat.ru/2/ec/fca9a-e694-48ad-85f9-3ed9eac3eaba/900.webp",
+    "1200": "https://images.cdn.rusklimat.ru/2/ec/fca9a-e694-48ad-85f9-3ed9eac3eaba/1200.webp",
+    "1800": "https://images.cdn.rusklimat.ru/2/ec/fca9a-e694-48ad-85f9-3ed9eac3eaba/1800.webp",
+    "id": "2ecfca9a-e694-48ad-85f9-3ed9eac3eaba",
+    "original": "https://images.cdn.rusklimat.ru/2/ec/fca9a-e694-48ad-85f9-3ed9eac3eaba/original.webp"
+  },
+  "layout": {
+    "top": [
+      {
+        "type": "info",
+        "title": {
+          "en-US": "CO2 - ppm",
+          "ru-RU": "CO2 - ppm"
+        },
+        "feature": "current_co2",
+        "position": 0,
+        "text_suffix": false
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "PM 2.5 - mkg/m³",
+          "ru-RU": "PM 2.5 - мкг/м³"
+        },
+        "feature": "current_pm2",
+        "position": 0,
+        "text_suffix": false
+      },
+      {
+        "type": "info",
+        "index": 0,
+        "title": {
+          "en-US": "Filter resource",
+          "ru-RU": "Ресурс фильтра"
+        },
+        "colors": [
+          {
+            "max": 30,
+            "min": 0,
+            "color": "condition/danger"
+          },
+          {
+            "max": 70,
+            "min": 30.0001,
+            "color": "condition/normal"
+          },
+          {
+            "max": 100,
+            "min": 70.0001,
+            "color": "condition/very_good"
+          }
+        ],
+        "suffix": "percent",
+        "feature": "expendables",
+        "position": 0,
+        "text_suffix": true
+      }
+    ],
+    "bottom": [
+      {
+        "icon": "M0,0h203.18v203.18V0M22.95 73.35l9.77 0 8.06 39.29 8.08 -39.29 9.73 0 -13.82 56.47 -7.97 0 -13.85 -56.47zm-6.03 0l10.12 0 1.94 43.28 0 13.19 -12.06 0 0 -56.47zm37.58 0l10.16 0 0 56.47 -12.09 0 0 -13.19 1.93 -43.28zm54.52 24.01l0 8.53c0,4.06 -0.46,7.63 -1.39,10.7 -0.91,3.08 -2.21,5.66 -3.91,7.74 -1.68,2.09 -3.69,3.65 -6,4.69 -2.33,1.05 -4.89,1.58 -7.71,1.58 -2.85,0 -5.44,-0.53 -7.76,-1.58 -2.32,-1.04 -4.33,-2.6 -6.03,-4.69 -1.69,-2.08 -2.99,-4.66 -3.91,-7.74 -0.91,-3.07 -1.37,-6.64 -1.37,-10.7l0 -8.53c0,-4.06 0.46,-7.64 1.37,-10.75 0.92,-3.1 2.22,-5.68 3.9,-7.76 1.67,-2.06 3.68,-3.62 6.01,-4.68 2.32,-1.06 4.91,-1.59 7.76,-1.59 2.81,0 5.39,0.53 7.74,1.59 2.33,1.06 4.34,2.62 6,4.68 1.67,2.08 2.97,4.66 3.9,7.76 0.93,3.11 1.4,6.69 1.4,10.75zm-12.24 8.53l0 -8.61c0,-2.53 -0.15,-4.7 -0.42,-6.47 -0.29,-1.79 -0.71,-3.23 -1.28,-4.34 -0.55,-1.12 -1.26,-1.94 -2.11,-2.45 -0.85,-0.52 -1.85,-0.78 -2.99,-0.78 -1.21,0 -2.23,0.26 -3.07,0.78 -0.85,0.51 -1.55,1.33 -2.11,2.45 -0.54,1.11 -0.95,2.55 -1.21,4.34 -0.25,1.77 -0.39,3.94 -0.39,6.47l0 8.61c0,2.51 0.14,4.64 0.39,6.42 0.26,1.77 0.67,3.23 1.21,4.36 0.56,1.14 1.27,1.98 2.15,2.51 0.86,0.53 1.88,0.79 3.06,0.79 1.12,0 2.12,-0.26 2.98,-0.79 0.85,-0.53 1.56,-1.37 2.11,-2.51 0.56,-1.13 0.97,-2.59 1.26,-4.36 0.27,-1.78 0.42,-3.91 0.42,-6.42zm32.92 23.93l-9.41 0 0.07 -10.47 9.34 0c1.77,0 3.2,-0.43 4.32,-1.29 1.12,-0.84 1.95,-2.26 2.49,-4.23 0.54,-1.99 0.81,-4.64 0.81,-7.94l0 -8.65c0,-2.47 -0.14,-4.58 -0.44,-6.29 -0.29,-1.69 -0.75,-3.07 -1.35,-4.1 -0.62,-1.03 -1.42,-1.79 -2.43,-2.26 -1.02,-0.49 -2.22,-0.73 -3.6,-0.73l-9.39 0 0 -10.51 9.39 0c3.01,0 5.74,0.54 8.19,1.61 2.46,1.07 4.58,2.65 6.37,4.73 1.78,2.09 3.15,4.61 4.11,7.54 0.98,2.96 1.46,6.32 1.46,10.09l0 8.57c0,3.76 -0.48,7.1 -1.46,10.07 -0.96,2.95 -2.32,5.47 -4.1,7.53 -1.77,2.08 -3.87,3.64 -6.3,4.71 -2.44,1.08 -5.13,1.62 -8.07,1.62zm-2.36 -56.47l0 56.47 -12.05 0 0 -56.47 12.05 0zm58.81 46l0 10.47 -22.46 0 0 -10.47 22.46 0zm-18.26 -46l0 56.47 -12.06 0 0 -56.47 12.06 0zm15.33 22.42l0 10.12 -19.53 0 0 -10.12 19.53 0zm3.03 -22.42l0 10.51 -22.56 0 0 -10.51 22.56 0z",
+        "type": "button",
+        "layout": "program",
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "feature": "schedule",
+        "position": 0
+      },
+      {
+        "icon": "M0,0h24v24V0M21.451,12.523C21.451,17.749,17.211,22,12,22c-5.211,0-9.451-4.251-9.451-9.477c0-3.817,2.266-7.245,5.772-8.732c0.101-0.043,0.207-0.065,0.316-0.065c0.327,0,0.621,0.195,0.748,0.497c0.084,0.2,0.086,0.421,0.005,0.623C9.308,5.048,9.153,5.206,8.953,5.291c-2.904,1.232-4.781,4.071-4.781,7.232c0,4.328,3.511,7.849,7.827,7.849c4.316,0,7.827-3.521,7.827-7.849c0-3.18-1.891-6.025-4.818-7.248c-0.2-0.084-0.356-0.24-0.438-0.441c-0.083-0.201-0.082-0.422,0.001-0.623c0.127-0.304,0.421-0.501,0.75-0.501c0.107,0,0.212,0.021,0.312,0.063C19.167,5.25,21.451,8.684,21.451,12.523zM12,13.746c0.588,0,1.065-0.479,1.065-1.068v-9.61C13.065,2.479,12.587,2,12,2c-0.587,0-1.065,0.479-1.065,1.068v9.61C10.935,13.267,11.412,13.746,12,13.746z",
+        "type": "button",
+        "action": {
+          "program": {
+            "program_data": {
+              "field": "last_program",
+              "program": [
+                3
+              ]
+            }
+          }
+        },
+        "position": 0,
+        "condition": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "action_off": {
+          "program": [
+            0
+          ]
+        }
+      },
+      {
+        "icon": "M0,0h24v24V0M12,22c-3.9,0-7-3.1-7-7v-3.4c0-1,0.8-1.8,1.8-1.8c0.3,0,0.5,0.1,0.8,0.2V4.7c0-1,0.8-1.8,1.8-1.8c0.3,0,0.6,0.1,0.9,0.2 C10.6,2.5,11.3,2,12,2c1,0,1.8,0.8,1.8,1.8v0.1c0.2-0.1,0.5-0.2,0.8-0.2c1,0,1.8,0.8,1.8,1.8v0.9c0.2-0.1,0.5-0.2,0.8-0.2 c1,0,1.8,0.8,1.8,1.8V15C19,18.9,15.9,22,12,22z M6.8,10.8c-0.4,0-0.8,0.3-0.8,0.8V15c0,3.3,2.7,5.9,5.9,5.9c3.3,0,5.9-2.7,5.9-5.9 V8.1c0-0.4-0.3-0.8-0.8-0.8c-0.4,0-0.8,0.3-0.8,0.8V12c0,0.3-0.2,0.5-0.5,0.5c-0.3,0-0.5-0.2-0.5-0.5V5.5c0-0.4-0.3-0.8-0.8-0.8 c-0.4,0-0.8,0.3-0.8,0.8v5.6c0,0.3-0.2,0.5-0.5,0.5s-0.5-0.2-0.5-0.5V3.8c0-0.4-0.3-0.8-0.8-0.8s-0.8,0.3-0.8,0.8v7.3 c0,0.3-0.2,0.5-0.5,0.5c-0.3,0-0.5-0.2-0.5-0.5V4.7c0-0.4-0.3-0.8-0.8-0.8C9,3.9,8.7,4.3,8.7,4.7v6.5c0,0.1,0,0.1,0,0.2 c0,0.1,0,0.2,0,0.3v3c0,0.3-0.2,0.5-0.5,0.5c-0.3,0-0.5-0.2-0.5-0.5v-3C7.6,11.1,7.3,10.8,6.8,10.8z",
+        "type": "button",
+        "shape": "roundrect",
+        "title": {
+          "en-US": "Manage",
+          "ru-RU": "Manage"
+        },
+        "layout": "screen.manage_screen",
+        "position": 1
+      },
+      {
+        "type": "button",
+        "shape": "roundrect",
+        "aspect": 1.36,
+        "feature": "child_lock",
+        "position": 1,
+        "precondition": [
+          {
+            "error": 0
+          }
+        ]
+      }
+    ],
+    "middle": [
+      {
+        "icon": "M0,0h200v200V0M100.024 182.8C86.4013 182.8 73.5747 178.795 62.7501 171.852L70.8052 163.542C79.3883 168.581 89.3722 171.477 100.024 171.477V159.762C92.5597 159.762 85.5071 157.979 79.2601 154.82L86.9475 146.889C73.6754 141.656 64.2577 128.7 64.2577 113.592C64.2577 111.746 64.3981 109.93 64.6712 108.154L53.9366 110.809C54.28 104.956 55.7097 99.3132 58.2015 94.0062L47.5997 89.0273C43.9757 96.7437 42.1401 105.006 42.1401 113.592V113.73L3.3629 123.328L2.35429 126.413C-1.97158 139.63 -0.283955 154.457 6.98228 167.096C14.2485 179.732 26.2129 188.65 39.8101 191.563L42.9839 192.242L54.4249 180.443C67.7947 189.567 83.6562 194.516 100.024 194.516C105.604 194.516 111.182 193.941 116.6 192.813L114.21 181.345C109.576 182.309 104.805 182.8 100.024 182.8ZM124.099 113.591C124.099 126.882 113.325 137.657 100.033 137.657C86.7407 137.657 75.965 126.882 75.965 113.591C75.965 100.299 86.7407 89.5228 100.033 89.5228C113.325 89.5228 124.099 100.299 124.099 113.591ZM68.0834 52.1072L71.3061 63.3453C65.9396 66.4108 61.0476 70.3384 56.8545 75.032L65.5856 82.8384C68.2788 79.8232 71.332 77.2079 74.6524 75.0289L77.7011 85.6613C83.8275 80.7494 91.5942 77.8091 100.037 77.8091C108.483 77.8091 116.249 80.7494 122.376 85.6613L139.783 24.9267L137.612 22.5173C128.311 12.181 114.614 6.2499 100.037 6.2499C85.4602 6.2499 71.7654 12.181 62.4652 22.5173L60.2938 24.9267L64.812 40.7012C60.2038 42.9351 55.7833 45.6222 51.6055 48.7487C38.0099 58.9172 27.759 73.4008 22.7419 89.5309L33.9297 93.0099C39.58 74.8367 52.0709 60.3896 68.0834 52.1072ZM197.685 126.678L196.686 123.59L180.719 119.59C180.864 117.607 180.946 115.608 180.946 113.594C180.946 90.4537 171.003 68.3727 153.674 53.0147L145.904 61.7809C160.727 74.9156 169.232 93.803 169.232 113.594C169.232 114.631 169.2 115.666 169.153 116.697L157.899 113.877C157.904 113.784 157.907 113.687 157.907 113.594C157.907 100.177 153.21 87.0998 144.687 76.7711L135.65 84.225C141.882 91.7766 145.537 101.171 146.103 110.926L135.42 108.247C135.681 109.993 135.818 111.778 135.818 113.594C135.818 128.735 126.356 141.716 113.038 146.923L156.877 192.395L160.051 191.723C173.655 188.85 185.647 179.962 192.946 167.346C200.247 154.73 201.973 139.907 197.685 126.678Z",
+        "info": [
+          {
+            "type": "info",
+            "feature": "speed",
+            "value_strings": {
+              "0": "Auto"
+            }
+          },
+          {
+            "type": "info",
+            "feature": "current_temperature"
+          },
+          {
+            "type": "info",
+            "feature": "program"
+          }
+        ],
+        "type": "slider",
+        "limit": {
+          "max": 6,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "title": {
+          "en-US": "Fan speed",
+          "ru-RU": "Скорость вентилятора"
+        },
+        "points": {
+          "0": {
+            "label": "Auto"
+          },
+          "1": {
+            "label": "1"
+          },
+          "2": {
+            "label": "2"
+          },
+          "3": {
+            "label": "3"
+          },
+          "4": {
+            "label": "4"
+          },
+          "5": {
+            "label": "5"
+          },
+          "6": {
+            "label": "6"
+          }
+        },
+        "feature": "speed",
+        "position": 0,
+        "icon_suffix": false
+      }
+    ],
+    "program": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Modes",
+          "ru-RU": "Режимы"
+        },
+        "position": 0
+      },
+      {
+        "type": "separator",
+        "position": 0
+      },
+      {
+        "icon": "M0,0h203.18v203.18V0M186.17 128.91c-10.05,0.38 -15.3,6.52 -20.67,12.84l-0.09 0.12c-6.16,7.24 -12.53,14.71 -26.04,14.87l-1.01 0.01 0 -2.04 0.99 -0.01c12.61,-0.14 18.67,-7.27 24.52,-14.16l0.09 -0.11c5.69,-6.68 11.27,-13.19 22.21,-13.56l0 -2.04 6.03 3.02 -6.03 3.01 0 -1.95zm-174.18 -14.92c5.84,0 10.23,1.72 13.91,4.32 3.6,2.55 6.48,5.94 9.39,9.37 2.94,3.47 5.97,7.03 9.8,9.68 3.56,2.47 7.93,4.22 13.73,4.45l0 -1.99 6.03 3.02 -6.03 3.01 0 -1.99c-6.26,-0.25 -11,-2.14 -14.89,-4.83 -4.02,-2.79 -7.14,-6.45 -10.19,-10.05 -2.8,-3.3 -5.59,-6.59 -9,-9.01 -3.34,-2.36 -7.38,-3.94 -12.75,-3.94l-1 0 0 -2.04 1 0zm152.28 36.45l0 21.83c-43.05,0.42 -86.32,0.01 -129.4,0.01l0 -34.69 2 0 -2 0 2 0 0.04 32.66 125.32 0 0.04 -19.81 2 0zm-2 0l2 0 -2 0zm-125.36 -79.36l0 49.22 -2 0 2 0 -2 0 -0.04 -48.2 -18.95 0c27.78,-13.82 55.55,-27.76 83.42,-41.38 27.75,13.88 55.59,27.62 83.41,41.38l-18.48 0 0 61.05 -2 0 2 0 -2 0 -0.05 -63.07 11.86 -0.02 -74.75 -37.07 -74.76 37.07 12.32 0 0.02 1.02z",
+        "type": "button",
+        "title": {
+          "en-US": "Aux Mode",
+          "ru-RU": "Вентиляция с рекуперацией энергии"
+        },
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "position": 1,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "position": 2
+      },
+      {
+        "icon": "M0,0h203.18v203.18V0M36.91 71.08l0 49.22 -2 0 2 0 -2 0 -0.04 -48.2 -18.95 0c27.78,-13.82 55.55,-27.76 83.42,-41.38 27.75,13.88 55.59,27.62 83.41,41.38l-18.48 0 0 61.05 -2 0 2 0 -2 0 -0.05 -63.07 11.86 -0.02 -74.75 -37.07 -74.76 37.07 12.32 0 0.02 1.02zM164.27 150.44l0 21.83c-43.05,0.42 -86.32,0.01 -129.4,0.01l0 -34.69 2 0 -2 0 2 0 0.04 32.66 125.32 0 0.04 -19.81 2 0zM11.99 113.99c5.84,0 10.23,1.72 13.91,4.32 3.6,2.55 6.48,5.94 9.39,9.37 2.94,3.47 5.97,7.03 9.8,9.68 3.56,2.47 7.93,4.22 13.73,4.45l0 -1.99 6.03 3.02 -6.03 3.01 0 -1.99c-6.26,-0.25 -11,-2.14 -14.89,-4.83 -4.02,-2.79 -7.14,-6.45 -10.19,-10.05 -2.8,-3.3 -5.59,-6.59 -9,-9.01 -3.34,-2.36 -7.38,-3.94 -12.75,-3.94l-1 0 0 -2.04 1 0zM186.17 128.91c-10.05,0.38 -15.3,6.52 -20.67,12.84l-0.09 0.12c-6.16,7.24 -12.53,14.71 -26.04,14.87l-1.01 0.01 0 -2.04 0.99 -0.01c12.61,-0.14 18.67,-7.27 24.52,-14.16l0.09 -0.11c5.69,-6.68 11.27,-13.19 22.21,-13.56l0 -2.04 6.03 3.02 -6.03 3.01 0 -1.95zM87.61 104.05c29.69,0 47.7,4.34 55.56,10.09 7.14,5.22 6.14,11.66 -0.44,16.79 -8.59,6.7 -27.72,12.29 -55.1,12.91l-0.04 -2c26.92,-0.61 45.63,-6.01 53.92,-12.49 2.92,-2.28 4.51,-4.69 4.6,-6.97 0.09,-2.25 -1.25,-4.54 -4.12,-6.64 -7.56,-5.53 -25.13,-9.69 -54.38,-9.69l0 2.01 -6.03 -3.01 6.03 -3.02 0 2.02z",
+        "type": "button",
+        "title": {
+          "en-US": "Recycle Mode",
+          "ru-RU": "Режим смешанного воздуха"
+        },
+        "action": {
+          "program": [
+            4
+          ]
+        },
+        "position": 3,
+        "condition": [
+          {
+            "program": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "position": 4
+      },
+      {
+        "icon": "M0,0h203.18v203.18V0M36.91 71.08l-0.04 66.51 -2 0 0 -65.49 -18.95 0c27.78,-13.82 55.55,-27.76 83.42,-41.38 27.75,13.88 55.59,27.62 83.41,41.38l-18.48 0 0 61.05 -2 0 2 0 -2 0 -0.05 -63.07 11.86 -0.02 -74.75 -37.07 -74.76 37.07 12.32 0 0.02 1.02zm125.36 79.36l2 0 -2 0zm2 0l0 21.83c-43.05,0.42 -86.32,0.01 -129.4,0.01l0 -34.69 2 0 -2 0 2 0 0.04 32.66 125.32 0 0.04 -19.81 2 0zm21.9 -21.53c-10.05,0.38 -15.3,6.52 -20.67,12.84l-0.09 0.12c-6.16,7.24 -12.53,14.71 -26.04,14.87l-1.01 0.01 0 -2.04 0.99 -0.01c12.61,-0.14 18.67,-7.27 24.52,-14.16l0.09 -0.11c5.69,-6.68 11.27,-13.19 22.21,-13.56l0 -2.04 6.03 3.02 -6.03 3.01 0 -1.95z",
+        "type": "button",
+        "title": {
+          "en-US": "Exh Mode",
+          "ru-RU": "Режим очистки"
+        },
+        "action": {
+          "program": [
+            5
+          ]
+        },
+        "position": 5,
+        "condition": [
+          {
+            "program": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "position": 6
+      },
+      {
+        "icon": "M0,0h203.18v203.18V0M36.91 71.08l0 49.22 -2 0 2 0 -2 0 -0.04 -48.2 -18.95 0c27.78,-13.82 55.55,-27.76 83.42,-41.38 27.75,13.88 55.59,27.62 83.41,41.38l-18.48 0 0 78.34 -2 0 -0.05 -80.36 11.86 -0.02 -74.75 -37.07 -74.76 37.07 12.32 0 0.02 1.02zm125.36 79.36l2 0 -2 0zm2 0l0 21.83c-43.05,0.42 -86.32,0.01 -129.4,0.01l0 -34.69 2 0 -2 0 2 0 0.04 32.66 125.32 0 0.04 -19.81 2 0zm-152.28 -36.45c5.84,0 10.23,1.72 13.91,4.32 3.6,2.55 6.48,5.94 9.39,9.37 2.94,3.47 5.97,7.03 9.8,9.68 3.56,2.47 7.93,4.22 13.73,4.45l0 -1.99 6.03 3.02 -6.03 3.01 0 -1.99c-6.26,-0.25 -11,-2.14 -14.89,-4.83 -4.02,-2.79 -7.14,-6.45 -10.19,-10.05 -2.8,-3.3 -5.59,-6.59 -9,-9.01 -3.34,-2.36 -7.38,-3.94 -12.75,-3.94l-1 0 0 -2.04 1 0z",
+        "type": "button",
+        "title": {
+          "en-US": "Sup Mode",
+          "ru-RU": "Режим приточного воздуха"
+        },
+        "action": {
+          "program": [
+            6
+          ]
+        },
+        "position": 7,
+        "condition": [
+          {
+            "program": [
+              6
+            ]
+          }
+        ]
+      }
+    ],
+    "schedule": [
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            0
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            3
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            4
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            5
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "action": {
+          "program": [
+            6
+          ]
+        },
+        "feature": "program",
+        "position": 0,
+        "condition": [
+          {
+            "program": [
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "type": "slider",
+        "limit": {
+          "max": 6,
+          "min": 0,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        "feature": "speed",
+        "position": 1,
+        "visibility": [
+          {
+            "not": {
+              "program": [
+                0
+              ]
+            }
+          }
+        ],
+        "value_strings": {
+          "0": "Auto"
+        }
+      }
+    ],
+    "settings": [
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Reset the filter replacement counter",
+          "ru-RU": "Сбросить  счётчик замены фильтра"
+        },
+        "feature": "expendables",
+        "position": 1,
+        "formatRules": [
+          {
+            "max": 999,
+            "min": 0,
+            "string": "hum"
+          }
+        ],
+        "text_suffix": false
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Backlight off tim",
+          "ru-RU": "Время выключения подсветки"
+        },
+        "position": 2,
+        "program_data": {
+          "field": "light_time",
+          "program": [
+            0
+          ]
+        }
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "ID устройства",
+          "ru-RU": "ID устройства"
+        },
+        "position": 3,
+        "program_data": {
+          "field": "device_id",
+          "program": [
+            0
+          ]
+        }
+      }
+    ],
+    "top_info": [
+      {
+        "type": "info",
+        "measure": "air_quality",
+        "position": 0
+      },
+      {
+        "type": "separator",
+        "position": 0
+      },
+      {
+        "row": "external_air_condition",
+        "type": "info",
+        "position": 0
+      }
+    ],
+    "middle_info": [
+      {
+        "type": "error",
+        "position": 2
+      }
+    ],
+    "screen.manage_screen": [
+      {
+        "type": "header",
+        "title": {
+          "en-US": "Manage",
+          "ru-RU": "Управление"
+        },
+        "position": 0
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Current humidity",
+          "ru-RU": "Влажность"
+        },
+        "feature": "current_humidity",
+        "position": 1
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "Indoor temperature",
+          "ru-RU": "Температура в помещении"
+        },
+        "suffix": "suffix",
+        "feature": "current_temperature",
+        "position": 2,
+        "text_suffix": true
+      },
+      {
+        "type": "info",
+        "title": {
+          "en-US": "TVOC"
+        },
+        "suffix": "suffix.tvoc",
+        "position": 3,
+        "text_suffix": true,
+        "program_data": {
+          "field": "tvoc",
+          "program": [
+            0
+          ]
+        }
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Heater start temperature",
+          "ru-RU": "Температура запуска нагревателя"
+        },
+        "suffix": "suffix",
+        "position": 6,
+        "text_suffix": true,
+        "program_data": {
+          "field": "heater_temp",
+          "program": [
+            1
+          ]
+        }
+      },
+      {
+        "type": "slider",
+        "title": {
+          "en-US": "Preheater start temperature",
+          "ru-RU": "Температура запуска преднагревателя"
+        },
+        "suffix": "suffix",
+        "position": 7,
+        "formatRules": [
+          {
+            "formatValue": [
+              {
+                "op": "sub",
+                "value": 30
+              }
+            ]
+          }
+        ],
+        "text_suffix": true,
+        "program_data": {
+          "field": "preheater_temp",
+          "program": [
+            1
+          ]
+        }
+      },
+      {
+        "type": "switch",
+        "title": {
+          "en-US": "NAI",
+          "ru-RU": "Отрицательные ионы"
+        },
+        "feature": "ioniser",
+        "position": 8
+      },
+      {
+        "type": "switch",
+        "title": {
+          "en-US": "UV lamp",
+          "ru-RU": "УФ -лампа"
+        },
+        "feature": "ultraviolet",
+        "position": 9
+      }
+    ]
+  },
+  "limits": {
+    "speed": {
+      "max": 10,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 1,
+      "round_alt": 1
+    },
+    "child_lock": {
+      "max": 1,
+      "min": 0,
+      "step": 1,
+      "round": 1,
+      "default": 0,
+      "round_alt": 1
+    }
+  },
+  "params": {
+    "voice": {
+      "alice": {
+        "info": {
+          "model": "Shuft Allston-VH/ERV Комплектный пульт",
+          "manufacturer": "rusclimate"
+        },
+        "type": "devices.types.other",
+        "errors": [],
+        "features": [
+          {
+            "type": "info",
+            "feature": "current_co2",
+            "instance": "co2_level",
+            "retrievable": true
+          },
+          {
+            "type": "dropdown",
+            "values": [
+              {
+                "value": "auto",
+                "action": {
+                  "speed": 0
+                },
+                "condition": {
+                  "speed": 0
+                }
+              },
+              {
+                "value": "quiet",
+                "action": {
+                  "speed": 1
+                },
+                "condition": {
+                  "speed": 1
+                }
+              },
+              {
+                "value": "min",
+                "action": {
+                  "speed": 2
+                },
+                "condition": {
+                  "speed": 2
+                }
+              },
+              {
+                "value": "low",
+                "action": {
+                  "speed": 3
+                },
+                "condition": {
+                  "speed": 3
+                }
+              },
+              {
+                "value": "medium",
+                "action": {
+                  "speed": 4
+                },
+                "condition": {
+                  "speed": 4
+                }
+              },
+              {
+                "value": "high",
+                "action": {
+                  "speed": 5
+                },
+                "condition": {
+                  "speed": 5
+                }
+              },
+              {
+                "value": "max",
+                "action": {
+                  "speed": 6
+                },
+                "condition": {
+                  "speed": 6
+                }
+              }
+            ],
+            "instance": "fan_speed",
+            "retrievable": true
+          },
+          {
+            "type": "button_power",
+            "action": {
+              "program": [
+                4
+              ]
+            },
+            "actionOff": {
+              "program": [
+                0
+              ]
+            },
+            "condition": {
+              "not": {
+                "program": [
+                  0
+                ]
+              }
+            },
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "feature": "current_pm2",
+            "instance": "pm2.5_density",
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "feature": "current_humidity",
+            "instance": "humidity",
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "feature": "current_temperature",
+            "instance": "temperature",
+            "retrievable": true
+          },
+          {
+            "type": "info",
+            "instance": "tvoc",
+            "retrievable": true,
+            "program_data": {
+              "field": "tvoc",
+              "program": [
+                0
+              ]
+            }
+          },
+          {
+            "type": "switch",
+            "feature": "child_lock",
+            "instance": "controls_locked",
+            "retrievable": true
+          }
+        ]
+      }
+    },
+    "hidden": true,
+    "realtime": true,
+    "reverse ": true,
+    "fastSwitch": {
+      "on": {
+        "program": [
+          1
+        ]
+      },
+      "off": {
+        "program": [
+          0
+        ]
+      }
+    },
+    "expendables": [
+      {
+        "icon": "expendable.0",
+        "name": "expendable.0",
+        "title": "expendable.0",
+        "maxValue": 100
+      }
+    ],
+    "hotspot_ssid": "Shuft Allston-VH/ERV 4",
+    "program_data": {
+      "0": [
+        {
+          "max": 10000,
+          "min": 0,
+          "name": "tvoc",
+          "size": 2,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 60,
+          "min": 20,
+          "name": "light_time",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 20,
+          "roundAlt": 1
+        },
+        {
+          "max": 127,
+          "min": 0,
+          "name": "device_id",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "1": [
+        {
+          "max": 20,
+          "min": 0,
+          "name": "heater_temp",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        },
+        {
+          "max": 40,
+          "min": 0,
+          "name": "preheater_temp",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 0,
+          "roundAlt": 1
+        }
+      ],
+      "3": [
+        {
+          "max": 6,
+          "min": 0,
+          "name": "last_program",
+          "size": 1,
+          "step": 1,
+          "round": 1,
+          "default": 3,
+          "roundAlt": 1
+        }
+      ]
+    },
+    "expendable_max": [
+      100
+    ],
+    "mqttFeatureNames": {
+      "ultraviolet": "uv"
+    },
+    "excludeScheduleFeatures": [
+      "timer",
+      "ioniser",
+      "ultraviolet",
+      "child_lock",
+      "demo",
+      "current_humidity",
+      "expendables",
+      "current_pm2",
+      "schedule",
+      "current_co2",
+      "current_temperature"
+    ]
+  },
+  "vendor": "rusclimate",
+  "features": [
+    "program",
+    "speed",
+    "current_temperature",
+    "current_co2",
+    "current_pm2",
+    "expendables",
+    "schedule",
+    "current_humidity",
+    "demo",
+    "child_lock",
+    "ultraviolet",
+    "ioniser"
+  ],
+  "messages": {
+    "hum": {
+      "en-US": " ",
+      "ru-RU": " "
+    },
+    "pm2": {
+      "en-US": "mkg/m³",
+      "ru-RU": "мкг/м³"
+    },
+    "days": {
+      "en-US": "d",
+      "ru-RU": "д"
+    },
+    "diag": {
+      "en-US": "To reset the Wi-Fi settings on the device, press and hold the on/off button on the remote control for 3 seconds. The \"Wi-fi\" icon flashes twice on the device and a reset occurs.",
+      "ru-RU": "Для сброса настроек Wi-Fi на приборе нажмите и удерживайте кнопку «вкл/выкл» на пульте 3 секунд. На устройстве дважды мигает иконка «Wi-fi» и происходит сброс."
+    },
+    "pair": {
+      "en-US": "To enable pairing mode:\nDisconnect the device from the power supply, then reconnect it.\nPress and hold the \"On/Off\" button on the remote control for 3 seconds.\nThe Wi-Fi icon on the device will start blinking.\nIf the device is already connected to a home Wi-Fi network, performing these steps will reset the Wi-Fi settings.\nNote: You can share control of the device through the \"Access control\" section.",
+      "ru-RU": "Для включения режима сопряжения:\n Отключите устройство от сети питания, затем снова подключите его.\nНажмите и удерживайте кнопку «Вкл/Выкл» на пульте в течение 3 секунд.\nНа устройстве начнёт мигать иконка Wi-Fi.\nЕсли устройство уже подключено к домашней сети Wi-Fi, выполнение этих действий приведёт к сбросу текущих настроек сети.\nОбратите внимание: Вы можете поделиться управлением устройством через раздел «Контроль прав»."
+    },
+    "hours": {
+      "en-US": "h",
+      "ru-RU": "ч"
+    },
+    "reset": {
+      "en-US": "To reset the Wi-Fi settings on the device, press and hold the on/off button on the remote control for 3 seconds. The \"Wi-fi\" icon flashes twice on the device and a reset occurs.",
+      "ru-RU": "Для сброса настроек Wi-Fi на приборе нажмите и удерживайте кнопку «вкл/выкл» на пульте 3 секунд. На устройстве дважды мигает иконка «Wi-fi» и происходит сброс."
+    },
+    "45days": {
+      "en-US": "45 d",
+      "ru-RU": "45 д"
+    },
+    "60days": {
+      "en-US": "60 d",
+      "ru-RU": "60 д"
+    },
+    "90days": {
+      "en-US": "90 d",
+      "ru-RU": "90 д"
+    },
+    "suffix": {
+      "en-US": "°C",
+      "ru-RU": "°C"
+    },
+    "180days": {
+      "en-US": "180 d",
+      "ru-RU": "180 д"
+    },
+    "error.1": {
+      "en-US": "Outdoor air temperature sensor error",
+      "ru-RU": "Ошибка датчика температуры наружного воздуха"
+    },
+    "error.2": {
+      "en-US": "EEPROM error",
+      "ru-RU": "Ошибка памяти ЭСППЗУ"
+    },
+    "error.3": {
+      "en-US": "Temperature air sensor error/Humidity sensor is abnormal/ CO2 sensor is abnormal",
+      "ru-RU": "Ошибка датчика температуры воздуха/влажности/CO2"
+    },
+    "error.4": {
+      "en-US": "Exhaust air temperature sensor error",
+      "ru-RU": "Ошибка датчика выбрасываемого воздуха"
+    },
+    "error.5": {
+      "en-US": "Communication error",
+      "ru-RU": "Ошибка связи"
+    },
+    "error.6": {
+      "en-US": "Supply air temperature sensor error",
+      "ru-RU": "Ошибка датчика приточного воздуха"
+    },
+    "error.7": {
+      "en-US": "Exhausted fan error",
+      "ru-RU": "Ошибка вытяжного вентилятора"
+    },
+    "error.8": {
+      "en-US": "Supply fan speed",
+      "ru-RU": "Ошибка приточного вентилятора"
+    },
+    "percent": {
+      "en-US": "%",
+      "ru-RU": "%"
+    },
+    "attr.speed": {
+      "en-US": "Supply fan speed",
+      "ru-RU": "Скорость приточного вентилятора"
+    },
+    "suffix.tvoc": {
+      "en-US": "mkg/m3",
+      "ru-RU": "мкг/м3"
+    },
+    "expendable.0": {
+      "en-US": "Filter",
+      "ru-RU": "Фильтр"
+    },
+    "expendable.1": {
+      "ru-RU": "2"
+    },
+    "expendable.2": {
+      "ru-RU": "3"
+    }
+  },
+  "programs": [
+    {
+      "name": {
+        "en-US": "Off",
+        "ru-RU": "Выкл"
+      },
+      "hidden": false,
+      "limits": {
+        "speed": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        },
+        "damper": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        },
+        "ioniser": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        },
+        "humidity": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        },
+        "temperature": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        },
+        "ultraviolet": {
+          "max": 0,
+          "min": 0,
+          "step": 0,
+          "round": 1,
+          "default": 0,
+          "round_alt": 1
+        }
+      }
+    },
+    null,
+    null,
+    {
+      "name": {
+        "en-US": "Aux Mode",
+        "ru-RU": "Вентиляция с рекуперацией энергии"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Recycle Mode",
+        "ru-RU": "Режим смешанного воздуха"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Exh Mode",
+        "ru-RU": "Режим очистки"
+      },
+      "hidden": false
+    },
+    {
+      "name": {
+        "en-US": "Sup Mode",
+        "ru-RU": "Режим приточного воздуха"
+      },
+      "hidden": false
+    }
+  ],
+  "connectivity": [
+    "wifi",
+    "hotspot"
+  ],
+  "last_modified": 1766405414,
+  "temperature_units": "celsius"
+}
