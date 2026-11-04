@@ -13,7 +13,7 @@ from homeassistant.const import (
     # UnitOfDensity,  # Not available in the minimum supported HA 2026.5.0.
     UnitOfTime,
 )
-from pysyncleo.commands import CmdExpendables, CmdProgramData
+from pysyncleo.commands import CmdExpendables, CmdProgramData, UdpCommandType
 
 from ..const import (
     FEATURE_ACTIVATE_OPTIONS,
@@ -40,6 +40,9 @@ from ..const import (
     PD_TURN_ON,
     PD_UV_INSTALLED,
     PRESET_AUTO,
+    PRESET_DEMO,
+    PRESET_ECO_VENTILATION,
+    PRESET_HYBRID,
     PRESET_MANUAL,
     PRESET_MELODY_BIRDS_SINGING,
     PRESET_MELODY_FIREPLACE_SOUND,
@@ -662,6 +665,81 @@ PROFILES = [
                 state_class=SensorStateClass.MEASUREMENT,
                 unit_of_measurement=PERCENTAGE,
                 value_fn=lambda val: val[0] if isinstance(val, list) and val else None,
+            ),
+        },
+    ),
+    # Draft from server JSON; application and firmware verification is pending.
+    BreezerProfile(
+        vendor=VENDOR_RUSCLIMATE,
+        device_type=126,
+        hvac_modes_map={
+            HVACMode.OFF: 0,
+            HVACMode.FAN_ONLY: 2,
+        },
+        turn_on_program_data_field=PD_TURN_ON,
+        target_temperature_requirement=PD_HEATER_INSTALLED,
+        cmd_current_humidity=UdpCommandType.CURRENT_HUMIDITY,
+        presets={
+            PRESET_AUTO: PresetConfig(mode=1),
+            PRESET_MANUAL: PresetConfig(mode=2),
+            PRESET_TURBO: PresetConfig(mode=3),
+            PRESET_NIGHT: PresetConfig(mode=4),
+            PRESET_HYBRID: PresetConfig(mode=5),
+            PRESET_ECO_VENTILATION: PresetConfig(mode=6),
+            PRESET_DEMO: PresetConfig(mode=7),
+        },
+        fan_modes_count=9,
+        program_data_fields={
+            PD_TURN_ON: ProgramDataField(mode=0),
+            PD_BREEZER_AUTO_INTENSITY: ProgramDataField(
+                mode=1, min_value=1, max_value=3
+            ),
+            PD_NIGHT_SPEED: ProgramDataField(mode=3, min_value=1, max_value=3),
+            PD_HEATER_INSTALLED: ProgramDataField(mode=5),
+        },
+        binary_sensors=[FEATURE_ERROR, PD_HEATER_INSTALLED],
+        numbers=[PD_NIGHT_SPEED, PD_BREEZER_AUTO_INTENSITY],
+        selects={
+            FEATURE_BREEZER_MELODY: SelectConfig(
+                options_map={
+                    STATE_OFF: 0,
+                    PRESET_MELODY_RAIN_SOUND: 1,
+                    PRESET_MELODY_SEA_SOUND: 2,
+                    PRESET_MELODY_FOREST_SOUND: 3,
+                    PRESET_MELODY_BIRDS_SINGING: 4,
+                    PRESET_MELODY_FIREPLACE_SOUND: 5,
+                }
+            ),
+        },
+        switches=[FEATURE_AUTO_OFF_BACKLIGHT, FEATURE_VOLUME],
+        sensors={
+            FEATURE_CURRENT_CO2: SensorConfig(
+                device_class=SensorDeviceClass.CO2,
+                state_class=SensorStateClass.MEASUREMENT,
+                unit_of_measurement=CONCENTRATION_PARTS_PER_MILLION,
+            ),
+            FEATURE_CURRENT_PM2: SensorConfig(
+                device_class=SensorDeviceClass.PM25,
+                state_class=SensorStateClass.MEASUREMENT,
+                unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
+                # TODO: migrate before HA 2027.8 removes the legacy constant.
+                # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
+            ),
+            FEATURE_REMAINING_TIME: SensorConfig(
+                device_class=SensorDeviceClass.DURATION,
+                unit_of_measurement=UnitOfTime.SECONDS,
+            ),
+            FEATURE_EXPENDABLES_FILTER: SensorConfig(
+                state_class=SensorStateClass.MEASUREMENT,
+                unit_of_measurement=PERCENTAGE,
+                value_fn=lambda val: val[0] if isinstance(val, list) and val else None,
+            ),
+            FEATURE_EXPENDABLES_PREFILTER: SensorConfig(
+                state_class=SensorStateClass.MEASUREMENT,
+                unit_of_measurement=PERCENTAGE,
+                value_fn=lambda val: (
+                    val[1] if isinstance(val, list) and len(val) > 1 else None
+                ),
             ),
         },
     ),

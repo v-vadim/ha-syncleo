@@ -311,3 +311,9 @@ PD_BUTTON_SOUND = "button_sound"
 PD_DISPLAY_TEMPERATURE_UNIT = "display_temperature_unit"
 
 PROFILE_TYPE_FIREPLACE = "fireplace"
+
+PRESET_DEMO = "demo"
+
+PRESET_ECO_VENTILATION = "eco_ventilation"
+
+PRESET_HYBRID = "hybrid"

@@ -92,5 +92,6 @@
 | Rusclimate | 123 | Ballu Voyager |
 | Rusclimate | 124 | Ballu ONEAIR ASV-60 |
 | Rusclimate | 125 | Electrolux Grace DC |
+| Rusclimate | 126 | Ballu ONEAIR ASP-220 |
 | Rusclimate | 128 | Ballu Olympio Pro |
 | Rusclimate | 129 | Electrolux Arizona |
