@@ -281,6 +281,9 @@
       }
     },
     "select": {
+      "air_cleaner_display_brightness": {
+        "name": "Яркость дисплея"
+      },
       "aurus_screensaver_mode": {
         "name": "Режим заставки",
         "state": {
@@ -288,6 +291,16 @@
           "screensaver_1": "1 мин",
           "screensaver_3": "3 мин",
           "screensaver_5": "5 мин"
+        }
+      },
+      "backlight_mode": {
+        "name": "Режим подсветки",
+        "state": {
+          "off": "Экран и свет выключены",
+          "all": "Включен весь свет",
+          "upper": "Включен верхний свет",
+          "middle": "Включен средний свет",
+          "lower": "Включен нижний свет"
         }
       },
       "breezer_melody": {
@@ -301,7 +314,10 @@
         }
       },
       "fan_speed": {
-        "name": "Скорость вентилятора"
+        "name": "Скорость вентилятора",
+        "state": {
+          "auto": "Авто"
+        }
       },
       "fitness_timer": {
         "name": "Длительность фитнеса",
@@ -326,6 +342,15 @@
           "kettle_preset_oolong_tea": "Улун",
           "kettle_preset_white_tea": "Белый чай",
           "kettle_preset_herbal_tea": "Травяной чай"
+        }
+      },
+      "light_time": {
+        "name": "Автоотключение дисплея",
+        "state": {
+          "off": "Выключено",
+          "1": "1 мин",
+          "3": "3 мин",
+          "5": "5 мин"
         }
       },
       "night": {
@@ -542,6 +567,9 @@
       }
     },
     "switch": {
+      "air_cleaner_child_lock": {
+        "name": "Замок от детей"
+      },
       "anti_meldew": {
         "name": "Защита от плесени"
       },

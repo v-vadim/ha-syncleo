@@ -21,6 +21,7 @@ from ..const import (
     FEATURE_EXHAUST_FAN_SPEED,
     FEATURE_EXPENDABLES_FILTER,
     FEATURE_EXPENDABLES_PREFILTER,
+    FEATURE_FAN_SPEED,
     FEATURE_IONIZATION,
     FEATURE_OPERATING_MODE,
     FEATURE_ULTRAVIOLET,
@@ -129,6 +130,9 @@ PROFILES = [
                 mode=3, offset=0, size=1, min_value=1, max_value=2, step=1
             ),
         },
+        # TODO: resolve the UI's heater_installed requirement before adding
+        # target supply temperature. This profile's block 0 has no such field.
+        # RA/OA sensors need verified decoding; OA uses raw >= 156 minus 256.
         numbers=[FEATURE_EXHAUST_FAN_SPEED, PD_BYPASS_TEMPERATURE, PD_BYPASS_RANGE],
         number_configs={
             FEATURE_EXHAUST_FAN_SPEED: NumberConfig(min_value=1, max_value=3),
@@ -157,7 +161,9 @@ PROFILES = [
                 # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
             ),
             FEATURE_EXPENDABLES_FILTER: SensorConfig(
-                unit_of_measurement=PERCENTAGE, value_fn=lambda v: v[0] if v else None
+                # TODO: verify units; Hommyn labels days but formats a percentage.
+                unit_of_measurement=PERCENTAGE,
+                value_fn=lambda v: v[0] if v else None,
             ),
         },
     ),
@@ -195,6 +201,9 @@ PROFILES = [
                 mode=3, offset=0, size=1, min_value=1, max_value=2, step=1
             ),
         },
+        # TODO: resolve the UI's heater_installed requirement before adding
+        # target supply temperature. This profile's block 0 has no such field.
+        # RA/OA sensors need verified decoding; OA uses raw >= 156 minus 256.
         numbers=[FEATURE_EXHAUST_FAN_SPEED, PD_BYPASS_TEMPERATURE, PD_BYPASS_RANGE],
         number_configs={
             FEATURE_EXHAUST_FAN_SPEED: NumberConfig(min_value=1, max_value=10),
@@ -223,7 +232,9 @@ PROFILES = [
                 # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
             ),
             FEATURE_EXPENDABLES_FILTER: SensorConfig(
-                unit_of_measurement=PERCENTAGE, value_fn=lambda v: v[0] if v else None
+                # TODO: verify units; Hommyn labels days but formats a percentage.
+                unit_of_measurement=PERCENTAGE,
+                value_fn=lambda v: v[0] if v else None,
             ),
         },
     ),
@@ -231,8 +242,7 @@ PROFILES = [
         vendor=VENDOR_RUSCLIMATE,
         device_type=98,
         profile_type=PROFILE_TYPE_VENTILATION,
-        supported_features=FanEntityFeature.SET_SPEED
-        | FanEntityFeature.PRESET_MODE
+        supported_features=FanEntityFeature.PRESET_MODE
         | FanEntityFeature.TURN_OFF
         | FanEntityFeature.TURN_ON,
         speed_count=6,
@@ -242,6 +252,7 @@ PROFILES = [
             "purification": 5,
             "supply_air": 6,
         },
+        # TODO: verify last_program restoration versus fastSwitch MODE=1.
         default_preset_mode="energy_recovery",
         program_data_fields={
             PD_TVOC: ProgramDataField(
@@ -263,7 +274,16 @@ PROFILES = [
                 mode=3, offset=0, size=1, min_value=0, max_value=6, step=1
             ),
         },
-        numbers=[PD_LIGHT_TIME, PD_HEATER_START_TEMPERATURE],
+        numbers=[
+            PD_LIGHT_TIME,
+            PD_HEATER_START_TEMPERATURE,
+            # PD_PREHEATER_START_TEMPERATURE needs reversible raw - 30 scaling.
+        ],
+        selects={
+            FEATURE_FAN_SPEED: SelectConfig(
+                options_map={"auto": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6}
+            ),
+        },
         sensors={
             FEATURE_CURRENT_TEMPERATURE: SensorConfig(
                 device_class=SensorDeviceClass.TEMPERATURE,
@@ -287,7 +307,13 @@ PROFILES = [
                 # TODO: migrate before HA 2027.8 removes the legacy constant.
                 # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
             ),
-            PD_TVOC: SensorConfig(),
+            PD_TVOC: SensorConfig(
+                device_class=SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
+                state_class=SensorStateClass.MEASUREMENT,
+                unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
+                # TODO: migrate before HA 2027.8 removes the legacy constant.
+                # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
+            ),
             FEATURE_EXPENDABLES_FILTER: SensorConfig(
                 unit_of_measurement=PERCENTAGE, value_fn=lambda v: v[0] if v else None
             ),
@@ -298,11 +324,10 @@ PROFILES = [
         vendor=VENDOR_RUSCLIMATE,
         device_type=100,
         profile_type=PROFILE_TYPE_VENTILATION,
-        supported_features=FanEntityFeature.SET_SPEED
-        | FanEntityFeature.PRESET_MODE
-        | FanEntityFeature.TURN_OFF
-        | FanEntityFeature.TURN_ON,
+        supported_features=FanEntityFeature.TURN_OFF | FanEntityFeature.TURN_ON,
         speed_count=6,
+        # Internal power mapping; On is not exposed as a selectable preset.
+        # TODO: resolve MODE=1 versus the main UI's last_program default of 3.
         preset_modes_map={"on": 1},
         default_preset_mode="on",
         program_data_fields={
@@ -332,6 +357,11 @@ PROFILES = [
             ),
         },
         numbers=[PD_LIGHT_TIME],
+        selects={
+            FEATURE_FAN_SPEED: SelectConfig(
+                options_map={"auto": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6}
+            ),
+        },
         sensors={
             FEATURE_CURRENT_TEMPERATURE: SensorConfig(
                 device_class=SensorDeviceClass.TEMPERATURE,
@@ -355,12 +385,18 @@ PROFILES = [
                 # TODO: migrate before HA 2027.8 removes the legacy constant.
                 # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
             ),
-            PD_TVOC: SensorConfig(),
+            PD_TVOC: SensorConfig(
+                device_class=SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
+                state_class=SensorStateClass.MEASUREMENT,
+                unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
+                # TODO: migrate before HA 2027.8 removes the legacy constant.
+                # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
+            ),
             FEATURE_EXPENDABLES_FILTER: SensorConfig(
                 unit_of_measurement=PERCENTAGE, value_fn=lambda v: v[0] if v else None
             ),
         },
-        switches=[FEATURE_CHILD_LOCK],
+        # child_lock is listed in features but has no control in the app layout.
     ),
     VentilationControlProfile(
         vendor=VENDOR_RUSCLIMATE,

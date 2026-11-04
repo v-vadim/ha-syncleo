@@ -293,8 +293,12 @@ class AirCleanerProfile(
         | FanEntityFeature.TURN_ON
     )
     speed_count: int
+    min_speed: int = 1
+    speed_preset_mode: str | None = None
+    preset_speeds: dict[str, int] = field(default_factory=dict)
     preset_modes_map: dict[str, int] = field(default_factory=dict)
     default_preset_mode: str
+    turn_on_preset_field: str | None = None
 
     @property
     def supported_platforms(self) -> list[Platform]:
@@ -314,8 +318,12 @@ class VentilationProfile(
 
     supported_features: FanEntityFeature
     speed_count: int
+    min_speed: int = 1
+    speed_preset_mode: str | None = None
+    preset_speeds: dict[str, int] = field(default_factory=dict)
     preset_modes_map: dict[str, int] = field(default_factory=dict)
     default_preset_mode: str
+    turn_on_preset_field: str | None = None
 
     @property
     def supported_platforms(self) -> list[Platform]:

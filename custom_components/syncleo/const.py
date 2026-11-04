@@ -252,6 +252,8 @@ FEATURE_VOLUME = "volume"
 FEATURE_WARM_STREAM = "warm_stream"
 
 # Custom device specific features
+FEATURE_AIR_CLEANER_CHILD_LOCK = "air_cleaner_child_lock"
+FEATURE_AIR_CLEANER_DISPLAY_BRIGHTNESS = "air_cleaner_display_brightness"
 FEATURE_AURUS_PF_AUTO_OFF_DISPLAY = "aurus_pf_auto_off_display"
 FEATURE_AURUS_PF_HALF_POWER = "aurus_pf_half_power"
 FEATURE_AURUS_SCREENSAVER_MODE = "aurus_screensaver_mode"

@@ -1,19 +1,18 @@
-"""Draft Rusclimate air-cleaner profiles based on Hommyn JSON.
-
-Application command handling, firmware behavior and special speed reports still
-need verification. Pending controls are listed in the shared research notes.
-"""
+"""Rusclimate air-cleaner profiles based on Hommyn controls."""
 
 from homeassistant.components.sensor import SensorDeviceClass, SensorStateClass
 from homeassistant.const import (
     CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
     PERCENTAGE,
     EntityCategory,
+    UnitOfTime,
     # UnitOfDensity,  # Not available in the minimum supported HA 2026.5.0.
 )
-from pysyncleo.commands import CmdProgramData
+from pysyncleo.commands import CmdExpendables, CmdProgramData
 
 from ..const import (
+    FEATURE_AIR_CLEANER_CHILD_LOCK,
+    FEATURE_AIR_CLEANER_DISPLAY_BRIGHTNESS,
     FEATURE_BACKLIGHT,
     FEATURE_CHILD_LOCK,
     FEATURE_CURRENT_PM2,
@@ -21,6 +20,7 @@ from ..const import (
     FEATURE_EXPENDABLES_FILTER,
     FEATURE_IONIZATION,
     FEATURE_RESET_FILTER,
+    FEATURE_TIMER,
     FEATURE_ULTRAVIOLET,
     PD_BACKLIGHT_MODE,
     PD_FILTER_RESET,
@@ -31,21 +31,37 @@ from ..const import (
     PRESET_NIGHT,
     VENDOR_RUSCLIMATE,
 )
-from .profiles import AirCleanerProfile, ButtonConfig, ProgramDataField, SensorConfig
+from .profiles import (
+    AirCleanerProfile,
+    ButtonConfig,
+    NumberConfig,
+    ProgramDataField,
+    SelectConfig,
+    SensorConfig,
+)
 
 PROFILES = [
     AirCleanerProfile(
         vendor=VENDOR_RUSCLIMATE,
         device_type=1,
         speed_count=3,
+        speed_preset_mode=PRESET_MANUAL,
+        preset_speeds={PRESET_MANUAL: 1},
         preset_modes_map={
             PRESET_AUTO: 1,
             PRESET_NIGHT: 2,
             PRESET_MANUAL: 3,
         },
         default_preset_mode=PRESET_AUTO,
+        turn_on_preset_field=PD_LAST_PROGRAM,
         program_data_fields={
             PD_LAST_PROGRAM: ProgramDataField(mode=0, min_value=1, max_value=3),
+        },
+        buttons={
+            FEATURE_RESET_FILTER: ButtonConfig(
+                command_factory=lambda: CmdExpendables(0),
+                entity_category=EntityCategory.CONFIG,
+            ),
         },
         binary_sensors=[FEATURE_ERROR],
         sensors={
@@ -57,10 +73,13 @@ PROFILES = [
                 # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
             ),
             FEATURE_EXPENDABLES_FILTER: SensorConfig(
-                # JSON specifies 4320; unit and direction need verification.
                 state_class=SensorStateClass.MEASUREMENT,
+                unit_of_measurement=PERCENTAGE,
+                # Hommyn rounds the remaining hours against a 4320-hour resource.
                 value_fn=lambda value: (
-                    value[0] if isinstance(value, list) and value else None
+                    int(value[0] / 4320 * 100 + 0.5)
+                    if isinstance(value, list) and value
+                    else None
                 ),
             ),
         },
@@ -75,15 +94,29 @@ PROFILES = [
         vendor=VENDOR_RUSCLIMATE,
         device_type=26,
         speed_count=4,
+        speed_preset_mode=PRESET_MANUAL,
+        preset_speeds={PRESET_MANUAL: 1},
         preset_modes_map={
             PRESET_AUTO: 1,
             PRESET_NIGHT: 2,
             PRESET_MANUAL: 3,
         },
         default_preset_mode=PRESET_AUTO,
+        turn_on_preset_field=PD_LAST_PROGRAM,
         program_data_fields={
             PD_LAST_PROGRAM: ProgramDataField(mode=0, min_value=1, max_value=3),
             PD_BACKLIGHT_MODE: ProgramDataField(mode=0, offset=1, max_value=4),
+        },
+        buttons={
+            FEATURE_RESET_FILTER: ButtonConfig(
+                command_factory=lambda: CmdExpendables(0),
+                entity_category=EntityCategory.CONFIG,
+            ),
+        },
+        selects={
+            PD_BACKLIGHT_MODE: SelectConfig(
+                options_map={"off": 0, "all": 1, "upper": 2, "middle": 3, "lower": 4}
+            ),
         },
         binary_sensors=[FEATURE_ERROR],
         sensors={
@@ -112,13 +145,16 @@ PROFILES = [
     AirCleanerProfile(
         vendor=VENDOR_RUSCLIMATE,
         device_type=117,
-        speed_count=3,
+        speed_count=4,
+        min_speed=0,
+        speed_preset_mode=PRESET_MANUAL,
         preset_modes_map={
             PRESET_AUTO: 1,
             PRESET_NIGHT: 2,
             PRESET_MANUAL: 3,
         },
         default_preset_mode=PRESET_AUTO,
+        turn_on_preset_field=PD_LAST_PROGRAM,
         program_data_fields={
             PD_LAST_PROGRAM: ProgramDataField(mode=0, min_value=1, max_value=3),
             PD_FILTER_RESET: ProgramDataField(mode=1),
@@ -130,6 +166,15 @@ PROFILES = [
             ),
         },
         binary_sensors=[FEATURE_ERROR],
+        numbers=[FEATURE_TIMER],
+        number_configs={
+            FEATURE_TIMER: NumberConfig(
+                min_value=0,
+                max_value=43200,
+                step=3600,
+                unit_of_measurement=UnitOfTime.SECONDS,
+            ),
+        },
         sensors={
             FEATURE_CURRENT_PM2: SensorConfig(
                 device_class=SensorDeviceClass.PM25,
@@ -146,19 +191,25 @@ PROFILES = [
                 ),
             ),
         },
-        # Its child lock uses placeholder_feature_1, not the usual CHILD_LOCK.
-        switches=[FEATURE_BACKLIGHT, FEATURE_ULTRAVIOLET],
+        switches=[
+            FEATURE_BACKLIGHT,
+            FEATURE_ULTRAVIOLET,
+            FEATURE_AIR_CLEANER_CHILD_LOCK,
+        ],
     ),
     AirCleanerProfile(
         vendor=VENDOR_RUSCLIMATE,
         device_type=122,
-        speed_count=5,
+        speed_count=6,
+        min_speed=0,
+        speed_preset_mode=PRESET_MANUAL,
         preset_modes_map={
             PRESET_AUTO: 1,
             PRESET_NIGHT: 2,
             PRESET_MANUAL: 3,
         },
         default_preset_mode=PRESET_AUTO,
+        turn_on_preset_field=PD_LAST_PROGRAM,
         program_data_fields={
             PD_LAST_PROGRAM: ProgramDataField(mode=0, min_value=1, max_value=3),
             PD_FILTER_RESET: ProgramDataField(mode=1),
@@ -169,6 +220,12 @@ PROFILES = [
                 command_factory=lambda: CmdProgramData(mode=1, data=b"\x01"),
                 entity_category=EntityCategory.CONFIG,
             ),
+        },
+        selects={
+            FEATURE_AIR_CLEANER_DISPLAY_BRIGHTNESS: SelectConfig(
+                options_map={"25%": 0, "50%": 1, "75%": 2, "100%": 3}
+            ),
+            PD_LIGHT_TIME: SelectConfig(options_map={"off": 0, "1": 1, "3": 2, "5": 3}),
         },
         binary_sensors=[FEATURE_ERROR],
         sensors={
