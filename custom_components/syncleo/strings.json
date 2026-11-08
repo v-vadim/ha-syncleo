@@ -134,6 +134,14 @@
         }
       }
     },
+    "light": {
+      "backlight_down": {
+        "name": "Lower backlight"
+      },
+      "backlight_up": {
+        "name": "Upper backlight"
+      }
+    },
     "number": {
       "angle_horizontal": {
         "name": "Horizontal blinds position"
