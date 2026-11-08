@@ -30,7 +30,7 @@ async def async_setup_entry(
         async_add_entities([SyncleoHumidifier(connection, profile, entry)])
 
 
-class SyncleoHumidifier(SyncleoBaseEntity, HumidifierEntity):
+class SyncleoHumidifier(SyncleoBaseEntity[HumidifierProfile], HumidifierEntity):
     _attr_name = None
     _attr_should_poll = False
     _attr_translation_key = TRANSLATION_KEY_HUMIDIFIER

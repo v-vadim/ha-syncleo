@@ -2,12 +2,11 @@
 
 from homeassistant.components.sensor import SensorDeviceClass, SensorStateClass
 from homeassistant.const import (
-    CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
     PERCENTAGE,
     EntityCategory,
+    UnitOfDensity,
     UnitOfTemperature,
     UnitOfTime,
-    # UnitOfDensity,  # Not available in the minimum supported HA 2026.5.0.
 )
 from pysyncleo.commands import CmdExpendables, CmdProgramData
 
@@ -71,9 +70,7 @@ PROFILES = [
             FEATURE_CURRENT_PM2: SensorConfig(
                 device_class=SensorDeviceClass.PM25,
                 state_class=SensorStateClass.MEASUREMENT,
-                unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-                # TODO: migrate before HA 2027.8 removes the legacy constant.
-                # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
+                unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
             ),
             FEATURE_EXPENDABLES_FILTER: SensorConfig(
                 state_class=SensorStateClass.MEASUREMENT,
@@ -126,9 +123,7 @@ PROFILES = [
             FEATURE_CURRENT_PM2: SensorConfig(
                 device_class=SensorDeviceClass.PM25,
                 state_class=SensorStateClass.MEASUREMENT,
-                unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-                # TODO: migrate before HA 2027.8 removes the legacy constant.
-                # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
+                unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
             ),
             FEATURE_EXPENDABLES_FILTER: SensorConfig(
                 state_class=SensorStateClass.MEASUREMENT,
@@ -182,9 +177,7 @@ PROFILES = [
             FEATURE_CURRENT_PM2: SensorConfig(
                 device_class=SensorDeviceClass.PM25,
                 state_class=SensorStateClass.MEASUREMENT,
-                unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-                # TODO: migrate before HA 2027.8 removes the legacy constant.
-                # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
+                unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
             ),
             FEATURE_EXPENDABLES_FILTER: SensorConfig(
                 state_class=SensorStateClass.MEASUREMENT,
@@ -245,9 +238,7 @@ PROFILES = [
             FEATURE_CURRENT_PM2: SensorConfig(
                 device_class=SensorDeviceClass.PM25,
                 state_class=SensorStateClass.MEASUREMENT,
-                unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-                # TODO: migrate before HA 2027.8 removes the legacy constant.
-                # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
+                unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
             ),
             FEATURE_EXPENDABLES_FILTER: SensorConfig(
                 state_class=SensorStateClass.MEASUREMENT,

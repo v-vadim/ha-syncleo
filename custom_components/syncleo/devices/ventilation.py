@@ -3,10 +3,9 @@
 from homeassistant.components.fan import FanEntityFeature
 from homeassistant.components.sensor import SensorDeviceClass, SensorStateClass
 from homeassistant.const import (
-    CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-    CONCENTRATION_PARTS_PER_MILLION,
     PERCENTAGE,
-    # UnitOfDensity,  # Not available in the minimum supported HA 2026.5.0.
+    UnitOfDensity,
+    UnitOfRatio,
     UnitOfTemperature,
     UnitOfTime,
 )
@@ -162,14 +161,12 @@ PROFILES = [
             FEATURE_CURRENT_CO2: SensorConfig(
                 device_class=SensorDeviceClass.CO2,
                 state_class=SensorStateClass.MEASUREMENT,
-                unit_of_measurement=CONCENTRATION_PARTS_PER_MILLION,
+                unit_of_measurement=UnitOfRatio.PARTS_PER_MILLION,
             ),
             FEATURE_CURRENT_PM2: SensorConfig(
                 device_class=SensorDeviceClass.PM25,
                 state_class=SensorStateClass.MEASUREMENT,
-                unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-                # TODO: migrate before HA 2027.8 removes the legacy constant.
-                # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
+                unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
             ),
             FEATURE_EXPENDABLES_FILTER: SensorConfig(
                 unit_of_measurement=UnitOfTime.DAYS,
@@ -239,14 +236,12 @@ PROFILES = [
             FEATURE_CURRENT_CO2: SensorConfig(
                 device_class=SensorDeviceClass.CO2,
                 state_class=SensorStateClass.MEASUREMENT,
-                unit_of_measurement=CONCENTRATION_PARTS_PER_MILLION,
+                unit_of_measurement=UnitOfRatio.PARTS_PER_MILLION,
             ),
             FEATURE_CURRENT_PM2: SensorConfig(
                 device_class=SensorDeviceClass.PM25,
                 state_class=SensorStateClass.MEASUREMENT,
-                unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-                # TODO: migrate before HA 2027.8 removes the legacy constant.
-                # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
+                unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
             ),
             FEATURE_EXPENDABLES_FILTER: SensorConfig(
                 unit_of_measurement=UnitOfTime.DAYS,
@@ -327,21 +322,17 @@ PROFILES = [
             FEATURE_CURRENT_CO2: SensorConfig(
                 device_class=SensorDeviceClass.CO2,
                 state_class=SensorStateClass.MEASUREMENT,
-                unit_of_measurement=CONCENTRATION_PARTS_PER_MILLION,
+                unit_of_measurement=UnitOfRatio.PARTS_PER_MILLION,
             ),
             FEATURE_CURRENT_PM2: SensorConfig(
                 device_class=SensorDeviceClass.PM25,
                 state_class=SensorStateClass.MEASUREMENT,
-                unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-                # TODO: migrate before HA 2027.8 removes the legacy constant.
-                # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
+                unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
             ),
             PD_TVOC: SensorConfig(
                 device_class=SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
                 state_class=SensorStateClass.MEASUREMENT,
-                unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-                # TODO: migrate before HA 2027.8 removes the legacy constant.
-                # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
+                unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
             ),
             FEATURE_EXPENDABLES_FILTER: SensorConfig(
                 unit_of_measurement=PERCENTAGE, value_fn=lambda v: v[0] if v else None
@@ -411,21 +402,17 @@ PROFILES = [
             FEATURE_CURRENT_CO2: SensorConfig(
                 device_class=SensorDeviceClass.CO2,
                 state_class=SensorStateClass.MEASUREMENT,
-                unit_of_measurement=CONCENTRATION_PARTS_PER_MILLION,
+                unit_of_measurement=UnitOfRatio.PARTS_PER_MILLION,
             ),
             FEATURE_CURRENT_PM2: SensorConfig(
                 device_class=SensorDeviceClass.PM25,
                 state_class=SensorStateClass.MEASUREMENT,
-                unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-                # TODO: migrate before HA 2027.8 removes the legacy constant.
-                # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
+                unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
             ),
             PD_TVOC: SensorConfig(
                 device_class=SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
                 state_class=SensorStateClass.MEASUREMENT,
-                unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-                # TODO: migrate before HA 2027.8 removes the legacy constant.
-                # unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
+                unit_of_measurement=UnitOfDensity.MICROGRAMS_PER_CUBIC_METER,
             ),
             FEATURE_EXPENDABLES_FILTER: SensorConfig(
                 unit_of_measurement=PERCENTAGE, value_fn=lambda v: v[0] if v else None
