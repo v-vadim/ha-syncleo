@@ -16,7 +16,7 @@ from homeassistant.const import (
 )
 from pysyncleo.commands import UdpCommand
 from pysyncleo.enums import UdpCommandType
-from pysyncleo.models import DiagnosticStatus
+from pysyncleo.models import CustomCommandField, DiagnosticStatus
 
 from ..const import (
     FEATURE_GATEWAY_LATENCY,
@@ -74,6 +74,8 @@ class LightConfig:
     blue_key: str
     brightness_key: str | None = None
     brightness_levels: int = 255
+    command_type: UdpCommandType | None = None
+    turn_on_level: int | None = None
 
 
 @dataclass(kw_only=True)
@@ -253,6 +255,9 @@ class DeviceBaseProfile(PlatformProviderBase):
     profile_type: str
     program_data_fields: dict[str, ProgramDataField] = field(default_factory=dict)
     data_source_features: list[str] = field(default_factory=list)
+    custom_commands: dict[UdpCommandType, list[CustomCommandField]] = field(
+        default_factory=dict
+    )
 
     @property
     def lookup_key(self) -> tuple[str, int]:

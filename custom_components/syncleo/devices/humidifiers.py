@@ -9,9 +9,13 @@ from homeassistant.components.humidifier.const import (
 from homeassistant.components.sensor import SensorDeviceClass, SensorStateClass
 from homeassistant.const import EntityCategory, UnitOfTemperature, UnitOfTime
 from pysyncleo.commands import CmdExpendables
+from pysyncleo.enums import UdpCommandType
+from pysyncleo.models import CustomCommandField
 
 from ..const import (
     FEATURE_BACKLIGHT,
+    FEATURE_BACKLIGHT_DOWN,
+    FEATURE_BACKLIGHT_UP,
     FEATURE_CURRENT_TEMPERATURE,
     FEATURE_ERROR,
     FEATURE_EXPENDABLES_FILTER,
@@ -52,11 +56,24 @@ from ..const import (
 from .profiles import (
     ButtonConfig,
     HumidifierProfile,
+    LightConfig,
     NumberConfig,
     ProgramDataField,
     SelectConfig,
     SensorConfig,
 )
+
+# Hommyn uses color_up for both color controls and separate up_mode/down_mode levels.
+BACKLIGHT_FIELDS = [
+    CustomCommandField("up_mode", 1),
+    CustomCommandField("down_mode", 1),
+    CustomCommandField("color_up_r", 1),
+    CustomCommandField("color_up_g", 1),
+    CustomCommandField("color_up_b", 1),
+    CustomCommandField("color_down_r", 1),
+    CustomCommandField("color_down_g", 1),
+    CustomCommandField("color_down_b", 1),
+]
 
 # Hommyn labels the humidity slider endpoint 85 as CO (continuous humidification).
 PROFILES = [
@@ -80,6 +97,27 @@ PROFILES = [
             HUMIDIFIER_MODE_AROMA: 11,
         },
         default_mode=MODE_AUTO,
+        custom_commands={UdpCommandType.BACKLIGHT: BACKLIGHT_FIELDS},
+        lights={
+            FEATURE_BACKLIGHT_UP: LightConfig(
+                red_key="color_up_r",
+                green_key="color_up_g",
+                blue_key="color_up_b",
+                brightness_key="up_mode",
+                brightness_levels=3,
+                command_type=UdpCommandType.BACKLIGHT,
+                turn_on_level=2,
+            ),
+            FEATURE_BACKLIGHT_DOWN: LightConfig(
+                red_key="color_up_r",
+                green_key="color_up_g",
+                blue_key="color_up_b",
+                brightness_key="down_mode",
+                brightness_levels=3,
+                command_type=UdpCommandType.BACKLIGHT,
+                turn_on_level=2,
+            ),
+        },
         program_data_fields={
             PD_FITNESS_TIMER: ProgramDataField(
                 mode=6, min_value=15, max_value=60, step=5
@@ -187,6 +225,27 @@ PROFILES = [
         },
         default_mode=MODE_AUTO,
         turn_on_program_data_field=PD_TURN_ON,
+        custom_commands={UdpCommandType.BACKLIGHT: BACKLIGHT_FIELDS},
+        lights={
+            FEATURE_BACKLIGHT_UP: LightConfig(
+                red_key="color_up_r",
+                green_key="color_up_g",
+                blue_key="color_up_b",
+                brightness_key="up_mode",
+                brightness_levels=3,
+                command_type=UdpCommandType.BACKLIGHT,
+                turn_on_level=2,
+            ),
+            FEATURE_BACKLIGHT_DOWN: LightConfig(
+                red_key="color_up_r",
+                green_key="color_up_g",
+                blue_key="color_up_b",
+                brightness_key="down_mode",
+                brightness_levels=3,
+                command_type=UdpCommandType.BACKLIGHT,
+                turn_on_level=2,
+            ),
+        },
         program_data_fields={
             PD_TURN_ON: ProgramDataField(mode=0),
             PD_FITNESS_TIMER: ProgramDataField(

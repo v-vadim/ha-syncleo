@@ -134,6 +134,14 @@
         }
       }
     },
+    "light": {
+      "backlight_down": {
+        "name": "Нижняя подсветка"
+      },
+      "backlight_up": {
+        "name": "Верхняя подсветка"
+      }
+    },
     "number": {
       "angle_horizontal": {
         "name": "Положение горизонтальных жалюзей"
